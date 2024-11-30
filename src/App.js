@@ -1,5 +1,9 @@
 import './App.css';
-import { Anchor } from 'antd';
+import {Anchor, FloatButton} from 'antd';
+import Home from './Home';
+import ChiSiamo from './ChiSiamo';
+import { WhatsAppOutlined } from '@ant-design/icons';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 
 function App() {
@@ -13,64 +17,61 @@ function App() {
 
     return (
         <>
-            <div id="home-container" className="home-container">
-                <div className="menu-container">
-                    <Anchor
-                        affix={false}
-                        items={[
-                            {
-                                key: '1',
-                                href: '#home-container',
-                                title: 'Home',
-                                onClick: () => scrollToSection('home-container')
-                            },
-                            {
-                                key: '2',
-                                href: '#chi-siamo-container',
-                                title: 'Chi siamo',
-                                onClick: () => scrollToSection('chi-siamo-container')
-                            },
-                            {
-                                key: '3',
-                                href: '#servizi',
-                                title: 'Servizi',
+            <FloatButton
+                id="support-button"
+                className="support-button"
+                icon={<WhatsAppOutlined/>}
+                tooltip="Ciao, come posso aiutarti?"
+                style={{ insetInlineEnd: 24 }}
+                onClick={() => console.log('onClick')}
+            >
+            </FloatButton>
 
-                            },
-                            {
-                                key: '4',
-                                href: '#dove_siamo',
-                                title: 'Dove siamo',
+            <div className="menu-container">
+                <Anchor
+                    affix={false}
+                    items={[
+                        {
+                            key: '1',
+                            href: '#home-container',
+                            title: 'Home',
+                            onClick: () => scrollToSection('home-container')
+                        },
+                        {
+                            key: '2',
+                            href: '#chi-siamo-container',
+                            title: 'Chi siamo',
+                            onClick: () => scrollToSection('chi-siamo-container')
+                        },
+                        {
+                            key: '3',
+                            href: '#servizi',
+                            title: 'Servizi',
 
-                            },
-                            {
-                                key: '5',
-                                href: '#contatti',
-                                title: 'Contatti',
+                        },
+                        {
+                            key: '4',
+                            href: '#dove_siamo',
+                            title: 'Dove siamo',
 
-                            }
-                        ]}
-                    />
-                </div>
+                        },
+                        {
+                            key: '5',
+                            href: '#contatti',
+                            title: 'Contatti',
 
-                <div className="title-container">
-                    <h1 className="home-title">Dove la tua auto<br/>trova l'eccellenza.</h1>
-                    <h2 className="home-description">
-                        Benvenuto nell'officina <br/> <strong>MM Eletricar Service!</strong>
-                    </h2>
-                </div>
+                        }
+                    ]}
+                />
             </div>
 
-            <div id="chi-siamo-container" className="chi-siamo-container">
-                <div id="chi-siamo-description" className="chi-siamo-description">
-                    <h2>MM Eletricar Service</h2>
-                    <p>Siamo <strong>Michele Vacca</strong> e <strong>Michele Scalese</strong>, fondatori di MM Eletricar Service,
-                        un’officina specializzata in elettronica per autoveicoli. Con sede a Gravina in Puglia (BA),
-                        offriamo servizi per garantire sicurezza, affidabilità e prestazioni ottimali a ogni veicolo.
-                    </p>
-                </div>
-            </div>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                </Routes>
+            </Router>
 
-
+            <ChiSiamo/>
         </>
     );
 }
