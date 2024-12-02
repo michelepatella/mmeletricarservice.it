@@ -1,5 +1,5 @@
 import './App.css';
-import {Anchor, FloatButton} from 'antd';
+import { Anchor, FloatButton } from 'antd';
 import Home from './Home';
 import ChiSiamo from './ChiSiamo';
 import { WhatsAppOutlined } from '@ant-design/icons';
@@ -7,21 +7,41 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './constants';
 import React from "react";
 
-function App() {
-    /**
-     * Method to animate the transaction from a section to another one
-     * @param sectionId
-     */
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+//definition of the section of the website
+const sections = [
+    { id: 'home-container', title: 'Home' },
+    { id: 'chi-siamo-container', title: 'Chi siamo' },
+    { id: 'servizi-container', title: 'Servizi' },
+    { id: 'dove-siamo-container', title: 'Dove siamo' },
+    { id: 'contatti-container', title: 'Contatti' }
+];
 
+/**
+ * Method to animate the transition to a section
+ * @param sectionId
+ */
+const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+};
+
+/**
+ * Method to generate the menu items
+ * @type {{onClick: function(): void, href: string, title: *, key: string}[]}
+ */
+const menuItems = sections.map((section, index) => ({
+    key: `${index + 1}`,
+    href: `#${section.id}`,
+    title: section.title,
+    onClick: () => scrollToSection(section.id)
+}));
+
+function App() {
     return (
         <>
-            {/* Whatsapp support button definition*/}
+            {/* WhatsApp support button */}
             <FloatButton
                 id="support-button"
                 className="support-button"
@@ -29,45 +49,13 @@ function App() {
                 style={{ insetInlineEnd: 24, backgroundColor:'#25d366'}}
                 type="secondary"
                 onClick={() => window.open(WHATSAPP_LINK, '_blank')}
-            >
-            </FloatButton>
+            />
 
-            {/*Menù definition*/}
+            {/* Menu */}
             <div className="menu-container">
                 <Anchor
                     affix={false}
-                    items={[
-                        {
-                            key: '1',
-                            href: '#home-container',
-                            title: 'Home',
-                            onClick: () => scrollToSection('home-container')
-                        },
-                        {
-                            key: '2',
-                            href: '#chi-siamo-container',
-                            title: 'Chi siamo',
-                            onClick: () => scrollToSection('chi-siamo-container')
-                        },
-                        {
-                            key: '3',
-                            href: '#servizi',
-                            title: 'Servizi',
-
-                        },
-                        {
-                            key: '4',
-                            href: '#dove_siamo',
-                            title: 'Dove siamo',
-
-                        },
-                        {
-                            key: '5',
-                            href: '#contatti',
-                            title: 'Contatti',
-
-                        }
-                    ]}
+                    items={menuItems}
                 />
             </div>
 
@@ -80,6 +68,7 @@ function App() {
 
             {/*Integration of Chi Siamo section*/}
             <ChiSiamo/>
+
         </>
     );
 }
