@@ -1,19 +1,19 @@
 import './App.css';
-import { Anchor, FloatButton } from 'antd';
+import {Anchor, Dropdown, FloatButton, Space} from 'antd';
 import Home from './Home';
 import ChiSiamo from './ChiSiamo';
-import { WhatsAppOutlined } from '@ant-design/icons';
+import { WhatsAppOutlined, DownOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './constants';
 import React from "react";
 
 //definition of the section of the website
 const sections = [
-    { id: 'home-container', title: 'Home' },
-    { id: 'chi-siamo-container', title: 'Chi siamo' },
-    { id: 'servizi-container', title: 'Servizi' },
-    { id: 'dove-siamo-container', title: 'Dove siamo' },
-    { id: 'contatti-container', title: 'Contatti' }
+    { id: 'home', title: 'Home' },
+    { id: 'chi-siamo', title: 'Chi siamo' },
+    { id: 'servizi', title: 'Servizi' },
+    { id: 'dove-siamo', title: 'Dove siamo' },
+    { id: 'contatti', title: 'Contatti' }
 ];
 
 /**
@@ -38,6 +38,7 @@ const menuItems = sections.map((section, index) => ({
     onClick: () => scrollToSection(section.id)
 }));
 
+
 function App() {
     return (
         <>
@@ -45,18 +46,34 @@ function App() {
             <FloatButton
                 id="support-button"
                 className="support-button"
-                icon={<WhatsAppOutlined style={{ color: 'white' }}/>}
-                style={{ insetInlineEnd: 24, backgroundColor:'#25d366'}}
+                icon={<WhatsAppOutlined style={{color: 'white'}}/>}
+                style={{insetInlineEnd: 24, backgroundColor: '#25d366'}}
                 type="secondary"
                 onClick={() => window.open(WHATSAPP_LINK, '_blank')}
             />
 
-            {/* Menu */}
+            {/* Menu for PC and tablet*/}
             <div className="menu-container">
                 <Anchor
                     affix={false}
                     items={menuItems}
                 />
+            </div>
+
+            {/* Menu for phone*/}
+            <div className="menu-container-phone">
+                <Dropdown
+                    menu={{
+                        items: menuItems
+                    }}
+                >
+                    <a onClick={(e) => e.preventDefault()}>
+                        <Space>
+                            Menù
+                            <DownOutlined />
+                        </Space>
+                    </a>
+                </Dropdown>
             </div>
 
             {/*Make the home page of the website the element Home*/}

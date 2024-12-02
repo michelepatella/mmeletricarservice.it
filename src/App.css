@@ -123,9 +123,9 @@ body {
 /* ------- End Whatsapp button --------*/
 
 
-  /* ------ Menù for PC + tablet------*/
+  /* ------ Menù ------*/
   /* Big screen */
-  @media (min-width: 1024px){
+  @media (min-width: 1024px) {
     .ant-anchor-link-title {
       font-size: 25px;
       font-family: 'Poppins';
@@ -133,18 +133,16 @@ body {
       color: black;
       transition: color 0.3s ease;
     }
-
     .ant-anchor-link-active > .ant-anchor-link-title {
       color: black !important;
       font-weight: bold;
     }
-
     .ant-anchor-ink {
       background-color: black !important;
       width: 2px;
     }
-
     .menu-container {
+      display: block;
       position: fixed;
       top: 0;
       left: 0;
@@ -152,73 +150,96 @@ body {
       padding-top: 100px;
       padding-left: 20px;
     }
+    .menu-container-phone {
+      display: none;
+    }
   }
 
   /* Medium screen */
   @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    .ant-anchor-link-title {
+      font-size: 20px;
+      font-family: 'Poppins';
+      margin-top: 40px;
+      color: black;
+      transition: color 0.3s ease;
+    }
+    .ant-anchor-link-active > .ant-anchor-link-title {
+      color: black !important;
+      font-weight: bold;
+    }
+    .ant-anchor-ink {
+      background-color: black !important;
+      width: 2px;
+    }
     .menu-container {
-      .ant-anchor-link-title {
-        font-size: 20px;
-        font-family: 'Poppins';
-        margin-top: 40px;
-        color: black;
-        transition: color 0.3s ease;
-      }
-      .ant-anchor-link-active > .ant-anchor-link-title {
-        color: black !important;
-        font-weight: bold;
-      }
-      .ant-anchor-ink {
-        background-color: black !important;
-        width: 2px;
-      }
-      .menu-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        padding-top: 100px;
-        padding-left: 20px;
-      }
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding-top: 100px;
+      padding-left: 20px;
+    }
+    .menu-container-phone {
+      display: none;
     }
   }
-  @media (max-width: 1024px) and (max-width: 1023px) and (orientation: landscape) {
+  @media (min-height: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    .ant-anchor-link-title {
+      font-size: 20px;
+      font-family: 'Poppins';
+      margin-top: 40px;
+      color: black;
+      transition: color 0.3s ease;
+    }
+    .ant-anchor-link-active > .ant-anchor-link-title {
+      color: black !important;
+      font-weight: bold;
+    }
+    .ant-anchor-ink {
+      background-color: black !important;
+      width: 2px;
+    }
     .menu-container {
-      .ant-anchor-link-title {
-        font-size: 20px;
-        font-family: 'Poppins';
-        margin-top: 40px;
-        color: black;
-        transition: color 0.3s ease;
-      }
-      .ant-anchor-link-active > .ant-anchor-link-title {
-        color: black !important;
-        font-weight: bold;
-      }
-      .ant-anchor-ink {
-        background-color: black !important;
-        width: 2px;
-      }
-      .menu-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        padding-top: 100px;
-        padding-left: 20px;
-      }
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding-top: 100px;
+      padding-left: 20px;
+    }
+    .menu-container-phone {
+      display: none;
     }
   }
 
   /* Small screen */
   @media (max-width: 767px){
     .menu-container {
-      visibility: hidden;
+      display: none;
+    }
+    .menu-container-phone {
+      display: block;
+    }
+    .menu-container-phone a {
+      font-size: 18px;
+      color: black;
+    }
+  }
+
+  @media (max-height: 767px) and (orientation: landscape) and (max-width: 1023px) {
+    .menu-container {
+      display: none;
+    }
+    .menu-container-phone {
+      display: block;
+    }
+    .menu-container-phone a {
+      font-size: 18px;
+      color: black;
     }
   }
 
 /*------ End Menù --------*/
-
-
-
-/* ------ Menù for phone------*/

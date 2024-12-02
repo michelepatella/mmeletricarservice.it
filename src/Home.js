@@ -5,7 +5,7 @@ function Home() {
     return (
         <>
             {/*Home page definition*/}
-            <div id="home-container" className="home-container">
+            <div id="home" className="home-container">
                 <div className="title-container">
 
                     {/*Title*/}

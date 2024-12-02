@@ -6,7 +6,7 @@ function ChiSiamo() {
     return (
         <>
             {/*Chi siamo description definition*/}
-            <div id="chi-siamo-container" className="chi-siamo-container">
+            <div id="chi-siamo" className="chi-siamo-container">
                 <div id="chi-siamo-description" className="chi-siamo-description">
 
                     {/*Title*/}
