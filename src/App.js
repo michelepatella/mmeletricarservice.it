@@ -38,6 +38,17 @@ const menuItems = sections.map((section, index) => ({
     onClick: () => scrollToSection(section.id)
 }));
 
+/**
+ * Method to generate menu items for phone
+ * @type {{onClick: function(): void, style: {fontFamily: string, paddingRight: string, fontSize: string, paddingTop: string, paddingLeft: string}, href: string, label: *, key: string}[]}
+ */
+const menuItemsForPhone = sections.map((section, index) => ({
+    key: `${index + 1}`,
+    href: `#${section.id}`,
+    label: section.title,
+    onClick: () => scrollToSection(section.id),
+    style: { fontFamily: 'Poppins', fontSize: '16px', paddingTop: '15px', paddingLeft: '10px', paddingRight: '20px' }
+}));
 
 function App() {
     return (
@@ -64,13 +75,13 @@ function App() {
             <div className="menu-container-phone">
                 <Dropdown
                     menu={{
-                        items: menuItems
+                        items: menuItemsForPhone
                     }}
                 >
                     <a onClick={(e) => e.preventDefault()}>
                         <Space>
                             Menù
-                            <DownOutlined />
+                            <DownOutlined/>
                         </Space>
                     </a>
                 </Dropdown>

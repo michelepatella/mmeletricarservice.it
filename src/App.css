@@ -222,10 +222,15 @@ body {
     }
     .menu-container-phone {
       display: block;
+      position: fixed;
+      top: 40px;
+      right: 20px;
+      z-index: 9999;
     }
     .menu-container-phone a {
       font-size: 18px;
       color: black;
+      font-weight: bold;
     }
   }
 
@@ -235,10 +240,15 @@ body {
     }
     .menu-container-phone {
       display: block;
+      position: fixed;
+      top: 40px;
+      right: 20px;
+      z-index: 9999;
     }
     .menu-container-phone a {
       font-size: 18px;
       color: black;
+      font-weight: bold;
     }
   }
 
