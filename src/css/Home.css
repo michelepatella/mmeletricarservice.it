@@ -17,8 +17,7 @@
 @media (min-width: 1024px) {
     .title-container {
         overflow: hidden;
-        margin-left: 300px;
-        margin-top: 50px;
+        margin-left: 280px;
         background-image: url('../images/background.svg');
         background-repeat: no-repeat;
         background-position: initial;
@@ -30,51 +29,119 @@
         font-size: 70px;
         font-family: 'Poppins';
         color: black;
+        margin-bottom: 0px;
     }
 
     .home-description {
         font-size: 35px;
         color: black;
+        margin-top: 5px;
     }
 }
 
 /* ------ Medium screen ------- */
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape){
     .title-container {
-        margin-left: 150px;
+        overflow: hidden;
+        margin-left: 220px;
+        background-image: url('../images/background.svg');
+        background-repeat: no-repeat;
+        background-position: initial;
+        height: 100vh;
+        width: 100%;
+        margin-top: 10px;
     }
 
     .home-title {
         font-size: 50px;
+        font-family: 'Poppins';
+        color: black;
+        margin-bottom: 0px;
     }
 
     .home-description {
-        font-size: 28px;
+        font-size: 25px;
+        color: black;
+        margin-top: 5px;
     }
 }
 
-/* ------ Small screen ------- */
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait){
     .title-container {
-        margin-left: 20px;
-        margin-top: 20px;
+        overflow: hidden;
+        margin-left: 220px;
+        margin-top: 10px;
+        background-image: url('../images/background.svg');
+        background-repeat: no-repeat;
+        background-position: initial;
+        height: 100vh;
+        width: 100%;
     }
 
     .home-title {
-        font-size: 35px;
-        text-align: center;
+        font-size: 50px;
+        font-family: 'Poppins';
+        color: black;
+        margin-bottom: 0px;
+    }
+
+    .home-description {
+        font-size: 25px;
+        color: black;
+        margin-top: 5px;
+    }
+}
+
+
+/* ------ Small screen ------- */
+@media (max-width: 767px) and (orientation: portrait)  {
+    .title-container {
+        overflow: hidden;
+        margin-left: 20px;
+        background-image: url('../images/background.svg');
+        background-repeat: no-repeat;
+        background-position: initial;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .home-title {
+        font-size: 30px;
+        font-family: 'Poppins';
+        color: black;
+        margin-bottom: 0px;
     }
 
     .home-description {
         font-size: 20px;
-        text-align: center;
+        color: black;
+        margin-top: 5px;
     }
 }
 
-.email-icon {
-    width: 50px;
-    height: 50px;
-    display: block;
+@media (max-height: 767px) and (orientation: landscape){
+    .title-container {
+        overflow: hidden;
+        margin-left: 20px;
+        background-image: url('../images/background.svg');
+        background-repeat: no-repeat;
+        background-position: initial;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .home-title {
+        font-size: 35px;
+        font-family: 'Poppins';
+        color: black;
+        margin-bottom: 0px;
+    }
+
+    .home-description {
+        font-size: 22px;
+        color: black;
+        margin-top: 5px;
+    }
 }
 /* ------ End Title + description ------- */
 

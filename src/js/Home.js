@@ -59,10 +59,10 @@ function Home() {
                             Dove la tua auto<br/>trova l'eccellenza.
                         </h1>
                         {/* Subtitle */}
-                        <h2 className="home-description">
+                        <p className="home-description">
                             Benvenuto nell'officina <br/>
-                            <strong>MM Eletricar Service!</strong>
-                        </h2>
+                            <strong>MM Eletricar Service</strong>!
+                        </p>
                     </div>
                 </Content>
             </Layout>
