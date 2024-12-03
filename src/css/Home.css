@@ -23,6 +23,15 @@
         background-position: initial;
         height: 100vh;
         width: 100%;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 0.5s;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
     }
 
     .home-title {
@@ -37,10 +46,12 @@
         color: black;
         margin-top: 5px;
     }
+
 }
 
+
 /* ------ Medium screen ------- */
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape){
+@media (min-height: 768px) and (max-width: 1023px) and (orientation: landscape){
     .title-container {
         overflow: hidden;
         margin-left: 220px;
@@ -50,6 +61,16 @@
         height: 100vh;
         width: 100%;
         margin-top: 10px;
+        background-size: 65%;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 0.5s;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
     }
 
     .home-title {
@@ -66,7 +87,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait){
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
     .title-container {
         overflow: hidden;
         margin-left: 220px;
@@ -76,6 +97,16 @@
         background-position: initial;
         height: 100vh;
         width: 100%;
+        background-size: 65%;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 0.5s;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
     }
 
     .home-title {
@@ -103,6 +134,17 @@
         background-position: initial;
         height: 100vh;
         width: 100%;
+        margin-top: 10px;
+        background-size: 80%;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 0.5s;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
     }
 
     .home-title {
@@ -128,6 +170,17 @@
         background-position: initial;
         height: 100vh;
         width: 100%;
+        margin-top: 10px;
+        background-size: 38%;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 0.5s;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
     }
 
     .home-title {

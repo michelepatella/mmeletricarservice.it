@@ -10,6 +10,16 @@
     overflow: hidden;
 }
 
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .chi-siamo-description {
     background-color: #00223F;
@@ -19,8 +29,11 @@
     position: absolute;
     top: 35%;
     right: 0;
-    transform: translateY(-50%);
+    transform: translateY(-20px);
     margin: 0;
+    opacity: 0;
+    animation: fadeSlideIn 1.5s ease forwards;
+    animation-delay: 2.8s;
 }
 
 .chi-siamo-description h2 {
