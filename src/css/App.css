@@ -1,0 +1,123 @@
+body {
+  background-color: #F7F6F6;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* ------- Whatsapp button --------*/
+/* ------- Big screen ---------*/
+@media (min-width: 1024px) {
+  .support-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: #25d366;
+  }
+  .support-button .anticon {
+    font-size: 20px;
+  }
+}
+
+/* ------- Medium screen ---------*/
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape){
+  .support-button {
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .support-button .anticon {
+    font-size: 30px;
+    color: white;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait){
+  .support-button {
+    width: 40px;
+    height: 40px;
+    background-color: #25d366;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    z-index: 9999;
+  }
+
+  .support-button .anticon {
+    font-size: 18px;
+    color: white;
+  }
+}
+
+/* ------- Small screen ---------*/
+@media (max-width: 767px) and (orientation: portrait) {
+  .support-button {
+    width: 40px;
+    height: 40px;
+    background-color: #25d366;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    z-index: 9999;
+  }
+
+  .support-button .anticon {
+    font-size: 18px;
+    color: white;
+  }
+}
+
+@media (max-height: 767px) and (orientation: landscape){
+  .support-button {
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .support-button .anticon {
+    font-size: 22px;
+    color: white;
+  }
+}
+/* ------- End Whatsapp button --------*/

@@ -1,4 +1,4 @@
-import './ChiSiamo.css';
+import '../css/ChiSiamo.css';
 import React from "react";
 
 function ChiSiamo() {

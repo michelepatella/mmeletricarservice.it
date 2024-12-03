@@ -1,0 +1,201 @@
+/* ------ Home ------ */
+/* ------- General layout -------- */
+.home-layout {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: #F7F6F6;
+    flex-direction: column;
+    font-family: 'Poppins';
+}
+
+/* ------ Layout content ------ */
+/* ------ Title + description ------- */
+/* ------ Big screen ------- */
+@media (min-width: 1024px) {
+    .title-container {
+        overflow: hidden;
+        margin-left: 300px;
+        margin-top: 50px;
+        background-image: url('../images/background.svg');
+        background-repeat: no-repeat;
+        background-position: initial;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .home-title {
+        font-size: 70px;
+        font-family: 'Poppins';
+        color: black;
+    }
+
+    .home-description {
+        font-size: 35px;
+        color: black;
+    }
+}
+
+/* ------ Medium screen ------- */
+@media (max-width: 1024px) {
+    .title-container {
+        margin-left: 150px;
+    }
+
+    .home-title {
+        font-size: 50px;
+    }
+
+    .home-description {
+        font-size: 28px;
+    }
+}
+
+/* ------ Small screen ------- */
+@media (max-width: 768px) {
+    .title-container {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .home-title {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .home-description {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+.email-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+/* ------ End Title + description ------- */
+
+
+
+/* -------- Layout Header -------- */
+/* -------- Big screen -------- */
+@media (min-width: 1024px) {
+    .home-header {
+        display: flex;
+        justify-content: right;
+        background-color: #F7F6F6;
+        padding-top: 5px;
+        padding-right: 5px;
+    }
+
+    .contact-button {
+        background: none;
+        border: none;
+        margin: 0 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        padding: 0px;
+    }
+
+    .contact-button img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .contact-button:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* -------- Medium screen -------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .home-header {
+        display: flex;
+        justify-content: right;
+        background-color: #F7F6F6;
+        padding-top: 5px;
+        padding-right: 5px;
+    }
+
+    .contact-button {
+        background: none;
+        border: none;
+        margin: 0 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        padding: 0px;
+    }
+
+    .contact-button img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .contact-button:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* -------- Small screen -------- */
+@media (max-width: 767px) {
+    .home-header {
+        display: flex;
+        justify-content: right;
+        background-color: #F7F6F6;
+        padding-right: 11px;
+        padding-top: 10px;
+        align-items: flex-start;
+    }
+
+    .contact-button {
+        background: none;
+        border: none;
+        margin: 0 6px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        padding: 0px;
+    }
+
+    .contact-button img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contact-button:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-height: 767px) and (orientation: landscape){
+    .home-header {
+        display: flex;
+        justify-content: right;
+        background-color: #F7F6F6;
+        padding-right: 11px;
+        padding-top: 15px;
+        align-items: flex-start;
+    }
+
+    .contact-button {
+        background: none;
+        border: none;
+        margin: 0 6px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        padding: 0px;
+    }
+
+    .contact-button img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contact-button:hover {
+        transform: scale(1.1);
+    }
+}
+
+

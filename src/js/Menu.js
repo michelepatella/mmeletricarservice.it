@@ -1,19 +1,18 @@
-import './App.css';
-import {Anchor, Dropdown, FloatButton, Space} from 'antd';
-import Home from './Home';
-import ChiSiamo from './ChiSiamo';
-import { WhatsAppOutlined, DownOutlined } from '@ant-design/icons';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { WHATSAPP_LINK } from './constants';
 import React from "react";
+import '../css/Menu.css';
+import {Anchor, Dropdown, Space} from "antd";
+import {DownOutlined} from "@ant-design/icons";
 
-//definition of the section of the website
+/**
+ * Definition of the sections of the web page
+ * @type {[{id: string, title: string},{id: string, title: string},{id: string, title: string},{id: string, title: string},{id: string, title: string}]}
+ */
 const sections = [
-    { id: 'home', title: 'Home' },
-    { id: 'chi-siamo', title: 'Chi siamo' },
-    { id: 'servizi', title: 'Servizi' },
-    { id: 'dove-siamo', title: 'Dove siamo' },
-    { id: 'contatti', title: 'Contatti' }
+    { id: 'home', title: 'Home'},
+    { id: 'chi-siamo', title: 'Chi siamo', children: [{id: 'i-nostri-valori', title: 'I nostri valori'}] },
+    { id: 'servizi', title: 'Servizi', children: [{id: 'altri-servizi', title: 'Altri servizi'}, {id: 'auto-usate', title: 'Auto usate'}] },
+    { id: 'dove-siamo', title: 'Dove siamo'},
+    { id: 'contatti', title: 'Contatti'}
 ];
 
 /**
@@ -35,6 +34,7 @@ const menuItems = sections.map((section, index) => ({
     key: `${index + 1}`,
     href: `#${section.id}`,
     title: section.title,
+    children: section.children,
     onClick: () => scrollToSection(section.id)
 }));
 
@@ -46,23 +46,19 @@ const menuItemsForPhone = sections.map((section, index) => ({
     key: `${index + 1}`,
     href: `#${section.id}`,
     label: section.title,
+    children: section.children,
     onClick: () => scrollToSection(section.id),
     style: { fontFamily: 'Poppins', fontSize: '16px', paddingTop: '15px', paddingLeft: '10px', paddingRight: '20px' }
 }));
 
-function App() {
+/**
+ * This component represents the menu of the web page
+ * @returns {Element}
+ * @constructor
+ */
+function Menu() {
     return (
         <>
-            {/* WhatsApp support button */}
-            <FloatButton
-                id="support-button"
-                className="support-button"
-                icon={<WhatsAppOutlined style={{color: 'white'}}/>}
-                style={{insetInlineEnd: 24, backgroundColor: '#25d366'}}
-                type="secondary"
-                onClick={() => window.open(WHATSAPP_LINK, '_blank')}
-            />
-
             {/* Menu for PC and tablet*/}
             <div className="menu-container">
                 <Anchor
@@ -86,19 +82,8 @@ function App() {
                     </a>
                 </Dropdown>
             </div>
-
-            {/*Make the home page of the website the element Home*/}
-            <Router>
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                </Routes>
-            </Router>
-
-            {/*Integration of Chi Siamo section*/}
-            <ChiSiamo/>
-
         </>
-    );
+    )
 }
 
-export default App;
+export default Menu;
