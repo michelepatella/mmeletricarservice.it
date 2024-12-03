@@ -15,7 +15,7 @@ function ChiSiamo() {
                     {/*Description*/}
                     <p>Siamo <strong>Michele Vacca</strong> e <strong>Michele Scalese</strong>, fondatori di MM Eletricar Service,
                         un’officina specializzata in elettronica per autoveicoli. Con sede a Gravina in Puglia (BA),
-                        offriamo servizi per garantire sicurezza, affidabilità e prestazioni ottimali a ogni veicolo.
+                        offriamo servizi per garantire sicurezza, affidabilità e prestazioni ottimali ad ogni veicolo.
                     </p>
 
                 </div>

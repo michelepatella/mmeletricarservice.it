@@ -1,4 +1,4 @@
-.chi-siamo-container {
+.nostri-valori-container {
     height: 100vh;
     width: 100%;
     padding: 60px;
@@ -24,7 +24,7 @@
         }
     }
 
-    .chi-siamo-description {
+    .nostri-valori-description {
         background-color: #00223F;
         border-top-left-radius: 15px;
         width: 40%;
@@ -38,7 +38,7 @@
         animation-delay: 2.8s;
     }
 
-    .chi-siamo-description h2 {
+    .nostri-valori-description h2 {
         padding-top: 0px;
         padding-left: 30px;
         padding-right: 30px;
@@ -47,7 +47,7 @@
         color: white;
     }
 
-    .chi-siamo-description p {
+    .nostri-valori-description p {
         font-size: 25px;
         text-align: left;
         color: white;
@@ -71,7 +71,7 @@
         }
     }
 
-    .chi-siamo-description {
+    .nostri-valori-description {
         background-color: #00223F;
         border-top-left-radius: 15px;
         width: 40%;
@@ -85,7 +85,7 @@
         animation-delay: 2.8s;
     }
 
-    .chi-siamo-description h2 {
+    .nostri-valori-description h2 {
         padding-top: 0px;
         padding-left: 30px;
         padding-right: 30px;
@@ -94,7 +94,7 @@
         color: white;
     }
 
-    .chi-siamo-description p {
+    .nostri-valori-description p {
         font-size: 20px;
         text-align: left;
         color: white;
@@ -117,7 +117,7 @@
         }
     }
 
-    .chi-siamo-description {
+    .nostri-valori-description {
         background-color: #00223F;
         border-top-left-radius: 15px;
         width: 40%;
@@ -131,7 +131,7 @@
         animation-delay: 2.8s;
     }
 
-    .chi-siamo-description h2 {
+    .nostri-valori-description h2 {
         padding-top: 0px;
         padding-left: 30px;
         padding-right: 30px;
@@ -140,7 +140,7 @@
         color: white;
     }
 
-    .chi-siamo-description p {
+    .nostri-valori-description p {
         font-size: 25px;
         text-align: left;
         color: white;
@@ -164,7 +164,7 @@
         }
     }
 
-    .chi-siamo-description {
+    .nostri-valori-description {
         background-color: #00223F;
         border-top-left-radius: 15px;
         width: 40%;
@@ -178,7 +178,7 @@
         animation-delay: 2.8s;
     }
 
-    .chi-siamo-description h2 {
+    .nostri-valori-description h2 {
         padding-top: 0px;
         padding-left: 30px;
         padding-right: 30px;
@@ -187,7 +187,7 @@
         color: white;
     }
 
-    .chi-siamo-description p {
+    .nostri-valori-description p {
         font-size: 25px;
         text-align: left;
         color: white;
@@ -210,7 +210,7 @@
         }
     }
 
-    .chi-siamo-description {
+    .nostri-valori-description {
         background-color: #00223F;
         border-top-left-radius: 15px;
         width: 40%;
@@ -224,7 +224,7 @@
         animation-delay: 2.8s;
     }
 
-    .chi-siamo-description h2 {
+    .nostri-valori-description h2 {
         padding-top: 0px;
         padding-left: 30px;
         padding-right: 30px;
@@ -233,7 +233,7 @@
         color: white;
     }
 
-    .chi-siamo-description p {
+    .nostri-valori-description p {
         font-size: 25px;
         text-align: left;
         color: white;

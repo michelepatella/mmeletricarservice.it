@@ -9,7 +9,7 @@ import {DownOutlined} from "@ant-design/icons";
  */
 const sections = [
     { id: 'home', title: 'Home'},
-    { id: 'chi-siamo', title: 'Chi siamo', children: [{id: 'i-nostri-valori', title: 'I nostri valori'}] },
+    { id: 'chi-siamo', title: 'Chi siamo', children: [{id: 'nostri-valori', title: 'I nostri valori'}] },
     { id: 'servizi', title: 'Servizi', children: [{id: 'altri-servizi', title: 'Altri servizi'}, {id: 'auto-usate', title: 'Auto usate'}] },
     { id: 'dove-siamo', title: 'Dove siamo'},
     { id: 'contatti', title: 'Contatti'}

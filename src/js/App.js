@@ -3,6 +3,7 @@ import React from "react";
 import Home from './Home';
 import ChiSiamo from './ChiSiamo';
 import Menu from './Menu';
+import NostriValori from './NostriValori';
 import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './constants';
@@ -39,6 +40,9 @@ function App() {
 
             {/*Integration of Chi Siamo section*/}
             <ChiSiamo/>
+
+            {/*Integration of Nostri valori section*/}
+            <NostriValori/>
 
         </>
     );
