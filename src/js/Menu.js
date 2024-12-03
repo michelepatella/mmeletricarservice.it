@@ -31,10 +31,17 @@ const scrollToSection = (sectionId) => {
  * @type {{onClick: function(): void, href: string, title: *, key: string}[]}
  */
 const menuItems = sections.map((section, index) => ({
-    key: `${index + 1}`,
+    key: `section-${index + 1}`,
     href: `#${section.id}`,
     title: section.title,
-    children: section.children,
+    children: section.children
+        ? section.children.map((child, childIndex) => ({
+            key: `section-${index + 1}-child-${childIndex + 1}`,
+            href: `#${child.id}`,
+            title: child.title,
+            onClick: () => scrollToSection(child.id),
+        }))
+        : undefined,
     onClick: () => scrollToSection(section.id)
 }));
 
@@ -43,10 +50,18 @@ const menuItems = sections.map((section, index) => ({
  * @type {{onClick: function(): void, style: {fontFamily: string, paddingRight: string, fontSize: string, paddingTop: string, paddingLeft: string}, href: string, label: *, key: string}[]}
  */
 const menuItemsForPhone = sections.map((section, index) => ({
-    key: `${index + 1}`,
+    key: `section-${index + 1}`,
     href: `#${section.id}`,
     label: section.title,
-    children: section.children,
+    children: section.children
+        ? section.children.map((child, childIndex) => ({
+            key: `section-${index + 1}-child-${childIndex + 1}`,
+            href: `#${child.id}`,
+            label: child.title,
+            style: { fontFamily: 'Poppins', fontSize: '14px', paddingTop: '5px', paddingLeft: '10px', paddingRight: '20px' },
+            onClick: () => scrollToSection(child.id),
+        }))
+        : undefined,
     onClick: () => scrollToSection(section.id),
     style: { fontFamily: 'Poppins', fontSize: '16px', paddingTop: '15px', paddingLeft: '10px', paddingRight: '20px' }
 }));
