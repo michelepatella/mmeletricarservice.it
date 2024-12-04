@@ -29,13 +29,22 @@
         border-top-left-radius: 15px;
         width: 40%;
         position: absolute;
-        bottom: 0%;
+        bottom: 0;
         right: 0;
         transform: translateY(-20px);
         margin: 0;
         opacity: 0;
-        animation: fadeSlideIn 1.5s ease forwards;
-        animation-delay: 2.8s;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    #nostri-valori:target .nostri-valori-description {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #nostri-valori:not(:target) .nostri-valori-description {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 
     .nostri-valori-description h2 {
@@ -85,6 +94,16 @@
         animation-delay: 2.8s;
     }
 
+    #nostri-valori:target .nostri-valori-description {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #nostri-valori:not(:target) .nostri-valori-description {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
     .nostri-valori-description h2 {
         padding-top: 0px;
         padding-left: 30px;
@@ -129,6 +148,16 @@
         opacity: 0;
         animation: fadeSlideIn 1.5s ease forwards;
         animation-delay: 2.8s;
+    }
+
+    #nostri-valori:target .nostri-valori-description {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #nostri-valori:not(:target) .nostri-valori-description {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 
     .nostri-valori-description h2 {
@@ -178,6 +207,16 @@
         animation-delay: 2.8s;
     }
 
+    #nostri-valori:target .nostri-valori-description {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #nostri-valori:not(:target) .nostri-valori-description {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
     .nostri-valori-description h2 {
         padding-top: 0px;
         padding-left: 30px;
@@ -222,6 +261,16 @@
         opacity: 0;
         animation: fadeSlideIn 1.5s ease forwards;
         animation-delay: 2.8s;
+    }
+
+    #nostri-valori:target .nostri-valori-description {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #nostri-valori:not(:target) .nostri-valori-description {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 
     .nostri-valori-description h2 {

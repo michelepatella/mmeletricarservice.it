@@ -34,8 +34,17 @@
         transform: translateY(-20px);
         margin: 0;
         opacity: 0;
-        animation: fadeSlideIn 1.5s ease forwards;
-        animation-delay: 2.8s;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    #chi-siamo:target .chi-siamo-description {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #chi-siamo:not(:target) .chi-siamo-description {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 
     .chi-siamo-description h2 {
@@ -81,8 +90,17 @@
         transform: translateY(-20px);
         margin: 0;
         opacity: 0;
-        animation: fadeSlideIn 1.5s ease forwards;
-        animation-delay: 2.8s;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    #chi-siamo:target .chi-siamo-description {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #chi-siamo:not(:target) .chi-siamo-description {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 
     .chi-siamo-description h2 {
@@ -127,8 +145,17 @@
         transform: translateY(-20px);
         margin: 0;
         opacity: 0;
-        animation: fadeSlideIn 1.5s ease forwards;
-        animation-delay: 2.8s;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    #chi-siamo:target .chi-siamo-description {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #chi-siamo:not(:target) .chi-siamo-description {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 
     .chi-siamo-description h2 {
@@ -174,8 +201,17 @@
         transform: translateY(-20px);
         margin: 0;
         opacity: 0;
-        animation: fadeSlideIn 1.5s ease forwards;
-        animation-delay: 2.8s;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    #chi-siamo:target .chi-siamo-description {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #chi-siamo:not(:target) .chi-siamo-description {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 
     .chi-siamo-description h2 {
@@ -220,8 +256,17 @@
         transform: translateY(-20px);
         margin: 0;
         opacity: 0;
-        animation: fadeSlideIn 1.5s ease forwards;
-        animation-delay: 2.8s;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    #chi-siamo:target .chi-siamo-description {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #chi-siamo:not(:target) .chi-siamo-description {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 
     .chi-siamo-description h2 {
