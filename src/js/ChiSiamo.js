@@ -2,7 +2,13 @@ import '../css/ChiSiamo.css';
 import React from "react";
 import { motion } from "framer-motion";
 
+/**
+ * This component contains the chi siamo section
+ * @returns {Element}
+ * @constructor
+ */
 function ChiSiamo() {
+
     //variants for the animation
     const descriptionVariants = {
         offscreen: {

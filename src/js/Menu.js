@@ -27,14 +27,20 @@ const scrollToSection = (sectionId) => {
     }
 };
 
+/**
+ * This component contains the two menu of the web page
+ * @returns {Element}
+ * @constructor
+ */
 const Menu = () => {
 
-    {/*Animation for the menu*/}
+    //animation for the menu
     const controls = useAnimation();
     useEffect(() => {
         controls.start({ opacity: 1, x: 0, transition: { duration: 0.8 } });
     }, [controls]);
 
+    //menu items for PC and tablet menu
     const menuItems = sections.map((section, index) => ({
         key: `section-${index + 1}`,
         href: `#${section.id}`,
@@ -50,6 +56,7 @@ const Menu = () => {
         onClick: () => scrollToSection(section.id)
     }));
 
+    //menu items for phone menu
     const menuItemsForPhone = sections.map((section, index) => ({
         key: `section-${index + 1}`,
         href: `#${section.id}`,

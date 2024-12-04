@@ -54,6 +54,7 @@ function Home() {
                 {/* Content Section */}
                 <Content className="home-content">
                     <div className="title-container">
+
                         {/* Title */}
                         <h1 className="home-title">
                             Dove la tua auto<br/>trova l'eccellenza.
