@@ -14,7 +14,7 @@
 /* ------ Layout content ------ */
 /* ------ Title + description ------- */
 /* ------ Big screen ------- */
-@media (min-width: 1024px){
+@media (min-width: 1025px){
     .title-container {
         overflow: hidden;
         margin-left: 280px;
@@ -51,7 +51,7 @@
 
 
 /* ------ Medium screen ------- */
-@media (min-height: 768px) and (max-width: 1023px) and (orientation: landscape) {
+@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .title-container {
         overflow: hidden;
         margin-left: 220px;
@@ -87,7 +87,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .title-container {
         overflow: hidden;
         margin-left: 220px;
@@ -197,7 +197,7 @@
     }
 }
 
-@media (max-height: 767px) and (orientation: landscape) and (max-width: 1023px){
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
     .title-container {
         overflow: hidden;
         margin-left: 15px;
@@ -238,7 +238,7 @@
 
 /* -------- Layout Header -------- */
 /* -------- Big screen -------- */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .home-header {
         display: flex;
         justify-content: right;
@@ -267,7 +267,7 @@
 }
 
 /* -------- Medium screen -------- */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .home-header {
         display: flex;
         justify-content: right;

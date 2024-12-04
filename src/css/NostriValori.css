@@ -9,9 +9,9 @@
     overflow: hidden;
 }
 
-/* ------ Chi siamo section ------ */
+/* ------ Nostri valori section ------ */
 /* ------ Big screen -------*/
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
 
     @keyframes fadeSlideIn {
         0% {
@@ -67,7 +67,7 @@
 }
 
 /* Medium screen */
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
     @keyframes fadeSlideIn {
         0% {
@@ -83,15 +83,15 @@
     .nostri-valori-description {
         background-color: #00223F;
         border-top-left-radius: 15px;
-        width: 40%;
+        border-bottom-left-radius: 15px;
+        width: 50%;
         position: absolute;
-        bottom: 0%;
+        top: 0%;
         right: 0;
         transform: translateY(-20px);
         margin: 0;
         opacity: 0;
-        animation: fadeSlideIn 1.5s ease forwards;
-        animation-delay: 2.8s;
+        transition: opacity 1.5s ease, transform 1.5s ease;
     }
 
     #nostri-valori:target .nostri-valori-description {
@@ -109,21 +109,21 @@
         padding-left: 30px;
         padding-right: 30px;
         text-align: left;
-        font-size: 30px;
+        font-size: 25px;
         color: white;
     }
 
     .nostri-valori-description p {
-        font-size: 20px;
+        font-size: 18px;
         text-align: left;
         color: white;
         padding-left: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
         padding-right: 30px;
     }
 }
 
-@media (min-height: 768px) and (max-width: 1023px) and (orientation: landscape) {
+@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
     @keyframes fadeSlideIn {
         0% {
@@ -146,8 +146,7 @@
         transform: translateY(-20px);
         margin: 0;
         opacity: 0;
-        animation: fadeSlideIn 1.5s ease forwards;
-        animation-delay: 2.8s;
+        transition: opacity 1.5s ease, transform 1.5s ease;
     }
 
     #nostri-valori:target .nostri-valori-description {
@@ -165,16 +164,16 @@
         padding-left: 30px;
         padding-right: 30px;
         text-align: left;
-        font-size: 30px;
+        font-size: 27px;
         color: white;
     }
 
     .nostri-valori-description p {
-        font-size: 25px;
+        font-size: 22px;
         text-align: left;
         color: white;
         padding-left: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
         padding-right: 30px;
     }
 }
@@ -196,15 +195,15 @@
     .nostri-valori-description {
         background-color: #00223F;
         border-top-left-radius: 15px;
-        width: 40%;
+        border-bottom-left-radius: 15px;
+        width: 70%;
         position: absolute;
-        bottom: 0%;
+        top: 0%;
         right: 0;
         transform: translateY(-20px);
         margin: 0;
         opacity: 0;
-        animation: fadeSlideIn 1.5s ease forwards;
-        animation-delay: 2.8s;
+        transition: opacity 1.5s ease, transform 1.5s ease;
     }
 
     #nostri-valori:target .nostri-valori-description {
@@ -219,24 +218,24 @@
 
     .nostri-valori-description h2 {
         padding-top: 0px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 25px;
+        padding-right: 20px;
         text-align: left;
-        font-size: 40px;
+        font-size: 25px;
         color: white;
     }
 
     .nostri-valori-description p {
-        font-size: 25px;
+        font-size: 15px;
         text-align: left;
         color: white;
-        padding-left: 30px;
-        padding-bottom: 30px;
-        padding-right: 30px;
+        padding-left: 25px;
+        padding-bottom: 10px;
+        padding-right: 20px;
     }
 }
 
-@media (max-height: 767px) and (orientation: landscape) and (max-width: 1023px){
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
 
     @keyframes fadeSlideIn {
         0% {
@@ -252,15 +251,15 @@
     .nostri-valori-description {
         background-color: #00223F;
         border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
         width: 40%;
         position: absolute;
-        bottom: 0%;
+        top: 0%;
         right: 0;
         transform: translateY(-20px);
         margin: 0;
         opacity: 0;
-        animation: fadeSlideIn 1.5s ease forwards;
-        animation-delay: 2.8s;
+        transition: opacity 1.5s ease, transform 1.5s ease;
     }
 
     #nostri-valori:target .nostri-valori-description {
@@ -275,19 +274,19 @@
 
     .nostri-valori-description h2 {
         padding-top: 0px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 25px;
+        padding-right: 20px;
         text-align: left;
-        font-size: 40px;
+        font-size: 25px;
         color: white;
     }
 
     .nostri-valori-description p {
-        font-size: 25px;
+        font-size: 15px;
         text-align: left;
         color: white;
-        padding-left: 30px;
-        padding-bottom: 30px;
-        padding-right: 30px;
+        padding-left: 25px;
+        padding-bottom: 10px;
+        padding-right: 20px;
     }
 }

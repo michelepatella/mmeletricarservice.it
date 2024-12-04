@@ -1,6 +1,6 @@
 /* ------ Menù ------*/
 /* Big screen */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .ant-anchor-link-title {
         font-size: 20px;
         font-family: 'Poppins';
@@ -21,7 +21,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 1000;
+        z-index: 99999;
         padding-top: 100px;
         padding-left: 20px;
     }
@@ -31,7 +31,7 @@
 }
 
 /* Medium screen */
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .ant-anchor-link-title {
         font-size: 18px;
         font-family: 'Poppins';
@@ -52,7 +52,7 @@
         display: block;
         top: 0;
         left: 0;
-        z-index: 1000;
+        z-index: 99999;
         padding-top: 100px;
         padding-left: 20px;
     }
@@ -60,7 +60,7 @@
         display: none;
     }
 }
-@media (min-height: 768px) and (max-width: 1023px) and (orientation: landscape) {
+@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .ant-anchor-link-title {
         font-size: 18px;
         font-family: 'Poppins';
@@ -81,7 +81,7 @@
         display: block;
         top: 0;
         left: 0;
-        z-index: 1000;
+        z-index: 99999;
         padding-top: 100px;
         padding-left: 20px;
     }
@@ -96,11 +96,15 @@
         display: none;
     }
     .menu-container-phone {
+        background-color: #F7F6F6 !important;
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         display: block;
         position: fixed;
         top: 40px;
         right: 20px;
-        z-index: 9999;
+        z-index: 99999;
     }
     .menu-container-phone a {
         font-size: 18px;
@@ -109,16 +113,20 @@
     }
 }
 
-@media (max-height: 767px) and (orientation: landscape) and (max-width: 1023px) {
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
     .menu-container {
         display: none;
     }
     .menu-container-phone {
+        background-color: #F7F6F6 !important;
         display: block;
         position: fixed;
+        padding: 10px;
         top: 40px;
         right: 20px;
-        z-index: 9999;
+        z-index: 99999;
+        border-radius: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
     .menu-container-phone a {
         font-size: 18px;
