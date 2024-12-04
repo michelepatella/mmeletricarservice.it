@@ -21,10 +21,17 @@ body {
     align-items: center;
     padding: 0;
     background-color: #25d366;
+    transition: all 0.3s ease;
   }
   .support-button .anticon {
     font-size: 20px;
   }
+  .support-button:hover {
+    width: 63px;
+    height: 63px;
+  }
+
+
 }
 
 /* ------- Medium screen ---------*/

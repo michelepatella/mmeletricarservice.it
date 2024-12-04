@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import '../css/Menu.css';
-import {Anchor, Dropdown, Space} from "antd";
-import {DownOutlined} from "@ant-design/icons";
+import { Anchor, Dropdown, Space } from "antd";
+import { DownOutlined } from "@ant-design/icons";
+import { motion, useAnimation } from "framer-motion";
 
 /**
  * Definition of the sections of the web page
  * @type {[{id: string, title: string},{id: string, title: string},{id: string, title: string},{id: string, title: string},{id: string, title: string}]}
  */
 const sections = [
-    { id: 'home', title: 'Home'},
-    { id: 'chi-siamo', title: 'Chi siamo', children: [{id: 'nostri-valori', title: 'I nostri valori'}] },
-    { id: 'servizi', title: 'Servizi', children: [{id: 'altri-servizi', title: 'Altri servizi'}, {id: 'auto-usate', title: 'Auto usate'}] },
-    { id: 'dove-siamo', title: 'Dove siamo'},
-    { id: 'contatti', title: 'Contatti'}
+    { id: 'home', title: 'Home' },
+    { id: 'chi-siamo', title: 'Chi siamo', children: [{ id: 'nostri-valori', title: 'I nostri valori' }] },
+    { id: 'servizi', title: 'Servizi', children: [{ id: 'altri-servizi', title: 'Altri servizi' }, { id: 'auto-usate', title: 'Auto usate' }] },
+    { id: 'dove-siamo', title: 'Dove siamo' },
+    { id: 'contatti', title: 'Contatti' }
 ];
 
 /**
@@ -26,60 +27,60 @@ const scrollToSection = (sectionId) => {
     }
 };
 
-/**
- * Method to generate the menu items
- * @type {{onClick: function(): void, href: string, title: *, key: string}[]}
- */
-const menuItems = sections.map((section, index) => ({
-    key: `section-${index + 1}`,
-    href: `#${section.id}`,
-    title: section.title,
-    children: section.children
-        ? section.children.map((child, childIndex) => ({
-            key: `section-${index + 1}-child-${childIndex + 1}`,
-            href: `#${child.id}`,
-            title: child.title,
-            onClick: () => scrollToSection(child.id),
-        }))
-        : undefined,
-    onClick: () => scrollToSection(section.id)
-}));
+const Menu = () => {
 
-/**
- * Method to generate menu items for phone
- * @type {{onClick: function(): void, style: {fontFamily: string, paddingRight: string, fontSize: string, paddingTop: string, paddingLeft: string}, href: string, label: *, key: string}[]}
- */
-const menuItemsForPhone = sections.map((section, index) => ({
-    key: `section-${index + 1}`,
-    href: `#${section.id}`,
-    label: section.title,
-    children: section.children
-        ? section.children.map((child, childIndex) => ({
-            key: `section-${index + 1}-child-${childIndex + 1}`,
-            href: `#${child.id}`,
-            label: child.title,
-            style: { fontFamily: 'Poppins', fontSize: '14px', paddingTop: '5px', paddingLeft: '10px', paddingRight: '20px' },
-            onClick: () => scrollToSection(child.id),
-        }))
-        : undefined,
-    onClick: () => scrollToSection(section.id),
-    style: { fontFamily: 'Poppins', fontSize: '16px', paddingTop: '15px', paddingLeft: '10px', paddingRight: '20px' }
-}));
+    {/*Animation for the menu*/}
+    const controls = useAnimation();
+    useEffect(() => {
+        controls.start({ opacity: 1, x: 0, transition: { duration: 0.8 } });
+    }, [controls]);
 
-/**
- * This component represents the menu of the web page
- * @returns {Element}
- * @constructor
- */
-function Menu() {
+    const menuItems = sections.map((section, index) => ({
+        key: `section-${index + 1}`,
+        href: `#${section.id}`,
+        title: section.title,
+        children: section.children
+            ? section.children.map((child, childIndex) => ({
+                key: `section-${index + 1}-child-${childIndex + 1}`,
+                href: `#${child.id}`,
+                title: child.title,
+                onClick: () => scrollToSection(child.id),
+            }))
+            : undefined,
+        onClick: () => scrollToSection(section.id)
+    }));
+
+    const menuItemsForPhone = sections.map((section, index) => ({
+        key: `section-${index + 1}`,
+        href: `#${section.id}`,
+        label: section.title,
+        children: section.children
+            ? section.children.map((child, childIndex) => ({
+                key: `section-${index + 1}-child-${childIndex + 1}`,
+                href: `#${child.id}`,
+                label: child.title,
+                style: { fontFamily: 'Poppins', fontSize: '14px', paddingTop: '5px', paddingLeft: '10px', paddingRight: '20px' },
+                onClick: () => scrollToSection(child.id),
+            }))
+            : undefined,
+        onClick: () => scrollToSection(section.id),
+        style: { fontFamily: 'Poppins', fontSize: '16px', paddingTop: '15px', paddingLeft: '10px', paddingRight: '20px' }
+    }));
+
     return (
         <>
             {/* Menu for PC and tablet*/}
             <div className="menu-container">
-                <Anchor
-                    affix={false}
-                    items={menuItems}
-                />
+                <motion.div
+                    className="menu-content"
+                    animate={controls}
+                    initial={{ opacity: 0, x: -100 }}
+                >
+                    <Anchor
+                        affix={false}
+                        items={menuItems}
+                    />
+                </motion.div>
             </div>
 
             {/* Menu for phone*/}
@@ -92,13 +93,13 @@ function Menu() {
                     <a onClick={(e) => e.preventDefault()}>
                         <Space>
                             Menù
-                            <DownOutlined/>
+                            <DownOutlined />
                         </Space>
                     </a>
                 </Dropdown>
             </div>
         </>
-    )
+    );
 }
 
 export default Menu;
