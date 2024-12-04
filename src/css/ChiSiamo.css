@@ -9,6 +9,11 @@
     overflow: hidden;
 }
 
+#chi-siamo:target .chi-siamo-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ------ Chi siamo section ------ */
 /* ------ Big screen -------*/
 @media (min-width: 1024px) {
