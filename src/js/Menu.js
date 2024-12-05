@@ -139,8 +139,9 @@ const Menu = () => {
                     closable={true}
                     onClose={toggleDrawer}
                     visible={visible}
-                    width={250}
-                    closeIcon={<CloseOutlined style={{ fontSize: '24px', color: 'black' }} />}
+                    width="100vw"  // Imposta la larghezza a 100% della finestra
+                    height="100vh"
+                    closeIcon={<CloseOutlined style={{ fontSize: '30px', color: 'black' }} />}
                 >
                     <motion.div
                         initial={{ opacity: 0 }}

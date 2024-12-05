@@ -109,11 +109,12 @@
         font-size: 25px;
         margin-top: 10px;
         border: none !important;
+        background-color: rgba(247, 234, 25, 1) !important;
     }
 
     .hamburger-button {
         background-color: rgba(247, 234, 25, 1) !important;
-        color: #00223F !important;
+        color: black !important;
         height: 40px !important;
         width: 40px !important;
         padding: 0 !important;
@@ -127,20 +128,27 @@
     .ant-menu-submenu-title {
         font-family: 'Poppins';
         color: black !important;
-        font-size: 25px !important;
-        margin-top: 30px !important;
+        font-size: 40px !important;
+        margin-bottom: 70px !important;
+        font-weight: bold !important;
     }
 
     .ant-drawer-header {
         border-bottom: none !important;
+        background-color: rgba(247, 234, 25, 1) !important;
+    }
+
+    .ant-drawer-content {
+        background-color: rgba(247, 234, 25, 1) !important;
     }
 
     .ant-menu-item {
         font-family: 'Poppins', sans-serif;
         color: black !important;
-        font-size: 25px !important;
-        margin-top: 30px !important;
+        font-size: 40px !important;
+        margin-bottom: 70px !important;
         opacity: 0;
+        font-weight: bold !important;
         transform: translateY(-20px);
         animation: fadeInUp 0.5s forwards;
         transition: transform 0.3s ease, color 0.3s ease;
@@ -186,8 +194,9 @@
     }
 
     .ant-menu-submenu .ant-menu-item {
-        font-size: 20px !important;
+        font-size: 30px !important;
         margin-top: 5px !important;
+        margin-bottom: 5px !important;
         display: flex !important;
         align-items: start !important;
         justify-content: start !important;
@@ -220,7 +229,7 @@
 
     .hamburger-button {
         background-color: rgba(247, 234, 25, 1) !important;
-        color: #00223F !important;
+        color: black !important;
         height: 40px !important;
         width: 40px !important;
         padding: 0 !important;
