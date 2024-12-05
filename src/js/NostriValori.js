@@ -9,7 +9,10 @@ import { motion } from "framer-motion";
  */
 function NostriValori() {
 
-    //variants for the animation
+    /**
+     * Variants for the animation
+     * @type {{offscreen: {x: number, opacity: number}, onscreen: {x: number, opacity: number, transition: {duration: number, bounce: number, type: string}}}}
+     */
     const descriptionVariants = {
         offscreen: {
             opacity: 0,

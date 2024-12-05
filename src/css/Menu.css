@@ -95,22 +95,95 @@
     .menu-container {
         display: none;
     }
+
     .menu-container-phone {
-        background-color: #F7F6F6 !important;
-        padding: 10px;
-        border-radius: 15px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         display: block;
         position: fixed;
         top: 40px;
         right: 20px;
         z-index: 99999;
     }
-    .menu-container-phone a {
-        font-size: 18px;
-        color: black;
-        font-weight: bold;
+
+    .ant-menu {
+        color: white;
+        font-size: 25px;
+        margin-top: 10px;
+        border: none !important;
     }
+
+    .hamburger-button {
+        background-color: rgba(247, 234, 25, 1) !important;
+        color: #00223F !important;
+        height: 40px !important;
+        width: 40px !important;
+        padding: 0 !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border: none !important;
+        border-radius: 50% !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .ant-menu-submenu-title {
+        font-family: 'Poppins';
+        color: black !important;
+        font-size: 25px !important;
+        margin-top: 30px !important;
+    }
+
+    .ant-drawer-header {
+        border-bottom: none !important;
+    }
+
+    .ant-menu-item {
+        font-family: 'Poppins', sans-serif;
+        color: black !important;
+        font-size: 25px !important;
+        margin-top: 30px !important;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeInUp 0.5s forwards;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    //*THIS ORDER IS IMPORTANT TO PHONE MENU ITEMS ANIMATION*//
+    .ant-menu-item:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+    .ant-menu-item:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+    .ant-menu-submenu-title:nth-child(1) {
+        animation-delay: 0.4s;
+    }
+    .ant-menu-item:nth-child(3) {
+        animation-delay: 0.5s;
+    }
+    .ant-menu-item:nth-child(4) {
+        animation-delay: 0.6s;
+    }
+    .ant-menu-item:nth-child(5) {
+        animation-delay: 0.7s;
+    }
+
+    .ant-menu-submenu-title {
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeInUp 0.5s forwards;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
 }
 
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
@@ -118,21 +191,13 @@
         display: none;
     }
     .menu-container-phone {
-        background-color: #F7F6F6 !important;
         display: block;
         position: fixed;
-        padding: 10px;
         top: 40px;
         right: 20px;
         z-index: 99999;
-        border-radius: 15px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
-    .menu-container-phone a {
-        font-size: 18px;
-        color: black;
-        font-weight: bold;
-    }
+
 }
 
 /*------ End Menù --------*/

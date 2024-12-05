@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import '../css/Menu.css';
-import { Anchor, Dropdown, Space } from "antd";
-import { DownOutlined } from "@ant-design/icons";
+import { Anchor, Button, Drawer, Menu as AntMenu } from "antd";
+import { MenuOutlined } from '@ant-design/icons';
 import { motion, useAnimation } from "framer-motion";
+import { CloseOutlined } from '@ant-design/icons';
 
 /**
  * Definition of the sections of the web page
@@ -17,6 +18,25 @@ const sections = [
 ];
 
 /**
+ * Definition of the menu items for phone menu
+ * @type {[{label: string, key: string},{label: string, key: string},{children: [{label: string, key: string},{label: string, key: string}], label: string, key: string},{label: string, key: string},{label: string, key: string}]}
+ */
+const menuItemsForPhone = [
+    { key: 'home', label: 'Home' },
+    { key: 'chi-siamo', label: 'Chi siamo' },
+    {
+        key: 'servizi',
+        label: 'Servizi',
+        children: [
+            { key: 'nostri-valori', label: 'I nostri valori' },
+            { key: 'auto-usate', label: 'Auto usate' },
+        ],
+    },
+    { key: 'dove-siamo', label: 'Dove siamo' },
+    { key: 'contatti', label: 'Contatti' }
+];
+
+/**
  * Method to animate the transition to a section
  * @param sectionId
  */
@@ -28,51 +48,77 @@ const scrollToSection = (sectionId) => {
 };
 
 /**
- * This component contains the two menu of the web page
+ * Generation of menu items for PC and tablet
+ * @type {{onClick: function(): void, children: *|undefined, href: string, title: *, key: string}[]}
+ */
+const menuItemsGenerationForPCAndTablet = sections.map((section, index) => ({
+    key: `section-${index + 1}`,
+    href: `#${section.id}`,
+    title: section.title,
+    children: section.children
+        ? section.children.map((child, childIndex) => ({
+            key: `section-${index + 1}-child-${childIndex + 1}`,
+            href: `#${child.id}`,
+            title: child.title,
+            onClick: () => scrollToSection(child.id),
+        }))
+        : undefined,
+    onClick: () => scrollToSection(section.id)
+}));
+
+/**
+ * Generation of menu items for phone
+ * @param data
+ * @returns {*}
+ */
+const menuItemsGenerationForPhone = (data) => {
+    return data.map(item => {
+        if (item.children) {
+            return (
+                <AntMenu.SubMenu key={item.key} title={item.label}>
+                    {menuItemsGenerationForPhone(item.children)}
+                </AntMenu.SubMenu>
+            );
+        }
+        return <AntMenu.Item key={item.key}>{item.label}</AntMenu.Item>;
+    });
+};
+
+/**
+ * This component contains the menu of the web page
  * @returns {Element}
  * @constructor
  */
 const Menu = () => {
-
-    //animation for the menu
+    /**
+     * Animation for the menu of PC and tablet
+     * @type {AnimationControls}
+     */
     const controls = useAnimation();
     useEffect(() => {
         controls.start({ opacity: 1, x: 0, transition: { duration: 0.8 } });
     }, [controls]);
 
-    //menu items for PC and tablet menu
-    const menuItems = sections.map((section, index) => ({
-        key: `section-${index + 1}`,
-        href: `#${section.id}`,
-        title: section.title,
-        children: section.children
-            ? section.children.map((child, childIndex) => ({
-                key: `section-${index + 1}-child-${childIndex + 1}`,
-                href: `#${child.id}`,
-                title: child.title,
-                onClick: () => scrollToSection(child.id),
-            }))
-            : undefined,
-        onClick: () => scrollToSection(section.id)
-    }));
+    // Animation for the menu items in mobile
+    const menuItemControls = useAnimation();
 
-    //menu items for phone menu
-    const menuItemsForPhone = sections.map((section, index) => ({
-        key: `section-${index + 1}`,
-        href: `#${section.id}`,
-        label: section.title,
-        children: section.children
-            ? section.children.map((child, childIndex) => ({
-                key: `section-${index + 1}-child-${childIndex + 1}`,
-                href: `#${child.id}`,
-                label: child.title,
-                style: { fontFamily: 'Poppins', fontSize: '14px', paddingTop: '5px', paddingLeft: '10px', paddingRight: '20px' },
-                onClick: () => scrollToSection(child.id),
-            }))
-            : undefined,
-        onClick: () => scrollToSection(section.id),
-        style: { fontFamily: 'Poppins', fontSize: '16px', paddingTop: '15px', paddingLeft: '10px', paddingRight: '20px' }
-    }));
+    useEffect(() => {
+        menuItemControls.start({
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+                stiffness: 100,
+                delay: 0.2,
+            },
+        });
+    }, [menuItemControls]);
+
+    const [visible, setVisible] = useState(false);
+
+    const toggleDrawer = () => {
+        setVisible(!visible);
+    };
 
     return (
         <>
@@ -85,25 +131,44 @@ const Menu = () => {
                 >
                     <Anchor
                         affix={false}
-                        items={menuItems}
+                        items={menuItemsGenerationForPCAndTablet}
                     />
                 </motion.div>
             </div>
 
             {/* Menu for phone*/}
             <div className="menu-container-phone">
-                <Dropdown
-                    menu={{
-                        items: menuItemsForPhone
-                    }}
+                {/* Hamburger button */}
+                <Button
+                    type="primary"
+                    shape="circle"
+                    icon={<MenuOutlined />}
+                    onClick={toggleDrawer}
+                    className="hamburger-button"
+                    style={{display: visible ? 'none' : 'flex'}}
+                />
+
+                {/* Menu appears to the right */}
+                <Drawer
+                    placement="right"
+                    closable={true}
+                    onClose={toggleDrawer}
+                    visible={visible}
+                    width={250}
+                    closeIcon={<CloseOutlined style={{ fontSize: '24px', color: 'black' }} />}
                 >
-                    <a onClick={(e) => e.preventDefault()}>
-                        <Space>
-                            Menù
-                            <DownOutlined />
-                        </Space>
-                    </a>
-                </Dropdown>
+                    {/* Motion Div applied to animate menu items on the mobile */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <AntMenu
+                            mode="vertical"
+                            items={menuItemsForPhone}
+                        />
+                    </motion.div>
+                </Drawer>
             </div>
         </>
     );
