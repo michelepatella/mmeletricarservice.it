@@ -195,13 +195,13 @@
 
     .ant-menu-submenu .ant-menu-item {
         font-size: 30px !important;
-        margin-top: 5px !important;
-        margin-bottom: 5px !important;
+        margin-top: 0px !important;
+        margin-bottom: 20px !important;
         display: flex !important;
         align-items: start !important;
         justify-content: start !important;
         text-align: left !important;
-        padding-left: 30px !important;
+        padding-left: 50px !important;
         margin-left: 0 !important;
     }
 
@@ -225,6 +225,7 @@
         font-size: 25px;
         margin-top: 0px;
         border: none !important;
+        background-color: rgba(247, 234, 25, 1) !important;
     }
 
     .hamburger-button {
@@ -243,23 +244,30 @@
     .ant-menu-submenu-title {
         font-family: 'Poppins';
         color: black !important;
-        font-size: 20px !important;
-        margin-top: 10px !important;
-    }
-
-    .ant-drawer-header {
-        border-bottom: none !important;
+        font-size: 30px !important;
+        margin-bottom: 20px !important;
+        font-weight: bold !important;
     }
 
     .ant-menu-item {
         font-family: 'Poppins', sans-serif;
         color: black !important;
-        font-size: 20px !important;
-        margin-top: 10px !important;
+        font-size: 30px !important;
+        margin-bottom: 20px !important;
         opacity: 0;
         transform: translateY(-20px);
         animation: fadeInUp 0.5s forwards;
         transition: transform 0.3s ease, color 0.3s ease;
+        font-weight: bold !important;
+    }
+
+    .ant-drawer-header {
+        border-bottom: none !important;
+        background-color: rgba(247, 234, 25, 1) !important;
+    }
+
+    .ant-drawer-content {
+        background-color: rgba(247, 234, 25, 1) !important;
     }
 
     @keyframes fadeInUp {
@@ -301,13 +309,14 @@
     }
 
     .ant-menu-submenu .ant-menu-item {
-        font-size: 16px !important;
+        font-size: 25px !important;
         margin-top: 5px !important;
+        margin-bottom: 5px !important;
         display: flex !important;
         align-items: start !important;
         justify-content: start !important;
         text-align: left !important;
-        padding-left: 30px !important;
+        padding-left: 50px !important;
         margin-left: 0 !important;
     }
 
