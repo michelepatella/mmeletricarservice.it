@@ -90,7 +90,7 @@ body {
     border-radius: 50%;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 15px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +112,7 @@ body {
     border-radius: 50%;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 15px !important;
     z-index: 999;
     display: flex;
     justify-content: center;

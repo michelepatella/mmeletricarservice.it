@@ -148,7 +148,7 @@ const Menu = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <AntMenu
-                            mode="inline" // Usato per il comportamento inline del sottomenu
+                            mode="inline"
                             items={menuItemsGenerationForPhone}
                         />
                     </motion.div>

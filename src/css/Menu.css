@@ -100,7 +100,7 @@
         display: block;
         position: fixed;
         top: 40px;
-        right: 20px;
+        right: 15px;
         z-index: 99999;
     }
 
@@ -207,7 +207,7 @@
         display: block;
         position: fixed;
         top: 40px;
-        right: 20px;
+        right: 15px;
         z-index: 99999;
     }
 
@@ -303,5 +303,4 @@
     }
 
 }
-
 /*------ End Menù --------*/
