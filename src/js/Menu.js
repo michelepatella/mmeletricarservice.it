@@ -23,17 +23,18 @@ const sections = [
  */
 const menuItemsForPhone = [
     { key: 'home', label: 'Home' },
-    { key: 'chi-siamo', label: 'Chi siamo' },
+    { key: 'chi-siamo', label: 'Chi siamo',
+        children: [{ key: 'nostri-valori', title: 'I nostri valori' }] },
     {
         key: 'servizi',
-        label: 'Servizi',
+        label: 'Servizi', href: '#servizi',
         children: [
-            { key: 'nostri-valori', label: 'I nostri valori' },
-            { key: 'auto-usate', label: 'Auto usate' },
+            { key: 'altri-servizi', label: 'Altri servizi'},
+            { key: 'auto-usate', label: 'Auto usate'},
         ],
     },
-    { key: 'dove-siamo', label: 'Dove siamo' },
-    { key: 'contatti', label: 'Contatti' }
+    { key: 'dove-siamo', label: 'Dove siamo'},
+    { key: 'contatti', label: 'Contatti'},
 ];
 
 /**
@@ -42,6 +43,7 @@ const menuItemsForPhone = [
  */
 const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
+    console.log('Scrolling to section:', sectionId);
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
@@ -73,16 +75,29 @@ const menuItemsGenerationForPCAndTablet = sections.map((section, index) => ({
  */
 const menuItemsGenerationForPhone = (data) => {
     return data.map(item => {
+
         if (item.children) {
             return (
-                <AntMenu.SubMenu key={item.key} title={item.label}>
+                <AntMenu.SubMenu
+                    key={item.key}
+                    title={item.label}
+                >
                     {menuItemsGenerationForPhone(item.children)}
                 </AntMenu.SubMenu>
             );
         }
-        return <AntMenu.Item key={item.key}>{item.label}</AntMenu.Item>;
+
+        return (
+            <AntMenu.Item
+                key={item.key}
+                onClick={() => scrollToSection(item.key)}
+            >
+                {item.label}
+            </AntMenu.Item>
+        );
     });
 };
+
 
 /**
  * This component contains the menu of the web page
