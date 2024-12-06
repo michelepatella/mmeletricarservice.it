@@ -103,6 +103,7 @@ const TextAnimation = ({ text, delay = 0}) => {
  * @constructor
  */
 function Home() {
+
     const [showSubtitle, setShowSubtitle] = useState(false);
 
     /**

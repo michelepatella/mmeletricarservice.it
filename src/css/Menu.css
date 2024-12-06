@@ -100,6 +100,11 @@
 
 /* Small screen */
 @media (max-width: 767px){
+
+    .ant-menu-item-selected {
+        background-color: var(--accent-color) !important;
+    }
+
     .menu-container {
         display: none;
     }
@@ -216,6 +221,15 @@
 }
 
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
+
+    .ant-menu-item-selected {
+        background-color: var(--accent-color) !important;
+    }
+
+    .ant-menu-item:hover {
+        background-color: var(--accent-color) !important;
+    }
+
     .menu-container {
         display: none;
     }
