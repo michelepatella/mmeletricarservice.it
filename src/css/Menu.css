@@ -73,16 +73,16 @@
         font-size: 18px;
         font-family: 'Poppins';
         margin-top: 25px;
-        color: white;
+        color: white !important;
         transition: color 0.3s ease;
+    }
+    .ant-anchor-ink {
+        background-color: var(--accent-color) !important;
+        width: 2px;
     }
     .ant-anchor-link-active > .ant-anchor-link-title {
         color: white !important;
         font-weight: bold;
-    }
-    .ant-anchor-ink {
-        background-color: var(--background-color) !important;
-        width: 2px;
     }
     .menu-container {
         position: fixed;

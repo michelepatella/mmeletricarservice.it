@@ -16,11 +16,11 @@ function ChiSiamo() {
     const descriptionVariants = {
         offscreen: {
             opacity: 0,
-            x: 20
+            y: -20
         },
         onscreen: {
             opacity: 1,
-            x: 0,
+            y: 65,
             transition: {
                 type: "spring",
                 bounce: 0.6,

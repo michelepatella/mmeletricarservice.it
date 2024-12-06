@@ -47,8 +47,8 @@ const TextAnimation = ({ text, delay = 0}) => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{
-                                    delay: delay + index * 0.5,
-                                    duration: 0.8,
+                                    delay: delay + index * 0.4,
+                                    duration: 0.5,
                                 }}
                                 style={{ display: 'inline-block'}}
                             >
@@ -66,8 +66,8 @@ const TextAnimation = ({ text, delay = 0}) => {
                                 initial={{opacity: 0}}
                                 animate={{opacity: 1}}
                                 transition={{
-                                    delay: delay + index * 0.5,
-                                    duration: 0.8,
+                                    delay: delay + index * 0.4,
+                                    duration: 0.5,
                                 }}
                                 style={{display: 'inline-block', fontWeight: 'bold'}}
                             >
@@ -81,8 +81,8 @@ const TextAnimation = ({ text, delay = 0}) => {
                                 initial={{opacity: 0}}
                                 animate={{opacity: 1}}
                                 transition={{
-                                    delay: delay + index * 0.5,
-                                    duration: 0.8,
+                                    delay: delay + index * 0.4,
+                                    duration: 0.5,
                                 }}
                                 style={{display: 'inline-block'}}
                             >
