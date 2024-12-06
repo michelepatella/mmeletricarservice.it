@@ -1,21 +1,29 @@
 /* ------ Menù ------*/
 /* Big screen */
 @media (min-width: 1025px) {
+
     .ant-anchor-link-title {
         font-size: 20px;
         font-family: 'Poppins';
         margin-top: 25px;
-        color: black;
+        color: white;
         transition: color 0.3s ease;
     }
+
     .ant-anchor-link-active > .ant-anchor-link-title {
-        color: black !important;
+        color: white !important;
         font-weight: bold;
     }
     .ant-anchor-ink {
-        background-color: black !important;
+        background-color: var(--accent-color) !important;
         width: 2px;
+        color: white !important;
     }
+
+    .ant-anchor .ant-anchor-link-title {
+        color: white !important;
+    }
+
     .menu-container {
         display: block;
         position: fixed;
@@ -36,15 +44,15 @@
         font-size: 18px;
         font-family: 'Poppins';
         margin-top: 25px;
-        color: black;
+        color: white !important;
         transition: color 0.3s ease;
     }
     .ant-anchor-link-active > .ant-anchor-link-title {
-        color: black !important;
+        color: white !important;
         font-weight: bold;
     }
     .ant-anchor-ink {
-        background-color: black !important;
+        background-color: var(--accent-color) !important;
         width: 2px;
     }
     .menu-container {
@@ -65,15 +73,15 @@
         font-size: 18px;
         font-family: 'Poppins';
         margin-top: 25px;
-        color: black;
+        color: white;
         transition: color 0.3s ease;
     }
     .ant-anchor-link-active > .ant-anchor-link-title {
-        color: black !important;
+        color: white !important;
         font-weight: bold;
     }
     .ant-anchor-ink {
-        background-color: black !important;
+        background-color: var(--background-color) !important;
         width: 2px;
     }
     .menu-container {

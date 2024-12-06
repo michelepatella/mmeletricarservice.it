@@ -1,8 +1,14 @@
 body {
-  background-color: #F7F6F6;
+  background-color: var(--background-color);
 }
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --background-color: #141414;
+  --accent-color: #F8EC20;
+  --secondary-color: #1328B4;
 }
 
 /* ------- Whatsapp button --------*/
