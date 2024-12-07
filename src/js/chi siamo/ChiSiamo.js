@@ -1,6 +1,7 @@
-import '../css/ChiSiamo.css';
+import '../../css/chi siamo/ChiSiamo.css';
 import React from "react";
 import { motion } from "framer-motion";
+import {CHI_SIAMO_DESCRIPTION, CHI_SIAMO_TITLE} from "../constants";
 
 /**
  * This component contains the chi siamo section
@@ -42,14 +43,11 @@ function ChiSiamo() {
                     viewport={{ once: true, amount: 0.8 }}
                 >
                     {/* Title */}
-                    <h2>MM Eletricar Service</h2>
+                    <h2>{CHI_SIAMO_TITLE}</h2>
 
                     {/* Description */}
-                    <p>
-                        Siamo <strong>Michele Vacca</strong> e <strong>Michele Scalese</strong>, fondatori di MM Eletricar Service,
-                        un’officina specializzata in elettronica per autoveicoli. Con sede a Gravina in Puglia (BA),
-                        offriamo servizi per garantire sicurezza, affidabilità e prestazioni ottimali ad ogni veicolo.
-                    </p>
+                    <p dangerouslySetInnerHTML={{ __html: CHI_SIAMO_DESCRIPTION }}/>
+
                 </motion.div>
             </div>
         </>

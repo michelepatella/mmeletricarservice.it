@@ -1,31 +1,7 @@
-import React, { useState } from 'react';
-import { Layout } from 'antd';
-import '../css/Home.css';
-import { EMAIL, PHONE, FACEBOOK } from './constants';
-import { motion } from "framer-motion";
-
-const { Header, Content } = Layout;
-
-/**
- * Method to call when the email button is clicked
- */
-function onEmailButtonClik() {
-    window.location.href = `mailto:${EMAIL}`;
-}
-
-/**
- * Method to call when the facebook button is clicked
- */
-function onFacebookButtonClik() {
-    window.open(FACEBOOK, "_blank");
-}
-
-/**
- * Method to call when the phone button is clicked
- */
-function onPhoneButtonClik() {
-    window.location.href = `tel:${PHONE}`;
-}
+import {motion} from "framer-motion";
+import React, {useState} from "react";
+import {HOME_TITLE, HOME_SUBTITLE} from "../constants";
+import '../../css/home/HomeContent.css';
 
 /**
  * Animation for the title + subtitle of the home page
@@ -40,6 +16,7 @@ const TextAnimation = ({ text, delay = 0}) => {
     return (
         <div style={{ whiteSpace: 'pre' }}>
             {words.map((word, index) => {
+                //when the word is "auto" or "nell'autofficina", insert a <br/>
                 if (word === "auto" || word === "nell'autofficina") {
                     return (
                         <React.Fragment key={index}>
@@ -58,7 +35,7 @@ const TextAnimation = ({ text, delay = 0}) => {
                         </React.Fragment>
                     );
                 } else {
-
+                    //make bold the word "MM Eletricar Service"
                     if(word == "MM" || word == "Eletricar" || word == "Service!") {
                         return (
                             <motion.span
@@ -98,12 +75,15 @@ const TextAnimation = ({ text, delay = 0}) => {
 };
 
 /**
- * This component contains the layout of the home page (header + content)
+ * This component contains the home content
  * @returns {Element}
  * @constructor
  */
-function Home() {
+function HomeContent() {
 
+    /**
+     * To regulate when to show the subtitle, after that the title is shown
+     */
     const [showSubtitle, setShowSubtitle] = useState(false);
 
     /**
@@ -114,51 +94,30 @@ function Home() {
     };
 
     return (
-        <Layout className="home-layout" id="home">
-            {/* Header Section */}
-            <Header className="home-header">
-                {/* Email Button */}
-                <button className="contact-button email-button" onClick={onEmailButtonClik}>
-                    <img src="/icons/emailIcon.svg" alt="Email"/>
-                </button>
-                {/* Facebook Button */}
-                <button className="contact-button facebook-button" onClick={onFacebookButtonClik}>
-                    <img src="/icons/facebookIcon.svg" alt="Facebook"/>
-                </button>
-                {/* Phone Button */}
-                <button className="contact-button phone-button" onClick={onPhoneButtonClik}>
-                    <img src="/icons/phoneIcon.svg" alt="Phone"/>
-                </button>
-            </Header>
+        <div className="title-container">
 
-            {/* Content Section */}
-            <Content className="home-content">
-                <div className="title-container">
+            {/* Title */}
+            <h1 className="home-title">
+                <motion.div
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{
+                        duration: 1.5,
+                    }}
+                    onAnimationComplete={handleTitleAnimationComplete}
+                >
+                    <TextAnimation text={HOME_TITLE}/>
+                </motion.div>
+            </h1>
 
-                    {/* Title */}
-                    <h1 className="home-title">
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{
-                                duration: 1.5,
-                            }}
-                            onAnimationComplete={handleTitleAnimationComplete}
-                        >
-                            <TextAnimation text={"Dove la tua auto trova l'eccellenza."} />
-                        </motion.div>
-                    </h1>
-
-                    {/* Subtitle */}
-                    {showSubtitle && (
-                        <p className="home-description">
-                            <TextAnimation text={"Benvenuto nell'autofficina MM Eletricar Service!"} delay={1.5} />
-                        </p>
-                    )}
-                </div>
-            </Content>
-        </Layout>
+            {/* Subtitle */}
+            {showSubtitle && (
+                <p className="home-description">
+                    <TextAnimation text={HOME_SUBTITLE} delay={1.5}/>
+                </p>
+            )}
+        </div>
     );
 }
 
-export default Home;
+export default HomeContent;

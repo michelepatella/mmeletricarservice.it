@@ -1,9 +1,10 @@
 import '../css/App.css';
+import '../css/WhatsappSupportButton.css';
 import React from "react";
-import Home from './Home';
-import ChiSiamo from './ChiSiamo';
-import Menu from './Menu';
-import NostriValori from './NostriValori';
+import Home from './home/Home';
+import ChiSiamo from './chi siamo/ChiSiamo';
+import Menu from './menu/Menu';
+import NostriValori from './chi siamo/NostriValori';
 import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './constants';
@@ -25,7 +26,6 @@ function App() {
                 id="support-button"
                 className="support-button"
                 icon={<WhatsAppOutlined style={{color: 'white'}}/>}
-                style={{insetInlineEnd: 24, backgroundColor: '#25d366'}}
                 type="secondary"
                 onClick={() => window.open(WHATSAPP_LINK, '_blank')}
             />
@@ -33,7 +33,7 @@ function App() {
             {/*Integration of the menu*/}
             <Menu/>
 
-            {/*Make the home page of the website the element Home*/}
+            {/*Make the home page of the website the element home*/}
             <Router>
                 <Routes>
                     <Route path="/" element={<Home/>}/>

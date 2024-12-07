@@ -6,7 +6,7 @@
     top: 0;
     transition: top 0.5s ease;
     overflow: hidden;
-    background-color: var(--background-color);
+    background-color: var(--background_color);
 }
 
 /* ------ Nostri valori section ------ */
@@ -22,30 +22,29 @@
     }
 
     .nostri-valori-description h2 {
-        width: 50%;
-        margin-left: 280px;
-        color: var(--accent-color);
+        width: var(--cn_h2_p_width_big);
+        margin-left: var(--cn_h2_p_margin_left_big);
+        color: var(--accent_color);
         text-align: left;
-        font-size: 50px;
+        font-size: var(--cn_h2_font_size_big);
         margin-bottom: 0px;
     }
 
     .nostri-valori-description p {
-        width: 50%;
-        font-size: 25px;
+        width: var(--cn_h2_p_width_big);
+        font-size: var(--cn_p_font_size_big);
         text-align: left;
         color: white;
-        margin-left: 280px;
+        margin-left: var(--cn_h2_p_margin_left_big);
     }
 }
 
-/* Medium screen */
+/* Medium screen portrait*/
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
     .nostri-valori-description {
-        width: 90%;
+        width: var(--cn_width_medium_portrait);
         position: absolute;
-        margin-top: 70px;
         transform: translateY(-20px);
         margin: 0;
         opacity: 0;
@@ -53,28 +52,28 @@
     }
 
     .nostri-valori-description h2 {
-        margin-left: 220px;
-        color: var(--accent-color);
+        margin-left: var(--cn_h2_p_margin_left_medium_portrait);
+        color: var(--accent_color);
         text-align: left;
-        font-size: 50px;
+        font-size: var(--cn_h2_font_size_medium_portrait);
         margin-bottom: 0px;
     }
 
     .nostri-valori-description p {
-        font-size: 25px;
+        font-size: var(--cn_p_font_size_medium_portrait);
         text-align: left;
         color: white;
-        margin-left: 220px;
+        margin-left: var(--cn_h2_p_margin_left_medium_portrait);
     }
 
 }
 
+/* Medium screen portrait*/
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
     .nostri-valori-description {
-        width: 90%;
+        width: var(--cn_h2_width_medium_landscape);
         position: absolute;
-        margin-top: 70px;
         transform: translateY(-20px);
         margin: 0;
         opacity: 0;
@@ -82,26 +81,26 @@
     }
 
     .nostri-valori-description h2 {
-        margin-left: 220px;
-        color: var(--accent-color);
+        margin-left: var(--cn_h2_p_margin_left_medium_landscape);
+        color: var(--accent_color);
         text-align: left;
-        font-size: 50px;
+        font-size: var(--cn_h2_font_size_medium_landscape);
         margin-bottom: 0px;
     }
 
     .nostri-valori-description p {
-        font-size: 20px;
+        font-size: var(--cn_p_font_size_medium_landscape);
         text-align: left;
         color: white;
-        margin-left: 220px;
+        margin-left: var(--cn_h2_p_margin_left_medium_landscape);
     }
 }
 
-/* Small screen */
+/* Small screen portrait*/
 @media (max-width: 767px) {
 
     .nostri-valori-description {
-        width: 100%;
+        width: var(--cn_width_small_portrait);
         position: absolute;
         transform: translateY(-20px);
         margin: 0;
@@ -110,28 +109,29 @@
     }
 
     .nostri-valori-description h2 {
-        width: 70%;
-        margin-left: 30px;
-        color: var(--accent-color);
+        width: var(--cn_h2_width_small_portrait);
+        margin-left: var(--cn_h2_p_margin_left_small_portrait);
+        color: var(--accent_color);
         text-align: left;
-        font-size: 30px;
+        font-size: var(--cn_h2_font_size_small_portrait);
         margin-bottom: 0px;
-        margin-top: 40px;
+        margin-top: var(--cn_h2_margin_top_small_portrait);
     }
 
     .nostri-valori-description p {
-        width: 85%;
-        font-size: 20px;
+        width: var(--cn_p_width_small_portrait);
+        font-size: var(--cn_p_font_size_small_portrait);
         text-align: left;
         color: white;
-        margin-left: 30px;
+        margin-left: var(--cn_p_margin_left_small_portrait);
     }
 }
 
+/* Small screen landscape*/
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
 
     .nostri-valori-description {
-        width: 100%;
+        width: var(--cn_width_small_landscape);
         position: absolute;
         transform: translateY(-20px);
         margin: 0;
@@ -140,21 +140,21 @@
     }
 
     .nostri-valori-description h2 {
-        width: 60%;
-        margin-left: 30px;
-        color: var(--accent-color);
+        width: var(--cn_h2_width_small_landscape);
+        margin-left: var(--cn_h2_p_margin_left_small_landscape);
+        color: var(--accent_color);
         text-align: left;
-        font-size: 30px;
+        font-size: var(--cn_h2_font_size_small_landscape);
         margin-bottom: 0px;
-        margin-top: 40px;
+        margin-top: var(--cn_h2_margin_top_small_landscape);
     }
 
     .nostri-valori-description p {
-        width: 55%;
-        font-size: 20px;
+        width: var(--cn_p_width_small_landscape);
+        font-size: var(--cn_p_font_size_small_landscape);
         text-align: left;
         color: white;
-        margin-left: 30px;
+        margin-left: var(--cn_h2_p_margin_left_small_landscape);
     }
 
 }

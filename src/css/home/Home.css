@@ -1,0 +1,13 @@
+/* ------ home ------ */
+/* ------- General layout -------- */
+.home-layout {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--background_color);
+    flex-direction: column;
+    font-family: 'Poppins';
+}
+

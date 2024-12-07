@@ -3,9 +3,9 @@
 @media (min-width: 1025px) {
 
     .ant-anchor-link-title {
-        font-size: 20px;
+        font-size: var(--menu_font_size_big);
         font-family: 'Poppins';
-        margin-top: 25px;
+        margin-top: var(--menu_margin_top_big);
         color: white;
         transition: color 0.3s ease;
     }
@@ -14,8 +14,9 @@
         color: white !important;
         font-weight: bold;
     }
+
     .ant-anchor-ink {
-        background-color: var(--accent-color) !important;
+        background-color: var(--accent_color) !important;
         width: 2px;
         color: white !important;
     }
@@ -30,20 +31,21 @@
         top: 0;
         left: 0;
         z-index: 99999;
-        padding-top: 100px;
-        padding-left: 20px;
+        padding-top: var(--menu_container_padding_top_big);
+        padding-left: var(--menu_container_padding_left_big);
     }
+
     .menu-container-phone {
         display: none;
     }
 }
 
-/* Medium screen */
+/* Medium screen portrait */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .ant-anchor-link-title {
-        font-size: 18px;
+        font-size: var(--menu_font_size_medium);
         font-family: 'Poppins';
-        margin-top: 25px;
+        margin-top: var(--menu_margin_top_medium);
         color: white !important;
         transition: color 0.3s ease;
     }
@@ -52,7 +54,7 @@
         font-weight: bold;
     }
     .ant-anchor-ink {
-        background-color: var(--accent-color) !important;
+        background-color: var(--accent_color) !important;
         width: 2px;
     }
     .menu-container {
@@ -61,48 +63,50 @@
         top: 0;
         left: 0;
         z-index: 99999;
-        padding-top: 100px;
-        padding-left: 20px;
-    }
-    .menu-container-phone {
-        display: none;
-    }
-}
-@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .ant-anchor-link-title {
-        font-size: 18px;
-        font-family: 'Poppins';
-        margin-top: 25px;
-        color: white !important;
-        transition: color 0.3s ease;
-    }
-    .ant-anchor-ink {
-        background-color: var(--accent-color) !important;
-        width: 2px;
-    }
-    .ant-anchor-link-active > .ant-anchor-link-title {
-        color: white !important;
-        font-weight: bold;
-    }
-    .menu-container {
-        position: fixed;
-        display: block;
-        top: 0;
-        left: 0;
-        z-index: 99999;
-        padding-top: 100px;
-        padding-left: 20px;
+        padding-top: var(--menu_container_padding_top_medium);
+        padding-left: var(--menu_container_padding_left_medium);
     }
     .menu-container-phone {
         display: none;
     }
 }
 
-/* Small screen */
+/* Medium screen landscape */
+@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .ant-anchor-link-title {
+        font-size: var(--menu_font_size_medium);
+        font-family: 'Poppins';
+        margin-top: var(--menu_margin_top_medium);
+        color: white !important;
+        transition: color 0.3s ease;
+    }
+    .ant-anchor-ink {
+        background-color: var(--accent_color) !important;
+        width: 2px;
+    }
+    .ant-anchor-link-active > .ant-anchor-link-title {
+        color: white !important;
+        font-weight: bold;
+    }
+    .menu-container {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+        padding-top: var(--menu_container_padding_top_medium);
+        padding-left: var(--menu_container_padding_left_medium);
+    }
+    .menu-container-phone {
+        display: none;
+    }
+}
+
+/* Small screen portrait*/
 @media (max-width: 767px){
 
     .ant-menu-item-selected {
-        background-color: var(--accent-color) !important;
+        background-color: var(--accent_color) !important;
     }
 
     .menu-container {
@@ -112,24 +116,23 @@
     .menu-container-phone {
         display: block;
         position: fixed;
-        top: 40px;
-        right: 15px;
+        top: var(--menu_phone_margin_top);
+        right: var(--menu_phone_margin_right);
         z-index: 99999;
     }
 
     .ant-menu {
-        background-color: white;
-        font-size: 25px;
-        margin-top: 10px;
+        font-size: var(--menu_phone_font_size);
+        margin-top: var(--ant_menu_margin_top_portrait);
         border: none !important;
-        background-color: rgba(247, 234, 25, 1) !important;
+        background-color: var(--accent_color) !important;
     }
 
     .hamburger-button {
-        background-color: rgba(247, 234, 25, 1) !important;
+        background-color: var(--accent_color) !important;
         color: black !important;
-        height: 40px !important;
-        width: 40px !important;
+        height: var(--hamburger_dimension) !important;
+        width: var(--hamburger_dimension) !important;
         padding: 0 !important;
         justify-content: center !important;
         align-items: center !important;
@@ -141,25 +144,25 @@
     .ant-menu-submenu-title {
         font-family: 'Poppins';
         color: black !important;
-        font-size: 40px !important;
-        margin-bottom: 70px !important;
+        font-size: var(--ant_menu_subtitle_title_size_portrait) !important;
+        margin-bottom: var(--ant_menu_subtitle_title_margin_bottom_portrait) !important;
         font-weight: bold !important;
     }
 
     .ant-drawer-header {
         border-bottom: none !important;
-        background-color: rgba(247, 234, 25, 1) !important;
+        background-color: var(--accent_color) !important;
     }
 
     .ant-drawer-content {
-        background-color: rgba(247, 234, 25, 1) !important;
+        background-color: var(--accent_color) !important;
     }
 
     .ant-menu-item {
         font-family: 'Poppins', sans-serif;
         color: black !important;
-        font-size: 40px !important;
-        margin-bottom: 70px !important;
+        font-size: var(--ant_menu_item_size_portrait) !important;
+        margin-bottom: var(--ant_menu_item_margin_bottom_portrait) !important;
         opacity: 0;
         font-weight: bold !important;
         transform: translateY(-20px);
@@ -207,27 +210,28 @@
     }
 
     .ant-menu-submenu .ant-menu-item {
-        font-size: 30px !important;
+        font-size: var(--ant_menu_submenu_item_size_portrait) !important;
         margin-top: 0px !important;
-        margin-bottom: 20px !important;
+        margin-bottom: var(--ant_menu_submenu_item_margin_bottom_portrait) !important;
         display: flex !important;
         align-items: start !important;
         justify-content: start !important;
         text-align: left !important;
-        padding-left: 50px !important;
+        padding-left: var(--ant_menu_submenu_item_padding_left) !important;
         margin-left: 0 !important;
     }
 
 }
 
+/* Small screen portrait*/
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 
     .ant-menu-item-selected {
-        background-color: var(--accent-color) !important;
+        background-color: var(--accent_color) !important;
     }
 
     .ant-menu-item:hover {
-        background-color: var(--accent-color) !important;
+        background-color: var(--accent_color) !important;
     }
 
     .menu-container {
@@ -237,24 +241,23 @@
     .menu-container-phone {
         display: block;
         position: fixed;
-        top: 40px;
-        right: 15px;
+        top: var(--menu_phone_margin_top);
+        right: var(--menu_phone_margin_right);
         z-index: 99999;
     }
 
     .ant-menu {
-        background-color: white;
-        font-size: 25px;
+        font-size: var(--menu_phone_font_size);
         margin-top: 0px;
         border: none !important;
-        background-color: rgba(247, 234, 25, 1) !important;
+        background-color: var(--accent_color) !important;
     }
 
     .hamburger-button {
-        background-color: rgba(247, 234, 25, 1) !important;
+        background-color: var(--accent_color) !important;
         color: black !important;
-        height: 40px !important;
-        width: 40px !important;
+        height: var(--hamburger_dimension) !important;
+        width: var(--hamburger_dimension) !important;
         padding: 0 !important;
         justify-content: center !important;
         align-items: center !important;
@@ -266,16 +269,16 @@
     .ant-menu-submenu-title {
         font-family: 'Poppins';
         color: black !important;
-        font-size: 30px !important;
-        margin-bottom: 20px !important;
+        font-size: var(--ant_menu_subtitle_title_size_landscape) !important;
+        margin-bottom: var(--ant_menu_margin_bottom_landscape) !important;
         font-weight: bold !important;
     }
 
     .ant-menu-item {
         font-family: 'Poppins', sans-serif;
         color: black !important;
-        font-size: 30px !important;
-        margin-bottom: 20px !important;
+        font-size: var(--ant_menu_item_size_landscape) !important;
+        margin-bottom: var(--ant_menu_item_margin_bottom_landscape) !important;
         opacity: 0;
         transform: translateY(-20px);
         animation: fadeInUp 0.5s forwards;
@@ -285,11 +288,11 @@
 
     .ant-drawer-header {
         border-bottom: none !important;
-        background-color: rgba(247, 234, 25, 1) !important;
+        background-color: var(--accent_color) !important;
     }
 
     .ant-drawer-content {
-        background-color: rgba(247, 234, 25, 1) !important;
+        background-color: var(--accent_color) !important;
     }
 
     @keyframes fadeInUp {
@@ -331,16 +334,15 @@
     }
 
     .ant-menu-submenu .ant-menu-item {
-        font-size: 25px !important;
-        margin-top: 5px !important;
-        margin-bottom: 5px !important;
+        font-size: var(--ant_menu_submenu_item_size_landscape) !important;
+        margin-top: var(--ant_menu_submenu_item_margin_top_and_bottom_landscape) !important;
+        margin-bottom: var(--ant_menu_submenu_item_margin_top_and_bottom_landscape) !important;
         display: flex !important;
         align-items: start !important;
         justify-content: start !important;
         text-align: left !important;
-        padding-left: 50px !important;
+        padding-left: var(--ant_menu_submenu_item_padding_left) !important;
         margin-left: 0 !important;
     }
 
 }
-/*------ End Menù --------*/

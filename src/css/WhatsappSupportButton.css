@@ -1,0 +1,121 @@
+/* ------- Whatsapp button --------*/
+/* ------- Big screen ---------*/
+@media (min-width: 1025px) {
+    .support-button {
+        width: var(--whatsapp_button_dimension_big_and_small_landscape);
+        height: var(--whatsapp_button_dimension_big_and_small_landscape);
+        border-radius: var(--whatsapp_button_dimension_big_hover);
+        position: fixed;
+        bottom: var(--whatsapp_button_margin);
+        right: var(--whatsapp_button_margin);
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        background-color: var(--whatsapp_button_background-color);
+        transition: all 0.3s ease;
+    }
+    .support-button .anticon {
+        font-size: var(--whatsapp_button_icon_dimension_big_and_medium_landscape);
+    }
+    .support-button:hover {
+        width: var(--whatsapp_button_dimension_big_hover);
+        height: var(--whatsapp_button_dimension_big_hover);
+    }
+
+
+}
+
+/* ------- Medium screen landscape ---------*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+    .support-button {
+        width: var(--whatsapp_button_dimension_medium_landscape);
+        height: var(--whatsapp_button_dimension_medium_landscape);
+        background-color: #25d366;
+        border-radius: var(--whatsapp_button_border_radius);
+        position: fixed;
+        bottom: var(--whatsapp_button_margin);
+        right: var(--whatsapp_button_margin);
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .support-button .anticon {
+        font-size: var(--whatsapp_button_icon_dimension_big_and_medium_landscape);
+    }
+}
+
+/* ------- Medium screen portrait ---------*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+    .support-button {
+        width: var(--whatsapp_button_dimension_medium_portrait_and_small);
+        height: var(var(--whatsapp_button_dimension_medium_portrait_and_small));
+        background-color: var(--whatsapp_button_background-color);
+        border-radius: var(--whatsapp_button_border_radius);
+        position: fixed;
+        bottom: var(--whatsapp_button_margin);
+        right: var(--whatsapp_button_margin);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        z-index: 9999;
+    }
+
+    .support-button .anticon {
+        font-size: var(--whatsapp_button_icon_dimension_medium_portrait_and_small);
+    }
+}
+
+/* ------- Small screen portrait ---------*/
+@media (max-width: 767px) and (orientation: portrait) {
+    .support-button {
+        width: var(--whatsapp_button_dimension_medium_portrait_and_small);
+        height: var(--whatsapp_button_dimension_medium_portrait_and_small);
+        background-color: var(--whatsapp_button_background-color);
+        border-radius: var(--whatsapp_button_border_radius);
+        position: fixed;
+        bottom: var(--whatsapp_button_margin);
+        right: 15px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        z-index: 9999;
+    }
+
+    .support-button .anticon {
+        font-size: var(--whatsapp_button_icon_dimension_medium_portrait_and_small);
+    }
+}
+
+/* ------- Small screen landscape ---------*/
+@media (max-height: 767px) and (orientation: landscape){
+    .support-button {
+        width: var(--whatsapp_button_dimension_big_and_small_landscape);
+        height: var(--whatsapp_button_dimension_big_and_small_landscape);
+        background-color: var(--whatsapp_button_background-color);
+        border-radius: var(--whatsapp_button_border_radius);
+        position: fixed;
+        bottom: var(--whatsapp_button_margin);
+        right: 15px !important;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .support-button .anticon {
+        font-size: var(--whatsapp_button_icon_dimension_small_landscape);
+    }
+}
+/* ------- End Whatsapp button --------*/

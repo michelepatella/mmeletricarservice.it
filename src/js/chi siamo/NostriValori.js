@@ -1,6 +1,7 @@
-import '../css/NostriValori.css';
+import '../../css/chi siamo/NostriValori.css';
 import React from "react";
 import { motion } from "framer-motion";
+import {NOSTRI_VALORI_DESCRIPTION, NOSTRI_VALORI_TITLE} from "../constants";
 
 /**
  * This component contains the i nostri valori section, subsection of chi siamo
@@ -42,15 +43,10 @@ function NostriValori() {
                     viewport={{ once: true, amount: 0.8 }}
                 >
                     {/* Title */}
-                    <h2>I nostri valori</h2>
+                    <h2>{NOSTRI_VALORI_TITLE}</h2>
 
                     {/* Description */}
-                    <p>In MM Eletricar Service, crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,
-                        poiché comprendiamo quanto sia importante per i nostri clienti.
-                        La nostra missione è offrire <strong>soluzioni su misura</strong>, <strong>affidabili</strong> e
-                        di <strong>qualità</strong>, per garantire la <strong>sicurezza</strong>,
-                        <strong> l’efficienza</strong> e la <strong>soddisfazione</strong> completa di chi si affida a noi.
-                    </p>
+                    <p dangerouslySetInnerHTML={{ __html: NOSTRI_VALORI_DESCRIPTION }} />
                 </motion.div>
             </div>
         </>
