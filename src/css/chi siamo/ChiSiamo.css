@@ -22,20 +22,20 @@
     }
 
     .chi-siamo-description h2 {
-        width: var(--cn_h2_p_width_big);
-        margin-left: var(--cn_h2_p_margin_left_big);
+        width: var(--cns_h2_p_width_big);
+        margin-left: var(--cns_h2_p_margin_left_big);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--cn_h2_font_size_big);
+        font-size: var(--cns_h2_font_size_big);
         margin-bottom: 0px;
     }
 
     .chi-siamo-description p {
-        width: var(--cn_h2_p_width_big);
-        font-size: var(--cn_p_font_size_big);
+        width: var(--cns_h2_p_width_big);
+        font-size: var(--cns_p_font_size_big);
         text-align: left;
         color: white;
-        margin-left: var(--cn_h2_p_margin_left_big);
+        margin-left: var(--cns_h2_p_margin_left_big);
     }
 }
 
@@ -43,7 +43,7 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
     .chi-siamo-description {
-        width: var(--cn_width_medium_portrait);
+        width: var(--cns_width_medium_portrait);
         position: absolute;
         transform: translateY(-20px);
         margin: 0;
@@ -52,18 +52,18 @@
     }
 
     .chi-siamo-description h2 {
-        margin-left: var(--cn_h2_p_margin_left_medium_portrait);
+        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--cn_h2_font_size_medium_portrait);
+        font-size: var(--cns_h2_font_size_medium_portrait);
         margin-bottom: 0px;
     }
 
     .chi-siamo-description p {
-        font-size: var(--cn_p_font_size_medium_portrait);
+        font-size: var(--cns_p_font_size_medium_portrait);
         text-align: left;
         color: white;
-        margin-left: var(--cn_h2_p_margin_left_medium_portrait);
+        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
     }
 
 }
@@ -72,7 +72,7 @@
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
     .chi-siamo-description {
-        width: var(--cn_h2_width_medium_landscape);
+        width: var(--cns_h2_width_medium_landscape);
         position: absolute;
         transform: translateY(-20px);
         margin: 0;
@@ -81,18 +81,18 @@
     }
 
     .chi-siamo-description h2 {
-        margin-left: var(--cn_h2_p_margin_left_medium_landscape);
+        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--cn_h2_font_size_medium_landscape);
+        font-size: var(--cns_h2_font_size_medium_landscape);
         margin-bottom: 0px;
     }
 
     .chi-siamo-description p {
-        font-size: var(--cn_p_font_size_medium_landscape);
+        font-size: var(--cns_p_font_size_medium_landscape);
         text-align: left;
         color: white;
-        margin-left: var(--cn_h2_p_margin_left_medium_landscape);
+        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
     }
 }
 
@@ -100,7 +100,7 @@
 @media (max-width: 767px) {
 
     .chi-siamo-description {
-        width: var(--cn_width_small_portrait);
+        width: var(--cns_width_small_portrait);
         position: absolute;
         transform: translateY(-20px);
         margin: 0;
@@ -109,21 +109,21 @@
     }
 
     .chi-siamo-description h2 {
-        width: var(--cn_h2_width_small_portrait);
-        margin-left: var(--cn_h2_p_margin_left_small_portrait);
+        width: var(--cns_h2_width_small_portrait);
+        margin-left: var(--cns_h2_p_margin_left_small_portrait);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--cn_h2_font_size_small_portrait);
+        font-size: var(--cns_h2_font_size_small_portrait);
         margin-bottom: 0px;
-        margin-top: var(--cn_h2_margin_top_small_portrait);
+        margin-top: var(--cns_h2_margin_top_small_portrait);
     }
 
     .chi-siamo-description p {
-        width: var(--cn_p_width_small_portrait);
-        font-size: var(--cn_p_font_size_small_portrait);
+        width: var(--cns_p_width_small_portrait);
+        font-size: var(--cns_p_font_size_small_portrait);
         text-align: left;
         color: white;
-        margin-left: var(--cn_p_margin_left_small_portrait);
+        margin-left: var(--cns_p_margin_left_small_portrait);
     }
 }
 
@@ -131,7 +131,7 @@
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
 
     .chi-siamo-description {
-        width: var(--cn_width_small_landscape);
+        width: var(--cns_width_small_landscape);
         position: absolute;
         transform: translateY(-20px);
         margin: 0;
@@ -140,21 +140,21 @@
     }
 
     .chi-siamo-description h2 {
-        width: var(--cn_h2_width_small_landscape);
-        margin-left: var(--cn_h2_p_margin_left_small_landscape);
+        width: var(--cns_h2_width_small_landscape);
+        margin-left: var(--cns_h2_p_margin_left_small_landscape);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--cn_h2_font_size_small_landscape);
+        font-size: var(--cns_h2_font_size_small_landscape);
         margin-bottom: 0px;
-        margin-top: var(--cn_h2_margin_top_small_landscape);
+        margin-top: var(--cns_h2_margin_top_small_landscape);
     }
 
     .chi-siamo-description p {
-        width: var(--cn_p_width_small_landscape);
-        font-size: var(--cn_p_font_size_small_landscape);
+        width: var(--cns_p_width_small_landscape);
+        font-size: var(--cns_p_font_size_small_landscape);
         text-align: left;
         color: white;
-        margin-left: var(--cn_h2_p_margin_left_small_landscape);
+        margin-left: var(--cns_h2_p_margin_left_small_landscape);
     }
 
 }

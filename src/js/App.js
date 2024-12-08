@@ -9,6 +9,7 @@ import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './constants';
 import {FloatButton} from "antd";
+import IntroServizi from "./servizi/IntroServizi";
 
 /**
  * This component contains all the sections of the web page and
@@ -45,6 +46,9 @@ function App() {
 
             {/*Integration of Nostri valori section*/}
             <NostriValori/>
+
+            {/*Integration of Intro Servizi section*/}
+            <IntroServizi/>
 
         </>
     );

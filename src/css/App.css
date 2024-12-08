@@ -99,37 +99,47 @@ body {
   --home_subtitle_margin_top_small_landscape: 5px;
   --home_subtitle_margin_left_small_landscape: 10px;
 
-  /**chi siamo + nostri valori**/
+  /**chi siamo + nostri valori + intro servizi**/
+  /* ----- general variables for arrow + label of intro servizi section --------*/
+  --arrow_button_dimension: 30px;
+  --arrow_label_margin_bottom: 10px;
+
   /* ----- big -----*/
-  --cn_h2_p_width_big: 50%;
-  --cn_h2_p_margin_left_big: 280px;
-  --cn_h2_font_size_big: 50px;
-  --cn_p_font_size_big: 25px;
+  --cns_h2_p_width_big: 50%;
+  --cns_h2_p_margin_left_big: 280px;
+  --cns_h2_font_size_big: 50px;
+  --cns_p_font_size_big: 25px;
+  --arrow_label_font_size_big: 20px;
+
   /* ----- medium portrait -----*/
-  --cn_width_medium_portrait: 90%;
-  --cn_h2_p_margin_left_medium_portrait: 220px;
-  --cn_h2_font_size_medium_portrait: 50px;
-  --cn_p_font_size_medium_portrait: 25px;
+  --cns_width_medium_portrait: 90%;
+  --cns_h2_p_margin_left_medium_portrait: 220px;
+  --cns_h2_font_size_medium_portrait: 50px;
+  --cns_p_font_size_medium_portrait: 25px;
+  --arrow_label_font_size_medium: 18px;
   /* ----- medium landscape -----*/
-  --cn_h2_width_medium_landscape: 90%;
-  --cn_h2_p_margin_left_medium_landscape: 220px;
-  --cn_h2_font_size_medium_landscape: 50px;
-  --cn_p_font_size_medium_landscape: 20px;
+  --cns_h2_width_medium_landscape: 90%;
+  --cns_h2_p_margin_left_medium_landscape: 220px;
+  --cns_h2_font_size_medium_landscape: 50px;
+  --cns_p_font_size_medium_landscape: 20px;
   /* ----- small portrait -----*/
-  --cn_width_small_portrait: 100%;
-  --cn_h2_width_small_portrait: 70%;
-  --cn_h2_p_margin_left_small_portrait: 30px;
-  --cn_h2_font_size_small_portrait: 30px;
-  --cn_h2_margin_top_small_portrait: 40px;
-  --cn_p_font_size_small_portrait: 20px;
-  --cn_p_width_small_portrait: 85%;
-  --cn_p_margin_left_small_portrait: 30px;
-  /* ----- small portrait -----*/
-  --cn_width_small_landscape: 100%;
-  --cn_h2_width_small_landscape: 60%;
-  --cn_h2_p_margin_left_small_landscape: 30px;
-  --cn_h2_font_size_small_landscape: 30px;
-  --cn_h2_margin_top_small_landscape: 40px;
-  --cn_p_font_size_small_landscape: 20px;
-  --cn_p_width_small_landscape: 55%;
+  --cns_width_small_portrait: 100%;
+  --cns_h2_width_small_portrait: 70%;
+  --cns_h2_p_margin_left_small_portrait: 30px;
+  --cns_h2_font_size_small_portrait: 30px;
+  --cns_h2_margin_top_small_portrait: 40px;
+  --cns_p_font_size_small_portrait: 20px;
+  --cns_p_width_small_portrait: 85%;
+  --cns_p_margin_left_small_portrait: 30px;
+  --arrow_label_font_size_small_portrait: 15px;
+  /* ----- small landscape -----*/
+  --cns_width_small_landscape: 100%;
+  --cns_h2_width_small_landscape: 60%;
+  --cns_h2_p_margin_left_small_landscape: 30px;
+  --cns_h2_font_size_small_landscape: 30px;
+  --cns_h2_margin_top_small_landscape: 40px;
+  --cns_p_font_size_small_landscape: 20px;
+  --cns_p_width_small_landscape: 55%;
+  --arrow_label_font_size_small_landscape: 18px;
+  --arrow_container_margin_button_small_landscape: 10px;
 }

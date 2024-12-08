@@ -10,7 +10,7 @@ export const HOME_SUBTITLE = "Benvenuto nell'autofficina MM Eletricar Service!"
 export const SECTIONS = [
     { id: 'home', title: 'Home' },
     { id: 'chi-siamo', title: 'Chi siamo', children: [{ id: 'nostri-valori', title: 'I nostri valori' }] },
-    { id: 'servizi', title: 'Servizi', children: [{ id: 'altri-servizi', title: 'Altri servizi' }, { id: 'auto-usate', title: 'Auto usate' }] },
+    { id: 'intro-servizi', title: 'Servizi', children: [{ id: 'altri-servizi', title: 'Altri servizi' }, { id: 'auto-usate', title: 'Auto usate' }] },
     { id: 'dove-siamo', title: 'Dove siamo' },
     { id: 'contatti', title: 'Contatti' }
 ];
@@ -24,3 +24,6 @@ export const NOSTRI_VALORI_DESCRIPTION = 'In MM Eletricar Service, crediamo che 
     '                        La nostra missione è offrire <strong>soluzioni su misura</strong>, <strong>affidabili</strong> e\n' +
     '                        di <strong>qualità</strong>, per garantire la <strong>sicurezza</strong>,\n' +
     '                        <strong> l’efficienza</strong> e la <strong>soddisfazione</strong> completa di chi si affida a noi.'
+export const INTRO_SERVIZI_TITLE = 'Per la tua auto, solo <br/> servizi di qualità.'
+export const INTRO_SERVIZI_DESCRIPTION = 'Tutti i servizi classici da elettrauto, dalla manutenzione alle riparazioni, per garantire sicurezza e performance ottimali.'
+export const ARROW_LABEL = 'Scopri tutti i nostri servizi specializzati'

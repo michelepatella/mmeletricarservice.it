@@ -11,7 +11,7 @@
     .title-container {
         overflow: hidden;
         margin-left: var(--title_container_margin_left_big);
-        background-image: url('../../images/background.svg');
+        background-image: url('../../../public/icons/background.svg');
         background-repeat: no-repeat;
         background-position: initial;
         height: 100vh;
@@ -44,7 +44,7 @@
     .title-container {
         overflow: hidden;
         margin-left: var(--title_container_margin_left_medium);
-        background-image: url('../../images/background.svg');
+        background-image: url('../../../public/icons/background.svg');
         background-repeat: no-repeat;
         background-position: initial;
         height: 100vh;
@@ -76,7 +76,7 @@
         overflow: hidden;
         margin-left: var(--title_container_margin_left_medium);
         margin-top: var(--title_container_margin_top_medium);
-        background-image: url('../../images/background.svg');
+        background-image: url('../../../public/icons/background.svg');
         background-repeat: no-repeat;
         background-position: initial;
         height: 100vh;
@@ -107,7 +107,7 @@
     .title-container {
         overflow: hidden;
         margin-left: var(--title_container_margin_left_small_portrait);
-        background-image: url('../../images/background.svg');
+        background-image: url('../../../public/icons/background.svg');
         background-repeat: no-repeat;
         background-position: initial;
         height: 100vh;
@@ -140,7 +140,7 @@
     .title-container {
         overflow: hidden;
         margin-left: var(--title_container_margin_left_small_landscape);
-        background-image: url('../../images/background.svg');
+        background-image: url('../../../public/icons/background.svg');
         background-repeat: no-repeat;
         background-position: initial;
         height: 100vh;
