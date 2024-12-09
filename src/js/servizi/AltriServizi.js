@@ -5,6 +5,7 @@ import { SERVIZI } from "../constants";
 
 function AltriServizi() {
     const sectionRef = useRef(null);
+    var delay = 0.2;
 
     /**
      * Method to make the animation always available
@@ -26,6 +27,14 @@ function AltriServizi() {
             observer.observe(sectionRef.current);
         }
 
+        //animation of each card
+        const cards = document.querySelectorAll('.cardServizio');
+        cards.forEach((card, index) => {
+            delay = index * 0.2;
+            card.style.animationDelay = `${delay}s`;
+            card.classList.add('animate-cards');
+        });
+
         return () => {
             if (sectionRef.current) {
                 observer.unobserve(sectionRef.current);
@@ -34,18 +43,21 @@ function AltriServizi() {
     }, []);
 
     return (
-        <div className="altri-servizi" id="altri-servizi" ref={sectionRef}>
-            {/* Add a card for each service */}
-            {SERVIZI.map((servizio, index) => (
-                <CardServizio
-                    key={index}
-                    title={servizio.title}
-                    description={servizio.description}
-                    color={servizio.color}
-                    borderColor={servizio.borderColor}
-                />
-            ))}
-        </div>
+        <>
+            <div className="altri-servizi" id="altri-servizi" ref={sectionRef}>
+                {/* Add a card for each service */}
+                {SERVIZI.map((servizio, index) => (
+                    <CardServizio
+                        key={index}
+                        title={servizio.title}
+                        description={servizio.description}
+                        color={servizio.color}
+                        borderColor={servizio.borderColor}
+                        icon={servizio.icon}
+                    />
+                ))}
+            </div>
+        </>
     );
 }
 

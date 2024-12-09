@@ -28,12 +28,12 @@ export const INTRO_SERVIZI_TITLE = 'Per la tua auto, solo <br/> servizi di quali
 export const INTRO_SERVIZI_DESCRIPTION = 'Tutti i servizi classici da elettrauto, dalla manutenzione alle riparazioni, per garantire sicurezza e performance ottimali.'
 export const ARROW_LABEL = 'Scopri tutti i nostri servizi specializzati'
 export const SERVIZI = [
-    {title: "Ricarica aria condizionata", description: "Ripristino del gas refrigerante per garantire un climatizzatore efficiente e aria fresca.", color: "rgba(0, 153, 191, 0.05)", borderColor: "#0099BF"},
-    {title: "Riparazione conta km", description: "Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.", color: "rgba(117, 0, 251, 0.05)", borderColor: "#7500FB"},
-    {title: "Manutenzione centralina", description: "Controllo e aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.", color: "rgba(12, 233, 0, 0.05)", borderColor: "#0CE900"},
-    {title: "Pannello di controllo", description: "Riparazione e calibrazione di strumenti digitali e analogici del cruscotto.", color: "rgba(255, 165, 62, 0.05)", borderColor: "#FFA53E"},
-    {title: "Diagnosi iniezione", description: "Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.", color: "rgba(255, 0, 0, 0.05)", borderColor: "#FF0000"},
-    {title: "Duplicazione chiavi e telecomandi", description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.", color: "rgba(0, 177, 145, 0.05)", borderColor: "#00B191"},
-    {title: "Ripristino EGR e DPF", description: "Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.", color: "rgba(214, 88, 4, 0.05)", borderColor: "#D65804"},
-    {title: "Riparazione parabrezza", description: "Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.", color: "rgba(196, 191, 29, 0.05)", borderColor: "#C4BF1D"}
+    {title: "Ricarica aria condizionata", description: "Ripristino del gas refrigerante per garantire un climatizzatore efficiente e aria fresca.", color: "rgba(0, 153, 191, 0.05)", borderColor: "#0099BF", icon: '/icons/airIcon.svg'},
+    {title: "Riparazione conta km", description: "Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.", color: "rgba(117, 0, 251, 0.05)", borderColor: "#7500FB", icon: '/icons/dashboardIcon.svg'},
+    {title: "Manutenzione centralina", description: "Controllo e aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.", color: "rgba(12, 233, 0, 0.05)", borderColor: "#0CE900", icon: '/icons/cpuIcon.svg'},
+    {title: "Pannello di controllo", description: "Riparazione e calibrazione di strumenti digitali e analogici del cruscotto.", color: "rgba(255, 165, 62, 0.05)", borderColor: "#FFA53E", icon: '/icons/controlPanelIcon.svg'},
+    {title: "Diagnosi iniezione", description: "Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.", color: "rgba(255, 0, 0, 0.05)", borderColor: "#FF0000", icon: '/icons/fuelIcon.svg'},
+    {title: "Duplicazione chiavi e telecomandi", description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.", color: "rgba(0, 177, 145, 0.05)", borderColor: "#00B191", icon: '/icons/keyIcon.svg'},
+    {title: "Ripristino EGR e DPF", description: "Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.", color: "rgba(214, 88, 4, 0.05)", borderColor: "#D65804", icon: '/icons/filterIcon.svg'},
+    {title: "Riparazione parabrezza", description: "Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.", color: "rgba(196, 191, 29, 0.05)", borderColor: "#C4BF1D", icon: '/icons/hammerIcon.svg'}
 ];

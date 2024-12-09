@@ -1,18 +1,3 @@
-.cardServizio {
-    border-radius: 20px;
-    width: 400px;
-    height: 220px;
-    margin-left: 250px;
-    background-color: white;
-    margin-top: 50px;
-    color: white;
-    text-align: start;
-    padding-left: 15px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -29,28 +14,50 @@
     animation: fadeInUp 0.5s forwards;
 }
 
-/*THIS ORDER IS IMPORTANT FOR CARD ANIMATION*/
-.animate-cards .cardServizio:nth-child(1) {
-    animation-delay: 0.2s;
-}
-.animate-cards .cardServizio:nth-child(2) {
-    animation-delay: 0.5s;
-}
-.animate-cards .cardServizio:nth-child(3) {
-    animation-delay: 0.8s;
-}
-.animate-cards .cardServizio:nth-child(4) {
-    animation-delay: 1.1s;
-}
-.animate-cards .cardServizio:nth-child(5) {
-    animation-delay: 1.4s;
-}
-.animate-cards .cardServizio:nth-child(6) {
-    animation-delay: 1.7s;
-}
-.animate-cards .cardServizio:nth-child(7) {
-    animation-delay: 2.0s;
-}
-.animate-cards .cardServizio:nth-child(8) {
-    animation-delay: 2.3s;
+@media (min-width: 1025px) {
+    .cardServizio {
+        border-radius: 20px;
+        width: var(--card_width_big);
+        height: var(--card_height_big);
+        margin-top: var(--card_margin_top_big);
+        color: white;
+        text-align: start;
+        padding-left: 2.5%;
+        padding-right: 1%;
+        padding-bottom: 0%;
+        opacity: 0;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        transform: translateY(20px);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .p-title {
+        display: flex;
+        font-family: 'Poppins';
+        color: white;
+        text-align: start;
+        font-size: var(--card_title_size_big);
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .p-description {
+        margin-top: 4px;
+        font-family: 'Poppins';
+        color: white;
+        text-align: start;
+        font-size: var(--card_description_size_big);
+    }
+
+    .cardIcon {
+        position: absolute;
+        top: var(--card_icon_margin);
+        right: var(--card_icon_margin);
+        width: var(--card_icon_big);
+        height: auto;
+        display: block;
+    }
 }

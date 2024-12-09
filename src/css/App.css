@@ -40,6 +40,8 @@ body {
   --secondary_text_size_big: 20px;
   --secondary_text_size_medium: 18px;
   --secondary_text_size_small: 14px;
+  --card_title_size_big: 22px;
+  --card_description_size_big: 18px;
 
   /**whatsapp support button**/
   --whatsapp_button_background-color: #25d366;
@@ -115,7 +117,6 @@ body {
   /* ----- general variables for arrow + label of intro servizi section --------*/
   --arrow_button_dimension: 30px;
   --arrow_label_margin_bottom: 10px;
-
   /* ----- big -----*/
   --cns_h2_p_width_big: 50%;
   --cns_h2_p_margin_left_big: 280px;
@@ -139,4 +140,14 @@ body {
   --cns_h2_margin_top_small_landscape: 40px;
   --cns_p_width_small_landscape: 55%;
   --arrow_container_margin_button_small_landscape: 10px;
+
+  /**altri servizi**/
+  /*-------- big --------*/
+  --card_width_big: 400px;
+  --card_height_big: 250px;
+  --card_margin_left_big: 100px;
+  --card_margin_top_big: 50px;
+  --card_icon_big: 50px;
+  --card_icon_margin: 10px;
+
 }
