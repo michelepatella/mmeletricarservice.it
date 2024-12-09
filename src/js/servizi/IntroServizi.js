@@ -30,6 +30,17 @@ function IntroServizi() {
         }
     };
 
+    /**
+     * Method to go to the Altri servizi section by using the arrow
+     * @param sectionId
+     */
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             {/* Intro servizi description definition */}
@@ -53,7 +64,7 @@ function IntroServizi() {
             <div className="arrow-and-label-container">
                 {/*Arrow label and arrow for going to the next section*/}
                 <p className="arrow-label">{ARROW_LABEL}</p>
-                <button className="arrow-button"></button>
+                <button className="arrow-button" onClick={() => scrollToSection('altri-servizi')}></button>
             </div>
         </>
     );

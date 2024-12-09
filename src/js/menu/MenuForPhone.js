@@ -1,7 +1,6 @@
 import {Button, Drawer, Menu as AntMenu} from "antd";
 import {CloseOutlined, MenuOutlined} from "@ant-design/icons";
-import {motion, useAnimation} from "framer-motion";
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {SECTIONS} from "../constants";
 
 /**
@@ -17,37 +16,17 @@ function MenuForPhone(){
      * Method to animate the transition to a section
      * @param sectionId
      */
-    const scrollToSection = (sectionId, isPhoneMenu, setVisible) => {
+    const scrollToSection = (sectionId, setVisible) => {
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
-
-        if (isPhoneMenu) {
-            setVisible(false);
-        }
+        setVisible(false);
     };
 
     const toggleDrawer = () => {
         setVisible(!visible);
     };
-
-    /**
-     * Animation for the menu item for phone
-     * @type {AnimationControls}
-     */
-    const menuItemControls = useAnimation();
-    useEffect(() => {
-        menuItemControls.start({
-            opacity: 1,
-            y: 0,
-            transition: {
-                type: "spring",
-                stiffness: 100,
-                delay: 0.2,
-            },
-        });
-    }, [menuItemControls]);
 
     /**
      * Generation of menu items
@@ -89,16 +68,12 @@ function MenuForPhone(){
                 height="100vh"
                 closeIcon={<CloseOutlined style={{fontSize: '30px', color: 'black'}}/>}
             >
-                <motion.div
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{duration: 0.5}}
-                >
-                    <AntMenu
-                        mode="inline"
-                        items={menuItemsGeneration}
-                    />
-                </motion.div>
+
+                <AntMenu
+                    mode="inline"
+                    items={menuItemsGeneration}
+                />
+
             </Drawer>
         </div>
     );

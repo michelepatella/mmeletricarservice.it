@@ -5,11 +5,13 @@ import Home from './home/Home';
 import ChiSiamo from './chi siamo/ChiSiamo';
 import Menu from './menu/Menu';
 import NostriValori from './chi siamo/NostriValori';
+import IntroServizi from "./servizi/IntroServizi";
+import AltriServizi from "./servizi/AltriServizi";
 import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './constants';
 import {FloatButton} from "antd";
-import IntroServizi from "./servizi/IntroServizi";
+
 
 /**
  * This component contains all the sections of the web page and
@@ -49,6 +51,9 @@ function App() {
 
             {/*Integration of Intro Servizi section*/}
             <IntroServizi/>
+
+            {/*Integration of Altri Servizi section*/}
+            <AltriServizi/>
 
         </>
     );

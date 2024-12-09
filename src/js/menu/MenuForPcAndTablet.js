@@ -14,14 +14,10 @@ function MenuForPcAndTablet(){
      * Method to animate the transition to a section
      * @param sectionId
      */
-    const scrollToSection = (sectionId, isPhoneMenu, setVisible) => {
+    const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        if (isPhoneMenu) {
-            setVisible(false);
         }
     };
 
