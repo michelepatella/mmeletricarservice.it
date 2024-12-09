@@ -13,6 +13,34 @@ body {
   --background_color: #141414;
   --accent_color: #F8EC20;
 
+  /**font-size**/
+  /*----menu----*/
+  --menu_font_size_big: 20px;
+  --menu_font_size_medium: 18px;
+  --menu_font_size_small_landscape: 30px;
+  --menu_children_font_size_small_landscape: 25px;
+  --menu_font_size_small_portrait: 35px;
+  --menu_children_font_size_small_portrait: 30px;
+  /*---- home ----*/
+  --home_title_font_size_big: 70px;
+  --home_subtitle_font_size_big: 35px;
+  --home_title_font_size_medium: 50px;
+  --home_subtitle_font_size_medium: 25px;
+  --home_title_font_size_small_portrait: 30px;
+  --home_subtitle_font_size_small_portrait: 20px;
+  --home_title_font_size_small_landscape: 35px;
+  --home_subtitle_font_size_small_landscape: 22px;
+  /*---- general sections----*/
+  --h2_size_big: 50px;
+  --p_size_big: 25px;
+  --h2_size_medium: 45px;
+  --p_size_medium: 20px;
+  --h2_size_small: 25px;
+  --p_size_small: 16px;
+  --secondary_text_size_big: 20px;
+  --secondary_text_size_medium: 18px;
+  --secondary_text_size_small: 14px;
+
   /**whatsapp support button**/
   --whatsapp_button_background-color: #25d366;
   --whatsapp_button_dimension_big_and_small_landscape: 60px;
@@ -27,12 +55,10 @@ body {
 
   /**menu**/
   /* ----- big -----*/
-  --menu_font_size_big: 20px;
   --menu_margin_top_big: 25px;
   --menu_container_padding_top_big: 100px;
   --menu_container_padding_left_big: 20px;
   /* ----- medium  -----*/
-  --menu_font_size_medium: 18px;
   --menu_margin_top_medium: 25px;
   --menu_container_padding_top_medium: 100px;
   --menu_container_padding_left_medium: 20px;
@@ -44,18 +70,12 @@ body {
   --ant_menu_submenu_item_padding_left: 50px;
   /* ----- small portrait  -----*/
   --ant_menu_margin_top_portrait: 10px;
-  --ant_menu_subtitle_title_size_portrait: 40px;
   --ant_menu_subtitle_title_margin_bottom_portrait: 70px;
-  --ant_menu_item_size_portrait: 40px;
   --ant_menu_item_margin_bottom_portrait: 70px;
-  --ant_menu_submenu_item_size_portrait: 30px;
   --ant_menu_submenu_item_margin_bottom_portrait: 20px;
   /* ----- small landscape  -----*/
   --ant_menu_margin_bottom_landscape: 20px;
-  --ant_menu_subtitle_title_size_landscape: 30px;
-  --ant_menu_item_size_landscape: 30px;
   --ant_menu_item_margin_bottom_landscape: 20px;
-  --ant_menu_submenu_item_size_landscape: 25px;
   --ant_menu_submenu_item_margin_top_and_bottom_landscape: 5px;
 
   /**home header**/
@@ -72,30 +92,22 @@ body {
   /**home content**/
   /* ----- big -----*/
   --title_container_margin_left_big: 280px;
-  --home_title_font_size_big: 70px;
   --home_title_font_margin_top_big: 35px;
-  --home_subtitle_font_size_big: 35px;
   --home_subtitle_margin_top_and_left_big: 5px;
   /* ----- medium -----*/
   --title_container_margin_left_medium: 220px;
   --title_container_margin_top_medium: 10px;
-  --home_title_font_size_medium: 50px;
-  --home_subtitle_font_size_medium: 25px;
   --home_subtitle_margin_top_medium: 5px;
   /* ----- small portrait -----*/
   --title_container_margin_left_small_portrait: 20px;
   --title_container_margin_top_small_portrait: 10px;
   --home-title_margin_left_small_portrait: 10px;
-  --home_title_font_size_small_portrait: 30px;
-  --home_subtitle_font_size_small_portrait: 20px;
   --home_subtitle_margin_top_small_portrait: 5px;
   --home_subtitle_margin_left_small_portrait: 10px;
   /* ----- small landscape -----*/
   --title_container_margin_left_small_landscape: 15px;
   --title_container_margin_top_small_landscape: 10px;
   --home-title_margin_left_small_landscape: 10px;
-  --home_title_font_size_small_landscape: 35px;
-  --home_subtitle_font_size_small_landscape: 22px;
   --home_subtitle_margin_top_small_landscape: 5px;
   --home_subtitle_margin_left_small_landscape: 10px;
 
@@ -107,39 +119,24 @@ body {
   /* ----- big -----*/
   --cns_h2_p_width_big: 50%;
   --cns_h2_p_margin_left_big: 280px;
-  --cns_h2_font_size_big: 50px;
-  --cns_p_font_size_big: 25px;
-  --arrow_label_font_size_big: 20px;
-
   /* ----- medium portrait -----*/
   --cns_width_medium_portrait: 90%;
   --cns_h2_p_margin_left_medium_portrait: 220px;
-  --cns_h2_font_size_medium_portrait: 50px;
-  --cns_p_font_size_medium_portrait: 25px;
-  --arrow_label_font_size_medium: 18px;
   /* ----- medium landscape -----*/
   --cns_h2_width_medium_landscape: 90%;
   --cns_h2_p_margin_left_medium_landscape: 220px;
-  --cns_h2_font_size_medium_landscape: 50px;
-  --cns_p_font_size_medium_landscape: 20px;
   /* ----- small portrait -----*/
   --cns_width_small_portrait: 100%;
   --cns_h2_width_small_portrait: 70%;
   --cns_h2_p_margin_left_small_portrait: 30px;
-  --cns_h2_font_size_small_portrait: 25px;
   --cns_h2_margin_top_small_portrait: 40px;
-  --cns_p_font_size_small_portrait: 18px;
   --cns_p_width_small_portrait: 85%;
   --cns_p_margin_left_small_portrait: 30px;
-  --arrow_label_font_size_small_portrait: 15px;
   /* ----- small landscape -----*/
   --cns_width_small_landscape: 100%;
   --cns_h2_width_small_landscape: 60%;
   --cns_h2_p_margin_left_small_landscape: 30px;
-  --cns_h2_font_size_small_landscape: 25px;
   --cns_h2_margin_top_small_landscape: 40px;
-  --cns_p_font_size_small_landscape: 18px;
   --cns_p_width_small_landscape: 55%;
-  --arrow_label_font_size_small_landscape: 15px;
   --arrow_container_margin_button_small_landscape: 10px;
 }

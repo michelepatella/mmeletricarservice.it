@@ -144,7 +144,7 @@
     .ant-menu-submenu-title {
         font-family: 'Poppins';
         color: black !important;
-        font-size: var(--ant_menu_subtitle_title_size_portrait) !important;
+        font-size: var(--menu_font_size_small_portrait) !important;
         margin-bottom: var(--ant_menu_subtitle_title_margin_bottom_portrait) !important;
         font-weight: bold !important;
     }
@@ -161,7 +161,7 @@
     .ant-menu-item {
         font-family: 'Poppins', sans-serif;
         color: black !important;
-        font-size: var(--ant_menu_item_size_portrait) !important;
+        font-size: var(--menu_font_size_small_portrait) !important;
         margin-bottom: var(--ant_menu_item_margin_bottom_portrait) !important;
         opacity: 0;
         font-weight: bold !important;
@@ -210,7 +210,7 @@
     }
 
     .ant-menu-submenu .ant-menu-item {
-        font-size: var(--ant_menu_submenu_item_size_portrait) !important;
+        font-size: var(--menu_children_font_size_small_portrait) !important;
         margin-top: 0px !important;
         margin-bottom: var(--ant_menu_submenu_item_margin_bottom_portrait) !important;
         display: flex !important;
@@ -269,7 +269,7 @@
     .ant-menu-submenu-title {
         font-family: 'Poppins';
         color: black !important;
-        font-size: var(--ant_menu_subtitle_title_size_landscape) !important;
+        font-size: var(--menu_font_size_small_landscape) !important;
         margin-bottom: var(--ant_menu_margin_bottom_landscape) !important;
         font-weight: bold !important;
     }
@@ -277,7 +277,7 @@
     .ant-menu-item {
         font-family: 'Poppins', sans-serif;
         color: black !important;
-        font-size: var(--ant_menu_item_size_landscape) !important;
+        font-size: var(--menu_font_size_small_landscape) !important;
         margin-bottom: var(--ant_menu_item_margin_bottom_landscape) !important;
         opacity: 0;
         transform: translateY(-20px);
@@ -334,7 +334,7 @@
     }
 
     .ant-menu-submenu .ant-menu-item {
-        font-size: var(--ant_menu_submenu_item_size_landscape) !important;
+        font-size: var(--menu_children_font_size_small_landscape) !important;
         margin-top: var(--ant_menu_submenu_item_margin_top_and_bottom_landscape) !important;
         margin-bottom: var(--ant_menu_submenu_item_margin_top_and_bottom_landscape) !important;
         display: flex !important;

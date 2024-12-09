@@ -39,13 +39,13 @@
         margin-left: var(--cns_h2_p_margin_left_big);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--cns_h2_font_size_big);
+        font-size: var(--h2_size_big);
         margin-bottom: 0px;
     }
 
     .intro-servizi-description p {
         width: var(--cns_h2_p_width_big);
-        font-size: var(--cns_p_font_size_big);
+        font-size: var(--p_size_big);
         text-align: left;
         color: white;
         margin-left: var(--cns_h2_p_margin_left_big);
@@ -62,7 +62,7 @@
 
     .arrow-and-label-container .arrow-label {
         color: var(--accent_color);
-        font-size: var(--arrow_label_font_size_big);
+        font-size: var(--secondary_text_size_big);
         text-align: center;
         margin-bottom: var(--arrow_label_margin_bottom);
     }
@@ -96,12 +96,12 @@
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--cns_h2_font_size_medium_portrait);
+        font-size: var(--h2_size_medium);
         margin-bottom: 0px;
     }
 
     .intro-servizi-description p {
-        font-size: var(--cns_p_font_size_medium_portrait);
+        font-size: var(--p_size_medium);
         text-align: left;
         color: white;
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
@@ -118,7 +118,7 @@
 
     .arrow-and-label-container .arrow-label {
         color: var(--accent_color);
-        font-size: var(--arrow_label_font_size_medium);
+        font-size: var(--secondary_text_size_medium);
         text-align: center;
         margin-bottom: var(--arrow_label_margin_bottom);
     }
@@ -153,12 +153,12 @@
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--cns_h2_font_size_medium_landscape);
+        font-size: var(--h2_size_medium);
         margin-bottom: 0px;
     }
 
     .intro-servizi-description p {
-        font-size: var(--cns_p_font_size_medium_landscape);
+        font-size: var(--p_size_medium);
         text-align: left;
         color: white;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
@@ -175,7 +175,7 @@
 
     .arrow-and-label-container .arrow-label {
         color: var(--accent_color);
-        font-size: var(--arrow_label_font_size_medium);
+        font-size: var(--secondary_text_size_medium);
         text-align: center;
         margin-bottom: var(--arrow_label_margin_bottom);
     }
@@ -210,14 +210,14 @@
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--cns_h2_font_size_small_portrait);
+        font-size: var(--h2_size_small);
         margin-bottom: 0px;
         margin-top: var(--cns_h2_margin_top_small_portrait);
     }
 
     .intro-servizi-description p {
         width: var(--cns_p_width_small_portrait);
-        font-size: var(--cns_p_font_size_small_portrait);
+        font-size: var(--p_size_small);
         text-align: left;
         color: white;
         margin-left: var(--cns_p_margin_left_small_portrait);
@@ -234,7 +234,7 @@
 
     .arrow-and-label-container .arrow-label {
         color: var(--accent_color);
-        font-size: var(--arrow_label_font_size_small_portrait);
+        font-size: var(--secondary_text_size_small);
         text-align: center;
         margin-bottom: var(--arrow_label_margin_bottom);
     }
@@ -269,14 +269,14 @@
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--cns_h2_font_size_small_landscape);
+        font-size: var(--h2_size_small);
         margin-bottom: 0px;
         margin-top: var(--cns_h2_margin_top_small_landscape);
     }
 
     .intro-servizi-description p {
         width: var(--cns_p_width_small_landscape);
-        font-size: var(--cns_p_font_size_small_landscape);
+        font-size: var(--p_size_small);
         text-align: left;
         color: white;
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
@@ -305,7 +305,7 @@
 
     .arrow-and-label-container .arrow-label {
         color: var(--accent_color);
-        font-size: var(--arrow_label_font_size_small_landscape);
+        font-size: var(--secondary_text_size_small);
         text-align: center;
         margin-bottom: var(--arrow_label_margin_bottom);
     }
