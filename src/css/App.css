@@ -126,9 +126,9 @@ body {
   --cns_width_small_portrait: 100%;
   --cns_h2_width_small_portrait: 70%;
   --cns_h2_p_margin_left_small_portrait: 30px;
-  --cns_h2_font_size_small_portrait: 30px;
+  --cns_h2_font_size_small_portrait: 25px;
   --cns_h2_margin_top_small_portrait: 40px;
-  --cns_p_font_size_small_portrait: 20px;
+  --cns_p_font_size_small_portrait: 18px;
   --cns_p_width_small_portrait: 85%;
   --cns_p_margin_left_small_portrait: 30px;
   --arrow_label_font_size_small_portrait: 15px;
@@ -136,10 +136,10 @@ body {
   --cns_width_small_landscape: 100%;
   --cns_h2_width_small_landscape: 60%;
   --cns_h2_p_margin_left_small_landscape: 30px;
-  --cns_h2_font_size_small_landscape: 30px;
+  --cns_h2_font_size_small_landscape: 25px;
   --cns_h2_margin_top_small_landscape: 40px;
-  --cns_p_font_size_small_landscape: 20px;
+  --cns_p_font_size_small_landscape: 18px;
   --cns_p_width_small_landscape: 55%;
-  --arrow_label_font_size_small_landscape: 18px;
+  --arrow_label_font_size_small_landscape: 15px;
   --arrow_container_margin_button_small_landscape: 10px;
 }
