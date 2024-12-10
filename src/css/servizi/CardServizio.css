@@ -210,3 +210,52 @@
         display: block;
     }
 }
+
+/* ------- Small portrait screen --------*/
+@media (max-width: 767px) {
+    .cardServizio {
+        border-radius: 20px;
+        width: var(--card_width_small_portrait);
+        height: var(--card_height_small_portrait);
+        margin-top: var(--card_margin_top_small_portrait);
+        color: white;
+        text-align: start;
+        padding-left: 1.5%;
+        padding-right: 1%;
+        padding-bottom: 0%;
+        opacity: 0;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        transform: translateY(20px);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .p-title {
+        display: flex;
+        font-family: 'Poppins';
+        color: white;
+        text-align: start;
+        font-size: var(--card_title_size_small_portrait);
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .p-description {
+        margin-top: 4px;
+        font-family: 'Poppins';
+        color: white;
+        text-align: start;
+        font-size: var(--card_description_size_small_portrait);
+    }
+
+    .cardIcon {
+        position: absolute;
+        top: var(--card_icon_margin);
+        right: var(--card_icon_margin);
+        width: var(--card_icon_small_portrait);
+        height: auto;
+        display: block;
+    }
+}
