@@ -1,6 +1,5 @@
 import '../../css/chi siamo/NostriValori.css';
-import React from "react";
-import { motion } from "framer-motion";
+import React, {useEffect, useRef} from "react";
 import {NOSTRI_VALORI_DESCRIPTION, NOSTRI_VALORI_TITLE} from "../constants";
 
 /**
@@ -10,44 +9,48 @@ import {NOSTRI_VALORI_DESCRIPTION, NOSTRI_VALORI_TITLE} from "../constants";
  */
 function NostriValori() {
 
+    const titleRef = useRef(null);
+    const subtitleRef = useRef(null);
+
     /**
-     * Variants for the animation
-     * @type {{offscreen: {x: number, opacity: number}, onscreen: {x: number, opacity: number, transition: {duration: number, bounce: number, type: string}}}}
+     * Method to keep track if the section Nostri valori is visible
+     * in order to start the animation
      */
-    const descriptionVariants = {
-        offscreen: {
-            opacity: 0,
-            y: -20
-        },
-        onscreen: {
-            opacity: 1,
-            y: 65,
-            transition: {
-                type: "spring",
-                bounce: 0.6,
-                duration: 0.4
-            }
-        }
-    };
+    useEffect(() => {
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5,
+        };
+
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        if (titleRef.current) observer.observe(titleRef.current);
+        if (subtitleRef.current) observer.observe(subtitleRef.current);
+
+        return () => {
+            if (titleRef.current) observer.unobserve(titleRef.current);
+            if (subtitleRef.current) observer.unobserve(subtitleRef.current);
+        };
+    }, []);
 
     return (
         <>
             {/* Nostri valori description definition */}
             <div id="nostri-valori" className="nostri-valori-container">
-                <motion.div
-                    id="nostri-valori-description"
-                    className="nostri-valori-description"
-                    variants={descriptionVariants}
-                    initial="offscreen"
-                    whileInView="onscreen"
-                    viewport={{ once: true, amount: 0.8 }}
-                >
-                    {/* Title */}
-                    <h2>{NOSTRI_VALORI_TITLE}</h2>
+                {/* Title */}
+                <h2 className="nostri-valori-title" ref={titleRef}>{NOSTRI_VALORI_TITLE}</h2>
 
-                    {/* Description */}
-                    <p dangerouslySetInnerHTML={{ __html: NOSTRI_VALORI_DESCRIPTION }} />
-                </motion.div>
+                {/* Description */}
+                <p className="nostri-valori-subtitle" ref={subtitleRef} dangerouslySetInnerHTML={{ __html: NOSTRI_VALORI_DESCRIPTION }} />
             </div>
         </>
     );

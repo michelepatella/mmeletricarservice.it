@@ -1,7 +1,6 @@
 import '../../css/chi siamo/ChiSiamo.css';
-import React from "react";
-import { motion } from "framer-motion";
-import {CHI_SIAMO_DESCRIPTION, CHI_SIAMO_TITLE} from "../constants";
+import React, { useEffect, useRef } from "react";
+import { CHI_SIAMO_DESCRIPTION, CHI_SIAMO_TITLE } from "../constants";
 
 /**
  * This component contains the chi siamo section
@@ -10,47 +9,47 @@ import {CHI_SIAMO_DESCRIPTION, CHI_SIAMO_TITLE} from "../constants";
  */
 function ChiSiamo() {
 
+    const titleRef = useRef(null);
+    const subtitleRef = useRef(null);
+
     /**
-     * Variants for the animation
-     * @type {{offscreen: {x: number, opacity: number}, onscreen: {x: number, opacity: number, transition: {duration: number, bounce: number, type: string}}}}
+     * Method to keep track if the section Chi siamo is visible
+     * in order to start the animation
      */
-    const descriptionVariants = {
-        offscreen: {
-            opacity: 0,
-            y: -20
-        },
-        onscreen: {
-            opacity: 1,
-            y: 65,
-            transition: {
-                type: "spring",
-                bounce: 0.6,
-                duration: 0.4
-            }
-        }
-    };
+    useEffect(() => {
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5,
+        };
+
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        if (titleRef.current) observer.observe(titleRef.current);
+        if (subtitleRef.current) observer.observe(subtitleRef.current);
+
+        return () => {
+            if (titleRef.current) observer.unobserve(titleRef.current);
+            if (subtitleRef.current) observer.unobserve(subtitleRef.current);
+        };
+    }, []);
 
     return (
-        <>
-            {/* Chi siamo description definition */}
-            <div id="chi-siamo" className="chi-siamo-container">
-                <motion.div
-                    id="chi-siamo-description"
-                    className="chi-siamo-description"
-                    variants={descriptionVariants}
-                    initial="offscreen"
-                    whileInView="onscreen"
-                    viewport={{ once: true, amount: 0.8 }}
-                >
-                    {/* Title */}
-                    <h2>{CHI_SIAMO_TITLE}</h2>
+        <div id="chi-siamo" className="chi-siamo-container">
+            {/* Title */}
+            <h2 ref={titleRef} className="chi-siamo-title">{CHI_SIAMO_TITLE}</h2>
 
-                    {/* Description */}
-                    <p dangerouslySetInnerHTML={{ __html: CHI_SIAMO_DESCRIPTION }}/>
-
-                </motion.div>
-            </div>
-        </>
+            {/* Description */}
+            <p ref={subtitleRef} className="chi-siamo-subtitle" dangerouslySetInnerHTML={{ __html: CHI_SIAMO_DESCRIPTION }} />
+        </div>
     );
 }
 

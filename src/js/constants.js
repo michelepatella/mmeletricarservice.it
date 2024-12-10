@@ -5,7 +5,7 @@ export const EMAIL_PEC = 'mmeletricarservice@pec.buffetti.it'
 export const FACEBOOK = ""
 export const PHONE = '080 3267837'
 export const P_IVA = '08650830725'
-export const HOME_TITLE = "Dove la tua auto trova l'eccellenza."
+export const HOME_TITLE = "Dove la tua auto <br> trova l'eccellenza."
 export const HOME_SUBTITLE = "Benvenuto nell'autofficina MM Eletricar Service!"
 export const SECTIONS = [
     { id: 'home', title: 'Home' },

@@ -1,8 +1,12 @@
 /* ------ Home content ------ */
-
 @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: rotateX(90deg) translateY(20px);
+    }
     to {
         opacity: 1;
+        transform: rotateX(0deg) translateY(0);
     }
 }
 
@@ -16,9 +20,7 @@
         background-position: initial;
         height: 100vh;
         width: 100%;
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 0.5s;
+        opacity: 1;
     }
 
     .home-title {
@@ -27,6 +29,9 @@
         margin-top: var(--home_title_font_margin_top_big);
         color: var(--accent_color);
         margin-bottom: 0px;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 0.5s;
     }
 
     .home-description {
@@ -34,8 +39,10 @@
         margin-left: var(--home_subtitle_margin_top_and_left_big);
         color: white;
         margin-top: var(--home_subtitle_margin_top_and_left_big);
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 1.2s;
     }
-
 }
 
 
@@ -51,9 +58,7 @@
         width: 100%;
         margin-top: var(--title_container_margin_top_medium);
         background-size: 65%;
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 0.5s;
+        opacity: 1;
     }
 
     .home-title {
@@ -61,12 +66,18 @@
         font-family: 'Poppins';
         color: var(--accent_color);
         margin-bottom: 0px;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 1.2s;
     }
 
     .home-description {
         font-size: var(--home_subtitle_font_size_medium);
         color: white;
         margin-top: var(--home_subtitle_margin_top_medium);
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 0.1s;
     }
 }
 
@@ -82,9 +93,7 @@
         height: 100vh;
         width: 100%;
         background-size: 65%;
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 0.5s;
+        opacity: 1;
     }
 
     .home-title {
@@ -92,12 +101,18 @@
         font-family: 'Poppins';
         color: var(--accent_color);
         margin-bottom: 0px;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 0.5s;
     }
 
     .home-description {
         font-size: var(--home_subtitle_font_size_medium);
         color: white;
         margin-top: var(--home_subtitle_margin_top_medium);
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 1.2s;
     }
 }
 
@@ -114,9 +129,7 @@
         width: 100%;
         margin-top: var(--title_container_margin_top_small_portrait);
         background-size: 80%;
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 0.5s;
+        opacity: 1;
     }
 
     .home-title {
@@ -125,6 +138,9 @@
         color: var(--accent_color);
         margin-bottom: 0px;
         margin-left: var(--home-title_margin_left_small_portrait);
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 0.5s;
     }
 
     .home-description {
@@ -132,6 +148,9 @@
         color: white;
         margin-top: var(--home_subtitle_margin_top_small_portrait);
         margin-left: var(--home_subtitle_margin_left_small_portrait);
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 1.2s;
     }
 }
 
@@ -147,9 +166,7 @@
         width: 100%;
         margin-top: var(--title_container_margin_top_small_landscape);
         background-size: 45%;
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 0.5s;
+        opacity: 1;
     }
 
     .home-title {
@@ -158,6 +175,9 @@
         color: var(--accent_color);
         margin-bottom: 0px;
         margin-left: var(--home-title_margin_left_small_landscape);
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 0.5s;
     }
 
     .home-description {
@@ -165,5 +185,8 @@
         color: white;
         margin-top: var(--home_subtitle_margin_top_small_landscape);
         margin-left: var(--home_subtitle_margin_left_small_landscape);
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 1.2s;
     }
 }
