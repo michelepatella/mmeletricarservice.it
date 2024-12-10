@@ -40,6 +40,7 @@ body {
   --secondary_text_size_big: 20px;
   --secondary_text_size_medium: 18px;
   --secondary_text_size_small: 14px;
+  /*----- for cards -------*/
   --card_title_size_big: 22px;
   --card_description_size_big: 18px;
 
