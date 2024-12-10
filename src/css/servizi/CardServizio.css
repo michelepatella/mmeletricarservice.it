@@ -14,7 +14,57 @@
     animation: fadeInUp 0.5s forwards;
 }
 
-@media (min-width: 1025px) {
+/* ------- Extra big screen -------*/
+@media (min-width: 1230px) {
+    .cardServizio {
+        border-radius: 20px;
+        width: var(--card_width_extra_big);
+        height: var(--card_height_extra_big);
+        margin-top: var(--card_margin_top_extra_big);
+        color: white;
+        text-align: start;
+        padding-left: 2.5%;
+        padding-right: 1%;
+        padding-bottom: 0%;
+        opacity: 0;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        transform: translateY(20px);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .p-title {
+        display: flex;
+        font-family: 'Poppins';
+        color: white;
+        text-align: start;
+        font-size: var(--card_title_size_big);
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .p-description {
+        margin-top: 4px;
+        font-family: 'Poppins';
+        color: white;
+        text-align: start;
+        font-size: var(--card_description_size_big);
+    }
+
+    .cardIcon {
+        position: absolute;
+        top: var(--card_icon_margin);
+        right: var(--card_icon_margin);
+        width: var(--card_icon_extra_big);
+        height: auto;
+        display: block;
+    }
+}
+
+/* ------- Big screen -------*/
+@media (max-width: 1229px) and (min-width: 1025px) {
     .cardServizio {
         border-radius: 20px;
         width: var(--card_width_big);
@@ -57,6 +107,105 @@
         top: var(--card_icon_margin);
         right: var(--card_icon_margin);
         width: var(--card_icon_big);
+        height: auto;
+        display: block;
+    }
+}
+
+/* ------- Medium screen portrait -------*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    .cardServizio {
+        border-radius: 20px;
+        width: var(--card_width_medium_portrait);
+        height: var(--card_height_medium_portrait);
+        margin-top: var(--card_margin_top_medium_portrait);
+        color: white;
+        text-align: start;
+        padding-left: 1.5%;
+        padding-right: 1%;
+        padding-bottom: 0%;
+        opacity: 0;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        transform: translateY(20px);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .p-title {
+        display: flex;
+        font-family: 'Poppins';
+        color: white;
+        text-align: start;
+        font-size: var(--card_title_size_medium_portrait);
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .p-description {
+        margin-top: 4px;
+        font-family: 'Poppins';
+        color: white;
+        text-align: start;
+        font-size: var(--card_description_size_medium_portrait);
+    }
+
+    .cardIcon {
+        position: absolute;
+        top: var(--card_icon_margin);
+        right: var(--card_icon_margin);
+        width: var(--card_icon_medium_portrait);
+        height: auto;
+        display: block;
+    }
+}
+
+/* ------- Medium screen landscape -------*/
+@media (min-height: 768px) and (max-width: 920px) and (orientation: landscape) {
+    .cardServizio {
+        border-radius: 20px;
+        width: var(--card_width_medium_landscape);
+        height: var(--card_height_medium_landscape);
+        margin-top: var(--card_margin_top_medium_landscape);
+        color: white;
+        text-align: start;
+        padding-left: 2.5%;
+        padding-right: 1%;
+        padding-bottom: 0%;
+        opacity: 0;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        transform: translateY(20px);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .p-title {
+        display: flex;
+        font-family: 'Poppins';
+        color: white;
+        text-align: start;
+        font-size: var(--card_title_size_medium_landscape);
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .p-description {
+        margin-top: 4px;
+        font-family: 'Poppins';
+        color: white;
+        text-align: start;
+        font-size: var(--card_description_size_medium_landscape);
+    }
+
+    .cardIcon {
+        position: absolute;
+        top: var(--card_icon_margin);
+        right: var(--card_icon_margin);
+        width: var(--card_icon_medium_landscape);
         height: auto;
         display: block;
     }

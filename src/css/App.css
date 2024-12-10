@@ -43,6 +43,10 @@ body {
   /*----- for cards -------*/
   --card_title_size_big: 22px;
   --card_description_size_big: 18px;
+  --card_title_size_medium_portrait: 20px;
+  --card_description_size_medium_portrait:16px;
+  --card_title_size_medium_landscape: 20px;
+  --card_description_size_medium_landscape: 18px;
 
   /**whatsapp support button**/
   --whatsapp_button_background-color: #25d366;
@@ -143,12 +147,31 @@ body {
   --arrow_container_margin_button_small_landscape: 10px;
 
   /**altri servizi**/
+  --card_icon_margin: 10px;
+  --altri_servizi_container_padding: 0px;
+  /*-------- extra big --------*/
+  --card_width_extra_big: 400px;
+  --card_height_extra_big: 250px;
+  --card_margin_left_extra_big: 100px;
+  --card_margin_top_extra_big: 50px;
+  --card_icon_extra_big: 50px;
   /*-------- big --------*/
-  --card_width_big: 400px;
+  --card_width_big: 380px;
   --card_height_big: 250px;
   --card_margin_left_big: 100px;
   --card_margin_top_big: 50px;
   --card_icon_big: 50px;
-  --card_icon_margin: 10px;
+  /*-------- medium portrait --------*/
+  --card_width_medium_portrait: 320px;
+  --card_height_medium_portrait: 220px;
+  --card_margin_medium_portrait: 100px;
+  --card_margin_top_medium_portrait: 50px;
+  --card_icon_medium_portrait: 40px;
+  /*-------- medium landscape --------*/
+  --card_width_medium_landscape: 350px;
+  --card_height_medium_landscape: 200px;
+  --card_margin_medium_landscape: 100px;
+  --card_margin_top_medium_landscape: 50px;
+  --card_icon_medium_landscape: 35px;
 
 }

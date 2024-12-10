@@ -1,25 +1,24 @@
-import {Button, Drawer, Menu as AntMenu} from "antd";
-import {CloseOutlined, MenuOutlined} from "@ant-design/icons";
-import React, {useState} from "react";
-import {SECTIONS} from "../constants";
+import { Button, Drawer, Menu as AntMenu } from "antd";
+import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
+import React, { useState } from "react";
+import { SECTIONS } from "../constants";
 
 /**
  * This component contains the menu for phone
  * @returns {Element}
  * @constructor
  */
-function MenuForPhone(){
-
+function MenuForPhone() {
     const [visible, setVisible] = useState(false);
 
     /**
      * Method to animate the transition to a section
      * @param sectionId
      */
-    const scrollToSection = (sectionId, setVisible) => {
+    const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            section.scrollIntoView({ behavior: "smooth" });
         }
         setVisible(false);
     };
@@ -40,10 +39,10 @@ function MenuForPhone(){
                 key: `section-${index + 1}-child-${childIndex + 1}`,
                 href: `#${child.id}`,
                 label: child.title,
-                onClick: () => scrollToSection(child.id, true, setVisible),
+                onClick: () => scrollToSection(child.id),
             }))
             : undefined,
-        onClick: () => scrollToSection(section.id, true, setVisible)
+        onClick: () => scrollToSection(section.id),
     }));
 
     return (
@@ -52,10 +51,10 @@ function MenuForPhone(){
             <Button
                 type="primary"
                 shape="circle"
-                icon={<MenuOutlined/>}
+                icon={<MenuOutlined />}
                 onClick={toggleDrawer}
                 className="hamburger-button"
-                style={{display: visible ? 'none' : 'flex'}}
+                style={{ display: visible ? "none" : "flex" }}
             />
 
             {/* Menu appears to the right */}
@@ -66,14 +65,9 @@ function MenuForPhone(){
                 visible={visible}
                 width="100vw"
                 height="100vh"
-                closeIcon={<CloseOutlined style={{fontSize: '30px', color: 'black'}}/>}
+                closeIcon={<CloseOutlined style={{ fontSize: "30px", color: "black" }} />}
             >
-
-                <AntMenu
-                    mode="inline"
-                    items={menuItemsGeneration}
-                />
-
+                <AntMenu mode="inline" items={menuItemsGeneration} />
             </Drawer>
         </div>
     );
