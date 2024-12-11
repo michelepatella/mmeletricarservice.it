@@ -37,3 +37,6 @@ export const SERVIZI = [
     {title: "Diagnosi iniezione", description: "Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.", icon: '/icons/fuelIcon.svg'},
     {title: "Duplicazione chiavi e telecomandi", description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.", icon: '/icons/keyIcon.svg'}
 ];
+export const CONTATTI_TITLE = "Sempre al tuo <br> servizio.";
+export const CONTATTI_SUBTITLE = "Se hai bisogno di assistenza o  informazioni, non esitare a contattarci!";
+export const FOOTER_TEXT = "© Copyright 2024 | All Rights Reserved | Partita IVA: 08650830725"

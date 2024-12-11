@@ -162,4 +162,6 @@ body {
   --divServizio_icon_dimension_small: 30px;
   --margin_top_icon_small: 43px;
 
+  /**contatti**/
+  --contatti_title_margin_top: 200px;
 }

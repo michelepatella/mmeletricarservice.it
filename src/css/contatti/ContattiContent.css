@@ -1,0 +1,172 @@
+.title-contatti-container {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    background-color: var(--background_color);
+    background-image: url('../../../public/icons/background.svg');
+    background-repeat: no-repeat;
+    background-position: initial;
+    margin-top: var(--contatti_title_margin_top);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: rotateX(90deg) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0deg) translateY(0);
+    }
+}
+
+.contatti-title,
+.contatti-description {
+    opacity: 0;
+    transform: rotateX(90deg) translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.contatti-title.in-view,
+.contatti-description.in-view {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0);
+}
+
+/* ------ Contatti section ------ */
+/* ------ Big screen -------*/
+@media (min-width: 1025px) {
+
+    .contatti-title {
+        width: var(--cns_h2_p_width_big);
+        color: var(--accent_color);
+        text-align: left;
+        font-size: var(--h2_size_big);
+        margin-bottom: 0px;
+        margin-top: var(--title_margin_top_big_medium);
+        font-family: 'Poppins';
+    }
+
+    .contatti-description {
+        font-family: 'Poppins';
+        width: 30%;
+        font-size: var(--p_size_big);
+        text-align: left;
+        color: white;
+    }
+
+    .title-contatti-container{
+        margin-left: var(--title_container_margin_left_big);
+    }
+}
+
+/* Medium screen portrait */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    .contatti-title {
+        font-family: 'Poppins';
+        color: var(--accent_color);
+        text-align: left;
+        font-size: var(--h2_size_medium);
+        margin-bottom: 0px;
+        margin-top: var(--title_margin_top_big_medium);
+    }
+
+    .contatti-description {
+        font-family: 'Poppins';
+        font-size: var(--p_size_medium);
+        text-align: left;
+        color: white;
+    }
+
+    .title-contatti-container{
+        background-size: 65%;
+        margin-left: var(--title_container_margin_left_big);
+    }
+
+}
+
+/* Medium screen landscape*/
+@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .contatti-title {
+        font-family: 'Poppins';
+        color: var(--accent_color);
+        text-align: left;
+        font-size: var(--h2_size_medium);
+        margin-bottom: 0px;
+        margin-top: var(--title_margin_top_big_medium);
+    }
+
+    .contatti-description {
+        font-family: 'Poppins';
+        font-size: var(--p_size_medium);
+        text-align: left;
+        color: white;
+    }
+
+    .title-contatti-container{
+        background-size: 65%;
+        margin-left: var(--title_container_margin_left_big);
+    }
+}
+
+/* Small screen portrait*/
+@media (max-width: 767px) {
+
+    .contatti-title {
+        font-family: 'Poppins';
+        width: var(--cns_h2_width_small_portrait);
+        margin-left: var(--cns_h2_p_margin_left_small_portrait);
+        color: var(--accent_color);
+        text-align: left;
+        font-size: var(--h2_size_small);
+        margin-bottom: 0px;
+        margin-top: var(--cns_h2_margin_top_small_portrait);
+    }
+
+    .contatti-description {
+        font-family: 'Poppins';
+        width: var(--cns_p_width_small_portrait);
+        font-size: var(--p_size_small);
+        text-align: left;
+        color: white;
+        margin-left: var(--cns_p_margin_left_small_portrait);
+    }
+
+    .title-contatti-container {
+        background-size: 80%;
+    }
+}
+
+/* Small screen landscape*/
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
+
+    .contatti-title {
+        font-family: 'Poppins';
+        width: var(--cns_h2_width_small_landscape);
+        margin-left: var(--cns_h2_p_margin_left_small_landscape);
+        color: var(--accent_color);
+        text-align: left;
+        font-size: var(--h2_size_small);
+        margin-bottom: 0px;
+        margin-top: var(--cns_h2_margin_top_small_landscape);
+    }
+
+    .contatti-description {
+        font-family: 'Poppins';
+        width: var(--cns_p_width_small_landscape);
+        font-size: var(--p_size_small);
+        text-align: left;
+        color: white;
+        margin-left: var(--cns_h2_p_margin_left_small_landscape);
+    }
+
+    .title-contatti-container {
+        background-size: 45%;
+    }
+
+}

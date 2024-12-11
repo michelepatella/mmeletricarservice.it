@@ -7,6 +7,7 @@ import Menu from './menu/Menu';
 import NostriValori from './chi siamo/NostriValori';
 import IntroServizi from "./servizi/IntroServizi";
 import AltriServizi from "./servizi/AltriServizi";
+import Contatti from './contatti/Contatti';
 import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './constants';
@@ -54,6 +55,9 @@ function App() {
 
             {/*Integration of Altri Servizi section*/}
             <AltriServizi/>
+
+            {/*Integration of Contatti section*/}
+            <Contatti/>
 
         </>
     );
