@@ -23,8 +23,6 @@
         width: var(--whatsapp_button_dimension_big_hover);
         height: var(--whatsapp_button_dimension_big_hover);
     }
-
-
 }
 
 /* ------- Medium screen landscape ---------*/
@@ -118,4 +116,3 @@
         font-size: var(--whatsapp_button_icon_dimension_small_landscape);
     }
 }
-/* ------- End Whatsapp button --------*/

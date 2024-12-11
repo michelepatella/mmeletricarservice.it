@@ -1,6 +1,5 @@
 import '../../css/servizi/IntroServizi.css';
 import React, {useEffect, useRef} from "react";
-import { motion } from "framer-motion";
 import {INTRO_SERVIZI_TITLE, INTRO_SERVIZI_DESCRIPTION, ARROW_LABEL} from "../constants";
 
 /**

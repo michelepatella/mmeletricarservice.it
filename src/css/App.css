@@ -48,10 +48,8 @@ body {
   --servizio_description_size_medium_portrait: 18px;
   --servizio_title_size_medium_landscape: 28px;
   --servizio_description_size_medium_landscape: 20px;
-  --servizio_title_size_small_portrait: 20px;
-  --servizio_description_size_small_portrait: 14px;
-  --servizio_title_size_small_landscape: 20px;
-  --servizio_description_size_small_landscape: 14px;
+  --servizio_title_size_small: 20px;
+  --servizio_description_size_small: 14px;
 
   /**whatsapp support button**/
   --whatsapp_button_background-color: #25d366;
