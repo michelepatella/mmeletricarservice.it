@@ -59,7 +59,7 @@
 /* Medium screen portrait */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
-    .chi.-siamo-title {
+    .chi-siamo-title {
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
         color: var(--accent_color);
         text-align: left;
@@ -77,7 +77,7 @@
 
 }
 
-/* Medium screen portrait*/
+/* Medium screen landscape*/
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
     .chi-siamo-title{

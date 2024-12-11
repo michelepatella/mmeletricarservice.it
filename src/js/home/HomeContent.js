@@ -16,9 +16,7 @@ function HomeContent() {
             <h1 className="home-title" dangerouslySetInnerHTML={{__html: HOME_TITLE}}/>
 
             {/* Subtitle */}
-            <p className="home-description">
-                {HOME_SUBTITLE}
-            </p>
+            <p className="home-description" dangerouslySetInnerHTML={{__html: HOME_SUBTITLE}}/>
 
         </div>
     );

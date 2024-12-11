@@ -1,6 +1,5 @@
-.nostri-valori-container {
-    height: 100vh;
-    width: 100%;
+.divServizio {
+    width: 80%;
     text-align: center;
     position: relative;
     top: 0;
@@ -19,58 +18,61 @@
     }
 }
 
-.nostri-valori-title,
-.nostri-valori-subtitle {
+.title-servizio,
+.description-servizio {
     opacity: 0;
     transform: rotateX(90deg) translateY(20px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-.nostri-valori-title.in-view,
-.nostri-valori-subtitle.in-view {
+.title-servizio.in-view,
+.description-servizio.in-view {
     opacity: 1;
     transform: rotateX(0deg) translateY(0);
 }
 
-/* ------ Nostri valori section ------ */
 /* ------ Big screen -------*/
 @media (min-width: 1025px) {
 
-    .nostri-valori-title{
+    .title-servizio {
         width: var(--cns_h2_p_width_big);
         margin-left: var(--cns_h2_p_margin_left_big);
+        font-weight: bold;
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--h2_size_big);
+        font-size: var(--servizio_title_size_big);
         margin-bottom: 0px;
-        margin-top: var(--title_margin_top_big_medium);
+        margin-top: var(--divServizio_margin_top);
     }
 
-    .nostri-valori-subtitle{
+    .description-servizio {
         width: var(--cns_h2_p_width_big);
-        font-size: var(--p_size_big);
+        font-size: var(--servizio_description_size_big);
         text-align: left;
         color: white;
+        margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_h2_p_margin_left_big);
     }
 }
 
-/* Medium screen portrait*/
+/* Medium screen portrait */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
-    .nostri-valori-title {
+    .title-servizio {
+        font-weight: bold;
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--h2_size_medium);
+        font-size: var(--servizio_title_size_medium_portrait);
         margin-bottom: 0px;
-        margin-top: var(--title_margin_top_big_medium);
+        margin-top: var(--divServizio_margin_top);
     }
 
-    .nostri-valori-subtitle {
-        font-size: var(--p_size_medium);
+    .description-servizio {
+        font-size: var(--servizio_description_size_medium_portrait);
         text-align: left;
         color: white;
+        margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
     }
 
@@ -79,19 +81,21 @@
 /* Medium screen landscape*/
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
-    .nostri-valori-title {
+    .title-servizio {
+        font-weight: bold;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--h2_size_medium);
+        font-size: var(--servizio_title_size_medium_landscape);
         margin-bottom: 0px;
-        margin-top: var(--title_margin_top_big_medium);
+        margin-top: var(--divServizio_margin_top);
     }
 
-    .nostri-valori-subtitle {
-        font-size: var(--p_size_medium);
+    .description-servizio{
+        font-size: var(--servizio_description_size_medium_landscape);
         text-align: left;
         color: white;
+        margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
     }
 }
@@ -99,21 +103,23 @@
 /* Small screen portrait*/
 @media (max-width: 767px) {
 
-    .nostri-valori-title {
+    .title-servizio {
+        font-weight: bold;
         width: var(--cns_h2_width_small_portrait);
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--h2_size_small);
+        font-size: var(--servizio_title_size_small_portrait);
         margin-bottom: 0px;
-        margin-top: var(--cns_h2_margin_top_small_portrait);
+        margin-top: var(--divServizio_margin_top);
     }
 
-    .nostri-valori-subtitle {
+    .description-servizio {
         width: var(--cns_p_width_small_portrait);
-        font-size: var(--p_size_small);
+        font-size: var(--servizio_description_size_small_portrait);
         text-align: left;
         color: white;
+        margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_p_margin_left_small_portrait);
     }
 }
@@ -121,21 +127,23 @@
 /* Small screen landscape*/
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
 
-    .nostri-valori-title {
+    .title-servizio {
+        font-weight: bold;
         width: var(--cns_h2_width_small_landscape);
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--h2_size_small);
+        font-size: var(--servizio_title_size_small_landscape);
         margin-bottom: 0px;
-        margin-top: var(--cns_h2_margin_top_small_landscape);
+        margin-top: var(--divServizio_margin_top);
     }
 
-    .nostri-valori-subtitle {
+    .description-servizio {
         width: var(--cns_p_width_small_landscape);
-        font-size: var(--p_size_small);
+        font-size: var(--servizio_description_size_small_portrait);
         text-align: left;
         color: white;
+        margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
     }
 

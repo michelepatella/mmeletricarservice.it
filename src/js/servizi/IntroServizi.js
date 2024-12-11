@@ -1,5 +1,5 @@
 import '../../css/servizi/IntroServizi.css';
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import { motion } from "framer-motion";
 import {INTRO_SERVIZI_TITLE, INTRO_SERVIZI_DESCRIPTION, ARROW_LABEL} from "../constants";
 
@@ -9,26 +9,6 @@ import {INTRO_SERVIZI_TITLE, INTRO_SERVIZI_DESCRIPTION, ARROW_LABEL} from "../co
  * @constructor
  */
 function IntroServizi() {
-
-    /**
-     * Variants for the animation
-     * @type {{offscreen: {x: number, opacity: number}, onscreen: {x: number, opacity: number, transition: {duration: number, bounce: number, type: string}}}}
-     */
-    const descriptionVariants = {
-        offscreen: {
-            opacity: 0,
-            y: -20
-        },
-        onscreen: {
-            opacity: 1,
-            y: 65,
-            transition: {
-                type: "spring",
-                bounce: 0.6,
-                duration: 0.4
-            }
-        }
-    };
 
     /**
      * Method to go to the Altri servizi section by using the arrow
@@ -41,24 +21,47 @@ function IntroServizi() {
         }
     };
 
+    const titleRef = useRef(null);
+    const subtitleRef = useRef(null);
+
+    /**
+     * Method to keep track if the section Intro servizi is visible
+     * in order to start the animation
+     */
+    useEffect(() => {
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        if (titleRef.current) observer.observe(titleRef.current);
+        if (subtitleRef.current) observer.observe(subtitleRef.current);
+
+        return () => {
+            if (titleRef.current) observer.unobserve(titleRef.current);
+            if (subtitleRef.current) observer.unobserve(subtitleRef.current);
+        };
+    }, []);
+
     return (
         <>
             {/* Intro servizi description definition */}
             <div id="intro-servizi" className="intro-servizi-container">
-                <motion.div
-                    id="intro-servizi-description"
-                    className="intro-servizi-description"
-                    variants={descriptionVariants}
-                    initial="offscreen"
-                    whileInView="onscreen"
-                    viewport={{ once: true, amount: 0.8 }}
-                >
-                    {/* Title */}
-                    <h2 dangerouslySetInnerHTML={{ __html: INTRO_SERVIZI_TITLE }}/>
+                {/* Title */}
+                <h2 className="intro-servizi-title" ref={titleRef} dangerouslySetInnerHTML={{ __html: INTRO_SERVIZI_TITLE }}/>
 
-                    {/* Description */}
-                    <p dangerouslySetInnerHTML={{ __html: INTRO_SERVIZI_DESCRIPTION }}/>
-                </motion.div>
+                {/* Description */}
+                <p className="intro-servizi-subtitle" ref={subtitleRef} dangerouslySetInnerHTML={{ __html: INTRO_SERVIZI_DESCRIPTION }}/>
             </div>
 
             <div className="arrow-and-label-container">

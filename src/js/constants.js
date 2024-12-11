@@ -6,7 +6,7 @@ export const FACEBOOK = ""
 export const PHONE = '080 3267837'
 export const P_IVA = '08650830725'
 export const HOME_TITLE = "Dove la tua auto <br> trova l'eccellenza."
-export const HOME_SUBTITLE = "Benvenuto nell'autofficina MM Eletricar Service!"
+export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> MM Eletricar Service!"
 export const SECTIONS = [
     { id: 'home', title: 'Home' },
     { id: 'chi-siamo', title: 'Chi siamo', children: [{ id: 'nostri-valori', title: 'I nostri valori' }] },
@@ -28,12 +28,12 @@ export const INTRO_SERVIZI_TITLE = 'Per la tua auto, solo <br/> servizi di quali
 export const INTRO_SERVIZI_DESCRIPTION = 'Tutti i servizi classici da elettrauto, dalla manutenzione alle riparazioni, per garantire sicurezza e performance ottimali.'
 export const ARROW_LABEL = 'Scopri tutti i nostri servizi specializzati'
 export const SERVIZI = [
-    {title: "Manutenzione centralina", description: "Controllo e aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.", color: "rgb(34, 193, 87, 0.10)", borderColor: "rgb(34, 193, 87)", icon: '/icons/cpuIcon.svg'},
-    {title: "Riparazione parabrezza", description: "Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.", color: "rgb(0, 255, 204, 0.10)", borderColor: "rgb(0, 255, 204)", icon: '/icons/hammerIcon.svg'},
-    {title: "Pannello di controllo", description: "Riparazione e calibrazione di strumenti digitali e analogici del cruscotto.", color: "rgb(255, 211, 0, 0.10)", borderColor: "rgb(255, 211, 0)", icon: '/icons/controlPanelIcon.svg'},
-    {title: "Riparazione conta km", description: "Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.", color: "rgb(255, 165, 0, 0.10)", borderColor: "rgb(255, 165, 0)", icon: '/icons/dashboardIcon.svg'},
-    {title: "Ripristino EGR e DPF", description: "Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.", color: "rgb(102, 178, 255, 0.10)", borderColor: "rgb(102, 178, 255)", icon: '/icons/filterIcon.svg'},
-    {title: "Ricarica aria condizionata", description: "Ripristino del gas refrigerante per garantire un climatizzatore efficiente e aria fresca.", color: "rgb(0, 123, 255, 0.10)", borderColor: "rgb(0, 123, 255)", icon: '/icons/airIcon.svg'},
-    {title: "Diagnosi iniezione", description: "Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.", color: "rgb(255, 0, 0, 0.10)", borderColor: "rgb(255, 0, 0)", icon: '/icons/fuelIcon.svg'},
-    {title: "Duplicazione chiavi e telecomandi", description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.", color: "rgb(138, 43, 226, 0.10)", borderColor: "rgb(138, 43, 226)", icon: '/icons/keyIcon.svg'}
+    {title: "Manutenzione centralina", description: "Controllo e aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.", icon: '/icons/cpuIcon.svg'},
+    {title: "Riparazione parabrezza", description: "Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.", icon: '/icons/hammerIcon.svg'},
+    {title: "Pannello di controllo", description: "Riparazione e calibrazione di strumenti digitali e analogici del cruscotto.", icon: '/icons/controlPanelIcon.svg'},
+    {title: "Riparazione conta km", description: "Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.", icon: '/icons/dashboardIcon.svg'},
+    {title: "Ripristino EGR e DPF", description: "Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.", icon: '/icons/filterIcon.svg'},
+    {title: "Ricarica aria condizionata", description: "Ripristino del gas refrigerante per garantire un climatizzatore efficiente e aria fresca.", icon: '/icons/airIcon.svg'},
+    {title: "Diagnosi iniezione", description: "Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.", icon: '/icons/fuelIcon.svg'},
+    {title: "Duplicazione chiavi e telecomandi", description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.", icon: '/icons/keyIcon.svg'}
 ];
