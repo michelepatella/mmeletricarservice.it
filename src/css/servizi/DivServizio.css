@@ -1,12 +1,3 @@
-.divServizio {
-    width: 80%;
-    text-align: center;
-    position: relative;
-    top: 0;
-    overflow: hidden;
-    background-color: var(--background_color);
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -19,14 +10,14 @@
 }
 
 .title-servizio,
-.description-servizio {
+.description-servizio, .servizio-icon{
     opacity: 0;
     transform: rotateX(90deg) translateY(20px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
 .title-servizio.in-view,
-.description-servizio.in-view {
+.description-servizio.in-view, .servizio-icon.in-view {
     opacity: 1;
     transform: rotateX(0deg) translateY(0);
 }
@@ -34,15 +25,27 @@
 /* ------ Big screen -------*/
 @media (min-width: 1025px) {
 
+    .flex-division {
+        width: 50%;
+    }
+
+    .divServizio {
+        width: 80%;
+        text-align: center;
+        position: relative;
+        top: 0;
+        overflow: hidden;
+        background-color: var(--background_color);
+        margin-left: var(--cns_h2_p_margin_left_big);
+    }
+
     .title-servizio {
         width: var(--cns_h2_p_width_big);
-        margin-left: var(--cns_h2_p_margin_left_big);
         font-weight: bold;
         color: var(--accent_color);
         text-align: left;
         font-size: var(--servizio_title_size_big);
         margin-bottom: 0px;
-        margin-top: var(--divServizio_margin_top);
     }
 
     .description-servizio {
@@ -51,21 +54,44 @@
         text-align: left;
         color: white;
         margin-top: var(--divServizio_description_margin_top);
-        margin-left: var(--cns_h2_p_margin_left_big);
+
+    }
+
+    .title-and-icon-container{
+        margin-top: var(--divServizio_margin_top);
+    }
+
+    .servizio-icon{
+        width: var(--divServizio_icon_dimension_big_and_medium);
+        height: var(--divServizio_icon_dimension_big_and_medium);
+        margin-top: var(--margin_top_icon_big_medium_landscape);
+        margin-left: var(--margin_right_icon);
     }
 }
 
 /* Medium screen portrait */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
+    .flex-division {
+        width: 50%;
+    }
+
+    .divServizio {
+        width: 60%;
+        text-align: center;
+        position: relative;
+        top: 0;
+        overflow: hidden;
+        background-color: var(--background_color);
+        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
+    }
+
     .title-servizio {
         font-weight: bold;
-        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
         color: var(--accent_color);
         text-align: left;
         font-size: var(--servizio_title_size_medium_portrait);
         margin-bottom: 0px;
-        margin-top: var(--divServizio_margin_top);
     }
 
     .description-servizio {
@@ -73,13 +99,36 @@
         text-align: left;
         color: white;
         margin-top: var(--divServizio_description_margin_top);
-        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
+    }
+
+    .title-and-icon-container{
+        margin-top: var(--divServizio_margin_top);
+    }
+
+    .servizio-icon{
+        width: var(--divServizio_icon_dimension_big_and_medium);
+        height: var(--divServizio_icon_dimension_big_and_medium);
+        margin-top: var(--margin_top_icon_big_medium_portrait);
+        margin-left: var(--margin_right_icon);
     }
 
 }
 
 /* Medium screen landscape*/
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .flex-division {
+        width: 80%;
+    }
+
+    .divServizio {
+        width: 60%;
+        text-align: center;
+        position: relative;
+        top: 0;
+        overflow: hidden;
+        background-color: var(--background_color);
+    }
 
     .title-servizio {
         font-weight: bold;
@@ -88,7 +137,6 @@
         text-align: left;
         font-size: var(--servizio_title_size_medium_landscape);
         margin-bottom: 0px;
-        margin-top: var(--divServizio_margin_top);
     }
 
     .description-servizio{
@@ -98,10 +146,34 @@
         margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
     }
+
+    .title-and-icon-container{
+        margin-top: var(--divServizio_margin_top);
+    }
+
+    .servizio-icon{
+        width: var(--divServizio_icon_dimension_big_and_medium);
+        height: var(--divServizio_icon_dimension_big_and_medium);
+        margin-top: var(--margin_top_icon_big_medium_landscape);
+        margin-left: var(--margin_right_icon);
+    }
 }
 
 /* Small screen portrait*/
 @media (max-width: 767px) {
+
+    .flex-division {
+        width: 70%;
+    }
+
+    .divServizio {
+        width: 90%;
+        text-align: center;
+        position: relative;
+        top: 0;
+        overflow: hidden;
+        background-color: var(--background_color);
+    }
 
     .title-servizio {
         font-weight: bold;
@@ -122,10 +194,25 @@
         margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_p_margin_left_small_portrait);
     }
+
+    .title-and-icon-container{
+        margin-top: var(--divServizio_margin_top);
+    }
+
+    .servizio-icon{
+        width: var(--divServizio_icon_dimension_small);
+        height: var(--divServizio_icon_dimension_small);
+        margin-top: var(--margin_top_icon_small);
+        margin-left: var(--margin_right_icon);
+    }
 }
 
 /* Small screen landscape*/
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
+
+    .flex-division {
+        width: 70%;
+    }
 
     .title-servizio {
         font-weight: bold;
@@ -145,6 +232,17 @@
         color: white;
         margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
+    }
+
+    .title-and-icon-container{
+        margin-top: var(--divServizio_margin_top);
+    }
+
+    .servizio-icon{
+        width: var(--divServizio_icon_dimension_small);
+        height: var(--divServizio_icon_dimension_small);
+        margin-top: var(--margin_top_icon_small);
+        margin-left: var(--margin_right_icon);
     }
 
 }

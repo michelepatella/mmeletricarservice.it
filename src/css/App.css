@@ -152,7 +152,16 @@ body {
   --arrow_container_margin_button_small_landscape: 10px;
 
   /**altri servizi**/
-  --divServizio_margin_top: 80px;
+  --divServizio_margin_top: 40px;
   --divServizio_description_margin_top: 10px;
+  --divServizio_icon_dimension_big_and_medium: 40px;
+  --margin_right_icon: 20px;
+  /*------- big and medium landscape--------*/
+  --margin_top_icon_big_medium_landscape: 33px;
+  /*------- medium portrait --------*/
+  --margin_top_icon_big_medium_portrait: 28px;
+  /* ------ small -------*/
+  --divServizio_icon_dimension_small: 30px;
+  --margin_top_icon_small: 43px;
 
 }
