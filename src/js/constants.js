@@ -39,4 +39,4 @@ export const SERVIZI = [
 ];
 export const CONTATTI_TITLE = "Sempre al tuo <br> servizio.";
 export const CONTATTI_SUBTITLE = "Se hai bisogno di assistenza o  informazioni, non esitare a contattarci!";
-export const FOOTER_TEXT = "© Copyright 2024 | All Rights Reserved | Partita IVA: 08650830725"
+export const FOOTER_TEXT = "© Copyright 2024 | All Rights Reserved | P. IVA: 08650830725"

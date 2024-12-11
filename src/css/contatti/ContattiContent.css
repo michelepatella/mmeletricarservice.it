@@ -1,6 +1,5 @@
 .title-contatti-container {
     height: 100vh;
-    width: 100%;
     text-align: center;
     position: relative;
     top: 0;
@@ -51,7 +50,7 @@
 
     .contatti-description {
         font-family: 'Poppins';
-        width: 30%;
+        width: 50%;
         font-size: var(--p_size_big);
         text-align: left;
         color: white;
@@ -78,11 +77,11 @@
         font-family: 'Poppins';
         font-size: var(--p_size_medium);
         text-align: left;
+        width: 50%;
         color: white;
     }
 
     .title-contatti-container{
-        width: 65%;
         background-size: 100%;
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
     }
@@ -110,7 +109,6 @@
     }
 
     .title-contatti-container{
-        width: 80%;
         background-size: 65%;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
     }

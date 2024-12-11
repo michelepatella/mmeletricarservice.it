@@ -165,5 +165,6 @@ html, body {
   --margin_top_icon_small: 43px;
 
   /**contatti**/
-
+  --footer_text_size_big_medium: 13px;
+  --footer_text_size_small: 8px;
 }

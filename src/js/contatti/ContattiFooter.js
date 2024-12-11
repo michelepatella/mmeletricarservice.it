@@ -12,7 +12,9 @@ function ContattiFooter() {
 
     return (
         <>
-            <p className="footer-text">{FOOTER_TEXT}</p>
+            <div className="contatti-footer">
+                <p className="footer-text">{FOOTER_TEXT}</p>
+            </div>
         </>
     );
 
