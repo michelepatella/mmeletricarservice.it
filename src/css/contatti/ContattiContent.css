@@ -122,7 +122,6 @@
     .contatti-title {
         font-family: 'Poppins';
         width: var(--cns_h2_width_small_portrait);
-        margin-left: var(--cns_h2_p_margin_left_small_portrait);
         color: var(--accent_color);
         text-align: left;
         font-size: var(--h2_size_small);
@@ -136,11 +135,11 @@
         font-size: var(--p_size_small);
         text-align: left;
         color: white;
-        margin-left: var(--cns_p_margin_left_small_portrait);
     }
 
     .title-contatti-container {
         background-size: 80%;
+        margin-left: var(--cns_p_margin_left_small_portrait);
     }
 }
 
@@ -150,7 +149,6 @@
     .contatti-title {
         font-family: 'Poppins';
         width: var(--cns_h2_width_small_landscape);
-        margin-left: var(--cns_h2_p_margin_left_small_landscape);
         color: var(--accent_color);
         text-align: left;
         font-size: var(--h2_size_small);
@@ -164,10 +162,10 @@
         font-size: var(--p_size_small);
         text-align: left;
         color: white;
-        margin-left: var(--cns_h2_p_margin_left_small_landscape);
     }
 
     .title-contatti-container {
+        margin-left: var(--cns_h2_p_margin_left_small_landscape);
         background-size: 45%;
     }
 
