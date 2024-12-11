@@ -9,7 +9,6 @@
     background-image: url('../../../public/icons/background.svg');
     background-repeat: no-repeat;
     background-position: initial;
-    margin-top: var(--contatti_title_margin_top);
 }
 
 @keyframes fadeIn {
@@ -83,8 +82,9 @@
     }
 
     .title-contatti-container{
-        background-size: 65%;
-        margin-left: var(--title_container_margin_left_big);
+        width: 65%;
+        background-size: 100%;
+        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
     }
 
 }
@@ -102,6 +102,7 @@
     }
 
     .contatti-description {
+        width: 50%;
         font-family: 'Poppins';
         font-size: var(--p_size_medium);
         text-align: left;
@@ -109,8 +110,9 @@
     }
 
     .title-contatti-container{
+        width: 80%;
         background-size: 65%;
-        margin-left: var(--title_container_margin_left_big);
+        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
     }
 }
 

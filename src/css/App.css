@@ -1,6 +1,7 @@
 /*body of the entire web page*/
-body {
+html, body {
   background-color: var(--background_color);
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -53,7 +54,7 @@ body {
 
   /**whatsapp support button**/
   --whatsapp_button_background-color: #25d366;
-  --whatsapp_button_dimension_big_and_small_landscape: 60px;
+  --whatsapp_button_dimension_big: 60px;
   --whatsapp_button_dimension_medium_landscape: 50px;
   --whatsapp_button_dimension_medium_portrait_and_small: 40px;
   --whatsapp_button_dimension_big_hover: 63px;
@@ -153,6 +154,7 @@ body {
   --divServizio_margin_top: 40px;
   --divServizio_description_margin_top: 10px;
   --divServizio_icon_dimension_big_and_medium: 40px;
+  --margin_bottom_entire_section: 200px;
   --margin_right_icon: 20px;
   /*------- big and medium landscape--------*/
   --margin_top_icon_big_medium_landscape: 33px;
@@ -163,5 +165,5 @@ body {
   --margin_top_icon_small: 43px;
 
   /**contatti**/
-  --contatti_title_margin_top: 200px;
+
 }

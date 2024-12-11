@@ -2,8 +2,8 @@
 /* ------- Big screen ---------*/
 @media (min-width: 1025px) {
     .support-button {
-        width: var(--whatsapp_button_dimension_big_and_small_landscape);
-        height: var(--whatsapp_button_dimension_big_and_small_landscape);
+        width: var(--whatsapp_button_dimension_big);
+        height: var(--whatsapp_button_dimension_big);
         border-radius: var(--whatsapp_button_dimension_big_hover);
         position: fixed;
         bottom: var(--whatsapp_button_margin);
@@ -96,8 +96,8 @@
 /* ------- Small screen landscape ---------*/
 @media (max-height: 767px) and (orientation: landscape){
     .support-button {
-        width: var(--whatsapp_button_dimension_big_and_small_landscape);
-        height: var(--whatsapp_button_dimension_big_and_small_landscape);
+        width: var(--whatsapp_button_dimension_medium_portrait_and_small);
+        height: var(--whatsapp_button_dimension_medium_portrait_and_small);
         background-color: var(--whatsapp_button_background-color);
         border-radius: var(--whatsapp_button_border_radius);
         position: fixed;

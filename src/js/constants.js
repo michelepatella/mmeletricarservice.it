@@ -6,7 +6,7 @@ export const FACEBOOK = ""
 export const PHONE = '080 3267837'
 export const P_IVA = '08650830725'
 export const HOME_TITLE = "Dove la tua auto <br> trova l'eccellenza."
-export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> MM Eletricar Service!"
+export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> <strong>MM Eletricar Service<strong/>!"
 export const SECTIONS = [
     { id: 'home', title: 'Home' },
     { id: 'chi-siamo', title: 'Chi siamo', children: [{ id: 'nostri-valori', title: 'I nostri valori' }] },
