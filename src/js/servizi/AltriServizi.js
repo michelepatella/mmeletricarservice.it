@@ -8,7 +8,7 @@ function AltriServizi() {
     return (
         <>
             <div className="altri-servizi" id="altri-servizi">
-                {/* Add a card for each service */}
+                {/* Add a service division for each service */}
                 {SERVIZI.map((servizio, index) => (
                     <DivServizio
                         key={index}

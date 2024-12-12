@@ -1,0 +1,110 @@
+/* ------ Big screen -------*/
+@media (min-width: 1025px) {
+
+    .contact-button-contact-section{
+        background-color: var(--accent_color);
+        color: var(--background_color);
+        font-family: 'Poppins';
+        border-radius: var(--contact_button_border_radius);
+        font-size: var(--secondary_text_size_big);
+        padding: var(--contact_button_padding);
+    }
+
+    .contact-button-contact-section:hover{
+        background-color: var(--accent_color) !important;
+        color: var(--background_color) !important;
+        font-family: 'Poppins' !important;
+        border-radius: var(--contact_button_border_radius);
+        padding: var(--contact_button_padding);
+        font-size: var(--secondary_text_size_big);
+    }
+}
+
+
+/* Medium screen portrait */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    .contact-button-contact-section{
+        background-color: var(--accent_color);
+        color: var(--background_color);
+        font-family: 'Poppins';
+        border-radius: var(--contact_button_border_radius);
+        padding: var(--contact_button_padding);
+        font-size: var(--secondary_text_size_medium);
+    }
+
+    .contact-button-contact-section:hover{
+        background-color: var(--accent_color) !important;
+        color: var(--background_color) !important;
+        font-family: 'Poppins' !important;
+        border-radius: var(--contact_button_border_radius);
+        padding: var(--contact_button_padding);
+        font-size: var(--secondary_text_size_medium);
+    }
+}
+
+/* Medium screen landscape*/
+@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .contact-button-contact-section{
+        background-color: var(--accent_color);
+        color: var(--background_color);
+        font-family: 'Poppins';
+        border-radius: var(--contact_button_border_radius);
+        padding: var(--contact_button_padding);
+        font-size: var(--secondary_text_size_medium);
+    }
+
+    .contact-button-contact-section:hover{
+        background-color: var(--accent_color) !important;
+        color: var(--background_color) !important;
+        font-family: 'Poppins' !important;
+        border-radius: var(--contact_button_border_radius);
+        padding: var(--contact_button_padding);
+        font-size: var(--secondary_text_size_medium);
+    }
+}
+
+/* Small screen portrait*/
+@media (max-width: 767px) {
+
+    .contact-button-contact-section{
+        background-color: var(--accent_color);
+        color: var(--background_color);
+        font-family: 'Poppins';
+        border-radius: var(--contact_button_border_radius);
+        padding: var(--contact_button_padding);
+        font-size: var(--secondary_text_size_small);
+    }
+
+    .contact-button-contact-section:hover{
+        background-color: var(--accent_color) !important;
+        color: var(--background_color) !important;
+        font-family: 'Poppins' !important;
+        border-radius: var(--contact_button_border_radius);
+        padding: var(--contact_button_padding);
+        font-size: var(--secondary_text_size_small);
+    }
+}
+
+/* Small screen landscape*/
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
+
+    .contact-button-contact-section{
+        background-color: var(--accent_color);
+        color: var(--background_color);
+        font-family: 'Poppins';
+        border-radius: var(--contact_button_border_radius);
+        padding: var(--contact_button_padding);
+        font-size: var(--secondary_text_size_small);
+    }
+
+    .contact-button-contact-section:hover{
+        background-color: var(--accent_color) !important;
+        color: var(--background_color) !important;
+        font-family: 'Poppins' !important;
+        border-radius: var(--contact_button_border_radius);
+        padding: var(--contact_button_padding);
+        font-size: var(--secondary_text_size_small);
+    }
+}

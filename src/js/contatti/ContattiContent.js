@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from "react";
-import {CONTATTI_TITLE, CONTATTI_SUBTITLE} from "../constants";
+import {CONTATTI_TITLE, CONTATTI_SUBTITLE, CONTATTI} from "../constants";
 import '../../css/contatti/ContattiContent.css';
-import {Button} from "antd";
+import ContactButton from "./ContactButton";
 
 /**
  * This component contains the contatti content
@@ -53,14 +53,15 @@ function ContattiContent(props) {
             <p className="contatti-description" dangerouslySetInnerHTML={{__html: CONTATTI_SUBTITLE}} ref={subtitleRef}/>
 
             <div className="contact-buttons-container">
-                <Button classNames="phone-button" type="primary" shape="round"/>
-                <Button classNames="email-button" type="primary" shape="round"/>
-                <Button classNames="pec-button" type="primary" shape="round"/>
-                <Button classNames="facebook-button" type="primary" shape="round"/>
+                {/* Add a button for each contact */}
+                {CONTATTI.map((contatto, index) => (
+                    <ContactButton
+                        key={index}
+                        value={contatto.value}
+                        icon={contatto.icon}
+                    />
+                ))}
             </div>
-
-
-
         </div>
     );
 }
