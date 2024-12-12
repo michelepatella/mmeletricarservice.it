@@ -37,9 +37,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: flex-end;
-    margin-right: 200px;
-    margin-top: 100px;
+    align-items: flex-start;
+    margin-top: var(--contact_buttons_margin_top);
 }
 
 /* ------ Contatti section ------ */

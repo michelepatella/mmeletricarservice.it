@@ -10,6 +10,7 @@ html, body {
 /*Global variables*/
 :root {
 
+  --real-vh: 100vh;
   /**colors**/
   --background_color: #141414;
   --accent_color: #F8EC20;
@@ -169,4 +170,5 @@ html, body {
   --footer_text_size_small: 8px;
   --contact_button_border_radius: 20px;
   --contact_button_padding: 20px;
+  --contact_buttons_margin_top: 200px;
 }
