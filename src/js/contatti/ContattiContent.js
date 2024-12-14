@@ -24,7 +24,6 @@ function ContattiContent(props) {
             threshold: 0.5,
         };
 
-
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
