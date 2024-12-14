@@ -48,7 +48,7 @@ export const SERVIZI = [
     {title: "Ricarica aria condizionata", description: "Ripristino del gas refrigerante per garantire un climatizzatore efficiente e aria fresca.", icon: '/icons/airIcon.svg'},
     {title: "Diagnosi iniezione", description: "Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.", icon: '/icons/fuelIcon.svg'},
     {title: "Duplicazione chiavi e telecomandi", description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.", icon: '/icons/keyIcon.svg'},
-    {title: "Diagnosi elettronica", description: "ndividuazione e risoluzione di guasti elettronici per un’analisi precisa del tuo veicolo.", icon: '/icons/diagnosisIcon.svg'},
+    {title: "Diagnosi elettronica", description: "Individuazione e risoluzione di guasti elettronici per un’analisi precisa del tuo veicolo.", icon: '/icons/diagnosisIcon.svg'},
     {title: "Veicoli ibridi ed elettrici", description: "Manutenzione specializzata per veicoli ibridi ed elettrici.", icon: '/icons/electricar.svg'},
     {title: "Installazione del sistema antifurto Igla", description: "Sistema digitale con inibizione di avvio, blocco motore, allarme sonoro e visivo, geolocalizzazione. Protegge contro ogni tipo di furto, mantiene la garanzia del veicolo ed è completamente nascosto.", icon: '/icons/antiTheftIcon.svg'}
 ];
@@ -62,7 +62,8 @@ export const AUTO_USATE_TITLE = "Cerchi di più? Scopri la tua \n" +
     "auto usata perfetta!";
 export const AUTO_USATE_DESCRIPTION = "Non perdere le ultime novità! Seguici su Facebook per rimanere sempre aggiornato sulle nostre auto usate in vendita.";
 export const CARD_AUTO_USATE = [
-    {description: "auto con chilometraggio verificato."},
-    {description: "auto ispezionate e verificate."},
-    {description: "auto tagliandate."}
+    {description: "Auto con chilometraggio verificato"},
+    {description: "Auto ispezionate e verificate"},
+    {description: "Auto tagliandate"}
 ]
+export const FACEBOOK_LINK_AUTO_USATE = "Scopri le nostre auto usate >"

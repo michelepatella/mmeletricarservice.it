@@ -1,6 +1,7 @@
-import {Flex} from "antd";
+import {Col, Statistic} from "antd";
 import React from "react";
 import '../../../css/servizi/auto usate/CardAutoUsate.css';
+import CountUp from 'react-countup';
 
 /**
  * This component represents the informative card of auto usate section
@@ -8,15 +9,17 @@ import '../../../css/servizi/auto usate/CardAutoUsate.css';
  * @returns {Element}
  * @constructor
  */
-function CardAutoUsate({description}) {
+function CardAutoUsate({ description }) {
+
+    const formatter = (value) => <CountUp end={value}/>;
+
     return (
-        <div className="cardAutoUsate">
-            <Flex gap="small" align="start" horizontal className="card-auto-usate-container">
-                <p className="card-auto-usate-description">100%</p>
-                <p className="card-auto-usate-description">{description}</p>
-            </Flex>
+        <div>
+            <Col className="statistic-division">
+                <Statistic title={description} value={100} suffix="%" className="custom-statistic" formatter={formatter}/>
+            </Col>
         </div>
-    )
+    );
 }
 
 export default CardAutoUsate;

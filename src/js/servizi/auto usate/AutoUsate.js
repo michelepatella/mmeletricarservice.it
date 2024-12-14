@@ -1,7 +1,14 @@
 import '../../../css/servizi/auto usate/AutoUsate.css';
 import React, { useEffect, useRef } from "react";
-import {AUTO_USATE_TITLE, AUTO_USATE_DESCRIPTION, CARD_AUTO_USATE} from "../../constants";
+import {
+    AUTO_USATE_TITLE,
+    AUTO_USATE_DESCRIPTION,
+    CARD_AUTO_USATE,
+    FACEBOOK_LINK_AUTO_USATE,
+    FACEBOOK
+} from "../../constants";
 import CardAutoUsate from "./CardAutoUsate";
+import {Row} from "antd";
 
 /**
  * This component contains the auto usate section
@@ -50,14 +57,18 @@ function AutoUsate() {
             {/* Description */}
             <p ref={subtitleRef} className="auto-usate-subtitle">{AUTO_USATE_DESCRIPTION}</p>
 
-            {/* Add a card division for each informative card */}
-            {CARD_AUTO_USATE.map((cardAutoUsate, index) => (
-                <CardAutoUsate
-                    key={index}
-                    description={cardAutoUsate.description}
-                />
-            ))}
+            <Row className="custom-statistic-grid" align="center">
+                {/* Add a card division for each informative card */}
+                {CARD_AUTO_USATE.map((cardAutoUsate, index) => (
+                    <CardAutoUsate
+                        key={index}
+                        description={cardAutoUsate.description}
+                    />
+                ))}
+            </Row>
 
+            {/* Facebook link */}
+            <a href={FACEBOOK} className="facebook-link">{FACEBOOK_LINK_AUTO_USATE}</a>
 
         </div>
     );

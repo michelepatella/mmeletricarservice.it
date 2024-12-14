@@ -1,39 +1,34 @@
-.cardAutoUsate{
-    border-radius: 15px;
-    border: 2px solid;
-    border-color: var(--green_color);
-}
-
 /* ------ Big screen -------*/
 @media (min-width: 1025px) {
 
-    .card-auto-usate-description{
-        font-family: Poppins;
+    .custom-statistic .ant-statistic-content {
+        font-size: var(--percentage_font_size_big);
         color: white;
-        font-size: var(--servizio_and_card_auto_usate_description_size_big);
+        font-weight: bold;
+        font-family: Poppins;
     }
 
-    .card-auto-usate-percentage{
-        font-family: Poppins;
+    .custom-statistic .ant-statistic-title {
+        font-size: var(--secondary_text_size_big);
         color: white;
-        font-size: var(--servizio_and_card_auto_usate_description_size_big);
+        font-family: Poppins;
     }
-
 }
 
 /* Medium screen portrait */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
-    .card-auto-usate-description{
-        font-family: Poppins;
+    .custom-statistic .ant-statistic-content {
+        font-size: var(--percentage_font_size_medium_portrait);
         color: white;
-        font-size: var(--servizio_and_card_auto_usate_description_size_medium_portrait);
+        font-weight: bold;
+        font-family: Poppins;
     }
 
-    .card-auto-usate-percentage{
-        font-family: Poppins;
+    .custom-statistic .ant-statistic-title {
+        font-size: var(--secondary_text_size_medium);
         color: white;
-        font-size: var(--servizio_and_card_auto_usate_description_size_medium_portrait);
+        font-family: Poppins;
     }
 
 }
@@ -41,16 +36,17 @@
 /* Medium screen landscape*/
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
-    .card-auto-usate-description{
-        font-family: Poppins;
+    .custom-statistic .ant-statistic-content {
+        font-size: var(--percentage_font_size_medium_landscape);
         color: white;
-        font-size: var(--servizio_and_card_auto_usate_description_size_medium_landscape);
+        font-weight: bold;
+        font-family: Poppins;
     }
 
-    .card-auto-usate-percentage{
-        font-family: Poppins;
+    .custom-statistic .ant-statistic-title {
+        font-size: var(--secondary_text_size_medium);
         color: white;
-        font-size: var(--servizio_and_card_auto_usate_description_size_medium_landscape);
+        font-family: Poppins;
     }
 
 }
@@ -58,16 +54,17 @@
 /* Small screen portrait*/
 @media (max-width: 767px) {
 
-    .card-auto-usate-description{
-        font-family: Poppins;
+    .custom-statistic .ant-statistic-content {
+        font-size: var(--percentage_font_size_small);
         color: white;
-        font-size: var(--servizio_and_card_auto_usate_description_size_small);
+        font-weight: bold;
+        font-family: Poppins;
     }
 
-    .card-auto-usate-percentage{
-        font-family: Poppins;
+    .custom-statistic .ant-statistic-title {
+        font-size: var(--secondary_text_size_small);
         color: white;
-        font-size: var(--servizio_and_card_auto_usate_description_size_small);
+        font-family: Poppins;
     }
 
 }
@@ -75,16 +72,17 @@
 /* Small screen landscape*/
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 
-    .card-auto-usate-description{
-        font-family: Poppins;
+    .custom-statistic .ant-statistic-content {
+        font-size: var(--percentage_font_size_small);
         color: white;
-        font-size: var(--servizio_and_card_auto_usate_description_size_small);
+        font-weight: bold;
+        font-family: Poppins;
     }
 
-    .card-auto-usate-percentage{
-        font-family: Poppins;
+    .custom-statistic .ant-statistic-title {
+        font-size: var(--secondary_text_size_small);
         color: white;
-        font-size: var(--servizio_and_card_auto_usate_description_size_small);
+        font-family: Poppins;
     }
 
 }

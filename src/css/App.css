@@ -14,7 +14,6 @@ html, body {
   /**colors**/
   --background_color: #141414;
   --accent_color: #F8EC20;
-  --green_color: #4CAF50;
 
   /**font-size**/
   /*----menu----*/
@@ -172,4 +171,11 @@ html, body {
   --contact_button_border_radius: 20px;
   --contact_button_padding: 20px;
   --contact_buttons_margin_top: 200px;
+
+  /**auto usate**/
+  --margin_top_statistic_division: 100px;
+  --percentage_font_size_big: 90px;
+  --percentage_font_size_medium_portrait: 70px;
+  --percentage_font_size_medium_landscape: 80px;
+  --percentage_font_size_small: 50px;
 }
