@@ -47,7 +47,10 @@ export const SERVIZI = [
     {title: "Ripristino EGR e DPF", description: "Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.", icon: '/icons/filterIcon.svg'},
     {title: "Ricarica aria condizionata", description: "Ripristino del gas refrigerante per garantire un climatizzatore efficiente e aria fresca.", icon: '/icons/airIcon.svg'},
     {title: "Diagnosi iniezione", description: "Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.", icon: '/icons/fuelIcon.svg'},
-    {title: "Duplicazione chiavi e telecomandi", description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.", icon: '/icons/keyIcon.svg'}
+    {title: "Duplicazione chiavi e telecomandi", description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.", icon: '/icons/keyIcon.svg'},
+    {title: "Diagnosi elettronica", description: "ndividuazione e risoluzione di guasti elettronici per un’analisi precisa del tuo veicolo.", icon: '/icons/diagnosisIcon.svg'},
+    {title: "Veicoli ibridi ed elettrici", description: "Manutenzione specializzata per veicoli ibridi ed elettrici.", icon: '/icons/electricar.svg'},
+    {title: "Installazione del sistema antifurto Igla", description: "Sistema digitale con inibizione di avvio, blocco motore, allarme sonoro e visivo, geolocalizzazione. Protegge contro ogni tipo di furto, mantiene la garanzia del veicolo ed è completamente nascosto.", icon: '/icons/antiTheftIcon.svg'}
 ];
 
 export const CONTATTI_TITLE = "Sempre al tuo <br> servizio.";
