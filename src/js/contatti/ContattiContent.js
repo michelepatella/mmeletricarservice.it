@@ -9,7 +9,6 @@ import ContactButton from "./ContactButton";
  * @constructor
  */
 function ContattiContent(props) {
-
     const titleRef = useRef(null);
     const subtitleRef = useRef(null);
 
