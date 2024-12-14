@@ -12,6 +12,7 @@ import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './constants';
 import {FloatButton} from "antd";
+import AutoUsate from "./servizi/auto usate/AutoUsate";
 
 
 /**
@@ -55,6 +56,9 @@ function App() {
 
             {/*Integration of Altri Servizi section*/}
             <AltriServizi/>
+
+            {/*Integration of Auto usate section*/}
+            <AutoUsate/>
 
             {/*Integration of Contatti section*/}
             <Contatti/>

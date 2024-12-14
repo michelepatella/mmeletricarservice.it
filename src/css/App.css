@@ -14,6 +14,7 @@ html, body {
   /**colors**/
   --background_color: #141414;
   --accent_color: #F8EC20;
+  --green_color: #4CAF50;
 
   /**font-size**/
   /*----menu----*/
@@ -43,15 +44,15 @@ html, body {
   --secondary_text_size_big: 20px;
   --secondary_text_size_medium: 18px;
   --secondary_text_size_small: 14px;
-  /*----- for divServizio -------*/
-  --servizio_title_size_big: 30px;
-  --servizio_description_size_big: 20px;
+  /*----- for divServizio and card auto usate -------*/
+  --servizio_usate_title_size_big: 30px;
+  --servizio_and_card_auto_usate_description_size_big: 20px;
   --servizio_title_size_medium_portrait: 25px;
-  --servizio_description_size_medium_portrait: 18px;
+  --servizio_and_card_auto_usate_description_size_medium_portrait: 18px;
   --servizio_title_size_medium_landscape: 28px;
-  --servizio_description_size_medium_landscape: 20px;
-  --servizio_title_size_small: 20px;
-  --servizio_description_size_small: 14px;
+  --servizio_and_card_auto_usate_description_size_medium_landscape: 20px;
+  --servizio_usate_title_size_small: 20px;
+  --servizio_and_card_auto_usate_description_size_small: 14px;
 
   /**whatsapp support button**/
   --whatsapp_button_background-color: #25d366;
@@ -123,7 +124,7 @@ html, body {
   --home_subtitle_margin_top_small_landscape: 5px;
   --home_subtitle_margin_left_small_landscape: 10px;
 
-  /**chi siamo + nostri valori + intro servizi**/
+  /**chi siamo + nostri valori + servizi**/
   /* ----- general variables for arrow + label of intro servizi section --------*/
   --arrow_button_dimension: 30px;
   --arrow_label_margin_bottom: 10px;

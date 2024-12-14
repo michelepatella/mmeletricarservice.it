@@ -1,0 +1,90 @@
+.cardAutoUsate{
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: var(--green_color);
+}
+
+/* ------ Big screen -------*/
+@media (min-width: 1025px) {
+
+    .card-auto-usate-description{
+        font-family: Poppins;
+        color: white;
+        font-size: var(--servizio_and_card_auto_usate_description_size_big);
+    }
+
+    .card-auto-usate-percentage{
+        font-family: Poppins;
+        color: white;
+        font-size: var(--servizio_and_card_auto_usate_description_size_big);
+    }
+
+}
+
+/* Medium screen portrait */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    .card-auto-usate-description{
+        font-family: Poppins;
+        color: white;
+        font-size: var(--servizio_and_card_auto_usate_description_size_medium_portrait);
+    }
+
+    .card-auto-usate-percentage{
+        font-family: Poppins;
+        color: white;
+        font-size: var(--servizio_and_card_auto_usate_description_size_medium_portrait);
+    }
+
+}
+
+/* Medium screen landscape*/
+@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .card-auto-usate-description{
+        font-family: Poppins;
+        color: white;
+        font-size: var(--servizio_and_card_auto_usate_description_size_medium_landscape);
+    }
+
+    .card-auto-usate-percentage{
+        font-family: Poppins;
+        color: white;
+        font-size: var(--servizio_and_card_auto_usate_description_size_medium_landscape);
+    }
+
+}
+
+/* Small screen portrait*/
+@media (max-width: 767px) {
+
+    .card-auto-usate-description{
+        font-family: Poppins;
+        color: white;
+        font-size: var(--servizio_and_card_auto_usate_description_size_small);
+    }
+
+    .card-auto-usate-percentage{
+        font-family: Poppins;
+        color: white;
+        font-size: var(--servizio_and_card_auto_usate_description_size_small);
+    }
+
+}
+
+/* Small screen landscape*/
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
+
+    .card-auto-usate-description{
+        font-family: Poppins;
+        color: white;
+        font-size: var(--servizio_and_card_auto_usate_description_size_small);
+    }
+
+    .card-auto-usate-percentage{
+        font-family: Poppins;
+        color: white;
+        font-size: var(--servizio_and_card_auto_usate_description_size_small);
+    }
+
+}

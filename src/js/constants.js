@@ -56,4 +56,13 @@ export const SERVIZI = [
 export const CONTATTI_TITLE = "Sempre al tuo <br> servizio.";
 export const CONTATTI_SUBTITLE = "Se hai bisogno di assistenza o  informazioni, non esitare a contattarci!";
 
-export const FOOTER_TEXT = "© Copyright 2024 | All Rights Reserved | P. IVA: 08650830725"
+export const FOOTER_TEXT = "© Copyright 2024 | All Rights Reserved | P. IVA: " + P_IVA
+
+export const AUTO_USATE_TITLE = "Cerchi di più? Scopri la tua \n" +
+    "auto usata perfetta!";
+export const AUTO_USATE_DESCRIPTION = "Non perdere le ultime novità! Seguici su Facebook per rimanere sempre aggiornato sulle nostre auto usate in vendita.";
+export const CARD_AUTO_USATE = [
+    {description: "auto con chilometraggio verificato."},
+    {description: "auto ispezionate e verificate."},
+    {description: "auto tagliandate."}
+]

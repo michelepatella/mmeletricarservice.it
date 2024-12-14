@@ -1,0 +1,142 @@
+.auto-usate-container {
+    height: 100vh;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    background-color: var(--background_color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: rotateX(90deg) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0deg) translateY(0);
+    }
+}
+
+.auto-usate-title,
+.auto-usate-subtitle {
+    opacity: 0;
+    transform: rotateX(90deg) translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.auto-usate-title.in-view,
+.auto-usate-subtitle.in-view {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0);
+}
+
+/* ------ Chi siamo section ------ */
+/* ------ Big screen -------*/
+@media (min-width: 1025px) {
+
+    .auto-usate-title {
+        width: var(--cns_h2_p_width_big);
+        margin-left: var(--cns_h2_p_margin_left_big);
+        color: var(--accent_color);
+        text-align: left;
+        font-size: var(--h2_size_big);
+        margin-bottom: 0px;
+        margin-top: var(--title_margin_top_big_medium);
+    }
+
+    .auto-usate-subtitle {
+        width: var(--cns_h2_p_width_big);
+        font-size: var(--p_size_big);
+        text-align: left;
+        color: white;
+        margin-left: var(--cns_h2_p_margin_left_big);
+    }
+}
+
+/* Medium screen portrait */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    .auto-usate-title {
+        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
+        color: var(--accent_color);
+        text-align: left;
+        font-size: var(--h2_size_medium);
+        margin-bottom: 0px;
+        margin-top: var(--title_margin_top_big_medium);
+    }
+
+    .auto-usate-subtitle {
+        font-size: var(--p_size_medium);
+        text-align: left;
+        color: white;
+        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
+    }
+
+}
+
+/* Medium screen landscape*/
+@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .auto-usate-title{
+        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
+        color: var(--accent_color);
+        text-align: left;
+        font-size: var(--h2_size_medium);
+        margin-bottom: 0px;
+        margin-top: var(--title_margin_top_big_medium);
+    }
+
+    .auto-usate-subtitle{
+        font-size: var(--p_size_medium);
+        text-align: left;
+        color: white;
+        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
+    }
+}
+
+/* Small screen portrait*/
+@media (max-width: 767px) {
+
+    .auto-usate-title {
+        width: var(--cns_h2_width_small_portrait);
+        margin-left: var(--cns_h2_p_margin_left_small_portrait);
+        color: var(--accent_color);
+        text-align: left;
+        font-size: var(--h2_size_small);
+        margin-bottom: 0px;
+        margin-top: var(--cns_h2_margin_top_small_portrait);
+    }
+
+    .auto-usate-subtitle {
+        width: var(--cns_p_width_small_portrait);
+        font-size: var(--p_size_small);
+        text-align: left;
+        color: white;
+        margin-left: var(--cns_p_margin_left_small_portrait);
+    }
+}
+
+/* Small screen landscape*/
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
+
+    .auto-usate-title {
+        width: var(--cns_h2_width_small_landscape);
+        margin-left: var(--cns_h2_p_margin_left_small_landscape);
+        color: var(--accent_color);
+        text-align: left;
+        font-size: var(--h2_size_small);
+        margin-bottom: 0px;
+        margin-top: var(--cns_h2_margin_top_small_landscape);
+    }
+
+    .auto-usate-subtitle {
+        width: var(--cns_p_width_small_landscape);
+        font-size: var(--p_size_small);
+        text-align: left;
+        color: white;
+        margin-left: var(--cns_h2_p_margin_left_small_landscape);
+    }
+
+}
