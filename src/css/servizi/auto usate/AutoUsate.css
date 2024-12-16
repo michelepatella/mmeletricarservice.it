@@ -1,9 +1,10 @@
 .auto-usate-container {
     width: 90%;
     text-align: left;
-    position: relative;
     top: 0;
+    position: relative;
     background-color: var(--background_color);
+    margin-bottom: var(--margin_bottom_auto_usate_container);
 }
 
 @keyframes fadeIn {
@@ -40,7 +41,6 @@
         color: var(--accent_color);
         text-align: left;
         font-size: var(--h2_size_big);
-        margin-bottom: 0px;
         margin-top: var(--title_margin_top_big_medium);
     }
 
@@ -83,7 +83,6 @@
         color: var(--accent_color);
         text-align: left;
         font-size: var(--h2_size_medium);
-        margin-bottom: 0px;
         margin-top: var(--title_margin_top_big_medium);
     }
 
@@ -126,7 +125,6 @@
         color: var(--accent_color);
         text-align: left;
         font-size: var(--h2_size_medium);
-        margin-bottom: 0px;
         margin-top: var(--title_margin_top_big_medium);
     }
 
@@ -169,7 +167,6 @@
         color: var(--accent_color);
         text-align: left;
         font-size: var(--h2_size_small);
-        margin-bottom: 0px;
         margin-top: var(--cns_h2_margin_top_small_portrait);
     }
 
@@ -214,7 +211,6 @@
         color: var(--accent_color);
         text-align: left;
         font-size: var(--h2_size_small);
-        margin-bottom: 0px;
         margin-top: var(--cns_h2_margin_top_small_landscape);
     }
 
