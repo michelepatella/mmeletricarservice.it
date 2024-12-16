@@ -173,9 +173,10 @@ html, body {
   --contact_buttons_margin_top: 200px;
 
   /**auto usate**/
-  --margin_top_statistic_division: 100px;
+  --margin_top_statistic_division: 80px;
   --percentage_font_size_big: 90px;
   --percentage_font_size_medium_portrait: 70px;
   --percentage_font_size_medium_landscape: 80px;
   --percentage_font_size_small: 50px;
+  --facebook_link_margin_top: 30px;
 }
