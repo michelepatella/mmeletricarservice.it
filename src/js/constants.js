@@ -54,7 +54,7 @@ export const SERVIZI = [
 ];
 
 export const CONTATTI_TITLE = "Sempre al tuo <br> servizio.";
-export const CONTATTI_SUBTITLE = "Se hai bisogno di assistenza o  informazioni, non esitare a contattarci!";
+export const CONTATTI_SUBTITLE = "Se hai bisogno di assistenza o informazioni, non esitare a contattarci!";
 
 export const FOOTER_TEXT = "© Copyright 2024 | All Rights Reserved | P. IVA: " + P_IVA
 
@@ -62,8 +62,15 @@ export const AUTO_USATE_TITLE = "Cerchi di più? Scopri la tua \n" +
     "auto usata perfetta!";
 export const AUTO_USATE_DESCRIPTION = "Non perdere le ultime novità! Seguici su Facebook per rimanere sempre aggiornato sulle nostre auto usate in vendita.";
 export const CARD_AUTO_USATE = [
-    {description: "Auto con chilometraggio verificato"},
-    {description: "Auto ispezionate e verificate"},
-    {description: "Auto tagliandate"}
+    {description: "Auto con chilometraggio verificato ✅"},
+    {description: "Auto ispezionate e verificate ✅"},
+    {description: "Auto tagliandate ✅"}
 ]
 export const FACEBOOK_LINK_AUTO_USATE = "Scopri le nostre auto usate >"
+
+export const DOVE_SIAMO_TITLE = "Vieni a trovarci in officina!"
+export const DOVE_SIAMO_DIVISIONS = [
+    {title: "Dove siamo", description: "Siamo a Gravina in Puglia (BA), in Via Bizet, 63, 70024.", icon: '/icons/mapIcon.svg'},
+    {title: "Orari di apertura", description: "- Lun-Ven: 08:30-13:00/15:00-19:00\n" +
+            "- Sab: 08:30-13:00", icon: '/icons/clockIcon.svg'},
+]

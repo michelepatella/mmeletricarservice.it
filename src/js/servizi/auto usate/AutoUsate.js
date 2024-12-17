@@ -4,11 +4,11 @@ import {
     AUTO_USATE_TITLE,
     AUTO_USATE_DESCRIPTION,
     CARD_AUTO_USATE,
-    FACEBOOK_LINK_AUTO_USATE,
-    FACEBOOK
+    FACEBOOK_LINK_AUTO_USATE
 } from "../../constants";
 import CardAutoUsate from "./CardAutoUsate";
 import {Row} from "antd";
+import ContactButton from "../../contatti/ContactButton";
 
 /**
  * This component contains the auto usate section
@@ -68,7 +68,9 @@ function AutoUsate() {
             </Row>
 
             {/* Facebook link */}
-            <a href={FACEBOOK} className="facebook-link">{FACEBOOK_LINK_AUTO_USATE}</a>
+            <ContactButton
+                value={FACEBOOK_LINK_AUTO_USATE}
+                icon='/icons/facebookIconBlack.svg'/>
 
         </div>
     );

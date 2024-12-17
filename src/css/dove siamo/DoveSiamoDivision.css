@@ -9,15 +9,15 @@
     }
 }
 
-.title-servizio,
-.description-servizio, .servizio-icon{
+.dove-siamo-division-title,
+.dove-siamo-division-description, .dove-siamo-division-icon{
     opacity: 0;
     transform: rotateX(90deg) translateY(20px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-.title-servizio.in-view,
-.description-servizio.in-view, .servizio-icon.in-view {
+.dove-siamo-division-title.in-view,
+.dove-siamo-division-description.in-view, .dove-siamo-division-icon.in-view {
     opacity: 1;
     transform: rotateX(0deg) translateY(0);
 }
@@ -25,87 +25,57 @@
 /* ------ Big screen -------*/
 @media (min-width: 1025px) {
 
-    .flex-division {
-        width: 50%;
+    .divDoveSiamo{
+        width: 100%;
     }
-
-    .divServizio {
-        width: 80%;
-        text-align: center;
-        position: relative;
-        top: 0;
-        overflow: hidden;
-        background-color: var(--background_color);
-        margin-left: var(--cns_h2_p_margin_left_big);
-    }
-
-    .title-servizio {
+    /**CAMBIARE IL NOME DI VARIABILI USARE PERO LE STESSE**/
+    .dove-siamo-division-title {
         width: var(--cns_h2_p_width_big);
         font-weight: bold;
         color: var(--accent_color);
         text-align: left;
         font-size: var(--servizio_usate_title_size_big);
         margin-bottom: 0px;
+        font-family: Poppins;
     }
 
-    .description-servizio {
+    .dove-siamo-division-description {
         width: var(--cns_h2_p_width_big);
         font-size: var(--servizio_and_card_auto_usate_description_size_big);
         text-align: left;
         color: white;
-        margin-top: var(--divServizio_description_margin_top);
-
+        font-family: Poppins;
     }
 
-    .title-and-icon-container{
-        margin-top: var(--divServizio_margin_top);
-    }
-
-    .servizio-icon{
+    .dove-siamo-division-icon{
         width: var(--divServizio_icon_dimension_big_and_medium);
         height: var(--divServizio_icon_dimension_big_and_medium);
         margin-top: var(--margin_top_icon_big_medium_landscape);
         margin-left: var(--margin_right_icon);
     }
+
 }
 
 /* Medium screen portrait */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
-    .flex-division {
-        width: 50%;
-    }
-
-    .divServizio {
-        width: 60%;
-        text-align: center;
-        position: relative;
-        top: 0;
-        overflow: hidden;
-        background-color: var(--background_color);
-        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
-    }
-
-    .title-servizio {
+    .dove-siamo-division-title {
         font-weight: bold;
         color: var(--accent_color);
         text-align: left;
         font-size: var(--servizio_title_size_medium_portrait);
         margin-bottom: 0px;
+        font-family: Poppins;
     }
 
-    .description-servizio {
+    .dove-siamo-division-description {
         font-size: var(--servizio_and_card_auto_usate_description_size_medium_portrait);
         text-align: left;
         color: white;
-        margin-top: var(--divServizio_description_margin_top);
+        font-family: Poppins;
     }
 
-    .title-and-icon-container{
-        margin-top: var(--divServizio_margin_top);
-    }
-
-    .servizio-icon{
+    .dove-siamo-division-icon{
         width: var(--divServizio_icon_dimension_big_and_medium);
         height: var(--divServizio_icon_dimension_big_and_medium);
         margin-top: var(--margin_top_icon_big_medium_portrait);
@@ -117,41 +87,25 @@
 /* Medium screen landscape*/
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
-    .flex-division {
-        width: 80%;
-    }
-
-    .divServizio {
-        width: 60%;
-        text-align: center;
-        position: relative;
-        top: 0;
-        overflow: hidden;
-        background-color: var(--background_color);
-    }
-
-    .title-servizio {
+    .dove-siamo-division-title {
         font-weight: bold;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
         color: var(--accent_color);
         text-align: left;
         font-size: var(--servizio_title_size_medium_landscape);
         margin-bottom: 0px;
+        font-family: Poppins;
     }
 
-    .description-servizio{
+    .dove-siamo-division-description{
         font-size: var(--servizio_and_card_auto_usate_description_size_medium_landscape);
         text-align: left;
         color: white;
-        margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
+        font-family: Poppins;
     }
 
-    .title-and-icon-container{
-        margin-top: var(--divServizio_margin_top);
-    }
-
-    .servizio-icon{
+    .dove-siamo-division-icon{
         width: var(--divServizio_icon_dimension_big_and_medium);
         height: var(--divServizio_icon_dimension_big_and_medium);
         margin-top: var(--margin_top_icon_big_medium_landscape);
@@ -162,20 +116,7 @@
 /* Small screen portrait*/
 @media (max-width: 767px) {
 
-    .flex-division {
-        width: 70%;
-    }
-
-    .divServizio {
-        width: 90%;
-        text-align: center;
-        position: relative;
-        top: 0;
-        overflow: hidden;
-        background-color: var(--background_color);
-    }
-
-    .title-servizio {
+    .dove-siamo-division-title {
         font-weight: bold;
         width: var(--cns_h2_width_small_portrait);
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
@@ -184,22 +125,19 @@
         font-size: var(--servizio_usate_title_size_small);
         margin-bottom: 0px;
         margin-top: var(--divServizio_margin_top);
+        font-family: Poppins;
     }
 
-    .description-servizio {
+    .dove-siamo-division-description {
         width: var(--cns_p_width_small_portrait);
         font-size: var(--servizio_and_card_auto_usate_description_size_small);
         text-align: left;
         color: white;
-        margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_p_margin_left_small_portrait);
+        font-family: Poppins;
     }
 
-    .title-and-icon-container{
-        margin-top: var(--divServizio_margin_top);
-    }
-
-    .servizio-icon{
+    .dove-siamo-division-icon{
         width: var(--divServizio_icon_dimension_small);
         height: var(--divServizio_icon_dimension_small);
         margin-top: var(--margin_top_icon_small);
@@ -210,11 +148,7 @@
 /* Small screen landscape*/
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 
-    .flex-division {
-        width: 70%;
-    }
-
-    .title-servizio {
+    .dove-siamo-division-title {
         font-weight: bold;
         width: var(--cns_h2_width_small_landscape);
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
@@ -223,22 +157,19 @@
         font-size: var(--servizio_usate_title_size_small);
         margin-bottom: 0px;
         margin-top: var(--divServizio_margin_top);
+        font-family: Poppins;
     }
 
-    .description-servizio {
+    .dove-siamo-division-description {
         width: var(--cns_p_width_small_landscape);
         font-size: var(--servizio_and_card_auto_usate_description_size_small);
         text-align: left;
         color: white;
-        margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
+        font-family: Poppins;
     }
 
-    .title-and-icon-container{
-        margin-top: var(--divServizio_margin_top);
-    }
-
-    .servizio-icon{
+    .dove-siamo-division-icon{
         width: var(--divServizio_icon_dimension_small);
         height: var(--divServizio_icon_dimension_small);
         margin-top: var(--margin_top_icon_small);

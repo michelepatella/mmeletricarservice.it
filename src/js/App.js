@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './constants';
 import {FloatButton} from "antd";
 import AutoUsate from "./servizi/auto usate/AutoUsate";
+import DoveSiamo from "./dove siamo/DoveSiamo";
 
 
 /**
@@ -59,6 +60,9 @@ function App() {
 
             {/*Integration of Auto usate section*/}
             <AutoUsate/>
+
+            {/*Integration of Dove siamo section*/}
+            <DoveSiamo/>
 
             {/*Integration of Contatti section*/}
             <Contatti/>
