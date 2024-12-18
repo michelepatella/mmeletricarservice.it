@@ -39,7 +39,7 @@
         color: var(--accent_color);
         text-align: left;
         font-size: var(--h2_size_big);
-        margin-top: var(--title_margin_top_big_medium);
+        padding-top: var(--title_margin_top_big_medium);
     }
 
     .dove-siamo-grid {
@@ -63,7 +63,7 @@
         color: var(--accent_color);
         text-align: left;
         font-size: var(--h2_size_medium);
-        margin-top: var(--title_margin_top_big_medium);
+        padding-top: var(--title_margin_top_big_medium);
     }
 
     .dove-siamo-grid {
@@ -86,7 +86,7 @@
         color: var(--accent_color);
         text-align: left;
         font-size: var(--h2_size_medium);
-        margin-top: var(--title_margin_top_big_medium);
+        padding-top: var(--title_margin_top_big_medium);
     }
 
     .dove-siamo-grid {
@@ -110,7 +110,7 @@
         color: var(--accent_color);
         text-align: left;
         font-size: var(--h2_size_small);
-        margin-top: var(--cns_h2_margin_top_small_portrait);
+        padding-top: var(--cns_h2_margin_top_small_portrait);
     }
 
     .dove-siamo-grid {
@@ -133,7 +133,7 @@
         color: var(--accent_color);
         text-align: left;
         font-size: var(--h2_size_small);
-        margin-top: var(--cns_h2_margin_top_small_landscape);
+        padding-top: var(--cns_h2_margin_top_small_landscape);
     }
 
     .dove-siamo-grid {
