@@ -10,7 +10,7 @@ import AltriServizi from "./servizi/AltriServizi";
 import Contatti from './contatti/Contatti';
 import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { WHATSAPP_LINK } from './constants';
+import { WHATSAPP_LINK } from './utility/constants';
 import {FloatButton} from "antd";
 import AutoUsate from "./servizi/auto usate/AutoUsate";
 import DoveSiamo from "./dove siamo/DoveSiamo";

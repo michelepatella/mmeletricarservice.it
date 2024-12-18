@@ -1,7 +1,7 @@
 import '../../css/servizi/AltriServizi.css';
 import React from "react";
 import DivServizio from "./DivServizio";
-import { SERVIZI } from "../constants";
+import { SERVIZI } from "../utility/constants";
 
 function AltriServizi() {
 

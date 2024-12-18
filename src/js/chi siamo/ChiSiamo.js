@@ -1,6 +1,6 @@
 import '../../css/chi siamo/ChiSiamo.css';
 import React, { useEffect, useRef } from "react";
-import { CHI_SIAMO_DESCRIPTION, CHI_SIAMO_TITLE } from "../constants";
+import { CHI_SIAMO_DESCRIPTION, CHI_SIAMO_TITLE } from "../utility/constants";
 
 /**
  * This component contains the chi siamo section

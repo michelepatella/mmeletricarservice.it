@@ -1,6 +1,6 @@
 import '../../css/chi siamo/NostriValori.css';
 import React, {useEffect, useRef} from "react";
-import {NOSTRI_VALORI_DESCRIPTION, NOSTRI_VALORI_TITLE} from "../constants";
+import {NOSTRI_VALORI_DESCRIPTION, NOSTRI_VALORI_TITLE} from "../utility/constants";
 
 /**
  * This component contains the i nostri valori section, subsection of chi siamo

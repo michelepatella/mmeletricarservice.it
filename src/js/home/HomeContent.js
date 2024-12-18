@@ -1,5 +1,5 @@
 import React from "react";
-import {HOME_TITLE, HOME_SUBTITLE} from "../constants";
+import {HOME_TITLE, HOME_SUBTITLE} from "../utility/constants";
 import '../../css/home/HomeContent.css';
 
 /**

@@ -1,6 +1,6 @@
 import React from "react";
 import '../../css/home/HomeHeader.css';
-import { EMAIL, PHONE, FACEBOOK } from '../constants';
+import { EMAIL, PHONE, FACEBOOK } from '../utility/constants';
 
 /**
  * Method to call when the email button is clicked

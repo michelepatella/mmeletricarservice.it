@@ -1,7 +1,7 @@
 import '../../css/dove siamo/DoveSiamo.css';
 import React, { useEffect, useRef } from "react";
 import {Row} from "antd";
-import {DOVE_SIAMO_DIVISIONS, DOVE_SIAMO_TITLE} from "../constants";
+import {DOVE_SIAMO_DIVISIONS, DOVE_SIAMO_TITLE} from "../utility/constants";
 import DoveSiamoDivision from "./DoveSiamoDivision";
 
 /**

@@ -1,7 +1,7 @@
 import {motion, useAnimation} from "framer-motion";
 import {Anchor} from "antd";
 import React, {useEffect} from "react";
-import {SECTIONS} from "../constants";
+import {SECTIONS} from "../utility/constants";
 
 /**
  * This component contains the menu for pc and tablet

@@ -1,7 +1,7 @@
 import { Button, Drawer, Menu as AntMenu } from "antd";
 import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 import React, { useState } from "react";
-import { SECTIONS } from "../constants";
+import { SECTIONS } from "../utility/constants";
 
 /**
  * This component contains the menu for phone

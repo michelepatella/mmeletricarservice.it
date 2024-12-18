@@ -19,6 +19,10 @@
         font-size: var(--secondary_text_size_big);
         transform: scale(1.1);
     }
+
+    #auto-usate .contact-button-contact-section{
+        margin-left: var(--cns_h2_p_margin_left_big);
+    }
 }
 
 
@@ -42,6 +46,10 @@
         padding: var(--contact_button_padding);
         font-size: var(--secondary_text_size_medium);
     }
+
+    #auto-usate .contact-button-contact-section{
+        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
+    }
 }
 
 /* Medium screen landscape*/
@@ -63,6 +71,10 @@
         border-radius: var(--contact_button_border_radius);
         padding: var(--contact_button_padding);
         font-size: var(--secondary_text_size_medium);
+    }
+
+    #auto-usate .contact-button-contact-section{
+        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
     }
 }
 
@@ -86,6 +98,10 @@
         padding: var(--contact_button_padding);
         font-size: var(--secondary_text_size_small);
     }
+
+    #auto-usate .contact-button-contact-section{
+        margin-left: var(--cns_h2_p_margin_left_small_portrait);
+    }
 }
 
 /* Small screen landscape*/
@@ -107,5 +123,9 @@
         border-radius: var(--contact_button_border_radius);
         padding: var(--contact_button_padding);
         font-size: var(--secondary_text_size_small);
+    }
+
+    #auto-usate .contact-button-contact-section{
+        margin-left: var(--cns_h2_p_margin_left_small_landscape);
     }
 }

@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from "react";
-import {CONTATTI_TITLE, CONTATTI_SUBTITLE, CONTATTI} from "../constants";
+import {CONTATTI_TITLE, CONTATTI_SUBTITLE, CONTATTI} from "../utility/constants";
 import '../../css/contatti/ContattiContent.css';
-import ContactButton from "./ContactButton";
+import CustomButton from "../utility/CustomButton";
 
 /**
  * This component contains the contatti content
@@ -53,7 +53,7 @@ function ContattiContent(props) {
             <div className="contact-buttons-container">
                 {/* Add a button for each contact */}
                 {CONTATTI.map((contatto, index) => (
-                    <ContactButton
+                    <CustomButton
                         key={index}
                         value={contatto.value}
                         icon={contatto.icon}

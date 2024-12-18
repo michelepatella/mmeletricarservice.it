@@ -5,10 +5,10 @@ import {
     AUTO_USATE_DESCRIPTION,
     CARD_AUTO_USATE,
     FACEBOOK_LINK_AUTO_USATE
-} from "../../constants";
+} from "../../utility/constants";
 import CardAutoUsate from "./CardAutoUsate";
 import {Row} from "antd";
-import ContactButton from "../../contatti/ContactButton";
+import CustomButton from "../../utility/CustomButton";
 
 /**
  * This component contains the auto usate section
@@ -68,7 +68,7 @@ function AutoUsate() {
             </Row>
 
             {/* Facebook link */}
-            <ContactButton
+            <CustomButton
                 value={FACEBOOK_LINK_AUTO_USATE}
                 icon='/icons/facebookIconBlack.svg'/>
 

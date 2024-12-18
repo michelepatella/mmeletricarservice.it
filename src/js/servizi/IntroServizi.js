@@ -1,6 +1,6 @@
 import '../../css/servizi/IntroServizi.css';
 import React, {useEffect, useRef} from "react";
-import {INTRO_SERVIZI_TITLE, INTRO_SERVIZI_DESCRIPTION, ARROW_LABEL} from "../constants";
+import {INTRO_SERVIZI_TITLE, INTRO_SERVIZI_DESCRIPTION, ARROW_LABEL} from "../utility/constants";
 
 /**
  * This component contains the intro servizi section

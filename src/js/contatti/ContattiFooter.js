@@ -1,6 +1,6 @@
 import React from "react";
 import '../../css/contatti/ContattiFooter.css';
-import { FOOTER_TEXT } from '../constants';
+import { FOOTER_TEXT } from '../utility/constants';
 
 
 /**

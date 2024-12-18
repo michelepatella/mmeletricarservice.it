@@ -1,6 +1,6 @@
-import '../../css/contatti/ContactButton.css';
+import '../../css/CustomButton.css';
 import {Button} from "antd";
-import {EMAIL, EMAIL_PEC, FACEBOOK, PHONE} from "../constants";
+import {EMAIL, EMAIL_PEC, FACEBOOK, PHONE} from "./constants";
 
 /**
  * Method to call when the email button is clicked
@@ -50,7 +50,7 @@ const clickHandlers = {
  * @returns {JSX.Element}
  * @constructor
  */
-function ContactButton({value, icon}){
+function CustomButton({value, icon}){
     return (
         <Button type="primary" className="contact-button-contact-section" onClick={clickHandlers[value]}>
             <img src={icon}/>
@@ -58,4 +58,4 @@ function ContactButton({value, icon}){
     )
 }
 
-export default ContactButton;
+export default CustomButton;
