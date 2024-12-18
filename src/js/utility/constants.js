@@ -74,3 +74,5 @@ export const DOVE_SIAMO_DIVISIONS = [
     {title: "Orari di apertura", description: "- Lun-Ven: 08:30-13:00/15:00-19:00\n" +
             "- Sab: 08:30-13:00", icon: '/icons/clockIcon.svg'},
 ]
+export const MAPS_LINK_TITLE = "Scopri come raggiungerci >"
+export const ADDRESS = "Via Bizet, 63, Gravina in Puglia, Italia";

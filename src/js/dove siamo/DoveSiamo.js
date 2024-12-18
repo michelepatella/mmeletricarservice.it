@@ -1,8 +1,9 @@
 import '../../css/dove siamo/DoveSiamo.css';
 import React, { useEffect, useRef } from "react";
 import {Row} from "antd";
-import {DOVE_SIAMO_DIVISIONS, DOVE_SIAMO_TITLE} from "../utility/constants";
+import {DOVE_SIAMO_DIVISIONS, DOVE_SIAMO_TITLE, MAPS_LINK_TITLE} from "../utility/constants";
 import DoveSiamoDivision from "./DoveSiamoDivision";
+import CustomButton from "../utility/CustomButton";
 
 /**
  * This component contains the dove siamo section
@@ -55,6 +56,11 @@ function DoveSiamo() {
                     />
                 ))}
             </Row>
+
+            {/*Maps link*/}
+            <CustomButton
+                value={MAPS_LINK_TITLE}
+                icon='/icons/map2Icon.svg'/>
 
         </div>
     );

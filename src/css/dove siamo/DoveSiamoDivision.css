@@ -28,28 +28,28 @@
     .divDoveSiamo{
         width: 100%;
     }
-    /**CAMBIARE IL NOME DI VARIABILI USARE PERO LE STESSE**/
+
     .dove-siamo-division-title {
         width: var(--cns_h2_p_width_big);
         font-weight: bold;
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--servizio_usate_title_size_big);
+        font-size: var(--servizio_usate_and_dove_siamo_title_size_big);
         margin-bottom: 0px;
         font-family: Poppins;
     }
 
     .dove-siamo-division-description {
         width: var(--cns_h2_p_width_big);
-        font-size: var(--servizio_and_card_auto_usate_description_size_big);
+        font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_big);
         text-align: left;
         color: white;
         font-family: Poppins;
     }
 
     .dove-siamo-division-icon{
-        width: var(--divServizio_icon_dimension_big_and_medium);
-        height: var(--divServizio_icon_dimension_big_and_medium);
+        width: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
+        height: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
         margin-top: var(--margin_top_icon_big_medium_landscape);
         margin-left: var(--margin_right_icon);
     }
@@ -63,21 +63,21 @@
         font-weight: bold;
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--servizio_title_size_medium_portrait);
+        font-size: var(--servizio_and_dove_siamo_title_size_medium_portrait);
         margin-bottom: 0px;
         font-family: Poppins;
     }
 
     .dove-siamo-division-description {
-        font-size: var(--servizio_and_card_auto_usate_description_size_medium_portrait);
+        font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_medium_portrait);
         text-align: left;
         color: white;
         font-family: Poppins;
     }
 
     .dove-siamo-division-icon{
-        width: var(--divServizio_icon_dimension_big_and_medium);
-        height: var(--divServizio_icon_dimension_big_and_medium);
+        width: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
+        height: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
         margin-top: var(--margin_top_icon_big_medium_portrait);
         margin-left: var(--margin_right_icon);
     }
@@ -92,13 +92,13 @@
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--servizio_title_size_medium_landscape);
+        font-size: var(--servizio_and_dove_siamo_title_size_medium_landscape);
         margin-bottom: 0px;
         font-family: Poppins;
     }
 
     .dove-siamo-division-description{
-        font-size: var(--servizio_and_card_auto_usate_description_size_medium_landscape);
+        font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_medium_landscape);
         text-align: left;
         color: white;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
@@ -106,8 +106,8 @@
     }
 
     .dove-siamo-division-icon{
-        width: var(--divServizio_icon_dimension_big_and_medium);
-        height: var(--divServizio_icon_dimension_big_and_medium);
+        width: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
+        height: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
         margin-top: var(--margin_top_icon_big_medium_landscape);
         margin-left: var(--margin_right_icon);
     }
@@ -122,15 +122,15 @@
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--servizio_usate_title_size_small);
+        font-size: var(--servizio_and_dove_siamo_usate_title_size_small);
         margin-bottom: 0px;
-        margin-top: var(--divServizio_margin_top);
+        margin-top: var(--divServizio_and_dove_siamo_margin_top);
         font-family: Poppins;
     }
 
     .dove-siamo-division-description {
         width: var(--cns_p_width_small_portrait);
-        font-size: var(--servizio_and_card_auto_usate_description_size_small);
+        font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_small);
         text-align: left;
         color: white;
         margin-left: var(--cns_p_margin_left_small_portrait);
@@ -138,8 +138,8 @@
     }
 
     .dove-siamo-division-icon{
-        width: var(--divServizio_icon_dimension_small);
-        height: var(--divServizio_icon_dimension_small);
+        width: var(--divServizio_and_dove_siamo_icon_dimension_small);
+        height: var(--divServizio_and_dove_siamo_icon_dimension_small);
         margin-top: var(--margin_top_icon_small);
         margin-left: var(--margin_right_icon);
     }
@@ -154,15 +154,15 @@
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
         color: var(--accent_color);
         text-align: left;
-        font-size: var(--servizio_usate_title_size_small);
+        font-size: var(--servizio_and_dove_siamo_usate_title_size_small);
         margin-bottom: 0px;
-        margin-top: var(--divServizio_margin_top);
+        margin-top: var(--divServizio_and_dove_siamo_margin_top);
         font-family: Poppins;
     }
 
     .dove-siamo-division-description {
         width: var(--cns_p_width_small_landscape);
-        font-size: var(--servizio_and_card_auto_usate_description_size_small);
+        font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_small);
         text-align: left;
         color: white;
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
@@ -170,8 +170,8 @@
     }
 
     .dove-siamo-division-icon{
-        width: var(--divServizio_icon_dimension_small);
-        height: var(--divServizio_icon_dimension_small);
+        width: var(--divServizio_and_dove_siamo_icon_dimension_small);
+        height: var(--divServizio_and_dove_siamo_icon_dimension_small);
         margin-top: var(--margin_top_icon_small);
         margin-left: var(--margin_right_icon);
     }
