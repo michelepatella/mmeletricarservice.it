@@ -39,10 +39,10 @@ html, body {
   --h2_size_medium: 45px;
   --p_size_medium: 20px;
   --h2_size_small: 25px;
-  --p_size_small: 16px;
+  --p_size_small: 18px;
   --secondary_text_size_big: 20px;
   --secondary_text_size_medium: 18px;
-  --secondary_text_size_small: 14px;
+  --secondary_text_size_small: 16px;
   /*----- for divServizio, card auto usate and dove siamo-------*/
   --servizio_usate_and_dove_siamo_title_size_big: 30px;
   --servizio_and_card_auto_usate_and_dove_siamo_description_size_big: 20px;
@@ -50,8 +50,8 @@ html, body {
   --servizio_and_card_auto_usate_and_dove_siamo_description_size_medium_portrait: 18px;
   --servizio_and_dove_siamo_title_size_medium_landscape: 28px;
   --servizio_and_card_auto_usate_and_dove_siamo_description_size_medium_landscape: 20px;
-  --servizio_and_dove_siamo_usate_title_size_small: 20px;
-  --servizio_and_card_auto_usate_and_dove_siamo_description_size_small: 14px;
+  --servizio_and_dove_siamo_usate_title_size_small: 22px;
+  --servizio_and_card_auto_usate_and_dove_siamo_description_size_small: 16px;
 
   /**whatsapp support button**/
   --whatsapp_button_background-color: #25d366;
