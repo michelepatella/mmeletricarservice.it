@@ -40,9 +40,11 @@
     }
 
     .dove-siamo-division-description {
-        width: 50%;
+        width: 100%;
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_big);
         text-align: left;
+        margin-top: 0px;
+        padding-top: 0px;
         color: white;
         font-family: Poppins;
     }
@@ -52,6 +54,7 @@
         height: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
         margin-top: var(--margin_top_icon_big_medium_landscape);
         margin-left: var(--margin_right_icon);
+        margin-bottom: var(--dove_siamo_icon_margin_bottom);
     }
 
 }
@@ -70,7 +73,8 @@
     }
 
     .dove-siamo-division-description {
-        width: 50%;
+        width: 100%;
+        margin-top: 0px;
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_medium_portrait);
         text-align: left;
         color: white;
@@ -82,6 +86,7 @@
         height: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
         margin-top: var(--margin_top_icon_big_medium_portrait);
         margin-left: var(--margin_right_icon);
+        margin-bottom: var(--dove_siamo_icon_margin_bottom);
     }
 
 }
@@ -101,7 +106,8 @@
     }
 
     .dove-siamo-division-description{
-        width: 50%;
+        width: 100%;
+        margin-top: 0px;
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_medium_landscape);
         text-align: left;
         color: white;
@@ -114,6 +120,7 @@
         height: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
         margin-top: var(--margin_top_icon_big_medium_landscape);
         margin-left: var(--margin_right_icon);
+        margin-bottom: var(--dove_siamo_icon_margin_bottom);
     }
 }
 
@@ -133,9 +140,10 @@
     }
 
     .dove-siamo-division-description {
-        width: 50%;
+        width: 100%;
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_small);
         text-align: left;
+        margin-top: 0px;
         color: white;
         margin-left: var(--cns_p_margin_left_small_portrait);
         font-family: Poppins;
@@ -146,6 +154,7 @@
         height: var(--divServizio_and_dove_siamo_icon_dimension_small);
         margin-top: var(--margin_top_icon_small);
         margin-left: var(--margin_right_icon);
+        margin-bottom: var(--dove_siamo_icon_margin_bottom);
     }
 }
 
@@ -165,9 +174,10 @@
     }
 
     .dove-siamo-division-description {
-        width: 50%;
+        width: 100%;
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_small);
         text-align: left;
+        margin-top: 0px;
         color: white;
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
         font-family: Poppins;
@@ -178,6 +188,7 @@
         height: var(--divServizio_and_dove_siamo_icon_dimension_small);
         margin-top: var(--margin_top_icon_small);
         margin-left: var(--margin_right_icon);
+        margin-bottom: var(--dove_siamo_icon_margin_bottom);
     }
 
 }

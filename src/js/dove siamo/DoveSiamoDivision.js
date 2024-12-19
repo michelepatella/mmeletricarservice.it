@@ -54,7 +54,7 @@ function DoveSiamoDivision({ title, description, icon}){
                     <img className="dove-siamo-division-icon" src={icon} ref={iconRef} />
                 </Flex>
             </Flex>
-            <p className="dove-siamo-division-description" ref={subtitleRef}>{description}</p>
+            <p className="dove-siamo-division-description" ref={subtitleRef} dangerouslySetInnerHTML={{ __html: description }} />
         </div>
     );
 }

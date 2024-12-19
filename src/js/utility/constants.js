@@ -70,9 +70,8 @@ export const FACEBOOK_LINK_AUTO_USATE = "Scopri le nostre auto usate >"
 
 export const DOVE_SIAMO_TITLE = "Vieni a trovarci in officina!"
 export const DOVE_SIAMO_DIVISIONS = [
-    {title: "Dove siamo", description: "Siamo a Gravina in Puglia (BA), in Via Bizet, 63, 70024.", icon: '/icons/mapIcon.svg'},
-    {title: "Orari di apertura", description: "- Lun-Ven: 08:30-13:00/15:00-19:00\n" +
-            "- Sab: 08:30-13:00", icon: '/icons/clockIcon.svg'},
+    {title: "Dove siamo", description: "Gravina in Puglia (BA), in Via Bizet, 63, 70024.", icon: '/icons/mapIcon.svg'},
+    {title: "Orari di apertura", description: "- <strong>Lun-Ven</strong>: 08:30-13:00/15:00-19:00 <br>- <strong>Sab</strong>: 08:30-13:00", icon: '/icons/clockIcon.svg'},
 ]
 export const MAPS_LINK_TITLE = "Scopri come raggiungerci >"
 export const ADDRESS = "Via Bizet, 63, Gravina in Puglia, Italia";

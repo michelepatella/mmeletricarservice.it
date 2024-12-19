@@ -1,6 +1,5 @@
 .dove-siamo-container {
     width: 90%;
-    height: 100vh;
     text-align: left;
     top: 0;
     position: relative;
@@ -53,6 +52,13 @@
         margin-left: var(--cns_h2_p_margin_left_big);
     }
 
+    .google-map-container{
+        border-radius: 15px;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+
 }
 
 /* Medium screen portrait */
@@ -76,6 +82,13 @@
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
     }
 
+    .google-map-container{
+        border-radius: 15px;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+
 }
 
 /* Medium screen landscape*/
@@ -96,6 +109,13 @@
         justify-content: start;
         text-align: left;
         gap: 2rem;
+    }
+
+    .google-map-container{
+        border-radius: 15px;
+        overflow: hidden;
+        height: 80%;
+        width: 100%;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
     }
 
@@ -122,6 +142,14 @@
         gap: 1rem;
     }
 
+    .google-map-container{
+        border-radius: 15px;
+        overflow: hidden;
+        margin-left: var(--cns_h2_p_margin_left_small_portrait);
+        height: 80%;
+        width: 95%;
+    }
+
 }
 
 /* Small screen landscape*/
@@ -143,6 +171,14 @@
         justify-content: start;
         text-align: left;
         gap: 1rem;
+    }
+
+    .google-map-container{
+        margin-left: var(--cns_h2_p_margin_left_small_portrait);
+        border-radius: 15px;
+        overflow: hidden;
+        width: 95%;
+        height: 80%;
     }
 
 }
