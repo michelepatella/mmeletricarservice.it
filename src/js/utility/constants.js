@@ -51,7 +51,7 @@ export const SERVIZI = [
     {title: "Duplicazione chiavi e telecomandi", description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.", icon: '/icons/keyIcon.svg'},
     {title: "Diagnosi elettronica", description: "Individuazione e risoluzione di guasti elettronici per un’analisi precisa del tuo veicolo.", icon: '/icons/diagnosisIcon.svg'},
     {title: "Veicoli ibridi ed elettrici", description: "Manutenzione specializzata per veicoli ibridi ed elettrici.", icon: '/icons/electricar.svg'},
-    {title: "Installazione del sistema antifurto Igla", description: "Sistema digitale con inibizione di avvio, blocco motore, allarme sonoro e visivo, geolocalizzazione. Protegge contro ogni tipo di furto, mantiene la garanzia del veicolo ed è completamente nascosto.", icon: '/icons/antiTheftIcon.svg'}
+    {title: "Installazione antifurto Igla, meccanici defender e satellitari", description: "Soluzioni antifurto avanzate per la protezione del tuo veicolo: blocco motore elettronico, protezioni meccaniche per Defender e tracciamento satellitare in tempo reale.", icon: '/icons/antiTheftIcon.svg'}
 ];
 
 export const CONTATTI_TITLE = "Sempre al tuo <br> servizio.";
