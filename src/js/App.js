@@ -1,5 +1,5 @@
 import '../css/App.css';
-import '../css/WhatsappSupportButton.css';
+import '../css/other/WhatsappSupportButton.css';
 import React from "react";
 import Home from './home/Home';
 import ChiSiamo from './chi siamo/ChiSiamo';

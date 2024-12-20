@@ -1,13 +1,4 @@
-.chi-siamo-container {
-    height: 100vh;
-    width: 90%;
-    text-align: center;
-    position: relative;
-    top: 0;
-    overflow: hidden;
-    background-color: var(--background_color);
-}
-
+/** Animation **/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -32,25 +23,41 @@
     transform: rotateX(0deg) translateY(0);
 }
 
-/* ------ Chi siamo section ------ */
+/** Common styles **/
+.chi-siamo-container {
+    height: 100vh;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    background-color: var(--background_color);
+}
+
+.chi-siamo-title{
+    text-align: left;
+    margin-bottom: 0px;
+    color: var(--accent_color);
+}
+
+.chi-siamo-subtitle{
+    text-align: left;
+    color: white;
+}
+
 /* ------ Big screen -------*/
 @media (min-width: 1025px) {
 
     .chi-siamo-title {
         width: var(--cns_h2_p_width_big);
         margin-left: var(--cns_h2_p_margin_left_big);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_big);
-        margin-bottom: 0px;
         margin-top: var(--title_margin_top_big_medium);
     }
 
     .chi-siamo-subtitle {
         width: var(--cns_h2_p_width_big);
         font-size: var(--p_size_big);
-        text-align: left;
-        color: white;
         margin-left: var(--cns_h2_p_margin_left_big);
     }
 }
@@ -60,17 +67,12 @@
 
     .chi-siamo-title {
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_medium);
-        margin-bottom: 0px;
         margin-top: var(--title_margin_top_big_medium);
     }
 
     .chi-siamo-subtitle {
         font-size: var(--p_size_medium);
-        text-align: left;
-        color: white;
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
     }
 
@@ -81,17 +83,12 @@
 
     .chi-siamo-title{
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_medium);
-        margin-bottom: 0px;
         margin-top: var(--title_margin_top_big_medium);
     }
 
     .chi-siamo-subtitle{
         font-size: var(--p_size_medium);
-        text-align: left;
-        color: white;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
     }
 }
@@ -102,18 +99,13 @@
     .chi-siamo-title {
         width: var(--cns_h2_width_small_portrait);
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_small);
-        margin-bottom: 0px;
         margin-top: var(--cns_h2_margin_top_small_portrait);
     }
 
     .chi-siamo-subtitle {
         width: var(--cns_p_width_small_portrait);
         font-size: var(--p_size_small);
-        text-align: left;
-        color: white;
         margin-left: var(--cns_p_margin_left_small_portrait);
     }
 }
@@ -124,18 +116,13 @@
     .chi-siamo-title {
         width: var(--cns_h2_width_small_landscape);
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_small);
-        margin-bottom: 0px;
         margin-top: var(--cns_h2_margin_top_small_landscape);
     }
 
     .chi-siamo-subtitle {
         width: var(--cns_p_width_small_landscape);
         font-size: var(--p_size_small);
-        text-align: left;
-        color: white;
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
     }
 

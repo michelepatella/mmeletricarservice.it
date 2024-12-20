@@ -1,4 +1,4 @@
-import '../../css/Menu.css';
+import '../../css/other/Menu.css';
 import MenuForPhone from "./MenuForPhone";
 import MenuForPcAndTablet from "./MenuForPcAndTablet";
 
