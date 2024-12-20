@@ -1,4 +1,4 @@
-/* ------ Home content ------ */
+/** Animation **/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -10,38 +10,46 @@
     }
 }
 
+/** Common styles **/
+.title-container{
+    overflow: hidden;
+    background-image: url('../../../public/icons/background.svg');
+    background-repeat: no-repeat;
+    background-position: initial;
+    height: 100vh;
+    width: 100%;
+}
+
+.home-title{
+    color: var(--accent_color);
+    margin-bottom: 0px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.home-description{
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1.2s;
+}
+
 /* ------ Big screen ------- */
 @media (min-width: 1025px){
     .title-container {
-        overflow: hidden;
         margin-left: var(--title_container_margin_left_big);
-        background-image: url('../../../public/icons/background.svg');
-        background-repeat: no-repeat;
-        background-position: initial;
-        height: 100vh;
-        width: 100%;
-        opacity: 1;
     }
 
     .home-title {
         font-size: var(--home_title_font_size_big);
-        font-family: 'Poppins';
         margin-top: var(--home_title_font_margin_top_big);
-        color: var(--accent_color);
-        margin-bottom: 0px;
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 0.5s;
     }
 
     .home-description {
         font-size: var(--home_subtitle_font_size_big);
         margin-left: var(--home_subtitle_margin_top_and_left_big);
-        color: white;
         margin-top: var(--home_subtitle_margin_top_and_left_big);
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 1.2s;
     }
 }
 
@@ -49,70 +57,36 @@
 /* ------ Medium screen landscape ------- */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .title-container {
-        overflow: hidden;
         margin-left: var(--title_container_margin_left_medium);
-        background-image: url('../../../public/icons/background.svg');
-        background-repeat: no-repeat;
-        background-position: initial;
-        height: 100vh;
-        width: 100%;
         margin-top: var(--title_container_margin_top_medium);
         background-size: 65%;
-        opacity: 1;
     }
 
     .home-title {
         font-size: var(--home_title_font_size_medium);
-        font-family: 'Poppins';
-        color: var(--accent_color);
-        margin-bottom: 0px;
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 1.2s;
     }
 
     .home-description {
         font-size: var(--home_subtitle_font_size_medium);
-        color: white;
         margin-top: var(--home_subtitle_margin_top_medium);
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 0.1s;
     }
 }
 
 /* ------ Medium screen portrait ------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .title-container {
-        overflow: hidden;
         margin-left: var(--title_container_margin_left_medium);
         margin-top: var(--title_container_margin_top_medium);
-        background-image: url('../../../public/icons/background.svg');
-        background-repeat: no-repeat;
-        background-position: initial;
-        height: 100vh;
-        width: 100%;
         background-size: 65%;
-        opacity: 1;
     }
 
     .home-title {
         font-size: var(--home_title_font_size_medium);
-        font-family: 'Poppins';
-        color: var(--accent_color);
-        margin-bottom: 0px;
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 0.5s;
     }
 
     .home-description {
         font-size: var(--home_subtitle_font_size_medium);
-        color: white;
         margin-top: var(--home_subtitle_margin_top_medium);
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 1.2s;
     }
 }
 
@@ -120,73 +94,39 @@
 /* ------ Small screen portrait ------- */
 @media (max-width: 767px) and (orientation: portrait)  {
     .title-container {
-        overflow: hidden;
         margin-left: var(--title_container_margin_left_small_portrait);
-        background-image: url('../../../public/icons/background.svg');
-        background-repeat: no-repeat;
-        background-position: initial;
-        height: 100vh;
-        width: 100%;
         margin-top: var(--title_container_margin_top_small_portrait);
         background-size: 80%;
-        opacity: 1;
     }
 
     .home-title {
         font-size: var(--home_title_font_size_small_portrait);
-        font-family: 'Poppins';
-        color: var(--accent_color);
-        margin-bottom: 0px;
         margin-left: var(--home-title_margin_left_small_portrait);
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 0.5s;
     }
 
     .home-description {
         font-size: var(--home_subtitle_font_size_small_portrait);
-        color: white;
         margin-top: var(--home_subtitle_margin_top_small_portrait);
         margin-left: var(--home_subtitle_margin_left_small_portrait);
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 1.2s;
     }
 }
 
 /* ------ Small screen landscape ------- */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
     .title-container {
-        overflow: hidden;
         margin-left: var(--title_container_margin_left_small_landscape);
-        background-image: url('../../../public/icons/background.svg');
-        background-repeat: no-repeat;
-        background-position: initial;
-        height: 100vh;
-        width: 100%;
         margin-top: var(--title_container_margin_top_small_landscape);
         background-size: 45%;
-        opacity: 1;
     }
 
     .home-title {
         font-size: var(--home_title_font_size_small_landscape);
-        font-family: 'Poppins';
-        color: var(--accent_color);
-        margin-bottom: 0px;
         margin-left: var(--home-title_margin_left_small_landscape);
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 0.5s;
     }
 
     .home-description {
         font-size: var(--home_subtitle_font_size_small_landscape);
-        color: white;
         margin-top: var(--home_subtitle_margin_top_small_landscape);
         margin-left: var(--home_subtitle_margin_left_small_landscape);
-        opacity: 0;
-        animation: fadeIn 1.5s ease forwards;
-        animation-delay: 1.2s;
     }
 }

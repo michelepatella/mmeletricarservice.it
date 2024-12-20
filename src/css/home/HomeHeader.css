@@ -1,118 +1,88 @@
-/* -------- Home Header -------- */
+/** Common styles **/
+.home-header{
+    display: flex;
+    justify-content: right;
+    background-color: var(--background_color);
+}
+
+.contact-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 0px;
+}
+
+.contact-button:hover {
+    transform: scale(1.1);
+}
+
 /* -------- Big screen -------- */
 @media (min-width: 1025px) {
     .home-header {
-        display: flex;
-        justify-content: right;
-        background-color: var(--background_color);
         padding-top: var(--home_header_padding_big_and_medium);
         padding-right: var(--home_header_padding_big_and_medium);
     }
 
     .contact-button {
-        background: none;
-        border: none;
         margin: var(--three_contact_buttons_margin_big_and_medium);
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        padding: 0px;
     }
 
     .contact-button img {
         width: var(--three_contact_buttons_dimension_big_and_medium);
         height: var(--three_contact_buttons_dimension_big_and_medium);
-    }
-
-    .contact-button:hover {
-        transform: scale(1.1);
     }
 }
 
 /* -------- Medium screen -------- */
 @media (min-width: 768px) and (max-width: 1024px) {
     .home-header {
-        display: flex;
-        justify-content: right;
-        background-color: var(--background_color);
         padding-top: var(--home_header_padding_big_and_medium);
         padding-right: var(--home_header_padding_big_and_medium);
     }
 
     .contact-button {
-        background: none;
-        border: none;
         margin: var(--three_contact_buttons_margin_big_and_medium);
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        padding: 0px;
     }
 
     .contact-button img {
         width: var(--three_contact_buttons_dimension_big_and_medium);
         height: var(--three_contact_buttons_dimension_big_and_medium);
     }
-
-    .contact-button:hover {
-        transform: scale(1.1);
-    }
 }
 
 /* -------- Small screen portrait -------- */
 @media (max-width: 767px) {
     .home-header {
-        display: flex;
-        justify-content: right;
-        background-color: var(--background_color);
         padding-right: var(--home_header_padding_right_small_portrait);
         padding-top: var(--home_header_padding_top_small_portrait);
         align-items: flex-start;
     }
 
     .contact-button {
-        background: none;
-        border: none;
         margin: var(--three_contact_buttons_margin_small);
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        padding: 0px;
     }
 
     .contact-button img {
         width: var(--three_contact_buttons_dimension_small);
         height: var(--three_contact_buttons_dimension_small);
-    }
-
-    .contact-button:hover {
-        transform: scale(1.1);
     }
 }
 
 /* -------- Small screen landscape -------- */
 @media (max-height: 767px) and (orientation: landscape){
     .home-header {
-        display: flex;
-        justify-content: right;
-        background-color: var(--background_color);
         padding-right: var(--home_header_padding_right_small_landscape);
         padding-top: var(--home_header_padding_top_small_landscape);
         align-items: flex-start;
     }
 
     .contact-button {
-        background: none;
-        border: none;
         margin: var(--three_contact_buttons_margin_small);
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        padding: 0px;
     }
 
     .contact-button img {
         width: var(--three_contact_buttons_dimension_small);
         height: var(--three_contact_buttons_dimension_small);
-    }
-
-    .contact-button:hover {
-        transform: scale(1.1);
     }
 }
