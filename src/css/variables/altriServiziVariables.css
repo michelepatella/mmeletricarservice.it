@@ -1,0 +1,9 @@
+:root{
+    --altri_servizi_margin_bottom_entire_section: 200px;
+
+    /** arrow **/
+    --arrow_button_dimension: 30px;
+    --arrow_label_margin_bottom: 10px;
+    --arrow_container_margin_button_small_landscape: 10px;
+
+}

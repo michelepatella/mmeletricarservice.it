@@ -1,4 +1,5 @@
-//constants definition
+/** constants definition **/
+
 export const WHATSAPP_LINK = 'https://wa.me/3908650830725';
 export const EMAIL = 'mmeletricarservice@libero.it';
 export const EMAIL_PEC = 'mmeletricarservice@pec.buffetti.it'

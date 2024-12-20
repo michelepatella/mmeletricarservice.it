@@ -50,7 +50,7 @@
 .intro-servizi-title{
     color: var(--accent_color);
     text-align: left;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .intro-servizi-subtitle{
@@ -84,16 +84,16 @@
 @media (min-width: 1025px) {
 
     .intro-servizi-title{
-        width: var(--cns_h2_p_width_big);
-        margin-left: var(--cns_h2_p_margin_left_big);
-        font-size: var(--h2_size_big);
-        margin-top: var(--title_margin_top_big_medium);
+        width: var(--general_h2_p_width_big);
+        margin-left: var(--general_margin_left_big);
+        font-size: var(--h2_font_size_big);
+        margin-top: var(--general_margin_top_title_big_medium);
     }
 
     .intro-servizi-subtitle{
-        width: var(--cns_h2_p_width_big);
-        font-size: var(--p_size_big);
-        margin-left: var(--cns_h2_p_margin_left_big);
+        width: var(--general_h2_p_width_big);
+        font-size: var(--p_font_size_big);
+        margin-left: var(--general_margin_left_big);
     }
 
     .arrow-and-label-container{
@@ -102,7 +102,7 @@
     }
 
     .arrow-and-label-container .arrow-label {
-        font-size: var(--secondary_text_size_big);
+        font-size: var(--secondary_text_font_size_big);
         margin-bottom: var(--arrow_label_margin_bottom);
     }
 
@@ -116,14 +116,14 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
     .intro-servizi-title{
-        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
-        font-size: var(--h2_size_medium);
-        margin-top: var(--title_margin_top_big_medium);
+        margin-left: var(--general_margin_left_medium_portrait);
+        font-size: var(--h2_font_size_medium);
+        margin-top: var(--general_margin_top_title_big_medium);
     }
 
     .intro-servizi-subtitle {
-        font-size: var(--p_size_medium);
-        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
+        font-size: var(--p_font_size_medium);
+        margin-left: var(--general_margin_left_medium_portrait);
     }
 
     .arrow-and-label-container{
@@ -132,7 +132,7 @@
     }
 
     .arrow-and-label-container .arrow-label {
-        font-size: var(--secondary_text_size_medium);
+        font-size: var(--secondary_text_font_size_medium);
         margin-bottom: var(--arrow_label_margin_bottom);
     }
 
@@ -147,14 +147,14 @@
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
     .intro-servizi-title {
-        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-        font-size: var(--h2_size_medium);
-        margin-top: var(--title_margin_top_big_medium);
+        margin-left: var(--general_margin_left_medium_landscape);
+        font-size: var(--h2_font_size_medium);
+        margin-top: var(--general_margin_top_title_big_medium);
     }
 
     .intro-servizi-subtitle {
-        font-size: var(--p_size_medium);
-        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
+        font-size: var(--p_font_size_medium);
+        margin-left: var(--general_margin_left_medium_landscape);
     }
 
     .arrow-and-label-container{
@@ -163,7 +163,7 @@
     }
 
     .arrow-and-label-container .arrow-label {
-        font-size: var(--secondary_text_size_medium);
+        font-size: var(--secondary_text_font_size_medium);
         margin-bottom: var(--arrow_label_margin_bottom);
     }
 
@@ -177,16 +177,16 @@
 @media (max-width: 767px) {
 
     .intro-servizi-title {
-        width: var(--cns_h2_width_small_portrait);
-        margin-left: var(--cns_h2_p_margin_left_small_portrait);
-        font-size: var(--h2_size_small);
-        margin-top: var(--cns_h2_margin_top_small_portrait);
+        width: var(--general_h2_width_small_portrait);
+        margin-left: var(--general_margin_left_small_portrait);
+        font-size: var(--h2_font_size_small);
+        margin-top: var(--general_margin_top_small_portrait);
     }
 
     .intro-servizi-subtitle {
-        width: var(--cns_p_width_small_portrait);
-        font-size: var(--p_size_small);
-        margin-left: var(--cns_p_margin_left_small_portrait);
+        width: var(--general_p_width_small_portrait);
+        font-size: var(--p_font_size_small);
+        margin-left: var(--general_margin_left_small_portrait);
     }
 
     .arrow-and-label-container{
@@ -195,7 +195,7 @@
     }
 
     .arrow-and-label-container .arrow-label {
-        font-size: var(--secondary_text_size_small);
+        font-size: var(--secondary_text_font_size_small);
         margin-bottom: var(--arrow_label_margin_bottom);
     }
 
@@ -209,16 +209,16 @@
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
 
     .intro-servizi-title {
-        width: var(--cns_h2_width_small_landscape);
-        margin-left: var(--cns_h2_p_margin_left_small_landscape);
-        font-size: var(--h2_size_small);
-        margin-top: var(--cns_h2_margin_top_small_landscape);
+        width: var(--general_h2_width_small_landscape);
+        margin-left: var(--general_margin_left_small_landscape);
+        font-size: var(--h2_font_size_small);
+        margin-top: var(--general_margin_top_small_landscape);
     }
 
     .intro-servizi-subtitle {
-        width: var(--cns_p_width_small_landscape);
-        font-size: var(--p_size_small);
-        margin-left: var(--cns_h2_p_margin_left_small_landscape);
+        width: var(--general_p_width_small_landscape);
+        font-size: var(--p_font_size_small);
+        margin-left: var(--general_margin_left_small_landscape);
     }
 
     .arrow-and-label-container{
@@ -228,7 +228,7 @@
     }
 
     .arrow-and-label-container .arrow-label {
-        font-size: var(--secondary_text_size_small);
+        font-size: var(--secondary_text_font_size_small);
         margin-bottom: var(--arrow_label_margin_bottom);
     }
 

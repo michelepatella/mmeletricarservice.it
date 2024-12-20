@@ -1,4 +1,14 @@
 import '../css/App.css';
+import '../css/variables/colorsVariables.css';
+import '../css/variables/fontSizeVariables.css';
+import '../css/variables/homeVariables.css';
+import '../css/variables/whatsappButtonVariables.css';
+import '../css/variables/customButtonVariables.css';
+import '../css/variables/contattiVariables.css';
+import '../css/variables/altriServiziVariables.css';
+import '../css/variables/autoUsateVariables.css';
+import '../css/variables/generalMarginsVariables.css';
+import '../css/variables/altriServiziAndDoveSiamoDivVariables.css';
 import '../css/other/WhatsappSupportButton.css';
 import React from "react";
 import Home from './home/Home';
@@ -8,17 +18,16 @@ import NostriValori from './chi siamo/NostriValori';
 import IntroServizi from "./servizi/IntroServizi";
 import AltriServizi from "./servizi/AltriServizi";
 import Contatti from './contatti/Contatti';
+import AutoUsate from "./servizi/auto usate/AutoUsate";
+import DoveSiamo from "./dove siamo/DoveSiamo";
 import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './utility/constants';
 import {FloatButton} from "antd";
-import AutoUsate from "./servizi/auto usate/AutoUsate";
-import DoveSiamo from "./dove siamo/DoveSiamo";
-
 
 /**
  * This component contains all the sections of the web page and
- * all the global components
+ * all the variables components
  * @returns {Element}
  * @constructor
  */

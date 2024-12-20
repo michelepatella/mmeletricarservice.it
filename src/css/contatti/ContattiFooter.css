@@ -10,40 +10,40 @@
 
 .footer-text{
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 /* ------ Big screen -------*/
 @media (min-width: 1025px){
     .footer-text {
-        font-size: var(--footer_text_size_big_medium);
+        font-size: var(--contatti_footer_text_size_big_medium);
     }
 }
 
 /* Medium screen portrait */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .footer-text {
-        font-size: var(--footer_text_size_big_medium);
+        font-size: var(--contatti_footer_text_size_big_medium);
     }
 }
 
 /* Medium screen landscape*/
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .footer-text {
-        font-size: var(--footer_text_size_big_medium);
+        font-size: var(--contatti_footer_text_size_big_medium);
     }
 }
 
 /* Small screen portrait*/
 @media (max-width: 767px) {
     .footer-text {
-        font-size: var(--footer_text_size_small);
+        font-size: var(--contatti_footer_text_size_small);
     }
 }
 
 /* Small screen landscape*/
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
     .footer-text {
-        font-size: var(--footer_text_size_small);
+        font-size: var(--contatti_footer_text_size_small);
     }
 }

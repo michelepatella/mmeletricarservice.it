@@ -49,16 +49,16 @@
 @media (min-width: 1025px) {
 
     .chi-siamo-title {
-        width: var(--cns_h2_p_width_big);
-        margin-left: var(--cns_h2_p_margin_left_big);
-        font-size: var(--h2_size_big);
-        margin-top: var(--title_margin_top_big_medium);
+        width: var(--general_h2_p_width_big);
+        margin-left: var(--general_margin_left_big);
+        font-size: var(--h2_font_size_big);
+        margin-top: var(--general_margin_top_title_big_medium);
     }
 
     .chi-siamo-subtitle {
-        width: var(--cns_h2_p_width_big);
-        font-size: var(--p_size_big);
-        margin-left: var(--cns_h2_p_margin_left_big);
+        width: var(--general_h2_p_width_big);
+        font-size: var(--p_font_size_big);
+        margin-left: var(--general_margin_left_big);
     }
 }
 
@@ -66,14 +66,14 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
     .chi-siamo-title {
-        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
-        font-size: var(--h2_size_medium);
-        margin-top: var(--title_margin_top_big_medium);
+        margin-left: var(--general_margin_left_medium_portrait);
+        font-size: var(--h2_font_size_medium);
+        margin-top: var(--general_margin_top_title_big_medium);
     }
 
     .chi-siamo-subtitle {
-        font-size: var(--p_size_medium);
-        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
+        font-size: var(--p_font_size_medium);
+        margin-left: var(--general_margin_left_medium_portrait);
     }
 
 }
@@ -82,14 +82,14 @@
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
     .chi-siamo-title{
-        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-        font-size: var(--h2_size_medium);
-        margin-top: var(--title_margin_top_big_medium);
+        margin-left: var(--general_margin_left_medium_landscape);
+        font-size: var(--h2_font_size_medium);
+        margin-top: var(--general_margin_top_title_big_medium);
     }
 
     .chi-siamo-subtitle{
-        font-size: var(--p_size_medium);
-        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
+        font-size: var(--p_font_size_medium);
+        margin-left: var(--general_margin_left_medium_landscape);
     }
 }
 
@@ -97,16 +97,16 @@
 @media (max-width: 767px) {
 
     .chi-siamo-title {
-        width: var(--cns_h2_width_small_portrait);
-        margin-left: var(--cns_h2_p_margin_left_small_portrait);
-        font-size: var(--h2_size_small);
-        margin-top: var(--cns_h2_margin_top_small_portrait);
+        width: var(--general_h2_width_small_portrait);
+        margin-left: var(--general_margin_left_small_portrait);
+        font-size: var(--h2_font_size_small);
+        margin-top: var(--general_margin_top_small_portrait);
     }
 
     .chi-siamo-subtitle {
-        width: var(--cns_p_width_small_portrait);
-        font-size: var(--p_size_small);
-        margin-left: var(--cns_p_margin_left_small_portrait);
+        width: var(--general_p_width_small_portrait);
+        font-size: var(--p_font_size_small);
+        margin-left: var(--general_margin_left_small_portrait);
     }
 }
 
@@ -114,16 +114,16 @@
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
 
     .chi-siamo-title {
-        width: var(--cns_h2_width_small_landscape);
-        margin-left: var(--cns_h2_p_margin_left_small_landscape);
-        font-size: var(--h2_size_small);
-        margin-top: var(--cns_h2_margin_top_small_landscape);
+        width: var(--general_h2_width_small_landscape);
+        margin-left: var(--general_margin_left_small_landscape);
+        font-size: var(--h2_font_size_small);
+        margin-top: var(--general_margin_top_small_landscape);
     }
 
     .chi-siamo-subtitle {
-        width: var(--cns_p_width_small_landscape);
-        font-size: var(--p_size_small);
-        margin-left: var(--cns_h2_p_margin_left_small_landscape);
+        width: var(--general_p_width_small_landscape);
+        font-size: var(--p_font_size_small);
+        margin-left: var(--general_margin_left_small_landscape);
     }
 
 }

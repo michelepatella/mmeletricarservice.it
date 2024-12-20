@@ -1,6 +1,6 @@
 /** Common styles **/
 .support-button {
-    border-radius: var(--whatsapp_button_border_radius);
+    border-radius: 50%;
     position: fixed;
     bottom: var(--whatsapp_button_margin);
     right: var(--whatsapp_button_margin);

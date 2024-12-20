@@ -22,7 +22,7 @@
 
 .home-title{
     color: var(--accent_color);
-    margin-bottom: 0px;
+    margin-bottom: 0;
     opacity: 0;
     animation: fadeIn 1.5s ease forwards;
     animation-delay: 0.5s;
@@ -38,12 +38,12 @@
 /* ------ Big screen ------- */
 @media (min-width: 1025px){
     .title-container {
-        margin-left: var(--title_container_margin_left_big);
+        margin-left: var(--home_title_container_margin_left_big);
     }
 
     .home-title {
         font-size: var(--home_title_font_size_big);
-        margin-top: var(--home_title_font_margin_top_big);
+        margin-top: var(--home_title_margin_top_big);
     }
 
     .home-description {
@@ -57,8 +57,8 @@
 /* ------ Medium screen landscape ------- */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .title-container {
-        margin-left: var(--title_container_margin_left_medium);
-        margin-top: var(--title_container_margin_top_medium);
+        margin-left: var(--home_title_container_margin_left_medium);
+        margin-top: var(--home_title_container_margin_top_medium);
         background-size: 65%;
     }
 
@@ -75,8 +75,8 @@
 /* ------ Medium screen portrait ------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .title-container {
-        margin-left: var(--title_container_margin_left_medium);
-        margin-top: var(--title_container_margin_top_medium);
+        margin-left: var(--home_title_container_margin_left_medium);
+        margin-top: var(--home_title_container_margin_top_medium);
         background-size: 65%;
     }
 
@@ -94,8 +94,8 @@
 /* ------ Small screen portrait ------- */
 @media (max-width: 767px) and (orientation: portrait)  {
     .title-container {
-        margin-left: var(--title_container_margin_left_small_portrait);
-        margin-top: var(--title_container_margin_top_small_portrait);
+        margin-left: var(--home_title_container_margin_left_small_portrait);
+        margin-top: var(--home_title_container_margin_top_small_portrait);
         background-size: 80%;
     }
 
@@ -114,8 +114,8 @@
 /* ------ Small screen landscape ------- */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
     .title-container {
-        margin-left: var(--title_container_margin_left_small_landscape);
-        margin-top: var(--title_container_margin_top_small_landscape);
+        margin-left: var(--home_title_container_margin_left_small_landscape);
+        margin-top: var(--home_title_container_margin_top_small_landscape);
         background-size: 45%;
     }
 

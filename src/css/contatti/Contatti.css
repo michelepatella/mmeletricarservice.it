@@ -2,7 +2,7 @@
 .contatti-layout {
     display: flex;
     flex-direction: column;
-    min-height: var(--real-vh);
+    min-height: 100vh;
     overflow-y: auto;
     background-color: var(--background_color);
     font-family: 'Poppins';

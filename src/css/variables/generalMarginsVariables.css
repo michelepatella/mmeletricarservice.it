@@ -1,0 +1,29 @@
+:root{
+    --general_margin_top_title_big_medium: 115px;
+
+    --general_margin_left_big: 280px;
+
+    --general_margin_left_medium_portrait: 220px;
+    --general_margin_left_medium_landscape: 220px;
+
+    --general_margin_left_small_portrait: 30px;
+    --general_margin_top_small_portrait: 40px;
+
+    --general_margin_left_small_landscape: 30px;
+    --general_margin_top_small_landscape: 40px;
+
+
+    --general_h2_p_width_big: 50%;
+
+    --general_width_medium_portrait: 90%;
+    --general_h2_width_medium_landscape: 90%;
+
+    --general_width_small_portrait: 100%;
+    --general_h2_width_small_portrait: 70%;
+    --general_p_width_small_portrait: 85%;
+
+    --general_width_small_landscape: 100%;
+    --general_h2_width_small_landscape: 60%;
+    --general_p_width_small_landscape: 55%;
+
+}

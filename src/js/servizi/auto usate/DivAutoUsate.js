@@ -1,16 +1,16 @@
 import {Col, Statistic} from "antd";
 import React, {useState} from "react";
-import '../../../css/servizi/auto usate/CardAutoUsate.css';
+import '../../../css/servizi/auto usate/DivAutoUsate.css';
 import CountUp from 'react-countup';
 import {useInView} from 'react-intersection-observer';
 
 /**
- * This component represents the informative card of auto usate section
+ * This component represents the divisions of auto usate
  * @param description
  * @returns {Element}
  * @constructor
  */
-function CardAutoUsate({ description }) {
+function DivAutoUsate({ description }) {
     const [hasStarted, setHasStarted] = useState(false);
 
     const { ref, inView } = useInView({
@@ -43,4 +43,4 @@ function CardAutoUsate({ description }) {
     );
 }
 
-export default CardAutoUsate;
+export default DivAutoUsate;

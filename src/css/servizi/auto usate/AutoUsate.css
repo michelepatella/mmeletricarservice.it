@@ -30,7 +30,7 @@
     top: 0;
     position: relative;
     background-color: var(--background_color);
-    margin-bottom: var(--margin_bottom_auto_usate_container);
+    margin-bottom: var(--auto_usate_container_margin_bottom);
 }
 
 .auto-usate-title{
@@ -55,23 +55,23 @@
 @media (min-width: 1025px) {
 
     .auto-usate-title {
-        width: var(--cns_h2_p_width_big);
-        margin-left: var(--cns_h2_p_margin_left_big);
-        font-size: var(--h2_size_big);
-        padding-top: var(--title_margin_top_big_medium);
+        width: var(--general_h2_p_width_big);
+        margin-left: var(--general_margin_left_big);
+        font-size: var(--h2_font_size_big);
+        padding-top: var(--general_margin_top_title_big_medium);
     }
 
     .auto-usate-subtitle {
-        width: var(--cns_h2_p_width_big);
-        font-size: var(--p_size_big);
-        margin-left: var(--cns_h2_p_margin_left_big);
+        width: var(--general_h2_p_width_big);
+        font-size: var(--p_font_size_big);
+        margin-left: var(--general_margin_left_big);
     }
 
     .custom-statistic-grid {
         gap: 1rem;
-        margin-left: var(--cns_h2_p_margin_left_big);
-        margin-top: var(--margin_top_statistic_division);
-        margin-bottom: var(--facebook_link_margin_top);
+        margin-left: var(--general_margin_left_big);
+        margin-top: var(--auto_usate_statistic_division_margin_top);
+        margin-bottom: var(--auto_usate_facebook_link_margin_top);
     }
 
 }
@@ -80,21 +80,21 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
     .auto-usate-title {
-        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
-        font-size: var(--h2_size_medium);
-        padding-top: var(--title_margin_top_big_medium);
+        margin-left: var(--general_margin_left_medium_portrait);
+        font-size: var(--h2_font_size_medium);
+        padding-top: var(--general_margin_top_title_big_medium);
     }
 
     .auto-usate-subtitle {
-        font-size: var(--p_size_medium);
-        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
+        font-size: var(--p_font_size_medium);
+        margin-left: var(--general_margin_left_medium_portrait);
     }
 
     .custom-statistic-grid {
         gap: 2rem;
-        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
-        margin-top: var(--margin_top_statistic_division);
-        margin-bottom: var(--facebook_link_margin_top);
+        margin-left: var(--general_margin_left_medium_portrait);
+        margin-top: var(--auto_usate_statistic_division_margin_top);
+        margin-bottom: var(--auto_usate_facebook_link_margin_top);
     }
 
 }
@@ -103,21 +103,21 @@
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
     .auto-usate-title{
-        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-        font-size: var(--h2_size_medium);
-        padding-top: var(--title_margin_top_big_medium);
+        margin-left: var(--general_margin_left_medium_landscape);
+        font-size: var(--h2_font_size_medium);
+        padding-top: var(--general_margin_top_title_big_medium);
     }
 
     .auto-usate-subtitle{
-        font-size: var(--p_size_medium);
-        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
+        font-size: var(--p_font_size_medium);
+        margin-left: var(--general_margin_left_medium_landscape);
     }
 
     .custom-statistic-grid {
         gap: 2rem;
-        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-        margin-top: var(--margin_top_statistic_division);
-        margin-bottom: var(--facebook_link_margin_top);
+        margin-left: var(--general_margin_left_medium_landscape);
+        margin-top: var(--auto_usate_statistic_division_margin_top);
+        margin-bottom: var(--auto_usate_facebook_link_margin_top);
     }
 
 }
@@ -126,23 +126,23 @@
 @media (max-width: 767px) {
 
     .auto-usate-title {
-        width: var(--cns_h2_width_small_portrait);
-        margin-left: var(--cns_h2_p_margin_left_small_portrait);
-        font-size: var(--h2_size_small);
-        padding-top: var(--cns_h2_margin_top_small_portrait);
+        width: var(--general_h2_width_small_portrait);
+        margin-left: var(--general_margin_left_small_portrait);
+        font-size: var(--h2_font_size_small);
+        padding-top: var(--general_margin_top_small_portrait);
     }
 
     .auto-usate-subtitle {
-        width: var(--cns_p_width_small_portrait);
-        font-size: var(--p_size_small);
-        margin-left: var(--cns_p_margin_left_small_portrait);
+        width: var(--general_p_width_small_portrait);
+        font-size: var(--p_font_size_small);
+        margin-left: var(--general_margin_left_small_portrait);
     }
 
     .custom-statistic-grid {
         gap: 1rem;
-        margin-left: var(--cns_h2_p_margin_left_small_portrait);
-        margin-top: var(--margin_top_statistic_division);
-        margin-bottom: var(--facebook_link_margin_top);
+        margin-left: var(--general_margin_left_small_portrait);
+        margin-top: var(--auto_usate_statistic_division_margin_top);
+        margin-bottom: var(--auto_usate_facebook_link_margin_top);
     }
 
 }
@@ -151,23 +151,23 @@
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
 
     .auto-usate-title {
-        width: var(--cns_h2_width_small_landscape);
-        margin-left: var(--cns_h2_p_margin_left_small_landscape);
-        font-size: var(--h2_size_small);
-        padding-top: var(--cns_h2_margin_top_small_landscape);
+        width: var(--general_h2_width_small_landscape);
+        margin-left: var(--general_margin_left_small_landscape);
+        font-size: var(--h2_font_size_small);
+        padding-top: var(--general_margin_top_small_landscape);
     }
 
     .auto-usate-subtitle {
-        width: var(--cns_p_width_small_landscape);
-        font-size: var(--p_size_small);
-        margin-left: var(--cns_h2_p_margin_left_small_landscape);
+        width: var(--general_p_width_small_landscape);
+        font-size: var(--p_font_size_small);
+        margin-left: var(--general_margin_left_small_landscape);
     }
 
     .custom-statistic-grid {
         gap: 1rem;
-        margin-left: var(--cns_h2_p_margin_left_small_landscape);
-        margin-top: var(--margin_top_statistic_division);
-        margin-bottom: var(--facebook_link_margin_top);
+        margin-left: var(--general_margin_left_small_landscape);
+        margin-top: var(--auto_usate_statistic_division_margin_top);
+        margin-bottom: var(--auto_usate_facebook_link_margin_top);
     }
 
 }

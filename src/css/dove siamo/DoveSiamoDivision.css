@@ -11,14 +11,14 @@
 }
 
 .dove-siamo-division-title,
-.dove-siamo-division-description, .dove-siamo-division-icon{
+.dove-siamo-division-description{
     opacity: 0;
     transform: rotateX(90deg) translateY(20px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
 .dove-siamo-division-title.in-view,
-.dove-siamo-division-description.in-view, .dove-siamo-division-icon.in-view {
+.dove-siamo-division-description.in-view{
     opacity: 1;
     transform: rotateX(0deg) translateY(0);
 }
@@ -27,14 +27,14 @@
 .dove-siamo-division-title{
     color: var(--accent_color);
     text-align: left;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-weight: bold;
     font-family: 'Poppins';
 }
 
 .dove-siamo-division-description{
     text-align: left;
-    margin-top: 0px;
+    margin-top: 0;
     color: white;
     font-family: 'Poppins';
 }
@@ -48,20 +48,20 @@
 
     .dove-siamo-division-title {
         width: 100%;
-        font-size: var(--servizio_usate_and_dove_siamo_title_size_big);
+        font-size: var(--divisions_title_font_size_big);
     }
 
     .dove-siamo-division-description {
         width: 100%;
-        font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_big);
-        padding-top: 0px;
+        font-size: var(--divisions_description_font_size_big);
+        padding-top: 0;
     }
 
     .dove-siamo-division-icon{
         width: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
         height: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
-        margin-top: var(--margin_top_icon_big_medium_landscape);
-        margin-left: var(--margin_right_icon);
+        margin-top: var(--divServizio_and_dove_siamo_margin_top_icon_big_medium_landscape);
+        margin-left: var(--divServizio_and_dove_siamo_margin_right_icon);
         margin-bottom: var(--dove_siamo_icon_margin_bottom);
     }
 
@@ -72,19 +72,19 @@
 
     .dove-siamo-division-title {
         width: 100%;
-        font-size: var(--servizio_and_dove_siamo_title_size_medium_portrait);
+        font-size: var(--divisions_title_font_size_medium_portrait);
     }
 
     .dove-siamo-division-description {
         width: 100%;
-        font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_medium_portrait);
+        font-size: var(--divisions_description_font_size_medium_portrait);
     }
 
     .dove-siamo-division-icon{
         width: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
         height: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
-        margin-top: var(--margin_top_icon_big_medium_portrait);
-        margin-left: var(--margin_right_icon);
+        margin-top: var(--divServizio_and_dove_siamo_margin_top_icon_medium_portrait);
+        margin-left: var(--divServizio_and_dove_siamo_margin_right_icon);
         margin-bottom: var(--dove_siamo_icon_margin_bottom);
     }
 
@@ -95,21 +95,21 @@
 
     .dove-siamo-division-title {
         width: 100%;
-        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-        font-size: var(--servizio_and_dove_siamo_title_size_medium_landscape);
+        margin-left: var(--general_margin_left_medium_landscape);
+        font-size: var(--divisions_title_font_size_medium_landscape);
     }
 
     .dove-siamo-division-description{
         width: 100%;
-        font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_medium_landscape);
-        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
+        font-size: var(--divisions_description_font_size_medium_landscape);
+        margin-left: var(--general_margin_left_medium_landscape);
     }
 
     .dove-siamo-division-icon{
         width: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
         height: var(--divServizio_and_dove_siamo_icon_dimension_big_and_medium);
-        margin-top: var(--margin_top_icon_big_medium_landscape);
-        margin-left: var(--margin_right_icon);
+        margin-top: var(--divServizio_and_dove_siamo_margin_top_icon_big_medium_landscape);
+        margin-left: var(--divServizio_and_dove_siamo_margin_right_icon);
         margin-bottom: var(--dove_siamo_icon_margin_bottom);
     }
 }
@@ -119,22 +119,22 @@
 
     .dove-siamo-division-title {
         width: 100%;
-        margin-left: var(--cns_h2_p_margin_left_small_portrait);
-        font-size: var(--servizio_and_dove_siamo_usate_title_size_small);
+        margin-left: var(--general_margin_left_small_portrait);
+        font-size: var(--divisions_title_font_size_small);
         margin-top: var(--divServizio_and_dove_siamo_margin_top);
     }
 
     .dove-siamo-division-description {
         width: 100%;
-        font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_small);
-        margin-left: var(--cns_p_margin_left_small_portrait);
+        font-size: var(--divisions_description_font_size_small);
+        margin-left: var(--general_margin_left_small_portrait);
     }
 
     .dove-siamo-division-icon{
         width: var(--divServizio_and_dove_siamo_icon_dimension_small);
         height: var(--divServizio_and_dove_siamo_icon_dimension_small);
-        margin-top: var(--margin_top_icon_small);
-        margin-left: var(--margin_right_icon);
+        margin-top: var(--divServizio_and_dove_siamo_margin_top_icon_small);
+        margin-left: var(--divServizio_and_dove_siamo_margin_right_icon);
         margin-bottom: var(--dove_siamo_icon_margin_bottom);
     }
 }
@@ -144,22 +144,22 @@
 
     .dove-siamo-division-title {
         width: 100%;
-        margin-left: var(--cns_h2_p_margin_left_small_landscape);
-        font-size: var(--servizio_and_dove_siamo_usate_title_size_small);
+        margin-left: var(--general_margin_left_small_landscape);
+        font-size: var(--divisions_title_font_size_small);
         margin-top: var(--divServizio_and_dove_siamo_margin_top);
     }
 
     .dove-siamo-division-description {
         width: 100%;
-        font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_small);
-        margin-left: var(--cns_h2_p_margin_left_small_landscape);
+        font-size: var(--divisions_description_font_size_small);
+        margin-left: var(--general_margin_left_small_landscape);
     }
 
     .dove-siamo-division-icon{
         width: var(--divServizio_and_dove_siamo_icon_dimension_small);
         height: var(--divServizio_and_dove_siamo_icon_dimension_small);
-        margin-top: var(--margin_top_icon_small);
-        margin-left: var(--margin_right_icon);
+        margin-top: var(--divServizio_and_dove_siamo_margin_top_icon_small);
+        margin-left: var(--divServizio_and_dove_siamo_margin_right_icon);
         margin-bottom: var(--dove_siamo_icon_margin_bottom);
     }
 

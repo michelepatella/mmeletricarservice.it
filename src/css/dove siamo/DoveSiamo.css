@@ -50,16 +50,16 @@
 @media (min-width: 1025px) {
 
     .dove-siamo-title {
-        width: var(--cns_h2_p_width_big);
-        margin-left: var(--cns_h2_p_margin_left_big);
-        font-size: var(--h2_size_big);
-        padding-top: var(--title_margin_top_big_medium);
+        width: var(--general_h2_p_width_big);
+        margin-left: var(--general_margin_left_big);
+        font-size: var(--h2_font_size_big);
+        padding-top: var(--general_margin_top_title_big_medium);
     }
 
     .dove-siamo-grid {
         gap: 2rem;
         width: 100%;
-        margin-left: var(--cns_h2_p_margin_left_big);
+        margin-left: var(--general_margin_left_big);
     }
 
     .google-map-container{
@@ -73,14 +73,14 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
     .dove-siamo-title {
-        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
-        font-size: var(--h2_size_medium);
-        padding-top: var(--title_margin_top_big_medium);
+        margin-left: var(--general_margin_left_medium_portrait);
+        font-size: var(--h2_font_size_medium);
+        padding-top: var(--general_margin_top_title_big_medium);
     }
 
     .dove-siamo-grid {
         gap: 2rem;
-        margin-left: var(--cns_h2_p_margin_left_medium_portrait);
+        margin-left: var(--general_margin_left_medium_portrait);
     }
 
     .google-map-container{
@@ -94,9 +94,9 @@
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
     .dove-siamo-title{
-        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-        font-size: var(--h2_size_medium);
-        padding-top: var(--title_margin_top_big_medium);
+        margin-left: var(--general_margin_left_medium_landscape);
+        font-size: var(--h2_font_size_medium);
+        padding-top: var(--general_margin_top_title_big_medium);
     }
 
     .dove-siamo-grid {
@@ -106,7 +106,7 @@
     .google-map-container{
         height: 80%;
         width: 100%;
-        margin-left: var(--cns_h2_p_margin_left_medium_landscape);
+        margin-left: var(--general_margin_left_medium_landscape);
     }
 
 }
@@ -115,10 +115,10 @@
 @media (max-width: 767px) {
 
     .dove-siamo-title {
-        width: var(--cns_h2_width_small_portrait);
-        margin-left: var(--cns_h2_p_margin_left_small_portrait);
-        font-size: var(--h2_size_small);
-        padding-top: var(--cns_h2_margin_top_small_portrait);
+        width: var(--general_h2_width_small_portrait);
+        margin-left: var(--general_margin_left_small_portrait);
+        font-size: var(--h2_font_size_small);
+        padding-top: var(--general_margin_top_small_portrait);
     }
 
     .dove-siamo-grid {
@@ -126,7 +126,7 @@
     }
 
     .google-map-container{
-        margin-left: var(--cns_h2_p_margin_left_small_portrait);
+        margin-left: var(--general_margin_left_small_portrait);
         height: 80%;
         width: 95%;
     }
@@ -137,10 +137,10 @@
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
 
     .dove-siamo-title {
-        width: var(--cns_h2_width_small_landscape);
-        margin-left: var(--cns_h2_p_margin_left_small_landscape);
-        font-size: var(--h2_size_small);
-        padding-top: var(--cns_h2_margin_top_small_landscape);
+        width: var(--general_h2_width_small_landscape);
+        margin-left: var(--general_margin_left_small_landscape);
+        font-size: var(--h2_font_size_small);
+        padding-top: var(--general_margin_top_small_landscape);
     }
 
     .dove-siamo-grid {
@@ -148,7 +148,7 @@
     }
 
     .google-map-container{
-        margin-left: var(--cns_h2_p_margin_left_small_portrait);
+        margin-left: var(--general_margin_left_small_portrait);
         width: 95%;
         height: 80%;
     }

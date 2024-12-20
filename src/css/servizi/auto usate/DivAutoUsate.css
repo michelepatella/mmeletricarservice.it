@@ -14,11 +14,11 @@
 @media (min-width: 1025px) {
 
     .custom-statistic .ant-statistic-content {
-        font-size: var(--percentage_font_size_big);
+        font-size: var(--auto_usate_percentage_font_size_big);
     }
 
     .custom-statistic .ant-statistic-title {
-        font-size: var(--secondary_text_size_big);
+        font-size: var(--secondary_text_font_size_big);
     }
 }
 
@@ -26,11 +26,11 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
     .custom-statistic .ant-statistic-content {
-        font-size: var(--percentage_font_size_medium_portrait);
+        font-size: var(--auto_usate_percentage_font_size_medium_portrait);
     }
 
     .custom-statistic .ant-statistic-title {
-        font-size: var(--secondary_text_size_medium);
+        font-size: var(--secondary_text_font_size_medium);
     }
 
 }
@@ -39,11 +39,11 @@
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
     .custom-statistic .ant-statistic-content {
-        font-size: var(--percentage_font_size_medium_landscape);
+        font-size: var(--auto_usate_percentage_font_size_medium_landscape);
     }
 
     .custom-statistic .ant-statistic-title {
-        font-size: var(--secondary_text_size_medium);
+        font-size: var(--secondary_text_font_size_medium);
     }
 
 }
@@ -52,11 +52,11 @@
 @media (max-width: 767px) {
 
     .custom-statistic .ant-statistic-content {
-        font-size: var(--percentage_font_size_small);
+        font-size: var(--auto_usate_percentage_font_size_small);
     }
 
     .custom-statistic .ant-statistic-title {
-        font-size: var(--secondary_text_size_small);
+        font-size: var(--secondary_text_font_size_small);
     }
 
 }
@@ -65,11 +65,11 @@
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 
     .custom-statistic .ant-statistic-content {
-        font-size: var(--percentage_font_size_small);
+        font-size: var(--auto_usate_percentage_font_size_small);
     }
 
     .custom-statistic .ant-statistic-title {
-        font-size: var(--secondary_text_size_small);
+        font-size: var(--secondary_text_font_size_small);
     }
 
 }
