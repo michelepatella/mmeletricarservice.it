@@ -1,12 +1,4 @@
-.auto-usate-container {
-    width: 90%;
-    text-align: left;
-    top: 0;
-    position: relative;
-    background-color: var(--background_color);
-    margin-bottom: var(--margin_bottom_auto_usate_container);
-}
-
+/** Animation **/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -31,15 +23,40 @@
     transform: rotateX(0deg) translateY(0);
 }
 
-/* ------ Auto usate section ------ */
+/** Common styles **/
+.auto-usate-container {
+    width: 90%;
+    text-align: left;
+    top: 0;
+    position: relative;
+    background-color: var(--background_color);
+    margin-bottom: var(--margin_bottom_auto_usate_container);
+}
+
+.auto-usate-title{
+    color: var(--accent_color);
+    text-align: left;
+}
+
+.auto-usate-subtitle{
+    text-align: left;
+    color: white;
+}
+
+.custom-statistic-grid{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-items: start;
+    justify-content: start;
+    text-align: left;
+}
+
 /* ------ Big screen -------*/
 @media (min-width: 1025px) {
 
     .auto-usate-title {
         width: var(--cns_h2_p_width_big);
         margin-left: var(--cns_h2_p_margin_left_big);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_big);
         padding-top: var(--title_margin_top_big_medium);
     }
@@ -47,17 +64,10 @@
     .auto-usate-subtitle {
         width: var(--cns_h2_p_width_big);
         font-size: var(--p_size_big);
-        text-align: left;
-        color: white;
         margin-left: var(--cns_h2_p_margin_left_big);
     }
 
     .custom-statistic-grid {
-        display: grid;
-        grid-template-rows: auto auto auto;
-        align-items: start;
-        justify-content: start;
-        text-align: left;
         gap: 1rem;
         margin-left: var(--cns_h2_p_margin_left_big);
         margin-top: var(--margin_top_statistic_division);
@@ -71,25 +81,16 @@
 
     .auto-usate-title {
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_medium);
         padding-top: var(--title_margin_top_big_medium);
     }
 
     .auto-usate-subtitle {
         font-size: var(--p_size_medium);
-        text-align: left;
-        color: white;
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
     }
 
     .custom-statistic-grid {
-        display: grid;
-        grid-template-rows: auto auto auto;
-        align-items: start;
-        justify-content: start;
-        text-align: left;
         gap: 2rem;
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
         margin-top: var(--margin_top_statistic_division);
@@ -103,25 +104,16 @@
 
     .auto-usate-title{
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_medium);
         padding-top: var(--title_margin_top_big_medium);
     }
 
     .auto-usate-subtitle{
         font-size: var(--p_size_medium);
-        text-align: left;
-        color: white;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
     }
 
     .custom-statistic-grid {
-        display: grid;
-        grid-template-rows: auto auto auto;
-        align-items: start;
-        justify-content: start;
-        text-align: left;
         gap: 2rem;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
         margin-top: var(--margin_top_statistic_division);
@@ -136,8 +128,6 @@
     .auto-usate-title {
         width: var(--cns_h2_width_small_portrait);
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_small);
         padding-top: var(--cns_h2_margin_top_small_portrait);
     }
@@ -145,17 +135,10 @@
     .auto-usate-subtitle {
         width: var(--cns_p_width_small_portrait);
         font-size: var(--p_size_small);
-        text-align: left;
-        color: white;
         margin-left: var(--cns_p_margin_left_small_portrait);
     }
 
     .custom-statistic-grid {
-        display: grid;
-        grid-template-rows: auto auto auto;
-        align-items: start;
-        justify-content: start;
-        text-align: left;
         gap: 1rem;
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
         margin-top: var(--margin_top_statistic_division);
@@ -170,8 +153,6 @@
     .auto-usate-title {
         width: var(--cns_h2_width_small_landscape);
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_small);
         padding-top: var(--cns_h2_margin_top_small_landscape);
     }
@@ -179,17 +160,10 @@
     .auto-usate-subtitle {
         width: var(--cns_p_width_small_landscape);
         font-size: var(--p_size_small);
-        text-align: left;
-        color: white;
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
     }
 
     .custom-statistic-grid {
-        display: grid;
-        grid-template-rows: auto auto auto;
-        align-items: start;
-        justify-content: start;
-        text-align: left;
         gap: 1rem;
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
         margin-top: var(--margin_top_statistic_division);

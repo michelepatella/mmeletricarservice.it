@@ -1,17 +1,24 @@
+/** Animation **/
+.custom-statistic .ant-statistic-content{
+    color: white;
+    font-weight: bold;
+    font-family: Poppins;
+}
+
+.custom-statistic .ant-statistic-title{
+    color: white;
+    font-family: Poppins;
+}
+
 /* ------ Big screen -------*/
 @media (min-width: 1025px) {
 
     .custom-statistic .ant-statistic-content {
         font-size: var(--percentage_font_size_big);
-        color: white;
-        font-weight: bold;
-        font-family: Poppins;
     }
 
     .custom-statistic .ant-statistic-title {
         font-size: var(--secondary_text_size_big);
-        color: white;
-        font-family: Poppins;
     }
 }
 
@@ -20,15 +27,10 @@
 
     .custom-statistic .ant-statistic-content {
         font-size: var(--percentage_font_size_medium_portrait);
-        color: white;
-        font-weight: bold;
-        font-family: Poppins;
     }
 
     .custom-statistic .ant-statistic-title {
         font-size: var(--secondary_text_size_medium);
-        color: white;
-        font-family: Poppins;
     }
 
 }
@@ -38,15 +40,10 @@
 
     .custom-statistic .ant-statistic-content {
         font-size: var(--percentage_font_size_medium_landscape);
-        color: white;
-        font-weight: bold;
-        font-family: Poppins;
     }
 
     .custom-statistic .ant-statistic-title {
         font-size: var(--secondary_text_size_medium);
-        color: white;
-        font-family: Poppins;
     }
 
 }
@@ -56,15 +53,10 @@
 
     .custom-statistic .ant-statistic-content {
         font-size: var(--percentage_font_size_small);
-        color: white;
-        font-weight: bold;
-        font-family: Poppins;
     }
 
     .custom-statistic .ant-statistic-title {
         font-size: var(--secondary_text_size_small);
-        color: white;
-        font-family: Poppins;
     }
 
 }
@@ -74,15 +66,10 @@
 
     .custom-statistic .ant-statistic-content {
         font-size: var(--percentage_font_size_small);
-        color: white;
-        font-weight: bold;
-        font-family: Poppins;
     }
 
     .custom-statistic .ant-statistic-title {
         font-size: var(--secondary_text_size_small);
-        color: white;
-        font-family: Poppins;
     }
 
 }
