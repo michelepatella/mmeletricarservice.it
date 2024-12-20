@@ -1,11 +1,4 @@
-.dove-siamo-container {
-    width: 90%;
-    text-align: left;
-    top: 0;
-    position: relative;
-    background-color: var(--background_color);
-}
-
+/** Animation **/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -17,44 +10,59 @@
     }
 }
 
-.dove-siamo-title {
-    opacity: 0;
-    transform: rotateX(90deg) translateY(20px);
-    transition: opacity 1.5s ease, transform 1.5s ease;
-}
-
 .dove-siamo-title.in-view {
     opacity: 1;
     transform: rotateX(0deg) translateY(0);
 }
 
-/* ------ Dove siamo section ------ */
+/** Common styles **/
+.dove-siamo-container {
+    width: 90%;
+    text-align: left;
+    top: 0;
+    position: relative;
+    background-color: var(--background_color);
+}
+
+.dove-siamo-title {
+    opacity: 0;
+    transform: rotateX(90deg) translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    color: var(--accent_color);
+    text-align: left;
+}
+
+.dove-siamo-grid{
+    display: grid;
+    grid-template-rows: auto auto;
+    align-items: start;
+    justify-content: start;
+    text-align: left;
+}
+
+.google-map-container{
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
 /* ------ Big screen -------*/
 @media (min-width: 1025px) {
 
     .dove-siamo-title {
         width: var(--cns_h2_p_width_big);
         margin-left: var(--cns_h2_p_margin_left_big);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_big);
         padding-top: var(--title_margin_top_big_medium);
     }
 
     .dove-siamo-grid {
-        display: grid;
-        grid-template-rows: auto auto;
-        align-items: start;
-        justify-content: start;
         gap: 2rem;
         width: 100%;
-        text-align: left;
         margin-left: var(--cns_h2_p_margin_left_big);
     }
 
     .google-map-container{
-        border-radius: 15px;
-        overflow: hidden;
         height: 100%;
         width: 100%;
     }
@@ -66,25 +74,16 @@
 
     .dove-siamo-title {
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_medium);
         padding-top: var(--title_margin_top_big_medium);
     }
 
     .dove-siamo-grid {
-        display: grid;
-        grid-template-rows: auto auto;
-        align-items: start;
-        justify-content: start;
-        text-align: left;
         gap: 2rem;
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
     }
 
     .google-map-container{
-        border-radius: 15px;
-        overflow: hidden;
         height: 100%;
         width: 100%;
     }
@@ -96,24 +95,15 @@
 
     .dove-siamo-title{
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_medium);
         padding-top: var(--title_margin_top_big_medium);
     }
 
     .dove-siamo-grid {
-        display: grid;
-        grid-template-rows: auto auto;
-        align-items: start;
-        justify-content: start;
-        text-align: left;
         gap: 2rem;
     }
 
     .google-map-container{
-        border-radius: 15px;
-        overflow: hidden;
         height: 80%;
         width: 100%;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
@@ -127,24 +117,15 @@
     .dove-siamo-title {
         width: var(--cns_h2_width_small_portrait);
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_small);
         padding-top: var(--cns_h2_margin_top_small_portrait);
     }
 
     .dove-siamo-grid {
-        display: grid;
-        grid-template-rows: auto auto;
-        align-items: start;
-        justify-content: start;
-        text-align: left;
         gap: 1rem;
     }
 
     .google-map-container{
-        border-radius: 15px;
-        overflow: hidden;
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
         height: 80%;
         width: 95%;
@@ -158,25 +139,16 @@
     .dove-siamo-title {
         width: var(--cns_h2_width_small_landscape);
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--h2_size_small);
         padding-top: var(--cns_h2_margin_top_small_landscape);
     }
 
     .dove-siamo-grid {
-        display: grid;
-        grid-template-rows: auto auto;
-        align-items: start;
-        justify-content: start;
-        text-align: left;
         gap: 1rem;
     }
 
     .google-map-container{
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
-        border-radius: 15px;
-        overflow: hidden;
         width: 95%;
         height: 80%;
     }

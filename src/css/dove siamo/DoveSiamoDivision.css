@@ -1,3 +1,4 @@
+/** Animation **/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -22,6 +23,22 @@
     transform: rotateX(0deg) translateY(0);
 }
 
+/** Common styles **/
+.dove-siamo-division-title{
+    color: var(--accent_color);
+    text-align: left;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
+
+.dove-siamo-division-description{
+    text-align: left;
+    margin-top: 0px;
+    color: white;
+    font-family: 'Poppins';
+}
+
 /* ------ Big screen -------*/
 @media (min-width: 1025px) {
 
@@ -31,22 +48,13 @@
 
     .dove-siamo-division-title {
         width: 100%;
-        font-weight: bold;
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--servizio_usate_and_dove_siamo_title_size_big);
-        margin-bottom: 0px;
-        font-family: Poppins;
     }
 
     .dove-siamo-division-description {
         width: 100%;
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_big);
-        text-align: left;
-        margin-top: 0px;
         padding-top: 0px;
-        color: white;
-        font-family: Poppins;
     }
 
     .dove-siamo-division-icon{
@@ -64,21 +72,12 @@
 
     .dove-siamo-division-title {
         width: 100%;
-        font-weight: bold;
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--servizio_and_dove_siamo_title_size_medium_portrait);
-        margin-bottom: 0px;
-        font-family: Poppins;
     }
 
     .dove-siamo-division-description {
         width: 100%;
-        margin-top: 0px;
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_medium_portrait);
-        text-align: left;
-        color: white;
-        font-family: Poppins;
     }
 
     .dove-siamo-division-icon{
@@ -96,23 +95,14 @@
 
     .dove-siamo-division-title {
         width: 100%;
-        font-weight: bold;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--servizio_and_dove_siamo_title_size_medium_landscape);
-        margin-bottom: 0px;
-        font-family: Poppins;
     }
 
     .dove-siamo-division-description{
         width: 100%;
-        margin-top: 0px;
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_medium_landscape);
-        text-align: left;
-        color: white;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-        font-family: Poppins;
     }
 
     .dove-siamo-division-icon{
@@ -128,25 +118,16 @@
 @media (max-width: 767px) {
 
     .dove-siamo-division-title {
-        font-weight: bold;
         width: 100%;
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--servizio_and_dove_siamo_usate_title_size_small);
-        margin-bottom: 0px;
         margin-top: var(--divServizio_and_dove_siamo_margin_top);
-        font-family: Poppins;
     }
 
     .dove-siamo-division-description {
         width: 100%;
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_small);
-        text-align: left;
-        margin-top: 0px;
-        color: white;
         margin-left: var(--cns_p_margin_left_small_portrait);
-        font-family: Poppins;
     }
 
     .dove-siamo-division-icon{
@@ -162,25 +143,16 @@
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 
     .dove-siamo-division-title {
-        font-weight: bold;
         width: 100%;
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--servizio_and_dove_siamo_usate_title_size_small);
-        margin-bottom: 0px;
         margin-top: var(--divServizio_and_dove_siamo_margin_top);
-        font-family: Poppins;
     }
 
     .dove-siamo-division-description {
         width: 100%;
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_small);
-        text-align: left;
-        margin-top: 0px;
-        color: white;
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
-        font-family: Poppins;
     }
 
     .dove-siamo-division-icon{
