@@ -1,3 +1,4 @@
+/** Animation **/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -22,6 +23,31 @@
     transform: rotateX(0deg) translateY(0);
 }
 
+/** Common styles **/
+.divServizio{
+    text-align: center;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    background-color: var(--background_color);
+}
+
+.title-servizio{
+    font-weight: bold;
+    color: var(--accent_color);
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.description-servizio{
+    text-align: left;
+    color: white;
+}
+
+.title-and-icon-container{
+    margin-top: var(--divServizio_and_dove_siamo_margin_top);
+}
+
 /* ------ Big screen -------*/
 @media (min-width: 1025px) {
 
@@ -31,34 +57,20 @@
 
     .divServizio {
         width: 80%;
-        text-align: center;
-        position: relative;
-        top: 0;
-        overflow: hidden;
-        background-color: var(--background_color);
         margin-left: var(--cns_h2_p_margin_left_big);
     }
 
     .title-servizio {
         width: var(--cns_h2_p_width_big);
-        font-weight: bold;
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--servizio_usate_and_dove_siamo_title_size_big);
-        margin-bottom: 0px;
+
     }
 
     .description-servizio {
         width: var(--cns_h2_p_width_big);
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_big);
-        text-align: left;
-        color: white;
         margin-top: var(--divServizio_description_margin_top);
 
-    }
-
-    .title-and-icon-container{
-        margin-top: var(--divServizio_and_dove_siamo_margin_top);
     }
 
     .servizio-icon{
@@ -78,31 +90,16 @@
 
     .divServizio {
         width: 60%;
-        text-align: center;
-        position: relative;
-        top: 0;
-        overflow: hidden;
-        background-color: var(--background_color);
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
     }
 
     .title-servizio {
-        font-weight: bold;
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--servizio_and_dove_siamo_title_size_medium_portrait);
-        margin-bottom: 0px;
     }
 
     .description-servizio {
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_medium_portrait);
-        text-align: left;
-        color: white;
         margin-top: var(--divServizio_description_margin_top);
-    }
-
-    .title-and-icon-container{
-        margin-top: var(--divServizio_and_dove_siamo_margin_top);
     }
 
     .servizio-icon{
@@ -123,32 +120,17 @@
 
     .divServizio {
         width: 60%;
-        text-align: center;
-        position: relative;
-        top: 0;
-        overflow: hidden;
-        background-color: var(--background_color);
     }
 
     .title-servizio {
-        font-weight: bold;
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--servizio_and_dove_siamo_title_size_medium_landscape);
-        margin-bottom: 0px;
     }
 
     .description-servizio{
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_medium_landscape);
-        text-align: left;
-        color: white;
         margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
-    }
-
-    .title-and-icon-container{
-        margin-top: var(--divServizio_and_dove_siamo_margin_top);
     }
 
     .servizio-icon{
@@ -168,35 +150,20 @@
 
     .divServizio {
         width: 90%;
-        text-align: center;
-        position: relative;
-        top: 0;
-        overflow: hidden;
-        background-color: var(--background_color);
     }
 
     .title-servizio {
-        font-weight: bold;
         width: var(--cns_h2_width_small_portrait);
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--servizio_and_dove_siamo_usate_title_size_small);
-        margin-bottom: 0px;
         margin-top: var(--divServizio_and_dove_siamo_margin_top);
     }
 
     .description-servizio {
         width: var(--cns_p_width_small_portrait);
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_small);
-        text-align: left;
-        color: white;
         margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_p_margin_left_small_portrait);
-    }
-
-    .title-and-icon-container{
-        margin-top: var(--divServizio_and_dove_siamo_margin_top);
     }
 
     .servizio-icon{
@@ -215,27 +182,17 @@
     }
 
     .title-servizio {
-        font-weight: bold;
         width: var(--cns_h2_width_small_landscape);
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
-        color: var(--accent_color);
-        text-align: left;
         font-size: var(--servizio_and_dove_siamo_usate_title_size_small);
-        margin-bottom: 0px;
         margin-top: var(--divServizio_and_dove_siamo_margin_top);
     }
 
     .description-servizio {
         width: var(--cns_p_width_small_landscape);
         font-size: var(--servizio_and_card_auto_usate_and_dove_siamo_description_size_small);
-        text-align: left;
-        color: white;
         margin-top: var(--divServizio_description_margin_top);
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
-    }
-
-    .title-and-icon-container{
-        margin-top: var(--divServizio_and_dove_siamo_margin_top);
     }
 
     .servizio-icon{
