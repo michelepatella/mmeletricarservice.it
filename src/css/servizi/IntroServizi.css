@@ -71,7 +71,7 @@
 }
 
 .arrow-and-label-container .arrow-button{
-    background-image: url('../../../public/icons/arrow.svg');
+    /**background-image: url('../../../public/icons/arrow.svg');**/
     background-color: transparent;
     background-size: cover;
     background-position: center;
