@@ -1,159 +1,102 @@
-/* ------ Big screen -------*/
+/* ------- Common styles ------- */
+.contact-button-contact-section {
+    background-color: var(--accent_color);
+    color: var(--background_color);
+    font-family: 'Poppins';
+    border-radius: var(--contact_button_border_radius);
+    padding: var(--contact_button_padding);
+    transition: all 0.3s ease;
+}
+
+.contact-button-contact-section:hover {
+    background-color: var(--accent_color) !important;
+    color: var(--background_color) !important;
+    font-family: 'Poppins' !important;
+    border-radius: var(--contact_button_border_radius);
+    padding: var(--contact_button_padding);
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
+
+/* ------- Big screen ------- */
 @media (min-width: 1025px) {
-
-    .contact-button-contact-section{
-        background-color: var(--accent_color);
-        color: var(--background_color);
-        font-family: 'Poppins';
-        border-radius: var(--contact_button_border_radius);
+    .contact-button-contact-section {
         font-size: var(--secondary_text_size_big);
-        padding: var(--contact_button_padding);
     }
 
-    .contact-button-contact-section:hover{
-        background-color: var(--accent_color) !important;
-        color: var(--background_color) !important;
-        font-family: 'Poppins' !important;
-        border-radius: var(--contact_button_border_radius);
-        padding: var(--contact_button_padding);
-        font-size: var(--secondary_text_size_big);
-        transform: scale(1.1);
-    }
-
-    #auto-usate .contact-button-contact-section{
+    #auto-usate .contact-button-contact-section {
         margin-left: var(--cns_h2_p_margin_left_big);
     }
 
-    #dove-siamo .contact-button-contact-section{
+    #dove-siamo .contact-button-contact-section {
         margin-top: var(--custom_button_margin_top_big_and_medium);
         margin-bottom: var(--custom_button_margin_bottom);
         margin-left: var(--cns_h2_p_margin_left_big);
     }
 }
 
-
-/* Medium screen portrait */
+/* ------- Medium screen portrait ------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-
-    .contact-button-contact-section{
-        background-color: var(--accent_color);
-        color: var(--background_color);
-        font-family: 'Poppins';
-        border-radius: var(--contact_button_border_radius);
-        padding: var(--contact_button_padding);
+    .contact-button-contact-section {
         font-size: var(--secondary_text_size_medium);
     }
 
-    .contact-button-contact-section:hover{
-        background-color: var(--accent_color) !important;
-        color: var(--background_color) !important;
-        font-family: 'Poppins' !important;
-        border-radius: var(--contact_button_border_radius);
-        padding: var(--contact_button_padding);
-        font-size: var(--secondary_text_size_medium);
-    }
-
-    #auto-usate .contact-button-contact-section{
+    #auto-usate .contact-button-contact-section {
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
     }
 
-    #dove-siamo .contact-button-contact-section{
+    #dove-siamo .contact-button-contact-section {
         margin-top: var(--custom_button_margin_top_big_and_medium);
         margin-bottom: var(--custom_button_margin_bottom);
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
     }
 }
 
-/* Medium screen landscape*/
+/* ------- Medium screen landscape ------- */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-    .contact-button-contact-section{
-        background-color: var(--accent_color);
-        color: var(--background_color);
-        font-family: 'Poppins';
-        border-radius: var(--contact_button_border_radius);
-        padding: var(--contact_button_padding);
+    .contact-button-contact-section {
         font-size: var(--secondary_text_size_medium);
     }
 
-    .contact-button-contact-section:hover{
-        background-color: var(--accent_color) !important;
-        color: var(--background_color) !important;
-        font-family: 'Poppins' !important;
-        border-radius: var(--contact_button_border_radius);
-        padding: var(--contact_button_padding);
-        font-size: var(--secondary_text_size_medium);
-    }
-
-    #auto-usate .contact-button-contact-section{
+    #auto-usate .contact-button-contact-section {
         margin-left: var(--cns_h2_p_margin_left_medium_landscape);
     }
 
-    #dove-siamo .contact-button-contact-section{
+    #dove-siamo .contact-button-contact-section {
         margin-top: var(--custom_button_margin_top_big_and_medium);
         margin-bottom: var(--custom_button_margin_bottom);
         margin-left: var(--cns_h2_p_margin_left_medium_portrait);
     }
 }
 
-/* Small screen portrait*/
+/* ------- Small screen portrait ------- */
 @media (max-width: 767px) {
-
-    .contact-button-contact-section{
-        background-color: var(--accent_color);
-        color: var(--background_color);
-        font-family: 'Poppins';
-        border-radius: var(--contact_button_border_radius);
-        padding: var(--contact_button_padding);
+    .contact-button-contact-section {
         font-size: var(--secondary_text_size_small);
     }
 
-    .contact-button-contact-section:hover{
-        background-color: var(--accent_color) !important;
-        color: var(--background_color) !important;
-        font-family: 'Poppins' !important;
-        border-radius: var(--contact_button_border_radius);
-        padding: var(--contact_button_padding);
-        font-size: var(--secondary_text_size_small);
-    }
-
-    #auto-usate .contact-button-contact-section{
+    #auto-usate .contact-button-contact-section {
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
     }
 
-    #dove-siamo .contact-button-contact-section{
+    #dove-siamo .contact-button-contact-section {
         margin-top: var(--custom_button_margin_top_small_portrait);
         margin-bottom: var(--custom_button_margin_bottom);
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
     }
 }
 
-/* Small screen landscape*/
-@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
-
-    .contact-button-contact-section{
-        background-color: var(--accent_color);
-        color: var(--background_color);
-        font-family: 'Poppins';
-        border-radius: var(--contact_button_border_radius);
-        padding: var(--contact_button_padding);
+/* ------- Small screen landscape -------- */
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
+    .contact-button-contact-section {
         font-size: var(--secondary_text_size_small);
     }
 
-    .contact-button-contact-section:hover{
-        background-color: var(--accent_color) !important;
-        color: var(--background_color) !important;
-        font-family: 'Poppins' !important;
-        border-radius: var(--contact_button_border_radius);
-        padding: var(--contact_button_padding);
-        font-size: var(--secondary_text_size_small);
-    }
-
-    #auto-usate .contact-button-contact-section{
+    #auto-usate .contact-button-contact-section {
         margin-left: var(--cns_h2_p_margin_left_small_landscape);
     }
 
-    #dove-siamo .contact-button-contact-section{
+    #dove-siamo .contact-button-contact-section {
         margin-top: var(--custom_button_margin_top_small_landscape);
         margin-bottom: var(--custom_button_margin_bottom);
         margin-left: var(--cns_h2_p_margin_left_small_portrait);
