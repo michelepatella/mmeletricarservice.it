@@ -10,7 +10,7 @@ html, body {
 /*Global variables*/
 :root {
 
-  /**menu**/
+  /*menu*/
   /* ----- big -----*/
   --menu_margin_top_big: 25px;
   --menu_container_padding_top_big: 100px;

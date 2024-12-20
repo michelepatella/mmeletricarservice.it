@@ -181,7 +181,7 @@
         }
     }
 
-    //*THIS ORDER IS IMPORTANT TO PHONE MENU ITEMS ANIMATION*//
+    /*THIS ORDER IS IMPORTANT TO PHONE MENU ITEMS ANIMATION*/
     .ant-menu-item:nth-child(1) {
         animation-delay: 0.2s;
 

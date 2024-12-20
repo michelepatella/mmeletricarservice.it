@@ -1,4 +1,4 @@
-/** Animation **/
+/* Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -10,10 +10,10 @@
     }
 }
 
-/** Common styles **/
+/* Common styles */
 .title-container{
     overflow: hidden;
-    /**background-image: url('../../../public/icons/background.svg');**/
+    background-image: url('../../../public/icons/background.svg');
     background-repeat: no-repeat;
     background-position: initial;
     height: 100vh;
