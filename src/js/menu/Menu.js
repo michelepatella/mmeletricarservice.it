@@ -1,6 +1,6 @@
 import '../../css/other/Menu.css';
-import MenuForPhone from "./MenuForPhone";
-import MenuForPcAndTablet from "./MenuForPcAndTablet";
+import MenuSmallScreen from "./MenuSmallScreen";
+import MenuBigScreen from "./MenuBigScreen";
 
 /**
  * This component contains the menu of the web page
@@ -11,10 +11,10 @@ const Menu = () => {
     return (
         <>
             {/* Menu for PC and tablet*/}
-            <MenuForPcAndTablet></MenuForPcAndTablet>
+            <MenuBigScreen></MenuBigScreen>
 
             {/* Menu for phone*/}
-            <MenuForPhone></MenuForPhone>
+            <MenuSmallScreen></MenuSmallScreen>
         </>
     );
 }

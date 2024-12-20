@@ -8,7 +8,7 @@ import { SECTIONS } from "../utility/constants";
  * @returns {Element}
  * @constructor
  */
-function MenuForPhone() {
+function MenuSmallScreen() {
     const [visible, setVisible] = useState(false);
 
     /**
@@ -73,4 +73,4 @@ function MenuForPhone() {
     );
 }
 
-export default MenuForPhone;
+export default MenuSmallScreen;

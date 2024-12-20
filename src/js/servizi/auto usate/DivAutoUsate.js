@@ -32,7 +32,6 @@ function DivAutoUsate({ description }) {
             <Col className="statistic-division" ref={ref}>
                 <Statistic
                     title={description}
-                    style={{fontWeight: "bold"}}
                     value={hasStarted ? 100 : 0}
                     suffix="%"
                     className="custom-statistic"

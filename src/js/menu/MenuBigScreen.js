@@ -8,7 +8,7 @@ import {SECTIONS} from "../utility/constants";
  * @returns {Element}
  * @constructor
  */
-function MenuForPcAndTablet(){
+function MenuBigScreen(){
 
     /**
      * Method to animate the transition to a section
@@ -64,4 +64,4 @@ function MenuForPcAndTablet(){
     );
 }
 
-export default MenuForPcAndTablet;
+export default MenuBigScreen;
