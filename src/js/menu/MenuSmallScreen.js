@@ -2,6 +2,7 @@ import { Button, Drawer, Menu as AntMenu } from "antd";
 import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 import React, { useState } from "react";
 import { SECTIONS } from "../utility/constants";
+import {scrollToSection} from "../utility/scrollToSection";
 
 /**
  * This component contains the menu for phone
@@ -10,18 +11,6 @@ import { SECTIONS } from "../utility/constants";
  */
 function MenuSmallScreen() {
     const [visible, setVisible] = useState(false);
-
-    /**
-     * Method to animate the transition to a section
-     * @param sectionId
-     */
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-        }
-        setVisible(false);
-    };
 
     const toggleDrawer = () => {
         setVisible(!visible);
@@ -39,10 +28,10 @@ function MenuSmallScreen() {
                 key: `section-${index + 1}-child-${childIndex + 1}`,
                 href: `#${child.id}`,
                 label: child.title,
-                onClick: () => scrollToSection(child.id),
+                onClick: () => scrollToSection(child.id, setVisible),
             }))
             : undefined,
-        onClick: () => scrollToSection(section.id),
+        onClick: () => scrollToSection(section.id, setVisible),
     }));
 
     return (

@@ -2,6 +2,7 @@ import {motion, useAnimation} from "framer-motion";
 import {Anchor} from "antd";
 import React, {useEffect} from "react";
 import {SECTIONS} from "../utility/constants";
+import {scrollToSection} from "../utility/scrollToSection";
 
 /**
  * This component contains the menu for pc and tablet
@@ -9,17 +10,6 @@ import {SECTIONS} from "../utility/constants";
  * @constructor
  */
 function MenuBigScreen(){
-
-    /**
-     * Method to animate the transition to a section
-     * @param sectionId
-     */
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
 
     /**
      * Animation of the menu
@@ -42,10 +32,10 @@ function MenuBigScreen(){
                 key: `section-${index + 1}-child-${childIndex + 1}`,
                 href: `#${child.id}`,
                 title: child.title,
-                onClick: () => scrollToSection(child.id, false),
+                onClick: () => scrollToSection(child.id, null),
             }))
             : undefined,
-        onClick: () => scrollToSection(section.id, false)
+        onClick: () => scrollToSection(section.id, null)
     }));
 
     return (

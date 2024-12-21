@@ -2,6 +2,7 @@ import '../../css/servizi/IntroServizi.css';
 import React, {useRef} from "react";
 import {INTRO_SERVIZI_TITLE, INTRO_SERVIZI_DESCRIPTION, ARROW_LABEL} from "../utility/constants";
 import useIntersectionObserver from "../utility/useIntersectionObserver";
+import {scrollToSection} from "../utility/scrollToSection";
 
 /**
  * This component contains the intro servizi section
@@ -9,17 +10,6 @@ import useIntersectionObserver from "../utility/useIntersectionObserver";
  * @constructor
  */
 function IntroServizi() {
-
-    /**
-     * Method to go to the Altri servizi section by using the arrow
-     * @param sectionId
-     */
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
 
     const titleRef = useRef(null);
     const subtitleRef = useRef(null);
@@ -41,7 +31,7 @@ function IntroServizi() {
             <div className="arrow-and-label-container">
                 {/*Arrow label and arrow for going to the next section*/}
                 <p className="arrow-label">{ARROW_LABEL}</p>
-                <button className="arrow-button" onClick={() => scrollToSection('altri-servizi')}></button>
+                <button className="arrow-button" onClick={() => scrollToSection('altri-servizi', null)}></button>
             </div>
         </>
     );
