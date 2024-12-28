@@ -32,6 +32,11 @@ function HomeHeader() {
 
     return (
         <>
+            {/*Circle for the logo*/}
+            <circle className="logoCircle">
+                <img src="/icons/logo.svg"/>
+            </circle>
+
             {/* Email Button */}
             <button className="contact-button email-button" onClick={onEmailButtonClick}>
                 <img src="/icons/emailIcon.svg" alt="Email"/>
@@ -44,6 +49,7 @@ function HomeHeader() {
             <button className="contact-button phone-button" onClick={onPhoneButtonClick}>
                 <img src="/icons/phoneIcon.svg" alt="Phone"/>
             </button>
+
         </>
     );
 
