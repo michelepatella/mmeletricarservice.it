@@ -34,9 +34,7 @@ function HomeHeader() {
         <>
             {/*Circle for the logo*/}
             <div className="logoWrapper">
-                <circle className="logoCircle">
-                    <img src="/icons/logo.svg"/>
-                </circle>
+                <img src="/icons/logo.svg"/>
             </div>
 
             {/* Email Button */}

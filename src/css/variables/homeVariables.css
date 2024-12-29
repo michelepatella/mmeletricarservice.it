@@ -14,6 +14,8 @@
     --home_header_padding_top_small_landscape: 15px;
 
     --logo_dimension_big_and_medium: 100px;
+    --logo_dimension_small: 90px;
+    --logo_margin_left_big_and_medium: 10px;
 
     /**home content**/
     --home_title_container_margin_left_big: 280px;

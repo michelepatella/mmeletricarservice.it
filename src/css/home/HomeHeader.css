@@ -17,24 +17,14 @@
     transform: scale(1.1);
 }
 
-.logoCircle{
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.logoCircle img {
+.logoWrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .logoWrapper{
     z-index: 99999;
     top: 0;
-    left: 0;
 }
 
 /* -------- Big screen -------- */
@@ -53,13 +43,14 @@
         height: var(--three_contact_buttons_dimension_big_and_medium);
     }
 
-    .logoCircle {
-        width: var(--logo_dimension_big_and_medium);
-        height: var(--logo_dimension_big_and_medium);
-    }
-
     .logoWrapper {
         position: fixed;
+        left: var(--logo_margin_left_big_and_medium);
+    }
+
+    .logoWrapper img{
+        width: var(--logo_dimension_big_and_medium);
+        height: var(--logo_dimension_big_and_medium);
     }
 
 }
@@ -80,13 +71,14 @@
         height: var(--three_contact_buttons_dimension_big_and_medium);
     }
 
-    .logoCircle {
-        width: var(--logo_dimension_big_and_medium);
-        height: var(--logo_dimension_big_and_medium);
-    }
-
     .logoWrapper {
         position: fixed;
+        left: var(--logo_margin_left_big_and_medium);
+    }
+
+    .logoWrapper img{
+        width: var(--logo_dimension_big_and_medium);
+        height: var(--logo_dimension_big_and_medium);
     }
 }
 
@@ -107,9 +99,14 @@
         height: var(--three_contact_buttons_dimension_small);
     }
 
-    .logoCircle {
-        width: 100px;
-        height: 100px;
+    .logoWrapper img{
+        width: var(--logo_dimension_small);
+        height: var(--logo_dimension_small);
+    }
+
+    .logoWrapper {
+        left: var(--general_margin_left_small_portrait);
+        top: 0;
     }
 }
 
@@ -130,8 +127,13 @@
         height: var(--three_contact_buttons_dimension_small);
     }
 
-    .logoCircle {
-        width: 100px;
-        height: 100px;
+    .logoWrapper img{
+        width: var(--logo_dimension_small);
+        height: var(--logo_dimension_small);
+    }
+
+    .logoWrapper {
+        left: var(--general_margin_left_small_landscape);
+        top: 0;
     }
 }
