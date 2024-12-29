@@ -33,13 +33,15 @@ function HomeHeader() {
     return (
         <>
             {/*Circle for the logo*/}
-            <circle className="logoCircle">
-                <img src="/icons/logo.svg"/>
-            </circle>
+            <div className="logoWrapper">
+                <circle className="logoCircle">
+                    <img src="/icons/logo.svg"/>
+                </circle>
+            </div>
 
             {/* Email Button */}
             <button className="contact-button email-button" onClick={onEmailButtonClick}>
-                <img src="/icons/emailIcon.svg" alt="Email"/>
+            <img src="/icons/emailIcon.svg" alt="Email"/>
             </button>
             {/* Facebook Button */}
             <button className="contact-button facebook-button" onClick={onFacebookButtonClick}>

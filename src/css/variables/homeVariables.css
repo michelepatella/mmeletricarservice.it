@@ -13,6 +13,8 @@
     --home_header_padding_right_small_landscape: 11px;
     --home_header_padding_top_small_landscape: 15px;
 
+    --logo_dimension_big_and_medium: 100px;
+
     /**home content**/
     --home_title_container_margin_left_big: 280px;
     --home_title_margin_top_big: 35px;
