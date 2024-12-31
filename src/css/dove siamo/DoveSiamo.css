@@ -1,20 +1,3 @@
-/** Animation **/
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: rotateX(90deg) translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: rotateX(0deg) translateY(0);
-    }
-}
-
-.dove-siamo-title.in-view {
-    opacity: 1;
-    transform: rotateX(0deg) translateY(0);
-}
-
 /** Common styles **/
 .dove-siamo-container {
     width: 90%;
@@ -25,9 +8,6 @@
 }
 
 .dove-siamo-title {
-    opacity: 0;
-    transform: rotateX(90deg) translateY(20px);
-    transition: opacity 1.5s ease, transform 1.5s ease;
     color: var(--accent_color);
     text-align: left;
 }

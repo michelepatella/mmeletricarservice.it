@@ -11,10 +11,7 @@ import {scrollToSection} from "../utility/scrollToSection";
  */
 function IntroServizi() {
 
-    const titleRef = useRef(null);
     const subtitleRef = useRef(null);
-
-    useIntersectionObserver(titleRef);
     useIntersectionObserver(subtitleRef);
 
     return (
@@ -22,7 +19,7 @@ function IntroServizi() {
             {/* Intro servizi description definition */}
             <div id="intro-servizi" className="intro-servizi-container">
                 {/* Title */}
-                <h2 className="intro-servizi-title" ref={titleRef} dangerouslySetInnerHTML={{ __html: INTRO_SERVIZI_TITLE }}/>
+                <h2 className="intro-servizi-title" dangerouslySetInnerHTML={{ __html: INTRO_SERVIZI_TITLE }}/>
 
                 {/* Description */}
                 <p className="intro-servizi-subtitle" ref={subtitleRef} dangerouslySetInnerHTML={{ __html: INTRO_SERVIZI_DESCRIPTION }}/>

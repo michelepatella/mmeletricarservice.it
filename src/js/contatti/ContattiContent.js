@@ -10,17 +10,15 @@ import useIntersectionObserver from "../utility/useIntersectionObserver";
  * @constructor
  */
 function ContattiContent(props) {
-    const titleRef = useRef(null);
-    const subtitleRef = useRef(null);
 
-    useIntersectionObserver(titleRef);
+    const subtitleRef = useRef(null);
     useIntersectionObserver(subtitleRef);
 
     return (
         <div className="title-contatti-container">
 
             {/* Title */}
-            <h1 className="contatti-title" dangerouslySetInnerHTML={{__html: CONTATTI_TITLE}} ref={titleRef}/>
+            <h1 className="contatti-title" dangerouslySetInnerHTML={{__html: CONTATTI_TITLE}}/>
 
             {/* Subtitle */}
             <p className="contatti-description" dangerouslySetInnerHTML={{__html: CONTATTI_SUBTITLE}} ref={subtitleRef}/>

@@ -10,10 +10,7 @@ import useIntersectionObserver from "../utility/useIntersectionObserver";
  */
 function NostriValori() {
 
-    const titleRef = useRef(null);
     const subtitleRef = useRef(null);
-
-    useIntersectionObserver(titleRef);
     useIntersectionObserver(subtitleRef);
 
     return (
@@ -21,7 +18,7 @@ function NostriValori() {
             {/* Nostri valori description definition */}
             <div id="nostri-valori" className="nostri-valori-container">
                 {/* Title */}
-                <h2 className="nostri-valori-title" ref={titleRef}>{NOSTRI_VALORI_TITLE}</h2>
+                <h2 className="nostri-valori-title">{NOSTRI_VALORI_TITLE}</h2>
 
                 {/* Description */}
                 <p className="nostri-valori-subtitle" ref={subtitleRef} dangerouslySetInnerHTML={{ __html: NOSTRI_VALORI_DESCRIPTION }} />

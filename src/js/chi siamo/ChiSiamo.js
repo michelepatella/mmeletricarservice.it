@@ -9,16 +9,14 @@ import useIntersectionObserver from "../utility/useIntersectionObserver";
  * @constructor
  */
 function ChiSiamo() {
-    const titleRef = useRef(null);
-    const subtitleRef = useRef(null);
 
-    useIntersectionObserver(titleRef);
+    const subtitleRef = useRef(null);
     useIntersectionObserver(subtitleRef);
 
     return (
         <div id="chi-siamo" className="chi-siamo-container">
             {/* Title */}
-            <h2 ref={titleRef} className="chi-siamo-title">{CHI_SIAMO_TITLE}</h2>
+            <h2 className="chi-siamo-title">{CHI_SIAMO_TITLE}</h2>
 
             {/* Description */}
             <p ref={subtitleRef} className="chi-siamo-subtitle" dangerouslySetInnerHTML={{ __html: CHI_SIAMO_DESCRIPTION }} />

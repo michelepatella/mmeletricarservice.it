@@ -12,14 +12,10 @@ import useIntersectionObserver from "../utility/useIntersectionObserver";
  */
 function DoveSiamo() {
 
-    const titleRef = useRef(null);
-
-    useIntersectionObserver(titleRef);
-
     return (
         <div id="dove-siamo" className="dove-siamo-container">
             {/* Title */}
-            <h2 ref={titleRef} className="dove-siamo-title">{DOVE_SIAMO_TITLE}</h2>
+            <h2 className="dove-siamo-title">{DOVE_SIAMO_TITLE}</h2>
 
             <Row className="dove-siamo-main-container">
                 <Row className="dove-siamo-grid">

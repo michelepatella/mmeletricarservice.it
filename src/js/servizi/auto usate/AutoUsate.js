@@ -18,16 +18,13 @@ import useIntersectionObserver from "../../utility/useIntersectionObserver";
  */
 function AutoUsate() {
 
-    const titleRef = useRef(null);
     const subtitleRef = useRef(null);
-
-    useIntersectionObserver(titleRef);
     useIntersectionObserver(subtitleRef);
 
     return (
         <div id="auto-usate" className="auto-usate-container">
             {/* Title */}
-            <h2 ref={titleRef} className="auto-usate-title">{AUTO_USATE_TITLE}</h2>
+            <h2 className="auto-usate-title">{AUTO_USATE_TITLE}</h2>
 
             {/* Description */}
             <p ref={subtitleRef} className="auto-usate-subtitle">{AUTO_USATE_DESCRIPTION}</p>
