@@ -32,11 +32,6 @@ function HomeHeader() {
 
     return (
         <>
-            {/*Circle for the logo*/}
-            <div className="logoWrapper">
-                <img src="/icons/logo.svg"/>
-            </div>
-
             {/* Email Button */}
             <button className="contact-button email-button" onClick={onEmailButtonClick}>
             <img src="/icons/emailIcon.svg" alt="Email"/>

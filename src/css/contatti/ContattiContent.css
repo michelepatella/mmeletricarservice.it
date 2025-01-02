@@ -28,7 +28,7 @@
     position: relative;
     top: 0;
     background-color: var(--background_color);
-    background-image: url('../../../public/icons/background.svg');
+    background-image: url('../../../public/icons/graphic.svg');
     background-repeat: no-repeat;
     background-position: initial;
 }
@@ -128,7 +128,7 @@
     }
 
     .title-contatti-container {
-        background-size: 80%;
+        background-size: 90%;
         margin-left: var(--general_margin_left_small_portrait);
     }
 
