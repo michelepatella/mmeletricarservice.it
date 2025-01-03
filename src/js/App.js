@@ -25,6 +25,7 @@ import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './utility/constants';
 import {FloatButton} from "antd";
+import CookieConsent from "react-cookie-consent";
 
 /**
  * This component contains all the sections of the web page and
@@ -37,6 +38,45 @@ function App() {
     return (
 
         <>
+            {/* Cookie Consent Banner */}
+            <CookieConsent
+                location="bottom"
+                buttonText="Accetto"
+                cookieName="user-consent"
+                style={{
+                    background: "#2B373B",
+                    color: "#fff",
+                    fontSize: "14px",
+                    padding: "10px",
+                    textAlign: "center",
+                    position: "fixed",
+                    bottom: "0",
+                    width: "100%",
+                    zIndex: "9999",
+                }}
+                buttonStyle={{
+                    background: "#4CAF50",
+                    color: "white",
+                    fontSize: "14px",
+                    padding: "8px 20px",
+                    borderRadius: "5px",
+                    border: "none",
+                    cursor: "pointer",
+                }}
+                declineButtonStyle={{
+                    background: "#FF5722",
+                    color: "white",
+                    fontSize: "14px",
+                    padding: "8px 20px",
+                    borderRadius: "5px",
+                    border: "none",
+                    cursor: "pointer",
+                }}
+                expires={365}
+            >
+                Questo sito utilizza i cookie per migliorare l'esperienza di navigazione. Per maggiori informazioni, consulta la nostra <a href="/privacy-policy" style={{ color: '#fff' }}>Privacy Policy</a> e la <a href="/cookie-policy" style={{ color: '#fff' }}>Cookie Policy</a>.
+            </CookieConsent>
+
             {/* WhatsApp support button */}
             <FloatButton
                 id="support-button"
@@ -60,7 +100,7 @@ function App() {
             <ChiSiamo/>
 
             {/*Integration of Nostri valori section*/}
-            <NostriValori/>
+            <NostriValori/>x
 
             {/*Integration of Intro Servizi section*/}
             <IntroServizi/>
