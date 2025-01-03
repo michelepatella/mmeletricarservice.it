@@ -20,7 +20,7 @@ function DivServizio({ title, description, icon}){
             <Flex gap="small" align="start" vertical className="title-and-icon-container">
                 <Flex className="flex-division">
                     <p className="title-servizio">{title}</p>
-                    <img className="servizio-icon" src={icon}/>
+                    <img className="servizio-icon" src={icon} alt="servizio-icon"/>
                 </Flex>
             </Flex>
             <p className="description-servizio" ref={subtitleRef}>{description}</p>

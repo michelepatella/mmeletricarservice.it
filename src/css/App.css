@@ -27,12 +27,12 @@ html, body {
   --ant_menu_submenu_item_padding_left: 50px;
   /* ----- small portrait  -----*/
   --ant_menu_margin_top_portrait: 10px;
-  --ant_menu_subtitle_title_margin_bottom_portrait: 70px;
-  --ant_menu_item_margin_bottom_portrait: 70px;
+  --ant_menu_subtitle_title_margin_bottom_portrait: 50px;
+  --ant_menu_item_margin_bottom_portrait: 50px;
   --ant_menu_submenu_item_margin_bottom_portrait: 20px;
   /* ----- small landscape  -----*/
-  --ant_menu_margin_bottom_landscape: 20px;
-  --ant_menu_item_margin_bottom_landscape: 20px;
+  --ant_menu_margin_bottom_landscape: 40px;
+  --ant_menu_item_margin_bottom_landscape: 40px;
   --ant_menu_submenu_item_margin_top_and_bottom_landscape: 5px;
 
 }

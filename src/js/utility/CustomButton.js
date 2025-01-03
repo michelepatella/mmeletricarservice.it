@@ -63,7 +63,7 @@ const clickHandlers = {
 function CustomButton({value, icon}){
     return (
         <Button type="primary" className="contact-button-contact-section" onClick={clickHandlers[value]}>
-            <img src={icon}/>
+            <img src={icon} alt="contact-icon"/>
             {value}</Button>
     )
 }

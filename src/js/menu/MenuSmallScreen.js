@@ -2,7 +2,7 @@ import { Button, Drawer, Menu as AntMenu } from "antd";
 import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 import React, { useState } from "react";
 import { SECTIONS } from "../utility/constants";
-import {scrollToSection} from "../utility/scrollToSection";
+import { scrollToSection } from "../utility/scrollToSection";
 
 /**
  * This component contains the menu for phone
@@ -17,21 +17,37 @@ function MenuSmallScreen() {
     };
 
     /**
+     * Generate styles for animation delay
+     * @param {number} index
+     * @returns {React.CSSProperties}
+     */
+    const generateAnimationStyles = (index) => ({
+        animation: "fadeInUp 0.5s forwards",
+        animationDelay: `${0.2 + index * 0.1}s`,
+        opacity: 0,
+        transform: "translateY(-20px)",
+    });
+
+    /**
      * Generation of menu items
      */
     const menuItemsGeneration = SECTIONS.map((section, index) => ({
         key: `section-${index + 1}`,
-        href: `#${section.id}`,
         label: section.title,
+        onClick: () => {
+            scrollToSection(section.id, setVisible);
+            setVisible(false);
+        },
         children: section.children
             ? section.children.map((child, childIndex) => ({
                 key: `section-${index + 1}-child-${childIndex + 1}`,
-                href: `#${child.id}`,
                 label: child.title,
-                onClick: () => scrollToSection(child.id, setVisible),
+                onClick: () => {
+                    scrollToSection(child.id, setVisible);
+                    setVisible(false);
+                },
             }))
             : undefined,
-        onClick: () => scrollToSection(section.id, setVisible),
     }));
 
     return (
@@ -51,12 +67,42 @@ function MenuSmallScreen() {
                 placement="right"
                 closable={true}
                 onClose={toggleDrawer}
-                visible={visible}
+                open={visible}
                 width="100vw"
                 height="100vh"
-                closeIcon={<CloseOutlined style={{ fontSize: "30px", color: "black" }} />}
+                closeIcon={<CloseOutlined style={{ fontSize: "30px", color: "black", paddingTop: 20 }} />}
             >
-                <AntMenu mode="inline" items={menuItemsGeneration} />
+                {/* Menu structure */}
+                <AntMenu mode="inline" style={{ borderRight: 0 }}>
+                    {menuItemsGeneration.map((menuItem, index) => (
+                        <React.Fragment key={menuItem.key}>
+                            {/* Parent Item */}
+                            <AntMenu.Item
+                                key={menuItem.key}
+                                onClick={menuItem.onClick}
+                                style={generateAnimationStyles(index)}
+                            >
+                                {menuItem.label}
+                            </AntMenu.Item>
+
+                            {/* Children Items (if any) */}
+                            {menuItem.children &&
+                                menuItem.children.map((child, childIndex) => (
+                                    <AntMenu.Item
+                                        key={child.key}
+                                        onClick={child.onClick}
+                                        className="ant-menu-item-child"
+                                        style={{
+                                            ...generateAnimationStyles(index + childIndex + 1),
+                                            paddingLeft: "60px"
+                                        }}
+                                    >
+                                        {child.label}
+                                    </AntMenu.Item>
+                                ))}
+                        </React.Fragment>
+                    ))}
+                </AntMenu>
             </Drawer>
         </div>
     );

@@ -22,7 +22,7 @@ function DivDoveSiamo({ title, description, icon}){
             <Flex gap="small" align="start" vertical className="title-and-icon-container-dove-siamo">
                 <Flex className="flex-division-dove-siamo">
                     <p className="dove-siamo-division-title" ref={titleRef}>{title}</p>
-                    <img className="dove-siamo-division-icon" src={icon}/>
+                    <img className="dove-siamo-division-icon" src={icon} alt="dove-siamo-icon"/>
                 </Flex>
             </Flex>
             <p className="dove-siamo-division-description" ref={subtitleRef} dangerouslySetInnerHTML={{ __html: description }} />
