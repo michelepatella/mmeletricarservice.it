@@ -10,6 +10,7 @@ import '../css/variables/autoUsateVariables.css';
 import '../css/variables/generalMarginsVariables.css';
 import '../css/variables/altriServiziAndDoveSiamoDivVariables.css';
 import '../css/other/WhatsappSupportButton.css';
+import '../css/variables/menuVariables.css';
 import React from "react";
 import Home from './home/Home';
 import ChiSiamo from './chi siamo/ChiSiamo';
