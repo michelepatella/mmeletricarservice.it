@@ -29,9 +29,11 @@ function DoveSiamo() {
                     ))}
 
                     <div className="google-map-container">
+
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10733.473868158232!2d16.4217779!3d40.8133596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133f3f8556e5b9ff%3A0x46c6a8b1785d90!2sVia%20Bizet%2C%2063%2C%2007015%20Gravina%20in%20Puglia%20BA%2C%20Italy!5e0!3m2!1sen!2sus!4v1608895604453!5m2!1sen!2sus"
-                            width="600" height="450" loading="lazy">
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.143408468909!2d16.4256612!3d40.8248136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13387b9989c61785%3A0xaa80de53bd394020!2sMM%20Eletricar%20Service%20di%20Vacca%20%26%20Scalese%20snc%20%E2%80%A2%20Meccatronica%20%E2%80%A2%20Elettrauto!5e0!3m2!1sit!2sit!4v1735907615314!5m2!1sit!2sit"
+                            width="600" height="450" style={{border: 0}} allowFullScreen="" loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </Row>
