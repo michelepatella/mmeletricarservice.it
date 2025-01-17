@@ -25,6 +25,11 @@
     overflow: hidden;
 }
 
+.google-maps-iframe{
+    border: 0;
+    width: 600px;
+    height: 450px;
+}
 
 /* ------ Big screen -------*/
 @media (min-width: 1025px) {
