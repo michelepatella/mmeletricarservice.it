@@ -3,6 +3,7 @@ import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 import React, { useState } from "react";
 import { SECTIONS } from "../utility/constants";
 import { scrollToSection } from "../utility/scrollToSection";
+import {useLocation} from "react-router-dom";
 
 /**
  * This component contains the menu for phone
@@ -11,6 +12,8 @@ import { scrollToSection } from "../utility/scrollToSection";
  */
 function MenuSmallScreen() {
     const [visible, setVisible] = useState(false);
+
+    const location = useLocation();
 
     const toggleDrawer = () => {
         setVisible(!visible);
@@ -34,6 +37,7 @@ function MenuSmallScreen() {
     const menuItemsGeneration = SECTIONS.map((section, index) => ({
         key: `section-${index + 1}`,
         label: section.title,
+        path: section.id,
         onClick: () => {
             scrollToSection(section.id, setVisible);
             setVisible(false);
@@ -45,7 +49,7 @@ function MenuSmallScreen() {
                 onClick: () => {
                     scrollToSection(child.id, setVisible);
                     setVisible(false);
-                },
+                }
             }))
             : undefined,
     }));
@@ -80,7 +84,9 @@ function MenuSmallScreen() {
                             <AntMenu.Item
                                 key={menuItem.key}
                                 onClick={menuItem.onClick}
-                                style={generateAnimationStyles(index)}
+                                style={{
+                                    ...generateAnimationStyles(index),
+                                    textDecoration: location.pathname === menuItem.path ? "underline" : "none"}}
                             >
                                 {menuItem.label}
                             </AntMenu.Item>
@@ -94,6 +100,7 @@ function MenuSmallScreen() {
                                         className="ant-menu-item-child"
                                         style={{
                                             ...generateAnimationStyles(index + childIndex + 1),
+                                            textDecoration: location.pathname === menuItem.path ? "underline" : "none",
                                             paddingLeft: "60px"
                                         }}
                                     >
