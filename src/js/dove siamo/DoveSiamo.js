@@ -80,19 +80,29 @@ function DoveSiamo() {
                     borderRadius: "10px"
                 }}
                 declineButtonStyle={{
-                    background: "#FF6347",
-                    color: "#fff",
+                    background: "#3C3C3C",
+                    color: "white",
                     fontFamily: 'Poppins',
                     fontSize: "14px",
                     padding: "10px 20px",
                     borderRadius: "10px"
                 }}
                 expires={0}
+                enableDeclineButton={true}
                 onAccept={handleAcceptCookies}
                 onDecline={handleDeclineCookies}
             >
-                Questo sito utilizza i cookie per offrirti una migliore esperienza di navigazione.
+                Questo sito utilizza i <strong>cookie</strong>.
                 Cliccando su "Accetta", acconsenti all'uso dei cookie.
+                Cliccando su "Rifiuta", rifiuti l'uso dei cookie.
+                Per maggiori informazioni consulta la nostra <a href="#privacy-policy" style={{
+                color: 'white',
+                textDecoration: 'underline',
+                fontWeight: 'bold'
+                }}>
+                    Privacy Policy
+                </a>
+                🍪
             </CookieConsent>
 
         </div>
