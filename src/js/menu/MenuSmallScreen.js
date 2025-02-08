@@ -1,9 +1,8 @@
 import { Button, Drawer, Menu as AntMenu } from "antd";
 import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { SECTIONS } from "../utility/constants";
 import { scrollToSection } from "../utility/scrollToSection";
-import {useLocation} from "react-router-dom";
 
 /**
  * This component contains the menu for phone
@@ -13,7 +12,47 @@ import {useLocation} from "react-router-dom";
 function MenuSmallScreen() {
     const [visible, setVisible] = useState(false);
 
-    const location = useLocation();
+    const [section, setSection] = useState('');
+
+    /**
+     * Method to keep track of the section's changes and
+     * determine the current section to underline its name in the menu
+     */
+    useEffect(() => {
+        const handleScroll = () => {
+            let currentSection = '';
+            SECTIONS.forEach((sec) => {
+                const element = document.getElementById(sec.id);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                        currentSection = sec.id;
+                    }
+                }
+
+                //in case of the section is a children
+                if (sec.children) {
+                    sec.children.forEach((child) => {
+                        const childElement = document.getElementById(child.id);
+                        if (childElement) {
+                            const childRect = childElement.getBoundingClientRect();
+                            if (childRect.top <= window.innerHeight / 2 && childRect.bottom >= window.innerHeight / 2) {
+                                currentSection = child.id;
+                            }
+                        }
+                    });
+                }
+            });
+
+            setSection(currentSection);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     const toggleDrawer = () => {
         setVisible(!visible);
@@ -46,6 +85,7 @@ function MenuSmallScreen() {
             ? section.children.map((child, childIndex) => ({
                 key: `section-${index + 1}-child-${childIndex + 1}`,
                 label: child.title,
+                path: child.id,
                 onClick: () => {
                     scrollToSection(child.id, setVisible);
                     setVisible(false);
@@ -86,7 +126,7 @@ function MenuSmallScreen() {
                                 onClick={menuItem.onClick}
                                 style={{
                                     ...generateAnimationStyles(index),
-                                    textDecoration: location.pathname === menuItem.path ? "underline" : "none"}}
+                                    textDecoration: section === menuItem.path ? "underline" : "none"}}
                             >
                                 {menuItem.label}
                             </AntMenu.Item>
@@ -100,7 +140,7 @@ function MenuSmallScreen() {
                                         className="ant-menu-item-child"
                                         style={{
                                             ...generateAnimationStyles(index + childIndex + 1),
-                                            textDecoration: location.pathname === menuItem.path ? "underline" : "none",
+                                            textDecoration: section === child.path ? "underline" : "none",
                                             paddingLeft: "60px"
                                         }}
                                     >
