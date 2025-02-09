@@ -1,0 +1,72 @@
+/** Common styles **/
+.cookie-button {
+    position: fixed;
+    bottom: var(--cookie_button_margin);
+    left: var(--cookie_button_margin);
+    background-color: transparent;
+    background-image: url('../../../public/icons/cookieIcon.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    z-index: 99999;
+}
+
+.cookie-button:hover {
+    position: fixed;
+    bottom: var(--cookie_button_margin) !important;
+    left: var(--cookie_button_margin) !important;
+    background-color: transparent !important;
+    background-image: url('../../../public/icons/cookieIcon.svg') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    z-index: 99999 !important;
+    border: none !important;
+}
+
+/* ------- Big screen ------- */
+@media (min-width: 1025px) {
+    .cookie-button {
+        width: var(--cookie_button_dimension_big);
+        height: var(--cookie_button_dimension_big);
+    }
+
+    .cookie-button:hover {
+        width: var(--cookie_button_dimension_big_hover);
+        height: var(--cookie_button_dimension_big_hover);
+    }
+
+}
+
+/* ------- Medium screen landscape ------- */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .cookie-button {
+        width: var(--cookie_button_dimension_medium_landscape);
+        height: var(--cookie_button_dimension_medium_landscape);
+    }
+}
+
+/* ------- Medium screen portrait ------- */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .cookie-button {
+        width: var(--cookie_button_dimension_medium_portrait_and_small);
+        height: var(--cookie_button_dimension_medium_portrait_and_small);
+    }
+}
+
+/* ------- Small screen portrait ------- */
+@media (max-width: 767px) and (orientation: portrait) {
+    .cookie-button {
+        width: var(--cookie_button_dimension_medium_portrait_and_small);
+        height: var(--cookie_button_dimension_medium_portrait_and_small);
+    }
+}
+
+/* ------- Small screen landscape ------- */
+@media (max-height: 767px) and (orientation: landscape) {
+    .cookie-button {
+        width: var(--cookie_button_dimension_medium_portrait_and_small);
+        height: var(--cookie_button_dimension_medium_portrait_and_small);
+    }
+}

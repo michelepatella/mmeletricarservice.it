@@ -11,7 +11,9 @@ import '../css/variables/generalMarginsVariables.css';
 import '../css/variables/altriServiziAndDoveSiamoDivVariables.css';
 import '../css/other/WhatsappSupportButton.css';
 import '../css/variables/menuVariables.css';
-import React from "react";
+import '../css/variables/cookieButtonVariables.css';
+import '../css/other/CookieButton.css';
+import React, {useState} from "react";
 import Home from './home/Home';
 import ChiSiamo from './chi siamo/ChiSiamo';
 import Menu from './menu/Menu';
@@ -24,7 +26,7 @@ import DoveSiamo from "./dove siamo/DoveSiamo";
 import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './utility/constants';
-import { FloatButton } from "antd";
+import {Button, FloatButton} from "antd";
 
 /**
  * This component contains all the sections of the web page and
@@ -33,7 +35,9 @@ import { FloatButton } from "antd";
  * @constructor
  */
 function App() {
-    console.log(document.cookie);
+
+
+
     return (
         <Router>
             <>

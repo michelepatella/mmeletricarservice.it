@@ -1,9 +1,9 @@
 :root{
-    --whatsapp_button_dimension_big: 60px;
-    --whatsapp_button_dimension_medium_landscape: 50px;
+    --whatsapp_button_dimension_big: 50px;
+    --whatsapp_button_dimension_medium_landscape: 45px;
     --whatsapp_button_dimension_medium_portrait_and_small: 40px;
 
-    --whatsapp_button_dimension_big_hover: 63px;
+    --whatsapp_button_dimension_big_hover: 52px;
 
     --whatsapp_button_margin: 20px;
 
