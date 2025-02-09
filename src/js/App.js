@@ -33,7 +33,7 @@ import { FloatButton } from "antd";
  * @constructor
  */
 function App() {
-
+    console.log(document.cookie);
     return (
         <Router>
             <>
