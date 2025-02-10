@@ -1,4 +1,6 @@
 import '../../css/dove siamo/DoveSiamo.css';
+import '../../css/other/CookieBanner.css';
+import '../../css/variables/cookiesBannerVariables.css';
 import {Button, Row, Switch} from "antd";
 import {DOVE_SIAMO_DIVISIONS, DOVE_SIAMO_TITLE} from "../utility/constants";
 import CookieConsent from "react-cookie-consent";
@@ -13,38 +15,30 @@ import React, {useEffect, useState} from "react";
  */
 function DoveSiamo() {
 
-    const [cookiesAccepted, setCookiesAccepted] = useState(false);
+    const [cookiesAccepted, setCookiesAccepted] = useState(null);
     const [isCookiesBannerVisible, setIsCookiesBannerVisible] = useState(false);
-
-    const [cookies, setCookies] = useState({
-        necessary: false,
-        preferences: false,
-        analytics: false,
-        advertising: false
-    });
-
-    const handleChange = (type) => {
-        setCookies(prevState => ({
-            ...prevState,
-            [type]: !prevState[type]
-        }));
-    };
 
     /**
      * Method to check if the cookies have already been accepted or not
      */
     useEffect(() => {
 
+        //read the cookie called cookieConsent
         const cookieConsent = Cookies.get('cookieConsent');
 
-        if (cookieConsent === 'true') {
+        //check its value, set the cookiesAccepted variables and show the cookies banner if necessary
+        if (cookieConsent === 'true')
             setCookiesAccepted(true);
-        }
+        else
+            if (cookieConsent === 'false')
+                setCookiesAccepted(false);
+            else
+                setIsCookiesBannerVisible(true);
+
     }, []);
 
-
     /**
-     * Method to handle the accepting of the cookie
+     * Method to handle the accepting of the cookies
      */
     const handleAcceptCookies = () => {
         setCookiesAccepted(true);
@@ -52,29 +46,19 @@ function DoveSiamo() {
     };
 
     /**
-     * Method to handle the declining of the cookie
+     * Method to handle the declining of the cookies
      */
     const handleDeclineCookies = () => {
         setCookiesAccepted(false);
         setIsCookiesBannerVisible(false);
+        window.location.reload();
     };
 
     /**
-     * Method to handle clicking on the cookie button
+     * Method to handle clicking on the cookies button
      */
     const handleCookieButtonClick = () => {
-        setCookiesAccepted(false);
         setIsCookiesBannerVisible(true);
-
-        //remove all cookies
-        const allCookies = Cookies.get();
-
-        for (let cookieName in allCookies) {
-            if (allCookies.hasOwnProperty(cookieName)) {
-                Cookies.remove(cookieName);
-            }
-        }
-
     };
 
     return (
@@ -111,11 +95,12 @@ function DoveSiamo() {
                 </Row>
             </Row>
 
-            {/*Banner for consenting/declining cookie*/}
+            {/*Banner for consenting/declining cookies and manage them*/}
             { isCookiesBannerVisible &&
                 <CookieConsent
                     location="bottom"
                     buttonText="Accetta tutti"
+                    className="cookies-banner"
                     declineButtonText="Rifiuta tutti"
                     cookieName="cookieConsent"
                     style={{
@@ -151,33 +136,29 @@ function DoveSiamo() {
                     Questo sito utilizza i <strong>cookie</strong>.
                     Cliccando su "Accetta", acconsenti all'uso dei cookie.
                     Cliccando su "Rifiuta", rifiuti l'uso dei cookie.
-                    Per maggiori informazioni consulta la nostra <a href="#privacy-policy" style={{
-                    color: 'white',
-                    textDecoration: 'underline',
-                    fontWeight: 'bold'
-                }}>
+                    Per maggiori informazioni consulta la nostra <a href="#privacy-policy" className="privacy-policy-link">
                     Privacy Policy
                 </a>
                     🍪
 
                     {/*Switch for technique and security cookies*/}
-                    <div style={{display: 'flex', alignItems: 'center', marginTop: '10px'}}>
+                    <div className="div-necessary-cookies">
                         <Switch
                             checked={true}
                             disabled
                             style={{backgroundColor: '#F8DE4D'}}
                         />
-                        <p style={{marginLeft: '10px'}}>Cookies tecnici e di sicurezza</p>
+                        <p className="cookies-switch-label">Cookies tecnici e di sicurezza</p>
                     </div>
 
                     {/*Switch for third-party cookies*/}
-                    <div style={{display: 'flex', alignItems: 'center'}}>
+                    <div className="div-third-party-cookies">
                         <Switch
-                            checked={cookies.preferences}
-                            onChange={() => handleChange('preferences')}
-                            style={{backgroundColor: cookies.preferences ? '#F8DE4D' : '#3C3C3C'}}
+                            checked={cookiesAccepted}
+                            onChange={() => setCookiesAccepted(!cookiesAccepted)}
+                            style={{backgroundColor:cookiesAccepted ? '#F8DE4D' : '#3C3C3C'}}
                         />
-                        <p style={{marginLeft: '10px'}}>Cookies di terze parti</p>
+                        <p className="cookies-switch-label">Cookies di terze parti</p>
                     </div>
 
                 </CookieConsent>
