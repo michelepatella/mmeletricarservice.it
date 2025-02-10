@@ -131,8 +131,8 @@ function DoveSiamo() {
                         borderRadius: "10px"
                     }}
                     declineButtonStyle={{
-                        background: "#3C3C3C",
-                        color: "white",
+                        background: "#F8DE4D",
+                        color: "black",
                         fontFamily: 'Poppins',
                         fontSize: "14px",
                         padding: "10px 20px",
@@ -167,7 +167,7 @@ function DoveSiamo() {
                         <Switch
                             checked={cookiesAccepted}
                             onChange={() => setCookiesAccepted(!cookiesAccepted)}
-                            style={{backgroundColor:cookiesAccepted ? '#F8DE4D' : '#3C3C3C'}}
+                            style={{backgroundColor: cookiesAccepted ? '#F8DE4D' : '#3C3C3C'}}
                         />
                         <p className="cookies-switch-label">Cookies di terze parti</p>
                     </div>
