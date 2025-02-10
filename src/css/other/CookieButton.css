@@ -1,26 +1,27 @@
 /** Common styles **/
 .cookie-button {
     position: fixed;
-    bottom: var(--cookie_button_margin);
-    left: var(--cookie_button_margin);
-    background-color: transparent;
+    bottom: var(--cookie_button_margin_bottom);
+    right: var(--cookie_button_margin_right);
+    background-color: var(--accent_color);
     background-image: url('../../../public/icons/cookieIcon.svg');
-    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 50%;
     border: none;
+    padding: 20px;
     z-index: 99999;
 }
 
 .cookie-button:hover {
     position: fixed;
-    bottom: var(--cookie_button_margin) !important;
-    left: var(--cookie_button_margin) !important;
-    background-color: transparent !important;
+    bottom: var(--cookie_button_margin_bottom) !important;
+    right: var(--cookie_button_margin_right) !important;
+    background-color: var(--accent_color) !important;
     background-image: url('../../../public/icons/cookieIcon.svg') !important;
-    background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
+    border-radius: 50% !important;
     z-index: 99999 !important;
     border: none !important;
 }
