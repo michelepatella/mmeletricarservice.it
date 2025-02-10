@@ -67,7 +67,6 @@ function App() {
                     <Route path="/contatti" element={<Contatti/>} />
                 </Routes>
 
-                <Home />
                 <ChiSiamo/>
                 <NostriValori/>
                 <IntroServizi/>
