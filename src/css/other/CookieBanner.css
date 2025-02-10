@@ -19,3 +19,25 @@
 .cookies-switch-label{
     margin-left: var(--cookies_switch_label_margin_left);
 }
+
+.save-preferences-button{
+    background-color: var(--accent_color);
+    color: black;
+    font-family: 'Poppins';
+    font-size: var(--save_preferences_button_font_size);
+    padding: var(--save_preferences_button_padding);
+    border-radius: 10px;
+    border: none;
+    margin-top: var(--save_preferences_button_margin_top);
+}
+
+.save-preferences-button:hover{
+    background-color: var(--accent_color) !important;
+    color: black !important;
+    font-family: 'Poppins' !important;
+    font-size: var(--save_preferences_button_font_size) !important;
+    padding: var(--save_preferences_button_padding) !important;
+    border-radius: 10px !important;
+    border: none;
+    margin-top: var(--save_preferences_button_margin_top);
+}

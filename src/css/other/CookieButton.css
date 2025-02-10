@@ -2,21 +2,18 @@
 .cookie-button {
     position: fixed;
     bottom: var(--cookie_button_margin_bottom);
-    right: var(--cookie_button_margin_right);
     background-color: var(--accent_color);
     background-image: url('../../../public/icons/cookieIcon.svg');
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
     border: none;
-    padding: 20px;
     z-index: 99999;
 }
 
 .cookie-button:hover {
     position: fixed;
     bottom: var(--cookie_button_margin_bottom) !important;
-    right: var(--cookie_button_margin_right) !important;
     background-color: var(--accent_color) !important;
     background-image: url('../../../public/icons/cookieIcon.svg') !important;
     background-repeat: no-repeat !important;
@@ -31,11 +28,13 @@
     .cookie-button {
         width: var(--cookie_button_dimension_big);
         height: var(--cookie_button_dimension_big);
+        right: var(--cookie_button_margin_right_big);
     }
 
     .cookie-button:hover {
         width: var(--cookie_button_dimension_big_hover);
         height: var(--cookie_button_dimension_big_hover);
+        right: var(--cookie_button_margin_right_big);
     }
 
 }
@@ -45,6 +44,7 @@
     .cookie-button {
         width: var(--cookie_button_dimension_medium_landscape);
         height: var(--cookie_button_dimension_medium_landscape);
+        right: var(--cookie_button_margin_right_medium_small);
     }
 }
 
@@ -53,6 +53,7 @@
     .cookie-button {
         width: var(--cookie_button_dimension_medium_portrait_and_small);
         height: var(--cookie_button_dimension_medium_portrait_and_small);
+        right: var(--cookie_button_margin_right_medium_small);
     }
 }
 
@@ -61,6 +62,7 @@
     .cookie-button {
         width: var(--cookie_button_dimension_medium_portrait_and_small);
         height: var(--cookie_button_dimension_medium_portrait_and_small);
+        right: var(--cookie_button_margin_right_medium_small);
     }
 }
 
@@ -69,5 +71,6 @@
     .cookie-button {
         width: var(--cookie_button_dimension_medium_portrait_and_small);
         height: var(--cookie_button_dimension_medium_portrait_and_small);
+        right: var(--cookie_button_margin_right_medium_small);
     }
 }

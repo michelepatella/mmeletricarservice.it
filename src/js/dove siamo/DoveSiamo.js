@@ -61,6 +61,17 @@ function DoveSiamo() {
         setIsCookiesBannerVisible(true);
     };
 
+    /**
+     * Method to handle clicking on the save preferences button
+     */
+    const handleCookiesPreferencesButtonClick = () => {
+        Cookies.set('cookieConsent', cookiesAccepted ? 'true' : 'false', {expires: 30});
+        setIsCookiesBannerVisible(false);
+
+        if(!cookiesAccepted)
+            window.location.reload();
+    }
+
     return (
         <div id="dove-siamo" className="dove-siamo-container">
 
@@ -160,6 +171,11 @@ function DoveSiamo() {
                         />
                         <p className="cookies-switch-label">Cookies di terze parti</p>
                     </div>
+
+                    {/* Save preferences button */}
+                    <Button className="save-preferences-button" onClick={() => handleCookiesPreferencesButtonClick()}>
+                        Salva preferenze
+                    </Button>
 
                 </CookieConsent>
             }
