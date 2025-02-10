@@ -13,7 +13,7 @@ import '../css/other/WhatsappSupportButton.css';
 import '../css/variables/menuVariables.css';
 import '../css/variables/cookieButtonVariables.css';
 import '../css/other/CookieButton.css';
-import React, {useState} from "react";
+import React from "react";
 import Home from './home/Home';
 import ChiSiamo from './chi siamo/ChiSiamo';
 import Menu from './menu/Menu';
@@ -26,7 +26,7 @@ import DoveSiamo from "./dove siamo/DoveSiamo";
 import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './utility/constants';
-import {Button, FloatButton} from "antd";
+import {FloatButton} from "antd";
 
 /**
  * This component contains all the sections of the web page and
@@ -67,6 +67,7 @@ function App() {
                     <Route path="/contatti" element={<Contatti/>} />
                 </Routes>
 
+                <Home />
                 <ChiSiamo/>
                 <NostriValori/>
                 <IntroServizi/>
@@ -74,6 +75,7 @@ function App() {
                 <AutoUsate/>
                 <DoveSiamo/>
                 <Contatti/>
+
             </>
         </Router>
     );

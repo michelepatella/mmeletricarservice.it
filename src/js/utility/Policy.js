@@ -1,4 +1,4 @@
-function Policy () {
+function Policy(){
     return (
         <p>Ciao</p>
     );
