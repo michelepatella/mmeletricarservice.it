@@ -147,35 +147,38 @@ function DoveSiamo() {
                     Questo sito utilizza i <strong>cookie</strong>.
                     Cliccando su "Accetta", acconsenti all'uso dei cookie.
                     Cliccando su "Rifiuta", rifiuti l'uso dei cookie.
-                    Per maggiori informazioni consulta la nostra <a href="#privacy-policy" className="privacy-policy-link">
-                    Privacy Policy
-                </a>
-                    🍪
+                    Per maggiori informazioni consulta la nostra <a
+                    href="/doc/Privacy Policy - MM Eletricar Service.pdf" className="policy-link" target="_blank"
+                    rel="noopener noreferrer">
+                    Privacy Policy</a> e <a href="/doc/Cookie Policy - MM Eletricar Service.pdf" className="policy-link" target="_blank"
+                       rel="noopener noreferrer"> Cookie Policy </a>
+                        🍪
 
-                    {/*Switch for technique and security cookies*/}
-                    <div className="div-necessary-cookies">
-                        <Switch
-                            checked={true}
-                            disabled
-                            style={{backgroundColor: '#F8DE4D'}}
-                        />
-                        <p className="cookies-switch-label">Cookies tecnici e di sicurezza</p>
-                    </div>
+                        {/*Switch for technique and security cookies*/}
+                        <div className="div-necessary-cookies">
+                            <Switch
+                                checked={true}
+                                disabled
+                                style={{backgroundColor: '#F8DE4D'}}
+                            />
+                            <p className="cookies-switch-label">Cookies tecnici e di sicurezza</p>
+                        </div>
 
-                    {/*Switch for third-party cookies*/}
-                    <div className="div-third-party-cookies">
-                        <Switch
-                            checked={cookiesAccepted}
-                            onChange={() => setCookiesAccepted(!cookiesAccepted)}
-                            style={{backgroundColor: cookiesAccepted ? '#F8DE4D' : '#3C3C3C'}}
-                        />
-                        <p className="cookies-switch-label">Cookies di terze parti</p>
-                    </div>
+                        {/*Switch for third-party cookies*/}
+                        <div className="div-third-party-cookies">
+                            <Switch
+                                checked={cookiesAccepted}
+                                onChange={() => setCookiesAccepted(!cookiesAccepted)}
+                                style={{backgroundColor: cookiesAccepted ? '#F8DE4D' : '#3C3C3C'}}
+                            />
+                            <p className="cookies-switch-label">Cookies di terze parti</p>
+                        </div>
 
-                    {/* Save preferences button */}
-                    <Button className="save-preferences-button" onClick={() => handleCookiesPreferencesButtonClick()}>
-                        Salva preferenze
-                    </Button>
+                        {/* Save preferences button */}
+                        <Button className="save-preferences-button"
+                                onClick={() => handleCookiesPreferencesButtonClick()}>
+                            Salva preferenze
+                        </Button>
 
                 </CookieConsent>
             }
