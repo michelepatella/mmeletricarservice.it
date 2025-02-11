@@ -42,13 +42,13 @@ function App() {
         <Router>
             <>
                 {/*WhatsApp support button*/}
-                <FloatButton
+                {/*<FloatButton
                     id="support-button"
                     className="support-button"
                     icon={<WhatsAppOutlined style={{ color: 'white' }} />}
                     type="secondary"
                     onClick={() => window.open(WHATSAPP_LINK, '_blank')}
-                />
+                />*/}
 
                 {/*Integration of the menu*/}
                 <Menu/>
