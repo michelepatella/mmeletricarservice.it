@@ -16,6 +16,7 @@ import React, {useEffect, useState} from "react";
 function DoveSiamo() {
 
     const [cookiesAccepted, setCookiesAccepted] = useState(null);
+    const [tempPreferences, setTempPreferences] = useState(null);
     const [isCookiesBannerVisible, setIsCookiesBannerVisible] = useState(false);
 
     /**
@@ -27,13 +28,18 @@ function DoveSiamo() {
         const cookieConsent = Cookies.get('cookieConsent');
 
         //check its value, set the cookiesAccepted variables and show the cookies banner if necessary
-        if (cookieConsent === 'true')
+        if (cookieConsent === 'true') {
             setCookiesAccepted(true);
-        else
-            if (cookieConsent === 'false')
+            setTempPreferences(true);
+        }else
+            if (cookieConsent === 'false') {
                 setCookiesAccepted(false);
-            else
+                setTempPreferences(false);
+            }else {
                 setIsCookiesBannerVisible(true);
+                setCookiesAccepted(false);
+                setTempPreferences(false);
+            }
 
     }, []);
 
@@ -42,6 +48,7 @@ function DoveSiamo() {
      */
     const handleAcceptCookies = () => {
         setCookiesAccepted(true);
+        setTempPreferences(true);
         setIsCookiesBannerVisible(false);
     };
 
@@ -51,6 +58,7 @@ function DoveSiamo() {
     const handleDeclineCookies = () => {
         setCookiesAccepted(false);
         setIsCookiesBannerVisible(false);
+        setTempPreferences(false);
         window.location.reload();
     };
 
@@ -65,7 +73,8 @@ function DoveSiamo() {
      * Method to handle clicking on the save preferences button
      */
     const handleCookiesPreferencesButtonClick = () => {
-        Cookies.set('cookieConsent', cookiesAccepted ? 'true' : 'false', {expires: 30});
+        Cookies.set('cookieConsent', tempPreferences ? 'true' : 'false', {expires: 30});
+        setCookiesAccepted(tempPreferences);
         setIsCookiesBannerVisible(false);
 
         if(!cookiesAccepted)
@@ -167,9 +176,9 @@ function DoveSiamo() {
                         {/*Switch for third-party cookies*/}
                         <div className="div-third-party-cookies">
                             <Switch
-                                checked={cookiesAccepted}
-                                onChange={() => setCookiesAccepted(!cookiesAccepted)}
-                                style={{backgroundColor: cookiesAccepted ? '#F8DE4D' : '#3C3C3C'}}
+                                checked={tempPreferences}
+                                onChange={() => setTempPreferences(!tempPreferences)}
+                                style={{backgroundColor: tempPreferences ? '#F8DE4D' : '#3C3C3C'}}
                             />
                             <p className="cookies-switch-label">Cookies di terze parti</p>
                         </div>
