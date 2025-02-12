@@ -77,7 +77,7 @@ function DoveSiamo() {
         setCookiesAccepted(tempPreferences);
         setIsCookiesBannerVisible(false);
 
-        if(!cookiesAccepted)
+        if(!tempPreferences)
             window.location.reload();
     }
 
