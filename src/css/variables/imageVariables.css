@@ -1,0 +1,12 @@
+:root{
+    --margin_right_image_big: 400px;
+    --margin_right_image_medium_landscape: 200px;
+    --margin_right_image_medium_portrait: 100px;
+    --margin_right_image_small_portrait: 60px;
+    --margin_right_image_small_landscape: 350px;
+
+    --margin_top_image_big: 20px;
+
+    --margin_bottom_image: 100px;
+
+}

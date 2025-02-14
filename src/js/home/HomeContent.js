@@ -1,6 +1,7 @@
 import React from "react";
 import {HOME_TITLE, HOME_SUBTITLE} from "../utility/constants";
 import '../../css/home/HomeContent.css';
+import '../../css/variables/imageVariables.css';
 
 /**
  * This component contains the home content
@@ -10,6 +11,8 @@ import '../../css/home/HomeContent.css';
 function HomeContent() {
 
     return (
+
+        <>
         <div className="title-container">
 
             {/* Title */}
@@ -19,7 +22,14 @@ function HomeContent() {
             <p className="home-description" dangerouslySetInnerHTML={{__html: HOME_SUBTITLE}}/>
 
         </div>
-    );
+
+        <div className="home-image-container">
+            <img src="/images/home-image.jpeg"/>
+        </div>
+
+        </>
+)
+    ;
 }
 
 export default HomeContent;
