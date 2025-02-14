@@ -2,6 +2,8 @@ import '../../css/chi siamo/NostriValori.css';
 import React, {useRef} from "react";
 import {NOSTRI_VALORI_DESCRIPTION, NOSTRI_VALORI_TITLE} from "../utility/constants";
 import useIntersectionObserver from "../utility/useIntersectionObserver";
+import '../../css/variables/imageVariables.css';
+import '../../css/other/Image.css';
 
 /**
  * This component contains the i nostri valori section, subsection of chi siamo
@@ -21,7 +23,12 @@ function NostriValori() {
                 <h2 className="nostri-valori-title">{NOSTRI_VALORI_TITLE}</h2>
 
                 {/* Description */}
-                <p className="nostri-valori-subtitle" ref={subtitleRef} dangerouslySetInnerHTML={{ __html: NOSTRI_VALORI_DESCRIPTION }} />
+                <p className="nostri-valori-subtitle" ref={subtitleRef}
+                   dangerouslySetInnerHTML={{__html: NOSTRI_VALORI_DESCRIPTION}}/>
+            </div>
+
+            <div className="image-container">
+                <img src="/images/home-image.jpeg"/>
             </div>
         </>
     );

@@ -3,6 +3,8 @@ import React, {useRef} from "react";
 import {INTRO_SERVIZI_TITLE, INTRO_SERVIZI_DESCRIPTION, ARROW_LABEL} from "../utility/constants";
 import useIntersectionObserver from "../utility/useIntersectionObserver";
 import {scrollToSection} from "../utility/scrollToSection";
+import '../../css/variables/imageVariables.css';
+import '../../css/other/Image.css';
 
 /**
  * This component contains the intro servizi section
@@ -19,10 +21,15 @@ function IntroServizi() {
             {/* Intro servizi description definition */}
             <div id="intro-servizi" className="intro-servizi-container">
                 {/* Title */}
-                <h2 className="intro-servizi-title" dangerouslySetInnerHTML={{ __html: INTRO_SERVIZI_TITLE }}/>
+                <h2 className="intro-servizi-title" dangerouslySetInnerHTML={{__html: INTRO_SERVIZI_TITLE}}/>
 
                 {/* Description */}
-                <p className="intro-servizi-subtitle" ref={subtitleRef} dangerouslySetInnerHTML={{ __html: INTRO_SERVIZI_DESCRIPTION }}/>
+                <p className="intro-servizi-subtitle" ref={subtitleRef}
+                   dangerouslySetInnerHTML={{__html: INTRO_SERVIZI_DESCRIPTION}}/>
+            </div>
+
+            <div className="image-container">
+                <img src="/images/home-image.jpeg"/>
             </div>
 
             <div className="arrow-and-label-container">
@@ -30,6 +37,7 @@ function IntroServizi() {
                 <p className="arrow-label">{ARROW_LABEL}</p>
                 <button className="arrow-button" onClick={() => scrollToSection('altri-servizi', null)}></button>
             </div>
+
         </>
     );
 }

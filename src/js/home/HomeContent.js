@@ -1,6 +1,7 @@
 import React from "react";
 import {HOME_TITLE, HOME_SUBTITLE} from "../utility/constants";
 import '../../css/home/HomeContent.css';
+import '../../css/other/Image.css';
 import '../../css/variables/imageVariables.css';
 
 /**
@@ -23,7 +24,7 @@ function HomeContent() {
 
         </div>
 
-        <div className="home-image-container">
+        <div className="image-container">
             <img src="/images/home-image.jpeg"/>
         </div>
 
