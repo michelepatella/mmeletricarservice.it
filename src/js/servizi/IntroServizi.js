@@ -14,7 +14,9 @@ import '../../css/other/Image.css';
 function IntroServizi() {
 
     const subtitleRef = useRef(null);
+    const imageRef = useRef(null);
     useIntersectionObserver(subtitleRef);
+    useIntersectionObserver(imageRef);
 
     return (
         <>
@@ -29,7 +31,7 @@ function IntroServizi() {
             </div>
 
             <div className="image-container">
-                <img src="/images/intro-servizi-image.jpeg"/>
+                <img src="/images/intro-servizi-image.jpeg" ref={imageRef}/>
             </div>
 
             <div className="arrow-and-label-container">

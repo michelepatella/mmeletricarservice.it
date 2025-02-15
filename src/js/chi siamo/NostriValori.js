@@ -13,7 +13,9 @@ import '../../css/other/Image.css';
 function NostriValori() {
 
     const subtitleRef = useRef(null);
+    const imageRef = useRef(null);
     useIntersectionObserver(subtitleRef);
+    useIntersectionObserver(imageRef);
 
     return (
         <>
@@ -28,7 +30,7 @@ function NostriValori() {
             </div>
 
             <div className="image-container">
-                <img src="/images/nostri-valori-image.jpeg"/>
+                <img src="/images/nostri-valori-image.jpeg" ref={imageRef}/>
             </div>
         </>
     );

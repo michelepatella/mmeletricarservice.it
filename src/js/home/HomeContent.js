@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useRef} from "react";
 import {HOME_TITLE, HOME_SUBTITLE} from "../utility/constants";
 import '../../css/home/HomeContent.css';
 import '../../css/other/Image.css';
 import '../../css/variables/imageVariables.css';
+import useIntersectionObserver from "../utility/useIntersectionObserver";
 
 /**
  * This component contains the home content
@@ -11,8 +12,10 @@ import '../../css/variables/imageVariables.css';
  */
 function HomeContent() {
 
-    return (
+    const imageRef = useRef(null);
+    useIntersectionObserver(imageRef);
 
+    return (
         <>
         <div className="title-container">
 
@@ -25,7 +28,7 @@ function HomeContent() {
         </div>
 
         <div className="image-container">
-            <img src="/images/home-image.jpeg"/>
+            <img src="/images/home-image.jpeg" ref={imageRef}/>
         </div>
 
         </>

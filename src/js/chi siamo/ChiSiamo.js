@@ -13,7 +13,9 @@ import '../../css/variables/imageVariables.css';
 function ChiSiamo() {
 
     const subtitleRef = useRef(null);
+    const imageRef = useRef(null);
     useIntersectionObserver(subtitleRef);
+    useIntersectionObserver(imageRef)
 
     return (
         <>
@@ -27,7 +29,7 @@ function ChiSiamo() {
             </div>
 
             <div className="image-container">
-                <img src="/images/chi-siamo-image.jpeg"/>
+                <img src="/images/chi-siamo-image.jpeg" ref={imageRef}/>
             </div>
 
         </>
