@@ -35,7 +35,7 @@
 
 /** Common styles**/
 .intro-servizi-container {
-    height: 85vh;
+    height: auto;
     width: 93%;
     text-align: center;
     position: relative;

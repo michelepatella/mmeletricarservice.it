@@ -29,7 +29,7 @@ function IntroServizi() {
             </div>
 
             <div className="image-container">
-                <img src="/images/home-image.jpeg"/>
+                <img src="/images/intro-servizi-image.jpeg"/>
             </div>
 
             <div className="arrow-and-label-container">

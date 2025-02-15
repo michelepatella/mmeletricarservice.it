@@ -23,7 +23,7 @@
 
 /** Common styles **/
 .chi-siamo-container {
-    height: 100vh;
+    height: auto;
     width: 90%;
     text-align: center;
     position: relative;

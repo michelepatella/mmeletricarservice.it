@@ -28,7 +28,7 @@ function NostriValori() {
             </div>
 
             <div className="image-container">
-                <img src="/images/home-image.jpeg"/>
+                <img src="/images/nostri-valori-image.jpeg"/>
             </div>
         </>
     );

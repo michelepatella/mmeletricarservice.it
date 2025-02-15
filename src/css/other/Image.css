@@ -2,12 +2,13 @@
 .image-container {
     display: flex;
     height: auto;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: initial;
     max-height: 100vh;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: var(--margin_bottom_image);
+    margin-top: var(--margin_top_image);
 }
 
 .image-container img {
@@ -15,6 +16,7 @@
     object-fit: contain;
     max-width: 100%;
     max-height: 100%;
+    border-radius: 10px;
 }
 
 /* ------ Big screen ------- */
@@ -22,13 +24,12 @@
     .image-container {
         margin-left: var(--home_title_container_margin_left_big);
         margin-right: var(--margin_right_image_big);
-        margin-top: var(--margin_top_image_big);
     }
 }
 
 /* ------ Medium screen landscape ------- */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .home-image-container {
+    .image-container {
         margin-left: var(--home_title_container_margin_left_medium);
         margin-right: var(--margin_right_image_medium_landscape);
     }
@@ -36,7 +37,7 @@
 
 /* ------ Medium screen portrait ------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .home-image-container {
+    .image-container {
         margin-left: var(--home_title_container_margin_left_medium);
         margin-right: var(--margin_right_image_medium_portrait);
     }
@@ -44,7 +45,7 @@
 
 /* ------ Small screen portrait ------- */
 @media (max-width: 767px) and (orientation: portrait) {
-    .home-image-container {
+    .image-container {
         margin-left: var(--home_title_container_margin_left_small_portrait);
         margin-right: var(--margin_right_image_small_portrait);
     }
@@ -52,7 +53,7 @@
 
 /* ------ Small screen landscape ------- */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
-    .home-image-container {
+    .image-container {
         margin-left: var(--home_title_container_margin_left_small_landscape);
         margin-right: var(--margin_right_image_small_landscape);
     }
