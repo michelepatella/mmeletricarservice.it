@@ -141,7 +141,8 @@ function MenuSmallScreen() {
                                 onClick={menuItem.onClick}
                                 style={{
                                     ...generateAnimationStyles(index),
-                                    textDecoration: section === menuItem.path ? "underline" : "none"}}
+                                    textDecoration: section === menuItem.path ? "underline" : "none",
+                                    fontWeight: section === menuItem.path ? "bold" : "normal",}}
                             >
                                 {menuItem.label}
                             </AntMenu.Item>
@@ -156,6 +157,7 @@ function MenuSmallScreen() {
                                         style={{
                                             ...generateAnimationStyles(index + childIndex + 1),
                                             textDecoration: section === child.path ? "underline" : "none",
+                                            fontWeight: section === child.path ? "bold" : "normal",
                                             paddingLeft: "60px"
                                         }}
                                     >
