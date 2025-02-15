@@ -21,12 +21,20 @@ function MenuSmallScreen() {
     useEffect(() => {
         const handleScroll = () => {
             let currentSection = '';
+            let closestDistance = Infinity;
+
             SECTIONS.forEach((sec) => {
                 const element = document.getElementById(sec.id);
                 if (element) {
                     const rect = element.getBoundingClientRect();
-                    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-                        currentSection = sec.id;
+
+                    const distanceToTop = Math.abs(rect.top);
+
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        if (distanceToTop < closestDistance) {
+                            closestDistance = distanceToTop;
+                            currentSection = sec.id;
+                        }
                     }
                 }
 
