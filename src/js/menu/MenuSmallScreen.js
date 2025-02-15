@@ -12,7 +12,7 @@ import { scrollToSection } from "../utility/scrollToSection";
 function MenuSmallScreen() {
     const [visible, setVisible] = useState(false);
 
-    const [section, setSection] = useState('');
+    const [section, setSection] = useState('home');
 
     /**
      * Method to keep track of the section's changes and
@@ -44,9 +44,16 @@ function MenuSmallScreen() {
                         const childElement = document.getElementById(child.id);
                         if (childElement) {
                             const childRect = childElement.getBoundingClientRect();
-                            if (childRect.top <= window.innerHeight / 2 && childRect.bottom >= window.innerHeight / 2) {
-                                currentSection = child.id;
+
+                            const distanceToTop = Math.abs(childRect.top);
+
+                            if (childRect.top < window.innerHeight && childRect.bottom > 0) {
+                                if (distanceToTop < closestDistance) {
+                                    closestDistance = distanceToTop;
+                                    currentSection = child.id;
+                                }
                             }
+
                         }
                     });
                 }
