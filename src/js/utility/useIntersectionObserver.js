@@ -1,10 +1,12 @@
-import { useEffect } from 'react';
+import {useEffect, useState} from 'react';
 
 /**
  * Method to keep track if a section is visible in order to start the animation
  * @param ref
  */
 const useIntersectionObserver = (ref) => {
+    const [isVisible, setIsVisible] = useState(false);
+
     useEffect(() => {
         const options = {
             root: null,
@@ -15,8 +17,11 @@ const useIntersectionObserver = (ref) => {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    setIsVisible(true);
                     entry.target.classList.add('in-view');
                     observer.unobserve(entry.target);
+                }else{
+                    setIsVisible(false);
                 }
             });
         }, options);
@@ -27,6 +32,8 @@ const useIntersectionObserver = (ref) => {
             if (ref.current) observer.unobserve(ref.current);
         };
     }, [ref]);
+
+    return isVisible;
 };
 
 export default useIntersectionObserver;
