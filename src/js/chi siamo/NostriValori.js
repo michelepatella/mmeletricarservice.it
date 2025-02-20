@@ -30,7 +30,7 @@ function NostriValori() {
             </div>
 
             <div className="image-container">
-                <img src="/images/intro-servizi-image.jpg" ref={imageRef}/>
+                <img src="/images/nostri-valori-image.jpg" ref={imageRef}/>
             </div>
         </>
     );

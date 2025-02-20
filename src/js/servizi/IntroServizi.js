@@ -31,7 +31,7 @@ function IntroServizi() {
             </div>
 
             <div className="image-container">
-                <img src="/images/nostri-valori-image.jpg" ref={imageRef}/>
+                <img src="/images/intro-servizi-image.jpg" ref={imageRef}/>
             </div>
 
             <div className="arrow-and-label-container">
