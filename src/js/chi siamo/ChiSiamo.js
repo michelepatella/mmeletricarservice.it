@@ -27,7 +27,7 @@ function ChiSiamo() {
         if (isVideoVisible) {
             const timer = setTimeout(() => {
                 videoRef.current.play();
-            }, 500);
+            }, 800);
 
             return () => clearTimeout(timer);
         }
