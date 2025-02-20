@@ -34,7 +34,7 @@
 }
 
 .image-container img.in-view{
-    animation: zoomIn 1s ease forwards;
+    animation: zoomIn 3s ease forwards;
 }
 
 /* ------ Big screen ------- */

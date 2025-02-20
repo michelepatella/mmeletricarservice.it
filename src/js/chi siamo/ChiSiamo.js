@@ -1,5 +1,5 @@
 import '../../styles/chi siamo/ChiSiamo.css';
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { CHI_SIAMO_DESCRIPTION, CHI_SIAMO_TITLE } from "../utility/constants";
 import useIntersectionObserver from "../utility/useIntersectionObserver";
 import '../../styles/other/Image.css';
@@ -27,7 +27,7 @@ function ChiSiamo() {
         if (isVideoVisible) {
             const timer = setTimeout(() => {
                 videoRef.current.play();
-            }, 800);
+            }, 700);
 
             return () => clearTimeout(timer);
         }
@@ -36,15 +36,16 @@ function ChiSiamo() {
     return (
         <>
             <div id="chi-siamo" className="chi-siamo-container">
-                {/* Titolo */}
+                {/*Title*/}
                 <h2 className="chi-siamo-title">{CHI_SIAMO_TITLE}</h2>
 
-                {/* Descrizione */}
+                {/*Description*/}
                 <p ref={subtitleRef} className="chi-siamo-subtitle"
                    dangerouslySetInnerHTML={{ __html: CHI_SIAMO_DESCRIPTION }} />
             </div>
 
             <div className="image-container" ref={imageRef}>
+                {/*Logo animation video*/}
                 <video
                     src="/images/animation-logo.mp4"
                     ref={videoRef}
