@@ -19,6 +19,7 @@
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: var(--margin_bottom_image);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
 }
 
 .image-container img {
