@@ -1,4 +1,4 @@
-import '../../css/servizi/DivServizio.css';
+import '../../styles/servizi/DivServizio.css';
 import React, {useRef} from "react";
 import {Flex} from "antd";
 import useIntersectionObserver from "../utility/useIntersectionObserver";

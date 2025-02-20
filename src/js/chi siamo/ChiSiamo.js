@@ -1,9 +1,9 @@
-import '../../css/chi siamo/ChiSiamo.css';
+import '../../styles/chi siamo/ChiSiamo.css';
 import React, { useRef } from "react";
 import { CHI_SIAMO_DESCRIPTION, CHI_SIAMO_TITLE } from "../utility/constants";
 import useIntersectionObserver from "../utility/useIntersectionObserver";
-import '../../css/other/Image.css';
-import '../../css/variables/imageVariables.css';
+import '../../styles/other/Image.css';
+import '../../styles/variables/imageVariables.css';
 
 /**
  * This component contains the chi siamo section

@@ -1,4 +1,4 @@
-import '../../css/home/Home.css';
+import '../../styles/home/Home.css';
 import HomeHeader from "./HomeHeader";
 import HomeContent from "./HomeContent";
 import { Layout } from 'antd';

@@ -1,4 +1,4 @@
-import '../../css/other/CustomButton.css';
+import '../../styles/other/CustomButton.css';
 import {Button} from "antd";
 import {EMAIL, EMAIL_PEC, FACEBOOK, FACEBOOK_LINK_AUTO_USATE, PHONE} from "./constants";
 

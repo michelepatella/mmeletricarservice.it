@@ -1,4 +1,4 @@
-import '../../css/contatti/Contatti.css';
+import '../../styles/contatti/Contatti.css';
 import ContattiFooter from "./ContattiFooter";
 import ContattiContent from "./ContattiContent";
 import { Layout } from 'antd';

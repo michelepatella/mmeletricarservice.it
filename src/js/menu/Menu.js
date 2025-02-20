@@ -1,4 +1,4 @@
-import '../../css/other/Menu.css';
+import '../../styles/other/Menu.css';
 import MenuSmallScreen from "./MenuSmallScreen";
 import MenuBigScreen from "./MenuBigScreen";
 

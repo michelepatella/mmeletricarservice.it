@@ -1,10 +1,10 @@
-import '../../css/servizi/IntroServizi.css';
+import '../../styles/servizi/IntroServizi.css';
 import React, {useRef} from "react";
 import {INTRO_SERVIZI_TITLE, INTRO_SERVIZI_DESCRIPTION, ARROW_LABEL} from "../utility/constants";
 import useIntersectionObserver from "../utility/useIntersectionObserver";
 import {scrollToSection} from "../utility/scrollToSection";
-import '../../css/variables/imageVariables.css';
-import '../../css/other/Image.css';
+import '../../styles/variables/imageVariables.css';
+import '../../styles/other/Image.css';
 
 /**
  * This component contains the intro servizi section
@@ -31,7 +31,7 @@ function IntroServizi() {
             </div>
 
             <div className="image-container">
-                <img src="/images/intro-servizi-image.jpeg" ref={imageRef}/>
+                <img src="/images/nostri-valori-image.jpg" ref={imageRef}/>
             </div>
 
             <div className="arrow-and-label-container">

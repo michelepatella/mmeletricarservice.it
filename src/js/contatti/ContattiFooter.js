@@ -1,5 +1,5 @@
 import React from "react";
-import '../../css/contatti/ContattiFooter.css';
+import '../../styles/contatti/ContattiFooter.css';
 import { FOOTER_TEXT } from '../utility/constants';
 
 function ContattiFooter() {

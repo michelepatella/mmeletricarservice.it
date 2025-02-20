@@ -1,9 +1,9 @@
-import '../../css/chi siamo/NostriValori.css';
+import '../../styles/chi siamo/NostriValori.css';
 import React, {useRef} from "react";
 import {NOSTRI_VALORI_DESCRIPTION, NOSTRI_VALORI_TITLE} from "../utility/constants";
 import useIntersectionObserver from "../utility/useIntersectionObserver";
-import '../../css/variables/imageVariables.css';
-import '../../css/other/Image.css';
+import '../../styles/variables/imageVariables.css';
+import '../../styles/other/Image.css';
 
 /**
  * This component contains the i nostri valori section, subsection of chi siamo
@@ -30,7 +30,7 @@ function NostriValori() {
             </div>
 
             <div className="image-container">
-                <img src="/images/nostri-valori-image.jpeg" ref={imageRef}/>
+                <img src="/images/intro-servizi-image.jpg" ref={imageRef}/>
             </div>
         </>
     );

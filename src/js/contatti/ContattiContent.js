@@ -1,6 +1,6 @@
 import React, {useRef} from "react";
 import {CONTATTI_TITLE, CONTATTI_SUBTITLE, CONTATTI} from "../utility/constants";
-import '../../css/contatti/ContattiContent.css';
+import '../../styles/contatti/ContattiContent.css';
 import CustomButton from "../utility/CustomButton";
 import useIntersectionObserver from "../utility/useIntersectionObserver";
 

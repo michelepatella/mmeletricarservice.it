@@ -1,5 +1,5 @@
 import React from "react";
-import '../../css/home/HomeHeader.css';
+import '../../styles/home/HomeHeader.css';
 import { EMAIL, PHONE, FACEBOOK } from '../utility/constants';
 
 /**

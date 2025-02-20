@@ -1,6 +1,6 @@
 import {Col, Statistic} from "antd";
 import React, {useState} from "react";
-import '../../../css/servizi/auto usate/DivAutoUsate.css';
+import '../../../styles/servizi/auto usate/DivAutoUsate.css';
 import CountUp from 'react-countup';
 import {useInView} from 'react-intersection-observer';
 

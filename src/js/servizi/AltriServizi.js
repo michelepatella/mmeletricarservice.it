@@ -1,4 +1,4 @@
-import '../../css/servizi/AltriServizi.css';
+import '../../styles/servizi/AltriServizi.css';
 import React from "react";
 import DivServizio from "./DivServizio";
 import { SERVIZI } from "../utility/constants";

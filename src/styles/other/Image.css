@@ -13,14 +13,12 @@
 /* Common styles */
 .image-container {
     display: flex;
-    height: auto;
     justify-content: left;
     align-items: initial;
     max-height: 100vh;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: var(--margin_bottom_image);
-    margin-top: var(--margin_top_image);
 }
 
 .image-container img {
@@ -41,39 +39,47 @@
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
     .image-container {
-        margin-left: var(--home_title_container_margin_left_big);
+        margin-left: var(--general_margin_left_big);
         margin-right: var(--margin_right_image_big);
+        width: 45%;
+        margin-top: var(--margin_top_image_big);
     }
 }
 
 /* ------ Medium screen landscape ------- */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .image-container {
-        margin-left: var(--home_title_container_margin_left_medium);
+        margin-left: var(--general_margin_left_medium_landscape);
         margin-right: var(--margin_right_image_medium_landscape);
+        width: 60%;
+        margin-top: var(--margin_top_image_medium);
     }
 }
 
 /* ------ Medium screen portrait ------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .image-container {
-        margin-left: var(--home_title_container_margin_left_medium);
+        margin-left: var(--general_margin_left_medium_portrait);
         margin-right: var(--margin_right_image_medium_portrait);
+        width: 60%;
+        margin-top: var(--margin_top_image_medium);
     }
 }
 
 /* ------ Small screen portrait ------- */
 @media (max-width: 767px) and (orientation: portrait) {
     .image-container {
-        margin-left: var(--home_title_container_margin_left_small_portrait);
+        margin-left: var(--general_margin_left_small_portrait);
         margin-right: var(--margin_right_image_small_portrait);
+        margin-top: var(--margin_top_image_small);
     }
 }
 
 /* ------ Small screen landscape ------- */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
     .image-container {
-        margin-left: var(--home_title_container_margin_left_small_landscape);
+        margin-left: var(--general_margin_left_small_landscape);
         margin-right: var(--margin_right_image_small_landscape);
+        margin-top: var(--margin_top_image_small);
     }
 }

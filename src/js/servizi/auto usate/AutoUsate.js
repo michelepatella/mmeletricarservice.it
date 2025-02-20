@@ -1,4 +1,4 @@
-import '../../../css/servizi/auto usate/AutoUsate.css';
+import '../../../styles/servizi/auto usate/AutoUsate.css';
 import React, { useRef } from "react";
 import {
     AUTO_USATE_TITLE,

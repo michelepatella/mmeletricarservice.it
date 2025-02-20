@@ -1,6 +1,6 @@
-import '../../css/dove siamo/DoveSiamo.css';
-import '../../css/other/CookieBanner.css';
-import '../../css/variables/cookiesBannerVariables.css';
+import '../../styles/dove siamo/DoveSiamo.css';
+import '../../styles/other/CookieBanner.css';
+import '../../styles/variables/cookiesBannerVariables.css';
 import {Button, Row, Switch} from "antd";
 import {DOVE_SIAMO_DIVISIONS, DOVE_SIAMO_TITLE} from "../utility/constants";
 import CookieConsent from "react-cookie-consent";
