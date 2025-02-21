@@ -10,14 +10,12 @@
     }
 }
 
-.dove-siamo-division-title,
 .dove-siamo-division-description{
     opacity: 0;
     transform: rotateX(90deg) translateY(20px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-.dove-siamo-division-title.in-view,
 .dove-siamo-division-description.in-view{
     opacity: 1;
     transform: rotateX(0deg) translateY(0);

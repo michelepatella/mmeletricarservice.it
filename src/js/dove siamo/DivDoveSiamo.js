@@ -12,16 +12,14 @@ import useIntersectionObserver from "../utility/useIntersectionObserver";
  */
 function DivDoveSiamo({ title, description, icon}){
 
-    const titleRef = useRef(null);
     const subtitleRef = useRef(null);
-    useIntersectionObserver(titleRef);
     useIntersectionObserver(subtitleRef);
 
     return (
         <div className="divDoveSiamo">
             <Flex gap="small" align="start" vertical className="title-and-icon-container-dove-siamo">
                 <Flex className="flex-division-dove-siamo">
-                    <p className="dove-siamo-division-title" ref={titleRef}>{title}</p>
+                    <p className="dove-siamo-division-title">{title}</p>
                     <img className="dove-siamo-division-icon" src={icon} alt="dove-siamo-icon"/>
                 </Flex>
             </Flex>
