@@ -9,10 +9,10 @@
     --divServizio_and_dove_siamo_margin_right_icon: 20px;
     --divServizio_and_dove_siamo_margin_top_icon_big_medium_landscape: 33px;
     --divServizio_and_dove_siamo_margin_top_icon_medium_portrait: 28px;
-    --divServizio_and_dove_siamo_margin_top_icon_small: 27px;
+    --divServizio_and_dove_siamo_margin_top_icon_small: 23px;
 
     /** only for dove siamo divisions **/
-    --dove_siamo_icon_margin_bottom: 20px;
+    --dove_siamo_icon_margin_bottom: 10px;
 
     /** only for altri servizi section **/
     --divServizio_description_margin_top: 10px;

@@ -119,7 +119,7 @@
         width: 100%;
         margin-left: var(--general_margin_left_small_portrait);
         font-size: var(--divisions_title_font_size_small);
-        margin-top: var(--divServizio_and_dove_siamo_margin_top);
+        margin-top: var(--divServizio_and_dove_siamo_margin_top_small);
     }
 
     .dove-siamo-division-description {
@@ -135,6 +135,7 @@
         margin-left: var(--divServizio_and_dove_siamo_margin_right_icon);
         margin-bottom: var(--dove_siamo_icon_margin_bottom);
     }
+
 }
 
 /* Small screen landscape*/
@@ -144,7 +145,7 @@
         width: 100%;
         margin-left: var(--general_margin_left_small_landscape);
         font-size: var(--divisions_title_font_size_small);
-        margin-top: var(--divServizio_and_dove_siamo_margin_top);
+        margin-top: var(--divServizio_and_dove_siamo_margin_top_small);
     }
 
     .dove-siamo-division-description {

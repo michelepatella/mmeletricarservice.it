@@ -1,4 +1,4 @@
-import '../../styles/components/DoveSiamoDivision.css';
+import '../../styles/components/DivDoveSiamo.css';
 import React, {useRef} from "react";
 import {Flex} from "antd";
 import useIntersectionObserver from "../utility/useIntersectionObserver";
