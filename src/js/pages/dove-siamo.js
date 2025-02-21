@@ -1,6 +1,7 @@
 import '../../styles/pages/dove-siamo.css';
 import '../../styles/components/cookie/CookieBanner.css';
 import '../../styles/variables/cookiesBannerVariables.css';
+import '../../styles/variables/googleMapsVariables.css';
 import {Button, Row, Switch} from "antd";
 import {DOVE_SIAMO_DIVISIONS, DOVE_SIAMO_TITLE} from "../utility/constants";
 import CookieConsent from "react-cookie-consent";

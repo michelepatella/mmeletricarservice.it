@@ -55,7 +55,7 @@
     }
 
     .google-map-container{
-        height: 500px;
+        height: var(--google_maps_container_height_big);
         width: 100%;
     }
 
@@ -76,7 +76,7 @@
     }
 
     .google-map-container{
-        height: 400px;
+        height: var(--google_maps_container_height_medium);
         width: 100%;
     }
 
@@ -96,7 +96,7 @@
     }
 
     .google-map-container{
-        height: 400px;
+        height: var(--google_maps_container_height_medium);
         width: 100%;
         margin-left: var(--general_margin_left_medium_landscape);
     }
@@ -119,7 +119,7 @@
 
     .google-map-container{
         margin-left: var(--general_margin_left_small_portrait);
-        height: 300px;
+        height: var(--google_maps_container_height_small);
         width: 95%;
     }
 
@@ -142,6 +142,6 @@
     .google-map-container{
         margin-left: var(--general_margin_left_small_portrait);
         width: 95%;
-        height: 300px;
+        height: var(--google_maps_container_height_small);
     }
 }
