@@ -9,34 +9,31 @@ import '../styles/variables/altriServiziVariables.css';
 import '../styles/variables/autoUsateVariables.css';
 import '../styles/variables/generalMarginsVariables.css';
 import '../styles/variables/altriServiziAndDoveSiamoDivVariables.css';
-import '../styles/other/WhatsappSupportButton.css';
+import '../styles/components/buttons/WhatsappSupportButton.css';
 import '../styles/variables/menuVariables.css';
 import '../styles/variables/cookieButtonVariables.css';
-import '../styles/other/CookieButton.css';
+import '../styles/components/cookie/CookieButton.css';
 import React from "react";
-import Home from './home/Home';
-import ChiSiamo from './chi siamo/ChiSiamo';
-import Menu from './menu/Menu';
-import NostriValori from './chi siamo/NostriValori';
-import IntroServizi from "./servizi/IntroServizi";
-import AltriServizi from "./servizi/AltriServizi";
-import Contatti from './contatti/Contatti';
-import AutoUsate from "./servizi/auto usate/AutoUsate";
-import DoveSiamo from "./dove siamo/DoveSiamo";
+import Home from './pages/home';
+import ChiSiamo from './pages/chi siamo/chi-siamo';
+import Menu from './components/menu/Menu';
+import NostriValori from './pages/chi siamo/nostri-valori';
+import IntroServizi from "./pages/servizi/intro-servizi";
+import AltriServizi from "./pages/servizi/altri-servizi";
+import Contatti from './pages/contatti';
+import AutoUsate from "./pages/servizi/auto-usate";
+import DoveSiamo from "./pages/dove-siamo";
 import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './utility/constants';
 import {FloatButton} from "antd";
 
 /**
- * This component contains all the sections of the web page and
- * all the variables components
+ * The main page that contains all the subpages of the website
  * @returns {Element}
  * @constructor
  */
 function App() {
-
-
 
     return (
         <Router>
@@ -53,6 +50,7 @@ function App() {
                 {/*Integration of the menu*/}
                 <Menu/>
 
+                {/* Definition of the website routes */}
                 <Routes>
                     {/*Home route*/}
                     <Route path="/" element={<Home />} />

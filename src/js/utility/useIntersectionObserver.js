@@ -1,8 +1,9 @@
 import {useEffect, useState} from 'react';
 
 /**
- * Method to keep track if a section is visible in order to start the animation
+ * Method to keep track if a section/division is visible or not
  * @param ref
+ * @returns {boolean}
  */
 const useIntersectionObserver = (ref) => {
     const [isVisible, setIsVisible] = useState(false);

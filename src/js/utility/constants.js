@@ -1,5 +1,6 @@
 /** constants definition **/
 
+/**------------- contacts information -------------**/
 export const WHATSAPP_LINK = 'https://wa.me/3908650830725';
 export const EMAIL = 'mmeletricarservice@libero.it';
 export const EMAIL_PEC = 'mmeletricarservice@pec.buffetti.it'
@@ -13,9 +14,7 @@ export const CONTATTI = [
     {value: 'MM Eletricar Service', icon: '/icons/facebookIconBlack.svg'}
 ]
 
-export const HOME_TITLE = "Dove la tua auto <br> trova l'eccellenza."
-export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> <strong>MM Eletricar Service<strong/>!"
-
+/**------------- sections definition -------------**/
 export const SECTIONS = [
     { id: 'home', title: 'Home' },
     { id: 'chi-siamo', title: 'Chi siamo', children: [{ id: 'nostri-valori', title: 'I nostri valori' }] },
@@ -24,11 +23,17 @@ export const SECTIONS = [
     { id: 'contatti', title: 'Contatti' }
 ];
 
+/**------------- "home" texts -------------**/
+export const HOME_TITLE = "Dove la tua auto <br> trova l'eccellenza."
+export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> <strong>MM Eletricar Service<strong/>!"
+
+/**------------- "chi siamo" texts -------------**/
 export const CHI_SIAMO_TITLE = "MM Eletricar Service";
 export const CHI_SIAMO_DESCRIPTION = 'Siamo <strong>Michele Vacca</strong> e <strong>Michele Scalese</strong>, fondatori di MM Eletricar Service,\n' +
     '                        un’officina specializzata in elettronica per autoveicoli. Con sede a Gravina in Puglia (BA),\n' +
     '                        offriamo servizi per garantire sicurezza, affidabilità e prestazioni ottimali ad ogni veicolo.'
 
+/**------------- "nostri valori" texts -------------**/
 export const NOSTRI_VALORI_TITLE = "I nostri valori"
 export const NOSTRI_VALORI_DESCRIPTION = 'In MM Eletricar Service, crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
     '                        poiché comprendiamo quanto sia importante per i nostri clienti.\n' +
@@ -36,10 +41,12 @@ export const NOSTRI_VALORI_DESCRIPTION = 'In MM Eletricar Service, crediamo che 
     '                        di <strong>qualità</strong>, per garantire la <strong>sicurezza</strong>,\n' +
     '                        <strong> l’efficienza</strong> e la <strong>soddisfazione</strong> completa di chi si affida a noi.'
 
+/**------------- "intro servizi" texts -------------**/
 export const INTRO_SERVIZI_TITLE = 'Per la tua auto, solo <br/> servizi di qualità.'
 export const INTRO_SERVIZI_DESCRIPTION = 'Tutti i servizi classici da elettrauto, dalla manutenzione alle riparazioni, per garantire sicurezza e performance ottimali.'
 export const ARROW_LABEL = 'Scopri tutti i nostri servizi specializzati'
 
+/**------------- "altri servizi" texts -------------**/
 export const SERVIZI = [
     {title: "Manutenzione centralina", description: "Controllo e aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.", icon: '/icons/cpuIcon.svg'},
     {title: "Riparazione parabrezza", description: "Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.", icon: '/icons/hammerIcon.svg'},
@@ -54,23 +61,25 @@ export const SERVIZI = [
     {title: "Installazione antifurti", description: "Soluzioni antifurto satellitari Igla e meccanici Defender per la protezione del tuo veicolo: blocco motore elettronico, protezioni meccaniche per defender e tracciamento satellitare in tempo reale.", icon: '/icons/antiTheftIcon.svg'}
 ];
 
-export const CONTATTI_TITLE = "Sempre al tuo <br> servizio.";
-export const CONTATTI_SUBTITLE = "Se hai bisogno di assistenza o informazioni, non esitare a contattarci!";
-
-export const FOOTER_TEXT = "© Copyright 2025 | All Rights Reserved | P. IVA: " + P_IVA
-
+/**------------- "servizi" texts -------------**/
 export const AUTO_USATE_TITLE = "Cerchi di più? Scopri la tua \n" +
     "auto usata perfetta!";
-export const AUTO_USATE_DESCRIPTION = "Non perdere le ultime novità! Seguici su Facebook per rimanere sempre aggiornato sulle nostre auto usate in vendita.";
-export const CARD_AUTO_USATE = [
+export const AUTO_USATE_DESCRIPTION = "Non perdere le ultime novità! Seguici su Facebook per rimanere sempre aggiornato sulle nostre servizi in vendita.";
+export const AUTO_USATE_STATS = [
     {description: "Auto con chilometraggio verificato ✅"},
     {description: "Auto ispezionate e verificate ✅"},
     {description: "Auto tagliandate ✅"}
 ]
-export const FACEBOOK_LINK_AUTO_USATE = "Scopri le nostre auto usate >"
+export const FACEBOOK_LINK_AUTO_USATE = "Scopri le nostre servizi >"
 
+/**------------- "dove siamo" texts -------------**/
 export const DOVE_SIAMO_TITLE = "Vieni a trovarci in officina!"
 export const DOVE_SIAMO_DIVISIONS = [
     {title: "Dove siamo", description: "Gravina in Puglia (BA), in Via Bizet, 63, 70024.", icon: '/icons/mapIcon.svg'},
     {title: "Orari di apertura", description: "- <strong>Lun-Ven</strong>: 08:30-13:00/15:00-19:00 <br>- <strong>Sab</strong>: 08:30-13:00", icon: '/icons/clockIcon.svg'},
 ]
+
+/**------------- "contatti" texts -------------**/
+export const CONTATTI_TITLE = "Sempre al tuo <br> servizio.";
+export const CONTATTI_SUBTITLE = "Se hai bisogno di assistenza o informazioni, non esitare a contattarci!";
+export const FOOTER_TEXT = "© Copyright 2025 | All Rights Reserved | P. IVA: " + P_IVA
