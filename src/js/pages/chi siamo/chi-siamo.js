@@ -29,7 +29,7 @@ function ChiSiamo() {
             const timer = setTimeout(() => {
                 //start the video
                 videoRef.current.play();
-            }, 700);  //delay about 0.7s since the section is visible
+            }, 300);  //delay about 0.7s since the section is visible
 
             return () => clearTimeout(timer);
         }
@@ -40,30 +40,29 @@ function ChiSiamo() {
             {/* Title and description division */}
             <div id="chi-siamo" className="chi-siamo-container">
 
-                {/*Title*/}
-                <h2 className="chi-siamo-title">{CHI_SIAMO_TITLE}</h2>
+                {/* Video container */}
+                <div className="image-container" ref={imageRef}
+                     style={{marginBottom: '50px'}}>
+
+                    {/*Logo animation video*/}
+                    <video
+                        src="/images/animation-logo.mp4"
+                        ref={videoRef}
+                        type="video/mp4"
+                        className="logo-animation"
+                        loop={false}
+                        muted
+                        playsInline
+                        controls={false}
+                    />
+
+                </div>
 
                 {/*Description*/}
                 <p ref={subtitleRef} className="chi-siamo-subtitle"
                    dangerouslySetInnerHTML={{ __html: CHI_SIAMO_DESCRIPTION }} />
             </div>
 
-            {/* Video container */}
-            <div className="image-container" ref={imageRef}>
-
-                {/*Logo animation video*/}
-                <video
-                    src="/images/animation-logo.mp4"
-                    ref={videoRef}
-                    type="video/mp4"
-                    className="logo-animation"
-                    loop={false}
-                    muted
-                    playsInline
-                    controls={false}
-                />
-
-            </div>
         </>
     );
 }
