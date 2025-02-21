@@ -3,6 +3,7 @@
     text-align: center;
     background-color: var(--background_color);
     opacity: 1;
+    margin-bottom: var(--altri_servizi_margin_bottom_entire_section);
 }
 
 

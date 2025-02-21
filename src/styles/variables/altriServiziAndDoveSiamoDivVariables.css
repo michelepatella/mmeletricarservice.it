@@ -1,5 +1,6 @@
 :root{
-    --divServizio_and_dove_siamo_margin_top: 40px;
+    --divServizio_and_dove_siamo_margin_top_big_and_medium: 40px;
+    --divServizio_and_dove_siamo_margin_top_small: 20px;
 
     --divServizio_and_dove_siamo_icon_dimension_big_and_medium: 40px;
     --divServizio_and_dove_siamo_icon_dimension_small: 30px;
@@ -8,7 +9,7 @@
     --divServizio_and_dove_siamo_margin_right_icon: 20px;
     --divServizio_and_dove_siamo_margin_top_icon_big_medium_landscape: 33px;
     --divServizio_and_dove_siamo_margin_top_icon_medium_portrait: 28px;
-    --divServizio_and_dove_siamo_margin_top_icon_small: 43px;
+    --divServizio_and_dove_siamo_margin_top_icon_small: 27px;
 
     /** only for dove siamo divisions **/
     --dove_siamo_icon_margin_bottom: 20px;
