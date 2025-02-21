@@ -35,7 +35,7 @@ export const CHI_SIAMO_DESCRIPTION = 'Siamo <strong>Michele Vacca</strong> e <st
 
 /**------------- "nostri valori" texts -------------**/
 export const NOSTRI_VALORI_TITLE = "I nostri valori"
-export const NOSTRI_VALORI_DESCRIPTION = 'In MM Eletricar Service, crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
+export const NOSTRI_VALORI_DESCRIPTION = 'In MM Eletricar Service crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
     '                        poiché comprendiamo quanto sia importante per i nostri clienti.\n' +
     '                        La nostra missione è offrire <strong>soluzioni su misura</strong>, <strong>affidabili</strong> e\n' +
     '                        di <strong>qualità</strong>, per garantire la <strong>sicurezza</strong>,\n' +
@@ -48,29 +48,29 @@ export const ARROW_LABEL = 'Scopri tutti i nostri servizi specializzati'
 
 /**------------- "altri servizi" texts -------------**/
 export const SERVIZI = [
-    {title: "Manutenzione centralina", description: "Controllo e aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.", icon: '/icons/cpuIcon.svg'},
+    {title: "Manutenzione centralina", description: "Controllo ed aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.", icon: '/icons/cpuIcon.svg'},
     {title: "Riparazione parabrezza", description: "Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.", icon: '/icons/hammerIcon.svg'},
-    {title: "Pannello di controllo", description: "Riparazione e calibrazione di strumenti digitali e analogici del cruscotto.", icon: '/icons/controlPanelIcon.svg'},
+    {title: "Pannello di controllo", description: "Riparazione e calibrazione di strumenti digitali ed analogici del cruscotto.", icon: '/icons/controlPanelIcon.svg'},
     {title: "Riparazione conta km", description: "Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.", icon: '/icons/dashboardIcon.svg'},
     {title: "Ripristino EGR e DPF", description: "Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.", icon: '/icons/filterIcon.svg'},
-    {title: "Ricarica aria condizionata", description: "Ripristino del gas refrigerante per garantire un climatizzatore efficiente e aria fresca.", icon: '/icons/airIcon.svg'},
+    {title: "Ricarica aria condizionata", description: "Ripristino del gas refrigerante per garantire un climatizzatore efficiente ed aria fresca.", icon: '/icons/airIcon.svg'},
     {title: "Diagnosi iniezione", description: "Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.", icon: '/icons/fuelIcon.svg'},
     {title: "Duplicazione chiavi e telecomandi", description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.", icon: '/icons/keyIcon.svg'},
     {title: "Diagnosi elettronica", description: "Individuazione e risoluzione di guasti elettronici per un’analisi precisa del tuo veicolo.", icon: '/icons/diagnosisIcon.svg'},
     {title: "Veicoli ibridi ed elettrici", description: "Manutenzione specializzata per veicoli ibridi ed elettrici.", icon: '/icons/electricar.svg'},
-    {title: "Installazione antifurti", description: "Soluzioni antifurto satellitari Igla e meccanici Defender per la protezione del tuo veicolo: blocco motore elettronico, protezioni meccaniche per defender e tracciamento satellitare in tempo reale.", icon: '/icons/antiTheftIcon.svg'}
+    {title: "Installazione antifurti", description: "Soluzioni antifurto satellitari Igla e meccanici Defender per la protezione del tuo veicolo.", icon: '/icons/antiTheftIcon.svg'}
 ];
 
 /**------------- "servizi" texts -------------**/
 export const AUTO_USATE_TITLE = "Cerchi di più? Scopri la tua \n" +
     "auto usata perfetta!";
-export const AUTO_USATE_DESCRIPTION = "Non perdere le ultime novità! Seguici su Facebook per rimanere sempre aggiornato sulle nostre servizi in vendita.";
+export const AUTO_USATE_DESCRIPTION = "Non perdere le ultime novità! Seguici su Facebook per rimanere sempre aggiornato sulle nostre auto usate in vendita.";
 export const AUTO_USATE_STATS = [
     {description: "Auto con chilometraggio verificato ✅"},
     {description: "Auto ispezionate e verificate ✅"},
     {description: "Auto tagliandate ✅"}
 ]
-export const FACEBOOK_LINK_AUTO_USATE = "Scopri le nostre servizi >"
+export const FACEBOOK_LINK_AUTO_USATE = "Scopri di più >"
 
 /**------------- "dove siamo" texts -------------**/
 export const DOVE_SIAMO_TITLE = "Vieni a trovarci in officina!"
