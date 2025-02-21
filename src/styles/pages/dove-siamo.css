@@ -38,6 +38,15 @@
     height: 100%;
 }
 
+.google-map-unavailable-description{
+    text-align: center;
+    color: white;
+    font-family: Poppins;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30%;
+}
+
 /* ------ Big screen -------*/
 @media (min-width: 1025px) {
 

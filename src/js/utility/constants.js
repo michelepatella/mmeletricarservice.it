@@ -78,6 +78,7 @@ export const DOVE_SIAMO_DIVISIONS = [
     {title: "Dove siamo", description: "Gravina in Puglia (BA), in Via Bizet, 63, 70024.", icon: '/icons/mapIcon.svg'},
     {title: "Orari di apertura", description: "- <strong>Lun-Ven</strong>: 08:30-13:00/15:00-19:00 <br>- <strong>Sab</strong>: 08:30-13:00", icon: '/icons/clockIcon.svg'},
 ]
+export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION = "Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa."
 
 /**------------- "contatti" texts -------------**/
 export const CONTATTI_TITLE = "Sempre al tuo <br> servizio.";
