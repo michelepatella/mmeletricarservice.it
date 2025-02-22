@@ -29,7 +29,7 @@ function ChiSiamo() {
             const timer = setTimeout(() => {
                 //start the video
                 videoRef.current.play();
-            }, 300);  //delay about 0.7s since the section is visible
+            }, 200);  //delay about 0.2s since the section is visible
 
             return () => clearTimeout(timer);
         }
@@ -61,6 +61,7 @@ function ChiSiamo() {
                 {/*Description*/}
                 <p ref={subtitleRef} className="chi-siamo-subtitle"
                    dangerouslySetInnerHTML={{ __html: CHI_SIAMO_DESCRIPTION }} />
+
             </div>
 
         </>
