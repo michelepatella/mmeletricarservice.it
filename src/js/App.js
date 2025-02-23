@@ -38,7 +38,7 @@ function App() {
 
     return (
         <>
-            <Analytics/>
+            {/*<Analytics/>*/}
             <Router>
                 <>
                     {/*WhatsApp support button*/}
