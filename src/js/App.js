@@ -27,6 +27,7 @@ import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { WHATSAPP_LINK } from './utility/constants';
 import {FloatButton} from "antd";
+import { Analytics } from "@vercel/analytics/react"
 
 /**
  * The main page that contains all the subpages of the website
@@ -36,45 +37,48 @@ import {FloatButton} from "antd";
 function App() {
 
     return (
-        <Router>
-            <>
-                {/*WhatsApp support button*/}
-                {/*<FloatButton
-                    id="support-button"
-                    className="support-button"
-                    icon={<WhatsAppOutlined style={{ color: 'white' }} />}
-                    type="secondary"
-                    onClick={() => window.open(WHATSAPP_LINK, '_blank')}
-                />*/}
+        <>
+            <Analytics/>
+            <Router>
+                <>
+                    {/*WhatsApp support button*/}
+                    {/*<FloatButton
+                        id="support-button"
+                        className="support-button"
+                        icon={<WhatsAppOutlined style={{ color: 'white' }} />}
+                        type="secondary"
+                        onClick={() => window.open(WHATSAPP_LINK, '_blank')}
+                    />*/}
 
-                {/*Integration of the menu*/}
-                <Menu/>
+                    {/*Integration of the menu*/}
+                    <Menu/>
 
-                {/* Definition of the website routes */}
-                <Routes>
-                    {/*Home route*/}
-                    <Route path="/" element={<Home />} />
+                    {/* Definition of the website routes */}
+                    <Routes>
+                        {/*Home route*/}
+                        <Route path="/" element={<Home />} />
 
-                    {/*Other routes*/}
-                    <Route path="/chi-siamo" element={<ChiSiamo/>} />
-                    <Route path="/nostri-valori" element={<NostriValori/>} />
-                    <Route path="/servizi" element={<IntroServizi/>} />
-                    <Route path="/altri-servizi" element={<AltriServizi/>} />
-                    <Route path="/auto-usate" element={<AutoUsate/>} />
-                    <Route path="/dove-siamo" element={<DoveSiamo/>} />
-                    <Route path="/contatti" element={<Contatti/>} />
-                </Routes>
+                        {/*Other routes*/}
+                        <Route path="/chi-siamo" element={<ChiSiamo/>} />
+                        <Route path="/nostri-valori" element={<NostriValori/>} />
+                        <Route path="/servizi" element={<IntroServizi/>} />
+                        <Route path="/altri-servizi" element={<AltriServizi/>} />
+                        <Route path="/auto-usate" element={<AutoUsate/>} />
+                        <Route path="/dove-siamo" element={<DoveSiamo/>} />
+                        <Route path="/contatti" element={<Contatti/>} />
+                    </Routes>
 
-                <ChiSiamo/>
-                <NostriValori/>
-                <IntroServizi/>
-                <AltriServizi/>
-                <AutoUsate/>
-                <DoveSiamo/>
-                <Contatti/>
+                    <ChiSiamo/>
+                    <NostriValori/>
+                    <IntroServizi/>
+                    <AltriServizi/>
+                    <AutoUsate/>
+                    <DoveSiamo/>
+                    <Contatti/>
 
-            </>
-        </Router>
+                </>
+            </Router>
+        </>
     );
 }
 
