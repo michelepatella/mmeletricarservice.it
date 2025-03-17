@@ -1,7 +1,7 @@
 import '../../../styles/components/servizi/DivServizio.css';
 import React, {useRef} from "react";
 import {Flex} from "antd";
-import useIntersectionObserver from "../../utility/useIntersectionObserver";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 /**
  * This component represents the division of each service shown in the "altri servizi" page
@@ -23,15 +23,29 @@ function DivServizio({ title, description, icon}){
             <div className="divServizio">
 
                 {/* Title and icon container*/}
-                <Flex gap="small" align="start" vertical className="title-and-icon-container">
+                <Flex
+                    gap="small"
+                    align="start"
+                    vertical
+                    className="title-and-icon-container">
                     <Flex className="flex-division">
-                        <p className="title-servizio">{title}</p>
-                        <img className="servizio-icon" src={icon} alt="servizio-icon"/>
+                        <p className="title-servizio">
+                            {title}
+                        </p>
+                        <img
+                            className="servizio-icon"
+                            src={icon}
+                            alt="servizio-icon"/>
                     </Flex>
                 </Flex>
 
                 {/* Service's description */}
-                <p className="description-servizio" ref={subtitleRef}>{description}</p>
+                <p
+                    className="description-servizio"
+                    ref={subtitleRef}>
+                    {description}
+                </p>
+
             </div>
         </>
     );

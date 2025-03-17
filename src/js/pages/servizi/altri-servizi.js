@@ -1,7 +1,7 @@
 import '../../../styles/pages/altri-servizi.css';
 import React from "react";
 import DivServizio from "../../components/servizi/DivServizio";
-import { SERVIZI } from "../../utility/constants";
+import { SERVIZI } from "../../utils/constants";
 
 /**
  * That's the "altri servizi" page
@@ -13,7 +13,9 @@ function AltriServizi() {
     return (
         <>
             {/* Global division */}
-            <div className="altri-servizi" id="altri-servizi">
+            <div
+                className="altri-servizi"
+                id="altri-servizi">
 
                 {/* Add a service division for each service */}
                 {SERVIZI.map((servizio, index) => (

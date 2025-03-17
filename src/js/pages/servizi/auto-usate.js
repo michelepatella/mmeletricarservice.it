@@ -1,15 +1,15 @@
 import '../../../styles/pages/auto-usate.css';
 import React, { useRef } from "react";
+import {Row} from "antd";
+import DivAutoUsate from "../../components/servizi/DivAutoUsate";
+import CustomButton from "../../components/CustomButton";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import {
     AUTO_USATE_TITLE,
     AUTO_USATE_DESCRIPTION,
     AUTO_USATE_STATS,
     FACEBOOK_LINK_AUTO_USATE
-} from "../../utility/constants";
-import DivAutoUsate from "../../components/servizi/DivAutoUsate";
-import {Row} from "antd";
-import CustomButton from "../../components/CustomButton";
-import useIntersectionObserver from "../../utility/useIntersectionObserver";
+} from "../../utils/constants";
 
 /**
  * That's the "servizi" page
@@ -25,16 +25,26 @@ function AutoUsate() {
     return (
         <>
             {/* Global division */}
-            <div id="auto-usate" className="auto-usate-container">
+            <div
+                id="auto-usate"
+                className="auto-usate-container">
 
                 {/* Title */}
-                <h2 className="auto-usate-title">{AUTO_USATE_TITLE}</h2>
+                <h2 className="auto-usate-title">
+                    {AUTO_USATE_TITLE}
+                </h2>
 
                 {/* Description */}
-                <p ref={subtitleRef} className="auto-usate-subtitle">{AUTO_USATE_DESCRIPTION}</p>
+                <p
+                    ref={subtitleRef}
+                    className="auto-usate-subtitle">
+                    {AUTO_USATE_DESCRIPTION}
+                </p>
 
                 {/* Global division of the statistic divisions */}
-                <Row className="custom-statistic-grid" align="center">
+                <Row
+                    className="custom-statistic-grid"
+                    align="center">
 
                     {/* Add a division for each statistic*/}
                     {AUTO_USATE_STATS.map((cardAutoUsate, index) => (
@@ -43,6 +53,7 @@ function AutoUsate() {
                             description={cardAutoUsate.description}
                         />
                     ))}
+
                 </Row>
 
                 {/* Facebook button link */}

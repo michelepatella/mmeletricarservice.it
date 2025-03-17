@@ -25,7 +25,7 @@ import AutoUsate from "./pages/servizi/auto-usate";
 import DoveSiamo from "./pages/dove-siamo";
 import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { WHATSAPP_LINK } from './utility/constants';
+import { WHATSAPP_LINK } from './utils/constants';
 import {FloatButton} from "antd";
 import { Analytics } from "@vercel/analytics/react"
 
@@ -59,13 +59,34 @@ function App() {
                         <Route path="/" element={<Home />} />
 
                         {/*Other routes*/}
-                        <Route path="/chi-siamo" element={<ChiSiamo/>} />
-                        <Route path="/nostri-valori" element={<NostriValori/>} />
-                        <Route path="/servizi" element={<IntroServizi/>} />
-                        <Route path="/altri-servizi" element={<AltriServizi/>} />
-                        <Route path="/auto-usate" element={<AutoUsate/>} />
-                        <Route path="/dove-siamo" element={<DoveSiamo/>} />
-                        <Route path="/contatti" element={<Contatti/>} />
+                        <Route
+                            path="/chi-siamo"
+                            element={<ChiSiamo/>}
+                        />
+                        <Route
+                            path="/nostri-valori"
+                            element={<NostriValori/>}
+                        />
+                        <Route
+                            path="/servizi"
+                            element={<IntroServizi/>}
+                        />
+                        <Route
+                            path="/altri-servizi"
+                            element={<AltriServizi/>}
+                        />
+                        <Route
+                            path="/auto-usate"
+                            element={<AutoUsate/>}
+                        />
+                        <Route
+                            path="/dove-siamo"
+                            element={<DoveSiamo/>}
+                        />
+                        <Route
+                            path="/contatti"
+                            element={<Contatti/>}
+                        />
                     </Routes>
 
                     <ChiSiamo/>

@@ -6,7 +6,10 @@ import { Layout } from 'antd';
 /**
  * "home" page layout definition
  */
-const { Header, Content } = Layout;
+const {
+    Header,
+    Content
+} = Layout;
 
 /**
  * That's the "home" page
@@ -18,7 +21,9 @@ function Home() {
     return (
         <>
             {/* Home Layout */}
-            <Layout className="home-layout" id="home">
+            <Layout
+                className="home-layout"
+                id="home">
 
                 {/* "home" header */}
                 <Header className="home-header">

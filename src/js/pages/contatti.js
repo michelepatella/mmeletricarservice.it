@@ -6,7 +6,10 @@ import { Layout } from 'antd';
 /**
  * "contatti" page layout definition
  */
-const { Content, Footer} = Layout;
+const {
+    Content,
+    Footer
+} = Layout;
 
 /**
  * That's the "contatti" page
@@ -19,7 +22,9 @@ function Contatti() {
 
         <>
             {/* Layout of the "contatti" page */}
-            <Layout className="contatti-layout" id="contatti">
+            <Layout
+                className="contatti-layout"
+                id="contatti">
 
                 {/* "contatti" content */}
                 <Content className="contatti-content">

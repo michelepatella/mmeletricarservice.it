@@ -1,52 +1,48 @@
-import {Col, Statistic} from "antd";
-import React, {useEffect, useState} from "react";
 import '../../../styles/components/servizi/DivAutoUsate.css';
+import React from 'react';
 import CountUp from 'react-countup';
-import {useInView} from 'react-intersection-observer';
+import { Col, Statistic } from 'antd';
+import {useCounterAnimation} from "../../hooks/useCounterAnimation";
 
 /**
- * This component represents the divisions of the "servizi" page, used to describe services
+ * This component represents the division of the "auto usate" page
  * @param description
- * @returns {Element}
+ * @returns {React.JSX.Element}
  * @constructor
  */
 function DivAutoUsate({ description }) {
 
-    /**
-     * To keep track when the division is visible to start the animation of counter
-     */
-    const [hasStarted, setHasStarted] = useState(false);
-    const { ref, inView } = useInView({
-        triggerOnce: true,
-        threshold: 0.5,
-    });
-    useEffect(() => {
-        if (inView && !hasStarted) {
-            setHasStarted(true);
-        }
-    }, [inView, hasStarted]);
+    //generate the stastics animation
+    const { ref, hasStarted } = useCounterAnimation();
 
-    const formatter = (value) => hasStarted ? <CountUp end={value} /> : <span>0</span>;
+    //formatter for statistics
+    const formatter = (value) => (
+        hasStarted ?
+            <CountUp end={value} /> :
+            <span>0</span>
+    );
 
     return (
-        <>
-            {/* Global division */}
-            <div>
-                {/* Statistic division */}
-                <Col className="statistic-division" ref={ref}>
+        <div>
 
-                    {/* Statistic (from 0% to 100%) */}
-                    <Statistic
-                        title={description}
-                        value={hasStarted ? 100 : 0}
-                        suffix="%"
-                        className="custom-statistic"
-                        formatter={formatter}
-                    />
-                </Col>
-            </div>
-        </>
+            {/* Statistics */}
+            <Col
+                className='statistic-division'
+                ref={ref}>
+
+                <Statistic
+                    title={description}
+                    value={hasStarted ? 100 : 0}
+                    suffix='%'
+                    className='custom-statistic'
+                    formatter={formatter}
+                />
+
+            </Col>
+
+        </div>
     );
+
 }
 
 export default DivAutoUsate;

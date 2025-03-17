@@ -1,9 +1,9 @@
-import React, {useRef} from "react";
-import {HOME_TITLE, HOME_SUBTITLE} from "../../utility/constants";
 import '../../../styles/components/home/HomeContent.css';
 import '../../../styles/components/utility/Image.css';
 import '../../../styles/variables/imageVariables.css';
-import useIntersectionObserver from "../../utility/useIntersectionObserver";
+import React, {useRef} from "react";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import {HOME_TITLE, HOME_SUBTITLE} from "../../utils/constants";
 
 /**
  * This component represents the content of "home" page
@@ -22,16 +22,22 @@ function HomeContent() {
             <div className="title-home-container">
 
                 {/* Title */}
-                <h1 className="home-title" dangerouslySetInnerHTML={{__html: HOME_TITLE}}/>
+                <h1
+                    className="home-title"
+                    dangerouslySetInnerHTML={{__html: HOME_TITLE}}/>
 
                 {/* Description */}
-                <p className="home-description" dangerouslySetInnerHTML={{__html: HOME_SUBTITLE}}/>
+                <p
+                    className="home-description"
+                    dangerouslySetInnerHTML={{__html: HOME_SUBTITLE}}/>
 
             </div>
 
             {/* Image container */}
             <div className="image-container">
-                <img src="/images/home-image.jpg" ref={imageRef}/>
+                <img
+                    src="/images/home-image.jpg"
+                    ref={imageRef}/>
             </div>
         </>
 )

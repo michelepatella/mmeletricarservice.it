@@ -1,9 +1,10 @@
 import '../../../styles/pages/chi-siamo.css';
-import React, { useEffect, useRef } from "react";
-import { CHI_SIAMO_DESCRIPTION, CHI_SIAMO_TITLE } from "../../utility/constants";
-import useIntersectionObserver from "../../utility/useIntersectionObserver";
 import '../../../styles/components/utility/Image.css';
 import '../../../styles/variables/imageVariables.css';
+import React, {useRef} from "react";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import { CHI_SIAMO_DESCRIPTION } from "../../utils/constants";
+import {useVideoAnimation} from "../../hooks/useVideoAnimation";
 
 /**
  * That's the "chi siamo" page
@@ -12,37 +13,29 @@ import '../../../styles/variables/imageVariables.css';
  */
 function ChiSiamo() {
 
-    //IntersectionObserver to generate the animation and start the video
-    //when the section is visible
+    //IntersectionObserver to generate the animation and
+    //start the video when the section is visible
     const subtitleRef = useRef(null);
     const imageRef = useRef(null);
     const videoRef = useRef(null);
-    useIntersectionObserver(subtitleRef);
     const isVideoVisible= useIntersectionObserver(imageRef);
-
-    /**
-     * To delay the logo animation
-     */
-    useEffect(() => {
-        //if the section is visible
-        if (isVideoVisible) {
-            const timer = setTimeout(() => {
-                //start the video
-                videoRef.current.play();
-            }, 200);  //delay about 0.2s since the section is visible
-
-            return () => clearTimeout(timer);
-        }
-    }, [isVideoVisible]);
+    useIntersectionObserver(subtitleRef);
+    useVideoAnimation(videoRef, isVideoVisible);
 
     return (
         <>
             {/* Title and description division */}
-            <div id="chi-siamo" className="chi-siamo-container">
+            <div
+                id="chi-siamo"
+                className="chi-siamo-container">
 
                 {/* Video container */}
-                <div className="image-container" ref={imageRef}
-                     style={{marginBottom: '50px'}}>
+                <div
+                    className="image-container"
+                    ref={imageRef}
+                    style={{
+                        marginBottom: '50px'
+                    }}>
 
                     {/*Logo animation video*/}
                     <video
@@ -59,8 +52,10 @@ function ChiSiamo() {
                 </div>
 
                 {/*Description*/}
-                <p ref={subtitleRef} className="chi-siamo-subtitle"
-                   dangerouslySetInnerHTML={{ __html: CHI_SIAMO_DESCRIPTION }} />
+                <p
+                    ref={subtitleRef}
+                    className="chi-siamo-subtitle"
+                    dangerouslySetInnerHTML={{ __html: CHI_SIAMO_DESCRIPTION }} />
 
             </div>
 

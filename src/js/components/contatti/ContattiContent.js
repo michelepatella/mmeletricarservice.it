@@ -1,8 +1,8 @@
-import React, {useRef} from "react";
-import {CONTATTI_TITLE, CONTATTI_SUBTITLE, CONTATTI} from "../../utility/constants";
 import '../../../styles/components/contatti/ContattiContent.css';
+import React, {useRef} from "react";
 import CustomButton from "../CustomButton";
-import useIntersectionObserver from "../../utility/useIntersectionObserver";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import {CONTATTI_TITLE, CONTATTI_SUBTITLE, CONTATTI} from "../../utils/constants";
 
 /**
  * This component represents the content of "contatti" page
@@ -22,21 +22,28 @@ function ContattiContent(props) {
             <div className="title-contatti-container">
 
                 {/* Title */}
-                <h1 className="contatti-title" dangerouslySetInnerHTML={{__html: CONTATTI_TITLE}}/>
+                <h1
+                    className="contatti-title"
+                    dangerouslySetInnerHTML={{__html: CONTATTI_TITLE}}/>
 
                 {/* Description */}
-                <p className="contatti-description" dangerouslySetInnerHTML={{__html: CONTATTI_SUBTITLE}} ref={subtitleRef}/>
+                <p
+                    className="contatti-description"
+                    dangerouslySetInnerHTML={{__html: CONTATTI_SUBTITLE}}
+                    ref={subtitleRef}/>
 
                 {/* Contact buttons container */}
                 <div className="contact-buttons-container">
+
                     {/* Add a button for each contact */}
-                    {CONTATTI.map((contatto, index) => (
+                    {CONTATTI.map((contact, index) => (
                         <CustomButton
                             key={index}
-                            value={contatto.value}
-                            icon={contatto.icon}
+                            value={contact.value}
+                            icon={contact.icon}
                         />
                     ))}
+
                 </div>
             </div>
         </>

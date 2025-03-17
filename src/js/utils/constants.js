@@ -1,5 +1,3 @@
-/** constants definition **/
-
 /**------------- contacts information -------------**/
 export const WHATSAPP_LINK = 'https://wa.me/3908650830725'
 export const EMAIL = 'mmeletricarservice@libero.it'
@@ -8,19 +6,62 @@ export const FACEBOOK = 'https://www.facebook.com/profile.php?id=61573235319851&
 export const PHONE = '0803267837'
 export const P_IVA = '08650830725'
 export const CONTATTI = [
-    {value: PHONE, icon: '/icons/phoneIconBlack.svg'},
-    {value: EMAIL, icon: '/icons/emailIconBlack.svg'},
-    {value: EMAIL_PEC, icon: '/icons/emailIconBlack.svg'},
-    {value: 'MM Eletricar Service', icon: '/icons/facebookIconBlack.svg'}
+    {
+        value: PHONE,
+        icon: '/icons/phoneIconBlack.svg'
+    },
+    {
+        value: EMAIL,
+        icon: '/icons/emailIconBlack.svg'
+    },
+    {
+        value: EMAIL_PEC,
+        icon: '/icons/emailIconBlack.svg'
+    },
+    {
+        value: 'MM Eletricar Service',
+        icon: '/icons/facebookIconBlack.svg'
+    }
 ]
 
 /**------------- sections definition -------------**/
 export const SECTIONS = [
-    { id: 'home', title: 'Home' },
-    { id: 'chi-siamo', title: 'Chi siamo', children: [{ id: 'nostri-valori', title: 'I nostri valori' }] },
-    { id: 'intro-servizi', title: 'Servizi', children: [{ id: 'altri-servizi', title: 'Altri servizi' }, { id: 'auto-usate', title: 'Auto usate' }] },
-    { id: 'dove-siamo', title: 'Dove siamo' },
-    { id: 'contatti', title: 'Contatti' }
+    {
+        id: 'home',
+        title: 'Home'
+    },
+    {
+        id: 'chi-siamo',
+        title: 'Chi siamo',
+        children: [
+            {
+            id: 'nostri-valori',
+            title: 'I nostri valori'
+            }
+        ]
+    },
+    {
+        id: 'intro-servizi',
+        title: 'Servizi',
+        children: [
+            {
+                id: 'altri-servizi',
+                title: 'Altri servizi'
+            },
+            {
+                id: 'auto-usate',
+                title: 'Auto usate'
+            }
+        ]
+    },
+    {
+        id: 'dove-siamo',
+        title: 'Dove siamo'
+    },
+    {
+        id: 'contatti',
+        title: 'Contatti'
+    }
 ];
 
 /**------------- "home" texts -------------**/
@@ -48,17 +89,61 @@ export const ARROW_LABEL = 'Scopri tutti i nostri servizi specializzati'
 
 /**------------- "altri servizi" texts -------------**/
 export const SERVIZI = [
-    {title: "Manutenzione centralina", description: "Controllo ed aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.", icon: '/icons/cpuIcon.svg'},
-    {title: "Riparazione parabrezza", description: "Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.", icon: '/icons/hammerIcon.svg'},
-    {title: "Pannello di controllo", description: "Riparazione e calibrazione di strumenti digitali ed analogici del cruscotto.", icon: '/icons/controlPanelIcon.svg'},
-    {title: "Riparazione conta km", description: "Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.", icon: '/icons/dashboardIcon.svg'},
-    {title: "Ripristino EGR e DPF", description: "Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.", icon: '/icons/filterIcon.svg'},
-    {title: "Ricarica aria condizionata", description: "Ripristino del gas refrigerante per garantire un climatizzatore efficiente ed aria fresca.", icon: '/icons/airIcon.svg'},
-    {title: "Diagnosi iniezione", description: "Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.", icon: '/icons/fuelIcon.svg'},
-    {title: "Duplicazione chiavi e telecomandi", description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.", icon: '/icons/keyIcon.svg'},
-    {title: "Diagnosi elettronica", description: "Individuazione e risoluzione di guasti elettronici per un’analisi precisa del tuo veicolo.", icon: '/icons/diagnosisIcon.svg'},
-    {title: "Veicoli ibridi ed elettrici", description: "Manutenzione specializzata per veicoli ibridi ed elettrici.", icon: '/icons/electricar.svg'},
-    {title: "Installazione antifurti", description: "Soluzioni antifurto satellitari Igla e meccanici Defender per la protezione del tuo veicolo.", icon: '/icons/antiTheftIcon.svg'}
+    {
+        title: "Manutenzione centralina",
+        description: "Controllo ed aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.",
+        icon: '/icons/cpuIcon.svg'
+    },
+    {
+        title: "Riparazione parabrezza",
+        description: "Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.",
+        icon: '/icons/hammerIcon.svg'
+    },
+    {
+        title: "Pannello di controllo",
+        description: "Riparazione e calibrazione di strumenti digitali ed analogici del cruscotto.",
+        icon: '/icons/controlPanelIcon.svg'
+    },
+    {
+        title: "Riparazione conta km",
+        description: "Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.",
+        icon: '/icons/dashboardIcon.svg'
+    },
+    {
+        title: "Ripristino EGR e DPF",
+        description: "Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.",
+        icon: '/icons/filterIcon.svg'
+    },
+    {
+        title: "Ricarica aria condizionata",
+        description: "Ripristino del gas refrigerante per garantire un climatizzatore efficiente ed aria fresca.",
+        icon: '/icons/airIcon.svg'
+    },
+    {
+        title: "Diagnosi iniezione",
+        description: "Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.",
+        icon: '/icons/fuelIcon.svg'
+    },
+    {
+        title: "Duplicazione chiavi e telecomandi",
+        description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.",
+        icon: '/icons/keyIcon.svg'
+    },
+    {
+        title: "Diagnosi elettronica",
+        description: "Individuazione e risoluzione di guasti elettronici per un’analisi precisa del tuo veicolo.",
+        icon: '/icons/diagnosisIcon.svg'
+    },
+    {
+        title: "Veicoli ibridi ed elettrici",
+        description: "Manutenzione specializzata per veicoli ibridi ed elettrici.",
+        icon: '/icons/electricar.svg'
+    },
+    {
+        title: "Installazione antifurti",
+        description: "Soluzioni antifurto satellitari Igla e meccanici Defender per la protezione del tuo veicolo.",
+        icon: '/icons/antiTheftIcon.svg'
+    }
 ];
 
 /**------------- "servizi" texts -------------**/
@@ -75,8 +160,16 @@ export const FACEBOOK_LINK_AUTO_USATE = "Scopri di più >"
 /**------------- "dove siamo" texts -------------**/
 export const DOVE_SIAMO_TITLE = "Vieni a trovarci in officina!"
 export const DOVE_SIAMO_DIVISIONS = [
-    {title: "Dove siamo", description: "Gravina in Puglia (BA), in Via Bizet, 63, 70024.", icon: '/icons/mapIcon.svg'},
-    {title: "Orari di apertura", description: "- <strong>Lun-Ven</strong>: 08:30-13:00/15:00-19:00 <br>- <strong>Sab</strong>: 08:30-13:00", icon: '/icons/clockIcon.svg'},
+    {
+        title: "Dove siamo",
+        description: "Gravina in Puglia (BA), in Via Bizet, 63, 70024.",
+        icon: '/icons/mapIcon.svg'
+    },
+    {
+        title: "Orari di apertura",
+        description: "- <strong>Lun-Ven</strong>: 08:30-13:00/15:00-19:00 <br>- <strong>Sab</strong>: 08:30-13:00",
+        icon: '/icons/clockIcon.svg'
+    }
 ]
 export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION = "Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa."
 

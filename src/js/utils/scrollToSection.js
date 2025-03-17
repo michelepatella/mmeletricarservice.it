@@ -4,11 +4,17 @@
  * @param setVisible
  */
 export const scrollToSection = (sectionId, setVisible) => {
+    //get the section id
     const section = document.getElementById(sectionId);
+
+    //move to the section
     if (section) {
         section.scrollIntoView({ behavior: "smooth" });
     }
+
+    //make the menu not visible (if the method has been called by the menu)
     if(setVisible != null) {
         setVisible(false);
     }
+
 };

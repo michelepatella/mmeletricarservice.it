@@ -1,9 +1,9 @@
 import '../../../styles/pages/nostri-valori.css';
-import React, {useRef} from "react";
-import {NOSTRI_VALORI_DESCRIPTION, NOSTRI_VALORI_TITLE} from "../../utility/constants";
-import useIntersectionObserver from "../../utility/useIntersectionObserver";
 import '../../../styles/variables/imageVariables.css';
 import '../../../styles/components/utility/Image.css';
+import React, {useRef} from "react";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import {NOSTRI_VALORI_DESCRIPTION, NOSTRI_VALORI_TITLE} from "../../utils/constants";
 
 /**
  * That's the "nostri valori" page
@@ -21,19 +21,27 @@ function NostriValori() {
     return (
         <>
             {/* Title and description division */}
-            <div id="nostri-valori" className="nostri-valori-container">
+            <div
+                id="nostri-valori"
+                className="nostri-valori-container">
 
                 {/* Title */}
-                <h2 className="nostri-valori-title">{NOSTRI_VALORI_TITLE}</h2>
+                <h2 className="nostri-valori-title">
+                    {NOSTRI_VALORI_TITLE}
+                </h2>
 
                 {/* Description */}
-                <p className="nostri-valori-subtitle" ref={subtitleRef}
-                   dangerouslySetInnerHTML={{__html: NOSTRI_VALORI_DESCRIPTION}}/>
+                <p
+                    className="nostri-valori-subtitle"
+                    ref={subtitleRef}
+                    dangerouslySetInnerHTML={{__html: NOSTRI_VALORI_DESCRIPTION}}/>
             </div>
 
             {/* Image container with the image inside it */}
             <div className="image-container">
-                <img src="/images/nostri-valori-image.jpg" ref={imageRef}/>
+                <img
+                    src="/images/nostri-valori-image.jpg"
+                    ref={imageRef}/>
             </div>
         </>
     );
