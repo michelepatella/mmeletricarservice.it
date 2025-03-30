@@ -21,7 +21,6 @@
 }
 
 .custom-title.in-view {
-    opacity: 1;
     animation: slideInTitle 1.5s ease forwards;
 }
 
@@ -29,7 +28,7 @@
 .custom-subtitle,
 .custom-description {
     opacity: 0;
-    transition: opacity 1.5s ease, transform 1.5s ease;
+    transition: opacity 1.8s ease, transform 1.8s ease;
     text-align: left;
     color: white;
 }
