@@ -18,7 +18,7 @@
     }
 
     .custom-statistic .ant-statistic-title {
-        font-size: var(--secondary_text_font_size_big);
+        font-size: var(--description_font_size_big);
     }
 }
 
@@ -30,7 +30,7 @@
     }
 
     .custom-statistic .ant-statistic-title {
-        font-size: var(--secondary_text_font_size_medium);
+        font-size: var(--description_font_size_medium);
     }
 
 }
@@ -43,7 +43,7 @@
     }
 
     .custom-statistic .ant-statistic-title {
-        font-size: var(--secondary_text_font_size_medium);
+        font-size: var(--description_font_size_medium);
     }
 
 }
@@ -56,7 +56,7 @@
     }
 
     .custom-statistic .ant-statistic-title {
-        font-size: var(--secondary_text_font_size_small);
+        font-size: var(--description_font_size_small);
     }
 
 }
@@ -69,7 +69,7 @@
     }
 
     .custom-statistic .ant-statistic-title {
-        font-size: var(--secondary_text_font_size_small);
+        font-size: var(--description_font_size_small);
     }
 
 }

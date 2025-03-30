@@ -1,0 +1,40 @@
+/* Custom Button styles */
+.custom-button {
+    background-color: var(--accent_color);
+    color: var(--background_color);
+    font-family: 'Poppins';
+    border-radius: var(--custom_button_border_radius);
+    padding: var(--custom_button_padding);
+    transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: var(--accent_color) !important;
+    color: var(--background_color) !important;
+    font-family: 'Poppins' !important;
+    border-radius: var(--custom_button_border_radius);
+    padding: var(--custom_button_padding);
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
+
+/* ------- Big screen ------- */
+@media (min-width: 1025px) {
+    .custom-button {
+        font-size: var(--description_font_size_big);
+    }
+}
+
+/* ------- Medium screen (portrait and landscape) ------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .custom-button {
+        font-size: var(--description_font_size_medium);
+    }
+}
+
+/* ------- Small screen (portrait and landscape) ------- */
+@media (max-width: 767px) {
+    .custom-button {
+        font-size: var(--description_font_size_small);
+    }
+}

@@ -1,9 +1,0 @@
-/* ------- General layout -------- */
-.home-layout {
-    width: 100%;
-    display: flex;
-    background-color: var(--background_color);
-    flex-direction: column;
-    font-family: 'Poppins';
-}
-

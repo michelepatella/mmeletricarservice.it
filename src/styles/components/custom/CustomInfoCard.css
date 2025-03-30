@@ -1,0 +1,61 @@
+/* Custom Info Card styles */
+.custom-info-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-color: var(--background_color);
+}
+
+/* Custom Info Card icon styles */
+.custom-info-card-icon {
+    width: var(--custom_info_card_icon_dimension);
+    height: var(--custom_info_card_icon_dimension);
+}
+
+/* Custom Info Card Flex container styles */
+.custom-info-card-flex {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: var(--custom_info_card_flex_gap);
+}
+
+/* ------ Big screen ------- */
+@media (min-width: 1025px) {
+    .custom-info-card {
+        width: 80%;
+    }
+
+    .custom-info-card-flex {
+        margin-top: var(--custom_info_card_margin_top_big_medium);
+    }
+}
+
+/* ------ Medium screen (portrait and landscape) ------ */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .custom-info-card {
+        width: 60%;
+    }
+
+    .custom-info-card-flex {
+        margin-top: var(--custom_info_card_margin_top_big_medium);
+    }
+}
+
+/* ------ Small screen portrait ------ */
+@media (max-width: 767px) {
+    .custom-info-card {
+        width: 90%;
+    }
+
+    .custom-info-card-flex {
+        margin-top: var(--custom_info_card_margin_top_small);
+    }
+}
+
+/* ------ Small screen landscape ------ */
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
+    .custom-info-card-flex {
+        margin-top: var(--custom_info_card_margin_top_small);
+    }
+}

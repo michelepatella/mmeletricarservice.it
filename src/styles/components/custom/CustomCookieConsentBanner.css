@@ -1,0 +1,33 @@
+/* Cookie Consent styles*/
+.CookieConsent{
+    font-size: var(--small_text_font_size) !important;
+    font-family: 'Poppins' !important;
+    color: white !important;
+    z-index: 9999999 !important;
+    background: var(--background_color) !important;
+}
+
+/* Cookie Consent buttons styles */
+.CookieConsent #rcc-decline-button, #rcc-confirm-button, .save-cookie-preferences-button{
+    color: black !important;
+    font-size: var(--small_text_font_size) !important;
+    font-family: 'Poppins' !important;
+    padding: var(--custom_cookie_banner_button_padding) !important;
+    background: var(--accent_color) !important;
+    border: none !important;
+    border-radius: var(--border_radius) !important;
+}
+
+/* Policy links styles */
+.policy-link{
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Switch container styles */
+.cookie-switch-container{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}

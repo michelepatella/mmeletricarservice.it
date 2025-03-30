@@ -1,0 +1,93 @@
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: rotateX(90deg) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0deg) translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Arrow and Label container styles */
+.arrow-and-label-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Arrow button styles */
+.arrow-button {
+    background-image: url('../../../public/icons/arrow.svg');
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+/* ------ Big screen ------- */
+@media (min-width: 1025px) {
+    .arrow-and-label-container {
+        height: 15vh;
+    }
+
+    .arrow-button {
+        width: var(--intro_servizi_arrow_button_dimension);
+        height: var(--intro_servizi_arrow_button_dimension);
+    }
+}
+
+/* ------ Medium screen ------ */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait),
+(min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .arrow-and-label-container {
+        height: 15vh;
+    }
+
+    .arrow-button {
+        width: var(--intro_servizi_arrow_button_dimension);
+        height: var(--intro_servizi_arrow_button_dimension);
+    }
+}
+
+/* ------ Small screen portrait ------ */
+@media (max-width: 767px) {
+    .arrow-and-label-container {
+        height: 15vh;
+    }
+
+    .arrow-button {
+        width: var(--intro_servizi_arrow_button_dimension);
+        height: var(--intro_servizi_arrow_button_dimension);
+    }
+}
+
+/* ------ Small screen landscape ------ */
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
+    .arrow-and-label-container {
+        height: 20vh;
+        margin-bottom: var(--intro_servizi_arrow_container_margin_button_small_landscape);
+    }
+
+    .arrow-button {
+        width: var(--intro_servizi_arrow_button_dimension);
+        height: var(--intro_servizi_arrow_button_dimension);
+    }
+}

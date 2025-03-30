@@ -1,0 +1,114 @@
+:root{
+
+    /* Colors */
+    --background_color: #141414;
+    --accent_color: #F8DE4D;
+
+
+    /* Font size */
+    --home_title_font_size_big: 70px;
+    --home_title_font_size_medium: 50px;
+    --home_title_font_size_small_portrait: 30px;
+    --home_title_font_size_small_landscape: 35px;
+
+    --home_subtitle_font_size_big: 35px;
+    --home_subtitle_font_size_medium: 25px;
+    --home_subtitle_font_size_small_portrait: 20px;
+    --home_subtitle_font_size_small_landscape: 22px;
+
+    --title_font_size_big: 50px;
+    --title_font_size_medium: 45px;
+    --title_font_size_small: 25px;
+
+    --subtitle_font_size_big: 25px;
+    --subtitle_font_size_medium: 20px;
+    --subtitle_font_size_small: 18px;
+
+    --description_font_size_big: 20px;
+    --description_font_size_medium: 18px;
+    --description_font_size_small: 16px;
+
+    --small_text_font_size: clamp(12px, 2vw, 14px);;
+
+
+    /* General Components variables */
+    --border_radius: 10px;
+    --float_button_dimension: 40px;
+    --float_button_margin_right: 15px;
+    --float_button_margin_top_bottom: 45px;
+
+
+    /* Custom Icon Button */
+    --custom_icon_button_margins: clamp(5px, 2vw, 10px);
+    --custom_icon_button_dimension: clamp(20px, 5vw, 22px);
+
+
+    /* Custom Button */
+    --custom_button_border_radius: 20px;
+    --custom_button_padding: 20px;
+
+
+    /* Cookie Banner Button */
+    --custom_cookie_banner_button_padding: 10px 20px;
+
+
+    /* Custom Info Card */
+    --custom_info_card_margin_top_big_medium: 40px;
+    --custom_info_card_margin_top_small: 20px;
+
+    --custom_info_card_icon_dimension: 30px;
+
+    --custom_info_card_flex_gap: 30px;
+
+
+    /* Custom Image Container */
+    --custom_image_container_margin_top_big: 100px;
+    --custom_image_container_margin_top_medium: 80px;
+    --custom_image_container_margin_top_small: 50px;
+
+
+    /* Menu */
+    --menu_items_gap: 30px;
+
+
+    /* General section margins */
+    --section_margin_top: 40px;
+    --section_margin_bottom: 160px;
+
+    --section_margin_left_big: 250px;
+    --section_margin_left_medium: 190px;
+    --section_margin_left_small_portrait: 20px;
+    --section_margin_left_small_landscape: 15px;
+
+
+    /* Home section */
+    --home_header_padding_bottom: 20px;
+    --home_header_padding_right: 5px;
+
+
+    /* Servizi section */
+    --intro_servizi_arrow_button_dimension: 30px;
+    --intro_servizi_arrow_label_margin_bottom: 10px;
+    --intro_servizi_arrow_container_margin_button_small_landscape: 10px;
+
+
+    /* Contatti */
+    --contatti_contact_buttons_gap: 10px;
+    --contatti_contact_buttons_container_margin_top: 100px;
+
+
+    /* Dove siamo */
+    --dove_siamo_google_maps_margin_top: 50px;
+
+
+    /* TO DELETE */
+    --auto_usate_container_margin_bottom: 100px;
+    --auto_usate_statistic_division_margin_top: 80px;
+    --auto_usate_percentage_font_size_big: 90px;
+    --auto_usate_percentage_font_size_medium_portrait: 70px;
+    --auto_usate_percentage_font_size_medium_landscape: 80px;
+    --auto_usate_percentage_font_size_small: 50px;
+    --auto_usate_facebook_link_margin_top: 30px;
+
+
+}

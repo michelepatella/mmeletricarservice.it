@@ -1,92 +1,102 @@
-import '../styles/App.css';
-import '../styles/variables/colorsVariables.css';
-import '../styles/variables/fontSizeVariables.css';
-import '../styles/variables/homeVariables.css';
-import '../styles/variables/whatsappButtonVariables.css';
-import '../styles/variables/customButtonVariables.css';
-import '../styles/variables/contattiVariables.css';
-import '../styles/variables/altriServiziVariables.css';
-import '../styles/variables/autoUsateVariables.css';
-import '../styles/variables/generalMarginsVariables.css';
-import '../styles/variables/altriServiziAndDoveSiamoDivVariables.css';
-import '../styles/components/buttons/WhatsappSupportButton.css';
-import '../styles/variables/menuVariables.css';
-import '../styles/variables/cookieButtonVariables.css';
-import '../styles/components/cookie/CookieButton.css';
 import React from "react";
-import Home from './pages/home';
-import ChiSiamo from './pages/chi siamo/chi-siamo';
-import Menu from './components/menu/Menu';
-import NostriValori from './pages/chi siamo/nostri-valori';
-import IntroServizi from "./pages/servizi/intro-servizi";
-import AltriServizi from "./pages/servizi/altri-servizi";
-import Contatti from './pages/contatti';
-import AutoUsate from "./pages/servizi/auto-usate";
-import DoveSiamo from "./pages/dove-siamo";
-import { WhatsAppOutlined } from '@ant-design/icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { WHATSAPP_LINK } from './utils/constants';
-import {FloatButton} from "antd";
 import { Analytics } from "@vercel/analytics/react"
+import {Button} from "antd";
+import {handleCookieButtonClick, useCookieConsent} from "./hooks/useCookieConsent";
+import Home from './sections/home';
+import ChiSiamo from './sections/chi siamo/chi-siamo';
+import NostriValori from './sections/chi siamo/nostri-valori';
+import IntroServizi from "./sections/servizi/intro-servizi";
+import AltriServizi from "./sections/servizi/altri-servizi";
+import AutoUsate from "./sections/servizi/auto-usate";
+import DoveSiamo from "./sections/dove-siamo";
+import Contatti from './sections/contatti';
+import Menu from './components/menu/Menu';
+import CustomCookieConsentBanner from "./components/custom/CustomCookieConsentBanner";
+import '../styles/App.css';
 
 /**
- * The main page that contains all the subpages of the website
+ * App
  * @returns {Element}
  * @constructor
  */
 function App() {
+
+    const {
+        cookiesAccepted,
+        tempPreferences,
+        isCookiesBannerVisible,
+        handleAcceptCookies,
+        handleDeclineCookies,
+        handleSavePreferences,
+        setTempPreferences,
+        setIsCookiesBannerVisible
+    } = useCookieConsent();
 
     return (
         <>
             <Analytics/>
             <Router>
                 <>
-                    {/*WhatsApp support button*/}
-                    {/*<FloatButton
-                        id="support-button"
-                        className="support-button"
-                        icon={<WhatsAppOutlined style={{ color: 'white' }} />}
-                        type="secondary"
-                        onClick={() => window.open(WHATSAPP_LINK, '_blank')}
-                    />*/}
 
-                    {/*Integration of the menu*/}
+                    {/* Cookies button */}
+                    <Button
+                        className="cookie-button"
+                        onClick={() => handleCookieButtonClick(setIsCookiesBannerVisible)} />
+
+                    {/* Custom Cookie Consent Banner */}
+                    <CustomCookieConsentBanner
+                        isCookiesBannerVisible={isCookiesBannerVisible}
+                        handleAcceptCookies={handleAcceptCookies}
+                        handleDeclineCookies={handleDeclineCookies}
+                        tempPreferences={tempPreferences}
+                        setTempPreferences={setTempPreferences}
+                        handleSavePreferences={handleSavePreferences}/>
+
+                    {/* Menu */}
                     <Menu/>
 
                     {/* Definition of the website routes */}
                     <Routes>
-                        {/*Home route*/}
-                        <Route path="/" element={<Home />} />
 
-                        {/*Other routes*/}
+                        {/* Home */}
+                        <Route path="/" element={<Home />}/>
+
+                        {/* Chi siamo */}
                         <Route
                             path="/chi-siamo"
-                            element={<ChiSiamo/>}
-                        />
+                            element={<ChiSiamo/>}/>
+
+                        {/* Nostri valori */}
                         <Route
                             path="/nostri-valori"
-                            element={<NostriValori/>}
-                        />
+                            element={<NostriValori/>}/>
+
+                        {/* Servizi */}
                         <Route
                             path="/servizi"
-                            element={<IntroServizi/>}
-                        />
+                            element={<IntroServizi/>}/>
+
+                        {/* Altri servizi */}
                         <Route
                             path="/altri-servizi"
-                            element={<AltriServizi/>}
-                        />
+                            element={<AltriServizi/>}/>
+
+                        {/* Auto usate */}
                         <Route
                             path="/auto-usate"
-                            element={<AutoUsate/>}
-                        />
+                            element={<AutoUsate/>}/>
+
+                        {/* Dove siamo */}
                         <Route
                             path="/dove-siamo"
-                            element={<DoveSiamo/>}
-                        />
+                            element={<DoveSiamo cookiesAccepted={cookiesAccepted}/>}/>
+
+                        {/* Contatti */}
                         <Route
                             path="/contatti"
-                            element={<Contatti/>}
-                        />
+                            element={<Contatti/>}/>
+
                     </Routes>
 
                     <ChiSiamo/>
@@ -94,7 +104,7 @@ function App() {
                     <IntroServizi/>
                     <AltriServizi/>
                     <AutoUsate/>
-                    <DoveSiamo/>
+                    <DoveSiamo cookiesAccepted={cookiesAccepted}/>
                     <Contatti/>
 
                 </>

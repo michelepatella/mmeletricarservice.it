@@ -1,51 +1,37 @@
-import '../../../styles/components/home/HomeHeader.css';
 import React from "react";
-import {onEmailButtonClick, onFacebookButtonClick, onPhoneButtonClick} from "../../logic/homeHeaderButtonHandler";
+import { onEmailButtonClick, onFacebookButtonClick, onPhoneButtonClick } from "../../logic/contactButtonHandler";
+import CustomIconButton from "../custom/CustomIconButton";
+import '../../../styles/components/home/HomeHeader.css';
 
 /**
- * This component represents the footer of the "home" page
+ * Header of "Home" section
  * @returns {Element}
  * @constructor
  */
 function HomeHeader() {
-
     return (
+
         <>
             {/* Email Button */}
-            <button
-                className="contact-button email-button"
-                onClick={onEmailButtonClick}>
-
-            <img
+            <CustomIconButton
                 src="/icons/emailIcon.svg"
-                alt="Email"/>
-
-            </button>
+                alt="Email"
+                onClick={onEmailButtonClick}/>
 
             {/* Facebook Button */}
-            <button
-                className="contact-button facebook-button"
-                onClick={onFacebookButtonClick}>
-
-                <img
-                    src="/icons/facebookIcon.svg"
-                    alt="Facebook"/>
-
-            </button>
+            <CustomIconButton
+                src="/icons/facebookIcon.svg"
+                alt="Facebook"
+                onClick={onFacebookButtonClick}/>
 
             {/* Phone Button */}
-            <button
-                className="contact-button phone-button"
-                onClick={onPhoneButtonClick}>
-
-                <img
-                    src="/icons/phoneIcon.svg"
-                    alt="Phone"/>
-
-            </button>
+            <CustomIconButton
+                src="/icons/phoneIcon.svg"
+                alt="Phone"
+                onClick={onPhoneButtonClick}/>
         </>
-    );
 
+    );
 }
 
 export default HomeHeader;

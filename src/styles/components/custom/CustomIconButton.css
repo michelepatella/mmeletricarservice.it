@@ -1,0 +1,21 @@
+/* Custom Icon Button styles */
+.custom-icon-button{
+    margin-top: var(--custom_icon_button_margins);
+    margin-right: var(--custom_icon_button_margins);
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.custom-icon-button:hover {
+    transform: scale(1.1);
+}
+
+/* Custom Icon Button img styles */
+.custom-icon-button img {
+    width: var(--custom_icon_button_dimension);
+    height: var(--custom_icon_button_dimension);
+}
+

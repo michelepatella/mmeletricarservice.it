@@ -1,0 +1,52 @@
+.custom-statistic-grid{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-items: start;
+    justify-content: start;
+    text-align: left;
+}
+
+/* ------ Big screen -------*/
+@media (min-width: 1025px) {
+    .custom-statistic-grid {
+        gap: 1rem;
+        margin-top: var(--auto_usate_statistic_division_margin_top);
+        margin-bottom: var(--auto_usate_facebook_link_margin_top);
+    }
+}
+
+/* ------ Medium screen portrait ------ */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .custom-statistic-grid {
+        gap: 2rem;
+        margin-top: var(--auto_usate_statistic_division_margin_top);
+        margin-bottom: var(--auto_usate_facebook_link_margin_top);
+    }
+}
+
+/* ------ Medium screen landscape ------ */
+@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .custom-statistic-grid {
+        gap: 2rem;
+        margin-top: var(--auto_usate_statistic_division_margin_top);
+        margin-bottom: var(--auto_usate_facebook_link_margin_top);
+    }
+}
+
+/* ------ Small screen portrait ------ */
+@media (max-width: 767px) {
+    .custom-statistic-grid {
+        gap: 1rem;
+        margin-top: var(--auto_usate_statistic_division_margin_top);
+        margin-bottom: var(--auto_usate_facebook_link_margin_top);
+    }
+}
+
+/* ------ Small screen landscape ------ */
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
+    .custom-statistic-grid {
+        gap: 1rem;
+        margin-top: var(--auto_usate_statistic_division_margin_top);
+        margin-bottom: var(--auto_usate_facebook_link_margin_top);
+    }
+}

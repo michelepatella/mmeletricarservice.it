@@ -1,49 +1,16 @@
-/** Common Styles **/
+/* Contatti Footer styles */
 .contatti-footer {
+    width: 100%;
+    margin-top: auto;
+    align-self: center;
     background-color: var(--background_color);
     color: white;
     z-index: 99;
-    align-self: center;
-    width: 100%;
-    margin-top: auto;
 }
 
-.footer-text{
-    text-align: center;
+/* Contatti Footer text styles */
+.footer-text {
+    font-size: var(--small_text_font_size);
     margin-bottom: 0;
-}
-
-/* ------ Big screen -------*/
-@media (min-width: 1025px){
-    .footer-text {
-        font-size: var(--contatti_footer_text_size_big_medium);
-    }
-}
-
-/* Medium screen portrait */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .footer-text {
-        font-size: var(--contatti_footer_text_size_big_medium);
-    }
-}
-
-/* Medium screen landscape*/
-@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .footer-text {
-        font-size: var(--contatti_footer_text_size_big_medium);
-    }
-}
-
-/* Small screen portrait*/
-@media (max-width: 767px) {
-    .footer-text {
-        font-size: var(--contatti_footer_text_size_small);
-    }
-}
-
-/* Small screen landscape*/
-@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
-    .footer-text {
-        font-size: var(--contatti_footer_text_size_small);
-    }
+    text-align: center;
 }

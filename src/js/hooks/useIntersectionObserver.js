@@ -14,9 +14,9 @@ const useIntersectionObserver = (ref) => {
 
         //options for the IntersectionObserver
         const options = {
-            root: null, //Observe based on the viewport
-            rootMargin: "0px", //No margin applied
-            threshold: 0.5, //Trigger when at least 50% of the element is visible
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5,
         };
 
         //create an IntersectionObserver instance

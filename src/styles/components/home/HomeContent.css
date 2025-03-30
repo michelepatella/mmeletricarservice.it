@@ -1,137 +1,84 @@
-/* Animation */
-@keyframes fadeIn {
+/* Text Animation */
+@keyframes slideInHome {
     from {
         opacity: 0;
-        transform: rotateX(90deg) translateY(20px);
+        transform: translateX(-50px);
     }
     to {
         opacity: 1;
-        transform: rotateX(0deg) translateY(0);
+        transform: translateX(0);
     }
 }
 
-/* Common styles */
-.title-home-container{
-    overflow: hidden;
-    background-image: url('../../../../public/images/graphic.svg');
-    background-repeat: no-repeat;
-    background-position: top left;
-    width: 100%;
-}
-
-.home-title{
+/* Home Title styles */
+.home-title {
     color: var(--accent_color);
     margin-bottom: 0;
+    margin-top: 0;
     opacity: 0;
-    animation: fadeIn 1.5s ease forwards;
-    animation-delay: 0.5s;
+    animation: slideInHome 1.5s ease forwards;
+    animation-delay: 0.7s;
 }
 
-.home-description{
+/* Home Subtitle styles */
+.home-subtitle {
     color: white;
     opacity: 0;
-    animation: fadeIn 1.5s ease forwards;
-    animation-delay: 1.2s;
+    animation: slideInHome 1.5s ease forwards;
+    animation-delay: 1.3s;
 }
 
 /* ------ Big screen ------- */
-@media (min-width: 1025px){
-    .title-home-container {
-        margin-left: var(--home_title_container_margin_left_big);
-        height: 90vh;
-    }
-
+@media (min-width: 1025px) {
     .home-title {
         font-size: var(--home_title_font_size_big);
-        margin-top: var(--home_title_margin_top_big);
     }
 
-    .home-description {
+    .home-subtitle {
         font-size: var(--home_subtitle_font_size_big);
-        margin-left: var(--home_subtitle_margin_top_and_left_big);
-        margin-top: var(--home_subtitle_margin_top_and_left_big);
     }
-
 }
-
 
 /* ------ Medium screen landscape ------- */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .title-home-container {
-        margin-left: var(--home_title_container_margin_left_medium);
-        margin-top: var(--home_title_container_margin_top_medium);
-        background-size: 65%;
-        height: 80vh;
-    }
-
     .home-title {
         font-size: var(--home_title_font_size_medium);
     }
 
-    .home-description {
+    .home-subtitle {
         font-size: var(--home_subtitle_font_size_medium);
-        margin-top: var(--home_subtitle_margin_top_medium);
     }
 }
 
 /* ------ Medium screen portrait ------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .title-home-container {
-        margin-left: var(--home_title_container_margin_left_medium);
-        margin-top: var(--home_title_container_margin_top_medium);
-        background-size: 70%;
-        height: 50vh;
-    }
-
     .home-title {
         font-size: var(--home_title_font_size_medium);
     }
 
-    .home-description {
+    .home-subtitle {
         font-size: var(--home_subtitle_font_size_medium);
-        margin-top: var(--home_subtitle_margin_top_medium);
     }
 }
 
-
 /* ------ Small screen portrait ------- */
-@media (max-width: 767px) and (orientation: portrait)  {
-    .title-home-container {
-        margin-left: var(--home_title_container_margin_left_small_portrait);
-        margin-top: var(--home_title_container_margin_top_small_portrait);
-        background-size: 90%;
-        height: 40vh;
-    }
-
+@media (max-width: 767px) and (orientation: portrait) {
     .home-title {
         font-size: var(--home_title_font_size_small_portrait);
-        margin-left: var(--home-title_margin_left_small_portrait);
     }
 
-    .home-description {
+    .home-subtitle {
         font-size: var(--home_subtitle_font_size_small_portrait);
-        margin-top: var(--home_subtitle_margin_top_small_portrait);
-        margin-left: var(--home_subtitle_margin_left_small_portrait);
     }
 }
 
 /* ------ Small screen landscape ------- */
-@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px){
-    .title-home-container {
-        margin-left: var(--home_title_container_margin_left_small_landscape);
-        margin-top: var(--home_title_container_margin_top_small_landscape);
-        background-size: 45%;
-        height: 90vh;
-    }
-
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
     .home-title {
         font-size: var(--home_title_font_size_small_landscape);
-        margin-left: var(--home-title_margin_left_small_landscape);
     }
 
-    .home-description {
+    .home-subtitle {
         font-size: var(--home_subtitle_font_size_small_landscape);
-        margin-top: var(--home_subtitle_margin_top_small_landscape);
-        margin-left: var(--home_subtitle_margin_left_small_landscape);
     }
 }

@@ -1,5 +1,4 @@
 /**------------- contacts information -------------**/
-export const WHATSAPP_LINK = 'https://wa.me/3908650830725'
 export const EMAIL = 'mmeletricarservice@libero.it'
 export const EMAIL_PEC = 'mmeletricarservice@pec.buffetti.it'
 export const FACEBOOK = 'https://www.facebook.com/profile.php?id=61573235319851&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true'
@@ -25,6 +24,9 @@ export const CONTATTI = [
 ]
 
 /**------------- sections definition -------------**/
+export const COOKIE_CONSENT_BANNER_DESCRIPTION = "Questo sito utilizza i cookie. Cliccando su \"Accetta\", acconsenti all'uso dei cookie. Cliccando su \"Rifiuta\", rifiuti l'uso dei cookie. Per maggiori informazioni consulta la nostra "
+
+/**------------- sections definition -------------**/
 export const SECTIONS = [
     {
         id: 'home',
@@ -46,7 +48,7 @@ export const SECTIONS = [
         children: [
             {
                 id: 'altri-servizi',
-                title: 'Altri servizi'
+                title: 'Tutti i servizi'
             },
             {
                 id: 'auto-usate',
@@ -64,31 +66,30 @@ export const SECTIONS = [
     }
 ];
 
-/**------------- "home" texts -------------**/
+/**------------- "Home" texts -------------**/
 export const HOME_TITLE = "Dove la tua auto <br> trova l'eccellenza."
 export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> <strong>MM Eletricar Service<strong/>!"
 
-/**------------- "chi siamo" texts -------------**/
-export const CHI_SIAMO_TITLE = "MM Eletricar Service";
-export const CHI_SIAMO_DESCRIPTION = 'Siamo <strong>Michele Vacca</strong> e <strong>Michele Scalese</strong>, fondatori di MM Eletricar Service,\n' +
+/**------------- "Chi siamo" text -------------**/
+export const CHI_SIAMO_SUBTITLE = 'Siamo <strong>Michele Vacca</strong> e <strong>Michele Scalese</strong>, fondatori di MM Eletricar Service,\n' +
     '                        un’officina specializzata in elettronica per autoveicoli. Con sede a Gravina in Puglia (BA),\n' +
     '                        offriamo servizi per garantire sicurezza, affidabilità e prestazioni ottimali ad ogni veicolo.'
 
-/**------------- "nostri valori" texts -------------**/
+/**------------- "Nostri valori" texts -------------**/
 export const NOSTRI_VALORI_TITLE = "I nostri valori"
-export const NOSTRI_VALORI_DESCRIPTION = 'In MM Eletricar Service crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
+export const NOSTRI_VALORI_SUBTITLE = 'In MM Eletricar Service crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
     '                        poiché comprendiamo quanto sia importante per i nostri clienti.\n' +
     '                        La nostra missione è offrire <strong>soluzioni su misura</strong>, <strong>affidabili</strong> e\n' +
     '                        di <strong>qualità</strong>, per garantire la <strong>sicurezza</strong>,\n' +
     '                        <strong> l’efficienza</strong> e la <strong>soddisfazione</strong> completa di chi si affida a noi.'
 
-/**------------- "intro servizi" texts -------------**/
+/**------------- "Intro servizi" texts -------------**/
 export const INTRO_SERVIZI_TITLE = 'Per la tua auto, solo <br/> servizi di qualità.'
 export const INTRO_SERVIZI_DESCRIPTION = 'Tutti i servizi classici da elettrauto, dalla manutenzione alle riparazioni, per garantire sicurezza e performance ottimali.'
 export const ARROW_LABEL = 'Scopri tutti i nostri servizi specializzati'
 
-/**------------- "altri servizi" texts -------------**/
-export const SERVIZI = [
+/**------------- "Altri servizi" texts -------------**/
+export const SERVIZI_INFO_CARDS = [
     {
         title: "Manutenzione centralina",
         description: "Controllo ed aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.",
@@ -97,7 +98,7 @@ export const SERVIZI = [
     {
         title: "Riparazione parabrezza",
         description: "Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.",
-        icon: '/icons/hammerIcon.svg'
+        icon: '/icons/wrenchIcon.svg'
     },
     {
         title: "Pannello di controllo",
@@ -122,7 +123,7 @@ export const SERVIZI = [
     {
         title: "Diagnosi iniezione",
         description: "Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.",
-        icon: '/icons/fuelIcon.svg'
+        icon: '/icons/engineIcon.svg'
     },
     {
         title: "Duplicazione chiavi e telecomandi",
@@ -146,7 +147,7 @@ export const SERVIZI = [
     }
 ];
 
-/**------------- "servizi" texts -------------**/
+/**------------- "Auto usate" texts -------------**/
 export const AUTO_USATE_TITLE = "Cerchi di più? Scopri la tua \n" +
     "auto usata perfetta!";
 export const AUTO_USATE_DESCRIPTION = "Non perdere le ultime novità! Seguici su Facebook per rimanere sempre aggiornato sulle nostre auto usate in vendita.";
@@ -157,23 +158,21 @@ export const AUTO_USATE_STATS = [
 ]
 export const FACEBOOK_LINK_AUTO_USATE = "Scopri di più >"
 
-/**------------- "dove siamo" texts -------------**/
+/**------------- "Dove siamo" texts -------------**/
 export const DOVE_SIAMO_TITLE = "Vieni a trovarci in officina!"
-export const DOVE_SIAMO_DIVISIONS = [
+export const DOVE_SIAMO_INFO_CARDS = [
     {
         title: "Dove siamo",
         description: "Gravina in Puglia (BA), in Via Bizet, 63, 70024.",
-        icon: '/icons/mapIcon.svg'
     },
     {
         title: "Orari di apertura",
         description: "- <strong>Lun-Ven</strong>: 08:30-13:00/15:00-19:00 <br>- <strong>Sab</strong>: 08:30-13:00",
-        icon: '/icons/clockIcon.svg'
     }
 ]
 export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION = "Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa."
 
-/**------------- "contatti" texts -------------**/
+/**------------- "Contatti" texts -------------**/
 export const CONTATTI_TITLE = "Sempre al tuo <br> servizio.";
-export const CONTATTI_SUBTITLE = "Se hai bisogno di assistenza o informazioni, non esitare a contattarci!";
+export const CONTATTI_SUBTITLE = "Se hai bisogno di assistenza o informazioni, <br> non esitare a contattarci!";
 export const FOOTER_TEXT = "© Copyright 2025 | All Rights Reserved | P. IVA: " + P_IVA

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import {useMenu} from "../../hooks/useMenu";
 
 /**
- * This component represents the bug for big screens
+ * Menu Big Screen
  * @returns {React.JSX.Element}
  * @constructor
  */
@@ -14,13 +14,16 @@ function MenuBigScreen() {
     const { menuItems, menuItemControls } = useMenu();
 
     return (
-        <div className='menu-container'>
+        <div className='menu-container-big'>
 
             {/* Motion division for the menu animation */}
             <motion.div
                 className='menu-content'
                 animate={menuItemControls}
-                initial={{ opacity: 0, x: -100 }}>
+                initial={{
+                    opacity: 0,
+                    x: -100
+                }}>
 
                 {/* Menu */}
                 <Anchor

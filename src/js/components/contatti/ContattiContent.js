@@ -1,16 +1,17 @@
-import '../../../styles/components/contatti/ContattiContent.css';
-import React, {useRef} from "react";
-import CustomButton from "../CustomButton";
+import React, { useRef } from "react";
+import { CONTATTI_TITLE, CONTATTI_SUBTITLE, CONTATTI } from "../../utils/constants";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import {CONTATTI_TITLE, CONTATTI_SUBTITLE, CONTATTI} from "../../utils/constants";
+import CustomButton from "../custom/CustomButton";
+import CustomSectionContainer from "../custom/CustomSectionContainer";
+import CustomText from "../custom/CustomText";
+import "../../../styles/components/contatti/ContattiContent.css";
 
 /**
- * This component represents the content of "contatti" page
- * @param props
+ * Content of "Contatti" section
  * @returns {Element}
  * @constructor
  */
-function ContattiContent(props) {
+function ContattiContent() {
 
     //IntersectionObserver to generate the animation when the section is visible
     const subtitleRef = useRef(null);
@@ -18,19 +19,17 @@ function ContattiContent(props) {
 
     return (
         <>
-            {/* Global container */}
-            <div className="title-contatti-container">
+            <CustomSectionContainer id="contatti">
 
                 {/* Title */}
-                <h1
-                    className="contatti-title"
-                    dangerouslySetInnerHTML={{__html: CONTATTI_TITLE}}/>
+                <CustomText
+                    type="title"
+                    text={CONTATTI_TITLE}/>
 
-                {/* Description */}
-                <p
-                    className="contatti-description"
-                    dangerouslySetInnerHTML={{__html: CONTATTI_SUBTITLE}}
-                    ref={subtitleRef}/>
+                {/* Subtitle */}
+                <CustomText
+                    type="subtitle"
+                    text={CONTATTI_SUBTITLE}/>
 
                 {/* Contact buttons container */}
                 <div className="contact-buttons-container">
@@ -45,7 +44,8 @@ function ContattiContent(props) {
                     ))}
 
                 </div>
-            </div>
+
+            </CustomSectionContainer>
         </>
     );
 }

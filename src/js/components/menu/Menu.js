@@ -1,9 +1,9 @@
-import '../../../styles/components/utility/Menu.css';
 import MenuSmallScreen from "./MenuSmallScreen";
 import MenuBigScreen from "./MenuBigScreen";
+import '../../../styles/components/Menu.css';
 
 /**
- * This component represents the menu of the whole website
+ * Menu
  * @returns {JSX.Element}
  * @constructor
  */
@@ -11,10 +11,10 @@ const Menu = () => {
     return (
         <>
             {/* Menu for PC and tablet (big screens) */}
-            <MenuBigScreen></MenuBigScreen>
+            <MenuBigScreen/>
 
             {/* Menu for phone (small screens) */}
-            <MenuSmallScreen></MenuSmallScreen>
+            <MenuSmallScreen/>
         </>
     );
 }

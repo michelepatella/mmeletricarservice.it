@@ -3,7 +3,13 @@ import Cookies from "js-cookie";
 
 /**
  * To manage cookie consent
- * @returns {{handleDeclineCookies: handleDeclineCookies, handleAcceptCookies: handleAcceptCookies, cookiesAccepted: unknown, tempPreferences: unknown, handleSavePreferences: handleSavePreferences, setTempPreferences: (value: unknown) => void, isCookiesBannerVisible: boolean, setIsCookiesBannerVisible: (value: (((prevState: boolean) => boolean) | boolean)) => void}}
+ * @returns {{handleDeclineCookies: handleDeclineCookies,
+ * handleAcceptCookies: handleAcceptCookies,
+ * cookiesAccepted: unknown, tempPreferences: unknown,
+ * handleSavePreferences: handleSavePreferences,
+ * setTempPreferences: (value: unknown) => void,
+ * isCookiesBannerVisible: boolean,
+ * setIsCookiesBannerVisible: (value: (((prevState: boolean) => boolean) | boolean)) => void}}
  */
 export const useCookieConsent = () => {
 

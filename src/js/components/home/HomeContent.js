@@ -1,47 +1,37 @@
+import React from "react";
+import CustomImageContainer from "../custom/CustomImageContainer";
+import CustomSectionContainer from "../custom/CustomSectionContainer";
+import { HOME_TITLE, HOME_SUBTITLE } from "../../utils/constants";
 import '../../../styles/components/home/HomeContent.css';
-import '../../../styles/components/utility/Image.css';
-import '../../../styles/variables/imageVariables.css';
-import React, {useRef} from "react";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import {HOME_TITLE, HOME_SUBTITLE} from "../../utils/constants";
 
 /**
- * This component represents the content of "home" page
+ * Content of "Home" section
  * @returns {Element}
  * @constructor
  */
 function HomeContent() {
-
-    //IntersectionObserver to generate the animation when the section is visible
-    const imageRef = useRef(null);
-    useIntersectionObserver(imageRef);
-
     return (
         <>
-            {/* Global container */}
-            <div className="title-home-container">
+
+            <CustomSectionContainer id="/">
 
                 {/* Title */}
                 <h1
                     className="home-title"
                     dangerouslySetInnerHTML={{__html: HOME_TITLE}}/>
 
-                {/* Description */}
+                {/* Subtitle */}
                 <p
-                    className="home-description"
+                    className="home-subtitle"
                     dangerouslySetInnerHTML={{__html: HOME_SUBTITLE}}/>
 
-            </div>
+                {/* "Home" image */}
+                <CustomImageContainer src="/images/home-image.jpg"/>
 
-            {/* Image container */}
-            <div className="image-container">
-                <img
-                    src="/images/home-image.jpg"
-                    ref={imageRef}/>
-            </div>
+            </CustomSectionContainer>
+
         </>
-)
-    ;
+    );
 }
 
 export default HomeContent;

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Drawer, Menu as AntMenu } from 'antd';
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
-import {useMenu} from "../../hooks/useMenu";
+import { useMenu } from "../../hooks/useMenu";
+import {handleChildrenStyle, handleHamburgerButtonStyle, handleParentItemStyle} from "../../logic/styleHandler";
 
 /**
- * This component represents the menu for small screens
+ * Menu Small Screen
  * @returns {React.JSX.Element}
  * @constructor
  */
@@ -12,45 +13,34 @@ function MenuSmallScreen() {
 
     const {
         menuItems,
-        menuItemControls,
         section,
         visible,
         toggleDrawer
     } = useMenu();
 
     return (
-        <div className='menu-container-phone'>
+
+        <div className='menu-container-small'>
 
             {/* Hamburger button (to open the phone menu) */}
             <Button
                 type='primary'
+                className='hamburger-button'
                 shape='circle'
                 icon={<MenuOutlined />}
-                onClick={toggleDrawer}
-                className='hamburger-button'
-                style={{
-                    display: visible ? 'none' : 'flex'
-                }}
-            />
+                style={handleHamburgerButtonStyle(visible)}
+                onClick={toggleDrawer}/>
 
             {/* Drawer for containing the menu */}
             <Drawer
-                placement='right'
-                closable
-                onClose={toggleDrawer}
-                open={visible}
                 width='100vw'
                 height='100vh'
-                closeIcon={
-                    <CloseOutlined
-                        style={{
-                            fontSize: '30px',
-                            color: 'black',
-                            paddingTop: 20
-                        }}
-                    />
-                }
-            >
+                placement='right'
+                closable
+                closeIcon={<CloseOutlined className="close-outline"/>}
+                onClose={toggleDrawer}
+                open={visible}>
+
                 {/* Menu */}
                 <AntMenu mode='inline'>
 
@@ -59,16 +49,8 @@ function MenuSmallScreen() {
                         <React.Fragment key={menuItem.key}>
                             <AntMenu.Item
                                 key={menuItem.key}
-                                onClick={menuItem.onClick}
-                                style={{
-                                    textDecoration:
-                                        section === menuItem.href.replace('#', '') ?
-                                            'underline' : 'none',
-                                    fontWeight:
-                                        section === menuItem.href.replace('#', '') ?
-                                            'bold' : 'normal',
-                                }}
-                            >
+                                style={handleParentItemStyle(section, menuItem)}
+                                onClick={menuItem.onClick}>
                                 {menuItem.title}
                             </AntMenu.Item>
 
@@ -77,26 +59,20 @@ function MenuSmallScreen() {
                                 menuItem.children.map((child) => (
                                     <AntMenu.Item
                                         key={child.key}
-                                        onClick={child.onClick}
                                         className='ant-menu-item-child'
-                                        style={{
-                                            textDecoration:
-                                                section === child.href.replace('#', '') ?
-                                                    'underline' : 'none',
-                                            fontWeight:
-                                                section === child.href.replace('#', '') ?
-                                                    'bold' : 'normal',
-                                            paddingLeft: '60px',
-                                        }}
-                                    >
+                                        style={handleChildrenStyle(section, child)}
+                                        onClick={child.onClick}>
                                         {child.title}
                                     </AntMenu.Item>
                                 ))}
                         </React.Fragment>
                     ))}
+
                 </AntMenu>
             </Drawer>
+
         </div>
+
     );
 }
 

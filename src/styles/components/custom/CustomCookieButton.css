@@ -1,0 +1,28 @@
+/* Custom Cookie Button styles */
+.cookie-button {
+    width: var(--float_button_dimension);
+    height: var(--float_button_dimension);
+    bottom: var(--float_button_margin_top_bottom);
+    right: var(--float_button_margin_right);
+    position: fixed;
+    z-index: 99999;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--accent_color);
+    background-image: url('../../../../public/icons/cookieIcon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cookie-button:hover {
+    scale: 1.2;
+    bottom: var(--float_button_margin_top_bottom) !important;
+    position: fixed;
+    z-index: 99999 !important;
+    border-radius: 50% !important;
+    border: none !important;
+    background-color: var(--accent_color) !important;
+    background-image: url('../../../../public/icons/cookieIcon.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
