@@ -37,6 +37,7 @@
     background-color: transparent;
     background-size: cover;
     background-position: center;
+    opacity: 0.8;
     border: none;
     cursor: pointer;
     animation: bounce 1.5s infinite;

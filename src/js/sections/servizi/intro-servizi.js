@@ -7,6 +7,7 @@ import CustomText from "../../components/custom/CustomText";
 import CustomImageContainer from "../../components/custom/CustomImageContainer";
 import '../../../styles/sections/intro-servizi.css';
 import '../../../styles/components/custom/CustomImageContainer.css';
+import {handleArrowButtonLabelStyle} from "../../logic/styleHandler";
 
 /**
  * "Intro servizi" section
@@ -45,7 +46,7 @@ function IntroServizi() {
                 {/* Label */}
                 <CustomText
                     type="description"
-                    style={{color: 'var(--accent_color)'}}
+                    style={handleArrowButtonLabelStyle()}
                     text={ARROW_LABEL}/>
 
                 {/* Arrow button */}

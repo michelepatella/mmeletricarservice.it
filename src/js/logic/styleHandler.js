@@ -94,3 +94,14 @@ export const handleHamburgerButtonStyle = (visible) => {
         display: visible ? 'none' : 'flex'
     };
 }
+
+/**
+ * Method to handle the arrow button label style of "Servizi" section (intro)
+ * @returns {{color: string, opacity: string}}
+ */
+export const handleArrowButtonLabelStyle = () => {
+    return {
+        color: 'var(--accent_color)',
+        opacity: '0.8'
+    };
+};
