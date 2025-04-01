@@ -4,5 +4,5 @@
     justify-content: right;
     padding-right: var(--home_header_padding_right);
     padding-bottom: var(--home_header_padding_bottom);
-    background-color: var(--background_color);
+    background-color: transparent;
 }

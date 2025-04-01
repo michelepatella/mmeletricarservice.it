@@ -25,9 +25,6 @@ function HomeContent() {
                     className="home-subtitle"
                     dangerouslySetInnerHTML={{__html: HOME_SUBTITLE}}/>
 
-                {/* "Home" image */}
-                <CustomImageContainer src="/images/home-image.jpg"/>
-
             </CustomSectionContainer>
 
         </>
