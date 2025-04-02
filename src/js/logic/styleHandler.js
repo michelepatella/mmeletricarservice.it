@@ -96,12 +96,20 @@ export const handleHamburgerButtonStyle = (visible) => {
 }
 
 /**
- * Method to handle the arrow button label style of "Servizi" section (intro)
- * @returns {{color: string, opacity: string}}
+ * Method to handle the custom background container style dynamically
+ * @param image
+ * @returns {{background: string}}
  */
-export const handleArrowButtonLabelStyle = () => {
+export const handleCustomBackgroundContainerStyle = (image) => {
     return {
-        color: 'var(--accent_color)',
-        opacity: '0.8'
-    };
-};
+        background:
+            'linear-gradient(to top, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%), ' +
+            'linear-gradient(to bottom, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%), ' +
+            'linear-gradient(to left, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%), ' +
+            'url(' + image + ')',
+        height: '100vh',
+        backgroundPosition: 'right',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+    }
+}

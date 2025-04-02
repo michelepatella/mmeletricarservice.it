@@ -86,7 +86,6 @@ export const NOSTRI_VALORI_SUBTITLE = 'In MM Eletricar Service crediamo che ogni
 /**------------- "Intro servizi" texts -------------**/
 export const INTRO_SERVIZI_TITLE = 'Per la tua auto, solo <br/> servizi di qualità.'
 export const INTRO_SERVIZI_DESCRIPTION = 'Tutti i servizi classici da elettrauto, dalla manutenzione alle riparazioni, per garantire sicurezza e performance ottimali.'
-export const ARROW_LABEL = 'Scopri tutti i nostri servizi'
 
 /**------------- "Altri servizi" texts -------------**/
 export const SERVIZI_INFO_CARDS = [

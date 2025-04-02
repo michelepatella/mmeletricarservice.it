@@ -1,7 +1,7 @@
 import React from "react";
+import { SERVIZI_INFO_CARDS } from "../../utils/constants";
 import CustomInfoCard from "../../components/custom/CustomInfoCard";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
-import { SERVIZI_INFO_CARDS } from "../../utils/constants";
 
 /**
  * "Altri servizi" section

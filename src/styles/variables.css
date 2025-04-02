@@ -61,12 +61,6 @@
     --custom_info_card_flex_gap: 30px;
 
 
-    /* Custom Image Container */
-    --custom_image_container_margin_top_big: 100px;
-    --custom_image_container_margin_top_medium: 80px;
-    --custom_image_container_margin_top_small: 50px;
-
-
     /* Menu */
     --menu_items_gap: 30px;
 
@@ -84,12 +78,6 @@
     /* Home section */
     --home_header_padding_bottom: 20px;
     --home_header_padding_right: 5px;
-
-
-    /* Servizi section */
-    --intro_servizi_arrow_button_dimension: 30px;
-    --intro_servizi_arrow_label_margin_bottom: 10px;
-    --intro_servizi_arrow_container_margin_button_small_landscape: 10px;
 
 
     /* Contatti */

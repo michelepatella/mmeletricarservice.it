@@ -3,7 +3,7 @@ import { FOOTER_TEXT } from '../../utils/constants';
 import '../../../styles/components/contatti/ContattiFooter.css';
 
 /**
- * Footer of "Contatti" section
+ * Contatti Footer
  * @returns {Element}
  * @constructor
  */

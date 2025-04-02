@@ -37,6 +37,7 @@ function DoveSiamo(props) {
                 {/* Google Maps (shown only in case of cookie accepting) */}
                 {props.cookiesAccepted ? (
                     <div className="google-maps-container">
+
                         <iframe
                             className="google-maps-iframe"
                             title="google-maps"
@@ -44,6 +45,7 @@ function DoveSiamo(props) {
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"/>
+
                     </div>
 
                 ) : (
@@ -60,6 +62,7 @@ function DoveSiamo(props) {
                     </div>
 
                 )}
+
             </CustomSectionContainer>
         </>
 

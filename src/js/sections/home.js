@@ -2,6 +2,7 @@ import { Layout } from 'antd';
 import HomeHeader from "../components/home/HomeHeader";
 import HomeContent from "../components/home/HomeContent";
 import '../../styles/sections/home.css';
+import CustomBackgroundContainer from "../components/custom/CustomBackgroundContainer";
 
 /**
  * "Home" Layout definition
@@ -20,21 +21,24 @@ function Home() {
     return (
 
         <>
-            {/* "Home" Layout */}
-            <Layout
-                className="home-layout"
-                id="home">
+            <CustomBackgroundContainer image="/images/home-image.jpeg">
+                {/* "Home" Layout */}
+                <Layout
+                    className="home-layout"
+                    id="home">
 
-                {/* "Home" header */}
-                <Header className="home-header">
-                    <HomeHeader/>
-                </Header>
+                    {/* "Home" header */}
+                    <Header className="home-header">
+                        <HomeHeader/>
+                    </Header>
 
-                {/* "Home" content */}
-                <Content className="home-content">
-                    <HomeContent/>
-                </Content>
-            </Layout>
+                    {/* "Home" content */}
+                    <Content className="home-content">
+                        <HomeContent/>
+                    </Content>
+
+                </Layout>
+            </CustomBackgroundContainer>
         </>
 
     );

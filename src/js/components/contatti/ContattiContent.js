@@ -7,7 +7,7 @@ import CustomText from "../custom/CustomText";
 import "../../../styles/components/contatti/ContattiContent.css";
 
 /**
- * Content of "Contatti" section
+ * Contatti Content
  * @returns {Element}
  * @constructor
  */

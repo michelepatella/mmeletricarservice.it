@@ -2,8 +2,8 @@ import React, {useRef} from "react";
 import {NOSTRI_VALORI_SUBTITLE, NOSTRI_VALORI_TITLE} from "../../utils/constants";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
-import CustomImageContainer from "../../components/custom/CustomImageContainer";
 import CustomText from "../../components/custom/CustomText";
+import CustomBackgroundContainer from "../../components/custom/CustomBackgroundContainer";
 
 /**
  * "Nostri valori" section
@@ -21,22 +21,21 @@ function NostriValori() {
     return (
 
         <>
-            <CustomSectionContainer id="nostri-valori">
+            <CustomBackgroundContainer image="/images/nostri-valori-image2.jpeg">
+                <CustomSectionContainer id="nostri-valori">
 
-                {/* Title */}
-                <CustomText
-                    type="title"
-                    text={NOSTRI_VALORI_TITLE} />
+                    {/* Title */}
+                    <CustomText
+                        type="title"
+                        text={NOSTRI_VALORI_TITLE} />
 
-                {/* Subtitle */}
-                <CustomText
-                    type="subtitle"
-                    text={NOSTRI_VALORI_SUBTITLE} />
+                    {/* Subtitle */}
+                    <CustomText
+                        type="subtitle"
+                        text={NOSTRI_VALORI_SUBTITLE} />
 
-                {/* "Nostri Valori" image */}
-                <CustomImageContainer src="/images/nostri-valori-image.jpg"/>
-
-            </CustomSectionContainer>
+                </CustomSectionContainer>
+            </CustomBackgroundContainer>
         </>
 
     );
