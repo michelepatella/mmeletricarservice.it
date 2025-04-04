@@ -35,7 +35,7 @@ export function onPhoneButtonClick() {
  * [EMAIL]: onEmailButtonClick,
  * "MM Eletricar Service": onFacebookButtonClick}}
  */
-export const clickHandlers = {
+export const contactClickHandler = {
     [PHONE]: onPhoneButtonClick,
     [EMAIL]: onEmailButtonClick,
     [EMAIL_PEC]: onPecButtonClick,

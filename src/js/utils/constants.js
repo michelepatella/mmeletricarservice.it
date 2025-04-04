@@ -7,19 +7,19 @@ export const P_IVA = '08650830725'
 export const CONTATTI = [
     {
         value: PHONE,
-        icon: '/icons/phoneIconBlack.svg'
+        icon: '/icons/phone_icon.svg'
     },
     {
         value: EMAIL,
-        icon: '/icons/emailIconBlack.svg'
+        icon: '/icons/email_icon.svg'
     },
     {
         value: EMAIL_PEC,
-        icon: '/icons/emailIconBlack.svg'
+        icon: '/icons/email_icon.svg'
     },
     {
         value: 'MM Eletricar Service',
-        icon: '/icons/facebookIconBlack.svg'
+        icon: '/icons/facebook_icon.svg'
     }
 ]
 
@@ -92,57 +92,57 @@ export const SERVIZI_INFO_CARDS = [
     {
         title: "Manutenzione centralina",
         description: "Controllo ed aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.",
-        icon: '/icons/cpuIcon.svg'
+        icon: '/icons/cpu_icon.svg'
     },
     {
         title: "Riparazione parabrezza",
         description: "Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.",
-        icon: '/icons/wrenchIcon.svg'
+        icon: '/icons/wrench_icon.svg'
     },
     {
         title: "Pannello di controllo",
         description: "Riparazione e calibrazione di strumenti digitali ed analogici del cruscotto.",
-        icon: '/icons/controlPanelIcon.svg'
+        icon: '/icons/control_panel_icon.svg'
     },
     {
         title: "Riparazione conta km",
         description: "Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.",
-        icon: '/icons/dashboardIcon.svg'
+        icon: '/icons/dashboard_icon.svg'
     },
     {
         title: "Ripristino EGR e DPF",
         description: "Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.",
-        icon: '/icons/filterIcon.svg'
+        icon: '/icons/filter_icon.svg'
     },
     {
         title: "Ricarica aria condizionata",
         description: "Ripristino del gas refrigerante per garantire un climatizzatore efficiente ed aria fresca.",
-        icon: '/icons/airIcon.svg'
+        icon: '/icons/air_icon.svg'
     },
     {
         title: "Diagnosi iniezione",
         description: "Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.",
-        icon: '/icons/engineIcon.svg'
+        icon: '/icons/engine_icon.svg'
     },
     {
         title: "Duplicazione chiavi e telecomandi",
         description: "Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.",
-        icon: '/icons/keyIcon.svg'
+        icon: '/icons/key_icon.svg'
     },
     {
         title: "Diagnosi elettronica",
         description: "Individuazione e risoluzione di guasti elettronici per un’analisi precisa del tuo veicolo.",
-        icon: '/icons/diagnosisIcon.svg'
+        icon: '/icons/diagnosis_icon.svg'
     },
     {
         title: "Veicoli ibridi ed elettrici",
         description: "Manutenzione specializzata per veicoli ibridi ed elettrici.",
-        icon: '/icons/electricar.svg'
+        icon: '/icons/electric_icon.svg'
     },
     {
         title: "Installazione antifurti",
         description: "Soluzioni antifurto satellitari Igla e meccanici Defender per la protezione del tuo veicolo.",
-        icon: '/icons/antiTheftIcon.svg'
+        icon: '/icons/anti_theft_icon.svg'
     }
 ];
 
@@ -172,6 +172,5 @@ export const DOVE_SIAMO_INFO_CARDS = [
 export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION = "Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa."
 
 /**------------- "Contatti" texts -------------**/
-export const CONTATTI_TITLE = "Sempre al tuo <br> servizio.";
-export const CONTATTI_SUBTITLE = "Se hai bisogno di assistenza o informazioni, <br> non esitare a contattarci!";
-export const FOOTER_TEXT = "© Copyright 2025 | All Rights Reserved | P. IVA: " + P_IVA
+export const CONTATTI_TITLE = "Contatti";
+export const FOOTER_TEXT = "P. IVA: " + P_IVA

@@ -11,7 +11,7 @@ import {useMenu} from "../../hooks/useMenu";
 function MenuBigScreen() {
 
     //generate the animation of the big menu and generate its items
-    const { menuItems, menuItemControls } = useMenu();
+    const { menuItems, menuItemControls, section } = useMenu();
 
     return (
         <div className='menu-container-big'>
@@ -28,7 +28,9 @@ function MenuBigScreen() {
                 {/* Menu */}
                 <Anchor
                     affix={false}
-                    items={menuItems} />
+                    items={menuItems}
+                    offsetTop={50}
+                    getCurrentAnchor={() => '#' + section}/>
 
             </motion.div>
 

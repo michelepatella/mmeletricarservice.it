@@ -8,14 +8,24 @@
 }
 
 /* Cookie Consent buttons styles */
-.CookieConsent #rcc-decline-button, #rcc-confirm-button, .save-cookie-preferences-button{
-    color: black !important;
+.CookieConsent #rcc-decline-button, #rcc-confirm-button {
+    color: white !important;
     font-size: var(--small_text_font_size) !important;
     font-family: 'Poppins' !important;
-    padding: var(--custom_cookie_banner_button_padding) !important;
-    background: var(--accent_color) !important;
-    border: none !important;
+    border: 1px solid white !important;
     border-radius: var(--border_radius) !important;
+    padding: var(--custom_button_cookie_banner_padding) !important;
+    background-color: var(--background_color) !important;
+    transition: all 0.3s ease;
+}
+
+.CookieConsent #rcc-decline-button:hover, #rcc-confirm-button:hover {
+    font-family: 'Poppins' !important;
+    border: 1px solid white !important;
+    border-radius: var(--border_radius) !important;
+    padding: var(--custom_button_cookie_banner_padding) !important;
+    filter: invert(1);
+    transition: all 0.3s ease !important;
 }
 
 /* Policy links styles */

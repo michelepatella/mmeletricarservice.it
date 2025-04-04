@@ -17,13 +17,13 @@
     position: fixed;
     justify-content: center !important;
     align-items: center !important;
-    top: var(--float_button_margin_top_bottom);
-    right: var(--float_button_margin_right);
-    color: black !important;
-    background-color: var(--accent_color) !important;
+    top: var(--float_button_margins);
+    right: var(--float_button_margins);
+    color: white !important;
+    background-color: transparent !important;
     border: none !important;
-    border-radius: 50% !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
 }
 
 /* Menu containers styles */
@@ -45,21 +45,21 @@
 .ant-menu {
     font-size: var(--title_font_size_small) !important;
     border: none !important;
-    background-color: var(--accent_color) !important;
+    background-color: var(--background_color) !important;
 }
 
 /* Small menu items styles */
 .ant-menu-item-selected {
-    background-color: var(--accent_color) !important;
+    background-color: var(--background_color) !important;
 }
 
 .ant-menu-item:hover {
-    background-color: var(--accent_color) !important;
+    background-color: var(--background_color) !important;
 }
 
 .ant-menu-item {
     margin-bottom: var(--menu_items_gap) !important;
-    color: black !important;
+    color: white !important;
     font-family: 'Poppins', sans-serif;
     opacity: 0;
     transform: translateY(-20px);
@@ -70,18 +70,18 @@
 /* Small menu header styles */
 .ant-drawer-header {
     border-bottom: none !important;
-    background-color: var(--accent_color) !important;
+    background-color: var(--background_color) !important;
 }
 
 /* Small menu content styles */
 .ant-drawer-content {
-    background-color: var(--accent_color) !important;
+    background-color: var(--background_color) !important;
 }
 
 /* Close button small menu styles */
 .close-outline {
-    color: black;
-    padding-top: var(--float_button_margin_top_bottom);
+    color: white;
+    padding-top: var(--float_button_margins);
 }
 
 /* Big menu items styles */

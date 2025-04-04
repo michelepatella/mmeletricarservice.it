@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { SECTIONS } from '../utils/constants';
 import { scrollToSection } from '../utils/scrollToSection';
-import {useAnimation} from "framer-motion";
+import { useAnimation } from 'framer-motion';
 
 /**
  * To manage menu behavior (both for small and big screens)
@@ -30,44 +30,29 @@ export const useMenu = () => {
             let currentSection = '';
             let closestDistance = Infinity;
 
-            //loop through each section to determine which is in view
-            SECTIONS.forEach((sec) => {
-
-                const element = document.getElementById(sec.id);
-
+            //helper to check element visibility and update current section
+            const checkAndUpdateSection = (id) => {
+                const element = document.getElementById(id);
                 if (element) {
-
                     const rect = element.getBoundingClientRect();
                     const distanceToTop = Math.abs(rect.top);
-
                     //check if the section is within the viewport
                     if (rect.top < window.innerHeight && rect.bottom > 0) {
-                        //update the current section if it's the closest to the top
                         if (distanceToTop < closestDistance) {
                             closestDistance = distanceToTop;
-                            currentSection = sec.id;
+                            currentSection = id;
                         }
                     }
                 }
+            };
 
+            //loop through each section to determine which is in view
+            SECTIONS.forEach((sec) => {
+                checkAndUpdateSection(sec.id);
                 //check for child sections
                 if (sec.children) {
                     sec.children.forEach((child) => {
-
-                        const childElement = document.getElementById(child.id);
-
-                        if (childElement) {
-
-                            const childRect = childElement.getBoundingClientRect();
-                            const distanceToTop = Math.abs(childRect.top);
-
-                            if (childRect.top < window.innerHeight && childRect.bottom > 0) {
-                                if (distanceToTop < closestDistance) {
-                                    closestDistance = distanceToTop;
-                                    currentSection = child.id;
-                                }
-                            }
-                        }
+                        checkAndUpdateSection(child.id);
                     });
                 }
             });

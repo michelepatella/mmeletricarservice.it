@@ -56,8 +56,9 @@ function AutoUsate() {
 
                 {/* Facebook button link */}
                 <CustomButton
+                    type={FACEBOOK_LINK_AUTO_USATE}
                     value={FACEBOOK_LINK_AUTO_USATE}
-                    icon='/icons/facebookIconBlack.svg'/>
+                    icon='/icons/facebook_icon.svg'/>
 
             </CustomSectionContainer>
         </>

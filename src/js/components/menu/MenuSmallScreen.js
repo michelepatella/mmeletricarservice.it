@@ -27,9 +27,10 @@ function MenuSmallScreen() {
                 type='primary'
                 className='hamburger-button'
                 shape='circle'
-                icon={<MenuOutlined />}
+                icon={<MenuOutlined/>}
                 style={handleHamburgerButtonStyle(visible)}
                 onClick={toggleDrawer}/>
+
 
             {/* Drawer for containing the menu */}
             <Drawer

@@ -41,7 +41,7 @@ export const handleChildrenStyle = (section, child) => {
  */
 export const handleSwitchStyle = (tempPreferences, type) => {
     return {
-        backgroundColor: tempPreferences || type === "necessary-cookie" ? '#F8DE4D' : '#3C3C3C'
+        backgroundColor: tempPreferences || type === "necessary-cookie" ? "rgb(56, 139, 255)" : "gray",
     };
 }
 
@@ -52,7 +52,7 @@ export const handleSwitchStyle = (tempPreferences, type) => {
 export const handleGoogleMapsContainerStyle = () => {
     return {
         height: '35vh',
-        background: 'url(/icons/unavailableMapIcon.svg)',
+        background: 'url(/icons/map_icon.svg)',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center top',
         backgroundSize: '10%',

@@ -21,7 +21,7 @@ function NostriValori() {
     return (
 
         <>
-            <CustomBackgroundContainer image="/images/nostri-valori-image2.jpeg">
+            <CustomBackgroundContainer image="/images/nostri-valori-image.jpeg">
                 <CustomSectionContainer id="nostri-valori">
 
                     {/* Title */}

@@ -1,8 +1,27 @@
 /* Home Header styles */
-.home-header{
+.home-header {
     display: flex;
     justify-content: right;
-    padding-right: var(--home_header_padding_right);
+    gap: var(--home_header_gap);
+    padding-right: var(--home_header_padding_right_left);
     padding-bottom: var(--home_header_padding_bottom);
     background-color: transparent;
+}
+
+/* ------ Small screen portrait ------- */
+@media (max-width: 767px) and (orientation: portrait) {
+    .home-header {
+        justify-content: left;
+        padding-left: var(--section_margin_left_small_portrait);
+        padding-bottom: var(--home_header_padding_bottom);
+    }
+}
+
+/* ------ Small screen landscape ------- */
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
+    .home-header {
+        justify-content: left;
+        padding-left: var(--section_margin_left_small_landscape);
+        padding-bottom: var(--home_header_padding_bottom);
+    }
 }

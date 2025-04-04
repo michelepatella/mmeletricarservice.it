@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { CONTATTI_TITLE, CONTATTI_SUBTITLE, CONTATTI } from "../../utils/constants";
+import { CONTATTI_TITLE, CONTATTI } from "../../utils/constants";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import CustomButton from "../custom/CustomButton";
 import CustomSectionContainer from "../custom/CustomSectionContainer";
@@ -25,11 +25,6 @@ function ContattiContent() {
                 <CustomText
                     type="title"
                     text={CONTATTI_TITLE}/>
-
-                {/* Subtitle */}
-                <CustomText
-                    type="subtitle"
-                    text={CONTATTI_SUBTITLE}/>
 
                 {/* Contact buttons container */}
                 <div className="contact-buttons-container">

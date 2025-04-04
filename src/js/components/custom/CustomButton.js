@@ -1,5 +1,5 @@
 import { Button } from "antd";
-import { clickHandlers } from "../../logic/contactButtonHandler";
+import { contactClickHandler } from "../../logic/contactButtonHandler";
 import '../../../styles/components/custom/CustomButton.css';
 
 /**
@@ -9,17 +9,25 @@ import '../../../styles/components/custom/CustomButton.css';
  * @param props
  */
 function CustomButton(props){
+
+    const style = {...props.style};
+
     return (
 
         <Button
             type="primary"
             className="custom-button"
-            onClick={clickHandlers[props.value]}>
+            style={style}
+            onClick={props.type ? contactClickHandler[props.type] : props.onClick}>
 
-            {/* Button's icon */}
-            <img
-                src={props.icon}
-                alt="contact-icon"/>
+            {/* Button's icon (if any) */}
+            {
+                props.icon ?
+                    <img
+                        src={props.icon}
+                        alt="contact-icon"/>
+                    : null
+            }
 
             {props.value}
 

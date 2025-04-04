@@ -1,9 +1,10 @@
 import React from "react";
 import CookieConsent from "react-cookie-consent";
-import {Button, Switch} from "antd";
+import {Switch} from "antd";
 import {COOKIE_CONSENT_BANNER_DESCRIPTION} from "../../utils/constants";
 import {handleSwitchStyle} from "../../logic/styleHandler";
 import CustomText from "./CustomText";
+import CustomButton from "./CustomButton";
 import '../../../styles/components/custom/CustomCookieConsentBanner.css';
 import '../../../styles/components/custom/CustomCookieButton.css';
 
@@ -70,8 +71,7 @@ function CustomCookieConsentBanner(props) {
                     <Switch
                         checked={props.tempPreferences}
                         onChange={() => props.setTempPreferences(!props.tempPreferences)}
-                        style={handleSwitchStyle(props.tempPreferences, "third-party-cookie")}
-                    />
+                        style={handleSwitchStyle(props.tempPreferences, "third-party-cookie")} />
 
                     <CustomText
                         type="small"
@@ -80,11 +80,12 @@ function CustomCookieConsentBanner(props) {
                 </div>
 
                 {/* Save preferences button */}
-                <Button
-                    className="save-cookie-preferences-button"
-                    onClick={props.handleSavePreferences}>
+                <CustomButton
+                    onClick={props.handleSavePreferences}
+                    value="Save preferences"
+                    style={{fontSize: 'var(--small_text_size)'}}>
                     Salva preferenze
-                </Button>
+                </CustomButton>
 
             </CookieConsent>
 

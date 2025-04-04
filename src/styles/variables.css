@@ -3,6 +3,7 @@
     /* Colors */
     --background_color: #141414;
     --accent_color: #F8DE4D;
+    --blue_color: #005FCC;
 
 
     /* Font size */
@@ -31,25 +32,20 @@
     --small_text_font_size: clamp(12px, 2vw, 14px);;
 
 
-    /* General Components variables */
-    --border_radius: 10px;
+    /* Components (General) */
+    --border_radius: 5px;
     --float_button_dimension: 40px;
-    --float_button_margin_right: 15px;
-    --float_button_margin_top_bottom: 45px;
+    --float_button_margins: 10px;
 
 
     /* Custom Icon Button */
     --custom_icon_button_margins: clamp(5px, 2vw, 10px);
-    --custom_icon_button_dimension: clamp(20px, 5vw, 22px);
+    --custom_icon_button_dimension: clamp(18px, 5vw, 20px);
 
 
-    /* Custom Button */
-    --custom_button_border_radius: 20px;
-    --custom_button_padding: 20px;
-
-
-    /* Cookie Banner Button */
-    --custom_cookie_banner_button_padding: 10px 20px;
+    /* Custom Button + Custom Cookie Banner Button */
+    --custom_button_padding: 20px 15px 20px 15px;
+    --custom_button_cookie_banner_padding: 10px 20px 10px 20px;
 
 
     /* Custom Info Card */
@@ -66,8 +62,7 @@
 
 
     /* General section margins */
-    --section_margin_top: 40px;
-    --section_margin_bottom: 160px;
+    --section_margin_bottom: 150px;
 
     --section_margin_left_big: 250px;
     --section_margin_left_medium: 190px;
@@ -76,13 +71,14 @@
 
 
     /* Home section */
-    --home_header_padding_bottom: 20px;
-    --home_header_padding_right: 5px;
+    --home_header_padding_bottom: 5px;
+    --home_header_padding_right_left: 10px;
+    --home_header_gap: 10px;
 
 
     /* Contatti */
-    --contatti_contact_buttons_gap: 10px;
-    --contatti_contact_buttons_container_margin_top: 100px;
+    --contatti_contact_buttons_gap: 20px;
+    --contatti_contact_buttons_container_margin_top: 50px;
 
 
     /* Dove siamo */
@@ -97,6 +93,5 @@
     --auto_usate_percentage_font_size_medium_landscape: 80px;
     --auto_usate_percentage_font_size_small: 50px;
     --auto_usate_facebook_link_margin_top: 30px;
-
 
 }

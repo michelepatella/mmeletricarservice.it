@@ -1,21 +1,21 @@
 /* Custom Button styles */
 .custom-button {
-    background-color: var(--accent_color);
-    color: var(--background_color);
+    color: white;
     font-family: 'Poppins';
-    border-radius: var(--custom_button_border_radius);
+    border: 1px solid white;
+    border-radius: var(--border_radius);
     padding: var(--custom_button_padding);
+    background-color: var(--background_color) !important;
     transition: all 0.3s ease;
 }
 
 .custom-button:hover {
-    background-color: var(--accent_color) !important;
-    color: var(--background_color) !important;
     font-family: 'Poppins' !important;
-    border-radius: var(--custom_button_border_radius);
-    padding: var(--custom_button_padding);
-    transition: all 0.3s ease;
-    transform: scale(1.1);
+    border: 1px solid white !important;
+    border-radius: var(--border_radius) !important;
+    padding: var(--custom_button_padding) !important;
+    filter: invert(1);
+    transition: all 0.3s ease !important;
 }
 
 /* ------- Big screen ------- */

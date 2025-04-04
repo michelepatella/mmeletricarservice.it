@@ -3,9 +3,9 @@
     margin-top: var(--custom_icon_button_margins);
     margin-right: var(--custom_icon_button_margins);
     padding: 0;
-    background: none;
     border: none;
     cursor: pointer;
+    background: none;
     transition: transform 0.3s ease;
 }
 

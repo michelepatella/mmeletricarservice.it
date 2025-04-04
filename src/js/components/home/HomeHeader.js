@@ -14,19 +14,19 @@ function HomeHeader() {
         <>
             {/* Email Button */}
             <CustomIconButton
-                src="/icons/emailIcon.svg"
+                src="/icons/email_icon.svg"
                 alt="Email"
                 onClick={onEmailButtonClick}/>
 
             {/* Facebook Button */}
             <CustomIconButton
-                src="/icons/facebookIcon.svg"
+                src="/icons/facebook_icon.svg"
                 alt="Facebook"
                 onClick={onFacebookButtonClick}/>
 
             {/* Phone Button */}
             <CustomIconButton
-                src="/icons/phoneIcon.svg"
+                src="/icons/phone_icon.svg"
                 alt="Phone"
                 onClick={onPhoneButtonClick}/>
         </>
