@@ -10,29 +10,33 @@ import '../../../styles/components/contatti/ContattiFooter.css';
 function ContattiFooter() {
     return (
         <>
+
             {/* Contatti Footer global container */}
             <div className="contatti-footer">
 
-                {/* Footer text (copyright, P.IVA and policies) */}
+                {/* Footer text */}
                 <p className="footer-text">
+                    {FOOTER_TEXT}
 
-                    {FOOTER_TEXT} |
+                    <br></br>
 
+                    {/* Privacy policy */}
                     <a
                         href="/policies/Privacy%20Policy%20-%20MM%20Eletricar%20Service.pdf"
                         target="_blank"
-                        rel="noopener noreferrer"> Privacy Policy
+                        rel="noopener noreferrer"> PRIVACY POLICY
                     </a> |
-
+                    {/* Cookie policy */}
                     <a
                         href="/policies/Cookie%20Policy%20-%20MM%20Eletricar%20Service.pdf"
                         target="_blank"
-                        rel="noopener noreferrer"> Cookie Policy
+                        rel="noopener noreferrer"> COOKIE POLICY
                     </a>
 
                 </p>
 
             </div>
+
         </>
     );
 }

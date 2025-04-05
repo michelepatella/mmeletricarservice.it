@@ -6,9 +6,6 @@
  */
 export const handleParentItemStyle = (section, menuItem) => {
     return {
-        textDecoration:
-            section === menuItem.href.replace('#', '') ?
-                'underline' : 'none',
         fontWeight:
             section === menuItem.href.replace('#', '') ?
                 'bold' : 'normal',
@@ -111,5 +108,16 @@ export const handleCustomBackgroundContainerStyle = (image) => {
         backgroundPosition: 'right',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+    }
+}
+
+/**
+ * Method to handle "Contatti" title style dynamically
+ * @returns {{opacity: number, fontWeight: string}}
+ */
+export const handleContattiTitleStyle = () => {
+    return {
+        fontWeight: 'bold',
+        opacity: 1,
     }
 }

@@ -1,16 +1,52 @@
 /* Contatti Footer styles */
 .contatti-footer {
-    width: 100%;
+    width: 90%;
     margin-top: auto;
-    align-self: center;
-    background-color: var(--background_color);
-    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
     z-index: 99;
+    color: white;
+    background-color: var(--background_color);
 }
 
 /* Contatti Footer text styles */
 .footer-text {
-    font-size: var(--small_text_font_size);
-    margin-bottom: 0;
-    text-align: center;
+    font-size: var(--caption_text_font_size);
+    text-align: left;
+}
+
+/* ------ Big screen ------- */
+@media (min-width: 1025px) {
+    .footer-text {
+        margin-left: var(--section_margin_left_big);
+    }
+}
+
+/* ------ Medium screen landscape ------- */
+@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .footer-text {
+        margin-left: var(--section_margin_left_medium);
+    }
+}
+
+/* ------ Medium screen portrait ------- */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .footer-text {
+        margin-left: var(--section_margin_left_medium);
+    }
+}
+
+/* ------ Small screen portrait ------- */
+@media (max-width: 767px) and (orientation: portrait) {
+    .footer-text {
+        margin-left: var(--section_margin_left_small_portrait);
+    }
+}
+
+/* ------ Small screen landscape ------- */
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
+    .footer-text {
+        margin-left: var(--section_margin_left_small_landscape);
+    }
 }

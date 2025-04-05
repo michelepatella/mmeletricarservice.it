@@ -18,23 +18,36 @@
     transition: all 0.3s ease !important;
 }
 
+/* Contact button styles */
+.contact-button {
+    color: white;
+    font-family: 'Poppins';
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent !important;
+}
+
 /* ------- Big screen ------- */
 @media (min-width: 1025px) {
     .custom-button {
-        font-size: var(--description_font_size_big);
+        font-size: var(--body_font_size_big);
+    }
+
+    .contact-button {
+        font-size: var(--body_font_size_big);
     }
 }
 
 /* ------- Medium screen (portrait and landscape) ------- */
 @media (min-width: 768px) and (max-width: 1024px) {
     .custom-button {
-        font-size: var(--description_font_size_medium);
+        font-size: var(--body_font_size_medium);
     }
 }
 
 /* ------- Small screen (portrait and landscape) ------- */
 @media (max-width: 767px) {
     .custom-button {
-        font-size: var(--description_font_size_small);
+        font-size: var(--body_font_size_small);
     }
 }

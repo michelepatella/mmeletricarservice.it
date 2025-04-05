@@ -1,7 +1,6 @@
 /* Section Container styles */
 .section-container {
     width: 60%;
-    margin-top: var(--section_margin_top_bottom);
     margin-bottom: var(--section_margin_bottom);
 }
 

@@ -41,80 +41,80 @@
 /* Small text styles */
 .custom-small {
     color: white;
-    font-size: var(--small_text_font_size);
+    font-size: var(--caption_text_font_size);
 }
 
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
     .custom-title {
-        font-size: var(--title_font_size_big);
+        font-size: var(--heading_font_size_big);
     }
 
     .custom-subtitle {
-        font-size: var(--subtitle_font_size_big);
+        font-size: var(--subheading_font_size_big);
     }
 
     .custom-description {
-        font-size: var(--description_font_size_big);
+        font-size: var(--body_font_size_big);
     }
 }
 
 /* ------ Medium screen portrait ------ */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .custom-title {
-        font-size: var(--title_font_size_medium);
+        font-size: var(--heading_font_size_medium);
     }
 
     .custom-subtitle {
-        font-size: var(--subtitle_font_size_medium);
+        font-size: var(--subheading_font_size_medium);
     }
 
     .custom-description {
-        font-size: var(--description_font_size_medium);
+        font-size: var(--body_font_size_medium);
     }
 }
 
 /* ------ Medium screen landscape ------ */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .custom-title {
-        font-size: var(--title_font_size_medium);
+        font-size: var(--heading_font_size_medium);
     }
 
     .custom-subtitle {
-        font-size: var(--subtitle_font_size_medium);
+        font-size: var(--subheading_font_size_medium);
     }
 
     .custom-description {
-        font-size: var(--description_font_size_medium);
+        font-size: var(--body_font_size_medium);
     }
 }
 
 /* ------ Small screen portrait ------ */
 @media (max-width: 767px) {
     .custom-title {
-        font-size: var(--title_font_size_small);
+        font-size: var(--heading_font_size_small);
     }
 
     .custom-subtitle {
-        font-size: var(--subtitle_font_size_small);
+        font-size: var(--subheading_font_size_small);
     }
 
     .custom-description {
-        font-size: var(--description_font_size_small);
+        font-size: var(--body_font_size_small);
     }
 }
 
 /* ------ Small screen landscape ------ */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
     .custom-title {
-        font-size: var(--title_font_size_small);
+        font-size: var(--heading_font_size_small);
     }
 
     .custom-subtitle {
-        font-size: var(--subtitle_font_size_small);
+        font-size: var(--subheading_font_size_small);
     }
 
     .custom-description {
-        font-size: var(--description_font_size_small);
+        font-size: var(--body_font_size_small);
     }
 }

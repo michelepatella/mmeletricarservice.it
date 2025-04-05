@@ -1,8 +1,9 @@
 /* Contatti Layout styles */
 .contatti-layout {
+    height: auto;
     display: flex;
     flex-direction: column;
-    height: auto;
-    background-color: var(--background_color);
+    position: relative;
     font-family: 'Poppins';
+    background-color: var(--background_color);
 }

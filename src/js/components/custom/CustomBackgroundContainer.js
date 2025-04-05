@@ -5,13 +5,17 @@ import { motion } from "framer-motion";
  * Custom Background Container
  * @param image
  * @param children
+ * @param custStyle
  * @returns {JSX.Element}
  * @constructor
  */
-function CustomBackgroundContainer({ image, children }) {
+function CustomBackgroundContainer({ image, children, custStyle }) {
 
     //get the style dynamically
-    const style = { ...handleCustomBackgroundContainerStyle(image) };
+    const style = {
+        ...handleCustomBackgroundContainerStyle(image),
+        ...custStyle
+    };
 
     return (
         <motion.div

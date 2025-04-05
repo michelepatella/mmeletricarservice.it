@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { CONTATTI_TITLE, CONTATTI } from "../../utils/constants";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import {handleContattiTitleStyle} from "../../logic/styleHandler";
 import CustomButton from "../custom/CustomButton";
 import CustomSectionContainer from "../custom/CustomSectionContainer";
 import CustomText from "../custom/CustomText";
@@ -24,7 +25,9 @@ function ContattiContent() {
                 {/* Title */}
                 <CustomText
                     type="title"
-                    text={CONTATTI_TITLE}/>
+                    text={CONTATTI_TITLE}
+                    disableAnimation={true}
+                    style={handleContattiTitleStyle()}/>
 
                 {/* Contact buttons container */}
                 <div className="contact-buttons-container">
@@ -32,14 +35,14 @@ function ContattiContent() {
                     {/* Add a button for each contact */}
                     {CONTATTI.map((contact, index) => (
                         <CustomButton
+                            isContactButton={true}
                             key={index}
+                            type={contact.value}
                             value={contact.value}
                             icon={contact.icon}
                         />
                     ))}
-
                 </div>
-
             </CustomSectionContainer>
         </>
     );

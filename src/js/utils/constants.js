@@ -4,6 +4,9 @@ export const EMAIL_PEC = 'mmeletricarservice@pec.buffetti.it'
 export const FACEBOOK = 'https://www.facebook.com/profile.php?id=61573235319851&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true'
 export const PHONE = '0803267837'
 export const P_IVA = '08650830725'
+export const RAG_SOCIALE = 'Mm Eletricar Service Di Vacca Michele & Scalese Michele Società N Nome Collettivo'
+export const SEDE = "Via G. Bizet 63, 70024 Gravina in Puglia (BA), Italia"
+export const REA = "640711"
 export const CONTATTI = [
     {
         value: PHONE,
@@ -76,7 +79,7 @@ export const CHI_SIAMO_SUBTITLE = 'Siamo <strong>Michele Vacca</strong> e <stron
     '                        offriamo servizi per garantire sicurezza, affidabilità e prestazioni ottimali ad ogni veicolo.'
 
 /**------------- "Nostri valori" texts -------------**/
-export const NOSTRI_VALORI_TITLE = "I nostri valori"
+export const NOSTRI_VALORI_TITLE = "I nostri valori."
 export const NOSTRI_VALORI_SUBTITLE = 'In MM Eletricar Service crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
     '                        poiché comprendiamo quanto sia importante per i nostri clienti.\n' +
     '                        La nostra missione è offrire <strong>soluzioni su misura</strong>, <strong>affidabili</strong> e\n' +
@@ -162,7 +165,7 @@ export const DOVE_SIAMO_TITLE = "Vieni a trovarci in officina!"
 export const DOVE_SIAMO_INFO_CARDS = [
     {
         title: "Dove siamo",
-        description: "Gravina in Puglia (BA), in Via Bizet, 63, 70024.",
+        description: "Gravina in Puglia (BA), in Via G. Bizet, 63, 70024.",
     },
     {
         title: "Orari di apertura",
@@ -172,5 +175,5 @@ export const DOVE_SIAMO_INFO_CARDS = [
 export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION = "Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa."
 
 /**------------- "Contatti" texts -------------**/
-export const CONTATTI_TITLE = "Contatti";
-export const FOOTER_TEXT = "P. IVA: " + P_IVA
+export const CONTATTI_TITLE = "I nostri contatti.";
+export const FOOTER_TEXT = RAG_SOCIALE + ". " + SEDE + ". P. IVA: " + P_IVA + ". REA: " + REA + "."
