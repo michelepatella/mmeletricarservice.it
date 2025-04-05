@@ -26,7 +26,6 @@ function CustomInfoCard(props){
                 <Flex
                     gap="small"
                     align="start"
-                    horizontal
                     className="custom-info-card-flex">
 
                     {/* Icon */}

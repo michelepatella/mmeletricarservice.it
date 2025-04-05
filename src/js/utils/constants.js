@@ -75,20 +75,20 @@ export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> <strong>MM Eletric
 
 /**------------- "Chi siamo" text -------------**/
 export const CHI_SIAMO_SUBTITLE = 'Siamo <strong>Michele Vacca</strong> e <strong>Michele Scalese</strong>, fondatori di MM Eletricar Service,\n' +
-    '                        un’officina specializzata in elettronica per autoveicoli. Con sede a Gravina in Puglia (BA),\n' +
-    '                        offriamo servizi per garantire sicurezza, affidabilità e prestazioni ottimali ad ogni veicolo.'
+    'un\'officina elettrauto a Gravina in Puglia (BA). Con i nostri servizi di riparazione e manutenzione elettronica per auto, ' +
+    'garantiamo sicurezza, affidabilità e prestazioni ottimali al tuo veicolo.'
 
 /**------------- "Nostri valori" texts -------------**/
 export const NOSTRI_VALORI_TITLE = "I nostri valori"
-export const NOSTRI_VALORI_SUBTITLE = 'In MM Eletricar Service crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
+export const NOSTRI_VALORI_SUBTITLE = 'Presso MM Eletricar Service a Gravina in Puglia (BA), crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
     '                        poiché comprendiamo quanto sia importante per i nostri clienti.\n' +
-    '                        La nostra missione è offrire <strong>soluzioni su misura</strong>, <strong>affidabili</strong> e\n' +
+    '                        La nostra missione è offrire <strong>soluzioni elettroniche per auto su misura</strong>, <strong>affidabili</strong> e\n' +
     '                        di <strong>qualità</strong>, per garantire la <strong>sicurezza</strong>,\n' +
-    '                        <strong> l’efficienza</strong> e la <strong>soddisfazione</strong> completa di chi si affida a noi.'
+    '                        <strong> l\'efficienza</strong> e la <strong>soddisfazione</strong> completa di chi si affida a noi.'
 
 /**------------- "Intro servizi" texts -------------**/
 export const INTRO_SERVIZI_TITLE = 'Per la tua auto, solo <br/> servizi di qualità'
-export const INTRO_SERVIZI_DESCRIPTION = 'Tutti i servizi classici da elettrauto, dalla manutenzione alle riparazioni, per garantire sicurezza e performance ottimali.'
+export const INTRO_SERVIZI_DESCRIPTION = 'Tutti i servizi da elettrauto, dalla manutenzione alle riparazioni elettroniche d\'auto, per garantire sicurezza e performance ottimali.'
 
 /**------------- "Altri servizi" texts -------------**/
 export const SERVIZI_INFO_CARDS = [
@@ -134,7 +134,7 @@ export const SERVIZI_INFO_CARDS = [
     },
     {
         title: "Diagnosi elettronica",
-        description: "Individuazione e risoluzione di guasti elettronici per un’analisi precisa del tuo veicolo.",
+        description: "Individuazione e risoluzione di guasti elettronici per un\'analisi precisa del tuo veicolo.",
         icon: '/icons/diagnosis_icon.svg'
     },
     {
@@ -162,15 +162,16 @@ export const FACEBOOK_LINK_AUTO_USATE = "Scopri di più >"
 
 /**------------- "Dove siamo" texts -------------**/
 export const DOVE_SIAMO_TITLE = "La nostra officina"
-export const DOVE_SIAMO_SUBTITLE = "Siamo a <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>."
+export const DOVE_SIAMO_SUBTITLE = "MM Eletricar Service si trova a <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>."
 export const DOVE_SIAMO_INFO_CARD = [
     {
         title: "Orari di apertura",
-        description: "- <strong>Lun-Ven</strong>: 08:30-13:00/15:00-19:00 <br>- <strong>Sab</strong>: 08:30-13:00",
+        description: "- <strong>Lunedì - Venerdì</strong>: 08:30-13:00/15:00-19:00 <br>- <strong>Sabato</strong>: 08:30-13:00",
     }
 ]
 export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION = "Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa."
 
 /**------------- "Contatti" texts -------------**/
 export const CONTATTI_TITLE = "I nostri contatti";
+export const CONTATTI_SUBTITLE = "Per informazioni o per prenotare un appuntamento, non esitare a contattarci!";
 export const FOOTER_TEXT = RAG_SOCIALE + ". " + SEDE + ". P. IVA: " + P_IVA + ". REA: " + REA + "."
