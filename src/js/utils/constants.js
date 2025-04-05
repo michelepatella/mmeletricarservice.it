@@ -70,7 +70,7 @@ export const SECTIONS = [
 ];
 
 /**------------- "Home" texts -------------**/
-export const HOME_TITLE = "Dove la tua auto <br> trova l'eccellenza."
+export const HOME_TITLE = "Dove la tua auto <br> trova l'eccellenza"
 export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> <strong>MM Eletricar Service<strong/>!"
 
 /**------------- "Chi siamo" text -------------**/
@@ -79,7 +79,7 @@ export const CHI_SIAMO_SUBTITLE = 'Siamo <strong>Michele Vacca</strong> e <stron
     '                        offriamo servizi per garantire sicurezza, affidabilità e prestazioni ottimali ad ogni veicolo.'
 
 /**------------- "Nostri valori" texts -------------**/
-export const NOSTRI_VALORI_TITLE = "I nostri valori."
+export const NOSTRI_VALORI_TITLE = "I nostri valori"
 export const NOSTRI_VALORI_SUBTITLE = 'In MM Eletricar Service crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
     '                        poiché comprendiamo quanto sia importante per i nostri clienti.\n' +
     '                        La nostra missione è offrire <strong>soluzioni su misura</strong>, <strong>affidabili</strong> e\n' +
@@ -87,7 +87,7 @@ export const NOSTRI_VALORI_SUBTITLE = 'In MM Eletricar Service crediamo che ogni
     '                        <strong> l’efficienza</strong> e la <strong>soddisfazione</strong> completa di chi si affida a noi.'
 
 /**------------- "Intro servizi" texts -------------**/
-export const INTRO_SERVIZI_TITLE = 'Per la tua auto, solo <br/> servizi di qualità.'
+export const INTRO_SERVIZI_TITLE = 'Per la tua auto, solo <br/> servizi di qualità'
 export const INTRO_SERVIZI_DESCRIPTION = 'Tutti i servizi classici da elettrauto, dalla manutenzione alle riparazioni, per garantire sicurezza e performance ottimali.'
 
 /**------------- "Altri servizi" texts -------------**/
@@ -161,12 +161,9 @@ export const AUTO_USATE_STATS = [
 export const FACEBOOK_LINK_AUTO_USATE = "Scopri di più >"
 
 /**------------- "Dove siamo" texts -------------**/
-export const DOVE_SIAMO_TITLE = "Vieni a trovarci in officina!"
-export const DOVE_SIAMO_INFO_CARDS = [
-    {
-        title: "Dove siamo",
-        description: "Gravina in Puglia (BA), in Via G. Bizet, 63, 70024.",
-    },
+export const DOVE_SIAMO_TITLE = "La nostra officina"
+export const DOVE_SIAMO_SUBTITLE = "Siamo a <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>."
+export const DOVE_SIAMO_INFO_CARD = [
     {
         title: "Orari di apertura",
         description: "- <strong>Lun-Ven</strong>: 08:30-13:00/15:00-19:00 <br>- <strong>Sab</strong>: 08:30-13:00",
@@ -175,5 +172,5 @@ export const DOVE_SIAMO_INFO_CARDS = [
 export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION = "Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa."
 
 /**------------- "Contatti" texts -------------**/
-export const CONTATTI_TITLE = "I nostri contatti.";
+export const CONTATTI_TITLE = "I nostri contatti";
 export const FOOTER_TEXT = RAG_SOCIALE + ". " + SEDE + ". P. IVA: " + P_IVA + ". REA: " + REA + "."

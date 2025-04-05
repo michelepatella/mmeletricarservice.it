@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    DOVE_SIAMO_INFO_CARDS,
+    DOVE_SIAMO_INFO_CARD, DOVE_SIAMO_SUBTITLE,
     DOVE_SIAMO_TITLE,
     GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION
 } from "../utils/constants";
@@ -26,13 +26,9 @@ function DoveSiamo(props) {
                     type="title"
                     text={DOVE_SIAMO_TITLE}/>
 
-                {/* Info Cards for each information */}
-                {DOVE_SIAMO_INFO_CARDS.map((card, index) => (
-                    <CustomInfoCard
-                        key={index}
-                        title={card.title}
-                        description={card.description}/>
-                ))}
+                <CustomText
+                    type="subtitle"
+                    text={DOVE_SIAMO_SUBTITLE}/>
 
                 {/* Google Maps (shown only in case of cookie accepting) */}
                 {props.cookiesAccepted ? (
@@ -62,6 +58,14 @@ function DoveSiamo(props) {
                     </div>
 
                 )}
+
+                {/* Info Cards for each information */}
+                {DOVE_SIAMO_INFO_CARD.map((card, index) => (
+                    <CustomInfoCard
+                        key={index}
+                        title={card.title}
+                        description={card.description}/>
+                ))}
 
             </CustomSectionContainer>
         </>
