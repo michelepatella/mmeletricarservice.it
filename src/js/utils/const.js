@@ -52,7 +52,7 @@ export const SECTIONS = [
 ];
 
 /**------------- "Home" texts -------------**/
-export const HOME_TITLE = "Dove la tua auto <br> trova l'eccellenza"
+export const HOME_TITLE = "Dove la tua auto <br> trova l'eccellenza."
 export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> <strong>MM Eletricar Service<strong/>!"
 
 /**------------- "About us" text -------------**/
@@ -61,7 +61,7 @@ export const ABOUT_US_SUBTITLE = 'Siamo <strong>Michele Vacca</strong> e <strong
     'garantiamo sicurezza, affidabilità e prestazioni ottimali al tuo veicolo.'
 
 /**------------- "Our values" texts -------------**/
-export const OUR_VALUES_TITLE = "I nostri valori"
+export const OUR_VALUES_TITLE = "I nostri valori."
 export const OUR_VALUES_SUBTITLE = 'In MM Eletricar Service crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
     '                        poiché comprendiamo quanto sia importante per i nostri clienti.\n' +
     '                        La nostra missione è offrire <strong>soluzioni elettroniche per auto su misura</strong>, <strong>affidabili</strong> e\n' +
@@ -69,7 +69,7 @@ export const OUR_VALUES_SUBTITLE = 'In MM Eletricar Service crediamo che ogni ve
     '                        <strong> l\'efficienza</strong> e la <strong>soddisfazione</strong> completa di chi si affida a noi.'
 
 /**------------- "Services" texts -------------**/
-export const SERVICES_TITLE = 'Per la tua auto, solo <br/> servizi di qualità'
+export const SERVICES_TITLE = 'Per la tua auto, solo <br/> servizi di qualità.'
 export const SERVICES_DESCRIPTION = 'Tutti i servizi da elettrauto, dalla manutenzione alle riparazioni elettroniche d\'auto, per garantire sicurezza e performance ottimali.'
 
 /**------------- "All services" texts -------------**/
@@ -143,7 +143,7 @@ export const USED_CARS_STATS = [
 export const FACEBOOK_LINK_USED_CARS = "Scopri di più >"
 
 /**------------- "Where we are" texts -------------**/
-export const WHERE_WE_ARE_TITLE = "La nostra officina"
+export const WHERE_WE_ARE_TITLE = "La nostra officina."
 export const WHERE_WE_ARE_SUBTITLE = "MM Eletricar Service si trova a <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>."
 export const WHERE_WE_ARE_INFO_CARD = [
     {
@@ -172,6 +172,6 @@ export const CONTACTS = [
         icon: '/icons/facebook_icon.svg'
     }
 ]
-export const CONTACTS_TITLE = "I nostri contatti";
+export const CONTACTS_TITLE = "I nostri contatti.";
 export const CONTACTS_SUBTITLE = "Per informazioni o per prenotare un appuntamento, non esitare a contattarci!";
 export const FOOTER_TEXT = RAG_SOCIALE + ". " + SITE + ". P. IVA: " + P_IVA + ". REA: " + REA + "."
