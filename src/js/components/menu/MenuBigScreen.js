@@ -30,7 +30,7 @@ function MenuBigScreen() {
                     affix={false}
                     items={menuItems}
                     offsetTop={50}
-                    getCurrentAnchor={() => '#' + section}/>
+                    getCurrentAnchor={() => '#' + section} />
 
             </motion.div>
 

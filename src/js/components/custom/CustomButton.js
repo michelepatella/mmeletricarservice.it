@@ -16,16 +16,16 @@ function CustomButton(props){
 
         <Button
             type="primary"
-            className={props.isContactButton ? "contact-button" : "custom-button"}
-            style={style}
-            onClick={props.isContactButton ? contactClickHandler[props.type] : props.onClick}>
+            className={props.contactType ? "contact-button" : "custom-button"}
+            onClick={props.contactType ? contactClickHandler[props.contactType] : props.onClick}
+            style={style}>
 
             {/* Button's icon (if any) */}
             {
                 props.icon ?
                     <img
                         src={props.icon}
-                        alt="contact-icon"/>
+                        alt="contact-icon" />
                     : null
             }
 

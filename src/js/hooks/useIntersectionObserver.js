@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 /**
- * To track if a section is visible or not
+ * Custom hook to track if a section is visible or not
  * @param ref
  * @returns {boolean}
  */

@@ -24,23 +24,23 @@ function CustomInfoCard(props){
 
                 {/* Flex container*/}
                 <Flex
+                    className="custom-info-card-flex"
                     gap="small"
-                    align="start"
-                    className="custom-info-card-flex">
+                    align="start">
 
                     {/* Icon */}
                     { props.icon ?
                         <img
                             className="custom-info-card-icon"
                             src={props.icon}
-                            alt="custom-info-card-icon"/>
+                            alt="custom-info-card-icon" />
                         : null}
 
                     {/* Title */}
                     <CustomText
                         type="subtitle"
                         text={props.title}
-                        style={handleCustomInfoCardTitleStyle()}/>
+                        style={handleCustomInfoCardTitleStyle()} />
 
                 </Flex>
 
@@ -48,7 +48,7 @@ function CustomInfoCard(props){
                 <CustomText
                     type="description"
                     text={props.description}
-                    style={{marginTop: "0"}}/>
+                    style={{marginTop: "0"}} />
 
             </div>
         </>

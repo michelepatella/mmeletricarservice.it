@@ -2,6 +2,7 @@
 html, body {
   background-color: var(--background_color);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 * {
   box-sizing: border-box;

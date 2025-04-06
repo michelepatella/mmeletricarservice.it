@@ -1,9 +1,9 @@
 /* Contact buttons container styles */
 .contact-buttons-container {
-    margin-top: var(--contatti_contact_buttons_container_margin_top);
+    margin-top: var(--contact_buttons_container_margin_top);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    gap: var(--contatti_contact_buttons_gap);
+    gap: var(--contact_buttons_gap);
 }

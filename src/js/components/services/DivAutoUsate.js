@@ -1,4 +1,4 @@
-import '../../../styles/components/servizi/DivAutoUsate.css';
+import '../../../styles/components/services/DivAutoUsate.css';
 import React from 'react';
 import CountUp from 'react-countup';
 import { Col, Statistic } from 'antd';

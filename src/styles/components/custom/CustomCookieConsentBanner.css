@@ -14,7 +14,7 @@
     font-family: 'Poppins' !important;
     border: 1px solid white !important;
     border-radius: var(--border_radius) !important;
-    padding: var(--custom_button_cookie_banner_padding) !important;
+    padding: var(--custom_cookie_consent_banner_button_padding) !important;
     background-color: var(--background_color) !important;
     transition: all 0.3s ease;
 }
@@ -23,7 +23,7 @@
     font-family: 'Poppins' !important;
     border: 1px solid white !important;
     border-radius: var(--border_radius) !important;
-    padding: var(--custom_button_cookie_banner_padding) !important;
+    padding: var(--custom_cookie_consent_banner_button_padding) !important;
     filter: invert(1);
     transition: all 0.3s ease !important;
 }

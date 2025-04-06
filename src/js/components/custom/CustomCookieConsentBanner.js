@@ -1,7 +1,7 @@
 import React from "react";
 import CookieConsent from "react-cookie-consent";
 import {Switch} from "antd";
-import {COOKIE_CONSENT_BANNER_DESCRIPTION} from "../../utils/constants";
+import {COOKIE_CONSENT_BANNER_DESCRIPTION} from "../../utils/const";
 import {handleSwitchStyle} from "../../logic/styleHandler";
 import CustomText from "./CustomText";
 import CustomButton from "./CustomButton";
@@ -24,11 +24,11 @@ function CustomCookieConsentBanner(props) {
             <CookieConsent
                 cookieName="cookieConsent"
                 expires={30}
+                visible={true}
+                location="bottom"
                 buttonText="Accetta tutti"
                 declineButtonText="Rifiuta tutti"
-                location="bottom"
                 enableDeclineButton={true}
-                visible={true}
                 onAccept={props.handleAcceptCookies}
                 onDecline={props.handleDeclineCookies}>
 
@@ -55,13 +55,13 @@ function CustomCookieConsentBanner(props) {
                 <div className="cookie-switch-container">
 
                     <Switch
-                        checked={true}
                         disabled
-                        style={handleSwitchStyle(props.tempPreferences, "necessary-cookie")}/>
+                        checked={true}
+                        style={handleSwitchStyle(props.tempPreferences, "necessary-cookie")} />
 
                     <CustomText
                         type="small"
-                        text="Cookies tecnici e di sicurezza"/>
+                        text="Cookies tecnici e di sicurezza" />
 
                 </div>
 
@@ -75,17 +75,15 @@ function CustomCookieConsentBanner(props) {
 
                     <CustomText
                         type="small"
-                        text="Cookies di terze parti"/>
+                        text="Cookies di terze parti" />
 
                 </div>
 
                 {/* Save preferences button */}
                 <CustomButton
-                    onClick={props.handleSavePreferences}
                     value="Salva preferenze"
-                    style={{fontSize: 'var(--small_text_size)'}}>
-                    Salva preferenze
-                </CustomButton>
+                    onClick={props.handleSavePreferences}
+                    style={{fontSize: 'var(--small_text_size)'}} />
 
             </CookieConsent>
 

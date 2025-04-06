@@ -5,7 +5,7 @@ import CustomBackgroundContainer from "../components/custom/CustomBackgroundCont
 import '../../styles/sections/home.css';
 
 /**
- * "Home" Layout definition
+ * Home Layout definition
  */
 const {
     Header,
@@ -13,7 +13,7 @@ const {
 } = Layout;
 
 /**
- * "Home" section
+ * Home section
  * @returns {JSX.Element}
  * @constructor
  */
@@ -22,17 +22,17 @@ function Home() {
 
         <>
             <CustomBackgroundContainer image="/images/home-image.jpeg">
-                {/* "Home" Layout */}
+                {/* Home Layout */}
                 <Layout
                     className="home-layout"
                     id="home">
 
-                    {/* "Home" header */}
+                    {/* Home header */}
                     <Header className="home-header">
                         <HomeHeader/>
                     </Header>
 
-                    {/* "Home" content */}
+                    {/* Home content */}
                     <Content className="home-content">
                         <HomeContent/>
                     </Content>

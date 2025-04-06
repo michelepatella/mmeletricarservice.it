@@ -1,17 +1,17 @@
 import React, { useRef } from "react";
-import { CHI_SIAMO_SUBTITLE } from "../../utils/constants";
+import { ABOUT_US_SUBTITLE } from "../../utils/const";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import { useVideoAnimation } from "../../hooks/useVideoAnimation";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
 import CustomText from "../../components/custom/CustomText";
-import '../../../styles/sections/chi-siamo.css';
+import '../../../styles/sections/about-us.css';
 
 /**
- * "Chi siamo" section
+ * About us section
  * @returns {Element}
  * @constructor
  */
-function ChiSiamo() {
+function AboutUs() {
 
     //IntersectionObserver to generate the animation and
     //start the video when the section is visible
@@ -21,7 +21,7 @@ function ChiSiamo() {
 
     return (
 
-            <CustomSectionContainer id="chi-siamo">
+            <CustomSectionContainer id="about-us">
 
                 {/* Logo animation video */}
                 <video
@@ -37,11 +37,11 @@ function ChiSiamo() {
                 {/* Subtitle */}
                 <CustomText
                     type="subtitle"
-                    text={CHI_SIAMO_SUBTITLE} />
+                    text={ABOUT_US_SUBTITLE} />
 
             </CustomSectionContainer>
 
     );
 }
 
-export default ChiSiamo;
+export default AboutUs;

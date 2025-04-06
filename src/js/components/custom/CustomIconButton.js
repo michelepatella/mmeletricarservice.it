@@ -18,7 +18,7 @@ function CustomIconButton(props) {
             {/* Icon */}
             <img
                 src={props.src}
-                alt={props.alt}/>
+                alt={props.alt} />
 
         </button>
 

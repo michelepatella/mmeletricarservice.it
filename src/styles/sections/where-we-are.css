@@ -2,7 +2,7 @@
 .google-maps-container{
     width: 120%;
     height: 60vh;
-    margin-top: var(--dove_siamo_google_maps_margin_top);
+    margin-top: var(--google_maps_margin_top);
     overflow: hidden;
     border-radius: var(--border_radius);
 }

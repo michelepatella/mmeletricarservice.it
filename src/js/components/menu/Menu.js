@@ -10,10 +10,10 @@ import '../../../styles/components/Menu.css';
 const Menu = () => {
     return (
         <>
-            {/* Menu for PC and tablet (big screens) */}
+            {/* Menu for big screens (Anchor menu) */}
             <MenuBigScreen/>
 
-            {/* Menu for phone (small screens) */}
+            {/* Menu for small screens (Hamburger menu) */}
             <MenuSmallScreen/>
         </>
     );

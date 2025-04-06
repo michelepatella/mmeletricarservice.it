@@ -43,12 +43,13 @@
     --custom_icon_button_dimension: clamp(18px, 5vw, 20px);
 
 
-    /* Custom Button + Custom Cookie Banner Button */
+    /* Custom Button */
     --custom_button_padding: 19px 16px 19px 16px;
-    --custom_button_cookie_banner_padding: 10px 20px 10px 20px;
+
 
     /* Custom Cookie Consent Banner */
     --custom_cookie_consent_banner_switch_margin_top_bottom: 20px;
+    --custom_cookie_consent_banner_button_padding: 10px 20px 10px 20px;
 
 
     /* Custom Info Card */
@@ -75,13 +76,13 @@
     --home_header_gap: 20px;
 
 
-    /* Contatti */
-    --contatti_contact_buttons_gap: 30px;
-    --contatti_contact_buttons_container_margin_top: 80px;
+    /* Contacts section */
+    --contact_buttons_gap: 30px;
+    --contact_buttons_container_margin_top: 80px;
 
 
-    /* Dove siamo */
-    --dove_siamo_google_maps_margin_top: 50px;
+    /* Where we are section */
+    --google_maps_margin_top: 50px;
 
 
     /* TO DELETE */

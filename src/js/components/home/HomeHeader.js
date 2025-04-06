@@ -4,7 +4,7 @@ import CustomIconButton from "../custom/CustomIconButton";
 import '../../../styles/components/home/HomeHeader.css';
 
 /**
- * Header of "Home" section
+ * Header of Home section
  * @returns {Element}
  * @constructor
  */
@@ -16,19 +16,19 @@ function HomeHeader() {
             <CustomIconButton
                 src="/icons/email_icon.svg"
                 alt="Email"
-                onClick={onEmailButtonClick}/>
+                onClick={onEmailButtonClick} />
 
             {/* Facebook Button */}
             <CustomIconButton
                 src="/icons/facebook_icon.svg"
                 alt="Facebook"
-                onClick={onFacebookButtonClick}/>
+                onClick={onFacebookButtonClick} />
 
             {/* Phone Button */}
             <CustomIconButton
                 src="/icons/phone_icon.svg"
                 alt="Phone"
-                onClick={onPhoneButtonClick}/>
+                onClick={onPhoneButtonClick} />
         </>
 
     );

@@ -1,21 +1,22 @@
 import React from "react";
-import { FOOTER_TEXT } from '../../utils/constants';
-import '../../../styles/components/contatti/ContattiFooter.css';
+import { FOOTER_TEXT } from '../../utils/const';
+import '../../../styles/components/contacts/ContactsFooter.css';
 
 /**
- * Contatti Footer
+ * Contacts Footer
  * @returns {Element}
  * @constructor
  */
-function ContattiFooter() {
+function ContactsFooter() {
     return (
         <>
 
-            {/* Contatti Footer global container */}
-            <div className="contatti-footer">
+            {/* Contacts Footer global container */}
+            <div className="contacts-footer">
 
                 {/* Footer text */}
                 <p className="footer-text">
+
                     {FOOTER_TEXT}
 
                     <br></br>
@@ -26,6 +27,7 @@ function ContattiFooter() {
                         target="_blank"
                         rel="noopener noreferrer"> PRIVACY POLICY
                     </a> |
+
                     {/* Cookie policy */}
                     <a
                         href="/policies/Cookie%20Policy%20-%20MM%20Eletricar%20Service.pdf"
@@ -41,4 +43,4 @@ function ContattiFooter() {
     );
 }
 
-export default ContattiFooter;
+export default ContactsFooter;

@@ -1,18 +1,18 @@
 import React, { useRef } from "react";
-import {CONTATTI_TITLE, CONTATTI, CONTATTI_SUBTITLE} from "../../utils/constants";
+import {CONTACTS_TITLE, CONTACTS, CONTACTS_SUBTITLE} from "../../utils/const";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import {handleContattiTitleStyle} from "../../logic/styleHandler";
+import {handleContactsTitleStyle} from "../../logic/styleHandler";
 import CustomButton from "../custom/CustomButton";
 import CustomSectionContainer from "../custom/CustomSectionContainer";
 import CustomText from "../custom/CustomText";
-import "../../../styles/components/contatti/ContattiContent.css";
+import "../../../styles/components/contacts/ContactsContent.css";
 
 /**
- * Contatti Content
+ * Contacts Content
  * @returns {Element}
  * @constructor
  */
-function ContattiContent() {
+function ContactsContent() {
 
     //IntersectionObserver to generate the animation when the section is visible
     const subtitleRef = useRef(null);
@@ -20,36 +20,33 @@ function ContattiContent() {
 
     return (
         <>
-            <CustomSectionContainer id="contatti">
+            <CustomSectionContainer id="contacts">
 
                 {/* Title */}
                 <CustomText
                     type="title"
-                    text={CONTATTI_TITLE}
-                    style={handleContattiTitleStyle()}/>
+                    text={CONTACTS_TITLE} />
 
                 {/* Subitle */}
                 <CustomText
                     type="subtitle"
-                    text={CONTATTI_SUBTITLE}/>
+                    text={CONTACTS_SUBTITLE} />
 
                 {/* Contact buttons container */}
                 <div className="contact-buttons-container">
-
                     {/* Add a button for each contact */}
-                    {CONTATTI.map((contact, index) => (
+                    {CONTACTS.map((contact, index) => (
                         <CustomButton
-                            isContactButton={true}
                             key={index}
-                            type={contact.value}
+                            contactType={contact.value}
                             value={contact.value}
-                            icon={contact.icon}
-                        />
+                            icon={contact.icon} />
                     ))}
                 </div>
+
             </CustomSectionContainer>
         </>
     );
 }
 
-export default ContattiContent;
+export default ContactsContent;

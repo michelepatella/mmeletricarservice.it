@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 
 /**
- * To manage cookie consent
+ * Custom hook to manage cookie consent
  * @returns {{handleDeclineCookies: handleDeclineCookies,
  * handleAcceptCookies: handleAcceptCookies,
  * cookiesAccepted: unknown, tempPreferences: unknown,
@@ -36,7 +36,7 @@ export const useCookieConsent = () => {
     }, []);
 
     /**
-     * Manage cookie accepting
+     * To manage cookie accepting
      */
     const handleAcceptCookies = () => {
         setCookiesAccepted(true);
@@ -45,17 +45,18 @@ export const useCookieConsent = () => {
     };
 
     /**
-     * Manage cookie declining
+     * To manage cookie declining
      */
     const handleDeclineCookies = () => {
         setCookiesAccepted(false);
         setTempPreferences(false);
         setIsCookiesBannerVisible(false);
+
         window.location.reload();
     };
 
     /**
-     * Manage cookie preferences saving
+     * To manage cookie preferences saving
      */
     const handleSavePreferences = () => {
         Cookies.set(
@@ -65,7 +66,9 @@ export const useCookieConsent = () => {
         );
         setCookiesAccepted(tempPreferences);
         setIsCookiesBannerVisible(false);
-        if (!tempPreferences) window.location.reload();
+
+        if (!tempPreferences)
+            window.location.reload();
     };
 
     return {
@@ -81,7 +84,7 @@ export const useCookieConsent = () => {
 };
 
 /**
- * Handle the cookie button clicking
+ * To handle the cookie button clicking
  */
 export const handleCookieButtonClick = (setIsCookiesBannerVisible) => {
     setIsCookiesBannerVisible(true);

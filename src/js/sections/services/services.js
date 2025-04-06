@@ -1,44 +1,46 @@
-import React, {useRef} from "react";
-import {NOSTRI_VALORI_SUBTITLE, NOSTRI_VALORI_TITLE} from "../../utils/constants";
+import React, { useRef } from "react";
+import {SERVICES_TITLE, SERVICES_DESCRIPTION} from "../../utils/const";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
 import CustomText from "../../components/custom/CustomText";
 import CustomBackgroundContainer from "../../components/custom/CustomBackgroundContainer";
 
 /**
- * "Nostri valori" section
+ * Services section
  * @returns {Element}
  * @constructor
  */
-function NostriValori() {
+function Services() {
 
     //IntersectionObserver to generate the animation when the section is visible
-    const subtitleRef = useRef(null);
     const imageRef = useRef(null);
-    useIntersectionObserver(subtitleRef);
     useIntersectionObserver(imageRef);
 
     return (
 
         <>
-            <CustomBackgroundContainer image="/images/nostri-valori-image.jpeg">
-                <CustomSectionContainer id="nostri-valori">
+            <CustomBackgroundContainer
+                image="/images/services-image.jpeg"
+                style={{marginBottom: 0}}>
+
+                <CustomSectionContainer id="services">
 
                     {/* Title */}
                     <CustomText
                         type="title"
-                        text={NOSTRI_VALORI_TITLE} />
+                        text={SERVICES_TITLE} />
 
                     {/* Subtitle */}
                     <CustomText
                         type="subtitle"
-                        text={NOSTRI_VALORI_SUBTITLE} />
+                        text={SERVICES_DESCRIPTION} />
 
                 </CustomSectionContainer>
+
             </CustomBackgroundContainer>
         </>
 
     );
 }
 
-export default NostriValori;
+export default Services;

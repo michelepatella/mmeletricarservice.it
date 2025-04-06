@@ -1,25 +1,25 @@
 import React from "react";
-import { SERVIZI_INFO_CARDS } from "../../utils/constants";
+import { SERVICE_INFO_CARDS } from "../../utils/const";
 import CustomInfoCard from "../../components/custom/CustomInfoCard";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
 
 /**
- * "Altri servizi" section
+ * All services section
  * @returns {Element}
  * @constructor
  */
-function AltriServizi() {
+function AllServices() {
     return (
 
-        <CustomSectionContainer id="altri-servizi">
+        <CustomSectionContainer id="all-services">
 
             {/* Info Card for each service */}
-            {SERVIZI_INFO_CARDS.map((servizio, index) => (
+            {SERVICE_INFO_CARDS.map((service, index) => (
                 <CustomInfoCard
                     key={index}
-                    title={servizio.title}
-                    description={servizio.description}
-                    icon={servizio.icon}
+                    title={service.title}
+                    description={service.description}
+                    icon={service.icon}
                 />
             ))}
 
@@ -28,4 +28,4 @@ function AltriServizi() {
     );
 }
 
-export default AltriServizi;
+export default AllServices;

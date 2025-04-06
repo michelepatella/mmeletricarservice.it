@@ -1,5 +1,5 @@
-import { handleCustomBackgroundContainerStyle } from "../../logic/styleHandler";
 import { motion } from "framer-motion";
+import { handleCustomBackgroundContainerStyle } from "../../logic/styleHandler";
 
 /**
  * Custom Background Container
@@ -18,6 +18,7 @@ function CustomBackgroundContainer({ image, children, custStyle }) {
     };
 
     return (
+
         <motion.div
             className="custom-background-container"
             style={style}
@@ -26,6 +27,7 @@ function CustomBackgroundContainer({ image, children, custStyle }) {
             transition={{duration: 2.0, ease: "easeOut"}}>
             {children}
         </motion.div>
+
     );
 }
 

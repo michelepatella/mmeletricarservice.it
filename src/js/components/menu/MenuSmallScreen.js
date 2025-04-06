@@ -28,8 +28,8 @@ function MenuSmallScreen() {
                 className='hamburger-button'
                 shape='circle'
                 icon={<MenuOutlined/>}
-                style={handleHamburgerButtonStyle(visible)}
-                onClick={toggleDrawer}/>
+                onClick={toggleDrawer}
+                style={handleHamburgerButtonStyle(visible)} />
 
 
             {/* Drawer for containing the menu */}
@@ -38,7 +38,7 @@ function MenuSmallScreen() {
                 height='100vh'
                 placement='right'
                 closable
-                closeIcon={<CloseOutlined className="close-outline"/>}
+                closeIcon={<CloseOutlined className="close-outline" />}
                 onClose={toggleDrawer}
                 open={visible}>
 
@@ -50,8 +50,8 @@ function MenuSmallScreen() {
                         <React.Fragment key={menuItem.key}>
                             <AntMenu.Item
                                 key={menuItem.key}
-                                style={handleParentItemStyle(section, menuItem)}
-                                onClick={menuItem.onClick}>
+                                onClick={menuItem.onClick}
+                                style={handleParentItemStyle(section, menuItem)}>
                                 {menuItem.title}
                             </AntMenu.Item>
 
@@ -61,8 +61,8 @@ function MenuSmallScreen() {
                                     <AntMenu.Item
                                         key={child.key}
                                         className='ant-menu-item-child'
-                                        style={handleChildrenStyle(section, child)}
-                                        onClick={child.onClick}>
+                                        onClick={child.onClick}
+                                        style={handleChildrenStyle(section, child)}>
                                         {child.title}
                                     </AntMenu.Item>
                                 ))}

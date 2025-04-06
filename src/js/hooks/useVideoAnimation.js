@@ -1,7 +1,7 @@
 import {useEffect} from "react";
 
 /**
- * To delay the video animation
+ * Custom hook to delay the video animation
  * @param videoRef
  * @param isVideoVisible
  */

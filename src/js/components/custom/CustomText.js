@@ -25,9 +25,9 @@ function CustomText(props) {
                     props.type === "subtitle" ? "custom-subtitle" :
                         props.type === "description" ? "custom-description" :
                         "custom-small"}
-            ref={props.disableAnimation ? null : textRef}
+            ref={textRef}
             style={style}
-            dangerouslySetInnerHTML={{ __html: props.text }}/>
+            dangerouslySetInnerHTML={{ __html: props.text }} />
 
     );
 }
