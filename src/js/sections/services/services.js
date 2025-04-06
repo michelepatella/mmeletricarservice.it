@@ -19,9 +19,7 @@ function Services() {
     return (
 
         <>
-            <CustomBackgroundContainer
-                image="/images/services-image.jpeg"
-                style={{marginBottom: 0}}>
+            <CustomBackgroundContainer image="/images/services-image.jpeg">
 
                 <CustomSectionContainer id="services">
 

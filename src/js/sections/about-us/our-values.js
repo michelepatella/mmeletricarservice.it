@@ -21,7 +21,10 @@ function OurValues() {
     return (
 
         <>
-            <CustomBackgroundContainer image="/images/our-values-image.jpeg">
+            <CustomBackgroundContainer
+                image="/images/our-values-image.jpeg"
+                custStyle={{marginBottom: 'var(--section_margin_bottom)'}}>
+
                 <CustomSectionContainer id="our-values">
 
                     {/* Title */}
@@ -35,6 +38,7 @@ function OurValues() {
                         text={OUR_VALUES_SUBTITLE} />
 
                 </CustomSectionContainer>
+
             </CustomBackgroundContainer>
         </>
 

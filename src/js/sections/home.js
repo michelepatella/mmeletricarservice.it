@@ -21,7 +21,10 @@ function Home() {
     return (
 
         <>
-            <CustomBackgroundContainer image="/images/home-image.jpeg">
+            <CustomBackgroundContainer
+                image="/images/home-image.jpeg"
+                custStyle={{marginBottom: 'var(--section_margin_bottom)'}}>
+
                 {/* Home Layout */}
                 <Layout
                     className="home-layout"
@@ -38,6 +41,7 @@ function Home() {
                     </Content>
 
                 </Layout>
+
             </CustomBackgroundContainer>
         </>
 

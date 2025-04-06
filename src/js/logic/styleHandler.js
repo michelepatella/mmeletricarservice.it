@@ -97,7 +97,6 @@ export const handleHamburgerButtonStyle = (visible) => {
 export const handleCustomBackgroundContainerStyle = (image) => {
     return {
         height: '100vh',
-        marginBottom: 'var(--section_margin_bottom)',
         background:
             'linear-gradient(to top, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%), ' +
             'linear-gradient(to bottom, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%), ' +
