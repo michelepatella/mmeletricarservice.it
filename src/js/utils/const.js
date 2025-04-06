@@ -62,7 +62,7 @@ export const ABOUT_US_SUBTITLE = 'Siamo <strong>Michele Vacca</strong> e <strong
 
 /**------------- "Our values" texts -------------**/
 export const OUR_VALUES_TITLE = "I nostri valori"
-export const OUR_VALUES_SUBTITLE = 'Presso MM Eletricar Service a Gravina in Puglia (BA), crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
+export const OUR_VALUES_SUBTITLE = 'In MM Eletricar Service crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
     '                        poiché comprendiamo quanto sia importante per i nostri clienti.\n' +
     '                        La nostra missione è offrire <strong>soluzioni elettroniche per auto su misura</strong>, <strong>affidabili</strong> e\n' +
     '                        di <strong>qualità</strong>, per garantire la <strong>sicurezza</strong>,\n' +
