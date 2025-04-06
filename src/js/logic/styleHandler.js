@@ -108,6 +108,7 @@ export const handleCustomBackgroundContainerStyle = (image) => {
         backgroundPosition: 'right',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        marginBottom: 'var(--section_margin_bottom)'
     }
 }
 

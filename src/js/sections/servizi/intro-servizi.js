@@ -19,7 +19,9 @@ function IntroServizi() {
     return (
 
         <>
-            <CustomBackgroundContainer image="/images/intro-servizi-image.jpeg">
+            <CustomBackgroundContainer
+                image="/images/intro-servizi-image.jpeg"
+                custStyle={{marginBottom: 0}}>
                 <CustomSectionContainer id="intro-servizi">
 
                     {/* Title */}

@@ -27,7 +27,7 @@
     }
 
     .custom-info-card-flex {
-        margin-top: var(--custom_info_card_margin_top_big_medium);
+        margin-top: var(--custom_info_card_margin_top);
     }
 }
 
@@ -38,7 +38,7 @@
     }
 
     .custom-info-card-flex {
-        margin-top: var(--custom_info_card_margin_top_big_medium);
+        margin-top: var(--custom_info_card_margin_top);
     }
 }
 
@@ -49,13 +49,13 @@
     }
 
     .custom-info-card-flex {
-        margin-top: var(--custom_info_card_margin_top_small);
+        margin-top: var(--custom_info_card_margin_top);
     }
 }
 
 /* ------ Small screen landscape ------ */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
     .custom-info-card-flex {
-        margin-top: var(--custom_info_card_margin_top_small);
+        margin-top: var(--custom_info_card_margin_top);
     }
 }

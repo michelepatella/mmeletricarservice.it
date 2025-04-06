@@ -47,12 +47,14 @@
     --custom_button_padding: 19px 16px 19px 16px;
     --custom_button_cookie_banner_padding: 10px 20px 10px 20px;
 
+    /* Custom Cookie Consent Banner */
+    --custom_cookie_consent_banner_switch_margin_top_bottom: 20px;
+
 
     /* Custom Info Card */
-    --custom_info_card_margin_top_big_medium: 40px;
-    --custom_info_card_margin_top_small: 20px;
+    --custom_info_card_margin_top: 50px;
     --custom_info_card_icon_dimension: 30px;
-    --custom_info_card_flex_gap: 30px;
+    --custom_info_card_flex_gap: 20px;
 
 
     /* Menu */
@@ -60,7 +62,7 @@
 
 
     /* General section margins */
-    --section_margin_bottom: 150px;
+    --section_margin_bottom: 180px;
     --section_margin_left_big: 250px;
     --section_margin_left_medium: 190px;
     --section_margin_left_small_portrait: 20px;
@@ -70,11 +72,11 @@
     /* Home section */
     --home_header_padding_bottom: 5px;
     --home_header_padding_right_left: 10px;
-    --home_header_gap: 10px;
+    --home_header_gap: 20px;
 
 
     /* Contatti */
-    --contatti_contact_buttons_gap: 20px;
+    --contatti_contact_buttons_gap: 30px;
     --contatti_contact_buttons_container_margin_top: 80px;
 
 
