@@ -53,24 +53,24 @@ export const SECTIONS = [
 
 /**------------- "Home" texts -------------**/
 export const HOME_TITLE = "Dove la tua auto <br> trova l'eccellenza."
-export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> <strong>MM Eletricar Service<strong/>!"
+export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> <strong>MM Eletricar Service</strong>!"
 
 /**------------- "About us" text -------------**/
-export const ABOUT_US_SUBTITLE = 'Siamo <strong>Michele Vacca</strong> e <strong>Michele Scalese</strong>, fondatori di MM Eletricar Service,\n' +
-    'un\'officina elettrauto a Gravina in Puglia (BA). Con i nostri servizi di riparazione e manutenzione elettronica per auto, ' +
+export const ABOUT_US_SUBTITLE = 'Siamo <strong>Michele Vacca</strong> e <strong>Michele Scalese</strong>, fondatori di <strong>MM Eletricar Service</strong>,\n' +
+    'un\'<strong>officina elettrauto</strong> a <strong>Gravina in Puglia (BA)</strong>. Con i nostri servizi di riparazione e manutenzione elettronica per auto, ' +
     'garantiamo sicurezza, affidabilità e prestazioni ottimali al tuo veicolo.'
 
 /**------------- "Our values" texts -------------**/
 export const OUR_VALUES_TITLE = "I nostri valori."
-export const OUR_VALUES_SUBTITLE = 'In MM Eletricar Service crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
+export const OUR_VALUES_SUBTITLE = 'In <strong>MM Eletricar Service</strong> crediamo che ogni veicolo meriti <strong>attenzione</strong> e <strong>cura</strong>,\n' +
     '                        poiché comprendiamo quanto sia importante per i nostri clienti.\n' +
-    '                        La nostra missione è offrire <strong>soluzioni elettroniche per auto su misura</strong>, <strong>affidabili</strong> e\n' +
+    '                        La nostra <strong>missione</strong> è offrire <strong>soluzioni su misura</strong>, <strong>affidabili</strong> e\n' +
     '                        di <strong>qualità</strong>, per garantire la <strong>sicurezza</strong>,\n' +
-    '                        <strong> l\'efficienza</strong> e la <strong>soddisfazione</strong> completa di chi si affida a noi.'
+    '                        <strong> l\'efficienza</strong> e la <strong>soddisfazione completa</strong> di chi si affida a noi.'
 
 /**------------- "Services" texts -------------**/
 export const SERVICES_TITLE = 'Per la tua auto, solo <br/> servizi di qualità.'
-export const SERVICES_DESCRIPTION = 'Tutti i servizi da elettrauto, dalla manutenzione alle riparazioni elettroniche d\'auto, per garantire sicurezza e performance ottimali.'
+export const SERVICES_DESCRIPTION = 'Tutti i <strong>servizi da elettrauto</strong>, dalla <strong>manutenzione</strong> alle <strong>riparazioni elettroniche d\'auto</strong>, per garantire <strong>sicurezza</strong> e <strong>performance ottimali</strong>.'
 
 /**------------- "All services" texts -------------**/
 export const SERVICE_INFO_CARDS = [
@@ -144,7 +144,7 @@ export const FACEBOOK_LINK_USED_CARS = "Scopri di più >"
 
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "La nostra officina."
-export const WHERE_WE_ARE_SUBTITLE = "MM Eletricar Service si trova a <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>."
+export const WHERE_WE_ARE_SUBTITLE = "<strong>MM Eletricar Service</strong> si trova a <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>."
 export const WHERE_WE_ARE_INFO_CARD = [
     {
         title: "Orari di apertura",
