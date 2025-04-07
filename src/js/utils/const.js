@@ -132,15 +132,8 @@ export const SERVICE_INFO_CARDS = [
 ];
 
 /**------------- "Used cars" texts -------------**/
-export const USED_CARS_TITLE = "Cerchi di più? Scopri la tua \n" +
-    "auto usata perfetta!";
-export const USED_CARS_DESCRIPTION = "Non perdere le ultime novità! Seguici su Facebook per rimanere sempre aggiornato sulle nostre auto usate in vendita.";
-export const USED_CARS_STATS = [
-    {description: "Auto con chilometraggio verificato ✅"},
-    {description: "Auto ispezionate e verificate ✅"},
-    {description: "Auto tagliandate ✅"}
-]
-export const FACEBOOK_LINK_USED_CARS = "Scopri di più >"
+export const USED_CARS_TITLE = "La tua prossima auto, pura qualità."
+export const USED_CARS_DESCRIPTION = "Le migliori <strong>auto usate</strong> garantite, scelte con attenzione per chi cerca <strong>qualità</strong>, <strong>affidabilità</strong> e <strong>convenienza</strong>.";
 
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "La nostra officina."

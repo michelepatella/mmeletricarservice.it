@@ -1,4 +1,4 @@
-import {EMAIL, EMAIL_PEC, FACEBOOK, FACEBOOK_LINK_USED_CARS, PHONE} from "../utils/const";
+import {EMAIL, EMAIL_PEC, FACEBOOK, PHONE} from "../utils/const";
 
 /**
  * Method to call when the email button is clicked
@@ -40,5 +40,4 @@ export const contactClickHandler = {
     [EMAIL]: onEmailButtonClick,
     [EMAIL_PEC]: onPecButtonClick,
     'MM Eletricar Service': onFacebookButtonClick,
-    [FACEBOOK_LINK_USED_CARS]: onFacebookButtonClick
 };
