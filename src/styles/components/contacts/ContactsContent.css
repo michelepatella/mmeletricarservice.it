@@ -1,6 +1,5 @@
 /* Contact buttons container styles */
 .contact-buttons-container {
-    margin-top: var(--contact_buttons_container_margin_top);
     display: flex;
     flex-direction: column;
     justify-content: space-between;

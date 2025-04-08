@@ -1,7 +1,9 @@
 import React from "react";
 import { SERVICE_INFO_CARDS } from "../../utils/const";
+import {handleCustomSectionHeaderSectionNameStyle} from "../../logic/styleHandler";
 import CustomInfoCard from "../../components/custom/CustomInfoCard";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
+import CustomText from "../../components/custom/CustomText";
 
 /**
  * All services section
@@ -12,6 +14,12 @@ function AllServices() {
     return (
 
         <CustomSectionContainer id="all-services">
+
+            {/* Section title */}
+            <CustomText
+                type="description"
+                text={'• TUTTI I SERVIZI'}
+                style={handleCustomSectionHeaderSectionNameStyle()} />
 
             {/* Info Card for each service */}
             {SERVICE_INFO_CARDS.map((service, index) => (

@@ -6,6 +6,7 @@ import {
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
 import CustomText from "../../components/custom/CustomText";
+import CustomUsedCarCard from "../../components/custom/CustomUsedCarCard";
 
 /**
  * Used cars section
@@ -32,6 +33,8 @@ function UsedCars() {
                 <CustomText
                     type="subtitle"
                     text={USED_CARS_DESCRIPTION} />
+
+                <CustomUsedCarCard/>
 
             </CustomSectionContainer>
         </>

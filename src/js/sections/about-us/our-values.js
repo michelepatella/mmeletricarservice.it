@@ -1,9 +1,13 @@
 import React, {useRef} from "react";
-import {OUR_VALUES_SUBTITLE, OUR_VALUES_TITLE} from "../../utils/const";
+import {
+    OUR_VALUES_DESCRIPTION,
+    OUR_VALUES_SUBTITLE,
+    OUR_VALUES_TITLE,
+} from "../../utils/const";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
 import CustomText from "../../components/custom/CustomText";
-import CustomBackgroundContainer from "../../components/custom/CustomBackgroundContainer";
+import CustomSectionHeader from "../../components/custom/CustomSectionHeader";
 
 /**
  * Our values section
@@ -21,25 +25,22 @@ function OurValues() {
     return (
 
         <>
-            <CustomBackgroundContainer
-                image="/images/our-values-image.jpeg"
-                custStyle={{marginBottom: 'var(--section_margin_bottom)'}}>
 
                 <CustomSectionContainer id="our-values">
 
-                    {/* Title */}
-                    <CustomText
-                        type="title"
-                        text={OUR_VALUES_TITLE} />
+                    {/* Section header */}
+                    <CustomSectionHeader
+                        section="I NOSTRI VALORI"
+                        title={OUR_VALUES_TITLE}
+                        subtitle={OUR_VALUES_SUBTITLE} />
 
                     {/* Subtitle */}
                     <CustomText
                         type="subtitle"
-                        text={OUR_VALUES_SUBTITLE} />
+                        text={OUR_VALUES_DESCRIPTION} />
 
                 </CustomSectionContainer>
 
-            </CustomBackgroundContainer>
         </>
 
     );

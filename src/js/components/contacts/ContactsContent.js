@@ -1,10 +1,13 @@
 import React, { useRef } from "react";
-import {CONTACTS_TITLE, CONTACTS, CONTACTS_SUBTITLE} from "../../utils/const";
+import {
+    CONTACTS_TITLE,
+    CONTACTS,
+    CONTACTS_SUBTITLE
+} from "../../utils/const";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import {handleContactsTitleStyle} from "../../logic/styleHandler";
 import CustomButton from "../custom/CustomButton";
 import CustomSectionContainer from "../custom/CustomSectionContainer";
-import CustomText from "../custom/CustomText";
+import CustomSectionHeader from "../custom/CustomSectionHeader";
 import "../../../styles/components/contacts/ContactsContent.css";
 
 /**
@@ -22,15 +25,11 @@ function ContactsContent() {
         <>
             <CustomSectionContainer id="contacts">
 
-                {/* Title */}
-                <CustomText
-                    type="title"
-                    text={CONTACTS_TITLE} />
-
-                {/* Subitle */}
-                <CustomText
-                    type="subtitle"
-                    text={CONTACTS_SUBTITLE} />
+                {/* Section header */}
+                <CustomSectionHeader
+                    section="CONTATTI"
+                    title={CONTACTS_TITLE}
+                    subtitle={CONTACTS_SUBTITLE} />
 
                 {/* Contact buttons container */}
                 <div className="contact-buttons-container">

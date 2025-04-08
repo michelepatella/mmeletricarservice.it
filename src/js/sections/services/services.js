@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import {SERVICES_TITLE, SERVICES_DESCRIPTION} from "../../utils/const";
+import {SERVICES_TITLE, SERVICES_SUBTITLE} from "../../utils/const";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
-import CustomText from "../../components/custom/CustomText";
 import CustomBackgroundContainer from "../../components/custom/CustomBackgroundContainer";
+import CustomSectionHeader from "../../components/custom/CustomSectionHeader";
 
 /**
  * Services section
@@ -20,21 +20,14 @@ function Services() {
 
         <>
             <CustomBackgroundContainer image="/images/services-image.jpeg">
-
                 <CustomSectionContainer id="services">
 
-                    {/* Title */}
-                    <CustomText
-                        type="title"
-                        text={SERVICES_TITLE} />
-
-                    {/* Subtitle */}
-                    <CustomText
-                        type="subtitle"
-                        text={SERVICES_DESCRIPTION} />
+                    <CustomSectionHeader
+                        section="SERVIZI"
+                        title={SERVICES_TITLE}
+                        subtitle={SERVICES_SUBTITLE} />
 
                 </CustomSectionContainer>
-
             </CustomBackgroundContainer>
         </>
 

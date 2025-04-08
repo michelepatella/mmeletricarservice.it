@@ -1,0 +1,13 @@
+/* Custom Section Header styles */
+.custom-section-header {
+    width: 120%;
+    margin-bottom: var(--custom_section_header_margin_bottom);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--custom_section_header_gap);
+    border-radius: var(--border_radius);
+    background: transparent;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
