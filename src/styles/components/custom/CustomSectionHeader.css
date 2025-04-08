@@ -9,5 +9,5 @@
     padding: var(--custom_section_header_gap);
     border-radius: var(--border_radius);
     background: transparent;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
 }

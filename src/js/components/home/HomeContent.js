@@ -1,6 +1,5 @@
 import React from "react";
 import { HOME_TITLE, HOME_SUBTITLE } from "../../utils/const";
-import CustomSectionContainer from "../custom/CustomSectionContainer";
 import '../../../styles/components/home/HomeContent.css';
 
 /**
@@ -11,7 +10,7 @@ import '../../../styles/components/home/HomeContent.css';
 function HomeContent() {
     return (
         <>
-            <CustomSectionContainer id="/home">
+            <div id="/home">
 
                 {/* Title */}
                 <h1
@@ -23,7 +22,7 @@ function HomeContent() {
                     className="home-subtitle"
                     dangerouslySetInnerHTML={{__html: HOME_SUBTITLE}} />
 
-            </CustomSectionContainer>
+            </div>
         </>
     );
 }

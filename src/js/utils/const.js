@@ -53,7 +53,7 @@ export const SECTIONS = [
 
 /**------------- "Home" texts -------------**/
 export const HOME_TITLE = "Dove la tua auto <br> trova l'eccellenza"
-export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> MM Eletricar Service!"
+export const HOME_SUBTITLE = "Benvenuto nell'autofficina <br> <strong>MM Eletricar Service</strong>!"
 
 /**------------- "About us" text -------------**/
 export const ABOUT_US_TITLE = "Professionisti del settore"
@@ -69,7 +69,7 @@ export const OUR_VALUES_SUBTITLE = "Ciò che guida il nostro lavoro e ci contrad
 export const OUR_VALUES_DESCRIPTION = "In <strong>MM Eletricar Service</strong> crediamo che ogni veicolo meriti attenzione e cura, " +
     "poiché comprendiamo quanto sia importante per i nostri clienti. " +
     "<br></br>La nostra <strong>missione</strong> è costruire relazioni di fiducia con i nostri clienti, fornendo soluzioni su misura, " +
-    "affidabili e di qualità, per garantire l'efficienza, la sicurezza e la completa soddisfazione di chi si affida alla " +
+    "affidabili e di qualità, per garantire la completa soddisfazione di chi si affida alla " +
     "nostra officina elettrauto per manutenzione, riparazione e diagnostica elettronica d'auto."
 
 /**------------- "Services" texts -------------**/
@@ -142,11 +142,11 @@ export const USED_CARS_DESCRIPTION = "Le migliori auto usate garantite, scelte c
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "La nostra officina"
 export const WHERE_WE_ARE_SUBTITLE = "Dove realizziamo i tuoi desideri e ci prendiamo cura della tua auto."
-export const WHERE_WE_ARE_DESCRIPTION = "MM Eletricar Service si trova a Gravina in Puglia (BA), in Via G. Bizet, 63."
+export const WHERE_WE_ARE_DESCRIPTION = "MM Eletricar Service si trova a <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>."
 export const WHERE_WE_ARE_INFO_CARD = [
     {
         title: "Orari di apertura",
-        description: "- Lunedì - Venerdì: 08:30-13:00/15:00-19:00 <br>- Sabato: 08:30-13:00",
+        description: "- <strong>Lunedì - Venerdì</strong>: 08:30-13:00/15:00-19:00 <br>- <strong>Sabato</strong>: 08:30-13:00",
     }
 ]
 export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION = "Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa."
