@@ -1,0 +1,53 @@
+/* Custom used cars card styles */
+.custom-used-cars-card {
+    max-width: 450px;
+    min-width: 300px;
+    padding: var(--custom_used_car_cars_padding);
+    background: var(--lighter_background_color);
+    border-radius: var(--border_radius);
+    border: 1px solid var(--gray_border_color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+/* Custom used cars flex container styles */
+.custom-used-cars-card-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Custom used cars price container */
+.custom-used-cars-card-price-container{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+/* ------ Big screen ------- */
+@media (min-width: 1025px) {
+    .custom-used-cars-card {
+        width: 40%;
+    }
+}
+
+/* ----------- Medium screen portrait ----------- */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .custom-used-cars-card {
+        width: 60%;
+    }
+}
+
+/* ----------- Medium screen landscape ----------- */
+@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .custom-used-cars-card {
+        width: 50%;
+    }
+}
+
+/* ------ Small screen landscape ------ */
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
+    .custom-used-cars-card {
+        width: 55%;
+    }
+}

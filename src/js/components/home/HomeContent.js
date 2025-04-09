@@ -1,4 +1,3 @@
-import React from "react";
 import { HOME_TITLE, HOME_SUBTITLE } from "../../utils/const";
 
 /**

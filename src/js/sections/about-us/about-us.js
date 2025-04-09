@@ -1,5 +1,8 @@
-import React from "react";
-import {ABOUT_US_DESCRIPTION, ABOUT_US_SUBTITLE, ABOUT_US_TITLE} from "../../utils/const";
+import {
+    ABOUT_US_DESCRIPTION,
+    ABOUT_US_SUBTITLE,
+    ABOUT_US_TITLE
+} from "../../utils/const";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
 import CustomText from "../../components/custom/CustomText";
 import CustomSectionHeader from "../../components/custom/CustomSectionHeader";

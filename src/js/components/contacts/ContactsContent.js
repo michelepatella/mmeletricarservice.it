@@ -1,10 +1,8 @@
-import React, { useRef } from "react";
 import {
     CONTACTS_TITLE,
     CONTACTS,
     CONTACTS_SUBTITLE
 } from "../../utils/const";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import CustomButton from "../custom/CustomButton";
 import CustomSectionContainer from "../custom/CustomSectionContainer";
 import CustomSectionHeader from "../custom/CustomSectionHeader";
@@ -15,10 +13,6 @@ import CustomSectionHeader from "../custom/CustomSectionHeader";
  * @constructor
  */
 function ContactsContent() {
-
-    //IntersectionObserver to generate the animation when the section is visible
-    const subtitleRef = useRef(null);
-    useIntersectionObserver(subtitleRef);
 
     return (
         <>

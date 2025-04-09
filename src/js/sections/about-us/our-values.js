@@ -17,9 +17,7 @@ import CustomSectionHeader from "../../components/custom/CustomSectionHeader";
 function OurValues() {
 
     //IntersectionObserver to generate the animation when the section is visible
-    const subtitleRef = useRef(null);
     const imageRef = useRef(null);
-    useIntersectionObserver(subtitleRef);
     useIntersectionObserver(imageRef);
 
     return (

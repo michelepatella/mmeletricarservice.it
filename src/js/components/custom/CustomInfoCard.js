@@ -1,7 +1,5 @@
-import React, { useRef } from "react";
 import { Flex } from "antd";
 import {handleCustomInfoCardTitleStyle} from "../../logic/styleHandler";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import CustomText from "./CustomText";
 
 /**
@@ -11,10 +9,6 @@ import CustomText from "./CustomText";
  * @param props
  */
 function CustomInfoCard(props){
-
-    //IntersectionObserver to generate the animation when the division is visible
-    const subtitleRef = useRef(null);
-    useIntersectionObserver(subtitleRef);
 
     return (
         <>

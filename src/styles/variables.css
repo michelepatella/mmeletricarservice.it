@@ -2,6 +2,8 @@
 
     /* Colors */
     --background_color: #141414;
+    --lighter_background_color: #171717;
+    --gray_border_color: #181818;
     --accent_color: #F8DE4D;
     --blue_color: #005FCC;
 
@@ -58,14 +60,19 @@
     --custom_info_card_flex_gap: 20px;
 
 
-    /* Menu */
-    --menu_items_gap: 30px;
+    /* Custom Used Cars Card + Custom Tech Info */
+    --custom_used_car_cars_padding: 0 15px 0 15px;
+    --custom_tech_info_card_overview_info_margin_top: 4px;
 
 
     /* Custom Section Header */
     --custom_section_header_gap: 20px;
     --custom_section_header_margin_bottom: 50px;
     --custom_section_header_subtitle_margin_bottom: 100px;
+
+
+    /* Menu */
+    --menu_items_gap: 30px;
 
 
     /* General section margins */

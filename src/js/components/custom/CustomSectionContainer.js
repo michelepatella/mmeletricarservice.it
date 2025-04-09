@@ -1,4 +1,3 @@
-
 /**
  * Custom Section Container
  * @param children

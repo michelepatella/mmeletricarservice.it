@@ -77,7 +77,7 @@ export const SERVICES_TITLE = 'Eccellenza in ogni servizio'
 export const SERVICES_SUBTITLE = 'Manutenzioni, riparazioni e diagnosi elettroniche: solo il meglio per la tua auto.'
 
 /**------------- "All services" texts -------------**/
-export const SERVICE_INFO_CARDS = [
+export const ALL_SERVICES_INFO_CARDS = [
     {
         title: "Manutenzione centralina",
         description: "Controllo ed aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.",
@@ -136,8 +136,34 @@ export const SERVICE_INFO_CARDS = [
 ];
 
 /**------------- "Used cars" texts -------------**/
-export const USED_CARS_TITLE = "La tua prossima auto, pura qualità"
-export const USED_CARS_DESCRIPTION = "Le migliori auto usate garantite, scelte con attenzione per chi cerca qualità, affidabilità e convenienza.";
+export const USED_CARS_TITLE = "La tua prossima auto, pronta per te"
+export const USED_CARS_SUBTITLE = "Le migliori auto usate garantite, scelte con attenzione per chi cerca qualità, affidabilità e convenienza.";
+export const USED_CARS_OVERVIEW_INFO =[
+    {
+        title: "Anno",
+        name: "year",
+        icon: '/icons/calendar_icon.svg',
+
+    },
+    {
+        title: "Chilometraggio",
+        name: "mileage",
+        icon: '/icons/road_icon.svg',
+
+    },
+    {
+        title: "Carburante",
+        name: "fuel",
+        icon: '/icons/fuel_icon.svg',
+
+    },
+    {
+        title: "Carrozzeria",
+        name: "bodywork",
+        icon: '/icons/bodywork_icon.svg',
+
+    }
+]
 
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "La nostra officina"
@@ -152,6 +178,8 @@ export const WHERE_WE_ARE_INFO_CARD = [
 export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION = "Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa."
 
 /**------------- "Contacts" texts -------------**/
+export const CONTACTS_TITLE = "Esperti a tua disposizione";
+export const CONTACTS_SUBTITLE = "Sempre pronti a risolvere ogni esigenza della tua auto.";
 export const CONTACTS = [
     {
         value: PHONE,
@@ -170,6 +198,4 @@ export const CONTACTS = [
         icon: '/icons/facebook_icon.svg'
     }
 ]
-export const CONTACTS_TITLE = "Esperti a tua disposizione";
-export const CONTACTS_SUBTITLE = "Sempre pronti a risolvere ogni esigenza della tua auto.";
 export const FOOTER_TEXT = RAG_SOCIALE + ". " + SITE + ". P. IVA: " + P_IVA + ". REA: " + REA + "."

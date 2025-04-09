@@ -1,4 +1,3 @@
-import React from "react";
 import {
     WHERE_WE_ARE_INFO_CARD,
     WHERE_WE_ARE_DESCRIPTION,

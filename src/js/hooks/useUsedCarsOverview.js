@@ -3,8 +3,9 @@ import { useEffect } from "react";
 /**
  * Custom hook to fetch used cars overview information
  * @param setUsedCars
+ * @param setAreCarsLoading
  */
-export const useUsedCarsOverview = (setUsedCars) => {
+export const useUsedCarsOverview = (setUsedCars, setAreCarsLoading) => {
 
     useEffect(() => {
         const fetchUsedCars = async () => {
@@ -25,14 +26,18 @@ export const useUsedCarsOverview = (setUsedCars) => {
 
                 //set the used cars
                 setUsedCars(data)
+                //loading is finish
+                setAreCarsLoading(false)
 
             } catch (error) {
                 //handle errors while acquiring used cars overview information
                 console.error('Error fetching used cars:', error)
                 setUsedCars([])
+                //loading is finish
+                setAreCarsLoading(false)
             }
         };
 
         fetchUsedCars();
-    }, [setUsedCars]);
+    }, [setUsedCars, setAreCarsLoading]);
 };

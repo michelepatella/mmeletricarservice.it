@@ -1,4 +1,3 @@
-import React from "react";
 import CookieConsent from "react-cookie-consent";
 import {Switch} from "antd";
 import {COOKIE_CONSENT_BANNER_DESCRIPTION} from "../../utils/const";

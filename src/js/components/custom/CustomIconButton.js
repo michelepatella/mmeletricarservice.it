@@ -1,5 +1,3 @@
-import React from "react";
-
 /**
  * Custom Icon Button
  * @param props

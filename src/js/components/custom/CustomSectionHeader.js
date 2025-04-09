@@ -21,9 +21,15 @@ function CustomSectionHeader(props) {
     const isVideoVisible= useIntersectionObserver(videoRef);
     useVideoAnimation(videoRef, isVideoVisible);
 
+    //to animate the whole header
+    const ref = useRef(null);
+    useIntersectionObserver(ref);
+
     return (
 
-        <div className="custom-section-header">
+        <div
+            ref={ref}
+            className="custom-section-header">
 
             {/* Section title */}
             <CustomText
@@ -43,12 +49,12 @@ function CustomSectionHeader(props) {
                 text={props.subtitle}
                 style={handleCustomSectionHeaderDescriptionStyle(props.video)} />
 
-            {/* Video (if any) */}
+            {/* Media (if any) */}
             {
                 props.video ?
 
                     <video
-                        className="video-animation"
+                        className="video"
                         ref={videoRef}
                         src={props.video}
                         type="video/mp4"
@@ -61,7 +67,6 @@ function CustomSectionHeader(props) {
             }
 
         </div>
-
 
     );
 }

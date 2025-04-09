@@ -118,7 +118,7 @@ export const handleCustomSectionHeaderSectionNameStyle = () => {
         fontFamily: 'Roboto, sans-serif',
         fontWeight: "bold",
         color: "var(--accent_color)",
-        opacity: 0.9,
+        opacity: 0.8,
         marginBottom: 0
     };
 };
@@ -145,6 +145,33 @@ export const handleCustomSectionHeaderDescriptionStyle = (hasMedia) => {
 export const handleCustomUsedCarsCardNamePrice = () => {
   return {
       fontWeight: "bold",
-      opacity: 1
+      opacity: 1,
+      alignSelf: "right",
   };
+};
+
+/**
+ * Method to handle the style of the info card text overview
+ * style dynamically
+ * @returns {{marginBottom: string, opacity: number, marginTop: number}}
+ */
+export const handleCustomTechInfoCardTextOverviewStyle = () => {
+    return {
+        opacity: 0.7,
+        marginTop: 0,
+        marginBottom: 'var(--custom_tech_info_card_overview_info_margin_top)'
+    };
+};
+
+/**
+ * Method to handle the style of the scroll label of the user cars
+ * section dynamically
+ * @returns {{textAlign: string, opacity: number, marginLeft: string}}
+ */
+export const handleScrollLabelStyle = () => {
+    return {
+        opacity: 0.8,
+        textAlign: 'center',
+        marginLeft: '22%'
+    };
 };

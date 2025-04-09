@@ -1,6 +1,7 @@
-import CustomText from "./CustomText";
-import React from "react";
 import {Flex} from "antd";
+import {USED_CARS_OVERVIEW_INFO} from "../../utils/const";
+import {handleCustomTechInfoCardTextOverviewStyle} from "../../logic/styleHandler";
+import CustomText from "./CustomText";
 
 /**
  * Custom Te
@@ -10,27 +11,32 @@ import {Flex} from "antd";
  */
 function CustomTechInfoCard (props) {
     return (
-        <>
+
+        <Flex
+            className="custom-used-cars-card-flex"
+            gap="small"
+            align="start">
+
+            {/* Overview technical information */}
             {
-                props.overview ?
+                USED_CARS_OVERVIEW_INFO.map((info) => (
+                    <div className="used-cars-overview-info-container">
 
-                    <Flex
-                        className="custom-used-cars-card-flex"
-                        gap="small"
-                        align="start">
+                        {/* Icon */}
+                        <img src={info.icon} />
 
-                        <img src="/icons/phone_icon.svg"
-                            style={{ opacity: 0.5 }} />
-
+                        {/* Text */}
                         <CustomText
                             type="description"
-                            text={props.car.fuel}
+                            text={props.car[info.name]}
                             disableAnimation={true}
-                            style={{opacity: 0.7}} />
-
-                    </Flex> : null
+                            style={handleCustomTechInfoCardTextOverviewStyle()} />
+                    </div>
+                ))
             }
-        </>
+
+        </Flex>
+
     );
 }
 

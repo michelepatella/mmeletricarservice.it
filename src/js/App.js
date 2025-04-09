@@ -17,6 +17,7 @@ import '../index.css';
 import '../styles/App.css';
 import '../styles/sections/home.css';
 import '../styles/sections/about-us.css';
+import '../styles/sections/used-cars.css';
 import '../styles/sections/where-we-are.css';
 import '../styles/sections/contacts.css';
 import '../styles/components/home/HomeHeader.css';
@@ -31,6 +32,8 @@ import '../styles/components/custom/CustomIconButton.css';
 import '../styles/components/custom/CustomSectionContainer.css';
 import '../styles/components/custom/CustomSectionHeader.css';
 import '../styles/components/custom/CustomText.css';
+import '../styles/components/custom/CustomTechInfoCard.css';
+import '../styles/components/custom/CustomUsedCarCard.css';
 import '../styles/components/Menu.css';
 import '../styles/variables.css';
 

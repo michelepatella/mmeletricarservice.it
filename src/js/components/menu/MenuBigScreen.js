@@ -1,4 +1,3 @@
-import React from 'react';
 import { Anchor } from 'antd';
 import { motion } from 'framer-motion';
 import {useMenu} from "../../hooks/useMenu";

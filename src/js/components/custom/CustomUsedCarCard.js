@@ -1,6 +1,5 @@
 import CustomText from "./CustomText";
 import {Flex} from "antd";
-import React from "react";
 import CustomTechInfoCard from "./CustomTechInfoCard";
 import {handleCustomUsedCarsCardNamePrice} from "../../logic/styleHandler";
 
@@ -15,7 +14,7 @@ function CustomUsedCarCard(props) {
 
         <div className="custom-used-cars-card">
 
-            {/*<img src={props.img} />*/}
+            {/*<img src='/images/home-image.jpeg' />*/}
 
             <Flex
                 className="custom-used-cars-card-flex"
@@ -38,12 +37,14 @@ function CustomUsedCarCard(props) {
 
                 </div>
 
-                {/* Price */}
-                <CustomText
-                    type="description"
-                    text={props.car.price}
-                    disableAnimation={true}
-                    style={handleCustomUsedCarsCardNamePrice()} />
+                <div className="custom-used-cars-card-price-container">
+                    {/* Price */}
+                    <CustomText
+                        type="description"
+                        text={props.car.price}
+                        disableAnimation={true}
+                        style={handleCustomUsedCarsCardNamePrice()} />
+                </div>
 
             </Flex>
 
