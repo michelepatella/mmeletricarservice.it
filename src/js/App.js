@@ -13,7 +13,26 @@ import WhereWeAre from "./sections/where-we-are";
 import Contacts from './sections/contacts';
 import Menu from './components/menu/Menu';
 import CustomCookieConsentBanner from "./components/custom/CustomCookieConsentBanner";
+import '../index.css';
 import '../styles/App.css';
+import '../styles/sections/home.css';
+import '../styles/sections/about-us.css';
+import '../styles/sections/where-we-are.css';
+import '../styles/sections/contacts.css';
+import '../styles/components/home/HomeHeader.css';
+import '../styles/components/custom/CustomButton.css';
+import '../styles/components/home/HomeContent.css';
+import '../styles/components/custom/CustomInfoCard.css';
+import "../styles/components/contacts/ContactsContent.css";
+import '../styles/components/custom/CustomCookieButton.css';
+import '../styles/components/custom/CustomCookieConsentBanner.css';
+import '../styles/components/contacts/ContactsFooter.css';
+import '../styles/components/custom/CustomIconButton.css';
+import '../styles/components/custom/CustomSectionContainer.css';
+import '../styles/components/custom/CustomSectionHeader.css';
+import '../styles/components/custom/CustomText.css';
+import '../styles/components/Menu.css';
+import '../styles/variables.css';
 
 /**
  * App

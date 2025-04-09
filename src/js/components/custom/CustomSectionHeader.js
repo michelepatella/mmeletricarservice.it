@@ -6,7 +6,6 @@ import {
 } from "../../logic/styleHandler";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import {useVideoAnimation} from "../../hooks/useVideoAnimation";
-import '../../../styles/components/custom/CustomSectionHeader.css';
 
 /**
  * Custom Section Header

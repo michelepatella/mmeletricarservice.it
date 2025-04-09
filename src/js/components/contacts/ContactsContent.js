@@ -8,7 +8,6 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import CustomButton from "../custom/CustomButton";
 import CustomSectionContainer from "../custom/CustomSectionContainer";
 import CustomSectionHeader from "../custom/CustomSectionHeader";
-import "../../../styles/components/contacts/ContactsContent.css";
 
 /**
  * Contacts Content

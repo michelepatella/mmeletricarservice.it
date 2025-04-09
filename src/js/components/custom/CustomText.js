@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import '../../../styles/components/custom/CustomText.css';
 
 /**
  * Custom Text

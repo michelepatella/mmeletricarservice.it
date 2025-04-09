@@ -3,7 +3,6 @@ import { Flex } from "antd";
 import {handleCustomInfoCardTitleStyle} from "../../logic/styleHandler";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import CustomText from "./CustomText";
-import '../../../styles/components/custom/CustomInfoCard.css';
 
 /**
  * Custom Info Card

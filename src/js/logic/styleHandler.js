@@ -136,3 +136,15 @@ export const handleCustomSectionHeaderDescriptionStyle = (hasMedia) => {
         opacity: 0.8
     };
 };
+
+/**
+ * Method to handle the style of the name and the price
+ * of the custom used cars card dynamically
+ * @returns {{opacity: number, fontWeight: string}}
+ */
+export const handleCustomUsedCarsCardNamePrice = () => {
+  return {
+      fontWeight: "bold",
+      opacity: 1
+  };
+};

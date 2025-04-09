@@ -2,6 +2,12 @@ import CustomText from "./CustomText";
 import React from "react";
 import {Flex} from "antd";
 
+/**
+ * Custom Te
+ * @param props
+ * @returns {React.JSX.Element}
+ * @constructor
+ */
 function CustomTechInfoCard (props) {
     return (
         <>
@@ -18,7 +24,7 @@ function CustomTechInfoCard (props) {
 
                         <CustomText
                             type="description"
-                            text="Fiat 500"
+                            text={props.car.fuel}
                             disableAnimation={true}
                             style={{opacity: 0.7}} />
 

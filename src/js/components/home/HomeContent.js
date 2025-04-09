@@ -1,6 +1,5 @@
 import React from "react";
 import { HOME_TITLE, HOME_SUBTITLE } from "../../utils/const";
-import '../../../styles/components/home/HomeContent.css';
 
 /**
  * Content of Home section

@@ -1,6 +1,5 @@
 import React from "react";
 import { FOOTER_TEXT } from '../../utils/const';
-import '../../../styles/components/contacts/ContactsFooter.css';
 
 /**
  * Contacts Footer

@@ -1,6 +1,5 @@
 import { Button } from "antd";
 import { contactClickHandler } from "../../logic/contactButtonHandler";
-import '../../../styles/components/custom/CustomButton.css';
 
 /**
  * Custom Button

@@ -1,6 +1,5 @@
 import MenuSmallScreen from "./MenuSmallScreen";
 import MenuBigScreen from "./MenuBigScreen";
-import '../../../styles/components/Menu.css';
 
 /**
  * Menu

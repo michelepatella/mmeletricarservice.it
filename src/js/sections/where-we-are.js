@@ -3,14 +3,14 @@ import {
     WHERE_WE_ARE_INFO_CARD,
     WHERE_WE_ARE_DESCRIPTION,
     WHERE_WE_ARE_TITLE,
-    GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION, WHERE_WE_ARE_SUBTITLE
+    GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
+    WHERE_WE_ARE_SUBTITLE
 } from "../utils/const";
 import {handleGoogleMapsContainerStyle, handleGoogleMapsUnavailableDescriptionStyle} from "../logic/styleHandler";
 import CustomSectionContainer from "../components/custom/CustomSectionContainer";
 import CustomText from "../components/custom/CustomText";
 import CustomInfoCard from "../components/custom/CustomInfoCard";
 import CustomSectionHeader from "../components/custom/CustomSectionHeader";
-import '../../styles/sections/where-we-are.css';
 
 /**
  * Where We Are section

@@ -3,7 +3,6 @@ import {ABOUT_US_DESCRIPTION, ABOUT_US_SUBTITLE, ABOUT_US_TITLE} from "../../uti
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
 import CustomText from "../../components/custom/CustomText";
 import CustomSectionHeader from "../../components/custom/CustomSectionHeader";
-import '../../../styles/sections/about-us.css';
 
 /**
  * About us section

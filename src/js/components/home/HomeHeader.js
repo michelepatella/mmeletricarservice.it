@@ -1,7 +1,6 @@
 import React from "react";
 import { onEmailButtonClick, onFacebookButtonClick, onPhoneButtonClick } from "../../logic/contactButtonHandler";
 import CustomIconButton from "../custom/CustomIconButton";
-import '../../../styles/components/home/HomeHeader.css';
 
 /**
  * Header of Home section

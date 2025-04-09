@@ -5,8 +5,6 @@ import {COOKIE_CONSENT_BANNER_DESCRIPTION} from "../../utils/const";
 import {handleSwitchStyle} from "../../logic/styleHandler";
 import CustomText from "./CustomText";
 import CustomButton from "./CustomButton";
-import '../../../styles/components/custom/CustomCookieConsentBanner.css';
-import '../../../styles/components/custom/CustomCookieButton.css';
 
 /**
  * Custom Cookie Consent Banner

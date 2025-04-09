@@ -142,7 +142,7 @@ export const USED_CARS_DESCRIPTION = "Le migliori auto usate garantite, scelte c
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "La nostra officina"
 export const WHERE_WE_ARE_SUBTITLE = "Dove realizziamo i tuoi desideri e ci prendiamo cura della tua auto."
-export const WHERE_WE_ARE_DESCRIPTION = "MM Eletricar Service si trova a <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>."
+export const WHERE_WE_ARE_DESCRIPTION = "📍MM Eletricar Service si trova <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>."
 export const WHERE_WE_ARE_INFO_CARD = [
     {
         title: "Orari di apertura",

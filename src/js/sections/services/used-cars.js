@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, {useRef, useState} from "react";
 import {
     USED_CARS_TITLE,
     USED_CARS_DESCRIPTION,
 } from "../../utils/const";
+import {useUsedCarsOverview} from "../../hooks/useUsedCarsOverview";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
 import CustomText from "../../components/custom/CustomText";
@@ -19,6 +20,10 @@ function UsedCars() {
     const subtitleRef = useRef(null);
     useIntersectionObserver(subtitleRef);
 
+    //get used cars overview information
+    const [usedCars, setUsedCars] = useState([]);
+    useUsedCarsOverview(setUsedCars)
+
     return (
 
         <>
@@ -34,7 +39,16 @@ function UsedCars() {
                     type="subtitle"
                     text={USED_CARS_DESCRIPTION} />
 
-                <CustomUsedCarCard/>
+                {/* Used Car Card for all the available cars */}
+                {
+                    usedCars.length > 0 ?
+                        usedCars.map((car) => (
+                                <CustomUsedCarCard car={car} />
+                        ))
+
+                        : null
+                }
+
 
             </CustomSectionContainer>
         </>

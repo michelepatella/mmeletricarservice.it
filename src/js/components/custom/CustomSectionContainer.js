@@ -1,4 +1,3 @@
-import '../../../styles/components/custom/CustomSectionContainer.css';
 
 /**
  * Custom Section Container

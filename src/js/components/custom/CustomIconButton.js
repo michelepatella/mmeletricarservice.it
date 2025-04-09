@@ -1,6 +1,4 @@
 import React from "react";
-import '../../../styles/variables.css';
-import '../../../styles/components/custom/CustomIconButton.css';
 
 /**
  * Custom Icon Button
