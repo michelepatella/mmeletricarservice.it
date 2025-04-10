@@ -2,8 +2,7 @@
 
     /* Colors */
     --background_color: #141414;
-    --lighter_background_color: #171717;
-    --lighter_background_hover_color: #202020;
+    --darker_background_color: #0f0f0f;
     --gray_border_color: #181818;
     --accent_color: #F8DE4D;
     --blue_color: #005FCC;
@@ -63,8 +62,8 @@
 
     /* Custom Used Cars Card + Custom Tech Info */
     --custom_used_car_card_padding: 15px 15px 0 15px;
-    --custom_used_car_card_img_max_width: 350px;
-    --custom_used_car_card_img_min_width: 350px;
+    --custom_used_car_card_img_max_width: 300px;
+    --custom_used_car_card_img_min_width: 250px;
     --custom_tech_info_card_overview_info_margin_top: 4px;
 
 

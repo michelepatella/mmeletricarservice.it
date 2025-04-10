@@ -1,7 +1,7 @@
 /* Custom used car drawer styles */
 .custom-used-car-drawer,
 .ant-drawer-header {
-    background: var(--lighter_background_color) !important;
+    background: var(--darker_background_color) !important;
 }
 
 .ant-drawer-content-wrapper {
@@ -23,4 +23,3 @@
     position: absolute;
     padding: calc(var(--float_button_margins)*3) 0 0;
 }
-

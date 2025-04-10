@@ -3,9 +3,8 @@
     max-width: var(--custom_used_car_card_img_max_width);
     min-width: var(--custom_used_car_card_img_min_width);
     padding: var(--custom_used_car_card_padding);
-    background: var(--lighter_background_color);
+    background: var(--darker_background_color);
     border-radius: var(--border_radius);
-    border: 1px solid var(--gray_border_color);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     flex-shrink: 0;
     cursor: pointer;
@@ -13,8 +12,7 @@
 }
 
 .custom-used-cars-card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
-    background-color: var(--lighter_background_hover_color);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.8);
 }
 
 /* Custom used cars image presentation container styles */

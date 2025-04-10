@@ -6,7 +6,16 @@
     gap: 2rem;
     overflow-x: auto;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
     transition: opacity 0.5s ease-out;
+}
+
+.used-cars-container::-webkit-scrollbar {
+    -webkit-overflow-scrolling: touch;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 /* Loading outlines styles */
