@@ -1,13 +1,31 @@
 /* Custom used cars card styles */
 .custom-used-cars-card {
-    max-width: 450px;
-    min-width: 300px;
-    padding: var(--custom_used_car_cars_padding);
+    max-width: var(--custom_used_car_card_img_max_width);
+    min-width: var(--custom_used_car_card_img_min_width);
+    padding: var(--custom_used_car_card_padding);
     background: var(--lighter_background_color);
     border-radius: var(--border_radius);
     border: 1px solid var(--gray_border_color);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     flex-shrink: 0;
+}
+
+/* Custom used cars image presentation container styles */
+.custom-used-cars-image-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Custom used cars image presentation styles */
+.custom-used-cars-image-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--border_radius);
 }
 
 /* Custom used cars flex container styles */
@@ -22,32 +40,4 @@
     width: 100%;
     display: flex;
     justify-content: end;
-}
-
-/* ------ Big screen ------- */
-@media (min-width: 1025px) {
-    .custom-used-cars-card {
-        width: 40%;
-    }
-}
-
-/* ----------- Medium screen portrait ----------- */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .custom-used-cars-card {
-        width: 60%;
-    }
-}
-
-/* ----------- Medium screen landscape ----------- */
-@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .custom-used-cars-card {
-        width: 50%;
-    }
-}
-
-/* ------ Small screen landscape ------ */
-@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
-    .custom-used-cars-card {
-        width: 55%;
-    }
 }

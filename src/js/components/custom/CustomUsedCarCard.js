@@ -14,7 +14,10 @@ function CustomUsedCarCard(props) {
 
         <div className="custom-used-cars-card">
 
-            {/*<img src='/images/home-image.jpeg' />*/}
+            {/* Image presentation */}
+            <div className="custom-used-cars-image-container">
+                <img src='/images/image 1.png'/>
+            </div>
 
             <Flex
                 className="custom-used-cars-card-flex"
@@ -28,12 +31,12 @@ function CustomUsedCarCard(props) {
                         type="description"
                         text={props.car.name}
                         disableAnimation={true}
-                        style={handleCustomUsedCarsCardNamePrice()} />
+                        style={handleCustomUsedCarsCardNamePrice()}/>
 
                     {/* Tech Info Card */}
                     <CustomTechInfoCard
                         overview={true}
-                        car={props.car} />
+                        car={props.car}/>
 
                 </div>
 
@@ -43,7 +46,7 @@ function CustomUsedCarCard(props) {
                         type="description"
                         text={props.car.price}
                         disableAnimation={true}
-                        style={handleCustomUsedCarsCardNamePrice()} />
+                        style={handleCustomUsedCarsCardNamePrice()}/>
                 </div>
 
             </Flex>
