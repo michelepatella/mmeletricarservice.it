@@ -13,8 +13,10 @@ export const scrollToSection = (sectionId, setVisible) => {
     }
 
     //make the menu not visible (if the method has been called by the menu)
+    //and make the page scrollable again
     if(setVisible != null) {
         setVisible(false);
+        document.documentElement.style.overflow = 'auto';
     }
 
 };

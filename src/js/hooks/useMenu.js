@@ -19,6 +19,13 @@ export const useMenu = () => {
 
     //method to toggle the menu visibility
     const toggleDrawer = () => {
+        //enable/disable the scroll of the rest of the page
+        //depending on if the menu is open/closed
+        if (visible)
+            document.documentElement.style.overflow = 'auto';
+        else
+            document.documentElement.style.overflow = 'hidden';
+
         setVisible(!visible);
     };
 

@@ -5,6 +5,7 @@
 export const onCustomUsedCarDrawerOpen = (setIsDrawerOpen) => {
     setIsDrawerOpen(true);
     document.body.classList.add('drawer-open');
+    document.documentElement.style.overflow = 'hidden';
 }
 
 /**
@@ -14,4 +15,5 @@ export const onCustomUsedCarDrawerOpen = (setIsDrawerOpen) => {
 export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
     setIsDrawerOpen(false);
     document.body.classList.remove('drawer-open');
+    document.documentElement.style.overflow = 'auto';
 }
