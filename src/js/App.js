@@ -34,6 +34,7 @@ import '../styles/components/custom/CustomSectionHeader.css';
 import '../styles/components/custom/CustomText.css';
 import '../styles/components/custom/CustomTechInfoCard.css';
 import '../styles/components/custom/CustomUsedCarCard.css';
+import '../styles/components/custom/CustomUsedCarDrawer.css';
 import '../styles/components/Menu.css';
 import '../styles/variables.css';
 

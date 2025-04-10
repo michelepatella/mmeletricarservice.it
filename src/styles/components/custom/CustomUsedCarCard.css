@@ -8,6 +8,13 @@
     border: 1px solid var(--gray_border_color);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     flex-shrink: 0;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease, background-color 0.5s ease;
+}
+
+.custom-used-cars-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    background-color: var(--lighter_background_hover_color);
 }
 
 /* Custom used cars image presentation container styles */
