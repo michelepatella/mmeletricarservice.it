@@ -1,4 +1,5 @@
 import {Drawer} from "antd";
+import {onUsedCarDrawerClose, onCustomUsedCarDrawerOpen} from "../../logic/UsedCarDrawerHandler";
 
 /**
  * Custom Used Car Drawer
@@ -11,8 +12,8 @@ function CustomUsedCarDrawer(props) {
 
         <Drawer
             className="custom-used-car-drawer"
-            onClose={() => props.setIsDrawerOpen(false)}
-            open={() => props.setIsDrawerOpen(true)}>
+            onClose={() => onUsedCarDrawerClose(props.setIsDrawerOpen)}
+            open={() => onCustomUsedCarDrawerOpen(props.setIsDrawerOpen)}>
         </Drawer>
 
     );

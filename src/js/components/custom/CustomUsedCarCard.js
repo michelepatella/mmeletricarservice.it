@@ -1,9 +1,10 @@
-import CustomText from "./CustomText";
+import {useState} from "react";
 import {Flex} from "antd";
 import {handleCustomUsedCarsCardNamePrice} from "../../logic/styleHandler";
-import CustomTechInfoCard from "./CustomTechInfoCard";
-import {useState} from "react";
+import {onCustomUsedCarDrawerOpen} from "../../logic/UsedCarDrawerHandler";
 import CustomUsedCarDrawer from "./CustomUsedCarDrawer";
+import CustomText from "./CustomText";
+import CustomTechInfoCard from "./CustomTechInfoCard";
 
 /**
  * Custom Used Car Card
@@ -19,7 +20,7 @@ function CustomUsedCarCard(props) {
         <>
             <div
                 className="custom-used-cars-card"
-                onClick={() => setIsDrawerOpen(true)}>
+                onClick={() => onCustomUsedCarDrawerOpen(setIsDrawerOpen)}>
 
                 {/* Image presentation */}
                 <div className="custom-used-cars-image-container">

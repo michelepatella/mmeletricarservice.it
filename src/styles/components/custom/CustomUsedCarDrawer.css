@@ -9,9 +9,17 @@
     position: fixed;
 }
 
-.anticon-close {
-    position: absolute;
-    right: calc(var(--float_button_margins) * 2);
-    padding: var(--float_button_margins) 0 0;
-    color: white !important;
+/* To handle via CSS showing/hiding of components when drawer clicked */
+.drawer-open .hamburger-button,
+.drawer-open .menu-container-big{
+    display: none !important;
 }
+
+/* Close icon styles */
+.ant-drawer-close {
+    color: white !important;
+    right: var(--float_button_margins);
+    position: absolute;
+    padding: calc(var(--float_button_margins)*3) 0 0;
+}
+
