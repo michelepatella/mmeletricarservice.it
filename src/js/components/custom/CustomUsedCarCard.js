@@ -16,7 +16,7 @@ function CustomUsedCarCard(props) {
 
             {/* Image presentation */}
             <div className="custom-used-cars-image-container">
-                <img src='/images/image 1.png'/>
+                <img src={props.car.image}/>
             </div>
 
             <Flex

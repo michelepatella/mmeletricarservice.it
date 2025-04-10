@@ -23,9 +23,8 @@ export const useUsedCarsOverview = (setUsedCars, setAreCarsLoading) => {
 
                 //JSON parsing
                 const data = await res.json()
-
                 //set the used cars
-                setUsedCars(data)
+                setUsedCars(data.used_cars)
                 //loading is finish
                 setAreCarsLoading(false)
 
