@@ -15,11 +15,80 @@
     display: none !important;
 }
 
+/* User car drawer flex horizontal container styles */
+.user-car-drawer-flex-horizontal {
+    height: 100% !important;
+}
+
 /* Close icon styles */
 .arrow-left-outlined {
     color: white !important;
     margin: 0 !important;
-    left: var(--float_button_margins);
     position: absolute;
+    left: var(--float_button_margins);
     padding: var(--float_button_margins) var(--float_button_margins) 0;
+}
+
+/* Carousel container styles */
+.carousel-container {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: var(--border_radius);
+}
+
+/* ----------- Big screen ----------- */
+@media (min-width: 1025px) {
+    .user-car-drawer-flex-horizontal {
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .carousel-container {
+        width: 75%;
+    }
+}
+/* ----------- Medium screen portrait ----------- */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .user-car-drawer-flex-horizontal {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+
+    .user-car-drawer-flex-horizontal {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+}
+
+/* ----------- Medium screen landscape ----------- */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .user-car-drawer-flex-horizontal {
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .carousel-container {
+        width: 70%;
+    }
+}
+
+/* ----------- Small screens ----------- */
+@media (max-width: 767px){
+    .user-car-drawer-flex-horizontal {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+
+    .user-car-drawer-flex-horizontal {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
 }

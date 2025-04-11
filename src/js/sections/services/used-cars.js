@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {LoadingOutlined} from "@ant-design/icons";
 import {
     USED_CARS_TITLE,
-    USED_CARS_SUBTITLE,
+    USED_CARS_SUBTITLE, USED_CARS_UNAVAILABLE_DESCRIPTION,
 } from "../../utils/const";
 import {useUsedCarsOverview} from "../../hooks/useUsedCarsOverview";
 import {handleScrollLabelStyle} from "../../logic/usedCarsStyleHandler";

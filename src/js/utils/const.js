@@ -164,6 +164,7 @@ export const USED_CAR_OVERVIEW =[
 
     }
 ]
+export const USED_CARS_UNAVAILABLE_DESCRIPTION = "Nessuna auto attualmente disponibile."
 
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "La nostra officina"

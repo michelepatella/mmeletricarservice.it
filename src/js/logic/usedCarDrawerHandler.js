@@ -5,7 +5,7 @@
 export const onUsedCarDrawerOpen = (setIsDrawerOpen) => {
     setIsDrawerOpen(true);
     document.body.classList.add('drawer-open');
-    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.overflowY = 'hidden';
 }
 
 /**
@@ -15,5 +15,5 @@ export const onUsedCarDrawerOpen = (setIsDrawerOpen) => {
 export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
     setIsDrawerOpen(false);
     document.body.classList.remove('drawer-open');
-    document.documentElement.style.overflow = 'auto';
+    document.documentElement.style.overflowY = 'auto';
 }

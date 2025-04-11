@@ -1,4 +1,4 @@
-import {Drawer, Flex} from "antd";
+import {Carousel, Drawer, Flex, Image} from "antd";
 import {ArrowLeftOutlined} from "@ant-design/icons";
 import {onUsedCarDrawerClose, onUsedCarDrawerOpen} from "../../logic/usedCarDrawerHandler";
 import {handleNamePriceStyle} from "../../logic/usedCarsStyleHandler";
@@ -22,21 +22,22 @@ function UsedCarDrawer(props) {
 
             {/* Flex horizontal container (info column + carousel) */}
             <Flex
-                horizontal
-                width="75%"
-                gap="middle">
+                className="user-car-drawer-flex-horizontal"
+                width="70%">
 
                 {/* Flex vertical container with overview information */}
                 <Flex
                     vertical
-                    width="25%">
+                    width="30%">
 
                     {/* Name of the car */}
                     <CustomText
                         type="heading"
                         text={props.car.name}
                         disableAnimation={true}
-                        style={handleNamePriceStyle()} />
+                        style={{
+                            marginTop: 0,
+                            ...handleNamePriceStyle()}} />
 
                     {/* Price */}
                     <CustomText
@@ -53,6 +54,20 @@ function UsedCarDrawer(props) {
                         isTitleVisible={true} />
 
                 </Flex>
+
+                <div className="carousel-container">
+                    {/* Carousel to show car images */}
+                    <Carousel
+                        arrows
+                        infinite={false}>
+
+                        {/* Image */}
+                        <Image
+                            src={props.car.image}
+                            preview={true} />
+
+                    </Carousel>
+                </div>
 
             </Flex>
 
