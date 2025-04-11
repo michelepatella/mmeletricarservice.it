@@ -1,9 +1,10 @@
 import CookieConsent from "react-cookie-consent";
 import {Switch} from "antd";
 import {COOKIE_CONSENT_BANNER_DESCRIPTION} from "../../utils/const";
-import {handleSwitchStyle} from "../../logic/styleHandler";
 import CustomText from "./CustomText";
 import CustomButton from "./CustomButton";
+
+import {handleSwitchStyle} from "../../logic/cookieStyleHandler";
 
 /**
  * Custom Cookie Consent Banner

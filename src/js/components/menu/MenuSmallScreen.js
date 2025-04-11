@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Drawer, Menu as AntMenu } from 'antd';
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 import { useMenu } from "../../hooks/useMenu";
-import {handleChildrenStyle, handleHamburgerButtonStyle, handleParentItemStyle} from "../../logic/styleHandler";
+import {handleParentStyle, handleChildrenStyle, handleHamburgerButtonStyle} from "../../logic/menuStyleHandler";
 
 /**
  * Menu Small Screen
@@ -51,7 +51,7 @@ function MenuSmallScreen() {
                             <AntMenu.Item
                                 key={menuItem.key}
                                 onClick={menuItem.onClick}
-                                style={handleParentItemStyle(section, menuItem)}>
+                                style={handleParentStyle(section, menuItem)}>
                                 {menuItem.title}
                             </AntMenu.Item>
 

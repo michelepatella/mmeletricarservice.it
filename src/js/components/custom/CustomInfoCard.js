@@ -1,6 +1,6 @@
 import { Flex } from "antd";
-import {handleCustomInfoCardTitleStyle} from "../../logic/styleHandler";
 import CustomText from "./CustomText";
+import {handleTitleStyle} from "../../logic/customInfoCardStyleHandler";
 
 /**
  * Custom Info Card
@@ -33,7 +33,7 @@ function CustomInfoCard(props){
                     <CustomText
                         type="subtitle"
                         text={props.title}
-                        style={handleCustomInfoCardTitleStyle()} />
+                        style={handleTitleStyle()} />
 
                 </Flex>
 

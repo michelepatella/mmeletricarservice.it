@@ -1,10 +1,10 @@
 import {useState} from "react";
 import {Flex} from "antd";
-import {handleCustomUsedCarsCardNamePrice} from "../../logic/styleHandler";
-import {onCustomUsedCarDrawerOpen} from "../../logic/UsedCarDrawerHandler";
+import {onCustomUsedCarDrawerOpen} from "../../logic/usedCarDrawerHandler";
 import CustomUsedCarDrawer from "./CustomUsedCarDrawer";
 import CustomText from "./CustomText";
-import CustomTechInfoCard from "./CustomTechInfoCard";
+import CustomCarOverview from "./CustomCarOverview";
+import {handleNamePriceStyle} from "../../logic/usedCarsStyleHandler";
 
 /**
  * Custom Used Car Card
@@ -39,10 +39,10 @@ function CustomUsedCarCard(props) {
                             type="description"
                             text={props.car.name}
                             disableAnimation={true}
-                            style={handleCustomUsedCarsCardNamePrice()}/>
+                            style={handleNamePriceStyle()}/>
 
                         {/* Tech Info Card */}
-                        <CustomTechInfoCard
+                        <CustomCarOverview
                             overview={true}
                             car={props.car}/>
 
@@ -54,7 +54,7 @@ function CustomUsedCarCard(props) {
                             type="description"
                             text={props.car.price}
                             disableAnimation={true}
-                            style={handleCustomUsedCarsCardNamePrice()}/>
+                            style={handleNamePriceStyle()}/>
                     </div>
 
                 </Flex>
@@ -63,7 +63,10 @@ function CustomUsedCarCard(props) {
 
             {/* Car Drawer including car's details when the card is clicked */}
             {
-                isDrawerOpen && <CustomUsedCarDrawer setIsDrawerOpen={setIsDrawerOpen} />
+                isDrawerOpen &&
+                <CustomUsedCarDrawer
+                    car={props.car}
+                    setIsDrawerOpen={setIsDrawerOpen} />
             }
 
         </>

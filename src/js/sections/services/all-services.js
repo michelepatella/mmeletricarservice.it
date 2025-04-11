@@ -1,8 +1,8 @@
 import { ALL_SERVICES_INFO_CARDS } from "../../utils/const";
-import {handleCustomSectionHeaderSectionNameStyle} from "../../logic/styleHandler";
 import CustomInfoCard from "../../components/custom/CustomInfoCard";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
 import CustomText from "../../components/custom/CustomText";
+import {handleSectionNameStyle} from "../../logic/customSectionHeaderStyleHandler";
 
 /**
  * All services section
@@ -18,7 +18,7 @@ function AllServices() {
             <CustomText
                 type="description"
                 text={'• TUTTI I SERVIZI'}
-                style={handleCustomSectionHeaderSectionNameStyle()} />
+                style={handleSectionNameStyle()} />
 
             {/* Info Card for each service */}
             {ALL_SERVICES_INFO_CARDS.map((service, index) => (

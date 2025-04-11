@@ -1,11 +1,11 @@
 import CustomText from "./CustomText";
 import React, {useRef} from "react";
-import {
-    handleCustomSectionHeaderDescriptionStyle,
-    handleCustomSectionHeaderSectionNameStyle
-} from "../../logic/styleHandler";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import {useVideoAnimation} from "../../hooks/useVideoAnimation";
+import {
+    handleSectionNameStyle,
+    handleDescriptionStyle
+} from "../../logic/customSectionHeaderStyleHandler";
 
 /**
  * Custom Section Header
@@ -35,7 +35,7 @@ function CustomSectionHeader(props) {
             <CustomText
                 type="description"
                 text={'• ' + props.section}
-                style={handleCustomSectionHeaderSectionNameStyle()} />
+                style={handleSectionNameStyle()} />
 
             {/* Title */}
             <CustomText
@@ -47,7 +47,7 @@ function CustomSectionHeader(props) {
             <CustomText
                 type="subtitle"
                 text={props.subtitle}
-                style={handleCustomSectionHeaderDescriptionStyle(props.video)} />
+                style={handleDescriptionStyle(props.video)} />
 
             {/* Media (if any) */}
             {

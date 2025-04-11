@@ -5,11 +5,11 @@ import {
     USED_CARS_SUBTITLE,
 } from "../../utils/const";
 import {useUsedCarsOverview} from "../../hooks/useUsedCarsOverview";
-import {handleScrollLabelStyle} from "../../logic/styleHandler";
 import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
 import CustomUsedCarCard from "../../components/custom/CustomUsedCarCard";
 import CustomSectionHeader from "../../components/custom/CustomSectionHeader";
 import CustomText from "../../components/custom/CustomText";
+import {handleScrollLabelStyle} from "../../logic/usedCarsStyleHandler";
 
 /**
  * Used cars section

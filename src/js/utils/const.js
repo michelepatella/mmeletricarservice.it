@@ -165,6 +165,8 @@ export const USED_CARS_OVERVIEW_INFO =[
     }
 ]
 
+
+
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "La nostra officina"
 export const WHERE_WE_ARE_SUBTITLE = "Dove realizziamo i tuoi desideri e ci prendiamo cura della tua auto."

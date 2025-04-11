@@ -32,7 +32,7 @@ import '../styles/components/custom/CustomIconButton.css';
 import '../styles/components/custom/CustomSectionContainer.css';
 import '../styles/components/custom/CustomSectionHeader.css';
 import '../styles/components/custom/CustomText.css';
-import '../styles/components/custom/CustomTechInfoCard.css';
+import '../styles/components/custom/CustomOverviewCarInfo.css';
 import '../styles/components/custom/CustomUsedCarCard.css';
 import '../styles/components/custom/CustomUsedCarDrawer.css';
 import '../styles/components/Menu.css';

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { handleCustomBackgroundContainerStyle } from "../../logic/styleHandler";
+
+import {handleContainerStyle} from "../../logic/customBackgroundContainerStyleHandler";
 
 /**
  * Custom Background Container
@@ -13,7 +14,7 @@ function CustomBackgroundContainer({ image, children, custStyle }) {
 
     //get the style dynamically
     const style = {
-        ...handleCustomBackgroundContainerStyle(image),
+        ...handleContainerStyle(image),
         ...custStyle
     };
 

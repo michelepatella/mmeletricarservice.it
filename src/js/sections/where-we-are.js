@@ -5,11 +5,14 @@ import {
     GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
     WHERE_WE_ARE_SUBTITLE
 } from "../utils/const";
-import {handleGoogleMapsContainerStyle, handleGoogleMapsUnavailableDescriptionStyle} from "../logic/styleHandler";
 import CustomSectionContainer from "../components/custom/CustomSectionContainer";
 import CustomText from "../components/custom/CustomText";
 import CustomInfoCard from "../components/custom/CustomInfoCard";
 import CustomSectionHeader from "../components/custom/CustomSectionHeader";
+import {
+    handleGoogleMapsContainerStyle,
+    handleGoogleMapsUnavailableDescriptionStyle
+} from "../logic/whereWeAreStyleHandler";
 
 /**
  * Where We Are section
