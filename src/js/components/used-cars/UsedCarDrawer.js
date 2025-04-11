@@ -1,4 +1,5 @@
 import {Drawer, Flex} from "antd";
+import {ArrowLeftOutlined} from "@ant-design/icons";
 import {onUsedCarDrawerClose, onUsedCarDrawerOpen} from "../../logic/usedCarDrawerHandler";
 import {handleNamePriceStyle} from "../../logic/usedCarsStyleHandler";
 import UsedCarOverview from "./UsedCarOverview";
@@ -15,6 +16,7 @@ function UsedCarDrawer(props) {
 
         <Drawer
             className="used-car-drawer"
+            closeIcon={<ArrowLeftOutlined className="arrow-left-outlined"/>}
             onClose={() => onUsedCarDrawerClose(props.setIsDrawerOpen)}
             open={() => onUsedCarDrawerOpen(props.setIsDrawerOpen)}>
 

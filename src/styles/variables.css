@@ -78,6 +78,8 @@
 
     /* Menu */
     --menu_items_gap: 30px;
+    --menu_childrens_padding_left: 60px;
+    --menu_ink_margin_top: 10px;
 
 
     /* General section margins */

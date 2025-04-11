@@ -5,11 +5,11 @@
  */
 export const handleSectionNameStyle = () => {
     return {
+        marginBottom: 0,
         fontFamily: 'Roboto, sans-serif',
         fontWeight: "bold",
         color: "var(--accent_color)",
         opacity: 0.8,
-        marginBottom: 0
     };
 };
 

@@ -1,5 +1,5 @@
 import { ALL_SERVICES } from "../../utils/const";
-import {handleSectionNameStyle} from "../../logic/customSectionHeaderStyleHandler";
+import {handleSectionNameStyle} from "../../logic/sectionHeaderStyleHandler";
 import InfoCard from "../../components/other/InfoCard";
 import SectionContainer from "../../components/sections/SectionContainer";
 import CustomText from "../../components/custom/CustomText";

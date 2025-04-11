@@ -23,7 +23,7 @@ export const handleChildrenStyle = (section, child) => {
         fontWeight:
             section === child.href.replace('#', '') ?
                 'bold' : 'normal',
-        paddingLeft: '60px',
+        paddingLeft: 'var(--menu_small_childrens_padding_left)',
     };
 };
 

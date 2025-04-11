@@ -24,28 +24,39 @@ function UsedCarOverview (props) {
                         key={index}
                         className="used-car-overview-info-container">
 
-                        {/* Icon */}
-                        <img src={info.icon}/>
+                        {/* Global Flex container (vertical) */}
+                        <Flex vertical>
 
-                        {/* Title (if it needs to be shown) */}
-                        {
-                            props.isTitleVisible ?
+                            {/* Flex container for icon + info name (horizontal) */}
+                            <Flex
+                                gap="small"
+                                horizontal>
+
+                                {/* Icon */}
+                                <img src={info.icon}/>
+
+                                {/* Info title, if its needs to be shown, otherwise only the text */}
                                 <CustomText
                                     type="body"
-                                    text={info.title}
+                                    text={props.isTitleVisible ? info.title : props.car[info.name]}
                                     disableAnimation={true}
-                                    style={{
-                                        fontWeight: 'bold',
-                                        ...handleTextOverviewStyle() }} />
-                                : null
-                        }
+                                    style={handleTextOverviewStyle(props.isTitleVisible)} />
 
-                        {/* Text */}
-                        <CustomText
-                            type="body"
-                            text={props.car[info.name]}
-                            disableAnimation={true}
-                            style={handleTextOverviewStyle()} />
+                            </Flex>
+
+                            {/* Text (in case the title is visible and the text is now below) */}
+                            {
+                                props.isTitleVisible ?
+                                    <CustomText
+                                        type="body"
+                                        text={props.car[info.name]}
+                                        disableAnimation={true}
+                                        style={handleTextOverviewStyle()} />
+                                : null
+                            }
+
+
+                        </Flex>
 
                     </div>
                 ))

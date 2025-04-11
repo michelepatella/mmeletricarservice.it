@@ -6,8 +6,8 @@
 export const handleNamePriceStyle = () => {
     return {
         fontWeight: "bold",
+        alignSelf: "right",
         opacity: 1,
-        alignSelf: "right"
     };
 };
 
@@ -16,12 +16,13 @@ export const handleNamePriceStyle = () => {
  * style dynamically
  * @returns {{marginBottom: string, opacity: number, marginTop: number}}
  */
-export const handleTextOverviewStyle = () => {
+export const handleTextOverviewStyle = (isTitleVisible) => {
     return {
-        fontFamily: 'Poppins',
-        opacity: 0.7,
         marginTop: 0,
-        marginBottom: 'var(--used_car_overview_margin_top)'
+        marginBottom: 'var(--used_car_overview_margin_top)',
+        fontFamily: 'Poppins',
+        fontWeight: isTitleVisible ? 'bold' : 'normal',
+        opacity: 0.7,
     };
 };
 
@@ -32,8 +33,8 @@ export const handleTextOverviewStyle = () => {
  */
 export const handleScrollLabelStyle = () => {
     return {
-        opacity: 0.8,
+        marginLeft: '22%',
         textAlign: 'center',
-        marginLeft: '22%'
+        opacity: 0.8
     };
 };

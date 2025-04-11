@@ -16,10 +16,10 @@
 }
 
 /* Close icon styles */
-.ant-drawer-close {
+.arrow-left-outlined {
     color: white !important;
     margin: 0 !important;
-    right: var(--float_button_margins);
+    left: var(--float_button_margins);
     position: absolute;
-    padding: calc(var(--float_button_margins)*3) 0 0;
+    padding: var(--float_button_margins) var(--float_button_margins) 0;
 }

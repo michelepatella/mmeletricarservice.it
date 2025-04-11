@@ -4,7 +4,7 @@ import {useVideoAnimation} from "../../hooks/useVideoAnimation";
 import {
     handleSectionNameStyle,
     handleSubtitleStyle
-} from "../../logic/customSectionHeaderStyleHandler";
+} from "../../logic/sectionHeaderStyleHandler";
 import CustomText from "../custom/CustomText";
 
 /**
