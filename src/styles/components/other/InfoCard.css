@@ -1,0 +1,61 @@
+/* Info Card styles */
+.info-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-color: var(--background_color);
+}
+
+/* Info Card icon styles */
+.info-card-icon {
+    width: var(--info_card_icon_dimension);
+    height: var(--info_card_icon_dimension);
+}
+
+/* Info Card Flex container styles */
+.info-card-flex {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: var(--info_card_flex_gap);
+}
+
+/* ------ Big screen ------- */
+@media (min-width: 1025px) {
+    .info-card {
+        width: 80%;
+    }
+
+    .info-card-flex {
+        margin-top: var(--info_card_margin_top);
+    }
+}
+
+/* ------ Medium screen (portrait and landscape) ------ */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .info-card {
+        width: 60%;
+    }
+
+    .info-card-flex {
+        margin-top: var(--info_card_margin_top);
+    }
+}
+
+/* ------ Small screen portrait ------ */
+@media (max-width: 767px) {
+    .info-card {
+        width: 90%;
+    }
+
+    .info-card-flex {
+        margin-top: var(--info_card_margin_top);
+    }
+}
+
+/* ------ Small screen landscape ------ */
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
+    .info-card-flex {
+        margin-top: var(--info_card_margin_top);
+    }
+}

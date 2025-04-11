@@ -1,19 +1,19 @@
-import CustomText from "./CustomText";
 import React, {useRef} from "react";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import {useVideoAnimation} from "../../hooks/useVideoAnimation";
 import {
     handleSectionNameStyle,
-    handleDescriptionStyle
+    handleSubtitleStyle
 } from "../../logic/customSectionHeaderStyleHandler";
+import CustomText from "../custom/CustomText";
 
 /**
- * Custom Section Header
+ * Section Header
  * @param props
  * @returns {React.JSX.Element}
  * @constructor
  */
-function CustomSectionHeader(props) {
+function SectionHeader(props) {
 
     //IntersectionObserver to generate the animation and
     //start the video when the section is visible
@@ -29,25 +29,25 @@ function CustomSectionHeader(props) {
 
         <div
             ref={ref}
-            className="custom-section-header">
+            className="section-header">
 
             {/* Section title */}
             <CustomText
-                type="description"
+                type="body"
                 text={'• ' + props.section}
                 style={handleSectionNameStyle()} />
 
             {/* Title */}
             <CustomText
-                type="title"
+                type="heading"
                 text={props.title}
                 style={{textAlign: "center"}}/>
 
             {/* Subtitle */}
             <CustomText
-                type="subtitle"
+                type="subheading"
                 text={props.subtitle}
-                style={handleDescriptionStyle(props.video)} />
+                style={handleSubtitleStyle(props.video)} />
 
             {/* Media (if any) */}
             {
@@ -71,4 +71,4 @@ function CustomSectionHeader(props) {
     );
 }
 
-export default CustomSectionHeader;
+export default SectionHeader;

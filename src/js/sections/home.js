@@ -1,7 +1,7 @@
 import { Layout } from 'antd';
 import HomeHeader from "../components/home/HomeHeader";
 import HomeContent from "../components/home/HomeContent";
-import CustomBackgroundContainer from "../components/custom/CustomBackgroundContainer";
+import BackgroundContainer from "../components/sections/BackgroundContainer";
 
 /**
  * Home Layout definition
@@ -20,7 +20,7 @@ function Home() {
     return (
 
         <>
-            <CustomBackgroundContainer
+            <BackgroundContainer
                 image="/images/home-image.jpeg"
                 custStyle={{marginBottom: 'var(--section_margin_bottom)'}}>
 
@@ -41,7 +41,7 @@ function Home() {
 
                 </Layout>
 
-            </CustomBackgroundContainer>
+            </BackgroundContainer>
         </>
 
     );

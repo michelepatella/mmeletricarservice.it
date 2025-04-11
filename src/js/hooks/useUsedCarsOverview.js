@@ -18,6 +18,8 @@ export const useUsedCarsOverview = (setUsedCars, setAreCarsLoading) => {
                     const errorData = await res.json()
                     console.error('Error fetching used cars:', errorData.error)
                     setUsedCars([])
+                    //loading is finish
+                    setAreCarsLoading(false)
                     return
                 }
 

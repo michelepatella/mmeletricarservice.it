@@ -1,6 +1,6 @@
 /**
  * Method to handle the style of the name and the price
- * of the custom used cars card dynamically
+ * of the used cars card dynamically
  * @returns {{opacity: number, fontWeight: string}}
  */
 export const handleNamePriceStyle = () => {
@@ -21,7 +21,7 @@ export const handleTextOverviewStyle = () => {
         fontFamily: 'Poppins',
         opacity: 0.7,
         marginTop: 0,
-        marginBottom: 'var(--custom_tech_info_card_overview_info_margin_top)'
+        marginBottom: 'var(--used_car_overview_margin_top)'
     };
 };
 

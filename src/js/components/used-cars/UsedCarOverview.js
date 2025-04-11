@@ -1,26 +1,28 @@
 import {Flex} from "antd";
-import {USED_CARS_OVERVIEW_INFO} from "../../utils/const";
+import {USED_CAR_OVERVIEW} from "../../utils/const";
 import {handleTextOverviewStyle} from "../../logic/usedCarsStyleHandler";
-import CustomText from "./CustomText";
+import CustomText from "../custom/CustomText";
 
 /**
- * Custom Car Overview
+ * Used Car Overview
  * @param props
  * @returns {React.JSX.Element}
  * @constructor
  */
-function CustomCarOverview (props) {
+function UsedCarOverview (props) {
     return (
 
         <Flex
-            className="custom-used-cars-card-flex"
+            className="used-car-overview-flex"
             gap="small"
             align="start">
 
             {/* Overview information */}
             {
-                USED_CARS_OVERVIEW_INFO.map((info) => (
-                    <div className="used-cars-overview-info-container">
+                USED_CAR_OVERVIEW.map((info, index) => (
+                    <div
+                        key={index}
+                        className="used-car-overview-info-container">
 
                         {/* Icon */}
                         <img src={info.icon}/>
@@ -29,7 +31,7 @@ function CustomCarOverview (props) {
                         {
                             props.isTitleVisible ?
                                 <CustomText
-                                    type="description"
+                                    type="body"
                                     text={info.title}
                                     disableAnimation={true}
                                     style={{
@@ -40,7 +42,7 @@ function CustomCarOverview (props) {
 
                         {/* Text */}
                         <CustomText
-                            type="description"
+                            type="body"
                             text={props.car[info.name]}
                             disableAnimation={true}
                             style={handleTextOverviewStyle()} />
@@ -54,4 +56,4 @@ function CustomCarOverview (props) {
     );
 }
 
-export default CustomCarOverview;
+export default UsedCarOverview;

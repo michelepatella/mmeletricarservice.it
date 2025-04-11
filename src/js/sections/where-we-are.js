@@ -1,18 +1,18 @@
 import {
-    WHERE_WE_ARE_INFO_CARD,
+    WHERE_WE_ARE_INFO,
     WHERE_WE_ARE_DESCRIPTION,
     WHERE_WE_ARE_TITLE,
     GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
     WHERE_WE_ARE_SUBTITLE
 } from "../utils/const";
-import CustomSectionContainer from "../components/custom/CustomSectionContainer";
-import CustomText from "../components/custom/CustomText";
-import CustomInfoCard from "../components/custom/CustomInfoCard";
-import CustomSectionHeader from "../components/custom/CustomSectionHeader";
 import {
     handleGoogleMapsContainerStyle,
     handleGoogleMapsUnavailableDescriptionStyle
 } from "../logic/whereWeAreStyleHandler";
+import SectionContainer from "../components/sections/SectionContainer";
+import CustomText from "../components/custom/CustomText";
+import InfoCard from "../components/other/InfoCard";
+import SectionHeader from "../components/sections/SectionHeader";
 
 /**
  * Where We Are section
@@ -23,17 +23,17 @@ function WhereWeAre(props) {
     return (
 
         <>
-            <CustomSectionContainer id="where-we-are">
+            <SectionContainer id="where-we-are">
 
                 {/* Section header */}
-                <CustomSectionHeader
+                <SectionHeader
                     section="DOVE SIAMO"
                     title={WHERE_WE_ARE_TITLE}
                     subtitle={WHERE_WE_ARE_SUBTITLE} />
 
                 {/* Description */}
                 <CustomText
-                    type="description"
+                    type="body"
                     text={WHERE_WE_ARE_DESCRIPTION} />
 
                 {/* Google Maps (shown only in case of cookie accepting) */}
@@ -56,24 +56,25 @@ function WhereWeAre(props) {
                         className="google-maps-container"
                         style={handleGoogleMapsContainerStyle()}>
 
+                        {/* Google Maps unavailable description */}
                         <CustomText
-                            type="small"
-                            style={handleGoogleMapsUnavailableDescriptionStyle()}
-                            text={GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION} />
+                            type="caption"
+                            text={GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION}
+                            style={handleGoogleMapsUnavailableDescriptionStyle()} />
 
                     </div>
 
                 )}
 
                 {/* Info Cards for each information */}
-                {WHERE_WE_ARE_INFO_CARD.map((card, index) => (
-                    <CustomInfoCard
+                {WHERE_WE_ARE_INFO.map((card, index) => (
+                    <InfoCard
                         key={index}
                         title={card.title}
                         description={card.description} />
                 ))}
 
-            </CustomSectionContainer>
+            </SectionContainer>
         </>
 
     );

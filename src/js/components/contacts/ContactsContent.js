@@ -4,11 +4,11 @@ import {
     CONTACTS_SUBTITLE
 } from "../../utils/const";
 import CustomButton from "../custom/CustomButton";
-import CustomSectionContainer from "../custom/CustomSectionContainer";
-import CustomSectionHeader from "../custom/CustomSectionHeader";
+import SectionContainer from "../sections/SectionContainer";
+import SectionHeader from "../sections/SectionHeader";
 
 /**
- * Contacts Content
+ * Content of Contacts section
  * @returns {Element}
  * @constructor
  */
@@ -16,10 +16,10 @@ function ContactsContent() {
 
     return (
         <>
-            <CustomSectionContainer id="contacts">
+            <SectionContainer id="contacts">
 
                 {/* Section header */}
-                <CustomSectionHeader
+                <SectionHeader
                     section="CONTATTI"
                     title={CONTACTS_TITLE}
                     subtitle={CONTACTS_SUBTITLE} />
@@ -30,13 +30,13 @@ function ContactsContent() {
                     {CONTACTS.map((contact, index) => (
                         <CustomButton
                             key={index}
-                            contactType={contact.value}
+                            isContact={true}
                             value={contact.value}
                             icon={contact.icon} />
                     ))}
                 </div>
 
-            </CustomSectionContainer>
+            </SectionContainer>
         </>
     );
 }

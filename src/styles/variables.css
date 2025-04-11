@@ -49,28 +49,31 @@
     --custom_button_padding: 19px 16px 19px 16px;
 
 
-    /* Custom Cookie Consent Banner */
-    --custom_cookie_consent_banner_switch_margin_top_bottom: 20px;
-    --custom_cookie_consent_banner_button_padding: 10px 20px 10px 20px;
+    /* Cookie Consent Banner */
+    --cookie_consent_banner_switch_margin_top_bottom: 20px;
+    --cookie_consent_banner_button_padding: 10px 20px 10px 20px;
 
 
-    /* Custom Info Card */
-    --custom_info_card_margin_top: 50px;
-    --custom_info_card_icon_dimension: 30px;
-    --custom_info_card_flex_gap: 20px;
+    /* Info Card */
+    --info_card_margin_top: 50px;
+    --info_card_icon_dimension: 30px;
+    --info_card_flex_gap: 20px;
 
 
-    /* Custom Used Cars Card + Custom Tech Info */
-    --custom_used_car_card_padding: 15px 15px 0 15px;
-    --custom_used_car_card_img_max_width: 300px;
-    --custom_used_car_card_img_min_width: 250px;
-    --custom_tech_info_card_overview_info_margin_top: 4px;
+    /* Used Cars Card */
+    --used_car_card_padding: 15px 15px 0 15px;
+    --used_car_card_img_max_width: 300px;
+    --used_car_card_img_min_width: 250px;
 
 
-    /* Custom Section Header */
-    --custom_section_header_gap: 20px;
-    --custom_section_header_margin_bottom: 50px;
-    --custom_section_header_subtitle_margin_bottom: 100px;
+    /* Used Car Overview */
+    --used_car_overview_margin_top: 4px;
+
+
+    /* Section Header */
+    --section_header_gap: 20px;
+    --section_header_margin_bottom: 50px;
+    --section_header_subtitle_margin_bottom: 100px;
 
 
     /* Menu */

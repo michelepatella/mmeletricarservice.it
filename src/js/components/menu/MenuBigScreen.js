@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {useMenu} from "../../hooks/useMenu";
 
 /**
- * Menu Big Screen
+ * Menu Big Screen (Anchor Menu)
  * @returns {React.JSX.Element}
  * @constructor
  */

@@ -20,10 +20,9 @@ function CustomText(props) {
 
         <p
             className=
-                {props.type === "title" ? "custom-title" :
-                    props.type === "subtitle" ? "custom-subtitle" :
-                        props.type === "description" ? "custom-description" :
-                        "custom-small"}
+                {props.type === "heading" ? "custom-heading" :
+                    props.type === "subheading" ? "custom-subheading" :
+                        props.type === "body" ? "custom-body" : "custom-caption"}
             ref={props.disableAnimation ? null : textRef}
             style={style}
             dangerouslySetInnerHTML={{ __html: props.text }} />

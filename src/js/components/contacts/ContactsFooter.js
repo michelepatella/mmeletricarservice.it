@@ -1,16 +1,13 @@
-import React from "react";
 import { FOOTER_TEXT } from '../../utils/const';
 
 /**
- * Contacts Footer
+ * Footer of Contacts section
  * @returns {Element}
  * @constructor
  */
 function ContactsFooter() {
     return (
         <>
-
-            {/* Contacts Footer global container */}
             <div className="contacts-footer">
 
                 {/* Footer text */}

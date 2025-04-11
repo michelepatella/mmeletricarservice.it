@@ -9,14 +9,15 @@ import { contactClickHandler } from "../../logic/contactButtonHandler";
  */
 function CustomButton(props){
 
+    //combine static and dynamic style
     const style = {...props.style};
 
     return (
 
         <Button
             type="primary"
-            className={props.contactType ? "contact-button" : "custom-button"}
-            onClick={props.contactType ? contactClickHandler[props.contactType] : props.onClick}
+            className={props.isContact ? "contact-button" : "custom-button"}
+            onClick={props.isContact ? contactClickHandler[props.value] : props.onClick}
             style={style}>
 
             {/* Button's icon (if any) */}

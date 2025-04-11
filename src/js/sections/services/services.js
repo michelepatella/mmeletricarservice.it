@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import {SERVICES_TITLE, SERVICES_SUBTITLE} from "../../utils/const";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
-import CustomBackgroundContainer from "../../components/custom/CustomBackgroundContainer";
-import CustomSectionHeader from "../../components/custom/CustomSectionHeader";
+import SectionContainer from "../../components/sections/SectionContainer";
+import BackgroundContainer from "../../components/sections/BackgroundContainer";
+import SectionHeader from "../../components/sections/SectionHeader";
 
 /**
  * Services section
@@ -19,16 +19,17 @@ function Services() {
     return (
 
         <>
-            <CustomBackgroundContainer image="/images/services-image.jpeg">
-                <CustomSectionContainer id="services">
+            <BackgroundContainer image="/images/services-image.jpeg">
+                <SectionContainer id="services">
 
-                    <CustomSectionHeader
+                    {/* Section Header */}
+                    <SectionHeader
                         section="SERVIZI"
                         title={SERVICES_TITLE}
                         subtitle={SERVICES_SUBTITLE} />
 
-                </CustomSectionContainer>
-            </CustomBackgroundContainer>
+                </SectionContainer>
+            </BackgroundContainer>
         </>
 
     );

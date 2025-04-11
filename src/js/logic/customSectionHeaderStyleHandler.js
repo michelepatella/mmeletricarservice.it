@@ -1,6 +1,6 @@
 /**
  * Method to handle the style of the name of the
- * section of the custom section header dynamically
+ * section of the section header dynamically
  * @returns {{fontFamily: string, color: string, marginBottom: number, opacity: number, fontWeight: string}}
  */
 export const handleSectionNameStyle = () => {
@@ -15,13 +15,13 @@ export const handleSectionNameStyle = () => {
 
 /**
  * Method to handle the style of the subtitle
- * of the custom section header dynamically
+ * of the section header dynamically
  * @returns {{textAlign: string, width: string}}
  */
-export const handleDescriptionStyle = (hasMedia) => {
+export const handleSubtitleStyle = (hasMedia) => {
     return {
         width: "85%",
-        marginBottom: hasMedia ? "var(--custom_section_header_subtitle_margin_bottom)" : null,
+        marginBottom: hasMedia ? "var(--section_header_subtitle_margin_bottom)" : null,
         textAlign: "center",
         opacity: 0.8
     };

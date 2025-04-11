@@ -23,8 +23,8 @@
 /* Home Subtitle styles */
 .home-subtitle {
     text-align: center;
-    margin-top: 0;
     color: white;
+    margin-top: 0;
     opacity: 0;
     animation: slideInHome 1.5s ease forwards;
     animation-delay: 1.5s;

@@ -5,9 +5,9 @@ import {
     OUR_VALUES_TITLE,
 } from "../../utils/const";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
+import SectionContainer from "../../components/sections/SectionContainer";
 import CustomText from "../../components/custom/CustomText";
-import CustomSectionHeader from "../../components/custom/CustomSectionHeader";
+import SectionHeader from "../../components/sections/SectionHeader";
 
 /**
  * Our values section
@@ -22,24 +22,20 @@ function OurValues() {
 
     return (
 
-        <>
+        <SectionContainer id="our-values">
 
-                <CustomSectionContainer id="our-values">
+            {/* Section header */}
+            <SectionHeader
+                section="I NOSTRI VALORI"
+                title={OUR_VALUES_TITLE}
+                subtitle={OUR_VALUES_SUBTITLE} />
 
-                    {/* Section header */}
-                    <CustomSectionHeader
-                        section="I NOSTRI VALORI"
-                        title={OUR_VALUES_TITLE}
-                        subtitle={OUR_VALUES_SUBTITLE} />
+            {/* Subtitle */}
+            <CustomText
+                type="subheading"
+                text={OUR_VALUES_DESCRIPTION} />
 
-                    {/* Subtitle */}
-                    <CustomText
-                        type="subtitle"
-                        text={OUR_VALUES_DESCRIPTION} />
-
-                </CustomSectionContainer>
-
-        </>
+        </SectionContainer>
 
     );
 }

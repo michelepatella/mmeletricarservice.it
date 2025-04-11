@@ -22,8 +22,8 @@ export const SECTIONS = [
         title: 'Chi siamo',
         children: [
             {
-            id: 'our-values',
-            title: 'I nostri valori'
+                id: 'our-values',
+                title: 'I nostri valori'
             }
         ]
     },
@@ -77,7 +77,7 @@ export const SERVICES_TITLE = 'Eccellenza in ogni servizio'
 export const SERVICES_SUBTITLE = 'Manutenzioni, riparazioni e diagnosi elettroniche: solo il meglio per la tua auto.'
 
 /**------------- "All services" texts -------------**/
-export const ALL_SERVICES_INFO_CARDS = [
+export const ALL_SERVICES = [
     {
         title: "Manutenzione centralina",
         description: "Controllo ed aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.",
@@ -138,7 +138,7 @@ export const ALL_SERVICES_INFO_CARDS = [
 /**------------- "Used cars" texts -------------**/
 export const USED_CARS_TITLE = "La tua prossima auto, pronta per te"
 export const USED_CARS_SUBTITLE = "Le migliori auto usate garantite, scelte con attenzione per chi cerca qualità, affidabilità e convenienza.";
-export const USED_CARS_OVERVIEW_INFO =[
+export const USED_CAR_OVERVIEW =[
     {
         title: "Anno",
         name: "year",
@@ -165,13 +165,11 @@ export const USED_CARS_OVERVIEW_INFO =[
     }
 ]
 
-
-
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "La nostra officina"
 export const WHERE_WE_ARE_SUBTITLE = "Dove realizziamo i tuoi desideri e ci prendiamo cura della tua auto."
 export const WHERE_WE_ARE_DESCRIPTION = "📍MM Eletricar Service si trova <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>."
-export const WHERE_WE_ARE_INFO_CARD = [
+export const WHERE_WE_ARE_INFO = [
     {
         title: "Orari di apertura",
         description: "- <strong>Lunedì - Venerdì</strong>: 08:30-13:00/15:00-19:00 <br>- <strong>Sabato</strong>: 08:30-13:00",

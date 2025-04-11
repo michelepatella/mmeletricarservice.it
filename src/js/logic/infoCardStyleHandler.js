@@ -1,5 +1,5 @@
 /**
- * Method to handle the custom info card's title style dynamically
+ * Method to handle the info card's title style dynamically
  * @returns {{color: string, fontWeight: string}}
  */
 export const handleTitleStyle = () => {

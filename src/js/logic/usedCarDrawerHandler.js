@@ -2,7 +2,7 @@
  * Method to handle when the drawer is open
  * @param setIsDrawerOpen
  */
-export const onCustomUsedCarDrawerOpen = (setIsDrawerOpen) => {
+export const onUsedCarDrawerOpen = (setIsDrawerOpen) => {
     setIsDrawerOpen(true);
     document.body.classList.add('drawer-open');
     document.documentElement.style.overflow = 'hidden';

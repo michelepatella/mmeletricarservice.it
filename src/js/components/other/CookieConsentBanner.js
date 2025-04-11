@@ -1,18 +1,17 @@
 import CookieConsent from "react-cookie-consent";
 import {Switch} from "antd";
 import {COOKIE_CONSENT_BANNER_DESCRIPTION} from "../../utils/const";
-import CustomText from "./CustomText";
-import CustomButton from "./CustomButton";
-
-import {handleSwitchStyle} from "../../logic/cookieStyleHandler";
+import {handleSwitchStyle} from "../../logic/cookieConsentBannerStyleHandler";
+import CustomText from "../custom/CustomText";
+import CustomButton from "../custom/CustomButton";
 
 /**
- * Custom Cookie Consent Banner
+ * Cookie Consent Banner
  * @param props
  * @returns {Element}
  * @constructor
  */
-function CustomCookieConsentBanner(props) {
+function CookieConsentBanner(props) {
     return (
 
         <>
@@ -58,7 +57,7 @@ function CustomCookieConsentBanner(props) {
                         style={handleSwitchStyle(props.tempPreferences, "necessary-cookie")} />
 
                     <CustomText
-                        type="small"
+                        type="caption"
                         text="Cookies tecnici e di sicurezza" />
 
                 </div>
@@ -72,7 +71,7 @@ function CustomCookieConsentBanner(props) {
                         style={handleSwitchStyle(props.tempPreferences, "third-party-cookie")} />
 
                     <CustomText
-                        type="small"
+                        type="caption"
                         text="Cookies di terze parti" />
 
                 </div>
@@ -81,7 +80,7 @@ function CustomCookieConsentBanner(props) {
                 <CustomButton
                     value="Salva preferenze"
                     onClick={props.handleSavePreferences}
-                    style={{fontSize: 'var(--small_text_size)'}} />
+                    style={{fontSize: 'var(--caption_text_font_size)'}} />
 
             </CookieConsent>
 
@@ -90,4 +89,4 @@ function CustomCookieConsentBanner(props) {
     )
 }
 
-export default CustomCookieConsentBanner;
+export default CookieConsentBanner;

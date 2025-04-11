@@ -5,11 +5,11 @@ import {
     USED_CARS_SUBTITLE,
 } from "../../utils/const";
 import {useUsedCarsOverview} from "../../hooks/useUsedCarsOverview";
-import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
-import CustomUsedCarCard from "../../components/custom/CustomUsedCarCard";
-import CustomSectionHeader from "../../components/custom/CustomSectionHeader";
-import CustomText from "../../components/custom/CustomText";
 import {handleScrollLabelStyle} from "../../logic/usedCarsStyleHandler";
+import SectionContainer from "../../components/sections/SectionContainer";
+import UsedCarCard from "../../components/used-cars/UsedCarCard";
+import SectionHeader from "../../components/sections/SectionHeader";
+import CustomText from "../../components/custom/CustomText";
 
 /**
  * Used cars section
@@ -26,9 +26,10 @@ function UsedCars() {
     return (
 
         <>
-            <CustomSectionContainer id="used-cars">
+            <SectionContainer id="used-cars">
 
-                <CustomSectionHeader
+                {/* Section Header */}
+                <SectionHeader
                     section="AUTO USATE"
                     title={USED_CARS_TITLE}
                     subtitle={USED_CARS_SUBTITLE} />
@@ -49,8 +50,10 @@ function UsedCars() {
                                 {/* Used Car Card for all the available cars */}
                                 {
                                     usedCars.length > 0 ?
-                                        usedCars.map((car) => (
-                                            <CustomUsedCarCard car={car}/>
+                                        usedCars.map((car, index) => (
+                                            <UsedCarCard
+                                                key={index}
+                                                car={car} />
                                         ))
 
                                         : null
@@ -61,7 +64,7 @@ function UsedCars() {
                             {
                                 usedCars.length > 0 ?
                                     <CustomText
-                                        type="description"
+                                        type="body"
                                         text="< Scorri per visualizzare >"
                                         style={handleScrollLabelStyle()}/>
                                     : null
@@ -70,7 +73,7 @@ function UsedCars() {
                         </>
                 }
 
-            </CustomSectionContainer>
+            </SectionContainer>
         </>
 
     );

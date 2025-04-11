@@ -1,37 +1,37 @@
 import { Flex } from "antd";
-import CustomText from "./CustomText";
-import {handleTitleStyle} from "../../logic/customInfoCardStyleHandler";
+import {handleTitleStyle} from "../../logic/infoCardStyleHandler";
+import CustomText from "../custom/CustomText";
 
 /**
- * Custom Info Card
+ * Info Card
  * @returns {Element}
  * @constructor
  * @param props
  */
-function CustomInfoCard(props){
+function InfoCard(props){
 
     return (
         <>
-            {/* Custom Info Card global container */}
-            <div className="custom-info-card">
+            {/* Info Card global container */}
+            <div className="info-card">
 
                 {/* Flex container*/}
                 <Flex
-                    className="custom-info-card-flex"
+                    className="info-card-flex"
                     gap="small"
                     align="start">
 
                     {/* Icon */}
                     { props.icon ?
                         <img
-                            className="custom-info-card-icon"
+                            className="info-card-icon"
                             src={props.icon}
-                            alt="custom-info-card-icon" />
+                            alt="info-card-icon" />
                         : null}
 
                     {/* Title */}
                     <CustomText
-                        type="subtitle"
+                        type="subheading"
                         text={props.title}
                         style={handleTitleStyle()} />
 
@@ -39,7 +39,7 @@ function CustomInfoCard(props){
 
                 {/* Info Card description */}
                 <CustomText
-                    type="description"
+                    type="body"
                     text={props.description}
                     style={{marginTop: "0"}} />
 
@@ -48,4 +48,4 @@ function CustomInfoCard(props){
     );
 }
 
-export default CustomInfoCard;
+export default InfoCard;

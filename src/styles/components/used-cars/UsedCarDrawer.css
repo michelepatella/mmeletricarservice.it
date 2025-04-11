@@ -1,5 +1,5 @@
-/* Custom used car drawer styles */
-.custom-used-car-drawer,
+/* Used car drawer styles */
+.used-car-drawer,
 .ant-drawer-header {
     background: var(--darker_background_color) !important;
 }

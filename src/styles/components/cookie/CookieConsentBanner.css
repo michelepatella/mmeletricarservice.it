@@ -14,7 +14,7 @@
     font-family: 'Poppins' !important;
     border: 1px solid white !important;
     border-radius: var(--border_radius) !important;
-    padding: var(--custom_cookie_consent_banner_button_padding) !important;
+    padding: var(--cookie_consent_banner_button_padding) !important;
     background-color: var(--background_color) !important;
     transition: all 0.3s ease;
 }
@@ -23,7 +23,7 @@
     font-family: 'Poppins' !important;
     border: 1px solid white !important;
     border-radius: var(--border_radius) !important;
-    padding: var(--custom_cookie_consent_banner_button_padding) !important;
+    padding: var(--cookie_consent_banner_button_padding) !important;
     filter: invert(1);
     transition: all 0.3s ease !important;
 }
@@ -37,7 +37,7 @@
 
 /* Switch container styles */
 .cookie-switch-container{
-    margin: var(--custom_cookie_consent_banner_switch_margin_top_bottom);
+    margin: var(--cookie_consent_banner_switch_margin_top_bottom);
     margin-left: 0;
     margin-right: 0;
     display: flex;

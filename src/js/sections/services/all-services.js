@@ -1,8 +1,8 @@
-import { ALL_SERVICES_INFO_CARDS } from "../../utils/const";
-import CustomInfoCard from "../../components/custom/CustomInfoCard";
-import CustomSectionContainer from "../../components/custom/CustomSectionContainer";
-import CustomText from "../../components/custom/CustomText";
+import { ALL_SERVICES } from "../../utils/const";
 import {handleSectionNameStyle} from "../../logic/customSectionHeaderStyleHandler";
+import InfoCard from "../../components/other/InfoCard";
+import SectionContainer from "../../components/sections/SectionContainer";
+import CustomText from "../../components/custom/CustomText";
 
 /**
  * All services section
@@ -12,25 +12,24 @@ import {handleSectionNameStyle} from "../../logic/customSectionHeaderStyleHandle
 function AllServices() {
     return (
 
-        <CustomSectionContainer id="all-services">
+        <SectionContainer id="all-services">
 
             {/* Section title */}
             <CustomText
-                type="description"
+                type="body"
                 text={'• TUTTI I SERVIZI'}
                 style={handleSectionNameStyle()} />
 
             {/* Info Card for each service */}
-            {ALL_SERVICES_INFO_CARDS.map((service, index) => (
-                <CustomInfoCard
+            {ALL_SERVICES.map((service, index) => (
+                <InfoCard
                     key={index}
                     title={service.title}
                     description={service.description}
-                    icon={service.icon}
-                />
+                    icon={service.icon} />
             ))}
 
-        </CustomSectionContainer>
+        </SectionContainer>
 
     );
 }

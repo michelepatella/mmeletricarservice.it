@@ -1,12 +1,12 @@
 /**
- * Custom Section Container
+ * Section Container
  * @param children
  * @param id
  * @param custStyle
  * @returns {JSX.Element}
  * @constructor
  */
-function CustomSectionContainer({children, id, custStyle}) {
+function SectionContainer({children, id, custStyle}) {
 
     //combine static and dynamic style
     const style = {...custStyle};
@@ -23,4 +23,4 @@ function CustomSectionContainer({children, id, custStyle}) {
     );
 }
 
-export default CustomSectionContainer;
+export default SectionContainer;

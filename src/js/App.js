@@ -12,7 +12,7 @@ import UsedCars from "./sections/services/used-cars";
 import WhereWeAre from "./sections/where-we-are";
 import Contacts from './sections/contacts';
 import Menu from './components/menu/Menu';
-import CustomCookieConsentBanner from "./components/custom/CustomCookieConsentBanner";
+import CookieConsentBanner from "./components/other/CookieConsentBanner";
 import '../index.css';
 import '../styles/App.css';
 import '../styles/sections/home.css';
@@ -23,19 +23,19 @@ import '../styles/sections/contacts.css';
 import '../styles/components/home/HomeHeader.css';
 import '../styles/components/custom/CustomButton.css';
 import '../styles/components/home/HomeContent.css';
-import '../styles/components/custom/CustomInfoCard.css';
+import '../styles/components/other/InfoCard.css';
 import "../styles/components/contacts/ContactsContent.css";
-import '../styles/components/custom/CustomCookieButton.css';
-import '../styles/components/custom/CustomCookieConsentBanner.css';
+import '../styles/components/cookie/CookieButton.css';
+import '../styles/components/cookie/CookieConsentBanner.css';
 import '../styles/components/contacts/ContactsFooter.css';
 import '../styles/components/custom/CustomIconButton.css';
-import '../styles/components/custom/CustomSectionContainer.css';
-import '../styles/components/custom/CustomSectionHeader.css';
+import '../styles/components/sections/SectionContainer.css';
+import '../styles/components/sections/SectionHeader.css';
 import '../styles/components/custom/CustomText.css';
-import '../styles/components/custom/CustomOverviewCarInfo.css';
-import '../styles/components/custom/CustomUsedCarCard.css';
-import '../styles/components/custom/CustomUsedCarDrawer.css';
-import '../styles/components/Menu.css';
+import '../styles/components/used-cars/UsedCarOverview.css';
+import '../styles/components/used-cars/UsedCarCard.css';
+import '../styles/components/used-cars/UsedCarDrawer.css';
+import '../styles/components/other/Menu.css';
 import '../styles/variables.css';
 
 /**
@@ -67,8 +67,8 @@ function App() {
                         className="cookie-button"
                         onClick={() => handleCookieButtonClick(setIsCookiesBannerVisible)} />
 
-                    {/* Custom Cookie Consent Banner */}
-                    <CustomCookieConsentBanner
+                    {/* Cookie Consent Banner */}
+                    <CookieConsentBanner
                         isCookiesBannerVisible={isCookiesBannerVisible}
                         handleAcceptCookies={handleAcceptCookies}
                         handleDeclineCookies={handleDeclineCookies}

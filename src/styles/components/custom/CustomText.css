@@ -10,8 +10,8 @@
     }
 }
 
-/* Title styles */
-.custom-title {
+/* Heading styles */
+.custom-heading {
     margin-bottom: 0;
     text-align: left;
     font-weight: bold;
@@ -20,101 +20,101 @@
     color: var(--accent_color);
 }
 
-.custom-title.in-view {
+.custom-heading.in-view {
     animation: slideInTitle 1.5s ease forwards;
 }
 
-/* Subtitle and description styles */
-.custom-subtitle,
-.custom-description {
+/* Subheading and body styles */
+.custom-subheading,
+.custom-body {
     opacity: 0;
     transition: opacity 1.8s ease, transform 1.8s ease;
     text-align: left;
     color: white;
 }
 
-.custom-subtitle.in-view,
-.custom-description.in-view{
+.custom-subheading.in-view,
+.custom-body.in-view{
     opacity: 1;
 }
 
-/* Small text styles */
-.custom-small {
+/* Caption styles */
+.custom-caption {
     color: white;
     font-size: var(--caption_text_font_size);
 }
 
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
-    .custom-title {
+    .custom-heading {
         font-size: var(--heading_font_size_big);
     }
 
-    .custom-subtitle {
+    .custom-subheading {
         font-size: var(--subheading_font_size_big);
     }
 
-    .custom-description {
+    .custom-body {
         font-size: var(--body_font_size_big);
     }
 }
 
 /* ------ Medium screen portrait ------ */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .custom-title {
+    .custom-heading {
         font-size: var(--heading_font_size_medium);
     }
 
-    .custom-subtitle {
+    .custom-subheading {
         font-size: var(--subheading_font_size_medium);
     }
 
-    .custom-description {
+    .custom-body {
         font-size: var(--body_font_size_medium);
     }
 }
 
 /* ------ Medium screen landscape ------ */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .custom-title {
+    .custom-heading {
         font-size: var(--heading_font_size_medium);
     }
 
-    .custom-subtitle {
+    .custom-subheading {
         font-size: var(--subheading_font_size_medium);
     }
 
-    .custom-description {
+    .custom-body {
         font-size: var(--body_font_size_medium);
     }
 }
 
 /* ------ Small screen portrait ------ */
 @media (max-width: 767px) {
-    .custom-title {
+    .custom-heading {
         font-size: var(--heading_font_size_small);
     }
 
-    .custom-subtitle {
+    .custom-subheading {
         font-size: var(--subheading_font_size_small);
     }
 
-    .custom-description {
+    .custom-body {
         font-size: var(--body_font_size_small);
     }
 }
 
 /* ------ Small screen landscape ------ */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
-    .custom-title {
+    .custom-heading {
         font-size: var(--heading_font_size_small);
     }
 
-    .custom-subtitle {
+    .custom-subheading {
         font-size: var(--subheading_font_size_small);
     }
 
-    .custom-description {
+    .custom-body {
         font-size: var(--body_font_size_small);
     }
 }

@@ -1,16 +1,15 @@
 import { motion } from "framer-motion";
-
-import {handleContainerStyle} from "../../logic/customBackgroundContainerStyleHandler";
+import {handleContainerStyle} from "../../logic/backgroundContainerStyleHandler";
 
 /**
- * Custom Background Container
+ * Background Container
  * @param image
  * @param children
  * @param custStyle
  * @returns {JSX.Element}
  * @constructor
  */
-function CustomBackgroundContainer({ image, children, custStyle }) {
+function BackgroundContainer({ image, children, custStyle }) {
 
     //get the style dynamically
     const style = {
@@ -20,6 +19,8 @@ function CustomBackgroundContainer({ image, children, custStyle }) {
 
     return (
 
+        //motion division for containing the background
+        //to generate animation
         <motion.div
             className="custom-background-container"
             style={style}
@@ -32,4 +33,4 @@ function CustomBackgroundContainer({ image, children, custStyle }) {
     );
 }
 
-export default CustomBackgroundContainer;
+export default BackgroundContainer;

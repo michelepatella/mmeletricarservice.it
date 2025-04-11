@@ -2,10 +2,14 @@ import React from 'react';
 import { Button, Drawer, Menu as AntMenu } from 'antd';
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 import { useMenu } from "../../hooks/useMenu";
-import {handleParentStyle, handleChildrenStyle, handleHamburgerButtonStyle} from "../../logic/menuStyleHandler";
+import {
+    handleParentStyle,
+    handleChildrenStyle,
+    handleHamburgerButtonStyle
+} from "../../logic/menuStyleHandler";
 
 /**
- * Menu Small Screen
+ * Menu Small Screen (Hamburger Menu)
  * @returns {React.JSX.Element}
  * @constructor
  */
@@ -22,7 +26,7 @@ function MenuSmallScreen() {
 
         <div className='menu-container-small'>
 
-            {/* Hamburger button (to open the phone menu) */}
+            {/* Hamburger button (to open the hamburger menu) */}
             <Button
                 type='primary'
                 className='hamburger-button'
@@ -30,7 +34,6 @@ function MenuSmallScreen() {
                 icon={<MenuOutlined/>}
                 onClick={toggleDrawer}
                 style={handleHamburgerButtonStyle(visible)} />
-
 
             {/* Drawer for containing the menu */}
             <Drawer
