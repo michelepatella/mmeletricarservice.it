@@ -16,7 +16,9 @@ function CustomButton(props){
 
         <Button
             type="primary"
-            className={props.isContact ? "contact-button" : "custom-button"}
+            className={
+                props.isContact && !props.isCta ? "contact-button"
+                    : props.isContact ? "cta-button" : "custom-button"}
             onClick={props.isContact ? contactClickHandler[props.value] : props.onClick}
             style={style}>
 
@@ -29,7 +31,7 @@ function CustomButton(props){
                     : null
             }
 
-            {props.value}
+            {props.text}
 
         </Button>
 

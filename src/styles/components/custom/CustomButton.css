@@ -27,6 +27,23 @@
     background-color: transparent !important;
 }
 
+/* CTA button styles */
+.cta-button {
+    margin-top: var(--cta_button_margin_top);
+    color: white;
+    font-size: var(--caption_text_font_size);
+    font-family: 'Poppins';
+    border-radius: var(--border_radius);
+    padding: var(--custom_button_padding);
+    background-color: var(--blue_color) !important;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.03);
+    border-radius: var(--border_radius) !important;
+}
+
 /* ------- Big screen ------- */
 @media (min-width: 1025px) {
     .custom-button {

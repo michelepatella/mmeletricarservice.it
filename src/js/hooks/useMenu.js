@@ -92,7 +92,7 @@ export const useMenu = () => {
                 key: 'section-' + (index + 1) + '-child-' + (childIndex + 1),
                 href: '#' + child.id,
                 title: child.title,
-                onClick: () => scrollToSection(child.id, setVisible),
+                onClick: () => scrollToSection(child.id, setVisible)
             }))
             : undefined,
     }));

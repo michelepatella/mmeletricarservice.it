@@ -31,7 +31,8 @@ function ContactsContent() {
                         <CustomButton
                             key={index}
                             isContact={true}
-                            value={contact.value}
+                            contactValue={contact.value}
+                            text={contact.value}
                             icon={contact.icon} />
                     ))}
                 </div>

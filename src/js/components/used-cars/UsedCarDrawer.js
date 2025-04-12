@@ -1,11 +1,13 @@
 import React, {useState} from "react";
 import {Carousel, Drawer, Flex, Image} from "antd";
+import {CONTACTS, PHONE} from "../../utils/const";
 import {ArrowLeftOutlined, LoadingOutlined} from "@ant-design/icons";
 import {onUsedCarDrawerClose, onUsedCarDrawerOpen} from "../../logic/usedCarDrawerHandler";
 import {handleNamePriceStyle} from "../../logic/usedCarsStyleHandler";
 import {useUsedCarData} from "../../hooks/useUsedCarData";
 import UsedCarOverview from "./UsedCarOverview";
 import CustomText from "../custom/CustomText";
+import CustomButton from "../custom/CustomButton";
 
 /**
  * Used Car Drawer
@@ -80,6 +82,15 @@ function UsedCarDrawer(props) {
                                 usedCarOverview={props.usedCarOverview}
                                 isTitleVisible={true} />
 
+                            {/* Call-To-Action Button */}
+                            <CustomButton
+                                isContact={true}
+                                isCta={true}
+                                value={PHONE}
+                                text="Verifica disponibilità"
+                                icon={CONTACTS.find(contact =>
+                                    contact.value === PHONE).icon} />
+
                         </Flex>
 
                         <div className="carousel-container">
@@ -96,12 +107,10 @@ function UsedCarDrawer(props) {
                                                 toolbarRender: () => null,
                                                 maskClosable: true,
                                             }}>
-
                                             <Image
-                                                    key={index}
-                                                    src={item}
-                                                    preview={true} />
-
+                                                key={index}
+                                                src={item}
+                                                preview={true} />
                                         </Image.PreviewGroup>
                                     ))
                                 }

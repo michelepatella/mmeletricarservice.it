@@ -78,7 +78,7 @@ function CookieConsentBanner(props) {
 
                 {/* Save preferences button */}
                 <CustomButton
-                    value="Salva preferenze"
+                    text="Salva preferenze"
                     onClick={props.handleSavePreferences}
                     style={{fontSize: 'var(--caption_text_font_size)'}} />
 
