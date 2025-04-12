@@ -35,7 +35,7 @@
 
 
     /* Components (General) */
-    --text_opacity: 0.7;
+    --text_low_opacity: 0.7;
     --border_radius: 5px;
     --gap_button_label: 0.5rem;
     --float_button_dimension: 40px;
@@ -80,12 +80,13 @@
 
     /* Used Car Drawer */
     --used_car_drawer_close_label_padding_left: 40px;
-    --used_car_drawer_flex_horizontal_gap_big_medium: 5rem;
+    --used_car_drawer_flex_horizontal_gap_big_medium: 2rem;
     --used_car_drawer_flex_horizontal_gap_small: 3rem;
     --carousel_container_width_big: 75%;
     --carousel_container_width_medium_portrait: 100%;
     --carousel_container_width_medium_landscape: 70%;
     --carousel_container_width_small: 100%;
+    --carousel_max_height: 80vh;
 
 
     /* Section Container */

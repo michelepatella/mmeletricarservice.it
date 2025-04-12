@@ -21,7 +21,12 @@ function UsedCars() {
     //get used cars overview information
     const [usedCarsOverview, setUsedCarsOverview] = useState([]);
     const [areCarsLoading, setAreCarsLoading] = useState(true);
-    useUsedCarData('usedCarsOverview', setUsedCarsOverview, setAreCarsLoading)
+    useUsedCarData(
+        'usedCarsOverview',
+        setUsedCarsOverview,
+        setAreCarsLoading,
+        false
+    )
 
     return (
 

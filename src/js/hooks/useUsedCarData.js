@@ -7,15 +7,20 @@ let isFetching = false;
  * @param endpoint
  * @param setData
  * @param setIsLoading
+ * @param isRedundantRequest
  */
-export const useUsedCarData = (endpoint, setData, setIsLoading) => {
+export const useUsedCarData = (endpoint, setData, setIsLoading, isRedundantRequest) => {
 
     useEffect(() => {
         const fetchUsedCars = async () => {
 
-            //to avoid multiple requests
-            if (isFetching)
+            //to avoid multiple/redundant requests
+            if(isFetching)
                 return;
+            if(isRedundantRequest) {
+                setIsLoading(false);
+                return;
+            }
             isFetching = true;
 
             try {
@@ -33,14 +38,19 @@ export const useUsedCarData = (endpoint, setData, setIsLoading) => {
                     return
                 }
 
-                //JSON parsing
+                //JSON parsing and data extrapolation
                 const data = await res.json()
+                const { used_car_info } = data;
 
                 //set data
                 if (endpoint === 'usedCarsOverview') {
                     setData(data.used_cars_overview)
                 }else{
-                    setData(data.used_car_info)
+                    setData(prevData => {
+                        //add new object data to previous ones
+                        const currentData = prevData || [];
+                        return [...currentData, used_car_info];
+                    });
                 }
 
                 //loading is finish

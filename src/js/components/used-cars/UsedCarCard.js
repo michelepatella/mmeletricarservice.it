@@ -17,6 +17,7 @@ function UsedCarCard(props) {
     //to manage when the drawer is open/closed
     //and set that state
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const [usedCarInfo, setUsedCarInfo] = useState([]);
 
     return(
         <>
@@ -64,6 +65,8 @@ function UsedCarCard(props) {
             {
                 isDrawerOpen &&
                     <UsedCarDrawer
+                        usedCarInfo={usedCarInfo}
+                        setUsedCarInfo={setUsedCarInfo}
                         usedCarOverview={props.usedCarOverview}
                         setIsDrawerOpen={setIsDrawerOpen} />
             }

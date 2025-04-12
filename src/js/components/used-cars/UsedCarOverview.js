@@ -28,16 +28,14 @@ function UsedCarOverview (props) {
                         <Flex vertical>
 
                             {/* Flex container for icon + info name (horizontal) */}
-                            <Flex
-                                gap="small"
-                                horizontal>
+                            <Flex gap="small">
 
                                 {/* Icon */}
                                 <img src={info.icon}/>
 
                                 {/* Info title, if its needs to be shown, otherwise only the text */}
                                 <CustomText
-                                    type="body"
+                                    type="caption"
                                     text={props.isTitleVisible ? info.title : props.usedCarOverview[info.name]}
                                     disableAnimation={true}
                                     style={handleTextOverviewStyle(props.isTitleVisible)} />
@@ -48,13 +46,12 @@ function UsedCarOverview (props) {
                             {
                                 props.isTitleVisible ?
                                     <CustomText
-                                        type="body"
+                                        type="caption"
                                         text={props.usedCarOverview[info.name]}
                                         disableAnimation={true}
                                         style={handleTextOverviewStyle()} />
                                 : null
                             }
-
 
                         </Flex>
 

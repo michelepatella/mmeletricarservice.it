@@ -17,12 +17,18 @@ import CustomButton from "../custom/CustomButton";
  */
 function UsedCarDrawer(props) {
 
-    const [usedCarInfo, setUsedCarInfo] = useState([]);
+    //get the info of the used car of interest
+    const usedCarInfo = props.usedCarInfo.find((car) =>
+        car.id === props.usedCarOverview.id
+    );
+
+    //get used car info (if needed)
     const [isCarLoading, setIsCarLoading] = useState(true);
     useUsedCarData(
         'usedCarInfo?id=' + props.usedCarOverview.id,
-        setUsedCarInfo,
-        setIsCarLoading
+        props.setUsedCarInfo,
+        setIsCarLoading,
+        usedCarInfo !== undefined
     )
 
     return (
@@ -34,7 +40,7 @@ function UsedCarDrawer(props) {
                     <ArrowLeftOutlined/>
                     <CustomText
                         type="caption"
-                        text="Indietro"/>
+                        text="Indietro" />
                 </span>
             }
             onClose={() => onUsedCarDrawerClose(props.setIsDrawerOpen)}
@@ -97,20 +103,21 @@ function UsedCarDrawer(props) {
                             {/* Carousel to show car images */}
                             <Carousel
                                 arrows
+                                swipeToSlide={true}
                                 infinite={false}>
 
                                 {/* Add images */}
                                 {
                                     usedCarInfo?.images?.map((item, index) => (
                                         <Image.PreviewGroup
+                                            key={index}
                                             preview={{
                                                 toolbarRender: () => null,
-                                                maskClosable: true,
-                                            }}>
-                                            <Image
-                                                key={index}
-                                                src={item}
-                                                preview={true} />
+                                                maskClosable: true}}>
+                                                <Image
+                                                    key={index}
+                                                    src={item}
+                                                    preview={true} />
                                         </Image.PreviewGroup>
                                     ))
                                 }

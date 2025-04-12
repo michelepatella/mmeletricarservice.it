@@ -13,8 +13,8 @@
     align-items: center;
 }
 
-/* Icon styles */
+/* Used cars overview info icon styles */
 .used-car-overview-info-container img {
-    opacity: var(--text_opacity);
+    opacity: var(--text_low_opacity);
     margin-bottom: var(--used_car_overview_text_margin_top);
 }
