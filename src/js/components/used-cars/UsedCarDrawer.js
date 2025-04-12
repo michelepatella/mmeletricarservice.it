@@ -16,13 +16,20 @@ function UsedCarDrawer(props) {
 
         <Drawer
             className="used-car-drawer"
-            closeIcon={<ArrowLeftOutlined className="arrow-left-outlined"/>}
+            closeIcon={
+                <span className="close-label">
+                    <ArrowLeftOutlined/>
+                    <CustomText
+                        type="caption"
+                        text="Indietro"/>
+                </span>
+            }
             onClose={() => onUsedCarDrawerClose(props.setIsDrawerOpen)}
             open={() => onUsedCarDrawerOpen(props.setIsDrawerOpen)}>
 
             {/* Flex horizontal container (info column + carousel) */}
             <Flex
-                className="user-car-drawer-flex-horizontal"
+                className="used-car-drawer-flex-horizontal"
                 width="70%">
 
                 {/* Flex vertical container with overview information */}

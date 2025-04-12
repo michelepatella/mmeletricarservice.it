@@ -23,7 +23,7 @@
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
     .info-card {
-        width: 80%;
+        width: var(--info_card_width_big);
     }
 
     .info-card-flex {
@@ -34,7 +34,7 @@
 /* ------ Medium screen (portrait and landscape) ------ */
 @media (min-width: 768px) and (max-width: 1024px) {
     .info-card {
-        width: 60%;
+        width: var(--info_card_width_medium);
     }
 
     .info-card-flex {
@@ -45,7 +45,7 @@
 /* ------ Small screen portrait ------ */
 @media (max-width: 767px) {
     .info-card {
-        width: 90%;
+        width: var(--info_card_width_small_portrait);
     }
 
     .info-card-flex {

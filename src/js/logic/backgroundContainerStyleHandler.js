@@ -5,7 +5,7 @@
  */
 export const handleContainerStyle = (image) => {
     return {
-        height: '130vh',
+        height: 'var(--background_container_height)',
         background:
             'linear-gradient(to top, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%), ' +
             'linear-gradient(to bottom, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%), ' +

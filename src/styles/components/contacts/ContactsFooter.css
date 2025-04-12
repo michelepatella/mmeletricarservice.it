@@ -1,6 +1,6 @@
 /* Contacts Footer styles */
 .contacts-footer {
-    width: 90%;
+    width: var(--contacts_footer_width);
     margin-top: auto;
     display: flex;
     flex-direction: column;

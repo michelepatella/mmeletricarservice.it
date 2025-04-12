@@ -1,10 +1,10 @@
 /* Used cars container styles */
 .used-cars-container {
-    width: 120%;
+    width: var(--section_max_width);
     display: flex;
     flex-direction: row;
     padding: 1rem;
-    gap: 2rem;
+    gap: var(--used_car_card_gap);
     overflow-x: auto;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
@@ -22,9 +22,6 @@
 /* Loading outlines styles */
 .loading-outlined {
     position: relative;
-    margin-top: 20%;
-    margin-bottom: 50%;
-    margin-left: 58%;
-    margin-right: 50%;
+    margin: var(--used_cars_loading_outlined_margins);
     color: white;
 }

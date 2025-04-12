@@ -1,5 +1,5 @@
 /* Video animation styles */
 .video {
-    width: 80%;
+    width: var(--video_width);
     height: auto;
 }

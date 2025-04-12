@@ -35,7 +35,9 @@
 
 
     /* Components (General) */
+    --text_opacity: 0.7;
     --border_radius: 5px;
+    --gap_button_label: 0.5rem;
     --float_button_dimension: 40px;
     --float_button_margins: 10px;
 
@@ -58,22 +60,48 @@
     --info_card_margin_top: 50px;
     --info_card_icon_dimension: 30px;
     --info_card_flex_gap: 20px;
+    --info_card_width_big: 80%;
+    --info_card_width_medium: 60%;
+    --info_card_width_small_portrait: 90%;
 
 
     /* Used Cars Card */
     --used_car_card_padding: 15px 15px 0 15px;
     --used_car_card_img_max_width: 300px;
     --used_car_card_img_min_width: 250px;
+    --used_car_card_gap: 2rem;
 
 
     /* Used Car Overview */
-    --used_car_overview_margin_top: 4px;
+    --used_car_overview_text_margin_top: 4px;
+    --used_car_overview_info_container_margin_top: 1rem;
+
+
+    /* Used Car Drawer */
+    --used_car_drawer_close_label_padding_left: 40px;
+    --used_car_drawer_flex_horizontal_gap_big_medium: 5rem;
+    --used_car_drawer_flex_horizontal_gap_small: 3rem;
+    --carousel_container_width_big: 75%;
+    --carousel_container_width_medium_portrait: 100%;
+    --carousel_container_width_medium_landscape: 70%;
+    --carousel_container_width_small: 100%;
+
+
+    /* Section Container */
+    --section_container_width: 60%;
+    --section_container_width_small_portrait: 75%;
+    --section_max_width: 120%;
 
 
     /* Section Header */
     --section_header_gap: 20px;
     --section_header_margin_bottom: 50px;
     --section_header_subtitle_margin_bottom: 100px;
+    --section_header_subtitle_width: 85%;
+
+
+    /* Background Container */
+    --background_container_height: 130vh;
 
 
     /* Menu */
@@ -96,12 +124,25 @@
     --home_header_gap: 20px;
 
 
-    /* Contacts section */
-    --contact_buttons_gap: 30px;
+    /* Who we are */
+    --video_width: 80%;
+
+
+    /* Used cars */
+    --used_cars_scroll_label_margin_left: 22%;
+    --used_cars_loading_outlined_margins: 20% 50% 50% 58%;
 
 
     /* Where we are section */
     --google_maps_margin_top: 50px;
+    --google_maps_height: 60vh;
+    --google_maps_unavailable_height: 35vh;
+    --google_maps_unavailable_size: 10%;
+    --google_maps_unavailable_description_margins: 15% 5% 0 5%;
 
+
+    /* Contacts section */
+    --contact_buttons_gap: 30px;
+    --contacts_footer_width: 90%;
 
 }

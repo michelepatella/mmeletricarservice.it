@@ -1,6 +1,6 @@
 /* Section Header styles */
 .section-header {
-    width: 120%;
+    width: var(--section_max_width);
     margin-bottom: var(--section_header_margin_bottom);
     display: flex;
     flex-direction: column;

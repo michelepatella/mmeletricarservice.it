@@ -4,12 +4,12 @@
  */
 export const handleGoogleMapsContainerStyle = () => {
     return {
-        height: '35vh',
+        height: 'var(--google_maps_height)',
         background: 'url(/icons/map_icon.svg)',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center top',
-        backgroundSize: '10%',
-        opacity: '0.3',
+        backgroundSize: 'var(--google_maps_unavailable_size)',
+        opacity: 'var(--text_opacity)',
     };
 };
 
@@ -20,8 +20,6 @@ export const handleGoogleMapsContainerStyle = () => {
 export const handleGoogleMapsUnavailableDescriptionStyle = () => {
     return {
         textAlign: "center",
-        marginLeft: "5%",
-        marginRight: "5%",
-        marginTop: "15%"
+        margin: 'var(--google_maps_unavailable_description_margins)'
     };
 };

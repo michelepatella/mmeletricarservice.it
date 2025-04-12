@@ -1,6 +1,6 @@
 /* Section Container styles */
 .section-container {
-    width: 60%;
+    width: var(--section_container_width);
     margin-bottom: var(--section_margin_bottom);
 }
 
@@ -28,7 +28,7 @@
 /* ------ Small screen portrait ------- */
 @media (max-width: 767px) and (orientation: portrait) {
     .section-container {
-        width: 75%;
+        width: var(--section_container_width_small_portrait);
         margin-left: var(--section_margin_left_small_portrait);
     }
 }

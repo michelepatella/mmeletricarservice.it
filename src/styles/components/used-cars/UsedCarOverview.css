@@ -7,7 +7,7 @@
 
 /* Used cars overview info container styles */
 .used-car-overview-info-container {
-    margin-top: 1rem;
+    margin-top: var(--used_car_overview_info_container_margin_top);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,6 +15,6 @@
 
 /* Icon styles */
 .used-car-overview-info-container img {
-    opacity: 0.5;
-    margin-bottom: var(--used_car_overview_margin_top);
+    opacity: var(--text_opacity);
+    margin-bottom: var(--used_car_overview_text_margin_top);
 }

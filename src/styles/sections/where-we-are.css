@@ -1,7 +1,7 @@
 /* Google Maps container styles */
 .google-maps-container{
-    width: 120%;
-    height: 60vh;
+    width: var(--section_max_width);
+    height: var(--google_maps_height);
     margin-top: var(--google_maps_margin_top);
     overflow: hidden;
     border-radius: var(--border_radius);

@@ -1,6 +1,7 @@
 /* Used car drawer styles */
 .used-car-drawer,
 .ant-drawer-header {
+    font-family: Poppins;
     background: var(--darker_background_color) !important;
 }
 
@@ -16,17 +17,19 @@
 }
 
 /* User car drawer flex horizontal container styles */
-.user-car-drawer-flex-horizontal {
+.used-car-drawer-flex-horizontal {
     height: 100% !important;
 }
 
-/* Close icon styles */
-.arrow-left-outlined {
+/* Close icon label styles */
+.close-label {
+    padding-left: var(--used_car_drawer_close_label_padding_left) !important;
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap_button_label);
+    font-size: var(--caption_text_font_size);
+    font-family: Poppins;
     color: white !important;
-    margin: 0 !important;
-    position: absolute;
-    left: var(--float_button_margins);
-    padding: var(--float_button_margins) var(--float_button_margins) 0;
 }
 
 /* Carousel container styles */
@@ -36,29 +39,55 @@
     border-radius: var(--border_radius);
 }
 
+/* Carousel image container styles */
+.carousel-container .ant-image {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carousel image styles */
+.carousel-container .ant-image-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: var(--border_radius);
+}
+
+/* Carousel image mask styles */
+.carousel-container .ant-image-mask {
+    border-radius: var(--border_radius);
+}
+
 /* ----------- Big screen ----------- */
 @media (min-width: 1025px) {
-    .user-car-drawer-flex-horizontal {
+    .used-car-drawer-flex-horizontal {
         flex-direction: row;
-        gap: 5rem;
+        gap: var(--used_car_drawer_flex_horizontal_gap_big_medium);
     }
 
     .carousel-container {
-        width: 75%;
+        width: var(--carousel_container_width_big);
     }
 }
 /* ----------- Medium screen portrait ----------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .user-car-drawer-flex-horizontal {
+    .used-car-drawer-flex-horizontal {
         flex-direction: column;
-        gap: 5rem;
+        gap: var(--used_car_drawer_flex_horizontal_gap_big_medium);
     }
 
     .carousel-container {
-        width: 100%;
+        width: var(--carousel_container_width_medium_portrait);
     }
 
-    .user-car-drawer-flex-horizontal {
+    .used-car-drawer-flex-horizontal {
         flex-direction: column-reverse;
         justify-content: flex-end;
     }
@@ -66,28 +95,28 @@
 
 /* ----------- Medium screen landscape ----------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .user-car-drawer-flex-horizontal {
+    .used-car-drawer-flex-horizontal {
         flex-direction: row;
-        gap: 5rem;
+        gap: var(--used_car_drawer_flex_horizontal_gap_big_medium);
     }
 
     .carousel-container {
-        width: 70%;
+        width: var(--carousel_container_width_medium_landscape);
     }
 }
 
 /* ----------- Small screens ----------- */
 @media (max-width: 767px){
-    .user-car-drawer-flex-horizontal {
+    .used-car-drawer-flex-horizontal {
         flex-direction: column;
-        gap: 3rem;
+        gap: var(--used_car_drawer_flex_horizontal_gap_small);
     }
 
     .carousel-container {
-        width: 100%;
+        width: var(--carousel_container_width_small);
     }
 
-    .user-car-drawer-flex-horizontal {
+    .used-car-drawer-flex-horizontal {
         flex-direction: column-reverse;
         justify-content: flex-end;
     }

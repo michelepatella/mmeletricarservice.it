@@ -19,10 +19,10 @@ export const handleNamePriceStyle = () => {
 export const handleTextOverviewStyle = (isTitleVisible) => {
     return {
         marginTop: 0,
-        marginBottom: 'var(--used_car_overview_margin_top)',
+        marginBottom: 'var(--used_car_overview_text_margin_top)',
         fontFamily: 'Poppins',
         fontWeight: isTitleVisible ? 'bold' : 'normal',
-        opacity: 0.7,
+        opacity: 'var(--text_opacity)',
     };
 };
 
@@ -33,8 +33,8 @@ export const handleTextOverviewStyle = (isTitleVisible) => {
  */
 export const handleScrollLabelStyle = () => {
     return {
-        marginLeft: '22%',
+        marginLeft: 'var(--used_cars_scroll_label_margin_left)',
         textAlign: 'center',
-        opacity: 0.8
+        opacity: 'var(--text_opacity)'
     };
 };

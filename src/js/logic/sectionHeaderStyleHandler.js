@@ -9,7 +9,7 @@ export const handleSectionNameStyle = () => {
         fontFamily: 'Roboto, sans-serif',
         fontWeight: "bold",
         color: "var(--accent_color)",
-        opacity: 0.8,
+        opacity: 'var(--text_opacity)',
     };
 };
 
@@ -20,9 +20,9 @@ export const handleSectionNameStyle = () => {
  */
 export const handleSubtitleStyle = (hasMedia) => {
     return {
-        width: "85%",
+        width: "var(--section_header_subtitle_width)",
         marginBottom: hasMedia ? "var(--section_header_subtitle_margin_bottom)" : null,
         textAlign: "center",
-        opacity: 0.8
+        opacity: 'var(--text_opacity)'
     };
 };
