@@ -1,0 +1,6 @@
+/* Loading outlines styles */
+.loading-outlined {
+    position: relative;
+    margin: var(--used_cars_loading_outlined_margins);
+    color: white;
+}

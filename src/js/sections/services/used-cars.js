@@ -2,14 +2,14 @@ import React, {useState} from "react";
 import {LoadingOutlined} from "@ant-design/icons";
 import {
     USED_CARS_TITLE,
-    USED_CARS_SUBTITLE, USED_CARS_UNAVAILABLE_DESCRIPTION,
+    USED_CARS_SUBTITLE,
 } from "../../utils/const";
-import {useUsedCarsOverview} from "../../hooks/useUsedCarsOverview";
 import {handleScrollLabelStyle} from "../../logic/usedCarsStyleHandler";
 import SectionContainer from "../../components/sections/SectionContainer";
 import UsedCarCard from "../../components/used-cars/UsedCarCard";
 import SectionHeader from "../../components/sections/SectionHeader";
 import CustomText from "../../components/custom/CustomText";
+import {useUsedCarData} from "../../hooks/useUsedCarData";
 
 /**
  * Used cars section
@@ -19,9 +19,9 @@ import CustomText from "../../components/custom/CustomText";
 function UsedCars() {
 
     //get used cars overview information
-    const [usedCars, setUsedCars] = useState([]);
+    const [usedCarsOverview, setUsedCarsOverview] = useState([]);
     const [areCarsLoading, setAreCarsLoading] = useState(true);
-    useUsedCarsOverview(setUsedCars, setAreCarsLoading)
+    useUsedCarData('usedCarsOverview', setUsedCarsOverview, setAreCarsLoading)
 
     return (
 
@@ -49,11 +49,11 @@ function UsedCars() {
                             <div className="used-cars-container">
                                 {/* Used Car Card for all the available cars */}
                                 {
-                                    usedCars.length > 0 ?
-                                        usedCars.map((car, index) => (
+                                    usedCarsOverview.length > 0 ?
+                                        usedCarsOverview.map((car, index) => (
                                             <UsedCarCard
                                                 key={index}
-                                                car={car} />
+                                                usedCarOverview={car} />
                                         ))
 
                                         : null
@@ -62,7 +62,7 @@ function UsedCars() {
 
                             {/* Scroll label, if any car */}
                             {
-                                usedCars.length > 0 ?
+                                usedCarsOverview.length > 0 ?
                                     <CustomText
                                         type="body"
                                         text="< Scorri per visualizzare >"

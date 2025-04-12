@@ -26,7 +26,7 @@ function UsedCarCard(props) {
 
                 {/* Image presentation */}
                 <div className="used-cars-image-container">
-                    <img src={props.car.image}/>
+                    <img src={props.usedCarOverview.image}/>
                 </div>
 
                 {/* Flex container to contain information */}
@@ -38,20 +38,20 @@ function UsedCarCard(props) {
                     {/* Name of the car */}
                     <CustomText
                         type="body"
-                        text={props.car.name}
+                        text={props.usedCarOverview.name}
                         disableAnimation={true}
                         style={handleNamePriceStyle()}/>
 
                     {/* Overview information */}
                     <UsedCarOverview
                         overview={true}
-                        car={props.car}/>
+                        usedCarOverview={props.usedCarOverview}/>
 
                     <div className="used-cars-card-price-container">
                         {/* Price */}
                         <CustomText
                             type="body"
-                            text={props.car.price}
+                            text={props.usedCarOverview.price}
                             disableAnimation={true}
                             style={handleNamePriceStyle()}/>
                     </div>
@@ -64,7 +64,7 @@ function UsedCarCard(props) {
             {
                 isDrawerOpen &&
                     <UsedCarDrawer
-                        car={props.car}
+                        usedCarOverview={props.usedCarOverview}
                         setIsDrawerOpen={setIsDrawerOpen} />
             }
 

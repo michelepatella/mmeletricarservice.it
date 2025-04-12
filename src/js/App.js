@@ -23,19 +23,20 @@ import '../styles/sections/contacts.css';
 import '../styles/components/home/HomeHeader.css';
 import '../styles/components/custom/CustomButton.css';
 import '../styles/components/home/HomeContent.css';
-import '../styles/components/other/InfoCard.css';
 import "../styles/components/contacts/ContactsContent.css";
+import '../styles/components/contacts/ContactsFooter.css';
 import '../styles/components/cookie/CookieButton.css';
 import '../styles/components/cookie/CookieConsentBanner.css';
-import '../styles/components/contacts/ContactsFooter.css';
 import '../styles/components/custom/CustomIconButton.css';
+import '../styles/components/custom/CustomText.css';
 import '../styles/components/sections/SectionContainer.css';
 import '../styles/components/sections/SectionHeader.css';
-import '../styles/components/custom/CustomText.css';
 import '../styles/components/used-cars/UsedCarOverview.css';
 import '../styles/components/used-cars/UsedCarCard.css';
 import '../styles/components/used-cars/UsedCarDrawer.css';
 import '../styles/components/other/Menu.css';
+import '../styles/components/other/InfoCard.css';
+import '../styles/components/other/LoadingOutlined.css';
 import '../styles/variables.css';
 
 /**
