@@ -91,10 +91,18 @@ function UsedCarDrawer(props) {
                                 {/* Add images */}
                                 {
                                     usedCarInfo?.images?.map((item, index) => (
+                                        <Image.PreviewGroup
+                                            preview={{
+                                                toolbarRender: () => null,
+                                                maskClosable: true,
+                                            }}>
+
                                             <Image
-                                                key={index}
-                                                src={item}
-                                                preview={true} />
+                                                    key={index}
+                                                    src={item}
+                                                    preview={true} />
+
+                                        </Image.PreviewGroup>
                                     ))
                                 }
 
