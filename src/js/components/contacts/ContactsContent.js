@@ -16,7 +16,7 @@ function ContactsContent() {
 
     return (
         <>
-            <SectionContainer id="contacts">
+            <SectionContainer id="contatti">
 
                 {/* Section header */}
                 <SectionHeader

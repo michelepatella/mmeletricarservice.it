@@ -18,35 +18,35 @@ export const SECTIONS = [
         title: 'Home'
     },
     {
-        id: 'about-us',
+        id: 'chi-siamo',
         title: 'Chi siamo',
         children: [
             {
-                id: 'our-values',
+                id: 'i-nostri-valori',
                 title: 'I nostri valori'
             }
         ]
     },
     {
-        id: 'services',
+        id: 'servizi',
         title: 'Servizi',
         children: [
             {
-                id: 'all-services',
+                id: 'tutti-i-servizi',
                 title: 'Tutti i servizi'
             },
             {
-                id: 'used-cars',
+                id: 'auto-usate',
                 title: 'Auto usate'
             }
         ]
     },
     {
-        id: 'where-we-are',
+        id: 'dove-siamo',
         title: 'Dove siamo'
     },
     {
-        id: 'contacts',
+        id: 'contatti',
         title: 'Contatti'
     }
 ];
@@ -164,6 +164,7 @@ export const USED_CAR_OVERVIEW =[
 
     }
 ]
+export const SCROLL_LABEL_TEXT = "< Scorri per visualizzare >"
 export const USED_CARS_UNAVAILABLE_DESCRIPTION = "Nessuna auto attualmente disponibile."
 
 /**------------- "Where we are" texts -------------**/

@@ -29,8 +29,7 @@ function UsedCarCard(props) {
                 className="used-cars-card"
                 onClick={() => onUsedCarDrawerOpen(
                     setIsDrawerOpen,
-                    props.usedCarOverview.id)
-                }>
+                    props.usedCarOverview.id)}>
 
                 {/* Image presentation */}
                 <div className="used-cars-image-container">

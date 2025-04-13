@@ -16,7 +16,7 @@ function AboutUs() {
 
     return (
 
-            <SectionContainer id="about-us">
+            <SectionContainer id="chi-siamo">
 
                 {/* Section header */}
                 <SectionHeader

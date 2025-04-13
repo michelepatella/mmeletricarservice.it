@@ -12,7 +12,7 @@ import CustomText from "../../components/custom/CustomText";
 function AllServices() {
     return (
 
-        <SectionContainer id="all-services">
+        <SectionContainer id="tutti-i-servizi">
 
             {/* Section title */}
             <CustomText

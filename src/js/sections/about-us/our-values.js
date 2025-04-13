@@ -22,7 +22,7 @@ function OurValues() {
 
     return (
 
-        <SectionContainer id="our-values">
+        <SectionContainer id="i-nostri-valori">
 
             {/* Section header */}
             <SectionHeader

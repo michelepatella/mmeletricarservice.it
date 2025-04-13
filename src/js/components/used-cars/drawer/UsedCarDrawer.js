@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import {Drawer, Flex} from "antd";
-import {ArrowLeftOutlined, LoadingOutlined} from "@ant-design/icons";
+import {LoadingOutlined} from "@ant-design/icons";
 import {onUsedCarDrawerClose} from "../../../logic/usedCarDrawerHandler";
 import {useUsedCarData} from "../../../hooks/useUsedCarData";
-import {useBackButtonHandler} from "../../../hooks/useBackDrawer";
-import CustomText from "../../custom/CustomText";
+import {useDrawerBackButtonHandler} from "../../../hooks/useDrawerBackDrawer";
 import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
 import UsedCarDrawerVerticalFlex from "./UsedCarDrawerVerticalFlex";
+import CustomBackButton from "../../custom/CustomBackButton";
 
 /**
  * Used Car Drawer
@@ -31,20 +31,13 @@ function UsedCarDrawer(props) {
     )
 
     //to capture back button click
-    useBackButtonHandler(props.setIsDrawerOpen)
+    useDrawerBackButtonHandler(props.setIsDrawerOpen)
 
     return (
 
         <Drawer
             className="used-car-drawer"
-            closeIcon={
-                <span className="close-label">
-                    <ArrowLeftOutlined/>
-                    <CustomText
-                        type="caption"
-                        text="Indietro" />
-                </span>
-            }
+            closeIcon={<CustomBackButton />}
             onClose={() => onUsedCarDrawerClose(props.setIsDrawerOpen)}
             open={true}>
 

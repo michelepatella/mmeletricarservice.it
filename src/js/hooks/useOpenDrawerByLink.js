@@ -2,7 +2,7 @@ import {useEffect} from "react";
 import {onUsedCarDrawerOpen} from "../logic/usedCarDrawerHandler";
 
 /**
- * Method to check if the URL corresponds to a used car's drawer
+ * Custom hook to check if the URL corresponds to a used car's drawer
  * that must be open
  * @param setIsDrawerOpen
  * @param id

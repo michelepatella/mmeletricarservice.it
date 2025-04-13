@@ -29,6 +29,7 @@ import '../styles/components/cookie/CookieButton.css';
 import '../styles/components/cookie/CookieConsentBanner.css';
 import '../styles/components/custom/CustomIconButton.css';
 import '../styles/components/custom/CustomText.css';
+import '../styles/components/custom/CustomBackButton.css';
 import '../styles/components/sections/SectionContainer.css';
 import '../styles/components/sections/SectionHeader.css';
 import '../styles/components/used-cars/UsedCarOverview.css';

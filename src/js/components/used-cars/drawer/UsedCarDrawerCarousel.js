@@ -1,5 +1,5 @@
-import {Carousel, Image} from "antd";
 import React from "react";
+import {Carousel, Image} from "antd";
 
 /**
  * Used Car Drawer Carousel

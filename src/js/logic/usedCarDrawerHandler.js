@@ -28,6 +28,5 @@ export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
     document.documentElement.style.overflowY = 'auto';
 
     //redirect the user to the used cars page
-    window.location.hash = '#used-cars';
+    window.history.replaceState({}, '', '/');
 };
-

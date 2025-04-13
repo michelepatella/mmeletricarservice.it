@@ -3,6 +3,7 @@ import {LoadingOutlined} from "@ant-design/icons";
 import {
     USED_CARS_TITLE,
     USED_CARS_SUBTITLE,
+    SCROLL_LABEL_TEXT, USED_CARS_UNAVAILABLE_DESCRIPTION
 } from "../../utils/const";
 import {handleScrollLabelStyle} from "../../logic/usedCarsStyleHandler";
 import {useUsedCarData} from "../../hooks/useUsedCarData";
@@ -31,14 +32,13 @@ function UsedCars() {
     return (
 
         <>
-            <SectionContainer id="used-cars">
+            <SectionContainer id="auto-usate">
 
                 {/* Section Header */}
                 <SectionHeader
                     section="AUTO USATE"
                     title={USED_CARS_TITLE}
                     subtitle={USED_CARS_SUBTITLE} />
-
 
                 {/* While the cars are loading show the loading outlined. As soon
                 as the loading is finished, if data is not empty, show it. */}
@@ -60,8 +60,11 @@ function UsedCars() {
                                                 key={index}
                                                 usedCarOverview={car} />
                                         ))
-
-                                        : null
+                                        :
+                                        //no car available
+                                        <CustomText
+                                            type="body"
+                                            text={USED_CARS_UNAVAILABLE_DESCRIPTION} />
                                 }
                             </div>
 
@@ -70,7 +73,7 @@ function UsedCars() {
                                 usedCarsOverview.length > 0 ?
                                     <CustomText
                                         type="body"
-                                        text="< Scorri per visualizzare >"
+                                        text={SCROLL_LABEL_TEXT}
                                         style={handleScrollLabelStyle()}/>
                                     : null
                             }

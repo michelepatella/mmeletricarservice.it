@@ -23,7 +23,7 @@ function WhereWeAre(props) {
     return (
 
         <>
-            <SectionContainer id="where-we-are">
+            <SectionContainer id="dove-siamo">
 
                 {/* Section header */}
                 <SectionHeader
