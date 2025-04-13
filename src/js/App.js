@@ -12,7 +12,7 @@ import UsedCars from "./sections/services/used-cars";
 import WhereWeAre from "./sections/where-we-are";
 import Contacts from './sections/contacts';
 import Menu from './components/menu/Menu';
-import CookieConsentBanner from "./components/other/CookieConsentBanner";
+import CookieConsentBanner from "./components/cookie/CookieConsentBanner";
 import '../index.css';
 import '../styles/App.css';
 import '../styles/sections/home.css';

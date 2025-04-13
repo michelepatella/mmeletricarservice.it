@@ -1,5 +1,5 @@
 /* Cookie Consent styles*/
-.CookieConsent{
+.CookieConsent {
     font-size: var(--caption_text_font_size) !important;
     font-family: 'Poppins' !important;
     color: white !important;
@@ -9,38 +9,27 @@
 
 /* Cookie Consent buttons styles */
 .CookieConsent #rcc-decline-button, #rcc-confirm-button {
-    color: white !important;
     font-size: var(--caption_text_font_size) !important;
     font-family: 'Poppins' !important;
     border: 1px solid white !important;
     border-radius: var(--border_radius) !important;
     padding: var(--cookie_consent_banner_button_padding) !important;
-    background-color: var(--background_color) !important;
     transition: all 0.3s ease;
 }
 
-.CookieConsent #rcc-decline-button:hover, #rcc-confirm-button:hover {
-    font-family: 'Poppins' !important;
-    border: 1px solid white !important;
-    border-radius: var(--border_radius) !important;
-    padding: var(--cookie_consent_banner_button_padding) !important;
-    filter: invert(1);
-    transition: all 0.3s ease !important;
+.CookieConsent #rcc-confirm-button {
+    background-color: white !important;
+    color: black !important;
+}
+
+.CookieConsent #rcc-decline-button {
+    background-color: transparent !important;
+    color: white !important;
 }
 
 /* Policy links styles */
-.policy-link{
+.policy-link {
     color: white;
     text-decoration: underline;
     font-weight: bold;
-}
-
-/* Switch container styles */
-.cookie-switch-container{
-    margin: var(--cookie_consent_banner_switch_margin_top_bottom);
-    margin-left: 0;
-    margin-right: 0;
-    display: flex;
-    align-items: center;
-    gap: var(--gap_button_label);
 }
