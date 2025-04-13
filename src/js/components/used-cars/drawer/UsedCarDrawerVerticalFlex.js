@@ -1,9 +1,9 @@
-import CustomText from "../../custom/CustomText";
+import React from "react";
+import {CONTACTS, PHONE} from "../../../utils/const";
 import {handleNamePriceStyle} from "../../../logic/usedCarsStyleHandler";
+import CustomText from "../../custom/CustomText";
 import UsedCarOverview from "../UsedCarOverview";
 import CustomButton from "../../custom/CustomButton";
-import {CONTACTS, PHONE} from "../../../utils/const";
-import React from "react";
 
 /**
  * Used Car Drawer Vertical Flex

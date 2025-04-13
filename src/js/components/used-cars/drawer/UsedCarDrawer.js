@@ -7,7 +7,6 @@ import {useDrawerBackButtonHandler} from "../../../hooks/useDrawerBackDrawer";
 import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
 import UsedCarDrawerVerticalFlex from "./UsedCarDrawerVerticalFlex";
 import CustomBackButton from "../../custom/CustomBackButton";
-import {Helmet} from "react-helmet";
 import CustomCarHelmet from "../../custom/CustomCarHelmet";
 
 /**

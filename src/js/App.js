@@ -27,6 +27,7 @@ import "../styles/components/contacts/ContactsContent.css";
 import '../styles/components/contacts/ContactsFooter.css';
 import '../styles/components/cookie/CookieButton.css';
 import '../styles/components/cookie/CookieConsentBanner.css';
+import '../styles/components/cookie/CookieSwitchContainer.css';
 import '../styles/components/custom/CustomIconButton.css';
 import '../styles/components/custom/CustomText.css';
 import '../styles/components/custom/CustomBackButton.css';

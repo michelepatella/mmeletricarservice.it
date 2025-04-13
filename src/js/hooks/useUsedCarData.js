@@ -31,11 +31,11 @@ export const useUsedCarData = (endpoint, setData, setIsLoading, isRedundantReque
                 //check the response status
                 if (!res.ok) {
                     const errorData = await res.json()
-                    console.error('Error fetching data:', errorData.error)
-                    setData([])
+                    console.error('Error fetching data:', errorData.error);
+                    setData([]);
                     //loading is finish
-                    setIsLoading(false)
-                    return
+                    setIsLoading(false);
+                    return;
                 }
 
                 //JSON parsing and data extrapolation
@@ -44,7 +44,7 @@ export const useUsedCarData = (endpoint, setData, setIsLoading, isRedundantReque
 
                 //set data
                 if (endpoint === 'usedCarsOverview') {
-                    setData(data.used_cars_overview)
+                    setData(data.used_cars_overview);
                 }else{
                     setData(prevData => {
                         //add new object data to previous ones
@@ -54,14 +54,14 @@ export const useUsedCarData = (endpoint, setData, setIsLoading, isRedundantReque
                 }
 
                 //loading is finish
-                setIsLoading(false)
+                setIsLoading(false);
 
             } catch (error) {
                 //handle errors while acquiring data
-                console.error('Error fetching data:', error)
-                setData([])
+                console.error('Error fetching data:', error);
+                setData([]);
                 //loading is finish
-                setIsLoading(false)
+                setIsLoading(false);
 
             } finally {
                 //fetching data is finished
