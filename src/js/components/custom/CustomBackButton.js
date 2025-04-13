@@ -16,7 +16,9 @@ function CustomBackButton() {
 
             {/* Close label */}
             <CustomText
-                type="caption"
+                type="body"
+                disableAnimation={true}
+                style={{ opacity: 1 }}
                 text="Indietro"/>
         </span>
 
