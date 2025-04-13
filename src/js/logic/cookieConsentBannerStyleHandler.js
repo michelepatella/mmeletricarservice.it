@@ -6,6 +6,7 @@
  */
 export const handleSwitchStyle = (tempPreferences, type) => {
     return {
-        backgroundColor: tempPreferences || type === "necessary-cookie" ? "var(--blue_color)" : "gray",
+        backgroundColor: tempPreferences || type === "necessary-cookie"
+            ? "var(--blue_color)" : "gray",
     };
 }

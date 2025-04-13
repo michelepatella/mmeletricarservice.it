@@ -2,7 +2,8 @@ import {useState} from "react";
 import {Flex} from "antd";
 import {onUsedCarDrawerOpen} from "../../logic/usedCarDrawerHandler";
 import {handleNamePriceStyle} from "../../logic/usedCarsStyleHandler";
-import UsedCarDrawer from "./UsedCarDrawer";
+import {useOpenDrawerByLink} from "../../hooks/useOpenDrawerByLink";
+import UsedCarDrawer from "./drawer/UsedCarDrawer";
 import CustomText from "../custom/CustomText";
 import UsedCarOverview from "./UsedCarOverview";
 
@@ -19,11 +20,17 @@ function UsedCarCard(props) {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [usedCarInfo, setUsedCarInfo] = useState([]);
 
-    return(
+    //check if the current used car has been requested by a link
+    useOpenDrawerByLink(setIsDrawerOpen, props.usedCarOverview.id.toString());
+
+    return (
         <>
             <div
                 className="used-cars-card"
-                onClick={() => onUsedCarDrawerOpen(setIsDrawerOpen)}>
+                onClick={() => onUsedCarDrawerOpen(
+                    setIsDrawerOpen,
+                    props.usedCarOverview.id)
+                }>
 
                 {/* Image presentation */}
                 <div className="used-cars-image-container">

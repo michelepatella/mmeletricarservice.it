@@ -6,7 +6,7 @@ const supabase = createClient(
 )
 
 /**
- * Method to get all the used car information
+ * API to get all the used car information
  * @param req
  * @param res
  * @returns {Promise<*>}

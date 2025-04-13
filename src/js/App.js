@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react"
 import {Button} from "antd";
 import {handleCookieButtonClick, useCookieConsent} from "./hooks/useCookieConsent";
@@ -34,6 +34,7 @@ import '../styles/components/sections/SectionHeader.css';
 import '../styles/components/used-cars/UsedCarOverview.css';
 import '../styles/components/used-cars/UsedCarCard.css';
 import '../styles/components/used-cars/UsedCarDrawer.css';
+import '../styles/components/used-cars/drawer/UsedCarDrawerCarousel.css';
 import '../styles/components/other/Menu.css';
 import '../styles/components/other/InfoCard.css';
 import '../styles/components/other/LoadingOutlined.css';
@@ -60,7 +61,7 @@ function App() {
     return (
         <>
             <Analytics/>
-            <Router>
+            <HashRouter>
                 <>
 
                     {/* Cookies button */}
@@ -91,7 +92,7 @@ function App() {
                     <Contacts/>
 
                 </>
-            </Router>
+            </HashRouter>
         </>
     );
 }
