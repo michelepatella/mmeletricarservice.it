@@ -12,7 +12,7 @@ export const onUsedCarDrawerOpen = (setIsDrawerOpen, id) => {
     document.documentElement.style.overflowY = 'hidden';
 
     //change the link dynamically
-    window.history.pushState({ id: id }, '', 'used-car' + id);
+    window.history.pushState({ id: id }, '', 'used-cars' + id);
 };
 
 /**

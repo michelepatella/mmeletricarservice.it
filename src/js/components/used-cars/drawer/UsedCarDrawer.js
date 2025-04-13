@@ -7,6 +7,8 @@ import {useDrawerBackButtonHandler} from "../../../hooks/useDrawerBackDrawer";
 import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
 import UsedCarDrawerVerticalFlex from "./UsedCarDrawerVerticalFlex";
 import CustomBackButton from "../../custom/CustomBackButton";
+import {Helmet} from "react-helmet";
+import CustomCarHelmet from "../../custom/CustomCarHelmet";
 
 /**
  * Used Car Drawer
@@ -34,47 +36,53 @@ function UsedCarDrawer(props) {
     useDrawerBackButtonHandler(props.setIsDrawerOpen)
 
     return (
+        <>
+            {/* Customized helmet for the link sharing */}
+            <CustomCarHelmet usedCarOverview={props.usedCarOverview}/>
 
-        <Drawer
-            className="used-car-drawer"
-            closeIcon={<CustomBackButton />}
-            onClose={() => onUsedCarDrawerClose(props.setIsDrawerOpen)}
-            open={true}>
+            {/* Drawer */}
+            <Drawer
+                className="used-car-drawer"
+                closeIcon={<CustomBackButton />}
+                onClose={() => onUsedCarDrawerClose(props.setIsDrawerOpen)}
+                open={true}>
 
-            {
-                isCarLoading ?
-                    //loading outlined since the
-                    //system is loading the used cars
-                    <LoadingOutlined
-                        className="loading-outlined"
-                        spin={isCarLoading}
-                        style={{ width: "100%" }} />
-                :
-                <>
-                    {/* Flex horizontal container (info column + carousel) */}
-                    <Flex
-                        className="used-car-drawer-flex-horizontal"
-                        width="70%">
+                {
+                    isCarLoading ?
+                        //loading outlined since the
+                        //system is loading the used cars
+                        <LoadingOutlined
+                            className="loading-outlined"
+                            spin={isCarLoading}
+                            style={{ width: "100%" }} />
+                        :
+                        <>
+                            {/* Flex horizontal container (info column + carousel) */}
+                            <Flex
+                                className="used-car-drawer-flex-horizontal"
+                                width="70%">
 
-                        {/* Flex vertical container with overview information */}
-                        <Flex
-                            vertical
-                            width="30%">
+                                {/* Flex vertical container with overview information */}
+                                <Flex
+                                    vertical
+                                    width="30%">
 
-                            {/* Vertical flex (Name, Price, Overview info and CTA button) */}
-                            <UsedCarDrawerVerticalFlex usedCarOverview={props.usedCarOverview}/>
+                                    {/* Vertical flex (Name, Price, Overview info and CTA button) */}
+                                    <UsedCarDrawerVerticalFlex usedCarOverview={props.usedCarOverview}/>
 
-                        </Flex>
+                                </Flex>
 
-                        {/* Carousel */}
-                        <UsedCarDrawerCarousel usedCarInfo={usedCarInfo}/>
+                                {/* Carousel */}
+                                <UsedCarDrawerCarousel usedCarInfo={usedCarInfo}/>
 
-                    </Flex>
-                </>
+                            </Flex>
+                        </>
 
-            }
+                }
 
-        </Drawer>
+            </Drawer>
+
+        </>
 
     );
 }

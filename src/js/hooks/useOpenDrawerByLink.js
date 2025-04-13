@@ -19,7 +19,7 @@ export const useOpenDrawerByLink = (setIsDrawerOpen, id) => {
         const path = window.location.pathname;
 
         //extrapolate the used car's id specified by the path
-        const carIdMatch = path.match(/^\/used-car(\d+)$/);
+        const carIdMatch = path.match(/^\/used-cars(\d+)$/);
 
         //if an id has been found in the path
         if (carIdMatch) {
