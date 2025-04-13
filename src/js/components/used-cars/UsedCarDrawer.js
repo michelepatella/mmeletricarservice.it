@@ -52,7 +52,8 @@ function UsedCarDrawer(props) {
                     //system is loading the used cars
                     <LoadingOutlined
                         className="loading-outlined"
-                        spin={isCarLoading} />
+                        spin={isCarLoading}
+                        style={{ width: "100%" }} />
                 :
                 <>
                     {/* Flex horizontal container (info column + carousel) */}
