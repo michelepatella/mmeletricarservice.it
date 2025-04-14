@@ -87,7 +87,8 @@
     --carousel_container_width_medium_portrait: 100%;
     --carousel_container_width_medium_landscape: 70%;
     --carousel_container_width_small: 100%;
-    --carousel_max_height: 80vh;
+    --carousel_max_height_flex_column: 80vh;
+    --carousel_max_height_flex_row: 40vh;
 
 
     /* Section Container */

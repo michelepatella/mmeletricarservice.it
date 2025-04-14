@@ -1,8 +1,6 @@
 /* Carousel container styles */
 .carousel-container {
     max-width: 100%;
-    max-height: var(--carousel_max_height);
-    border-radius: var(--border_radius);
 }
 
 /* Carousel image container styles */
@@ -10,7 +8,6 @@
     width: 100%;
     height: 100%;
     max-width: 100%;
-    max-height: var(--carousel_max_height);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,11 +16,9 @@
 /* Carousel image styles */
 .carousel-container .ant-image-img {
     max-width: 100%;
-    max-height: var(--carousel_max_height);
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: var(--border_radius);
 }
 
 /* Carousel image mask styles */
@@ -35,12 +30,30 @@
 @media (min-width: 1025px) {
     .carousel-container {
         width: var(--carousel_container_width_big);
+        max-height: var(--carousel_max_height_flex_column);
+    }
+
+    .carousel-container .ant-image {
+        max-height: var(--carousel_max_height_flex_column);
+    }
+
+    .carousel-container .ant-image-img {
+        max-height: var(--carousel_max_height_flex_column);
     }
 }
 /* ----------- Medium screen portrait ----------- */
 @media (min-width: 768px) and (max-width: 1024px) {
     .carousel-container {
         width: var(--carousel_container_width_medium_portrait);
+        max-height: var(--carousel_max_height_flex_row);
+    }
+
+    .carousel-container .ant-image {
+        max-height: var(--carousel_max_height_flex_row);
+    }
+
+    .carousel-container .ant-image-img {
+        max-height: var(--carousel_max_height_flex_row);
     }
 }
 
@@ -48,12 +61,46 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .carousel-container {
         width: var(--carousel_container_width_medium_landscape);
+        max-height: var(--carousel_max_height_flex_column);
+    }
+
+    .carousel-container .ant-image {
+        max-height: var(--carousel_max_height_flex_column);
+    }
+
+    .carousel-container .ant-image-img {
+        max-height: var(--carousel_max_height_flex_column);
     }
 }
 
-/* ----------- Small screens ----------- */
+/* ----------- Small screen portrait ----------- */
 @media (max-width: 767px){
     .carousel-container {
         width: var(--carousel_container_width_small);
+        max-height: var(--carousel_max_height_flex_row);
+    }
+
+    .carousel-container .ant-image {
+        max-height: var(--carousel_max_height_flex_row);
+    }
+
+    .carousel-container .ant-image-img {
+        max-height: var(--carousel_max_height_flex_row);
+    }
+}
+
+/* ----------- Small screen landscape ----------- */
+@media (max-width: 767px) and (orientation: landscape) {
+    .carousel-container {
+        width: var(--carousel_container_width_small);
+        max-height: var(--carousel_max_height_flex_column);
+    }
+
+    .carousel-container .ant-image {
+        max-height: var(--carousel_max_height_flex_column);
+    }
+
+    .carousel-container .ant-image-img {
+        max-height: var(--carousel_max_height_flex_column);
     }
 }
