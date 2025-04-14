@@ -1,7 +1,6 @@
 /* Used cars card styles */
 .used-cars-card {
-    max-width: var(--used_car_card_img_max_width);
-    min-width: var(--used_car_card_img_min_width);
+    width: var(--used_car_card_width);
     padding: var(--used_car_card_padding);
     background: var(--darker_background_color);
     border-radius: var(--border_radius);

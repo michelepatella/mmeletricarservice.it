@@ -68,8 +68,7 @@
 
     /* Used Cars Card */
     --used_car_card_padding: 0 15px 0 15px;
-    --used_car_card_img_max_width: 300px;
-    --used_car_card_img_min_width: 250px;
+    --used_car_card_width: 300px;
     --used_car_card_gap: 2rem;
 
 
