@@ -40,7 +40,8 @@ function UsedCarDrawerCarousel(props) {
                             }}>
                             <Image
                                 src="/images/empty-carousel-image.svg"
-                                preview={true} />
+                                dots={false}
+                                preview={false} />
                         </Image.PreviewGroup>
                 }
 
