@@ -11,7 +11,7 @@ import CustomText from "./CustomText";
 function CustomBackButton() {
     return (
 
-        <span className="close-label">
+        <span className="custom-back-button">
             {/* Close button */}
             <LeftOutlined/>
 

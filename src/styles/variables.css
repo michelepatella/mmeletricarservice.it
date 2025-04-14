@@ -53,8 +53,9 @@
 
 
     /* Custom Back Button */
-    --custom_back_button_padding_left_big_medium_landscape: 4.5rem;
-    --custom_back_button_padding_left_small_medium_portrait: 3rem;
+    --custom_back_button_padding_left_big: 4rem;
+    --custom_back_button_padding_left_small_portrait_medium_portrait: 3.2rem;
+    --custom_back_button_padding_left_small_landscape_medium_landscape: 3.2rem;
     --custom_back_button_padding_top: 20px;
 
 
