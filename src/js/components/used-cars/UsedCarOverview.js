@@ -31,7 +31,9 @@ function UsedCarOverview (props) {
                             <Flex gap="small">
 
                                 {/* Icon */}
-                                <img src={info.icon}/>
+                                <img
+                                    src={info.icon}
+                                    alt="Icona" />
 
                                 {/* Info title, if its needs to be shown, otherwise only the text */}
                                 <CustomText

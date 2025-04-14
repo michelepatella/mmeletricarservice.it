@@ -36,7 +36,9 @@ function UsedCarCard(props) {
                 {
                     props.usedCarOverview.image ?
                         <div className="used-cars-image-container">
-                            <img src={props.usedCarOverview.image}/>
+                            <img
+                                src={props.usedCarOverview.image}
+                                alt="Immagine auto" />
                         </div>
                         :
                         <div className="used-cars-image-container">

@@ -66,7 +66,9 @@ function UsedCars() {
                             type="body"
                             text={USED_CARS_UNAVAILABLE_DESCRIPTION}
                             style={{ textAlign: 'center' }} />
-                        <img src="/images/used-car-images.jpeg" />
+                        <img
+                            src="/images/used-car-images.jpeg"
+                            alt="Auto usate non disponibili"/>
                     </div>
                 )
             }

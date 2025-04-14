@@ -83,16 +83,15 @@
 .close-outline {
     color: white;
     position: absolute;
-    padding: 0;
+    padding: var(--float_button_margins) 0 0;
     right: calc(var(--float_button_margins) * 2);
-    padding-top: var(--float_button_margins);
 }
 
 /* Big menu items styles */
 .ant-anchor-link-title {
     color: white !important;
     font-size: var(--body_font_size_medium);
-    font-family: 'Poppins' !important;
+    font-family: 'Poppins', 'sans-serif' !important;
     padding-top: var(--menu_items_gap);
     transition: color 0.3s ease;
 }

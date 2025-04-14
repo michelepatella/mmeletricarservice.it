@@ -5,7 +5,7 @@
     gap: var(--gap_button_label);
     color: white !important;
     font-size: var(--caption_text_font_size);
-    font-family: Poppins;
+    font-family: 'Poppins', 'sans-serif';;
 }
 
 /* ------ Big screen ------- */

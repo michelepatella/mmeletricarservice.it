@@ -11,7 +11,7 @@
 /* Used car drawer styles */
 .used-car-drawer,
 .ant-drawer-header {
-    font-family: Poppins;
+    font-family: 'Poppins', 'sans-serif';
     background: var(--darker_background_color) !important;
 }
 
