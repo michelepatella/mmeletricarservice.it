@@ -1,5 +1,5 @@
 import React from "react";
-import {ArrowLeftOutlined} from "@ant-design/icons";
+import {LeftOutlined} from "@ant-design/icons";
 import CustomText from "./CustomText";
 
 /**
@@ -12,14 +12,14 @@ function CustomBackButton() {
 
         <span className="close-label">
             {/* Close button */}
-            <ArrowLeftOutlined/>
+            <LeftOutlined/>
 
             {/* Close label */}
             <CustomText
                 type="body"
                 disableAnimation={true}
                 style={{ opacity: 1 }}
-                text="Indietro"/>
+                text="Indietro" />
         </span>
 
     );

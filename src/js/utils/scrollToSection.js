@@ -16,7 +16,7 @@ export const scrollToSection = (sectionId, setVisible) => {
     //and make the page scrollable again
     if(setVisible != null) {
         setVisible(false);
-        document.documentElement.style.overflowY = 'auto';
+        document.documentElement.style.overflow = 'auto';
     }
 
 };

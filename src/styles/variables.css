@@ -79,7 +79,8 @@
 
 
     /* Used Car Drawer */
-    --used_car_drawer_close_label_padding_left: 40px;
+    --used_car_drawer_close_label_padding_left_big_medium_landscape: 4.5rem;
+    --used_car_drawer_close_label_padding_left_small_medium_portrait: 3rem;
     --used_car_drawer_flex_horizontal_gap_big_medium: 2rem;
     --used_car_drawer_flex_horizontal_gap_small: 3rem;
     --carousel_container_width_big: 75%;

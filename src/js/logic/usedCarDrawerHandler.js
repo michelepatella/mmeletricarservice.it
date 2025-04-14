@@ -9,7 +9,7 @@ export const onUsedCarDrawerOpen = (setIsDrawerOpen, id) => {
 
     //make the menu hidden and the page not scrollable
     document.body.classList.add('drawer-open');
-    document.documentElement.style.overflowY = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
 
     //change the link dynamically
     window.history.pushState({ id: id }, '', 'used-cars' + id);
@@ -25,7 +25,7 @@ export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
 
     //make the menu visible and the page scrollable
     document.body.classList.remove('drawer-open');
-    document.documentElement.style.overflowY = 'auto';
+    document.documentElement.style.overflow = 'auto';
 
     //redirect the user to the used cars page
     window.history.replaceState({}, '', '/');
