@@ -31,10 +31,20 @@ function UsedCarCard(props) {
                     setIsDrawerOpen,
                     props.usedCarOverview.id)}>
 
-                {/* Image presentation */}
-                <div className="used-cars-image-container">
-                    <img src={props.usedCarOverview.image}/>
-                </div>
+                {/* Image presentation (if any) */}
+                {
+                    props.usedCarOverview.image ?
+                        <div className="used-cars-image-container">
+                            <img src={props.usedCarOverview.image}/>
+                        </div>
+                        :
+                        <div className="used-cars-image-container">
+                            <CustomText
+                                type="caption"
+                                text="Immagine non disponibile"
+                                disableAnimation={true} />
+                        </div>
+                }
 
                 {/* Flex container to contain information */}
                 <Flex
