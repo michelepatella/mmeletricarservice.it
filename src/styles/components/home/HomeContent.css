@@ -1,5 +1,5 @@
 /* Text Animation */
-@keyframes slideInHome {
+@keyframes slideUpHomeTitle {
     from {
         opacity: 0;
         transform: translateY(80px);
@@ -16,7 +16,7 @@
     color: var(--accent_color);
     margin-bottom: 0;
     opacity: 0;
-    animation: slideInHome 1.5s ease forwards;
+    animation: slideUpHomeTitle 1.5s ease forwards;
     animation-delay: 0.7s;
 }
 
@@ -26,7 +26,7 @@
     color: white;
     margin-top: 0;
     opacity: 0;
-    animation: slideInHome 1.5s ease forwards;
+    animation: slideUpHomeTitle 1.5s ease forwards;
     animation-delay: 1.5s;
 }
 

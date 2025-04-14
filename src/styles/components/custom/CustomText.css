@@ -1,5 +1,5 @@
 /* Text Animation */
-@keyframes slideInTitle {
+@keyframes slideUpHeading {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -21,7 +21,7 @@
 }
 
 .custom-heading.in-view {
-    animation: slideInTitle 1.5s ease forwards;
+    animation: slideUpHeading 1.5s ease forwards;
 }
 
 /* Subheading and body styles */

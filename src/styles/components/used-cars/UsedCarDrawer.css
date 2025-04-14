@@ -1,3 +1,13 @@
+/* In Drawer Animation */
+@keyframes slideDrawerRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 /* Used car drawer styles */
 .used-car-drawer,
 .ant-drawer-header {
@@ -8,9 +18,10 @@
 .ant-drawer-content-wrapper {
     width: 100vw !important;
     position: fixed;
+    animation: slideDrawerRight 0.4s ease-out;
 }
 
-/* To handle via CSS showing/hiding of components when drawer clicked */
+/* Hide menus  */
 .drawer-open .hamburger-button,
 .drawer-open .menu-container-big {
     display: none !important;
