@@ -1,8 +1,5 @@
-import {useState} from "react";
 import CookieConsent from "react-cookie-consent";
-import {COOKIE_CONSENT_BANNER_DESCRIPTION, COOKIES} from "../../utils/const";
-import CustomButton from "../custom/CustomButton";
-import CookieSwitchContainer from "./CookieSwitchContainer";
+import {COOKIE_CONSENT_BANNER_DESCRIPTION} from "../../utils/const";
 
 /**
  * Cookie Consent Banner
@@ -11,9 +8,6 @@ import CookieSwitchContainer from "./CookieSwitchContainer";
  * @constructor
  */
 function CookieConsentBanner(props) {
-
-    //to manage when preferences need to be shown or not
-    const [showPreferences, setShowPreferences] = useState(false);
 
     return (
 
@@ -26,8 +20,8 @@ function CookieConsentBanner(props) {
                     expires={30}
                     visible={true}
                     location="bottom"
-                    buttonText="Accetta tutti"
-                    declineButtonText="Rifiuta tutti"
+                    buttonText={<span>Accetta cookie <br></br> di terze parti</span>}
+                    declineButtonText={<span>Rifiuta cookie <br></br> di terze parti</span>}
                     enableDeclineButton={true}
                     onAccept={props.handleAcceptCookies}
                     onDecline={props.handleDeclineCookies}>
@@ -50,38 +44,6 @@ function CookieConsentBanner(props) {
                         rel="noopener noreferrer">Cookie Policy
                     </a>
                     .{" "}🍪
-
-                    <br/>
-                    <br/>
-
-                    {
-                        showPreferences &&
-                            //add a switch container for each cookie to manage
-                            COOKIES.map((cookie) => (
-                                <CookieSwitchContainer
-                                    type={cookie.type}
-                                    text={cookie.text}
-                                    disabled={cookie.disabled}
-                                    checked={cookie.checked ? cookie.checked : props.tempPreferences}
-                                    tempPreferences={props.tempPreferences}
-                                    setTempPreferences={props.setTempPreferences}/>
-                            ))
-                    }
-
-                    {
-                        showPreferences ?
-                            //save preferences button
-                            <CustomButton
-                                text="Salva preferenze"
-                                onClick={props.handleSavePreferences}
-                                style={{fontSize: 'var(--caption_text_font_size)'}} />
-                        :
-                            //manage preferences button
-                            <CustomButton
-                                text="Gestisci preferenze >"
-                                onClick={() => setShowPreferences(true)}
-                                style={{ fontSize: 'var(--caption_text_font_size)' }} />
-                    }
 
                 </CookieConsent>
 

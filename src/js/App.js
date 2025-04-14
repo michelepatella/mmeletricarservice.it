@@ -27,7 +27,6 @@ import "../styles/components/contacts/ContactsContent.css";
 import '../styles/components/contacts/ContactsFooter.css';
 import '../styles/components/cookie/CookieButton.css';
 import '../styles/components/cookie/CookieConsentBanner.css';
-import '../styles/components/cookie/CookieSwitchContainer.css';
 import '../styles/components/custom/CustomIconButton.css';
 import '../styles/components/custom/CustomText.css';
 import '../styles/components/custom/CustomBackButton.css';
@@ -51,12 +50,9 @@ function App() {
 
     const {
         cookiesAccepted,
-        tempPreferences,
         isCookiesBannerVisible,
         handleAcceptCookies,
         handleDeclineCookies,
-        handleSavePreferences,
-        setTempPreferences,
         setIsCookiesBannerVisible
     } = useCookieConsent();
 
@@ -75,10 +71,7 @@ function App() {
                     <CookieConsentBanner
                         isCookiesBannerVisible={isCookiesBannerVisible}
                         handleAcceptCookies={handleAcceptCookies}
-                        handleDeclineCookies={handleDeclineCookies}
-                        tempPreferences={tempPreferences}
-                        setTempPreferences={setTempPreferences}
-                        handleSavePreferences={handleSavePreferences} />
+                        handleDeclineCookies={handleDeclineCookies} />
 
                     {/* Menu */}
                     <Menu/>

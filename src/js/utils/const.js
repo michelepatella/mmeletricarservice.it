@@ -10,19 +10,6 @@ export const REA = "640711"
 
 /**------------- cookies -------------**/
 export const COOKIE_CONSENT_BANNER_DESCRIPTION = "Questo sito utilizza i cookie. Cliccando su \"Accetta\", acconsenti all'uso dei cookie. Cliccando su \"Rifiuta\", rifiuti l'uso dei cookie. Per maggiori informazioni consulta la nostra "
-export const COOKIES = [
-    {
-        type: "necessary-cookie",
-        text: "Cookie tecnici e di sicurezza",
-        disabled: true,
-        checked: true,
-    },
-    {
-        type: "third-party-cookie",
-        text: "Cookie di terze parti",
-        disabled: false
-    }
-]
 
 /**------------- sections definition -------------**/
 export const SECTIONS = [

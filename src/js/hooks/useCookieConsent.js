@@ -3,18 +3,11 @@ import Cookies from "js-cookie";
 
 /**
  * Custom hook to manage cookie consent
- * @returns {{handleDeclineCookies: handleDeclineCookies,
- * handleAcceptCookies: handleAcceptCookies,
- * cookiesAccepted: unknown, tempPreferences: unknown,
- * handleSavePreferences: handleSavePreferences,
- * setTempPreferences: (value: unknown) => void,
- * isCookiesBannerVisible: boolean,
- * setIsCookiesBannerVisible: (value: (((prevState: boolean) => boolean) | boolean)) => void}}
+ * @returns {{handleDeclineCookies: handleDeclineCookies, handleAcceptCookies: handleAcceptCookies, cookiesAccepted: unknown, isCookiesBannerVisible: boolean, setIsCookiesBannerVisible: (value: (((prevState: boolean) => boolean) | boolean)) => void}}
  */
 export const useCookieConsent = () => {
 
     const [cookiesAccepted, setCookiesAccepted] = useState(null);
-    const [tempPreferences, setTempPreferences] = useState(null);
     const [isCookiesBannerVisible, setIsCookiesBannerVisible] = useState(false);
 
     /**
@@ -24,14 +17,11 @@ export const useCookieConsent = () => {
         const cookieConsent = Cookies.get('cookieConsent');
         if (cookieConsent === 'true') {
             setCookiesAccepted(true);
-            setTempPreferences(true);
         } else if (cookieConsent === 'false') {
             setCookiesAccepted(false);
-            setTempPreferences(false);
         } else {
             setIsCookiesBannerVisible(true);
             setCookiesAccepted(false);
-            setTempPreferences(false);
         }
     }, []);
 
@@ -40,7 +30,6 @@ export const useCookieConsent = () => {
      */
     const handleAcceptCookies = () => {
         setCookiesAccepted(true);
-        setTempPreferences(true);
         setIsCookiesBannerVisible(false);
     };
 
@@ -48,37 +37,28 @@ export const useCookieConsent = () => {
      * To manage cookie declining
      */
     const handleDeclineCookies = () => {
+
+        //establish if the page needs to be refreshed
+        //depending on the current cookie accepting state
+        let isRefreshNeeded = false;
+        if (cookiesAccepted) {
+            isRefreshNeeded = true;
+        }
         setCookiesAccepted(false);
-        setTempPreferences(false);
         setIsCookiesBannerVisible(false);
 
-        window.location.reload();
-    };
-
-    /**
-     * To manage cookie preferences saving
-     */
-    const handleSavePreferences = () => {
-        Cookies.set(
-            'cookieConsent',
-            tempPreferences ? 'true' : 'false',
-            { expires: 30 }
-        );
-        setCookiesAccepted(tempPreferences);
-        setIsCookiesBannerVisible(false);
-
-        if (!tempPreferences)
+        //refresh the page, if needed
+        if (isRefreshNeeded) {
             window.location.reload();
+        }
+
     };
 
     return {
         cookiesAccepted,
-        tempPreferences,
         isCookiesBannerVisible,
         handleAcceptCookies,
         handleDeclineCookies,
-        handleSavePreferences,
-        setTempPreferences,
         setIsCookiesBannerVisible
     };
 };
