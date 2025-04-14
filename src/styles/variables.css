@@ -53,9 +53,6 @@
 
 
     /* Custom Back Button */
-    --custom_back_button_padding_left_big: 4rem;
-    --custom_back_button_padding_left_small_portrait_medium_portrait: 3.2rem;
-    --custom_back_button_padding_left_small_landscape_medium_landscape: 3.2rem;
     --custom_back_button_padding_top: 20px;
 
 
@@ -93,6 +90,9 @@
     --carousel_container_width_small: 100%;
     --carousel_max_height_flex_column: 80vh;
     --carousel_max_height_flex_row: 40vh;
+    --drawer_back_button_padding_left_big: 4rem;
+    --drawer_back_button_padding_left_small_portrait_medium_portrait: 3.2rem;
+    --drawer_back_button_padding_left_small_landscape_medium_landscape: 3.2rem;
 
 
     /* Section Container */
