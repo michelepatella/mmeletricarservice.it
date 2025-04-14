@@ -10,6 +10,8 @@ export const REA = "640711"
 
 /**------------- cookies -------------**/
 export const COOKIE_CONSENT_BANNER_DESCRIPTION = "Questo sito utilizza i cookie. Cliccando su \"Accetta\", acconsenti all'uso dei cookie. Cliccando su \"Rifiuta\", rifiuti l'uso dei cookie. Per maggiori informazioni consulta la nostra "
+export const COOKIE_ACCEPT_BUTTON_TEXT = "Accetta cookie di terze parti"
+export const COOKIE_DECLINE_BUTTON_TEXT = "Rifiuta cookie di terze parti"
 
 /**------------- sections definition -------------**/
 export const SECTIONS = [
@@ -166,6 +168,9 @@ export const USED_CAR_OVERVIEW =[
 ]
 export const SCROLL_LABEL_TEXT = "< Scorri per visualizzare >"
 export const USED_CARS_UNAVAILABLE_DESCRIPTION = "Auto momentaneamente esaurite. Stiamo preparando nuovi arrivi!"
+export const USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION = "Immagine non disponibile"
+export const CTA_BUTTON_TEXT = "Verifica disponibilità"
+export const BACK_BUTTON_LABEL = "Indietro"
 
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "La nostra officina"

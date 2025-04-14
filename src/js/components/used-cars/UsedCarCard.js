@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {Flex} from "antd";
+import {USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION} from "../../utils/const";
 import {onUsedCarDrawerOpen} from "../../logic/usedCarDrawerHandler";
 import {handleNamePriceStyle} from "../../logic/usedCarsStyleHandler";
 import {useOpenDrawerByLink} from "../../hooks/useOpenDrawerByLink";
@@ -41,7 +42,7 @@ function UsedCarCard(props) {
                         <div className="used-cars-image-container">
                             <CustomText
                                 type="caption"
-                                text="Immagine non disponibile"
+                                text={USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION}
                                 disableAnimation={true} />
                         </div>
                 }

@@ -17,7 +17,7 @@ function AllServices() {
             {/* Section title */}
             <CustomText
                 type="body"
-                text={'• TUTTI I SERVIZI'}
+                text='• TUTTI I SERVIZI'
                 style={handleSectionNameStyle()} />
 
             {/* Info Card for each service */}

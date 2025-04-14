@@ -1,5 +1,6 @@
 import React from "react";
 import {LeftOutlined} from "@ant-design/icons";
+import {BACK_BUTTON_LABEL} from "../../utils/const";
 import CustomText from "./CustomText";
 
 /**
@@ -19,7 +20,7 @@ function CustomBackButton() {
                 type="body"
                 disableAnimation={true}
                 style={{ opacity: 1 }}
-                text="Indietro" />
+                text={BACK_BUTTON_LABEL} />
         </span>
 
     );

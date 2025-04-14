@@ -1,5 +1,5 @@
 import React from "react";
-import {CONTACTS, PHONE} from "../../../utils/const";
+import {CONTACTS, CTA_BUTTON_TEXT, PHONE} from "../../../utils/const";
 import {handleNamePriceStyle} from "../../../logic/usedCarsStyleHandler";
 import CustomText from "../../custom/CustomText";
 import UsedCarOverview from "../UsedCarOverview";
@@ -43,7 +43,7 @@ function UsedCarDrawerVerticalFlex(props) {
                 isContact={true}
                 isCta={true}
                 value={PHONE}
-                text="Verifica disponibilità"
+                text={CTA_BUTTON_TEXT}
                 icon={CONTACTS.find(contact =>
                     contact.value === PHONE).icon} />
         </>

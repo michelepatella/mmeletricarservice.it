@@ -1,5 +1,9 @@
 import CookieConsent from "react-cookie-consent";
-import {COOKIE_CONSENT_BANNER_DESCRIPTION} from "../../utils/const";
+import {
+    COOKIE_ACCEPT_BUTTON_TEXT,
+    COOKIE_CONSENT_BANNER_DESCRIPTION,
+    COOKIE_DECLINE_BUTTON_TEXT
+} from "../../utils/const";
 
 /**
  * Cookie Consent Banner
@@ -20,8 +24,8 @@ function CookieConsentBanner(props) {
                     expires={30}
                     visible={true}
                     location="bottom"
-                    buttonText={<span>Accetta cookie <br></br> di terze parti</span>}
-                    declineButtonText={<span>Rifiuta cookie <br></br> di terze parti</span>}
+                    buttonText={COOKIE_ACCEPT_BUTTON_TEXT}
+                    declineButtonText={COOKIE_DECLINE_BUTTON_TEXT}
                     enableDeclineButton={true}
                     onAccept={props.handleAcceptCookies}
                     onDecline={props.handleDeclineCookies}>
