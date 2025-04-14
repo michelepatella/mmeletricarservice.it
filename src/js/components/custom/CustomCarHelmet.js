@@ -15,7 +15,7 @@ function CustomCarHelmet(props) {
             {/* Title */}
             <meta
                 property="og:title"
-                content={props.usedCarOverview.name + ' - € ' + props.usedCarOverview.price} />
+                content={props.usedCarOverview.name + ' - ' + props.usedCarOverview.price} />
 
             {/* Description */}
             <meta

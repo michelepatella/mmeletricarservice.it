@@ -22,9 +22,9 @@ export const useMenu = () => {
         //enable/disable the scroll of the rest of the page
         //depending on if the menu is open/closed
         if (visible)
-            document.documentElement.style.overflow = 'auto';
+            document.documentElement.style.overflowY = 'auto';
         else
-            document.documentElement.style.overflow = 'hidden';
+            document.documentElement.style.overflowY = 'hidden';
 
         setVisible(!visible);
     };
