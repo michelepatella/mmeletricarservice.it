@@ -18,3 +18,18 @@
 ::-webkit-scrollbar {
     display: none;
 }
+
+/* Unavailable used cars container styles */
+.unavailable-used-cars-container {
+    width: var(--section_max_width);
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+/* Unavailable used cars image */
+.unavailable-used-cars-container img{
+    height: var(--unavailable_used_cars_image_dimension);
+    width: var(--unavailable_used_cars_image_dimension);
+}

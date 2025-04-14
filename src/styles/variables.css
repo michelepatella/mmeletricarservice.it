@@ -135,6 +135,7 @@
     /* Used cars */
     --used_cars_scroll_label_margin_left: 22%;
     --used_cars_loading_outlined_margins: 20% 50% 50% 58%;
+    --unavailable_used_cars_image_dimension: 250px;
 
 
     /* Where we are section */

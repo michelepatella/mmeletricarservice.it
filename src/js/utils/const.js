@@ -165,7 +165,7 @@ export const USED_CAR_OVERVIEW =[
     }
 ]
 export const SCROLL_LABEL_TEXT = "< Scorri per visualizzare >"
-export const USED_CARS_UNAVAILABLE_DESCRIPTION = "Nessuna auto attualmente disponibile."
+export const USED_CARS_UNAVAILABLE_DESCRIPTION = "Auto momentaneamente esaurite. Stiamo preparando nuovi arrivi!"
 
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "La nostra officina"
