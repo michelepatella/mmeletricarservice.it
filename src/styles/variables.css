@@ -52,6 +52,12 @@
     --cta_button_margin_top: 3rem;
 
 
+    /* Custom Back Button */
+    --custom_back_button_padding_left_big_medium_landscape: 4.5rem;
+    --custom_back_button_padding_left_small_medium_portrait: 3rem;
+    --custom_back_button_padding_top: 20px;
+
+
     /* Cookie Consent Banner */
     --cookie_consent_banner_switch_margin_top_bottom: 20px;
     --cookie_consent_banner_button_padding: 11px 22px 11px 22px;
@@ -78,8 +84,6 @@
 
 
     /* Used Car Drawer */
-    --used_car_drawer_close_label_padding_left_big_medium_landscape: 4.5rem;
-    --used_car_drawer_close_label_padding_left_small_medium_portrait: 3rem;
     --used_car_drawer_flex_horizontal_gap_big_medium: 2rem;
     --used_car_drawer_flex_horizontal_gap_small: 3rem;
     --carousel_container_width_big: 75%;

@@ -2,36 +2,37 @@
 .close-label {
     display: flex;
     flex-direction: row;
-    gap: var(--gap_button_label);
     color: white !important;
     font-size: var(--caption_text_font_size);
-    font-family: 'Poppins', 'sans-serif';;
+    font-family: 'Poppins', 'sans-serif';
+    gap: var(--gap_button_label);
+    padding-top: var(--custom_back_button_padding_top);
 }
 
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
     .close-label {
-        padding-left: var(--used_car_drawer_close_label_padding_left_big_medium_landscape) !important;
+        padding-left: var(--custom_back_button_padding_left_big_medium_landscape) !important;
     }
 }
 
 /* ------ Medium screen landscape ------- */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .close-label {
-        padding-left: var(--used_car_drawer_close_label_padding_left_big_medium_landscape) !important;
+        padding-left: var(--custom_back_button_padding_left_big_medium_landscape) !important;
     }
 }
 
 /* ------ Medium screen portrait ------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .close-label {
-        padding-left: var(--used_car_drawer_close_label_padding_left_small_medium_portrait) !important;
+        padding-left: var(--custom_back_button_padding_left_small_medium_portrait) !important;
     }
 }
 
 /* ------ Small screen portrait ------- */
 @media (max-width: 767px) {
     .close-label {
-        padding-left: var(--used_car_drawer_close_label_padding_left_small_medium_portrait) !important;
+        padding-left: var(--custom_back_button_padding_left_small_medium_portrait) !important;
     }
 }
