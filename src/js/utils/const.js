@@ -168,7 +168,7 @@ export const USED_CAR_OVERVIEW =[
 ]
 export const SCROLL_LABEL_TEXT = "< Scorri per visualizzare >"
 export const USED_CARS_UNAVAILABLE_DESCRIPTION = "Auto momentaneamente esaurite. Stiamo preparando nuovi arrivi!"
-export const USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION = "Immagine non disponibile"
+export const USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION = "Anteprima non disponibile"
 export const CTA_BUTTON_TEXT = "Verifica disponibilità"
 export const BACK_BUTTON_LABEL = "Indietro"
 

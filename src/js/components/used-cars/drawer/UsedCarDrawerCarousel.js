@@ -17,19 +17,31 @@ function UsedCarDrawerCarousel(props) {
 
                 {/* Show all the images */}
                 {
-                    props.usedCarInfo.images.map((item, index) => (
+                    props.usedCarInfo.images.length > 0 ?
+                        props.usedCarInfo.images.map((item, index) => (
+                            <Image.PreviewGroup
+                                key={index}
+                                preview={{
+                                    toolbarRender: () => null,
+                                    maskClosable: true
+                                }}>
+                                <Image
+                                    src={item}
+                                    preview={true} />
+                            </Image.PreviewGroup>
+                        ))
+
+                    :
+                        //unavailable images
                         <Image.PreviewGroup
-                            key={index}
                             preview={{
                                 toolbarRender: () => null,
                                 maskClosable: true
                             }}>
                             <Image
-                                src={item}
-                                preview={true}
-                            />
+                                src="/images/empty-carousel-image.svg"
+                                preview={true} />
                         </Image.PreviewGroup>
-                    ))
                 }
 
             </Carousel>
