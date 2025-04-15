@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Drawer, Flex} from "antd";
+import {Collapse, Drawer, Flex} from "antd";
 import {LoadingOutlined} from "@ant-design/icons";
 import {onUsedCarDrawerClose} from "../../../logic/usedCarDrawerHandler";
 import {useUsedCarData} from "../../../hooks/useUsedCarData";
@@ -8,6 +8,8 @@ import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
 import UsedCarDrawerVerticalFlex from "./UsedCarDrawerVerticalFlex";
 import CustomBackButton from "../../custom/CustomBackButton";
 import CustomCarHelmet from "../../custom/CustomCarHelmet";
+import {USED_CAR_ALL_INFO} from "../../../utils/const";
+import UsedCarDrawerCollapse from "./UsedCarDrawerCollapse";
 
 /**
  * Used Car Drawer
@@ -75,6 +77,10 @@ function UsedCarDrawer(props) {
                                 <UsedCarDrawerCarousel usedCarInfo={usedCarInfo}/>
 
                             </Flex>
+
+                            {/* Collapse with all information */}
+                            <UsedCarDrawerCollapse usedCarInfo={usedCarInfo}/>
+
                         </>
 
                 }

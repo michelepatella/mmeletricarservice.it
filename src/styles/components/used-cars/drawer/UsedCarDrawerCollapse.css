@@ -1,0 +1,54 @@
+/* Collapse styles */
+.used-car-drawer-collapse {
+    margin-top: var(--collapse_margin_top);
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+/* Collapse Header text styles */
+.ant-collapse-header-text {
+    color: white !important;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Collapse content box styles */
+.ant-collapse-content-box {
+    color: white;
+    font-size: var(--caption_text_font_size);
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background_color);
+}
+
+/* Collapse expand icon styles */
+.ant-collapse-expand-icon{
+    color: white;
+}
+
+.collapse-inner-list,
+.collapse-outer-list{
+    padding-inline-start: 0 !important;
+    margin-block-start: 0 !important;
+}
+
+/* ------ Big screen ------- */
+@media (min-width: 1025px) {
+    .ant-collapse-header-text {
+        font-size: var(--body_font_size_big);
+    }
+}
+
+/* ------ Medium screen (portrait and landscape) ------ */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .ant-collapse-header-text {
+        font-size: var(--body_font_size_medium);
+    }
+}
+
+/* ------ Small screen portrait ------ */
+@media (max-width: 767px) {
+    .ant-collapse-header-text {
+        font-size: var(--body_font_size_small);
+    }
+}

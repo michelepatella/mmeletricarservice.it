@@ -160,10 +160,88 @@ export const USED_CAR_OVERVIEW =[
 
     },
     {
-        title: "Carrozzeria",
-        name: "bodywork",
-        icon: '/icons/bodywork_icon.svg',
+        title: "Stato",
+        name: "status",
+        icon: '/icons/status_icon.svg',
 
+    }
+]
+export const USED_CAR_ALL_INFO = [
+    {
+        key: '1',
+        label: 'Motore e prestazioni',
+        children: [
+            {
+                title: '<strong>Potenza</strong>',
+                name: 'power',
+            },
+            {
+                title: '<strong>Cilindrata</strong>',
+                name: 'engine_displacement',
+            },
+            {
+                title: '<strong>Cilindri</strong>',
+                name: 'cylinders',
+            },
+            {
+                title: '<strong>Cambio</strong>',
+                name: 'transmission',
+            }
+        ]
+    },
+    {
+        key: '2',
+        label: 'Emissioni e consumo',
+        children: [
+            {
+                title: '<strong>Consumo</strong>',
+                name: 'consumption',
+            },
+            {
+                title: '<strong>Emissioni</strong>',
+                name: 'emissions',
+            },
+            {
+                title: '<strong>Classe emissioni</strong>',
+                name: 'emission_class',
+            }
+        ]
+    },
+    {
+        key: '3',
+        label: 'Esterno',
+        children: [
+            {
+                title: '<strong>Porte</strong>',
+                name: 'doors',
+            },
+            {
+                title: '<strong>Colore esterno</strong>',
+                name: 'external_color',
+            },
+            {
+                title: '<strong>Carrozzeria</strong>',
+                name: 'bodywork',
+            }
+        ]
+    },
+    {
+        key: '4',
+        label: 'Interno e comfort',
+        children: [
+            {
+                title: '<strong>Posti</strong>',
+                name: 'seats',
+            },
+            {
+                title: '<strong>Colore interno</strong>',
+                name: 'internal_color',
+            },
+            {
+                title: '<strong>Materiale</strong>',
+                name: 'internal_material',
+            }
+        ]
     }
 ]
 export const SCROLL_LABEL_TEXT = "< Scorri per visualizzare >"

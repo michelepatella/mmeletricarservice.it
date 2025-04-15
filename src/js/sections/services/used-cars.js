@@ -3,7 +3,8 @@ import {LoadingOutlined} from "@ant-design/icons";
 import {
     USED_CARS_TITLE,
     USED_CARS_SUBTITLE,
-    SCROLL_LABEL_TEXT, USED_CARS_UNAVAILABLE_DESCRIPTION
+    SCROLL_LABEL_TEXT,
+    USED_CARS_UNAVAILABLE_DESCRIPTION
 } from "../../utils/const";
 import {handleScrollLabelStyle} from "../../logic/usedCarsStyleHandler";
 import {useUsedCarData} from "../../hooks/useUsedCarData";
