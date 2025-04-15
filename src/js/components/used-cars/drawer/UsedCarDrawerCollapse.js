@@ -1,6 +1,7 @@
 import {USED_CAR_ALL_INFO} from "../../../utils/const";
 import {Collapse} from "antd";
 import React from "react";
+import {MinusOutlined, PlusOutlined} from "@ant-design/icons";
 
 /**
  * Used Car Drawer Collapse
@@ -14,24 +15,30 @@ function UsedCarDrawerCollapse(props) {
             {/* Collapse with all used car information */}
             <Collapse
                 className="used-car-drawer-collapse"
+                expandIcon={({ isActive }) =>
+                    isActive ? <MinusOutlined/> : <PlusOutlined/>
+                }
                 items={USED_CAR_ALL_INFO.map(({ key, label, children }) => ({
                     key,
                     label,
                     children: (
                         //car information (title + value)
-                        <ul className="collapse-outer-list">
+                        <li className="collapse-outer-list">
                             {children.map((item) => (
                                 <ul
                                     key={item.name}
                                     className="collapse-inner-list">
+
                                     {/* Title */}
-                                    <span dangerouslySetInnerHTML={{__html: item.title}}/>: {" "}
+                                    <span dangerouslySetInnerHTML={{__html: item.title}}/>
 
                                     {/* Value */}
-                                    <span>{props.usedCarInfo[item.name]}</span>
+                                    <div>
+                                        <span>{props.usedCarInfo[item.name]}</span>
+                                    </div>
                                 </ul>
                             ))}
-                        </ul>
+                        </li>
                     ),
                 }))} />
         </>

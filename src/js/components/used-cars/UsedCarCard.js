@@ -57,7 +57,7 @@ function UsedCarCard(props) {
 
                     {/* Name of the car */}
                     <CustomText
-                        type="body"
+                        type="subheading"
                         text={props.usedCarOverview.name}
                         disableAnimation={true}
                         style={handleNamePriceStyle()}/>

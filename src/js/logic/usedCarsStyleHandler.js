@@ -5,6 +5,7 @@
  */
 export const handleNamePriceStyle = () => {
     return {
+
         fontWeight: "bold",
         alignSelf: "right",
         opacity: 1

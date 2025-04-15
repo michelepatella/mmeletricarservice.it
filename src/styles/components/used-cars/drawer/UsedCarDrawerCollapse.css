@@ -1,9 +1,14 @@
 /* Collapse styles */
 .used-car-drawer-collapse {
     margin-top: var(--collapse_margin_top);
+    border: none;
     border-radius: 0;
-    border-left: none;
-    border-right: none;
+    backdrop-filter: blur(6px);
+}
+
+/* Collapse item styles */
+.ant-collapse-item {
+    border: none !important;
 }
 
 /* Collapse Header text styles */
@@ -13,16 +18,24 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Collapse content box styles */
-.ant-collapse-content-box {
+.ant-collapse-header {
+    border: none !important;
+    padding-left: 0 !important;
+    margin: var(--collapse_header_margin_top_bottom) 0 var(--collapse_header_margin_top_bottom) 0;
+}
+
+/* Collapse content styles */
+.ant-collapse-content-box,
+.ant-collapse-content {
     color: white;
-    font-size: var(--caption_text_font_size);
     font-family: 'Poppins', sans-serif;
+    border: none !important;
+    border-left: 0.5px solid var(--accent_color) !important;
     background-color: var(--background_color);
 }
 
 /* Collapse expand icon styles */
-.ant-collapse-expand-icon{
+.ant-collapse-expand-icon {
     color: white;
 }
 
@@ -46,7 +59,7 @@
     }
 }
 
-/* ------ Small screen portrait ------ */
+/* ------ Small screen (portrait and landscape) ------ */
 @media (max-width: 767px) {
     .ant-collapse-header-text {
         font-size: var(--body_font_size_small);

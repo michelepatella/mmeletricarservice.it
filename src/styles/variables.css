@@ -31,7 +31,7 @@
     --body_font_size_medium: 18px;
     --body_font_size_small: 16px;
 
-    --caption_text_font_size: clamp(13px, 2vw, 17px);;
+    --caption_text_font_size: clamp(13px, 2vw, 15px);;
 
 
     /* Components (General) */
@@ -93,7 +93,8 @@
     --drawer_back_button_padding_left_big: 4rem;
     --drawer_back_button_padding_left_small_portrait_medium_portrait: 3.2rem;
     --drawer_back_button_padding_left_small_landscape_medium_landscape: 3.2rem;
-    --collapse_margin_top: 200px;
+    --collapse_margin_top: 80px;
+    --collapse_header_margin_top_bottom: 10px;
 
 
     /* Section Container */

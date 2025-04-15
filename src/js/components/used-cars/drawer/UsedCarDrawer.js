@@ -58,31 +58,31 @@ function UsedCarDrawer(props) {
                             style={{ width: "100%" }} />
                         :
                         <>
-                            {/* Flex horizontal container (info column + carousel) */}
-                            <Flex
-                                className="used-car-drawer-flex-horizontal"
-                                width="70%">
-
-                                {/* Flex vertical container with overview information */}
+                            <Flex vertical>
+                                {/* Flex horizontal container (info column + carousel) */}
                                 <Flex
-                                    vertical
-                                    width="30%">
+                                    className="used-car-drawer-flex-horizontal"
+                                    width="70%">
 
-                                    {/* Vertical flex (Name, Price, Overview info and CTA button) */}
-                                    <UsedCarDrawerVerticalFlex usedCarOverview={props.usedCarOverview}/>
+                                    {/* Flex vertical container with overview information */}
+                                    <Flex
+                                        vertical
+                                        width="30%">
+
+                                        {/* Vertical flex (Name, Price, Overview info and CTA button) */}
+                                        <UsedCarDrawerVerticalFlex usedCarOverview={props.usedCarOverview}/>
+
+                                    </Flex>
+
+                                    {/* Carousel */}
+                                    <UsedCarDrawerCarousel usedCarInfo={usedCarInfo}/>
 
                                 </Flex>
 
-                                {/* Carousel */}
-                                <UsedCarDrawerCarousel usedCarInfo={usedCarInfo}/>
-
+                                {/* Collapse with all used car information */}
+                                <UsedCarDrawerCollapse usedCarInfo={usedCarInfo}/>
                             </Flex>
-
-                            {/* Collapse with all information */}
-                            <UsedCarDrawerCollapse usedCarInfo={usedCarInfo}/>
-
                         </>
-
                 }
 
             </Drawer>

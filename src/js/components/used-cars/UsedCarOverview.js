@@ -37,7 +37,7 @@ function UsedCarOverview (props) {
 
                                 {/* Info title, if its needs to be shown, otherwise only the text */}
                                 <CustomText
-                                    type="caption"
+                                    type="body"
                                     text={props.isTitleVisible ?
                                         info.title : props.usedCarOverview[info.name]}
                                     disableAnimation={true}
@@ -49,7 +49,7 @@ function UsedCarOverview (props) {
                             {
                                 props.isTitleVisible ?
                                     <CustomText
-                                        type="caption"
+                                        type="body"
                                         text={props.usedCarOverview[info.name]}
                                         disableAnimation={true}
                                         style={handleTextOverviewStyle()} />
