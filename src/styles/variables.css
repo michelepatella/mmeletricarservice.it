@@ -11,27 +11,25 @@
     /* Font size */
     --home_title_font_size_big: 80px;
     --home_title_font_size_medium: 60px;
-    --home_title_font_size_small_portrait: 35px;
-    --home_title_font_size_small_landscape: 45px;
+    --home_title_font_size_small: 35px;
 
     --home_subtitle_font_size_big: 35px;
     --home_subtitle_font_size_medium: 25px;
-    --home_subtitle_font_size_small_portrait: 20px;
-    --home_subtitle_font_size_small_landscape: 22px;
+    --home_subtitle_font_size_small: 20px;
 
-    --heading_font_size_big: 50px;
-    --heading_font_size_medium: 45px;
+    --heading_font_size_big: 45px;
+    --heading_font_size_medium: 40px;
     --heading_font_size_small: 25px;
 
     --subheading_font_size_big: 25px;
     --subheading_font_size_medium: 20px;
     --subheading_font_size_small: 18px;
 
-    --body_font_size_big: 20px;
-    --body_font_size_medium: 18px;
-    --body_font_size_small: 16px;
+    --body_font_size_big: 18px;
+    --body_font_size_medium: 16px;
+    --body_font_size_small: 14px;
 
-    --caption_text_font_size: clamp(13px, 2vw, 15px);;
+    --caption_text_font_size: clamp(12px, 2vw, 15px);;
 
 
     /* Components (General) */

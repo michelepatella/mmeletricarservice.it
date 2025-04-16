@@ -74,21 +74,21 @@
 /* ------ Small screen portrait ------- */
 @media (max-width: 767px) and (orientation: portrait) {
     .home-title {
-        font-size: var(--home_title_font_size_small_portrait);
+        font-size: var(--home_title_font_size_small);
     }
 
     .home-subtitle {
-        font-size: var(--home_subtitle_font_size_small_portrait);
+        font-size: var(--home_subtitle_font_size_small);
     }
 }
 
 /* ------ Small screen landscape ------- */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
     .home-title {
-        font-size: var(--home_title_font_size_small_landscape);
+        font-size: var(--home_title_font_size_small);
     }
 
     .home-subtitle {
-        font-size: var(--home_subtitle_font_size_small_landscape);
+        font-size: var(--home_subtitle_font_size_small);
     }
 }
