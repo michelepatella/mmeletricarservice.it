@@ -5,15 +5,15 @@ import {handleNamePriceStyle} from "../../../logic/usedCarsStyleHandler";
 import CustomText from "../../custom/CustomText";
 import UsedCarOverview from "../UsedCarOverview";
 import CustomButton from "../../custom/CustomButton";
-import {Divider} from "antd";
+import UsedCarDrawerCollapse from "./UsedCarDrawerCollapse";
 
 /**
- * Used Car Drawer Vertical Flex
+ * Used Car Drawer Info Panel
  * @param props
  * @returns {React.JSX.Element}
  * @constructor
  */
-function UsedCarDrawerVerticalFlex(props) {
+function UsedCarDrawerInfoPanel(props) {
     return (
 
         <>
@@ -35,7 +35,7 @@ function UsedCarDrawerVerticalFlex(props) {
                     marginTop: 0,
                     ...handleNamePriceStyle()}} />
 
-            {/* Overview information */}
+            {/* Car's overview */}
             <UsedCarOverview
                 showTitle={true}
                 usedCarOverview={props.usedCarOverview} />
@@ -50,9 +50,12 @@ function UsedCarDrawerVerticalFlex(props) {
                 onClick={contactClickHandler[CONTACTS.find(contact =>
                     contact.value === PHONE).value]} />
 
+            {/* Collapse with all used car information */}
+            <UsedCarDrawerCollapse usedCarInfo={props.usedCarInfo} />
+
         </>
 
     );
 }
 
-export default UsedCarDrawerVerticalFlex;
+export default UsedCarDrawerInfoPanel;

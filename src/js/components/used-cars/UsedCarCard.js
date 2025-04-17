@@ -47,7 +47,7 @@ function UsedCarCard(props) {
                     }
                 </div>
 
-                {/* Flex container to contain information */}
+                {/* Flex container to show car's information */}
                 <Flex
                     className="used-car-overview-flex"
                     gap="small"
@@ -60,7 +60,7 @@ function UsedCarCard(props) {
                         disableAnimation={true}
                         style={handleNamePriceStyle()} />
 
-                    {/* Overview information */}
+                    {/* Car's overview */}
                     <UsedCarOverview
                         showTitle={false}
                         usedCarOverview={props.usedCarOverview} />
@@ -81,11 +81,11 @@ function UsedCarCard(props) {
             {/* Used Car Drawer including car's details when the card is clicked */}
             {
                 isDrawerOpen &&
-                <UsedCarDrawer
-                    usedCarInfo={usedCarInfo}
-                    setUsedCarInfo={setUsedCarInfo}
-                    usedCarOverview={props.usedCarOverview}
-                    setIsDrawerOpen={setIsDrawerOpen} />
+                    <UsedCarDrawer
+                        usedCarInfo={usedCarInfo}
+                        setUsedCarInfo={setUsedCarInfo}
+                        usedCarOverview={props.usedCarOverview}
+                        setIsDrawerOpen={setIsDrawerOpen} />
             }
 
         </>

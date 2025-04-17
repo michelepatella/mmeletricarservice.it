@@ -44,10 +44,13 @@ function UsedCars() {
                 as the loading is finished, if data is not empty, show it. */}
             {
                 areCarsLoading ? (
+
                     <LoadingOutlined
                         className="loading-outlined"
                         spin={areCarsLoading} />
+
                 ) : usedCarsOverview.length > 0 ? (
+
                     <>
                         {/* Show all the available used cars */}
                         <div className="used-cars-container">
@@ -64,7 +67,9 @@ function UsedCars() {
                             text={SCROLL_LABEL_TEXT}
                             style={handleScrollLabelStyle()} />
                     </>
+
                 ) : (
+
                     //unavailable used cars label + image
                     <div className="unavailable-used-cars-container">
                         <CustomText
@@ -75,6 +80,7 @@ function UsedCars() {
                             src="/images/empty-used-cars-image.jpeg"
                             alt="unavailable-used-cars"/>
                     </div>
+
                 )
             }
 

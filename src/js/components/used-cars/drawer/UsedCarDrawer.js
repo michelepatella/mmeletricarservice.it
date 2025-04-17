@@ -5,10 +5,9 @@ import {onUsedCarDrawerClose} from "../../../logic/usedCarDrawerHandler";
 import {useUsedCarData} from "../../../hooks/useUsedCarData";
 import {useDrawerBackButtonHandler} from "../../../hooks/useDrawerBackDrawer";
 import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
-import UsedCarDrawerVerticalFlex from "./UsedCarDrawerVerticalFlex";
+import UsedCarDrawerInfoPanel from "./UsedCarDrawerInfoPanel";
 import CustomBackButton from "../../custom/CustomBackButton";
 import CustomCarHelmet from "../../custom/CustomCarHelmet";
-import UsedCarDrawerCollapse from "./UsedCarDrawerCollapse";
 
 /**
  * Used Car Drawer
@@ -38,12 +37,12 @@ function UsedCarDrawer(props) {
     return (
         <>
             {/* Customized helmet for the link sharing */}
-            <CustomCarHelmet usedCarOverview={props.usedCarOverview}/>
+            <CustomCarHelmet usedCarOverview={props.usedCarOverview} />
 
             {/* Drawer */}
             <Drawer
                 className="used-car-drawer"
-                closeIcon={<CustomBackButton />}
+                closeIcon={<CustomBackButton/>}
                 onClose={() => onUsedCarDrawerClose(props.setIsDrawerOpen)}
                 open={true}>
 
@@ -58,28 +57,27 @@ function UsedCarDrawer(props) {
                     :
                         <>
                             <Flex vertical>
-                                {/* Flex horizontal container (info column + carousel) */}
+                                {/* Flex container (info panel + carousel) */}
                                 <Flex
                                     className="used-car-drawer-flex-horizontal"
                                     width="60%">
 
-                                    {/* Flex vertical container with overview information */}
+                                    {/* Flex vertical container with info panel */}
                                     <Flex
                                         vertical
                                         className="used-car-drawer-flex-vertical"
                                         width="40%">
 
-                                        {/* Vertical flex (Name, Price, Overview info and CTA button) */}
-                                        <UsedCarDrawerVerticalFlex
-                                            usedCarOverview={props.usedCarOverview}/>
-
-                                        {/* Collapse with all used car information */}
-                                        <UsedCarDrawerCollapse usedCarInfo={usedCarInfo}/>
+                                        {/* Info Panel (Name, Price, Overview info,
+                                        CTA button and Collapse with details) */}
+                                        <UsedCarDrawerInfoPanel
+                                            usedCarOverview={props.usedCarOverview}
+                                            usedCarInfo={props.usedCarInfo} />
 
                                     </Flex>
 
                                     {/* Carousel */}
-                                    <UsedCarDrawerCarousel usedCarInfo={usedCarInfo}/>
+                                    <UsedCarDrawerCarousel usedCarInfo={usedCarInfo} />
 
                                 </Flex>
                             </Flex>

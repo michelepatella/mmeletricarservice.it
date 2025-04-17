@@ -12,7 +12,6 @@ function UsedCarDrawerCollapse(props) {
     return (
 
         <>
-
             {/* Collapse with all used car information */}
             <Collapse
                 className="used-car-drawer-collapse"
@@ -32,12 +31,13 @@ function UsedCarDrawerCollapse(props) {
                                     className="collapse-inner-list">
 
                                     {/* Title */}
-                                    <span dangerouslySetInnerHTML={{__html: item.title}}/>
+                                    <span dangerouslySetInnerHTML={{__html: item.title}} />
 
                                     {/* Value */}
                                     <div>
                                         <span>{props.usedCarInfo[item.name]}</span>
                                     </div>
+
                                 </ul>
                             ))}
                         </li>
