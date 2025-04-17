@@ -43,6 +43,8 @@
         border: 1px solid var(--light_gray_border_color);
         border-radius: var(--border_radius);
         padding: var(--used_car_drawer_vertical_flex_gap);
+        background-color: var(--darker_background_color);
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
     }
 
     .ant-drawer-header {
@@ -53,13 +55,9 @@
 /* ----------- Medium screen portrait ----------- */
 @media (min-width: 768px) and (max-width: 1024px) {
     .used-car-drawer-flex-horizontal {
-        flex-direction: column;
-        gap: var(--used_car_drawer_flex_horizontal_gap_big_medium);
-    }
-
-    .used-car-drawer-flex-horizontal {
         flex-direction: column-reverse;
         justify-content: start;
+        gap: var(--used_car_drawer_flex_horizontal_gap_big_medium);
     }
 
     .ant-drawer-header {
@@ -78,6 +76,8 @@
         border: 1px solid var(--light_gray_border_color);
         border-radius: var(--border_radius);
         padding: var(--used_car_drawer_vertical_flex_gap);
+        background-color: var(--darker_background_color);
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
     }
 
     .ant-drawer-header {
@@ -88,13 +88,9 @@
 /* ----------- Small screen portrait ----------- */
 @media (max-width: 767px) and (orientation: portrait) {
     .used-car-drawer-flex-horizontal {
-        flex-direction: column;
-        gap: var(--used_car_drawer_flex_horizontal_gap_small);
-    }
-
-    .used-car-drawer-flex-horizontal {
         flex-direction: column-reverse;
         justify-content: start;
+        gap: var(--used_car_drawer_flex_horizontal_gap_small);
     }
 
     .ant-drawer-header {
@@ -105,13 +101,9 @@
 /* ----------- Small screen landscape ----------- */
 @media (max-width: 767px) and (orientation: landscape) {
     .used-car-drawer-flex-horizontal {
-        flex-direction: column;
-        gap: var(--used_car_drawer_flex_horizontal_gap_small);
-    }
-
-    .used-car-drawer-flex-horizontal {
         flex-direction: column-reverse;
         justify-content: start;
+        gap: var(--used_car_drawer_flex_horizontal_gap_small);
     }
 
     .ant-drawer-header {
