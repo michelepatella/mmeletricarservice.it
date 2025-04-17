@@ -32,7 +32,6 @@ export const useUsedCarData = (endpoint, setData, setIsLoading, isRedundantReque
                 if (!res.ok) {
                     const errorData = await res.json()
                     console.error('Error fetching data:', errorData.error);
-                    setData([]);
                     //loading is finish
                     setIsLoading(false);
                     return;
@@ -60,7 +59,6 @@ export const useUsedCarData = (endpoint, setData, setIsLoading, isRedundantReque
 
                 //handle errors while acquiring data
                 console.error('Error fetching data:', error);
-                setData([]);
                 //loading is finish
                 setIsLoading(false);
 

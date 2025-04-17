@@ -22,7 +22,7 @@ function UsedCarCard(props) {
     const [usedCarInfo, setUsedCarInfo] = useState([]);
 
     //check if the current used car has been requested by a link
-    useOpenDrawerByLink(setIsDrawerOpen, props.usedCarOverview.id.toString());
+    useOpenDrawerByLink(setIsDrawerOpen, props.usedCarOverview?.id.toString());
 
     return (
         <>
@@ -30,14 +30,14 @@ function UsedCarCard(props) {
                 className="used-cars-card"
                 onClick={() => onUsedCarDrawerOpen(
                     setIsDrawerOpen,
-                    props.usedCarOverview.id)}>
+                    props.usedCarOverview?.id)}>
 
                 {/* Image presentation (if any) */}
                 <div className="used-cars-image-container">
                     {
-                        props.usedCarOverview.image ?
+                        props.usedCarOverview?.image ?
                             <img
-                                src={props.usedCarOverview.image}
+                                src={props.usedCarOverview?.image}
                                 alt="auto-image" />
                         :
                             <CustomText
@@ -56,7 +56,7 @@ function UsedCarCard(props) {
                     {/* Name of the car */}
                     <CustomText
                         type="subheading"
-                        text={props.usedCarOverview.name}
+                        text={props.usedCarOverview?.name}
                         disableAnimation={true}
                         style={handleNamePriceStyle()} />
 
@@ -69,7 +69,7 @@ function UsedCarCard(props) {
                     <div className="used-cars-card-price-container">
                         <CustomText
                             type="body"
-                            text={props.usedCarOverview.price}
+                            text={props.usedCarOverview?.price}
                             disableAnimation={true}
                             style={handleNamePriceStyle()} />
                     </div>

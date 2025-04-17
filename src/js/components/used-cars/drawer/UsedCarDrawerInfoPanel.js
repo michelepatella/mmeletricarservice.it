@@ -20,7 +20,7 @@ function UsedCarDrawerInfoPanel(props) {
             {/* Name of the car */}
             <CustomText
                 type="heading"
-                text={props.usedCarOverview.name}
+                text={props.usedCarOverview?.name}
                 disableAnimation={true}
                 style={{
                     marginTop: 0,
@@ -29,7 +29,7 @@ function UsedCarDrawerInfoPanel(props) {
             {/* Price */}
             <CustomText
                 type="subheading"
-                text={props.usedCarOverview.price}
+                text={props.usedCarOverview?.price}
                 disableAnimation={true}
                 style={{
                     marginTop: 0,

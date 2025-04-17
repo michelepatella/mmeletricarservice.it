@@ -18,14 +18,14 @@ import CustomCarHelmet from "../../custom/CustomCarHelmet";
 function UsedCarDrawer(props) {
 
     //get the info of the used car of interest
-    const usedCarInfo = props.usedCarInfo.find((car) =>
-        car.id === props.usedCarOverview.id
+    const usedCarInfo = props.usedCarInfo?.find((car) =>
+        car.id === props.usedCarOverview?.id
     );
 
     //get used car info (if needed)
     const [isCarLoading, setIsCarLoading] = useState(true);
     useUsedCarData(
-        'usedCarInfo?id=' + props.usedCarOverview.id,
+        'usedCarInfo?id=' + props.usedCarOverview?.id,
         props.setUsedCarInfo,
         setIsCarLoading,
         usedCarInfo !== undefined

@@ -35,7 +35,7 @@ function UsedCarDrawerCollapse(props) {
 
                                     {/* Value */}
                                     <div>
-                                        <span>{props.usedCarInfo[item.name]}</span>
+                                        <span>{props.usedCarInfo[item.name] || '-'}</span>
                                     </div>
 
                                 </ul>

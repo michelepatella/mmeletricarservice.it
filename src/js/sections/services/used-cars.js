@@ -49,7 +49,7 @@ function UsedCars() {
                         className="loading-outlined"
                         spin={areCarsLoading} />
 
-                ) : usedCarsOverview.length > 0 ? (
+                ) : usedCarsOverview?.length > 0 ? (
 
                     <>
                         {/* Show all the available used cars */}

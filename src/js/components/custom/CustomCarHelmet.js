@@ -15,25 +15,25 @@ function CustomCarHelmet(props) {
             {/* Title (Name - Price) */}
             <meta
                 property="og:title"
-                content={props.usedCarOverview.name + ' - ' + props.usedCarOverview.price} />
+                content={props.usedCarOverview?.name + ' - ' + props.usedCarOverview?.price} />
 
             {/* Description (year, mileage, fuel and car's status) */}
             <meta
                 property="og:description"
-                content={"🗓️Anno: " + props.usedCarOverview.year +
-                        " | 🛣️Chilometraggio: " + props.usedCarOverview.mileage +
-                        " | ⛽️Carburante: " + props.usedCarOverview.fuel +
-                        " | 🚘Stato dell'auto: " + props.usedCarOverview.status} />
+                content={"🗓️Anno: " + props.usedCarOverview?.year +
+                        " | 🛣️Chilometraggio: " + props.usedCarOverview?.mileage +
+                        " | ⛽️Carburante: " + props.usedCarOverview?.fuel +
+                        " | 🚘Stato dell'auto: " + props.usedCarOverview?.status} />
 
             {/* URL */}
             <meta
                 property="og:url"
-                content={'https://mmeletricarservice.it/used-cars' + props.usedCarOverview.id} />
+                content={'https://mmeletricarservice.it/used-cars' + props.usedCarOverview?.id} />
 
             {/* Image */}
             <meta
                 property="og:image"
-                content={props.usedCarOverview.image} />
+                content={props.usedCarOverview?.image} />
 
             {/* Type */}
             <meta

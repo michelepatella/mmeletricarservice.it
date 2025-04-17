@@ -34,7 +34,7 @@ export default async function handler(req, res) {
 
             let imageUrl;
             //if there isn't any error and the image is returned
-            if(!error && files.length > 0){
+            if(!error && files?.length > 0){
                 const file = files[0];
 
                 //get the image url

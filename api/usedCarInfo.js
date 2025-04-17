@@ -67,7 +67,7 @@ export default async function handler(req, res) {
 
         let imageUrls = [];
         //if no error and there's at least an image
-        if (!imagesError && files.length > 0) {
+        if (!imagesError && files?.length > 0) {
             imageUrls = files.map(file =>
                 supabase.storage
                     .from('car-images')
