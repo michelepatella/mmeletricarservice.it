@@ -8,8 +8,8 @@ export const handleSectionNameStyle = () => {
         marginBottom: 0,
         fontFamily: 'Roboto, sans-serif',
         fontWeight: "bold",
-        color: "var(--accent_color)",
-        opacity: 'var(--text_opacity)',
+        color: "var(--yellow_color)",
+        opacity: 'var(--text_low_opacity)',
     };
 };
 
@@ -22,6 +22,6 @@ export const handleSubtitleStyle = () => {
     return {
         width: "var(--section_header_subtitle_width)",
         textAlign: "center",
-        opacity: 'var(--text_opacity)'
+        opacity: 'var(--text_low_opacity)'
     };
 };

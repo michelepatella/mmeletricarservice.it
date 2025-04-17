@@ -24,11 +24,11 @@ function UsedCarDrawerCollapse(props) {
                     label,
                     children: (
                         //car information (title + value)
-                        <li className="collapse-outer-list">
+                        <li className="used-car-drawer-collapse-outer-list">
                             {children.map((item) => (
                                 <ul
                                     key={item.name}
-                                    className="collapse-inner-list">
+                                    className="used-car-drawer-collapse-inner-list">
 
                                     {/* Title */}
                                     <span dangerouslySetInnerHTML={{__html: item.title}} />

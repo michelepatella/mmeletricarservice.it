@@ -1,6 +1,6 @@
-/* Loading outlines styles */
+/* Loading Outlines styles */
 .loading-outlined {
-    width: 120%;
+    width: var(--section_max_width);
     display: flex;
     align-items: center;
     align-self: center;

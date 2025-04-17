@@ -33,7 +33,7 @@ function UsedCarCard(props) {
                     props.usedCarOverview?.id)}>
 
                 {/* Image presentation (if any) */}
-                <div className="used-cars-image-container">
+                <div className="used-cars-card-image-container">
                     {
                         props.usedCarOverview?.image ?
                             <img
@@ -49,7 +49,7 @@ function UsedCarCard(props) {
 
                 {/* Flex container to show car's information */}
                 <Flex
-                    className="used-car-overview-flex"
+                    className="used-car-card-overview-flex"
                     gap="small"
                     align="start">
 

@@ -9,7 +9,7 @@ export const handleGoogleMapsContainerStyle = () => {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center top',
         backgroundSize: 'var(--google_maps_unavailable_size)',
-        opacity: 'var(--text_opacity)',
+        opacity: 'var(--text_low_opacity)',
     };
 };
 

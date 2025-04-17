@@ -34,7 +34,7 @@
 
 
     /* Components (General) */
-    --text_low_opacity: 0.7;
+    --text_low_opacity: 0.8;
     --border_radius: 5px;
     --gap_button_label: 0.5rem;
     --float_button_dimension: 40px;
@@ -142,6 +142,7 @@
 
 
     /* Used cars */
+    --used_cars_padding: 1rem;
     --used_cars_scroll_label_margin_left: 22%;
     --unavailable_used_cars_image_dimension: 250px;
 

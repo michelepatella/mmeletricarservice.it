@@ -3,7 +3,7 @@
     width: var(--section_max_width);
     display: flex;
     flex-direction: row;
-    padding: 1rem;
+    padding: var(--used_cars_padding);
     gap: var(--used_car_card_gap);
     overflow-x: auto;
     scrollbar-width: none;
@@ -28,7 +28,7 @@
     justify-content: center !important;
 }
 
-/* Unavailable used cars image */
+/* Unavailable used cars image styles */
 .unavailable-used-cars-container img{
     height: var(--unavailable_used_cars_image_dimension);
     width: var(--unavailable_used_cars_image_dimension);

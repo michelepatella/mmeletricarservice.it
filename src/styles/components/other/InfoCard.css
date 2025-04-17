@@ -6,7 +6,7 @@
     background-color: var(--background_color);
 }
 
-/* Info Card icon styles */
+/* Info Card Icon styles */
 .info-card-icon {
     width: var(--info_card_icon_dimension);
     height: var(--info_card_icon_dimension);

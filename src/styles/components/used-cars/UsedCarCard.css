@@ -12,7 +12,7 @@
 }
 
 /* Used cars image presentation container styles */
-.used-cars-image-container {
+.used-cars-card-image-container {
     width: 100%;
     aspect-ratio: 4 / 3;
     display: flex;
@@ -21,8 +21,15 @@
     overflow: hidden;
 }
 
+/* Used cars overview flex styles */
+.used-car-card-overview-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
 /* Used cars image presentation styles */
-.used-cars-image-container img {
+.used-cars-card-image-container img {
     max-width: 100%;
     height: 100%;
     object-fit: contain;

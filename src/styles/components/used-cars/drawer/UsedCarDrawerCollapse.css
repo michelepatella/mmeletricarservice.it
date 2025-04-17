@@ -11,7 +11,7 @@
     border: none !important;
 }
 
-/* Collapse Header text styles */
+/* Collapse Header and its text styles */
 .ant-collapse-header-text {
     color: white !important;
     font-weight: bold;
@@ -19,9 +19,10 @@
 }
 
 .ant-collapse-header {
+    margin: var(--used_car_drawer_collapse_header_margin_top_bottom)
+            0 var(--used_car_drawer_collapse_header_margin_top_bottom) 0;
     border: none !important;
     padding-left: 0 !important;
-    margin: var(--used_car_drawer_collapse_header_margin_top_bottom) 0 var(--used_car_drawer_collapse_header_margin_top_bottom) 0;
 }
 
 /* Collapse content styles */
@@ -39,8 +40,9 @@
     color: white;
 }
 
-.collapse-inner-list,
-.collapse-outer-list{
+/* Collapse lists styles */
+.used-car-drawer-collapse-inner-list,
+.used-car-drawer-collapse-outer-list{
     padding-inline-start: 0 !important;
     margin-block-start: 0 !important;
 }

@@ -244,7 +244,7 @@ export const USED_CAR_ALL_INFO = [
         ]
     }
 ]
-export const SCROLL_LABEL_TEXT = "< Scorri per visualizzare >"
+export const USED_CAR_SCROLL_LABEL_TEXT = "< Scorri per visualizzare >"
 export const USED_CARS_UNAVAILABLE_DESCRIPTION = "Auto momentaneamente esaurite. Stiamo preparando nuovi arrivi!"
 export const USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION = "Anteprima non disponibile."
 export const CTA_BUTTON_TEXT = "Verifica disponibilità"
@@ -283,4 +283,4 @@ export const CONTACTS = [
         icon: '/icons/facebook_icon.svg'
     }
 ]
-export const FOOTER_TEXT = RAG_SOCIALE + ". " + SITE + ". P. IVA: " + P_IVA + ". REA: " + REA + "."
+export const CONTACT_FOOTER_TEXT = RAG_SOCIALE + ". " + SITE + ". P. IVA: " + P_IVA + ". REA: " + REA + "."

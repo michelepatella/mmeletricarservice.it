@@ -21,7 +21,7 @@ export const handleTextOverviewStyle = (isTitleVisible) => {
         marginBottom: 'var(--used_car_overview_text_margin_top)',
         fontFamily: 'Poppins',
         fontWeight: isTitleVisible ? 'bold' : 'normal',
-        opacity: 'var(--text_opacity)',
+        opacity: 'var(--text_low_opacity)',
     };
 };
 
@@ -34,6 +34,6 @@ export const handleScrollLabelStyle = () => {
     return {
         marginLeft: 'var(--used_cars_scroll_label_margin_left)',
         textAlign: 'center',
-        opacity: 'var(--text_opacity)'
+        opacity: 'var(--text_low_opacity)'
     };
 };

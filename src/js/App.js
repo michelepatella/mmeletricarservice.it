@@ -34,7 +34,7 @@ import '../styles/components/sections/SectionContainer.css';
 import '../styles/components/sections/SectionHeader.css';
 import '../styles/components/used-cars/UsedCarOverview.css';
 import '../styles/components/used-cars/UsedCarCard.css';
-import '../styles/components/used-cars/UsedCarDrawer.css';
+import '../styles/components/used-cars/drawer/UsedCarDrawer.css';
 import '../styles/components/used-cars/drawer/UsedCarDrawerCarousel.css';
 import '../styles/components/used-cars/drawer/UsedCarDrawerCollapse.css';
 import '../styles/components/other/Menu.css';

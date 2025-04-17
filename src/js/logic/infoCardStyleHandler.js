@@ -5,6 +5,6 @@
 export const handleTitleStyle = () => {
     return {
         fontWeight: "bold",
-        color: "var(--accent_color)"
+        color: "var(--yellow_color)"
     };
 };

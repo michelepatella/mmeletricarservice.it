@@ -1,4 +1,4 @@
-import { FOOTER_TEXT } from '../../utils/const';
+import { CONTACT_FOOTER_TEXT } from '../../utils/const';
 
 /**
  * Contact Footer
@@ -11,9 +11,9 @@ function ContactsFooter() {
             <div className="contacts-footer">
 
                 {/* Footer text */}
-                <p className="footer-text">
+                <p className="contact-footer-text">
 
-                    {FOOTER_TEXT}
+                    {CONTACT_FOOTER_TEXT}
 
                     <br></br>
 

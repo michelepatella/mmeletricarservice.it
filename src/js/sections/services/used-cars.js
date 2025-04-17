@@ -3,7 +3,7 @@ import {LoadingOutlined} from "@ant-design/icons";
 import {
     USED_CARS_TITLE,
     USED_CARS_SUBTITLE,
-    SCROLL_LABEL_TEXT,
+    USED_CAR_SCROLL_LABEL_TEXT,
     USED_CARS_UNAVAILABLE_DESCRIPTION
 } from "../../utils/const";
 import {handleScrollLabelStyle} from "../../logic/usedCarsStyleHandler";
@@ -64,7 +64,7 @@ function UsedCars() {
                         {/* Scroll label */}
                         <CustomText
                             type="body"
-                            text={SCROLL_LABEL_TEXT}
+                            text={USED_CAR_SCROLL_LABEL_TEXT}
                             style={handleScrollLabelStyle()} />
                     </>
 

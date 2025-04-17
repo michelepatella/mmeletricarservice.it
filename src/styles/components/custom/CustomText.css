@@ -13,11 +13,11 @@
 /* Heading styles */
 .custom-heading {
     margin-bottom: 0;
+    color: var(--yellow_color);
     text-align: left;
     font-weight: bold;
     opacity: 0;
     transition: opacity 1.5s ease, transform 1.5s ease;
-    color: var(--yellow_color);
 }
 
 .custom-heading.in-view {
@@ -28,9 +28,9 @@
 .custom-subheading,
 .custom-body {
     opacity: 0;
-    transition: opacity 1.8s ease, transform 1.8s ease;
-    text-align: left;
     color: white;
+    text-align: left;
+    transition: opacity 1.8s ease, transform 1.8s ease;
 }
 
 .custom-subheading.in-view,

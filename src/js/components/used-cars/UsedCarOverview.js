@@ -11,13 +11,7 @@ import CustomText from "../custom/CustomText";
  */
 function UsedCarOverview (props) {
     return (
-
-        <Flex
-            className="used-car-overview-flex"
-            gap="small"
-            align="start">
-
-            {/* Overview information */}
+        <>
             {
                 USED_CAR_OVERVIEW.map((info, index) => (
                     <div
@@ -48,11 +42,11 @@ function UsedCarOverview (props) {
                             {/* Text (in case the title is visible and the text is now below it) */}
                             {
                                 props.showTitle &&
-                                    <CustomText
-                                        type="body"
-                                        text={props.usedCarOverview[info.name]}
-                                        disableAnimation={true}
-                                        style={handleTextOverviewStyle()} />
+                                <CustomText
+                                    type="body"
+                                    text={props.usedCarOverview[info.name]}
+                                    disableAnimation={true}
+                                    style={handleTextOverviewStyle()} />
                             }
 
                         </Flex>
@@ -60,8 +54,7 @@ function UsedCarOverview (props) {
                     </div>
                 ))
             }
-
-        </Flex>
+        </>
 
     );
 }
