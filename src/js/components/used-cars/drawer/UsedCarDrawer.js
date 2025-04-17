@@ -72,7 +72,7 @@ function UsedCarDrawer(props) {
                                         CTA button and Collapse with details) */}
                                         <UsedCarDrawerInfoPanel
                                             usedCarOverview={props.usedCarOverview}
-                                            usedCarInfo={props.usedCarInfo} />
+                                            usedCarInfo={usedCarInfo} />
 
                                     </Flex>
 

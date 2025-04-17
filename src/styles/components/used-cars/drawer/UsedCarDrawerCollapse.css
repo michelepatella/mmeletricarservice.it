@@ -31,7 +31,7 @@
     font-family: 'Poppins', sans-serif;
     border: none !important;
     border-left: 0.5px solid var(--accent_color) !important;
-    background-color: var(--background_color);
+    background-color: var(--darker_background_color);
 }
 
 /* Collapse expand icon styles */
