@@ -60,8 +60,8 @@
 
 
     /* Info Card */
-    --info_card_margin_top: 50px;
     --info_card_icon_dimension: 30px;
+    --info_card_flex_margin_top: 50px;
     --info_card_flex_gap: 20px;
     --info_card_width_big: 80%;
     --info_card_width_medium: 60%;
@@ -82,18 +82,22 @@
     /* Used Car Drawer */
     --used_car_drawer_flex_horizontal_gap_big_medium: 2rem;
     --used_car_drawer_flex_horizontal_gap_small: 3rem;
-    --used_car_drawer_vertical_flex_gap: 1.5rem;
-    --used_car_drawer_back_button_padding_left_big: 4rem;
-    --used_car_drawer_back_button_padding_left_small_portrait_medium_portrait: 3.2rem;
-    --used_car_drawer_back_button_padding_left_small_landscape_medium_landscape: 3.2rem;
+    --used_car_drawer_header_padding_left_big: 4rem;
+    --used_car_drawer_header_padding_left_small_portrait_medium_portrait: 3.2rem;
+    --used_car_drawer_header_padding_left_small_landscape_medium_landscape: 3.2rem;
+
+
+    /* Used Car Drawer Info Panel */
+    --used_car_drawer_info_panel_padding: 1.5rem;
+
 
     /* Used Car Drawer Carousel */
     --used_car_drawer_carousel_container_width_big: 75%;
     --used_car_drawer_carousel_container_width_medium_portrait: 100%;
     --used_car_drawer_carousel_container_width_medium_landscape: 70%;
     --used_car_drawer_carousel_container_width_small: 100%;
-    --used_car_drawer_carousel_max_height_flex_column: 80vh;
-    --used_car_drawer_carousel_max_height_flex_row: 40vh;
+    --used_car_drawer_carousel_max_height_big_medium_lanscape_small_landscape: 80vh;
+    --used_car_drawer_carousel_max_height_medium_portrait_small_portrait: 40vh;
 
 
     /* Used Car Drawer Collapse */
@@ -108,7 +112,7 @@
 
 
     /* Section Header */
-    --section_header_gap: 20px;
+    --section_header_padding: 20px;
     --section_header_margin_bottom: 50px;
     --section_header_subtitle_width: 85%;
 
@@ -133,7 +137,7 @@
 
     /* Home section */
     --home_header_padding_bottom: 5px;
-    --home_header_padding_right_left: 10px;
+    --home_header_padding_right: 10px;
     --home_header_gap: 20px;
 
 
@@ -150,7 +154,7 @@
     /* Where we are section */
     --google_maps_margin_top: 50px;
     --google_maps_height: 60vh;
-    --google_maps_unavailable_size: 10%;
+    --google_maps_unavailable_background_size: 10%;
     --google_maps_unavailable_description_margins: 15% 5% 0 5%;
 
 

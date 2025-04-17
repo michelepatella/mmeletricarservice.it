@@ -148,7 +148,7 @@ export const USED_CAR_OVERVIEW = [
 
     },
     {
-        title: "Chilometraggio",
+        title: "Chilometraggio (km)",
         name: "mileage",
         icon: '/icons/road_icon.svg',
 

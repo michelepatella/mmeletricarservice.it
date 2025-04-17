@@ -14,6 +14,7 @@
 
 /* Info Card Flex container styles */
 .info-card-flex {
+    margin-top: var(--info_card_flex_margin_top);
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
@@ -25,10 +26,6 @@
     .info-card {
         width: var(--info_card_width_big);
     }
-
-    .info-card-flex {
-        margin-top: var(--info_card_margin_top);
-    }
 }
 
 /* ------ Medium screen (portrait and landscape) ------ */
@@ -36,26 +33,11 @@
     .info-card {
         width: var(--info_card_width_medium);
     }
-
-    .info-card-flex {
-        margin-top: var(--info_card_margin_top);
-    }
 }
 
-/* ------ Small screen portrait ------ */
+/* ------ Small screens ------ */
 @media (max-width: 767px) {
     .info-card {
         width: var(--info_card_width_small_portrait);
-    }
-
-    .info-card-flex {
-        margin-top: var(--info_card_margin_top);
-    }
-}
-
-/* ------ Small screen landscape ------ */
-@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
-    .info-card-flex {
-        margin-top: var(--info_card_margin_top);
     }
 }

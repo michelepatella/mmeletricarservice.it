@@ -42,13 +42,13 @@
     .used-car-drawer-flex-vertical {
         border: 1px solid var(--light_gray_border_color);
         border-radius: var(--border_radius);
-        padding: var(--used_car_drawer_vertical_flex_gap);
+        padding: var(--used_car_drawer_info_panel_padding);
         background-color: var(--darker_background_color);
         box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
     }
 
     .ant-drawer-header {
-        padding-left: var(--used_car_drawer_back_button_padding_left_big) !important;
+        padding-left: var(--used_car_drawer_header_padding_left_big) !important;
     }
 }
 
@@ -61,7 +61,7 @@
     }
 
     .ant-drawer-header {
-        padding-left: var(--used_car_drawer_back_button_padding_left_small_portrait_medium_portrait) !important;
+        padding-left: var(--used_car_drawer_header_padding_left_small_portrait_medium_portrait) !important;
     }
 }
 
@@ -75,13 +75,13 @@
     .used-car-drawer-flex-vertical {
         border: 1px solid var(--light_gray_border_color);
         border-radius: var(--border_radius);
-        padding: var(--used_car_drawer_vertical_flex_gap);
+        padding: var(--used_car_drawer_info_panel_padding);
         background-color: var(--darker_background_color);
         box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
     }
 
     .ant-drawer-header {
-        padding-left: var(--used_car_drawer_back_button_padding_left_small_landscape_medium_landscape) !important;
+        padding-left: var(--used_car_drawer_header_padding_left_small_landscape_medium_landscape) !important;
     }
 }
 
@@ -94,7 +94,7 @@
     }
 
     .ant-drawer-header {
-        padding-left: var(--used_car_drawer_back_button_padding_left_small_portrait_medium_portrait) !important;
+        padding-left: var(--used_car_drawer_header_padding_left_small_portrait_medium_portrait) !important;
     }
 }
 
@@ -107,6 +107,6 @@
     }
 
     .ant-drawer-header {
-        padding-left: var(--used_car_drawer_back_button_padding_left_small_landscape_medium_landscape) !important;
+        padding-left: var(--used_car_drawer_header_padding_left_small_landscape_medium_landscape) !important;
     }
 }

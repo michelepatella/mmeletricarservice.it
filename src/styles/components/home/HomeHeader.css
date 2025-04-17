@@ -3,7 +3,7 @@
     display: flex;
     justify-content: right;
     gap: var(--home_header_gap);
-    padding-right: var(--home_header_padding_right_left);
+    padding-right: var(--home_header_padding_right);
     padding-bottom: var(--home_header_padding_bottom);
     background-color: transparent;
 }

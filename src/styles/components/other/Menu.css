@@ -90,7 +90,6 @@
 /* Big menu items styles */
 .ant-anchor-link-title {
     color: white !important;
-    font-size: var(--body_font_size_medium);
     font-family: 'Poppins', 'sans-serif' !important;
     padding-top: var(--menu_items_gap);
     transition: color 0.3s ease;
@@ -112,19 +111,20 @@
     .menu-container-small {
         display: none;
     }
-}
 
-/* ----------- Medium screen portrait ----------- */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .menu-container-small {
-        display: none;
+    .ant-anchor-link-title {
+        font-size: var(--body_font_size_big);
     }
 }
 
-/* ----------- Medium screen landscape ----------- */
-@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+/* ----------- Medium screens ----------- */
+@media (min-width: 768px) and (max-width: 1024px) {
     .menu-container-small {
         display: none;
+    }
+
+    .ant-anchor-link-title {
+        font-size: var(--body_font_size_medium);
     }
 }
 

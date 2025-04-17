@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: var(--section_header_gap);
+    padding: var(--section_header_padding);
     border: 1px solid var(--dark_gray_border_color);
     border-radius: var(--border_radius);
     background: transparent;
