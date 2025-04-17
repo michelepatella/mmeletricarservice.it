@@ -61,16 +61,20 @@ function UsedCarDrawer(props) {
                                 {/* Flex horizontal container (info column + carousel) */}
                                 <Flex
                                     className="used-car-drawer-flex-horizontal"
-                                    width="70%">
+                                    width="60%">
 
                                     {/* Flex vertical container with overview information */}
                                     <Flex
                                         vertical
-                                        width="30%">
+                                        className="used-car-drawer-flex-vertical"
+                                        width="40%">
 
                                         {/* Vertical flex (Name, Price, Overview info and CTA button) */}
                                         <UsedCarDrawerVerticalFlex
                                             usedCarOverview={props.usedCarOverview}/>
+
+                                        {/* Collapse with all used car information */}
+                                        <UsedCarDrawerCollapse usedCarInfo={usedCarInfo}/>
 
                                     </Flex>
 
@@ -78,9 +82,6 @@ function UsedCarDrawer(props) {
                                     <UsedCarDrawerCarousel usedCarInfo={usedCarInfo}/>
 
                                 </Flex>
-
-                                {/* Collapse with all used car information */}
-                                <UsedCarDrawerCollapse usedCarInfo={usedCarInfo}/>
                             </Flex>
                         </>
                 }

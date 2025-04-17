@@ -12,9 +12,11 @@ function UsedCarDrawerCollapse(props) {
     return (
 
         <>
+
             {/* Collapse with all used car information */}
             <Collapse
                 className="used-car-drawer-collapse"
+                accordion
                 expandIcon={({ isActive }) =>
                     isActive ? <MinusOutlined/> : <PlusOutlined/>
                 }

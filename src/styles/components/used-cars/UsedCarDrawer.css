@@ -39,10 +39,17 @@
         gap: var(--used_car_drawer_flex_horizontal_gap_big_medium);
     }
 
+    .used-car-drawer-flex-vertical {
+        border: 1px solid var(--light_gray_border_color);
+        border-radius: var(--border_radius);
+        padding: var(--used_car_drawer_vertical_flex_gap);
+    }
+
     .ant-drawer-header {
         padding-left: var(--drawer_back_button_padding_left_big) !important;
     }
 }
+
 /* ----------- Medium screen portrait ----------- */
 @media (min-width: 768px) and (max-width: 1024px) {
     .used-car-drawer-flex-horizontal {
@@ -65,6 +72,12 @@
     .used-car-drawer-flex-horizontal {
         flex-direction: row;
         gap: var(--used_car_drawer_flex_horizontal_gap_big_medium);
+    }
+
+    .used-car-drawer-flex-vertical {
+        border: 1px solid var(--light_gray_border_color);
+        border-radius: var(--border_radius);
+        padding: var(--used_car_drawer_vertical_flex_gap);
     }
 
     .ant-drawer-header {

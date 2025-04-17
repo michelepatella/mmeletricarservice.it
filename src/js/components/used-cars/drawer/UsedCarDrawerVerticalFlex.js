@@ -5,6 +5,7 @@ import {handleNamePriceStyle} from "../../../logic/usedCarsStyleHandler";
 import CustomText from "../../custom/CustomText";
 import UsedCarOverview from "../UsedCarOverview";
 import CustomButton from "../../custom/CustomButton";
+import {Divider} from "antd";
 
 /**
  * Used Car Drawer Vertical Flex
@@ -48,6 +49,7 @@ function UsedCarDrawerVerticalFlex(props) {
                     contact.value === PHONE).icon}
                 onClick={contactClickHandler[CONTACTS.find(contact =>
                     contact.value === PHONE).value]} />
+
         </>
 
     );
