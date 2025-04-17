@@ -13,7 +13,7 @@
 /* Home Title styles */
 .home-title {
     text-align: center;
-    color: var(--accent_color);
+    color: var(--yellow_color);
     margin-bottom: 0;
     opacity: 0;
     animation: slideUpHomeTitle 1.5s ease forwards;

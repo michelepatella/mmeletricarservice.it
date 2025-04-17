@@ -48,7 +48,7 @@
     }
 
     .ant-drawer-header {
-        padding-left: var(--drawer_back_button_padding_left_big) !important;
+        padding-left: var(--used_car_drawer_back_button_padding_left_big) !important;
     }
 }
 
@@ -61,7 +61,7 @@
     }
 
     .ant-drawer-header {
-        padding-left: var(--drawer_back_button_padding_left_small_portrait_medium_portrait) !important;
+        padding-left: var(--used_car_drawer_back_button_padding_left_small_portrait_medium_portrait) !important;
     }
 }
 
@@ -81,7 +81,7 @@
     }
 
     .ant-drawer-header {
-        padding-left: var(--drawer_back_button_padding_left_small_landscape_medium_landscape) !important;
+        padding-left: var(--used_car_drawer_back_button_padding_left_small_landscape_medium_landscape) !important;
     }
 }
 
@@ -94,7 +94,7 @@
     }
 
     .ant-drawer-header {
-        padding-left: var(--drawer_back_button_padding_left_small_portrait_medium_portrait) !important;
+        padding-left: var(--used_car_drawer_back_button_padding_left_small_portrait_medium_portrait) !important;
     }
 }
 
@@ -107,6 +107,6 @@
     }
 
     .ant-drawer-header {
-        padding-left: var(--drawer_back_button_padding_left_small_landscape_medium_landscape) !important;
+        padding-left: var(--used_car_drawer_back_button_padding_left_small_landscape_medium_landscape) !important;
     }
 }

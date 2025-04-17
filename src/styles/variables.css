@@ -5,7 +5,7 @@
     --darker_background_color: #0f0f0f;
     --dark_gray_border_color: #1B1B1B;
     --light_gray_border_color: #999999;
-    --accent_color: #F8DE4D;
+    --yellow_color: #F8DE4D;
     --blue_color: #005FCC;
 
 
@@ -56,8 +56,7 @@
 
 
     /* Cookie Consent Banner */
-    --cookie_consent_banner_switch_margin_top_bottom: 20px;
-    --cookie_consent_banner_button_padding: 11px 22px 11px 22px;
+    --cookie_consent_banner_button_padding: 11px 20px 11px 22px;
 
 
     /* Info Card */
@@ -77,24 +76,29 @@
 
     /* Used Car Overview */
     --used_car_overview_text_margin_top: 4px;
-    --used_car_overview_info_container_margin_top: 1rem;
+    --used_car_overview_container_margin_top: 1rem;
 
 
     /* Used Car Drawer */
     --used_car_drawer_flex_horizontal_gap_big_medium: 2rem;
     --used_car_drawer_flex_horizontal_gap_small: 3rem;
     --used_car_drawer_vertical_flex_gap: 1.5rem;
-    --carousel_container_width_big: 75%;
-    --carousel_container_width_medium_portrait: 100%;
-    --carousel_container_width_medium_landscape: 70%;
-    --carousel_container_width_small: 100%;
-    --carousel_max_height_flex_column: 80vh;
-    --carousel_max_height_flex_row: 40vh;
-    --drawer_back_button_padding_left_big: 4rem;
-    --drawer_back_button_padding_left_small_portrait_medium_portrait: 3.2rem;
-    --drawer_back_button_padding_left_small_landscape_medium_landscape: 3.2rem;
-    --collapse_margin_top: 80px;
-    --collapse_header_margin_top_bottom: 10px;
+    --used_car_drawer_back_button_padding_left_big: 4rem;
+    --used_car_drawer_back_button_padding_left_small_portrait_medium_portrait: 3.2rem;
+    --used_car_drawer_back_button_padding_left_small_landscape_medium_landscape: 3.2rem;
+
+    /* Used Car Drawer Carousel */
+    --used_car_drawer_carousel_container_width_big: 75%;
+    --used_car_drawer_carousel_container_width_medium_portrait: 100%;
+    --used_car_drawer_carousel_container_width_medium_landscape: 70%;
+    --used_car_drawer_carousel_container_width_small: 100%;
+    --used_car_drawer_carousel_max_height_flex_column: 80vh;
+    --used_car_drawer_carousel_max_height_flex_row: 40vh;
+
+
+    /* Used Car Drawer Collapse */
+    --used_car_drawer_collapse_margin_top: 80px;
+    --used_car_drawer_collapse_header_margin_top_bottom: 10px;
 
 
     /* Section Container */
@@ -139,14 +143,12 @@
 
     /* Used cars */
     --used_cars_scroll_label_margin_left: 22%;
-    --used_cars_loading_outlined_margins: 20% 50% 50% 58%;
     --unavailable_used_cars_image_dimension: 250px;
 
 
     /* Where we are section */
     --google_maps_margin_top: 50px;
     --google_maps_height: 60vh;
-    --google_maps_unavailable_height: 35vh;
     --google_maps_unavailable_size: 10%;
     --google_maps_unavailable_description_margins: 15% 5% 0 5%;
 

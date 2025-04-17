@@ -29,78 +29,78 @@
 /* ----------- Big screen ----------- */
 @media (min-width: 1025px) {
     .carousel-container {
-        width: var(--carousel_container_width_big);
-        max-height: var(--carousel_max_height_flex_column);
+        width: var(--used_car_drawer_carousel_container_width_big);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_column);
     }
 
     .carousel-container .ant-image {
-        max-height: var(--carousel_max_height_flex_column);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_column);
     }
 
     .carousel-container .ant-image-img {
-        max-height: var(--carousel_max_height_flex_column);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_column);
     }
 }
 /* ----------- Medium screen portrait ----------- */
 @media (min-width: 768px) and (max-width: 1024px) {
     .carousel-container {
-        width: var(--carousel_container_width_medium_portrait);
-        max-height: var(--carousel_max_height_flex_row);
+        width: var(--used_car_drawer_carousel_container_width_medium_portrait);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_row);
     }
 
     .carousel-container .ant-image {
-        max-height: var(--carousel_max_height_flex_row);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_row);
     }
 
     .carousel-container .ant-image-img {
-        max-height: var(--carousel_max_height_flex_row);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_row);
     }
 }
 
 /* ----------- Medium screen landscape ----------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .carousel-container {
-        width: var(--carousel_container_width_medium_landscape);
-        max-height: var(--carousel_max_height_flex_column);
+        width: var(--used_car_drawer_carousel_container_width_medium_landscape);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_column);
     }
 
     .carousel-container .ant-image {
-        max-height: var(--carousel_max_height_flex_column);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_column);
     }
 
     .carousel-container .ant-image-img {
-        max-height: var(--carousel_max_height_flex_column);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_column);
     }
 }
 
 /* ----------- Small screen portrait ----------- */
 @media (max-width: 767px){
     .carousel-container {
-        width: var(--carousel_container_width_small);
-        max-height: var(--carousel_max_height_flex_row);
+        width: var(--used_car_drawer_carousel_container_width_small);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_row);
     }
 
     .carousel-container .ant-image {
-        max-height: var(--carousel_max_height_flex_row);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_row);
     }
 
     .carousel-container .ant-image-img {
-        max-height: var(--carousel_max_height_flex_row);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_row);
     }
 }
 
 /* ----------- Small screen landscape ----------- */
 @media (max-width: 767px) and (orientation: landscape) {
     .carousel-container {
-        width: var(--carousel_container_width_small);
-        max-height: var(--carousel_max_height_flex_column);
+        width: var(--used_car_drawer_carousel_container_width_small);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_column);
     }
 
     .carousel-container .ant-image {
-        max-height: var(--carousel_max_height_flex_column);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_column);
     }
 
     .carousel-container .ant-image-img {
-        max-height: var(--carousel_max_height_flex_column);
+        max-height: var(--used_car_drawer_carousel_max_height_flex_column);
     }
 }

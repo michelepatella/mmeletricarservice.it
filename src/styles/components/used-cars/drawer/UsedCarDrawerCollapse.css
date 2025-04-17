@@ -1,6 +1,6 @@
 /* Collapse styles */
 .used-car-drawer-collapse {
-    margin-top: var(--collapse_margin_top);
+    margin-top: var(--used_car_drawer_collapse_margin_top);
     border: none;
     border-radius: 0;
     backdrop-filter: blur(6px);
@@ -21,7 +21,7 @@
 .ant-collapse-header {
     border: none !important;
     padding-left: 0 !important;
-    margin: var(--collapse_header_margin_top_bottom) 0 var(--collapse_header_margin_top_bottom) 0;
+    margin: var(--used_car_drawer_collapse_header_margin_top_bottom) 0 var(--used_car_drawer_collapse_header_margin_top_bottom) 0;
 }
 
 /* Collapse content styles */
@@ -30,7 +30,7 @@
     color: white;
     font-family: 'Poppins', sans-serif;
     border: none !important;
-    border-left: 0.5px solid var(--accent_color) !important;
+    border-left: 0.5px solid var(--yellow_color) !important;
     background-color: var(--darker_background_color);
 }
 

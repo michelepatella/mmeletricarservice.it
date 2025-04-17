@@ -22,7 +22,7 @@ function UsedCarOverview (props) {
                 USED_CAR_OVERVIEW.map((info, index) => (
                     <div
                         key={index}
-                        className="used-car-overview-info-container">
+                        className="used-car-overview-container">
 
                         {/* Global Flex container (vertical) */}
                         <Flex vertical>
