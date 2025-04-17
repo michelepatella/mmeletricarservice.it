@@ -1,7 +1,7 @@
 import { HOME_TITLE, HOME_SUBTITLE } from "../../utils/const";
 
 /**
- * Content of Home section
+ * Home Content
  * @returns {Element}
  * @constructor
  */

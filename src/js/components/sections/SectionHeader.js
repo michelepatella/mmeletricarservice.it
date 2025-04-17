@@ -1,6 +1,5 @@
 import React, {useRef} from "react";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import {useVideoAnimation} from "../../hooks/useVideoAnimation";
 import {
     handleSectionNameStyle,
     handleSubtitleStyle
@@ -14,12 +13,6 @@ import CustomText from "../custom/CustomText";
  * @constructor
  */
 function SectionHeader(props) {
-
-    //IntersectionObserver to generate the animation and
-    //start the video when the section is visible
-    const videoRef = useRef(null);
-    const isVideoVisible= useIntersectionObserver(videoRef);
-    useVideoAnimation(videoRef, isVideoVisible);
 
     //to animate the whole header
     const ref = useRef(null);
@@ -47,24 +40,10 @@ function SectionHeader(props) {
             <CustomText
                 type="subheading"
                 text={props.subtitle}
-                style={handleSubtitleStyle(props.video)} />
+                style={handleSubtitleStyle()} />
 
-            {/* Media (if any) */}
-            {
-                props.video ?
-
-                    <video
-                        className="video"
-                        ref={videoRef}
-                        src={props.video}
-                        type="video/mp4"
-                        loop={false}
-                        controls={false}
-                        muted
-                        playsInline/>
-
-                    : null
-            }
+            {/* Other contents (if any) */}
+            {props.children}
 
         </div>
 

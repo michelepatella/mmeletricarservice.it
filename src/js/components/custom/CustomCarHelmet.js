@@ -12,18 +12,18 @@ function CustomCarHelmet(props) {
 
         <Helmet>
 
-            {/* Title */}
+            {/* Title (Name - Price) */}
             <meta
                 property="og:title"
                 content={props.usedCarOverview.name + ' - ' + props.usedCarOverview.price} />
 
-            {/* Description */}
+            {/* Description (year, mileage, fuel and car's status) */}
             <meta
                 property="og:description"
                 content={"🗓️Anno: " + props.usedCarOverview.year +
                         " | 🛣️Chilometraggio: " + props.usedCarOverview.mileage +
                         " | ⛽️Carburante: " + props.usedCarOverview.fuel +
-                        " | 🚘Carrozzeria: " + props.usedCarOverview.bodywork} />
+                        " | 🚘Stato dell'auto: " + props.usedCarOverview.status} />
 
             {/* URL */}
             <meta

@@ -33,21 +33,19 @@ function UsedCarCard(props) {
                     props.usedCarOverview.id)}>
 
                 {/* Image presentation (if any) */}
-                {
-                    props.usedCarOverview.image ?
-                        <div className="used-cars-image-container">
+                <div className="used-cars-image-container">
+                    {
+                        props.usedCarOverview.image ?
                             <img
                                 src={props.usedCarOverview.image}
-                                alt="Immagine auto" />
-                        </div>
+                                alt="auto-image" />
                         :
-                        <div className="used-cars-image-container">
                             <CustomText
                                 type="caption"
                                 text={USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION}
                                 disableAnimation={true} />
-                        </div>
-                }
+                    }
+                </div>
 
                 {/* Flex container to contain information */}
                 <Flex
@@ -60,20 +58,20 @@ function UsedCarCard(props) {
                         type="subheading"
                         text={props.usedCarOverview.name}
                         disableAnimation={true}
-                        style={handleNamePriceStyle()}/>
+                        style={handleNamePriceStyle()} />
 
                     {/* Overview information */}
                     <UsedCarOverview
-                        overview={true}
-                        usedCarOverview={props.usedCarOverview}/>
+                        showTitle={false}
+                        usedCarOverview={props.usedCarOverview} />
 
+                    {/* Price */}
                     <div className="used-cars-card-price-container">
-                        {/* Price */}
                         <CustomText
                             type="body"
                             text={props.usedCarOverview.price}
                             disableAnimation={true}
-                            style={handleNamePriceStyle()}/>
+                            style={handleNamePriceStyle()} />
                     </div>
 
                 </Flex>
@@ -83,11 +81,11 @@ function UsedCarCard(props) {
             {/* Used Car Drawer including car's details when the card is clicked */}
             {
                 isDrawerOpen &&
-                    <UsedCarDrawer
-                        usedCarInfo={usedCarInfo}
-                        setUsedCarInfo={setUsedCarInfo}
-                        usedCarOverview={props.usedCarOverview}
-                        setIsDrawerOpen={setIsDrawerOpen} />
+                <UsedCarDrawer
+                    usedCarInfo={usedCarInfo}
+                    setUsedCarInfo={setUsedCarInfo}
+                    usedCarOverview={props.usedCarOverview}
+                    setIsDrawerOpen={setIsDrawerOpen} />
             }
 
         </>

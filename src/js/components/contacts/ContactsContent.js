@@ -3,12 +3,13 @@ import {
     CONTACTS,
     CONTACTS_SUBTITLE
 } from "../../utils/const";
+import {contactClickHandler} from "../../logic/contactButtonHandler";
 import CustomButton from "../custom/CustomButton";
 import SectionContainer from "../sections/SectionContainer";
 import SectionHeader from "../sections/SectionHeader";
 
 /**
- * Content of Contacts section
+ * Contact Content
  * @returns {Element}
  * @constructor
  */
@@ -31,9 +32,10 @@ function ContactsContent() {
                         <CustomButton
                             key={index}
                             isContact={true}
-                            contactValue={contact.value}
+                            isCta={false}
                             text={contact.value}
-                            icon={contact.icon} />
+                            icon={contact.icon}
+                            onClick={contactClickHandler[contact.value]} />
                     ))}
                 </div>
 

@@ -1,5 +1,4 @@
 import { Button } from "antd";
-import { contactClickHandler } from "../../logic/contactButtonHandler";
 
 /**
  * Custom Button
@@ -19,16 +18,15 @@ function CustomButton(props){
             className={
                 props.isContact && !props.isCta ? "contact-button"
                     : props.isContact ? "cta-button" : "custom-button"}
-            onClick={props.isContact ? contactClickHandler[props.value] : props.onClick}
+            onClick={props.onClick}
             style={style}>
 
             {/* Button's icon (if any) */}
             {
-                props.icon ?
+                props.icon &&
                     <img
                         src={props.icon}
-                        alt="contact-icon" />
-                    : null
+                        alt="button-icon" />
             }
 
             {props.text}

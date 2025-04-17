@@ -4,7 +4,7 @@
  */
 export const handleGoogleMapsContainerStyle = () => {
     return {
-        height: 'var(--google_maps_height)',
+        height: 'calc(var(--google_maps_height)/2)',
         background: 'url(/icons/map_icon.svg)',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center top',

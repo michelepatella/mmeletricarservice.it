@@ -19,7 +19,6 @@ function CustomBackButton() {
             <CustomText
                 type="body"
                 disableAnimation={true}
-                style={{ opacity: 1 }}
                 text={BACK_BUTTON_LABEL} />
         </span>
 

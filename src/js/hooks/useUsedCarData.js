@@ -57,6 +57,7 @@ export const useUsedCarData = (endpoint, setData, setIsLoading, isRedundantReque
                 setIsLoading(false);
 
             } catch (error) {
+
                 //handle errors while acquiring data
                 console.error('Error fetching data:', error);
                 setData([]);
@@ -64,8 +65,10 @@ export const useUsedCarData = (endpoint, setData, setIsLoading, isRedundantReque
                 setIsLoading(false);
 
             } finally {
+
                 //fetching data is finished
                 isFetching = false;
+
             }
         };
 

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Collapse, Drawer, Flex} from "antd";
+import {Drawer, Flex} from "antd";
 import {LoadingOutlined} from "@ant-design/icons";
 import {onUsedCarDrawerClose} from "../../../logic/usedCarDrawerHandler";
 import {useUsedCarData} from "../../../hooks/useUsedCarData";
@@ -8,7 +8,6 @@ import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
 import UsedCarDrawerVerticalFlex from "./UsedCarDrawerVerticalFlex";
 import CustomBackButton from "../../custom/CustomBackButton";
 import CustomCarHelmet from "../../custom/CustomCarHelmet";
-import {USED_CAR_ALL_INFO} from "../../../utils/const";
 import UsedCarDrawerCollapse from "./UsedCarDrawerCollapse";
 
 /**
@@ -50,13 +49,13 @@ function UsedCarDrawer(props) {
 
                 {
                     isCarLoading ?
-                        //loading outlined since the
+                        //loading outlined until the
                         //system is loading the used cars
                         <LoadingOutlined
                             className="loading-outlined"
                             spin={isCarLoading}
                             style={{ width: "100%" }} />
-                        :
+                    :
                         <>
                             <Flex vertical>
                                 {/* Flex horizontal container (info column + carousel) */}
@@ -70,7 +69,8 @@ function UsedCarDrawer(props) {
                                         width="30%">
 
                                         {/* Vertical flex (Name, Price, Overview info and CTA button) */}
-                                        <UsedCarDrawerVerticalFlex usedCarOverview={props.usedCarOverview}/>
+                                        <UsedCarDrawerVerticalFlex
+                                            usedCarOverview={props.usedCarOverview}/>
 
                                     </Flex>
 

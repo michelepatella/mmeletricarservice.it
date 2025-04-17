@@ -18,10 +18,9 @@ export const handleSectionNameStyle = () => {
  * of the section header dynamically
  * @returns {{textAlign: string, width: string}}
  */
-export const handleSubtitleStyle = (hasMedia) => {
+export const handleSubtitleStyle = () => {
     return {
         width: "var(--section_header_subtitle_width)",
-        marginBottom: hasMedia ? "var(--section_header_subtitle_margin_bottom)" : null,
         textAlign: "center",
         opacity: 'var(--text_opacity)'
     };

@@ -10,14 +10,17 @@ import {useMenu} from "../../hooks/useMenu";
 function MenuBigScreen() {
 
     //generate the animation of the big menu and generate its items
-    const { menuItems, menuItemControls, section } = useMenu();
+    const {
+        menuItems,
+        menuItemControls,
+        section
+    } = useMenu();
 
     return (
         <div className='menu-container-big'>
 
             {/* Motion division for the menu animation */}
             <motion.div
-                className='menu-content'
                 animate={menuItemControls}
                 initial={{
                     opacity: 0,

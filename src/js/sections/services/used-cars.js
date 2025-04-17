@@ -44,13 +44,17 @@ function UsedCars() {
                 as the loading is finished, if data is not empty, show it. */}
             {
                 areCarsLoading ? (
-                    <LoadingOutlined className="loading-outlined" spin />
+                    <LoadingOutlined
+                        className="loading-outlined"
+                        spin={areCarsLoading} />
                 ) : usedCarsOverview.length > 0 ? (
                     <>
                         {/* Show all the available used cars */}
                         <div className="used-cars-container">
                             {usedCarsOverview.map((car, index) => (
-                                <UsedCarCard key={index} usedCarOverview={car} />
+                                <UsedCarCard
+                                    key={index}
+                                    usedCarOverview={car} />
                             ))}
                         </div>
 
@@ -68,8 +72,8 @@ function UsedCars() {
                             text={USED_CARS_UNAVAILABLE_DESCRIPTION}
                             style={{ textAlign: 'center' }} />
                         <img
-                            src="/images/used-car-image.jpeg"
-                            alt="Auto usate non disponibili"/>
+                            src="/images/empty-used-cars-image.jpeg"
+                            alt="unavailable-used-cars"/>
                     </div>
                 )
             }

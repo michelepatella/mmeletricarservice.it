@@ -22,7 +22,6 @@ function BackgroundContainer({ image, children, custStyle }) {
         //motion division for containing the background
         //to generate animation
         <motion.div
-            className="custom-background-container"
             style={style}
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}

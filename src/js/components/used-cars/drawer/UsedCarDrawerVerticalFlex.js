@@ -1,5 +1,6 @@
 import React from "react";
 import {CONTACTS, CTA_BUTTON_TEXT, PHONE} from "../../../utils/const";
+import {contactClickHandler} from "../../../logic/contactButtonHandler";
 import {handleNamePriceStyle} from "../../../logic/usedCarsStyleHandler";
 import CustomText from "../../custom/CustomText";
 import UsedCarOverview from "../UsedCarOverview";
@@ -35,17 +36,18 @@ function UsedCarDrawerVerticalFlex(props) {
 
             {/* Overview information */}
             <UsedCarOverview
-                usedCarOverview={props.usedCarOverview}
-                isTitleVisible={true} />
+                showTitle={true}
+                usedCarOverview={props.usedCarOverview} />
 
             {/* Call-To-Action Button */}
             <CustomButton
                 isContact={true}
                 isCta={true}
-                value={PHONE}
                 text={CTA_BUTTON_TEXT}
                 icon={CONTACTS.find(contact =>
-                    contact.value === PHONE).icon} />
+                    contact.value === PHONE).icon}
+                onClick={contactClickHandler[CONTACTS.find(contact =>
+                    contact.value === PHONE).value]} />
         </>
 
     );

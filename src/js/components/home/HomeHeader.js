@@ -17,19 +17,16 @@ function HomeHeader() {
             {/* Email Button */}
             <CustomIconButton
                 src="/icons/email_icon.svg"
-                alt="Email"
                 onClick={onEmailButtonClick} />
 
             {/* Facebook Button */}
             <CustomIconButton
                 src="/icons/facebook_icon.svg"
-                alt="Facebook"
                 onClick={onFacebookButtonClick} />
 
             {/* Phone Button */}
             <CustomIconButton
                 src="/icons/phone_icon.svg"
-                alt="Phone"
                 onClick={onPhoneButtonClick} />
         </>
 

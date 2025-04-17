@@ -140,7 +140,7 @@ export const ALL_SERVICES = [
 /**------------- "Used cars" texts -------------**/
 export const USED_CARS_TITLE = "La tua prossima auto, pronta per te"
 export const USED_CARS_SUBTITLE = "Le migliori auto usate garantite, scelte con attenzione per chi cerca qualità, affidabilità e convenienza.";
-export const USED_CAR_OVERVIEW =[
+export const USED_CAR_OVERVIEW = [
     {
         title: "Anno",
         name: "year",

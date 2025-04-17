@@ -22,12 +22,12 @@ function InfoCard(props){
                     align="start">
 
                     {/* Icon */}
-                    { props.icon ?
+                    { props.icon &&
                         <img
                             className="info-card-icon"
                             src={props.icon}
                             alt="info-card-icon" />
-                        : null}
+                    }
 
                     {/* Title */}
                     <CustomText

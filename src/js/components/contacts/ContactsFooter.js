@@ -1,7 +1,7 @@
 import { FOOTER_TEXT } from '../../utils/const';
 
 /**
- * Footer of Contacts section
+ * Contact Footer
  * @returns {Element}
  * @constructor
  */

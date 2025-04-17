@@ -14,15 +14,15 @@ function CustomText(props) {
     useIntersectionObserver(textRef);
 
     //combine static and dynamic styles
-    const style = {...props.style};
+    const style = {
+        ...(props.disableAnimation ? { opacity: "1" } : {}),
+        ...props.style
+    };
 
     return(
 
         <p
-            className=
-                {props.type === "heading" ? "custom-heading" :
-                    props.type === "subheading" ? "custom-subheading" :
-                        props.type === "body" ? "custom-body" : "custom-caption"}
+            className={"custom-" + props.type}
             ref={props.disableAnimation ? null : textRef}
             style={style}
             dangerouslySetInnerHTML={{ __html: props.text }} />

@@ -8,7 +8,6 @@ import {onUsedCarDrawerClose} from "../logic/usedCarDrawerHandler";
  */
 export const useDrawerBackButtonHandler = (setIsDrawerOpen) => {
     useEffect(() => {
-
         //close the drawer when back button is clicked
         const handleBackButton = (event) => {
             onUsedCarDrawerClose(setIsDrawerOpen)
