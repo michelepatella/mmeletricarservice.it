@@ -8,6 +8,6 @@
 
 /* Used cars overview info icon styles */
 .used-car-overview-container img {
-    opacity: var(--text_low_opacity);
+    opacity: var(--low_opacity);
     margin-bottom: var(--used_car_overview_text_margin_top);
 }

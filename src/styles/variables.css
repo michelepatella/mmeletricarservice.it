@@ -38,7 +38,7 @@
 
 
     /* Components (General) */
-    --text_low_opacity: 0.8;
+    --low_opacity: 0.8;
     --border_radius: 5px;
     --gap_button_label: 0.5rem;
     --float_button_dimension: 40px;

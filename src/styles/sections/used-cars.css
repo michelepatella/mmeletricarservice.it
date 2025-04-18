@@ -32,4 +32,5 @@
 .unavailable-used-cars-container img{
     height: var(--unavailable_used_cars_image_dimension);
     width: var(--unavailable_used_cars_image_dimension);
+    opacity: var(--low_opacity);
 }
