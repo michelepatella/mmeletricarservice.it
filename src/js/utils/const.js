@@ -176,7 +176,7 @@ export const USED_CAR_ALL_INFO = [
                 name: 'power',
             },
             {
-                title: '<strong>Cilindrata (cm³)</strong>',
+                title: '<strong>Cilindrata (cc)</strong>',
                 name: 'engine_displacement',
             },
             {
@@ -194,7 +194,7 @@ export const USED_CAR_ALL_INFO = [
         label: 'Emissioni e consumo',
         children: [
             {
-                title: '<strong>Consumo (l/100 km)</strong>',
+                title: '<strong>Consumo (L/100 km)</strong>',
                 name: 'consumption',
             },
             {
@@ -238,7 +238,7 @@ export const USED_CAR_ALL_INFO = [
                 name: 'internal_color',
             },
             {
-                title: '<strong>Materiale</strong>',
+                title: '<strong>Materiale interno</strong>',
                 name: 'internal_material',
             }
         ]
