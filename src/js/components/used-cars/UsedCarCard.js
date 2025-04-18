@@ -68,8 +68,8 @@ function UsedCarCard(props) {
                     {/* Price */}
                     <div className="used-cars-card-price-container">
                         <CustomText
-                            type="body"
-                            text={props.usedCarOverview?.price}
+                            type="subheading"
+                            text={'€ ' + props.usedCarOverview?.price}
                             disableAnimation={true}
                             style={handleNamePriceStyle()} />
                     </div>
