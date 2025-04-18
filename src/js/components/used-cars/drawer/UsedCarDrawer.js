@@ -19,7 +19,7 @@ function UsedCarDrawer(props) {
 
     //get the info of the used car of interest
     const usedCarInfo = props.usedCarInfo?.find((car) =>
-        car.id === props.usedCarOverview?.id
+        car?.id === props.usedCarOverview?.id
     );
 
     //get used car info (if needed)

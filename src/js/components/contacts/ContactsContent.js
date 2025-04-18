@@ -28,14 +28,14 @@ function ContactsContent() {
                 {/* Contact buttons container */}
                 <div className="contact-buttons-container">
                     {/* Add a button for each contact */}
-                    {CONTACTS.map((contact, index) => (
+                    {CONTACTS?.map((contact, index) => (
                         <CustomButton
                             key={index}
                             isContact={true}
                             isCta={false}
-                            text={contact.value}
-                            icon={contact.icon}
-                            onClick={contactClickHandler[contact.value]} />
+                            text={contact?.value}
+                            icon={contact?.icon}
+                            onClick={contactClickHandler[contact?.value]} />
                     ))}
                 </div>
 

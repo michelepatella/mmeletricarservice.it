@@ -43,10 +43,10 @@ export const useMenu = () => {
 
                 if (element) {
                     const rect = element.getBoundingClientRect();
-                    const distanceToTop = Math.abs(rect.top);
+                    const distanceToTop = Math.abs(rect?.top);
 
                     //check if the section is within the viewport
-                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    if (rect?.top < window.innerHeight && rect?.bottom > 0) {
                         if (distanceToTop < closestDistance) {
                             closestDistance = distanceToTop;
                             currentSection = id;
@@ -56,14 +56,14 @@ export const useMenu = () => {
             };
 
             //loop through each section to determine which is in view
-            SECTIONS.forEach((sec) => {
+            SECTIONS?.forEach((sec) => {
                 //check for sections
-                checkAndUpdateSection(sec.id);
+                checkAndUpdateSection(sec?.id);
 
                 //check for child sections
-                if (sec.children) {
-                    sec.children.forEach((child) => {
-                        checkAndUpdateSection(child.id);
+                if (sec?.children) {
+                    sec?.children?.forEach((child) => {
+                        checkAndUpdateSection(child?.id);
                     });
                 }
             });
@@ -82,17 +82,17 @@ export const useMenu = () => {
     }, [menuItemControls]);
 
     //method to generate menu items dynamically
-    const menuItems = SECTIONS.map((section, index) => ({
+    const menuItems = SECTIONS?.map((section, index) => ({
         key: 'section-' + (index + 1),
-        href: '#' + section.id,
-        title: section.title,
-        onClick: () => scrollToSection(section.id, setVisible),
-        children: section.children
-            ? section.children.map((child, childIndex) => ({
+        href: '#' + section?.id,
+        title: section?.title,
+        onClick: () => scrollToSection(section?.id, setVisible),
+        children: section?.children
+            ? section?.children?.map((child, childIndex) => ({
                 key: 'section-' + (index + 1) + '-child-' + (childIndex + 1),
-                href: '#' + child.id,
-                title: child.title,
-                onClick: () => scrollToSection(child.id, setVisible)
+                href: '#' + child?.id,
+                title: child?.title,
+                onClick: () => scrollToSection(child?.id, setVisible)
             }))
             : undefined,
     }));

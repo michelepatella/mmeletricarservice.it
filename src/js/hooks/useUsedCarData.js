@@ -29,21 +29,21 @@ export const useUsedCarData = (endpoint, setData, setIsLoading, isRedundantReque
                 const res = await fetch('/api/' + endpoint);
 
                 //check the response status
-                if (!res.ok) {
-                    const errorData = await res.json()
-                    console.error('Error fetching data:', errorData.error);
+                if (!res?.ok) {
+                    const errorData = await res?.json()
+                    console.error('Error fetching data:', errorData?.error);
                     //loading is finish
                     setIsLoading(false);
                     return;
                 }
 
                 //JSON parsing and data extrapolation
-                const data = await res.json()
+                const data = await res?.json()
                 const { used_car_info } = data;
 
                 //set data
                 if (endpoint === 'usedCarsOverview') {
-                    setData(data.used_cars_overview);
+                    setData(data?.used_cars_overview);
                 }else{
                     setData(prevData => {
                         //add new object data to previous ones

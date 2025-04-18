@@ -46,9 +46,9 @@ function UsedCarDrawerInfoPanel(props) {
                 isCta={true}
                 text={CTA_BUTTON_TEXT}
                 icon={CONTACTS.find(contact =>
-                    contact.value === PHONE).icon}
+                    contact?.value === PHONE)?.icon}
                 onClick={contactClickHandler[CONTACTS.find(contact =>
-                    contact.value === PHONE).value]} />
+                    contact?.value === PHONE)?.value]} />
 
             {/* Collapse with all used car information */}
             <UsedCarDrawerCollapse usedCarInfo={props.usedCarInfo} />

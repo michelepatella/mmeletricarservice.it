@@ -22,7 +22,7 @@ function UsedCarCard(props) {
     const [usedCarInfo, setUsedCarInfo] = useState([]);
 
     //check if the current used car has been requested by a link
-    useOpenDrawerByLink(setIsDrawerOpen, props.usedCarOverview?.id.toString());
+    useOpenDrawerByLink(setIsDrawerOpen, props.usedCarOverview?.id?.toString());
 
     return (
         <>

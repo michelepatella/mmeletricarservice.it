@@ -54,7 +54,7 @@ function UsedCars() {
                     <>
                         {/* Show all the available used cars */}
                         <div className="used-cars-container">
-                            {usedCarsOverview.map((car, index) => (
+                            {usedCarsOverview?.map((car, index) => (
                                 <UsedCarCard
                                     key={index}
                                     usedCarOverview={car} />

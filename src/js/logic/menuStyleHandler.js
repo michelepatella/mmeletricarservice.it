@@ -7,7 +7,7 @@
 export const handleParentStyle = (section, menuItem) => {
     return {
         fontWeight:
-            section === menuItem.href.replace('#', '') ?
+            section === menuItem?.href.replace('#', '') ?
                 'bold' : 'normal',
     };
 };
@@ -21,7 +21,7 @@ export const handleParentStyle = (section, menuItem) => {
 export const handleChildrenStyle = (section, child) => {
     return {
         fontWeight:
-            section === child.href.replace('#', '') ?
+            section === child?.href.replace('#', '') ?
                 'bold' : 'normal',
         paddingLeft: 'var(--menu_childrens_padding_left)',
     };

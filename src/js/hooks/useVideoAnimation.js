@@ -12,7 +12,7 @@ export const useVideoAnimation = (videoRef, isVideoVisible) =>  {
         if (isVideoVisible) {
             const timer = setTimeout(() => {
                 //start the video
-                videoRef.current.play();
+                videoRef?.current?.play();
             }, 200);  //delay about 0.2s since the section is visible
 
             return () => clearTimeout(timer);

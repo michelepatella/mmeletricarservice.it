@@ -67,11 +67,11 @@ function WhereWeAre(props) {
                 )}
 
                 {/* Info Cards for each information */}
-                {WHERE_WE_ARE_INFO.map((card, index) => (
+                {WHERE_WE_ARE_INFO?.map((card, index) => (
                     <InfoCard
                         key={index}
-                        title={card.title}
-                        description={card.description} />
+                        title={card?.title}
+                        description={card?.description} />
                 ))}
 
             </SectionContainer>

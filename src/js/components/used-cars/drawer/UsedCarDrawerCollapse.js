@@ -19,23 +19,23 @@ function UsedCarDrawerCollapse(props) {
                 expandIcon={({ isActive }) =>
                     isActive ? <MinusOutlined/> : <PlusOutlined/>
                 }
-                items={USED_CAR_ALL_INFO.map(({ key, label, children }) => ({
+                items={USED_CAR_ALL_INFO?.map(({ key, label, children }) => ({
                     key,
                     label,
                     children: (
                         //car information (title + value)
                         <li className="used-car-drawer-collapse-outer-list">
-                            {children.map((item) => (
+                            {children?.map((item) => (
                                 <ul
-                                    key={item.name}
+                                    key={item?.name}
                                     className="used-car-drawer-collapse-inner-list">
 
                                     {/* Title */}
-                                    <span dangerouslySetInnerHTML={{__html: item.title}} />
+                                    <span dangerouslySetInnerHTML={{__html: item?.title}} />
 
                                     {/* Value */}
                                     <div>
-                                        <span>{props.usedCarInfo[item.name] || '-'}</span>
+                                        <span>{props.usedCarInfo?.[item?.name] || '-'}</span>
                                     </div>
 
                                 </ul>

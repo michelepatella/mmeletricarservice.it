@@ -49,24 +49,24 @@ function MenuSmallScreen() {
                 <AntMenu mode='inline'>
 
                     {/* Parent items generation*/}
-                    {menuItems.map((menuItem) => (
-                        <React.Fragment key={menuItem.key}>
+                    {menuItems?.map((menuItem) => (
+                        <React.Fragment key={menuItem?.key}>
                             <AntMenu.Item
-                                key={menuItem.key}
-                                onClick={menuItem.onClick}
+                                key={menuItem?.key}
+                                onClick={menuItem?.onClick}
                                 style={handleParentStyle(section, menuItem)}>
-                                {menuItem.title}
+                                {menuItem?.title}
                             </AntMenu.Item>
 
                             {/* Children items generation*/}
-                            {menuItem.children &&
-                                menuItem.children.map((child) => (
+                            {menuItem?.children &&
+                                menuItem?.children?.map((child) => (
                                     <AntMenu.Item
-                                        key={child.key}
+                                        key={child?.key}
                                         className='ant-menu-item-child'
-                                        onClick={child.onClick}
+                                        onClick={child?.onClick}
                                         style={handleChildrenStyle(section, child)}>
-                                        {child.title}
+                                        {child?.title}
                                     </AntMenu.Item>
                                 ))}
                         </React.Fragment>

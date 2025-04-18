@@ -21,12 +21,12 @@ function AllServices() {
                 style={handleSectionNameStyle()} />
 
             {/* Info Card for each service */}
-            {ALL_SERVICES.map((service, index) => (
+            {ALL_SERVICES?.map((service, index) => (
                 <InfoCard
                     key={index}
-                    title={service.title}
-                    description={service.description}
-                    icon={service.icon} />
+                    title={service?.title}
+                    description={service?.description}
+                    icon={service?.icon} />
             ))}
 
         </SectionContainer>

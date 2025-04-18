@@ -21,14 +21,14 @@ const useIntersectionObserver = (ref) => {
 
         //create an IntersectionObserver instance
         const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
+            entries?.forEach(entry => {
+                if (entry?.isIntersecting) {
                     //if element is in view, update state and add CSS class
                     setIsVisible(true);
-                    entry.target.classList.add('in-view');
+                    entry?.target?.classList?.add('in-view');
 
                     //stop observing once the element is visible
-                    observer.unobserve(entry.target);
+                    observer?.unobserve(entry?.target);
                 } else {
                     //if element is out of view, update state
                     setIsVisible(false);
@@ -37,13 +37,13 @@ const useIntersectionObserver = (ref) => {
         }, options);
 
         //start observing the element if the ref is valid
-        if (ref && ref.current)
-            observer.observe(ref.current);
+        if (ref && ref?.current)
+            observer?.observe(ref?.current);
 
         //cleanup function to stop observing when component unmounts
         return () => {
-            if (ref && ref.current)
-                observer.unobserve(ref.current);
+            if (ref && ref?.current)
+                observer?.unobserve(ref?.current);
         };
     }, [ref]); //run effect when ref changes
 
