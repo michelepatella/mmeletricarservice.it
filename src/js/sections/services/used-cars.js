@@ -6,7 +6,7 @@ import {
     USED_CAR_SCROLL_LABEL_TEXT,
     USED_CARS_UNAVAILABLE_DESCRIPTION
 } from "../../utils/const";
-import {handleScrollLabelStyle} from "../../logic/usedCarsStyleHandler";
+import {handleScrollLabelStyle, handleUnavailableUsedCarDescriptionStyle} from "../../logic/usedCarsStyleHandler";
 import {useUsedCarData} from "../../hooks/useUsedCarData";
 import SectionContainer from "../../components/sections/SectionContainer";
 import UsedCarCard from "../../components/used-cars/UsedCarCard";
@@ -75,7 +75,7 @@ function UsedCars() {
                         <CustomText
                             type="body"
                             text={USED_CARS_UNAVAILABLE_DESCRIPTION}
-                            style={{ textAlign: 'center' }} />
+                            style={handleUnavailableUsedCarDescriptionStyle()} />
                         <img
                             src="/images/empty-used-cars-image.jpeg"
                             alt="unavailable-used-cars"/>

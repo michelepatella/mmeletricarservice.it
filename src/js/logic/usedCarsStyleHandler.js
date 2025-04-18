@@ -37,3 +37,14 @@ export const handleScrollLabelStyle = () => {
         opacity: 'var(--text_low_opacity)'
     };
 };
+
+/**
+ * Method to handle the style of the unavailable used car's description dynamically
+ * @returns {{textAlign: string, opacity: string}}
+ */
+export const handleUnavailableUsedCarDescriptionStyle = () => {
+    return {
+        textAlign: 'center',
+        opacity: 'var(--low_opacity)',
+    }
+}
