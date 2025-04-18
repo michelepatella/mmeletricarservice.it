@@ -19,16 +19,23 @@ function ContactsFooter() {
 
                     {/* Privacy policy */}
                     <a
-                        href="/policies/Privacy%20Policy%20-%20MM%20Eletricar%20Service.pdf"
+                        href="/doc/Privacy%20Policy%20-%20MM%20Eletricar%20Service.pdf"
                         target="_blank"
                         rel="noopener noreferrer"> PRIVACY POLICY
                     </a> |
 
                     {/* Cookie policy */}
                     <a
-                        href="/policies/Cookie%20Policy%20-%20MM%20Eletricar%20Service.pdf"
+                        href="/doc/Cookie%20Policy%20-%20MM%20Eletricar%20Service.pdf"
                         target="_blank"
                         rel="noopener noreferrer"> COOKIE POLICY
+                    </a> |
+
+                    {/* Legal notes */}
+                    <a
+                        href="/doc/Note%20Legali%20-%20Auto%20Usate%20-%20MM%20Eletricar%20Service.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"> NOTE LEGALI
                     </a>
 
                 </p>

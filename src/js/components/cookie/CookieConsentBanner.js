@@ -35,14 +35,14 @@ function CookieConsentBanner(props) {
 
                     {/* Link to the privacy policy and to the cookie policy */}
                     <a
-                        href="/policies/Privacy%20Policy%20-%20MM%20Eletricar%20Service.pdf"
+                        href="/doc/Privacy%20Policy%20-%20MM%20Eletricar%20Service.pdf"
                         className="policy-link"
                         target="_blank"
                         rel="noopener noreferrer">Privacy Policy
                     </a>
                     {" "} e {" "}
                     <a
-                        href="/policies/Cookie%20Policy%20-%20MM%20Eletricar%20Service.pdf"
+                        href="/doc/Cookie%20Policy%20-%20MM%20Eletricar%20Service.pdf"
                         className="policy-link"
                         target="_blank"
                         rel="noopener noreferrer">Cookie Policy
