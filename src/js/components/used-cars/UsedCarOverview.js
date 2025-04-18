@@ -33,7 +33,7 @@ function UsedCarOverview (props) {
                                 <CustomText
                                     type="body"
                                     text={props.showTitle ?
-                                        info.title : props.usedCarOverview[info.name]}
+                                        info.title : props.usedCarOverview[info.name] || '-'}
                                     disableAnimation={true}
                                     style={handleTextOverviewStyle(props.showTitle)} />
 
@@ -44,7 +44,7 @@ function UsedCarOverview (props) {
                                 props.showTitle &&
                                 <CustomText
                                     type="body"
-                                    text={props.usedCarOverview[info.name]}
+                                    text={props.usedCarOverview[info.name] || '-'}
                                     disableAnimation={true}
                                     style={handleTextOverviewStyle()} />
                             }
