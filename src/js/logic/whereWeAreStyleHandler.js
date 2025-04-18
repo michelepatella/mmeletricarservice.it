@@ -8,7 +8,7 @@ export const handleGoogleMapsContainerStyle = () => {
         background: 'url(/icons/map_icon.svg)',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center top',
-        backgroundSize: 'var(--google_maps_unavailable_size)',
+        backgroundSize: 'var(--google_maps_unavailable_background_size)',
         opacity: 'var(--text_low_opacity)',
     };
 };
