@@ -4,7 +4,7 @@
     flex-direction: row;
     color: white !important;
     font-size: var(--caption_text_font_size);
-    font-family: 'Poppins', 'sans-serif';
+    font-family: var(--font_family);
     gap: var(--gap_button_label);
     padding-top: var(--custom_back_button_padding_top);
 }

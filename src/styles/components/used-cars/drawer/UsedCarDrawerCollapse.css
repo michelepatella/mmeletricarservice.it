@@ -15,7 +15,7 @@
 .ant-collapse-header-text {
     color: white !important;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font_family);
 }
 
 .ant-collapse-header {
@@ -29,7 +29,7 @@
 .ant-collapse-content-box,
 .ant-collapse-content {
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font_family);
     border: none !important;
     border-left: 0.5px solid var(--yellow_color) !important;
     background-color: var(--darker_background_color);

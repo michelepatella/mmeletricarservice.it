@@ -61,7 +61,7 @@
 .ant-menu-item {
     margin-bottom: var(--menu_items_gap) !important;
     color: white !important;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font_family);
     opacity: 0;
     transform: translateY(-20px);
     animation: fadeMenuUp 0.5s forwards;
@@ -90,7 +90,7 @@
 /* Big menu items styles */
 .ant-anchor-link-title {
     color: white !important;
-    font-family: 'Poppins', 'sans-serif' !important;
+    font-family: var(--font_family) !important;
     padding-top: var(--menu_items_gap);
     transition: color 0.3s ease;
 }

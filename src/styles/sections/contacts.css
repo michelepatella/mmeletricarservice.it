@@ -4,6 +4,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    font-family: 'Poppins','sans-serif';
+    font-family: var(--font_family);
     background-color: var(--background_color);
 }

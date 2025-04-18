@@ -1,7 +1,7 @@
 /* Custom Button styles */
 .custom-button {
     color: white;
-    font-family: 'Poppins', 'sans-serif';
+    font-family: var(--font_family);
     border: 1px solid white;
     border-radius: var(--border_radius);
     padding: var(--custom_button_padding);
@@ -10,7 +10,7 @@
 }
 
 .custom-button:hover {
-    font-family: 'Poppins', 'sans-serif' !important;
+    font-family: var(--font_family) !important;
     border: 1px solid white !important;
     border-radius: var(--border_radius) !important;
     padding: var(--custom_button_padding) !important;
@@ -21,7 +21,7 @@
 /* Contact button styles */
 .contact-button {
     color: white;
-    font-family: 'Poppins', 'sans-serif';
+    font-family: var(--font_family);
     padding: 0;
     box-shadow: none;
     background-color: transparent !important;
@@ -33,7 +33,7 @@
     color: white;
     font-size: var(--caption_text_font_size);
     font-weight: bold;
-    font-family: 'Poppins', 'sans-serif';
+    font-family: var(--font_family);
     border-radius: var(--border_radius);
     padding: var(--custom_button_padding);
     background-color: var(--blue_color) !important;
@@ -56,10 +56,17 @@
     }
 }
 
-/* ------- Medium screen (portrait and landscape) ------- */
+/* ------- Medium screens (portrait and landscape) ------- */
 @media (min-width: 768px) and (max-width: 1024px) {
     .custom-button {
         font-size: var(--body_font_size_medium);
+    }
+}
+
+/* ------- Medium screen portrait ------- */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .cta-button {
+        width: var(--cta_button_width_medium_landscape);
     }
 }
 
