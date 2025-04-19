@@ -7,7 +7,6 @@ import {useDrawerBackButtonHandler} from "../../../hooks/useDrawerBackDrawer";
 import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
 import UsedCarDrawerInfoPanel from "./UsedCarDrawerInfoPanel";
 import CustomBackButton from "../../custom/CustomBackButton";
-import CustomCarHelmet from "../../custom/CustomCarHelmet";
 
 /**
  * Used Car Drawer
@@ -36,8 +35,6 @@ function UsedCarDrawer(props) {
 
     return (
         <>
-            {/* Customized helmet for the link sharing */}
-            <CustomCarHelmet usedCarOverview={props.usedCarOverview} />
 
             {/* Drawer */}
             <Drawer
