@@ -30,9 +30,9 @@
     --subheading_font_size_medium: 20px;
     --subheading_font_size_small: 18px;
 
-    --body_font_size_big: 18px;
-    --body_font_size_medium: 16px;
-    --body_font_size_small: 14px;
+    --body_font_size_big: 20px;
+    --body_font_size_medium: 18px;
+    --body_font_size_small: 16px;
 
     --caption_text_font_size: clamp(12px, 2vw, 15px);;
 

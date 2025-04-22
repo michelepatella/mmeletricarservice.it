@@ -30,9 +30,9 @@ function OurValues() {
                 title={OUR_VALUES_TITLE}
                 subtitle={OUR_VALUES_SUBTITLE} />
 
-            {/* Subtitle */}
+            {/* Description */}
             <CustomText
-                type="subheading"
+                type="body"
                 text={OUR_VALUES_DESCRIPTION} />
 
         </SectionContainer>

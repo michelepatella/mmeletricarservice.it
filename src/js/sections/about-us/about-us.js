@@ -44,9 +44,9 @@ function AboutUs() {
                             playsInline />
                     } />
 
-                {/* Subtitle */}
+                {/* Description */}
                 <CustomText
-                    type="subheading"
+                    type="body"
                     text={ABOUT_US_DESCRIPTION} />
 
             </SectionContainer>
