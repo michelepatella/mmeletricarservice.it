@@ -3,7 +3,6 @@
     margin-top: var(--used_car_drawer_collapse_margin_top);
     border: none;
     border-radius: 0;
-    backdrop-filter: blur(6px);
 }
 
 /* Collapse item styles */
@@ -32,7 +31,7 @@
     font-family: var(--font_family);
     border: none !important;
     border-left: 0.5px solid var(--yellow_color) !important;
-    background-color: var(--darker_background_color);
+    background-color: transparent !important;
 }
 
 /* Collapse expand icon styles */
