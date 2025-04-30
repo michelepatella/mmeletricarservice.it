@@ -103,22 +103,23 @@ Navigation is fully responsive with a desktop anchor menu and mobile drawer for 
 
 | Category         | Score (%)                     |
 |------------------|-------------------------------|
-| Performance      |                               |
-| Accessibility    |                               |
-| Best Practices   |                               |
-| SEO              |                               |
+| Performance      |             90                |
+| Accessibility    |             96                |
+| Best Practices   |            100                |
+| SEO              |            100                |
 
-### Core Web Vitals
+### Metrics
 
 | Metric                    | Target                   |
 |---------------------------|--------------------------|
-| First Contentful Paint    |                          |
-| Largest Contentful Paint  |                          |
-| Total Blocking Time       |                          |
-| Cumulative Layout Shift   |                          |
-| Speed Index               |                          |
+| First Contentful Paint    |          0.9 s           |
+| Largest Contentful Paint  |       2.4 s              |
+| Total Blocking Time       |            60 ms         |
+| Cumulative Layout Shift   |             0            |
+| Speed Index               |            3.9 s         |
 
-> Performance optimizations include lazy-loaded routes, image compression, code splitting, and efficient re-rendering strategies.
+> More details: 
+[Uploading mmeletricarservice.it-20250430T232340.html…]()
 
 <br>
 
