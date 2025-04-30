@@ -118,7 +118,7 @@ Navigation is fully responsive with a desktop anchor menu and mobile drawer for 
 | Cumulative Layout Shift   |             0            |
 | Speed Index               |            3.9 s         |
 
-> More details: [Lighthouse Report](./mmeletricarservice.it-20250430T232340.html)
+> More details: [Lighthouse Report](./lighthouse.pdf)
 
 <br>
 
