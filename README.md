@@ -20,7 +20,6 @@ The application consists of multiple sections designed for both informational an
 
 Navigation is handled via an Anchor menu (on desktop devices) and Hamburger menu (on mobile devices).
 
-
 ## 🛠️ Tech stack
 - **Frontend**: React.js
 - **Backend as a Service (BaaS)**: Supabase (PostgreSQL, Storage)
@@ -28,4 +27,17 @@ Navigation is handled via an Anchor menu (on desktop devices) and Hamburger menu
 - **Styling**: Ant Design
 
 
+## Metrics & Optimization
+- **Lighthouse Scores**:
+  - Performance: 
+  - Accessibility: 
+  - SEO: 
+  - Best Practices: 
+
+- **Core Web Vitals**:
+  - First Contentful Paint (FCP): 
+  - Largest Contentful Paint (LCP): 
+  - Total Blocking Time (TBT): 
+  - Cumulative Layout Shift (CLS): 
+  - Speed Index: 
 
