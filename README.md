@@ -1,50 +1,31 @@
 # 🌐 [mmeletricarservice.it](https://mmeletricarservice.it)
 
-A production-ready, full-stack web application developed for an Italian **car workshop** and **used car dealership**, focused on **scalability**, **responsiveness**, and **serverless architecture**. Built with **React.js**, **Ant Design**, and **Supabase**.
+A **production-ready**, **full-stack web application** developed for an Italian **car workshop** and **used car dealership**, named **MM Eletricar Service**, designed to enhance the digital presence and operational efficiency of the Company. The platform provides customers with clear and detailed information about the company itself — including its values, location, and contact details — as well as an overview of its services and a seamless browsing experience for available used cars.
+
+Built with **React.js**, **Ant Design**, **CSS** and **Supabase**, and deployed on **Vercel**, the application offers a **modern and responsive UI** while adhering to core **software engineering principles** and optimizing for key **performance metrics**.
 
 <br>
 
-## 🚀 Features
+## 🛠️ Tech Stack
 
-### 🖥️ Frontend UX
-- **Fully Responsive UI**, tested across 20+ physical and emulated devices.
-- **Ant Design Component Library**, customized with brand-driven theming.
-- **Smooth Scroll & Adaptive Navigation**, using anchor menus (desktop) and hamburger drawer (mobile).
-- **Consistent Design Language**, with reusable layout components and UI tokens.
+| Layer                 | Technology                         |
+|-----------------------|------------------------------------|
+| Frontend              | React.js                           |
+| UI Library            | Ant Design                         |
+| Styling               | CSS  / Custom Design Tokens        |
+| Animations            | CSS / Framer Motion                |
+| API Communication     | Serverless API (Vercel Functions)  |
+| Backend-as-a-Service  | Supabase (PostgreSQL, Storage)     |
+| Environment variables | .env + Vercel Dashboard            |
+| Deployment            | GitHub Actions (CI) + Vercel (CD)  |
+| SEO & Metadata        | Meta tags + SEO-optimized content  |                        
+| Analytics             | Vercel Analytics                   |
 
-### 🧠 Logic
-- Custom React hooks and js methods to encapsulate business logic and avoid code duplication.
-- Centralized data fetching with conditional caching and graceful error handling.
-- Used car data is fetched in two steps:
-  - Overview data on page load.
-  - Full details and images on-demand when a car is selected.
+<br>
 
-### ⚙️ Backend & Data Layer
-- **Serverless API Integration** to Supabase (PostgreSQL + Storage).
-- **Dynamic data rendering** of available used cars, including image galleries and spec sheets.
-- **Data access layer** with error handling and loading states.
-- **Content and media** are decoupled from frontend, enabling scalable data flow.
+## 🔴 Live Demo & Screenshot
 
-### 📂 Code Architecture
-- **Modular folder structure**: UI & logic (`/js`) and styling (`/style`) are cleanly separated.
-- Components divided into **atomic sections** and reusable blocks.
-- Clear **separation of concerns** between UI, logic, and styles.
-- **Reusable components** reducing the coding effort and code's complexity.
-- Text content centralized in a `const.js` file for better scalability and localization.
-
-### 👤 UX Enhancements
-- Smooth scroll and section linking with scroll spy.
-- Animations on entry via **Framer Motion** and CSS.
-- Fullscreen drawer car details and dynamic route handling.
-- Auto-detection of direct links to used car detail pages, with opening the drawer.
-
-### 🛡️ Legal & Privacy
-- GDPR-ready: cookie banner, third-party cookie handling.
-- Pages for Privacy Policy, Cookie Policy, and Legal Notes.
-
-### 🔨 Tooling & Quality
-- Environment variables managed via `.env` and Vercel dashboard.
-- Extensive code commenting and docstrings.
+<br> 
 
 <br>
 
@@ -52,17 +33,18 @@ A production-ready, full-stack web application developed for an Italian **car wo
 
 This project follows the best practices of software engineering, that are:
 
-1. **Modularity**: The application is built using reusable React components, following the principles of separation of concerns between logic, UI, and styling.
-2. **Maintainability**: The codebase is clean, well-documented, and follows coding standards.
-3. **Reusability**: Components are designed to be reused across different pages and contexts.
-4. **Scalability**: The backend architecture is serverless, using **Supabase** for database and storage, allowing the app to scale seamlessly as traffic grows.
-5. **Reliability**: Error handling and loading states are implemented to ensure that the application remains responsive and functional at all times.
-6. **Security**: The application complies with **privacy regulations**, with features like **cookie consent**.
-7. **Efficiency**: Performance optimizations like **lazy loading**, **image compression**, and **code splitting** are implemented to ensure fast loading times and an efficient user experience.
-8. **Abstraction**: Modular architecture, separating UI from business logic, achieved by using reusable React components and custom hooks.
-9. **Anticipating Change**: Codebase designed to be easily extensible, using centralized configuration for environment variables and settings, which allows for simple updates and future feature additions without extensive rewrites.
-10. **Usability**: Focus on UX, with a clean, intuitive and user-friendly interface that works seamlessly across devices.
-11.  **Robustness**: Errors handling, clear messages for users and robust error handling in both frontend and backend.
+1. **Modularity**: The application is built using reusable React components and UI tokens, following the principles of separation of concerns between logic, UI, and styling.
+   
+2. **Maintainability**: The codebase is clean, well-documented (including docstrings), and adheres to coding best practices, making it easy to maintain and extend.
+3. **Reusability**: Components are designed to be reused across different pages and contexts. Custom React hooks and JavaScript methods encapsulate business logic and help avoid code duplication.
+4. **Scalability**: The backend architecture is serverless, utilizing Supabase for database and storage. This allows the app to scale seamlessly as traffic grows. Text content is centralized in a `const.js` file for better scalability and localization.
+5. **Reliability**: Error handling and loading states are implemented to ensure that the application remains responsive and functional under various conditions.
+6. **Security**: The application complies with GDPR regulations, featuring a cookie consent banner and third-party cookie handling for enhanced privacy and security.
+7. **Efficiency**: Performance optimizations such as lazy loading ensure fast loading times and an efficient user experience.
+8. **Abstraction**: The application follows a modular architecture, separating UI from business logic by using reusable React components and custom hooks.
+9. **Anticipating Change**: The codebase is designed to be easily extensible, with centralized configuration for environment variables and settings, making future updates and feature additions simple and requiring minimal rewrites.
+10. **Usability**: Emphasis on a clean, intuitive, and user-friendly interface, tested across 20+ physical and emulated devices. The app features customized brand-driven theming components, smooth scroll, adaptive navigation (anchor menus on desktop, hamburger drawer on mobile), and other UX best practices.
+11.  **Robustness**: Comprehensive error handling and clear user messages ensure the app remains stable and functional. Robust error handling is applied both in the frontend and backend.
 
 <br>
 
@@ -84,22 +66,9 @@ Navigation is fully responsive with a desktop anchor menu and mobile drawer for 
 
 <br>
 
-## 🛠️ Tech Stack
-
-| Layer                 | Technology                     |
-|-----------------------|--------------------------------|
-| Frontend              | React.js                       |
-| UI Components         | Ant Design, CSS                |
-| Backend-as-a-Service  | Supabase (PostgreSQL, Storage) |
-| Deployment            | Vercel                         |
-| SEO & Metadata        | Meta tags                      |
-| Analytics             | Vercel Analytics               |
-
-<br>
-
 ## 📈 Performance & Optimization
 
-### Lighthouse Scores (Production Build)
+### 📊 Lighthouse Scores
 
 | Category         | Score (%)                     |
 |------------------|-------------------------------|
@@ -108,7 +77,7 @@ Navigation is fully responsive with a desktop anchor menu and mobile drawer for 
 | Best Practices   |            100                |
 | SEO              |            100                |
 
-### Metrics
+### ⚡️ Performance
 
 | Metric                    | Target                   |
 |---------------------------|--------------------------|
