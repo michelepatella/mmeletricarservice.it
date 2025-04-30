@@ -1,4 +1,4 @@
-# ⚡️ [mmeletricarservice.it](https://mmeletricarservice.it)
+# 🌐 [mmeletricarservice.it](https://mmeletricarservice.it)
 
 A production-ready, full-stack web application developed for an Italian **car workshop** and **used car dealership**, focused on **scalability**, **responsiveness**, and **serverless architecture**. Built with **React.js**, **Ant Design**, and **Supabase**.
 
