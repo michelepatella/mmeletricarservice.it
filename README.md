@@ -32,24 +32,26 @@ The web application is available at https://mmeletricarservice.it 👈
 ## 🏗️ System Architecture 
 🌐 **Client-side (React app)**
   - Hosted on Vercel
-  - Supabase interactions via API
-  - Hash Router for the navigation
+  - Supabase interactions via Serverless API
+  - Navigation via Hash Router
   - UI Components with Ant Design and CSS
-  - SEO with React Helmet
-
-☁️ **Backend / BaaS (Supabase)**
-   - Database: PostgreSQL (used car data)
-   - Storage: used car images
-   - Custom security policies
-   - Indexes to optimize queries
-   - Interface via API
+  - SEO handled with React Helmet
 
 ⚙️ **Serverless Functions**
-   - Vercel Functions
+   - Implemented as Vercel Functions
+   - Act as middleware between frontend and backend
+     
+☁️ **Backend / BaaS (Supabase)**
+   - PostgreSQL database for used car data
+   - Storage bucket for used car images
+   - Row-level security with custom policies
+   - Optimized with indexes for performance
+   - Accessed via RESTful API
 
 📦 **Deployment & CI/CD**
-   - GitHub + GitHub Actions
-   - Vercel deployment
+   - Source control: GitHub
+   - GitHub Actions for continuous integration
+   - Automatic deployment to Vercel on push to main
 <br> 
 <img width="780" alt="image" src="https://github.com/user-attachments/assets/4e4c5b00-fe79-4a92-a114-114d62f9273a" />
 
