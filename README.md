@@ -6,6 +6,14 @@ Built with **React.js**, **Ant Design**, **CSS** and **Supabase**, and deployed 
 
 The web application is available at https://mmeletricarservice.it 👈
 
+- [Tech Stack](#️-tech-stack)
+- [Pages & Project Structure](#-pages--project-structure)
+- [System Architecture](#-system-architecture)
+- [Software Engineering Principles](#-software-engineering-principles)
+- [Deployment](#-deployment)
+- [Performance & Optimization](#-performance--optimization)
+- [Author](#-author)
+  
 <br>
 
 ## 🛠️ Tech Stack
