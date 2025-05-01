@@ -223,7 +223,6 @@ This project follows the best practices of software engineering:
 7. ⚡️ **Performance & Efficiency**:
       - Lazy loading
       - Optimized for Lighthouse metrics and fast time-to-interactive
-      - Use of compressed formats (WebP)
       - Caching used car data during the session
 
 <br>
