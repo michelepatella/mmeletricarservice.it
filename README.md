@@ -6,6 +6,12 @@ Built with **React.js**, **Ant Design**, **CSS** and **Supabase**, and deployed 
 
 <br>
 
+## 🔴 Live Demo
+
+The web application is available at https://mmeletricarservice.it 👈
+
+<br>
+
 ## 🛠️ Tech Stack
 
 | Layer                 | Technology                         |
@@ -18,33 +24,113 @@ Built with **React.js**, **Ant Design**, **CSS** and **Supabase**, and deployed 
 | Backend-as-a-Service  | Supabase (PostgreSQL, Storage)     |
 | Environment variables | .env + Vercel Dashboard            |
 | Deployment            | GitHub Actions (CI) + Vercel (CD)  |
-| SEO & Metadata        | Meta tags + SEO-optimized content  |                        
+| SEO & Metadata        | Meta tags + React Helmet           |                        
 | Analytics             | Vercel Analytics                   |
-
-<br>
-
-## 🔴 Live Demo & Screenshot
 
 <br> 
 
-<br>
+## 🏗️ System Architecture 
+🌐 **Client-side (React app)**
+  - Hosted on Vercel
+  - Supabase interactions via API
+  - Hash Router for the navigation
+  - UI Components with Ant Design and CSS
+  - SEO with React Helmet
+
+☁️ **Backend / BaaS (Supabase)**
+   - Database: PostgreSQL (used car data)
+   - Storage: used car images
+   - Custom security policies
+   - Indexes to optimize queries
+   - Interface via API
+
+⚙️ **Serverless Functions**
+   - Vercel Functions
+
+📦 **Deployment & CI/CD**
+   - GitHub + GitHub Actions
+   - Vercel deployment
+<br> 
+<img width="780" alt="image" src="https://github.com/user-attachments/assets/4e4c5b00-fe79-4a92-a114-114d62f9273a" />
+
+<br> 
 
 ## 📌 Software Engineering Principles
 
-This project follows the best practices of software engineering, that are:
+This project follows the best practices of software engineering:
 
-1. **Modularity**: The application is built using reusable React components and UI tokens, following the principles of separation of concerns between logic, UI, and styling.
+1. 🧱 **Modularity**: 
+   - Components follow the Single Responsibility Principle
+   - Clear separation between UI, business logic, and styling
+	- Logic encapsulated via custom hooks and shared utility functions
+	- Sections are structured as atomic, composable components
+
+<br>
+
+2. 🛠️ **Maintainability**:
+   - Clean and consistent codebase
+   - Well-documented (including docstrings) code
+   - In-code documentation and meaningful naming conventions
+   - Text centralized in a `const.js` file for easier updates
+   - Use of CSS variables and design tokens
+
+<br>
    
-2. **Maintainability**: The codebase is clean, well-documented (including docstrings), and adheres to coding best practices, making it easy to maintain and extend.
-3. **Reusability**: Components are designed to be reused across different pages and contexts. Custom React hooks and JavaScript methods encapsulate business logic and help avoid code duplication.
-4. **Scalability**: The backend architecture is serverless, utilizing Supabase for database and storage. This allows the app to scale seamlessly as traffic grows. Text content is centralized in a `const.js` file for better scalability and localization.
-5. **Reliability**: Error handling and loading states are implemented to ensure that the application remains responsive and functional under various conditions.
-6. **Security**: The application complies with GDPR regulations, featuring a cookie consent banner and third-party cookie handling for enhanced privacy and security.
-7. **Efficiency**: Performance optimizations such as lazy loading ensure fast loading times and an efficient user experience.
-8. **Abstraction**: The application follows a modular architecture, separating UI from business logic by using reusable React components and custom hooks.
-9. **Anticipating Change**: The codebase is designed to be easily extensible, with centralized configuration for environment variables and settings, making future updates and feature additions simple and requiring minimal rewrites.
-10. **Usability**: Emphasis on a clean, intuitive, and user-friendly interface, tested across 20+ physical and emulated devices. The app features customized brand-driven theming components, smooth scroll, adaptive navigation (anchor menus on desktop, hamburger drawer on mobile), and other UX best practices.
-11.  **Robustness**: Comprehensive error handling and clear user messages ensure the app remains stable and functional. Robust error handling is applied both in the frontend and backend.
+4. ♻️ **Reusability**:
+   - Common components reused across multiple pages (texts, buttons, section layouts, etc.)
+   - DRY (Don't Repeat Yourself) principles followed across logic and styles
+
+<br>
+  
+6. 🚀 **Scalability**:
+   -  Backend powered by Supabase (PostgreSQL, serverless), allowing seamless scaling
+   -  Frontend components and routes structured for future expansion
+
+<br>
+  
+8. ✅ **Reliability & Robustness**:
+   - Comprehensive error handling for API and UI
+   - Loading states and fallback UIs improve resilience
+   - Clear feedback and user messages in edge cases
+
+<br>
+  
+10. 🔐 **Security & Compliance**:
+    - GDPR compliance: cookie consent, legal/privacy notes
+    - Safe handling of third-party cookies
+    - No sensitive data exposed client-side
+
+<br>
+   
+12. ⚡️ **Performance & Efficiency**:
+      - Lazy loading for images and components
+      - Optimized for Lighthouse metrics and fast time-to-interactive
+      - Use of compressed formats (WebP)
+      - Caching used car data during the session
+
+<br>
+
+14. 🧠 **Abstraction**:
+      - Business logic abstracted via hooks and helper functions
+      - Reusable component library supports consistent UI patterns
+      - Centralized configuration (env, theming, routing)
+
+<br>
+
+16. 🔄 **Change Readiness**:
+      - Environment variables and settings externalized for flexibility
+      - Scalable deployment workflow (CI/CD via GitHub Actions + Vercel)
+
+<br>
+
+18. 👤 **Usability**:
+      - Clean and intuitive UI aligned with branding
+      - Accessibility best practices
+      - Responsive navigation (anchor menu on desktop, drawer on mobile)
+      - Fast feedback to user actions
+      - Consistency across the whole app (colors, layout, etc.)
+      - Mobile-first design, tested on 20+ devices and viewports
+      - Clear visual hierarchy and reduced cognitive load (e.g. accordion for specs)
 
 <br>
 
@@ -52,15 +138,15 @@ This project follows the best practices of software engineering, that are:
 
 The application is composed of static and dynamic routes to serve both marketing and functional purposes:
 
-- **Home** (`/`) – Intro to services with CTA.
-- **About Us** (`/chi-siamo`) – Company history and team.
-- **Our Values** (`/valori`) – Mission-driven branding content.
-- **Services Overview** (`/servizi`) – Summary of all services.
-- **All Services** (`/tutti-i-servizi`) – Detailed list with expandable sections.
-- **Used Cars** (`/auto-usate`) – Grid of available cars via API.
-- **Car Details** (`/auto-usate*id*`) – Dynamic route with specs, image gallery, contact CTA.
-- **Location** (`/dove-siamo`) – Embedded Google Maps with structured business data.
-- **Contact** (`/contatti`) – Phone, email, and opening hours.
+- **Home** (`/`) – Landing page
+- **About Us** (`/chi-siamo`) – Company overview, team, and history
+- **Our Values** (`/i-nostri-valori`) – Company's mission and core values
+- **Services** (`/servizi`) – Introduction to the offered services
+- **All Services** (`/tutti-i-servizi`) – Detailed list of provided services
+- **Used Cars** (`/auto-usate`) – Grid of available used cars displayed via cards
+- **Car Details** (`/auto-usate*id*`) – Dynamic route rendered as a full-screen drawer with technical specs, gallery, and contact CTA
+- **Location** (`/dove-siamo`) – Location, business hours, and embedded Google Maps
+- **Contacts** (`/contatti`) – Contact information, including phone, email and social media link
 
 Navigation is fully responsive with a desktop anchor menu and mobile drawer for optimal UX.
 
