@@ -301,6 +301,8 @@ Environment-specific secrets (Supabase project keys) are:
 | Cumulative Layout Shift   |             0            |
 | Speed Index               |            3.9 s         |
 
+<br>
+
 > More details: [Lighthouse Report](./lighthouse.pdf)
 
 <br>
