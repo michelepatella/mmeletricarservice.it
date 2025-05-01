@@ -4,10 +4,6 @@ A **production-ready**, **full-stack web application** developed for an Italian 
 
 Built with **React.js**, **Ant Design**, **CSS** and **Supabase**, and deployed on **Vercel**, the application offers a **modern and responsive UI** while adhering to core **software engineering principles** and optimizing for key **performance metrics**.
 
-<br>
-
-## 🔴 Live Demo
-
 The web application is available at https://mmeletricarservice.it 👈
 
 <br>
@@ -29,12 +25,121 @@ The web application is available at https://mmeletricarservice.it 👈
 
 <br> 
 
+## 🔗 Pages & Project Structure
+
+The application is composed of static and dynamic **routes** to serve both marketing and functional purposes:
+
+- **Home** (`/`) – Landing page
+- **About Us** (`/chi-siamo`) – Company overview, team, and history
+- **Our Values** (`/i-nostri-valori`) – Company's mission and core values
+- **Services** (`/servizi`) – Introduction to the offered services
+- **All Services** (`/tutti-i-servizi`) – Detailed list of provided services
+- **Used Cars** (`/auto-usate`) – Grid of available used cars displayed via cards
+- **Car Details** (`/auto-usate*id*`) – Dynamic route rendered as a full-screen drawer with technical specs, gallery, and contact CTA
+- **Location** (`/dove-siamo`) – Location, business hours, and embedded Google Maps
+- **Contacts** (`/contatti`) – Contact information, including phone, email and social media link
+
+Navigation is fully responsive with a desktop anchor menu and mobile drawer for optimal UX.
+
+The project structure is the following one:
+
+<pre>
+.
+├── README.md
+├── api 
+│   ├── usedCarInfo.js
+│   └── usedCarsOverview.js
+├── lighthouse.pdf
+├── package-lock.json
+├── package.json
+├── public
+│   ├── doc 
+│   │   ├── Cookie Policy - MM Eletricar Service.pdf
+│   │   ├── Note Legali - Auto Usate - MM Eletricar Service.pdf
+│   │   └── Privacy Policy - MM Eletricar Service.pdf
+│   ├── favicon 
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-96x96.png
+│   │   ├── favicon.ico
+│   │   ├── favicon.svg
+│   │   ├── site.webmanifest
+│   │   ├── web-app-manifest-192x192.png
+│   │   └── web-app-manifest-512x512.png
+│   ├── font 
+│   │   ├── OFL.txt
+│   │   ├── Poppins-Black.ttf
+│   │   ├── Poppins-BlackItalic.ttf
+│   │   ├── Poppins-Bold.ttf
+│   │   ├── Poppins-BoldItalic.ttf
+│   │   ├── Poppins-ExtraBold.ttf
+│   │   ├── Poppins-ExtraBoldItalic.ttf
+│   │   ├── Poppins-ExtraLight.ttf
+│   │   ├── Poppins-ExtraLightItalic.ttf
+│   │   ├── Poppins-Italic.ttf
+│   │   ├── Poppins-Light.ttf
+│   │   ├── Poppins-LightItalic.ttf
+│   │   ├── Poppins-Medium.ttf
+│   │   ├── Poppins-MediumItalic.ttf
+│   │   ├── Poppins-Regular.ttf
+│   │   ├── Poppins-SemiBold.ttf
+│   │   ├── Poppins-SemiBoldItalic.ttf
+│   │   ├── Poppins-Thin.ttf
+│   │   └── Poppins-ThinItalic.ttf
+│   ├── icons 
+│   │   ├── air_icon.svg
+│   │   ├── anti_theft_icon.svg
+│   │   ├── arrow.svg
+│   │   ├── calendar_icon.svg
+│   │   ├── control_panel_icon.svg
+│   │   ├── cookie_icon.svg
+│   │   ├── cpu_icon.svg
+│   │   ├── dashboard_icon.svg
+│   │   ├── diagnosis_icon.svg
+│   │   ├── electric_icon.svg
+│   │   ├── email_icon.svg
+│   │   ├── engine_icon.svg
+│   │   ├── facebook_icon.svg
+│   │   ├── filter_icon.svg
+│   │   ├── fuel_icon.svg
+│   │   ├── key_icon.svg
+│   │   ├── map_icon.svg
+│   │   ├── phone_icon.svg
+│   │   ├── road_icon.svg
+│   │   ├── status_icon.svg
+│   │   └── wrench_icon.svg
+│   ├── images
+│   │   ├── animation-logo.mp4
+│   │   ├── empty-carousel-image.svg
+│   │   ├── empty-used-cars-image.jpeg
+│   │   ├── home-image.jpeg
+│   │   └── services-image.jpeg
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+├── src
+    ├── index.css
+    ├── index.js
+    ├── js
+    │   ├── App.js
+    │   ├── components 
+    │   ├── hooks
+    │   ├── logic
+    │   ├── sections
+    │   └── utils
+    └── styles 
+        ├── App.css
+        ├── components
+        ├── sections
+        └── variables.css
+
+18 directories, 69 files
+</pre>
+
+<br>
+
 ## 🏗️ System Architecture 
 🌐 **Client-side (React app)**
   - Supabase interactions via Serverless API
-  - Navigation via Hash Router
-  - UI Components with Ant Design and CSS
-  - SEO handled with React Helmet
 
 ⚙️ **Serverless Functions**
    - Implemented as Vercel Functions
@@ -52,9 +157,11 @@ The web application is available at https://mmeletricarservice.it 👈
    - GitHub Actions for continuous integration
    - Automatic deployment to Vercel on push to main
 <br> 
-<img width="780" alt="image" src="https://github.com/user-attachments/assets/4e4c5b00-fe79-4a92-a114-114d62f9273a" />
+![Frame 1 (1)](https://github.com/user-attachments/assets/e32d569c-a4d4-4da4-bbfe-80503ae96379)
 
-<br> 
+
+<br>
+<br>
 
 ## 📌 Software Engineering Principles
 
@@ -63,8 +170,8 @@ This project follows the best practices of software engineering:
 1. 🧱 **Modularity**: 
    - Components follow the Single Responsibility Principle
    - Clear separation between UI, business logic, and styling
-	- Logic encapsulated via custom hooks and shared utility functions
-	- Sections are structured as atomic, composable components
+   - Logic encapsulated via custom hooks and shared utility functions
+   - Sections are structured as atomic, composable components
 
 <br>
 
@@ -135,21 +242,15 @@ This project follows the best practices of software engineering:
 
 <br>
 
-## 🔗 Pages & Structure
+## 📡 API Documentation
 
-The application is composed of static and dynamic routes to serve both marketing and functional purposes:
+<br>
 
-- **Home** (`/`) – Landing page
-- **About Us** (`/chi-siamo`) – Company overview, team, and history
-- **Our Values** (`/i-nostri-valori`) – Company's mission and core values
-- **Services** (`/servizi`) – Introduction to the offered services
-- **All Services** (`/tutti-i-servizi`) – Detailed list of provided services
-- **Used Cars** (`/auto-usate`) – Grid of available used cars displayed via cards
-- **Car Details** (`/auto-usate*id*`) – Dynamic route rendered as a full-screen drawer with technical specs, gallery, and contact CTA
-- **Location** (`/dove-siamo`) – Location, business hours, and embedded Google Maps
-- **Contacts** (`/contatti`) – Contact information, including phone, email and social media link
+## 🧪 Testing
 
-Navigation is fully responsive with a desktop anchor menu and mobile drawer for optimal UX.
+<br>
+
+## 🚀 Deployment
 
 <br>
 
@@ -175,11 +276,6 @@ Navigation is fully responsive with a desktop anchor menu and mobile drawer for 
 | Speed Index               |            3.9 s         |
 
 > More details: [Lighthouse Report](./lighthouse.pdf)
-
-<br>
-
-## 🧩 Future Improvements
-
 
 <br>
 
