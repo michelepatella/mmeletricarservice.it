@@ -31,7 +31,6 @@ The web application is available at https://mmeletricarservice.it 👈
 
 ## 🏗️ System Architecture 
 🌐 **Client-side (React app)**
-  - Hosted on Vercel
   - Supabase interactions via Serverless API
   - Navigation via Hash Router
   - UI Components with Ant Design and CSS
@@ -78,54 +77,54 @@ This project follows the best practices of software engineering:
 
 <br>
    
-4. ♻️ **Reusability**:
+3. ♻️ **Reusability**:
    - Common components reused across multiple pages (texts, buttons, section layouts, etc.)
    - DRY (Don't Repeat Yourself) principles followed across logic and styles
 
 <br>
   
-6. 🚀 **Scalability**:
+4. 🚀 **Scalability**:
    -  Backend powered by Supabase (PostgreSQL, serverless), allowing seamless scaling
    -  Frontend components and routes structured for future expansion
 
 <br>
   
-8. ✅ **Reliability & Robustness**:
+5. ✅ **Reliability & Robustness**:
    - Comprehensive error handling for API and UI
    - Loading states and fallback UIs improve resilience
    - Clear feedback and user messages in edge cases
 
 <br>
   
-10. 🔐 **Security & Compliance**:
+6. 🔐 **Security & Compliance**:
     - GDPR compliance: cookie consent, legal/privacy notes
     - Safe handling of third-party cookies
     - No sensitive data exposed client-side
 
 <br>
    
-12. ⚡️ **Performance & Efficiency**:
-      - Lazy loading for images and components
+7. ⚡️ **Performance & Efficiency**:
+      - Lazy loading
       - Optimized for Lighthouse metrics and fast time-to-interactive
       - Use of compressed formats (WebP)
       - Caching used car data during the session
 
 <br>
 
-14. 🧠 **Abstraction**:
+8. 🧠 **Abstraction**:
       - Business logic abstracted via hooks and helper functions
       - Reusable component library supports consistent UI patterns
       - Centralized configuration (env, theming, routing)
 
 <br>
 
-16. 🔄 **Change Readiness**:
+9. 🔄 **Change Readiness**:
       - Environment variables and settings externalized for flexibility
       - Scalable deployment workflow (CI/CD via GitHub Actions + Vercel)
 
 <br>
 
-18. 👤 **Usability**:
+10. 👤 **Usability**:
       - Clean and intuitive UI aligned with branding
       - Accessibility best practices
       - Responsive navigation (anchor menu on desktop, drawer on mobile)
