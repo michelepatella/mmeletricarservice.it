@@ -19,7 +19,7 @@ The web application is available at https://mmeletricarservice.it 👈
 | API Communication     | Serverless API (Vercel Functions)  |
 | Backend-as-a-Service  | Supabase (PostgreSQL, Storage)     |
 | Environment variables | .env + Vercel Dashboard            |
-| Deployment            | GitHub Actions (CI) + Vercel (CD)  |
+| Deployment            | Vercel                             |
 | SEO & Metadata        | Meta tags + React Helmet           |                        
 | Analytics             | Vercel Analytics                   |
 
@@ -41,7 +41,7 @@ The application is composed of static and dynamic **routes** to serve both marke
 
 Navigation is fully responsive with a desktop anchor menu and mobile drawer for optimal UX.
 
-The project structure is the following one:
+The **project structure** is the following one:
 
 <pre>
 .
@@ -116,7 +116,7 @@ The project structure is the following one:
 │   ├── index.html
 │   ├── manifest.json
 │   └── robots.txt
-├── src
+└── src
     ├── index.css
     ├── index.js
     ├── js
@@ -152,13 +152,12 @@ The project structure is the following one:
    - Optimized with indexes for performance
    - Accessed via RESTful API
 
-📦 **Deployment & CI/CD**
+📦 **Deployment**
    - Source control: GitHub
-   - GitHub Actions for continuous integration
    - Automatic deployment to Vercel on push to main
 <br> 
-![Frame 1 (1)](https://github.com/user-attachments/assets/e32d569c-a4d4-4da4-bbfe-80503ae96379)
 
+![image](https://github.com/user-attachments/assets/14279d07-681d-4c55-9175-cb0619df5960)
 
 <br>
 <br>
@@ -227,7 +226,7 @@ This project follows the best practices of software engineering:
 
 9. 🔄 **Change Readiness**:
       - Environment variables and settings externalized for flexibility
-      - Scalable deployment workflow (CI/CD via GitHub Actions + Vercel)
+      - Scalable deployment workflow (automatic deploy on Vercel)
 
 <br>
 
@@ -251,7 +250,19 @@ This project follows the best practices of software engineering:
 <br>
 
 ## 🚀 Deployment
+The project follows a fully automated deployment pipeline using **Vercel** and **GitHub** : 
+- Vercel is connected to the GitHub repository
+- Every successful commit to main is automatically built and deployed to https://mmeletricarservice.it
+- Preview deploys are generated for other branches and PRs
+- Real-time analytics and performance insights are available via Vercel Dashboard
+- Rollbacks and previous deploys are tracked for recovery or auditing
 
+**🔐 Environment Variables**
+Environment-specific secrets (Supabase project keys) are:
+- Defined in a local `.env` file (excluded from version control)
+- Securely configured via the Vercel Dashboard
+- Not exposed to the browser
+  
 <br>
 
 ## 📈 Performance & Optimization
