@@ -270,7 +270,11 @@ Environment-specific secrets (Supabase project keys) are:
 - Defined in a local `.env` file (excluded from version control)
 - Securely configured via the Vercel Dashboard
 - Not exposed to the browser
-  
+
+<br>
+<img width="651" alt="image" src="https://github.com/user-attachments/assets/e63ab0a0-10a9-4089-bcb1-f39296f57e9e" />
+<br>
+<br>
 <br>
 
 ## 📈 Performance & Optimization
