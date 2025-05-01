@@ -1,105 +1,287 @@
 # 🌐 [mmeletricarservice.it](https://mmeletricarservice.it)
 
-A production-ready, full-stack web application developed for an Italian **car workshop** and **used car dealership**, focused on **scalability**, **responsiveness**, and **serverless architecture**. Built with **React.js**, **Ant Design**, and **Supabase**.
+A **production-ready**, **full-stack web application** developed for an Italian **car workshop** and **used car dealership**, named **MM Eletricar Service**, designed to enhance the digital presence and operational efficiency of the Company. The platform provides customers with clear and detailed information about the company itself — including its values, location, and contact details — as well as an overview of its services and a seamless browsing experience for available used cars.
+
+Built with **React.js**, **Ant Design**, **CSS** and **Supabase**, and deployed on **Vercel**, the application offers a **modern and responsive UI** while adhering to core **software engineering principles** and optimizing for key **performance metrics**.
+
+The web application is available at https://mmeletricarservice.it 👈
 
 <br>
 
-## 🚀 Features
-
-### 🖥️ Frontend UX
-- **Fully Responsive UI**, tested across 20+ physical and emulated devices.
-- **Ant Design Component Library**, customized with brand-driven theming.
-- **Smooth Scroll & Adaptive Navigation**, using anchor menus (desktop) and hamburger drawer (mobile).
-- **Consistent Design Language**, with reusable layout components and UI tokens.
-
-### 🧠 Logic
-- Custom React hooks and js methods to encapsulate business logic and avoid code duplication.
-- Centralized data fetching with conditional caching and graceful error handling.
-- Used car data is fetched in two steps:
-  - Overview data on page load.
-  - Full details and images on-demand when a car is selected.
-
-### ⚙️ Backend & Data Layer
-- **Serverless API Integration** to Supabase (PostgreSQL + Storage).
-- **Dynamic data rendering** of available used cars, including image galleries and spec sheets.
-- **Data access layer** with error handling and loading states.
-- **Content and media** are decoupled from frontend, enabling scalable data flow.
-
-### 📂 Code Architecture
-- **Modular folder structure**: UI & logic (`/js`) and styling (`/style`) are cleanly separated.
-- Components divided into **atomic sections** and reusable blocks.
-- Clear **separation of concerns** between UI, logic, and styles.
-- **Reusable components** reducing the coding effort and code's complexity.
-- Text content centralized in a `const.js` file for better scalability and localization.
-
-### 👤 UX Enhancements
-- Smooth scroll and section linking with scroll spy.
-- Animations on entry via **Framer Motion** and CSS.
-- Fullscreen drawer car details and dynamic route handling.
-- Auto-detection of direct links to used car detail pages, with opening the drawer.
-
-### 🛡️ Legal & Privacy
-- GDPR-ready: cookie banner, third-party cookie handling.
-- Pages for Privacy Policy, Cookie Policy, and Legal Notes.
-
-### 🔨 Tooling & Quality
-- Environment variables managed via `.env` and Vercel dashboard.
-- Extensive code commenting and docstrings.
-
-<br>
-
-## 📌 Software Engineering Principles
-
-This project follows the best practices of software engineering, that are:
-
-1. **Modularity**: The application is built using reusable React components, following the principles of separation of concerns between logic, UI, and styling.
-2. **Maintainability**: The codebase is clean, well-documented, and follows coding standards.
-3. **Reusability**: Components are designed to be reused across different pages and contexts.
-4. **Scalability**: The backend architecture is serverless, using **Supabase** for database and storage, allowing the app to scale seamlessly as traffic grows.
-5. **Reliability**: Error handling and loading states are implemented to ensure that the application remains responsive and functional at all times.
-6. **Security**: The application complies with **privacy regulations**, with features like **cookie consent**.
-7. **Efficiency**: Performance optimizations like **lazy loading**, **image compression**, and **code splitting** are implemented to ensure fast loading times and an efficient user experience.
-8. **Abstraction**: Modular architecture, separating UI from business logic, achieved by using reusable React components and custom hooks.
-9. **Anticipating Change**: Codebase designed to be easily extensible, using centralized configuration for environment variables and settings, which allows for simple updates and future feature additions without extensive rewrites.
-10. **Usability**: Focus on UX, with a clean, intuitive and user-friendly interface that works seamlessly across devices.
-11.  **Robustness**: Errors handling, clear messages for users and robust error handling in both frontend and backend.
-
-<br>
-
-## 🔗 Pages & Structure
-
-The application is composed of static and dynamic routes to serve both marketing and functional purposes:
-
-- **Home** (`/`) – Intro to services with CTA.
-- **About Us** (`/chi-siamo`) – Company history and team.
-- **Our Values** (`/valori`) – Mission-driven branding content.
-- **Services Overview** (`/servizi`) – Summary of all services.
-- **All Services** (`/tutti-i-servizi`) – Detailed list with expandable sections.
-- **Used Cars** (`/auto-usate`) – Grid of available cars via API.
-- **Car Details** (`/auto-usate*id*`) – Dynamic route with specs, image gallery, contact CTA.
-- **Location** (`/dove-siamo`) – Embedded Google Maps with structured business data.
-- **Contact** (`/contatti`) – Phone, email, and opening hours.
-
-Navigation is fully responsive with a desktop anchor menu and mobile drawer for optimal UX.
-
+## 👁️ Table of Content
+- [Tech Stack](#️-tech-stack)
+- [Pages & Project Structure](#-pages--project-structure)
+- [System Architecture](#%EF%B8%8F-system-architecture)
+- [Software Engineering Principles](#-software-engineering-principles)
+- [Deployment](#-deployment)
+- [Performance & Optimization](#-performance--optimization)
+- [Author](#-author)
+  
 <br>
 
 ## 🛠️ Tech Stack
 
-| Layer                 | Technology                     |
-|-----------------------|--------------------------------|
-| Frontend              | React.js                       |
-| UI Components         | Ant Design, CSS                |
-| Backend-as-a-Service  | Supabase (PostgreSQL, Storage) |
-| Deployment            | Vercel                         |
-| SEO & Metadata        | Meta tags                      |
-| Analytics             | Vercel Analytics               |
+| Layer                 | Technology                         |
+|-----------------------|------------------------------------|
+| Frontend              | React.js                           |
+| UI Library            | Ant Design                         |
+| Styling               | CSS  / Custom Design Tokens        |
+| Animations            | CSS / Framer Motion                |
+| API Communication     | Serverless API (Vercel Functions)  |
+| Backend-as-a-Service  | Supabase (PostgreSQL, Storage)     |
+| Environment variables | .env + Vercel Dashboard            |
+| Deployment            | Vercel                             |
+| SEO & Metadata        | Meta tags + React Helmet           |                        
+| Analytics             | Vercel Analytics                   |
 
+<br> 
+
+## 🔗 Pages & Project Structure
+
+The application is composed of static and dynamic **routes** to serve both marketing and functional purposes:
+
+- **Home** (`/`) – Landing page
+- **About Us** (`/chi-siamo`) – Company overview, team, and history
+- **Our Values** (`/i-nostri-valori`) – Company's mission and core values
+- **Services** (`/servizi`) – Introduction to the offered services
+- **All Services** (`/tutti-i-servizi`) – Detailed list of provided services
+- **Used Cars** (`/auto-usate`) – Grid of available used cars displayed via cards
+- **Car Details** (`/auto-usate*id*`) – Dynamic route rendered as a full-screen drawer with technical specs, gallery, and contact CTA
+- **Location** (`/dove-siamo`) – Location, business hours, and embedded Google Maps
+- **Contacts** (`/contatti`) – Contact information, including phone, email and social media link
+
+Navigation is fully responsive with a desktop anchor menu and mobile drawer for optimal UX.
+
+The **project structure** is the following one:
+
+<pre>
+.
+├── README.md
+├── api 
+│   ├── usedCarInfo.js
+│   └── usedCarsOverview.js
+├── lighthouse.pdf
+├── package-lock.json
+├── package.json
+├── public
+│   ├── doc 
+│   │   ├── Cookie Policy - MM Eletricar Service.pdf
+│   │   ├── Note Legali - Auto Usate - MM Eletricar Service.pdf
+│   │   └── Privacy Policy - MM Eletricar Service.pdf
+│   ├── favicon 
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-96x96.png
+│   │   ├── favicon.ico
+│   │   ├── favicon.svg
+│   │   ├── site.webmanifest
+│   │   ├── web-app-manifest-192x192.png
+│   │   └── web-app-manifest-512x512.png
+│   ├── font 
+│   │   ├── OFL.txt
+│   │   ├── Poppins-Black.ttf
+│   │   ├── Poppins-BlackItalic.ttf
+│   │   ├── Poppins-Bold.ttf
+│   │   ├── Poppins-BoldItalic.ttf
+│   │   ├── Poppins-ExtraBold.ttf
+│   │   ├── Poppins-ExtraBoldItalic.ttf
+│   │   ├── Poppins-ExtraLight.ttf
+│   │   ├── Poppins-ExtraLightItalic.ttf
+│   │   ├── Poppins-Italic.ttf
+│   │   ├── Poppins-Light.ttf
+│   │   ├── Poppins-LightItalic.ttf
+│   │   ├── Poppins-Medium.ttf
+│   │   ├── Poppins-MediumItalic.ttf
+│   │   ├── Poppins-Regular.ttf
+│   │   ├── Poppins-SemiBold.ttf
+│   │   ├── Poppins-SemiBoldItalic.ttf
+│   │   ├── Poppins-Thin.ttf
+│   │   └── Poppins-ThinItalic.ttf
+│   ├── icons 
+│   │   ├── air_icon.svg
+│   │   ├── anti_theft_icon.svg
+│   │   ├── arrow.svg
+│   │   ├── calendar_icon.svg
+│   │   ├── control_panel_icon.svg
+│   │   ├── cookie_icon.svg
+│   │   ├── cpu_icon.svg
+│   │   ├── dashboard_icon.svg
+│   │   ├── diagnosis_icon.svg
+│   │   ├── electric_icon.svg
+│   │   ├── email_icon.svg
+│   │   ├── engine_icon.svg
+│   │   ├── facebook_icon.svg
+│   │   ├── filter_icon.svg
+│   │   ├── fuel_icon.svg
+│   │   ├── key_icon.svg
+│   │   ├── map_icon.svg
+│   │   ├── phone_icon.svg
+│   │   ├── road_icon.svg
+│   │   ├── status_icon.svg
+│   │   └── wrench_icon.svg
+│   ├── images
+│   │   ├── animation-logo.mp4
+│   │   ├── empty-carousel-image.svg
+│   │   ├── empty-used-cars-image.jpeg
+│   │   ├── home-image.jpeg
+│   │   └── services-image.jpeg
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── index.css
+    ├── index.js
+    ├── js
+    │   ├── App.js
+    │   ├── components 
+    │   ├── hooks
+    │   ├── logic
+    │   ├── sections
+    │   └── utils
+    └── styles 
+        ├── App.css
+        ├── components
+        ├── sections
+        └── variables.css
+
+18 directories, 69 files
+</pre>
+
+<br>
+
+## 🏗️ System Architecture 
+🌐 **Client-side (React app)**
+  - Supabase interactions via Serverless API
+
+⚙️ **Serverless Functions**
+   - Implemented as Vercel Functions
+   - Act as middleware between frontend and backend
+     
+☁️ **Backend / BaaS (Supabase)**
+   - PostgreSQL database for used car data
+   - Storage bucket for used car images
+   - Row-level security with custom policies
+   - Optimized with indexes for performance
+   - Accessed via RESTful API
+
+📦 **Deployment**
+   - Source control: GitHub
+   - Automatic deployment to Vercel on push to main
+<br> 
+
+![image](https://github.com/user-attachments/assets/14279d07-681d-4c55-9175-cb0619df5960)
+
+<br>
+<br>
+
+## 📌 Software Engineering Principles
+
+This project follows the best practices of software engineering:
+
+1. 🧱 **Modularity**: 
+   - Components follow the Single Responsibility Principle
+   - Clear separation between UI, business logic, and styling
+   - Logic encapsulated via custom hooks and shared utility functions
+   - Sections are structured as atomic, composable components
+
+<br>
+
+2. 🛠️ **Maintainability**:
+   - Clean and consistent codebase
+   - Well-documented (including docstrings) code
+   - In-code documentation and meaningful naming conventions
+   - Text centralized in a `const.js` file for easier updates
+   - Use of CSS variables and design tokens
+
+<br>
+   
+3. ♻️ **Reusability**:
+   - Common components reused across multiple pages (texts, buttons, section layouts, etc.)
+   - DRY (Don't Repeat Yourself) principles followed across logic and styles
+
+<br>
+  
+4. 🚀 **Scalability**:
+   -  Backend powered by Supabase (PostgreSQL, serverless), allowing seamless scaling
+   -  Frontend components and routes structured for future expansion
+
+<br>
+  
+5. ✅ **Reliability & Robustness**:
+   - Comprehensive error handling for API and UI
+   - Loading states and fallback UIs improve resilience
+   - Clear feedback and user messages in edge cases
+
+<br>
+  
+6. 🔐 **Security & Compliance**:
+    - GDPR compliance: cookie consent, legal/privacy notes
+    - Safe handling of third-party cookies
+    - No sensitive data exposed client-side
+
+<br>
+   
+7. ⚡️ **Performance & Efficiency**:
+      - Lazy loading
+      - Optimized for Lighthouse metrics and fast time-to-interactive
+      - Caching used car data during the session
+
+<br>
+
+8. 🧠 **Abstraction**:
+      - Business logic abstracted via hooks and helper functions
+      - Reusable component library supports consistent UI patterns
+      - Centralized configuration (env, theming, routing)
+
+<br>
+
+9. 🔄 **Change Readiness**:
+      - Environment variables and settings externalized for flexibility
+      - Scalable deployment workflow (automatic deploy on Vercel)
+
+<br>
+
+10. 👤 **Usability**:
+      - Clean and intuitive UI aligned with branding
+      - Accessibility best practices
+      - Responsive navigation (anchor menu on desktop, drawer on mobile)
+      - Fast feedback to user actions
+      - Consistency across the whole app (colors, layout, etc.)
+      - Mobile-first design, tested on 20+ devices and viewports
+      - Clear visual hierarchy and reduced cognitive load (e.g. accordion for specs)
+
+<br>
+
+## 📡 API Documentation
+
+<br>
+
+## 🧪 Testing
+
+<br>
+
+## 🚀 Deployment
+The project follows a fully automated deployment pipeline using **Vercel** and **GitHub** : 
+- Vercel is connected to the GitHub repository
+- Every successful commit to main is automatically built and deployed to https://mmeletricarservice.it
+- Preview deploys are generated for other branches and PRs
+- Real-time analytics and performance insights are available via Vercel Dashboard
+- Rollbacks and previous deploys are tracked for recovery or auditing
+
+**🔐 Environment Variables**
+Environment-specific secrets (Supabase project keys) are:
+- Defined in a local `.env` file (excluded from version control)
+- Securely configured via the Vercel Dashboard
+- Not exposed to the browser
+
+<br>
+<img width="651" alt="image" src="https://github.com/user-attachments/assets/e63ab0a0-10a9-4089-bcb1-f39296f57e9e" />
+<br>
+<br>
 <br>
 
 ## 📈 Performance & Optimization
 
-### Lighthouse Scores (Production Build)
+### 📊 Lighthouse Scores
 
 | Category         | Score (%)                     |
 |------------------|-------------------------------|
@@ -108,7 +290,7 @@ Navigation is fully responsive with a desktop anchor menu and mobile drawer for 
 | Best Practices   |            100                |
 | SEO              |            100                |
 
-### Metrics
+### ⚡️ Performance
 
 | Metric                    | Target                   |
 |---------------------------|--------------------------|
@@ -118,12 +300,9 @@ Navigation is fully responsive with a desktop anchor menu and mobile drawer for 
 | Cumulative Layout Shift   |             0            |
 | Speed Index               |            3.9 s         |
 
-> More details: [Lighthouse Report](./mmeletricarservice.it-20250430T232340.html)
-
 <br>
 
-## 🧩 Future Improvements
-
+> More details: [Lighthouse Report](./lighthouse.pdf)
 
 <br>
 
