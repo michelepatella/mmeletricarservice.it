@@ -8,7 +8,7 @@ The web application is available at https://mmeletricarservice.it 👈
 
 - [Tech Stack](#️-tech-stack)
 - [Pages & Project Structure](#-pages--project-structure)
-- [System Architecture](#-system-architecture)
+- [System Architecture](#%EF%B8%8F-system-architecture)
 - [Software Engineering Principles](#-software-engineering-principles)
 - [Deployment](#-deployment)
 - [Performance & Optimization](#-performance--optimization)
