@@ -14,7 +14,8 @@ function CustomIconButton(props) {
             {/* Icon */}
             <img
                 src={props.src}
-                alt="button-icon" />
+                alt="button-icon"
+                loading="lazy" />
 
         </button>
 

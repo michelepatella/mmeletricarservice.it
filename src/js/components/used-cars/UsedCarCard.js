@@ -38,7 +38,8 @@ function UsedCarCard(props) {
                         props.usedCarOverview?.image ?
                             <img
                                 src={props.usedCarOverview?.image}
-                                alt="auto-image" />
+                                alt="auto-image"
+                                loading="lazy" />
                         :
                             <CustomText
                                 type="caption"

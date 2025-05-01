@@ -78,7 +78,8 @@ function UsedCars() {
                             style={handleUnavailableUsedCarDescriptionStyle()} />
                         <img
                             src="/images/empty-used-cars-image.jpeg"
-                            alt="unavailable-used-cars"/>
+                            alt="unavailable-used-cars"
+                            loading="lazy" />
                     </div>
 
                 )
