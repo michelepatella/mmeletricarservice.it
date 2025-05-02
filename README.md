@@ -8,7 +8,7 @@
 - [System Architecture](#%EF%B8%8F-system-architecture)
 - [Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [Testing](#-testing)
-- [Deployment](#-deployment)
+- [Deployment & CI/CD](#-deployment--cicd)
 - [Performance & Optimization](#-performance--optimization)
 - [Author](#-author)
 
