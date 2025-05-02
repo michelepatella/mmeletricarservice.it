@@ -206,9 +206,9 @@ This project follows the best practices of software engineering:
 <br>
 
 ## 📡 API Documentation
-The following API are implemented as Serverless Functions, hosted on Vercel.
+The following API endpoints are implemented as Serverless Functions, hosted on Vercel.
 
-### Get used cars overview
+### 1. Get used cars overview
 - **Description**: Returns an array of used car overviews (`id`, `name`, `price`, `year`, `mileage`, `fuel`, `status` and `image`) with the first available image for each car.
 - **URL**: `/api/usedCarsOverview`
 - **Method**: `GET`
@@ -232,12 +232,39 @@ The following API are implemented as Serverless Functions, hosted on Vercel.
 }
 </pre>
 
-### Get used cars overview
-- URL:
-- Method:
-- Description:
-- Query Params:
-- Response:
+### 2. Get used car info
+- **Description**: Returns complete details for a specific used car, including technical specifications and all associated images.
+- **URL**: `/api/usedCarInfo`
+- **Method**: `GET`
+- **Query Params**: `id` (of the requested used car)
+- **Response**: `JSON`
+<pre>
+  {
+  "used_car_info": [
+    {
+      "id": 1,
+      "engine_displacement": "1.200",
+      "cylinders": "4",
+      "power": "69",
+      "transmission": "Manuale (5)",
+      "consumption": "5,5-6,0",
+      "emission_class": "Euro 6",
+      "emissions": "127-137",
+      "doors": "5",
+      "bodywork": "Utilitaria",
+      "external_color": "Rosso",
+      "internal_color": "Grigio/Rosso",
+      "internal_material": "Tessuto",
+      "seats": "5",
+      "images": [
+        "https://..."
+        ...
+      ]
+    },
+    ...
+  ]
+}
+</pre>
 
 <br>
 
