@@ -134,8 +134,12 @@ This project follows the best practices of software engineering:
   
 4. 🚀 **Scalability**:
    -  Backend powered by Supabase (PostgreSQL, serverless), allowing seamless scaling
+   -  Indexes created to optimize queries, ensuring fast and scalable data retrieval
    -  Frontend components and routes structured for future expansion
-   -  Caching layer to reduce redundant API calls
+   -  Vercel's serverless functions scale automatically with demand, including a caching system to improve performance and reduce the latency
+   -  Caching layer to reduce redundant API calls, using `useState`
+      - All redundant request are rejected ❌
+      - All multilple simultaneous requests are rejected  ❌
 
 <br>
   
