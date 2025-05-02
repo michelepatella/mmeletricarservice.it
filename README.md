@@ -340,6 +340,8 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 
 <br>
 
+**Schema**:
+
 <img width="863" alt="image" src="https://github.com/user-attachments/assets/d24ccc16-5b29-4b38-b0b5-695cc110c280" />
 
 <br>
@@ -364,6 +366,7 @@ Environment-specific secrets (Supabase project keys) are:
 - Not exposed to the browser
 
 <br>
+
 <img width="651" alt="image" src="https://github.com/user-attachments/assets/e63ab0a0-10a9-4089-bcb1-f39296f57e9e" />
 <br>
 <br>
