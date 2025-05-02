@@ -209,11 +209,23 @@ This project follows the best practices of software engineering:
 The following API endpoints are implemented as Serverless Functions, hosted on Vercel.
 
 ### 1. Get used cars overview
-- **Description**: Returns an array of used car overviews (`id`, `name`, `price`, `year`, `mileage`, `fuel`, `status` and `image`) with the first available image for each car.
+- **Description**: Returns an array of used car overviews with the first available image for each car.
 - **URL**: `/api/usedCarsOverview`
 - **Method**: `GET`
 - **Query Params**: `None`
 - **Response**: `JSON`
+
+| Field                 | Type       | Description                                    |
+|-----------------------|------------|------------------------------------------------|
+| id                    | Integer    | ID of the used car                             |
+| name                  | String     | Name of the used car                           |
+| price                 | String     | Price of the used car (€)                      |
+| year                  | String     | Year of the used car                           |
+| mileage               | String     | Mileage of the used car                        |
+| fuel                  | String     | Fuel of the used car                           |
+| status                | String     | Status of the used car (Good, Excellent, etc.) |
+| image                 | String     | First image of the used car (overview image)   |
+
 <pre>
   {
   "used_cars_overview": [
