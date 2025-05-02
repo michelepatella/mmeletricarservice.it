@@ -287,9 +287,9 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 | `cylinders`        | Integer          | Number of engine cylinders.                                                 |
 | `power`            | Integer          | Engine power in CV.                                                         |
 | `transmission`     | String           | Type of transmission.                                                       |
-| `consumption`      | String           | Fuel consumption in L/100km.                                                |
+| `consumption`      | String           | Fuel consumption in L/100km (min-max).                                      |
 | `emission_class`   | String           | Emission standard.                                                          |
-| `emissions`        | String           | CO₂ emissions in g/km.                                                      |
+| `emissions`        | String           | CO₂ emissions in g/km (min-max).                                            |
 | `doors`            | Integer          | Number of doors.                                                            |
 | `bodywork`         | String           | Body type.                                                                  |
 | `external_color`   | String           | Exterior color of the car.                                                  |
