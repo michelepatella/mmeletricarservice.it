@@ -6,7 +6,7 @@
 - [🔗 Pages & Project Structure](#-pages--project-structure)
 - [📌 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
-- [🌐 Client-side (React app)](-client-side-react-app)
+- [🌐 Client-side (React app)](#-client-side-react-app)
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
 - [🧪 Testing](#-testing)
