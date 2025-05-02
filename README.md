@@ -9,7 +9,7 @@ To enhance the company's digital presence and operational efficiency through a m
 ### 👤 Who
 Designed for customers, providing detailed information about the company — including its values, location, and contact details — along with an overview of services and a seamless browsing experience for available used vehicles.
 <br>
-###  📅 When
+### 📅 When
 Launched in February 2025.
 <br>
 ### 🌎 Where
@@ -22,6 +22,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 - [Pages & Project Structure](#-pages--project-structure)
 - [System Architecture](#%EF%B8%8F-system-architecture)
 - [Software Engineering Principles](#-software-engineering-principles)
+- [API Documentation](#-api-documentation)
 - [Deployment](#-deployment)
 - [Performance & Optimization](#-performance--optimization)
 - [Author](#-author)
@@ -67,8 +68,6 @@ The **project structure** is the following one:
 .
 ├── README.md
 ├── api 
-│   ├── usedCarInfo.js
-│   └── usedCarsOverview.js
 ├── lighthouse.pdf
 ├── package-lock.json
 ├── package.json
@@ -176,6 +175,7 @@ This project follows the best practices of software engineering:
    
 7. ⚡️ **Performance & Efficiency**:
       - Lazy loading
+      - Modern image format (AVIF)
       - Optimized for Lighthouse metrics and fast time-to-interactive
       - Caching used car data during the session
 
@@ -206,6 +206,38 @@ This project follows the best practices of software engineering:
 <br>
 
 ## 📡 API Documentation
+The following API are implemented as Serverless Functions, hosted on Vercel.
+
+### Get used cars overview
+- **Description**: Returns an array of used car overviews (`id`, `name`, `price`, `year`, `mileage`, `fuel`, `status` and `image`) with the first available image for each car.
+- **URL**: `/api/usedCarsOverview`
+- **Method**: `GET`
+- **Query Params**: `None`
+- **Response**: `JSON`
+<pre>
+  {
+  "used_cars_overview": [
+    {
+      "id": 1,
+      "name": "Fiat Panda",
+      "price": "7.200,00",
+      "year": "2015",
+      "mileage": "80.000",
+      "fuel": "Diesel",
+      "status": "Ottimo",
+      "image": "https://..."
+    },
+    ...
+  ]
+}
+</pre>
+
+### Get used cars overview
+- URL:
+- Method:
+- Description:
+- Query Params:
+- Response:
 
 <br>
 
@@ -262,3 +294,7 @@ Environment-specific secrets (Supabase project keys) are:
 
 ## 👨‍💻 Author
 **Michele Patella**
+
+<br>
+
+> Last update: 
