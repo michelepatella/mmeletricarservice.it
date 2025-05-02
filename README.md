@@ -236,13 +236,15 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 | Field     | Type    | Description                                                        |
 |-----------|---------|--------------------------------------------------------------------|
 | `id`      | Integer | Unique identifier of the used car.                                 |
-| `name`    | String  | Name or model of the used car (e.g., `"Fiat Panda"`).              |
-| `price`   | String  | Displayed price in euros (formatted as a string, e.g., `"4.000,00"`). |
+| `name`    | String  | Name or model of the used car                                      |  
+| `price`   | String  | Displayed price in euros, formatted as a string.                   |
 | `year`    | String  | Year of registration or manufacturing.                             |
-| `mileage` | String  | Kilometers driven, formatted as a string (e.g., `"214.047"`).       |
-| `fuel`    | String  | Type of fuel (e.g., `Diesel`, `Benzina`).                              |
-| `status`  | String  | Overall condition (e.g., `"Buono"`, `"Ottimo"`).                       |
+| `mileage` | String  | Kilometers driven, formatted as a string.                          |
+| `fuel`    | String  | Type of fuel.                                                      |
+| `status`  | String  | Overall condition.                                                 |
 | `image`   | String  | Public URL of the first (overview) image of the car.               |
+
+<br>
 
 ### 2. Get used car info
 - **Description**: Returns complete details for a specific used car, including technical specifications and all associated images.
@@ -281,19 +283,19 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 | Field               | Type             | Description                                                                |
 |--------------------|------------------|-----------------------------------------------------------------------------|
 | `id`               | Integer          | Unique identifier of the used car.                                          |
-| `engine_displacement` | String        | Engine size in liters (e.g., `"1.200"` = 1200cc).                           |
+| `engine_displacement` | String        | Engine size in liters.                                                      |
 | `cylinders`        | String           | Number of engine cylinders.                                                 |
-| `power`            | String           | Engine power in CV (e.g., `"69"` = 69CV).                                   |
-| `transmission`     | String           | Type of transmission (e.g., `"Manuale (5)"` for 5-speed manual).            |
-| `consumption`      | String           | Fuel consumption in L/100km (e.g., `"5,5-6,0"`).                            |
-| `emission_class`   | String           | Emission standard (e.g., `"Euro 6"`).                                       |
-| `emissions`        | String           | CO₂ emissions in g/km (e.g., `"127-137"`).                                  |
-| `doors`            | String           | Number of doors (e.g., `"5"`).                                              |
-| `bodywork`         | String           | Body type (e.g., `"Utilitaria"` = city car).                                |
+| `power`            | String           | Engine power in CV.                                                         |
+| `transmission`     | String           | Type of transmission.                                                       |
+| `consumption`      | String           | Fuel consumption in L/100km.                                                |
+| `emission_class`   | String           | Emission standard.                                                          |
+| `emissions`        | String           | CO₂ emissions in g/km.                                                      |
+| `doors`            | String           | Number of doors.                                                            |
+| `bodywork`         | String           | Body type.                                                                  |
 | `external_color`   | String           | Exterior color of the car.                                                  |
 | `internal_color`   | String           | Interior color scheme.                                                      |
-| `internal_material`| String           | Interior material (e.g., `"Tessuto"` = fabric).                             |
-| `seats`            | String           | Number of seats (e.g., `"5"`).                                              |
+| `internal_material`| String           | Interior material.                                                          |
+| `seats`            | String           | Number of seats.                                                            |
 | `images`           | Array of Strings | List of public image URLs for this car.                                     |
 
 <br>
