@@ -29,7 +29,11 @@ function UsedCarDrawerInfoPanel(props) {
             {/* Price */}
             <CustomText
                 type="subheading"
-                text={'€ ' + props.usedCarOverview?.price || '-'}
+                text={ new Intl.NumberFormat('it-IT', {
+                        style: 'currency',
+                        currency: 'EUR'
+                    }).format(parseFloat(props.usedCarOverview?.price))
+                    || '-'}
                 disableAnimation={true}
                 style={{
                     marginTop: 0,

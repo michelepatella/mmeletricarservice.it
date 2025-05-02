@@ -70,7 +70,11 @@ function UsedCarCard(props) {
                     <div className="used-cars-card-price-container">
                         <CustomText
                             type="body"
-                            text={'€ ' + props.usedCarOverview?.price}
+                            text={ new Intl.NumberFormat('it-IT', {
+                                style: 'currency',
+                                currency: 'EUR'
+                            }).format(parseFloat(props.usedCarOverview?.price))
+                            || '-'}
                             disableAnimation={true}
                             style={handleNamePriceStyle()} />
                     </div>
