@@ -209,7 +209,7 @@ This project follows the best practices of software engineering:
 <br>
 <br>
 
-## 📡 API Documentation
+## ⚙️ Serverless Functions
 The following API endpoints are implemented as Serverless Functions, hosted on Vercel.
 
 ### 1. Get used cars overview
