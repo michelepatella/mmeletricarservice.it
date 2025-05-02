@@ -239,8 +239,8 @@ Environment-specific secrets (Supabase project keys) are:
 
 | Category         | Score (%)                     |
 |------------------|-------------------------------|
-| Performance      |             90                |
-| Accessibility    |             96                |
+| Performance      |             96                |
+| Accessibility    |             90                |
 | Best Practices   |            100                |
 | SEO              |            100                |
 
@@ -249,10 +249,10 @@ Environment-specific secrets (Supabase project keys) are:
 | Metric                    | Target                   |
 |---------------------------|--------------------------|
 | First Contentful Paint    |          0.9 s           |
-| Largest Contentful Paint  |       2.4 s              |
+| Largest Contentful Paint  |       2.7 s              |
 | Total Blocking Time       |            60 ms         |
 | Cumulative Layout Shift   |             0            |
-| Speed Index               |            3.9 s         |
+| Speed Index               |            2.1 s         |
 
 <br>
 
