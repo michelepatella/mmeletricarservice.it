@@ -104,31 +104,6 @@ The **project structure** is the following one:
 
 <br>
 
-## 🏗️ System Architecture 
-🌐 **Client-side (React app)**
-  - Supabase interactions via Serverless API
-
-⚙️ **Serverless Functions**
-   - Implemented as Vercel Functions
-   - Act as middleware between frontend and backend
-     
-☁️ **Backend / BaaS (Supabase)**
-   - PostgreSQL database for used car data
-   - Storage bucket for used car images
-   - Row-level security with custom policies
-   - Optimized with indexes for performance
-   - Accessed via RESTful API
-
-📦 **Deployment**
-   - Source control: GitHub
-   - Automatic deployment to Vercel on push to main
-<br> 
-
-![image](https://github.com/user-attachments/assets/14279d07-681d-4c55-9175-cb0619df5960)
-
-<br>
-<br>
-
 ## 📌 Software Engineering Principles
 
 This project follows the best practices of software engineering:
@@ -207,6 +182,31 @@ This project follows the best practices of software engineering:
       - Mobile-first design, tested on 20+ devices and viewports
       - Clear visual hierarchy and reduced cognitive load (e.g. accordion for specs)
 
+<br>
+
+## 🏗️ System Architecture 
+🌐 **Client-side (React app)**
+  - Supabase interactions via Serverless API
+
+⚙️ **Serverless Functions**
+   - Implemented as Vercel Functions
+   - Act as middleware between frontend and backend
+     
+☁️ **Backend / BaaS (Supabase)**
+   - PostgreSQL database for used car data
+   - Storage bucket for used car images
+   - Row-level security with custom policies
+   - Optimized with indexes for performance
+   - Accessed via RESTful API
+
+📦 **Deployment**
+   - Source control: GitHub
+   - Automatic deployment to Vercel on push to main
+<br> 
+
+![image](https://github.com/user-attachments/assets/14279d07-681d-4c55-9175-cb0619df5960)
+
+<br>
 <br>
 
 ## 📡 API Documentation
