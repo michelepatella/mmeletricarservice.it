@@ -130,9 +130,9 @@ The **project structure** is the following one:
 │   ├── images
 │   │   ├── animation-logo.mp4
 │   │   ├── empty-carousel-image.svg
-│   │   ├── empty-used-cars-image.jpeg
-│   │   ├── home-image.jpeg
-│   │   └── services-image.jpeg
+│   │   ├── empty-used-cars-image.avif
+│   │   ├── home-image.avif
+│   │   └── services-image.avif
 │   ├── index.html
 │   ├── manifest.json
 │   └── robots.txt

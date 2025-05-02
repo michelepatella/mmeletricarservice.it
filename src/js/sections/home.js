@@ -21,7 +21,7 @@ function Home() {
 
         <>
             <BackgroundContainer
-                image="/images/home-image.jpeg"
+                image="/images/home-image.avif"
                 custStyle={{marginBottom: 'var(--section_margin_bottom)'}}>
 
                 {/* Home Layout */}

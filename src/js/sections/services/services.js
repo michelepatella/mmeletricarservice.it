@@ -19,7 +19,7 @@ function Services() {
     return (
 
         <>
-            <BackgroundContainer image="/images/services-image.jpeg">
+            <BackgroundContainer image="/images/services-image.avif">
                 <SectionContainer id="servizi">
 
                     {/* Section Header */}
