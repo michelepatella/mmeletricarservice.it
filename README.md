@@ -189,6 +189,8 @@ This project follows the best practices of software engineering:
 ## 🏗️ System Architecture 
 🌐 **Client-side (React app)**
   - Supabase interactions via Serverless API
+  - Client-side caching stores fetched data for the session duration
+  - Redundant API calls are prevented
 
 ⚙️ **Serverless Functions**
    - Implemented as Vercel Functions
