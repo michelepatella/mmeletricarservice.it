@@ -7,6 +7,7 @@
 - [System Architecture](#%EF%B8%8F-system-architecture)
 - [Software Engineering Principles](#-software-engineering-principles)
 - [API Documentation](#-api-documentation)
+- [Testing](#-testing)
 - [Deployment](#-deployment)
 - [Performance & Optimization](#-performance--optimization)
 - [Author](#-author)
@@ -50,7 +51,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 
 ## 🔗 Pages & Project Structure
 
-The application is composed of static and dynamic **routes** to serve both marketing and functional purposes:
+The application is composed of static and dynamic routes to serve both marketing and functional purposes:
 
 - **Home** (`/`) – Landing page
 - **About Us** (`/chi-siamo`) – Company overview, team, and history
@@ -224,9 +225,9 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
     {
       "id": 1,
       "name": "Fiat Panda",
-      "price": "7.200,00",
-      "year": "2015",
-      "mileage": "80.000",
+      "price": 7200,
+      "year": 2015,
+      "mileage": 80000,
       "fuel": "Diesel",
       "status": "Ottimo",
       "image": "https://..."
@@ -240,9 +241,9 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 |-----------|---------|--------------------------------------------------------------------|
 | `id`      | Integer | Unique identifier of the used car.                                 |
 | `name`    | String  | Name or model of the used car                                      |  
-| `price`   | Float   | Displayed price in euros, formatted as a string.                   |
+| `price`   | Float   | Displayed price in euros.                                          |
 | `year`    | Integer | Year of registration or manufacturing.                             |
-| `mileage` | Integer | Kilometers driven, formatted as a string.                          |
+| `mileage` | Integer | Kilometers driven.                                                 |
 | `fuel`    | String  | Type of fuel.                                                      |
 | `status`  | String  | Overall condition.                                                 |
 | `image`   | String  | Public URL of the first (overview) image of the car.               |
@@ -260,19 +261,19 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
   "used_car_info": [
     {
       "id": 1,
-      "engine_displacement": "1.200",
-      "cylinders": "4",
-      "power": "69",
+      "engine_displacement": 1200,
+      "cylinders": 4,
+      "power": 69,
       "transmission": "Manuale (5)",
       "consumption": "5,5-6,0",
       "emission_class": "Euro 6",
       "emissions": "127-137",
-      "doors": "5",
+      "doors": 5,
       "bodywork": "Utilitaria",
       "external_color": "Rosso",
       "internal_color": "Grigio/Rosso",
       "internal_material": "Tessuto",
-      "seats": "5",
+      "seats": 5,
       "images": [
         "https://..."
         ...
