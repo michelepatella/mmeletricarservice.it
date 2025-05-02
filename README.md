@@ -1,5 +1,19 @@
 # 🌐 [mmeletricarservice.it](https://mmeletricarservice.it)
 
+### 👁️ Table of Content
+- [Overview](#️-overview)
+- [Tech Stack](#️-tech-stack)
+- [Pages & Project Structure](#-pages--project-structure)
+- [System Architecture](#%EF%B8%8F-system-architecture)
+- [Software Engineering Principles](#-software-engineering-principles)
+- [API Documentation](#-api-documentation)
+- [Deployment](#-deployment)
+- [Performance & Optimization](#-performance--optimization)
+- [Author](#-author)
+
+<br>
+
+## ❺🅦 Overview
 ### 📌 What
 A production-ready, full-stack web application developed for MM Eletricar Service, an Italian car workshop and used car dealership.
 <br>
@@ -14,18 +28,6 @@ Launched in February 2025.
 <br>
 ### 🌎 Where
 The web application is available at https://mmeletricarservice.it 🌐
-
-<br>
-
-## 👁️ Table of Content
-- [Tech Stack](#️-tech-stack)
-- [Pages & Project Structure](#-pages--project-structure)
-- [System Architecture](#%EF%B8%8F-system-architecture)
-- [Software Engineering Principles](#-software-engineering-principles)
-- [API Documentation](#-api-documentation)
-- [Deployment](#-deployment)
-- [Performance & Optimization](#-performance--optimization)
-- [Author](#-author)
   
 <br>
 
