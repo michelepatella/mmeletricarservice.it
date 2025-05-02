@@ -135,6 +135,7 @@ This project follows the best practices of software engineering:
 4. 🚀 **Scalability**:
    -  Backend powered by Supabase (PostgreSQL, serverless), allowing seamless scaling
    -  Frontend components and routes structured for future expansion
+   -  Caching layer to reduce redundant API calls
 
 <br>
   
