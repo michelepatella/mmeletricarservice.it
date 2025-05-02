@@ -9,7 +9,6 @@
 - [🌐 Client-side (React app)](#-client-side-react-app)
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
-- [🧪 Testing](#-testing)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [📈 Metrics](#-metrics)
 - [👨‍💻 Author](#-author)
@@ -345,10 +344,6 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 <img width="863" alt="image" src="https://github.com/user-attachments/assets/d24ccc16-5b29-4b38-b0b5-695cc110c280" />
 
 <br>
-<br>
-
-## 🧪 Testing
-
 <br>
 
 ## 📦 Deployment & CI/CD
