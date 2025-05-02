@@ -6,8 +6,8 @@
 - [🔗 Pages & Project Structure](#-pages--project-structure)
 - [📌 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
-- [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
+- [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
 - [🧪 Testing](#-testing)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [📈 Metrics](#-metrics)
@@ -210,30 +210,17 @@ This project follows the best practices of software engineering:
 <br>
 <br>
 
-## ☁️ Backend / Baas (Supabase)
-The backend architecture levarages Supabase as a Backend-as-a-Service platform, combining PostgreSQL database and Storage bucket in a scalable environment.
+## 🌐 Client-side (React app)
+The client-side is a modern, production-grade React.js application.
 
-### 💿 Data Layer
-- Relational database
-- Index created on the `id` field to optimize query performance
-- Foreign key relationships established among tables to maintain data integrity
--  `ON DELETE CASCADE` to ensure the proper handling of related data when records are deleted
--  Attributes governed by contraints to enforce rules for data quality and consistency (`NOT NULL`, `CHECK`)
+- **Component-driven Architecture**: UI compose of reusable, atomic components
+- **Routing**: Navigation managed via Hash Routing, supporting both static and dynamic routes
+- **Styling & Theming**: Styling using Ant Design components, CSS and design tokens
+- **State Management**: Local state handled with React's hooks (`useState`, `useEffect`, etc.) and logic is abstracted into custom hooks to promote reuse
+- **Data Fetching**: All data interactions go through serverless functions, acting as middleware between the frontend and Supabase, managed via a custom hook acting as fecthing manager
+- **Performance & Optimization**: Lazy loading, image modern formats and other tricks to optimize performance
+- **Responsive & Accessible UI**: Design follows mobile-first approach, enhanced by advanced UI components and animations
 
-### 🖼️ Storage
-- All used car images are stored in Supabase buckets with public access policies
-- Folder naming follows a strict convention (id of the used car) to allow deterministic fetching
-  
-### 🔐 Row-Level Security (RLS)
-- RLS policies restrict accesses
-- Insert/update/delete operations are blocked client-side and managed exclusively through admin interfaces
-- Policies are written in SQL to robust protection
-
-<br>
-
-<img width="863" alt="image" src="https://github.com/user-attachments/assets/d24ccc16-5b29-4b38-b0b5-695cc110c280" />
-
-<br>
 <br>
 
 ## ⚙️ Serverless Functions
@@ -329,6 +316,32 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 | `seats`            | Integer           | Number of seats.                                                           |
 | `images`           | Array of Strings | List of public image URLs for this car.                                     |
 
+<br>
+
+## ☁️ Backend / Baas (Supabase)
+The backend architecture levarages Supabase as a Backend-as-a-Service platform, combining PostgreSQL database and Storage bucket in a scalable environment.
+
+### 💿 Data Layer
+- Relational database
+- Index created on the `id` field to optimize query performance
+- Foreign key relationships established among tables to maintain data integrity
+-  `ON DELETE CASCADE` to ensure the proper handling of related data when records are deleted
+-  Attributes governed by contraints to enforce rules for data quality and consistency (`NOT NULL`, `CHECK`)
+
+### 🖼️ Storage
+- All used car images are stored in Supabase buckets with public access policies
+- Folder naming follows a strict convention (id of the used car) to allow deterministic fetching
+  
+### 🔐 Row-Level Security (RLS)
+- RLS policies restrict accesses
+- Insert/update/delete operations are blocked client-side and managed exclusively through admin interfaces
+- Policies are written in SQL to robust protection
+
+<br>
+
+<img width="863" alt="image" src="https://github.com/user-attachments/assets/d24ccc16-5b29-4b38-b0b5-695cc110c280" />
+
+<br>
 <br>
 
 ## 🧪 Testing
