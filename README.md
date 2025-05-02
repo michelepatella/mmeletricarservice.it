@@ -9,7 +9,7 @@ To enhance the company's digital presence and operational efficiency through a m
 ### 👤 Who
 Designed for customers, providing detailed information about the company — including its values, location, and contact details — along with an overview of services and a seamless browsing experience for available used vehicles.
 <br>
-###  📅 When
+### 📅 When
 Launched in February 2025.
 <br>
 ### 🌎 Where
@@ -22,6 +22,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 - [Pages & Project Structure](#-pages--project-structure)
 - [System Architecture](#%EF%B8%8F-system-architecture)
 - [Software Engineering Principles](#-software-engineering-principles)
+- [API Documentation](#-api-documentation)
 - [Deployment](#-deployment)
 - [Performance & Optimization](#-performance--optimization)
 - [Author](#-author)
@@ -67,72 +68,15 @@ The **project structure** is the following one:
 .
 ├── README.md
 ├── api 
-│   ├── usedCarInfo.js
-│   └── usedCarsOverview.js
 ├── lighthouse.pdf
 ├── package-lock.json
 ├── package.json
 ├── public
 │   ├── doc 
-│   │   ├── Cookie Policy - MM Eletricar Service.pdf
-│   │   ├── Note Legali - Auto Usate - MM Eletricar Service.pdf
-│   │   └── Privacy Policy - MM Eletricar Service.pdf
 │   ├── favicon 
-│   │   ├── apple-touch-icon.png
-│   │   ├── favicon-96x96.png
-│   │   ├── favicon.ico
-│   │   ├── favicon.svg
-│   │   ├── site.webmanifest
-│   │   ├── web-app-manifest-192x192.png
-│   │   └── web-app-manifest-512x512.png
 │   ├── font 
-│   │   ├── OFL.txt
-│   │   ├── Poppins-Black.ttf
-│   │   ├── Poppins-BlackItalic.ttf
-│   │   ├── Poppins-Bold.ttf
-│   │   ├── Poppins-BoldItalic.ttf
-│   │   ├── Poppins-ExtraBold.ttf
-│   │   ├── Poppins-ExtraBoldItalic.ttf
-│   │   ├── Poppins-ExtraLight.ttf
-│   │   ├── Poppins-ExtraLightItalic.ttf
-│   │   ├── Poppins-Italic.ttf
-│   │   ├── Poppins-Light.ttf
-│   │   ├── Poppins-LightItalic.ttf
-│   │   ├── Poppins-Medium.ttf
-│   │   ├── Poppins-MediumItalic.ttf
-│   │   ├── Poppins-Regular.ttf
-│   │   ├── Poppins-SemiBold.ttf
-│   │   ├── Poppins-SemiBoldItalic.ttf
-│   │   ├── Poppins-Thin.ttf
-│   │   └── Poppins-ThinItalic.ttf
 │   ├── icons 
-│   │   ├── air_icon.svg
-│   │   ├── anti_theft_icon.svg
-│   │   ├── arrow.svg
-│   │   ├── calendar_icon.svg
-│   │   ├── control_panel_icon.svg
-│   │   ├── cookie_icon.svg
-│   │   ├── cpu_icon.svg
-│   │   ├── dashboard_icon.svg
-│   │   ├── diagnosis_icon.svg
-│   │   ├── electric_icon.svg
-│   │   ├── email_icon.svg
-│   │   ├── engine_icon.svg
-│   │   ├── facebook_icon.svg
-│   │   ├── filter_icon.svg
-│   │   ├── fuel_icon.svg
-│   │   ├── key_icon.svg
-│   │   ├── map_icon.svg
-│   │   ├── phone_icon.svg
-│   │   ├── road_icon.svg
-│   │   ├── status_icon.svg
-│   │   └── wrench_icon.svg
 │   ├── images
-│   │   ├── animation-logo.mp4
-│   │   ├── empty-carousel-image.svg
-│   │   ├── empty-used-cars-image.avif
-│   │   ├── home-image.avif
-│   │   └── services-image.avif
 │   ├── index.html
 │   ├── manifest.json
 │   └── robots.txt
@@ -231,6 +175,7 @@ This project follows the best practices of software engineering:
    
 7. ⚡️ **Performance & Efficiency**:
       - Lazy loading
+      - Modern image format (AVIF)
       - Optimized for Lighthouse metrics and fast time-to-interactive
       - Caching used car data during the session
 
@@ -261,6 +206,97 @@ This project follows the best practices of software engineering:
 <br>
 
 ## 📡 API Documentation
+The following API endpoints are implemented as Serverless Functions, hosted on Vercel.
+
+### 1. Get used cars overview
+- **Description**: Returns an array of used car overviews with the first available image for each car.
+- **URL**: `/api/usedCarsOverview`
+- **Method**: `GET`
+- **Query Params**: `None`
+- **Response**: `JSON`
+
+<pre>
+  {
+  "used_cars_overview": [
+    {
+      "id": 1,
+      "name": "Fiat Panda",
+      "price": "7.200,00",
+      "year": "2015",
+      "mileage": "80.000",
+      "fuel": "Diesel",
+      "status": "Ottimo",
+      "image": "https://..."
+    },
+    ...
+  ]
+}
+</pre>
+
+| Field     | Type    | Description                                                        |
+|-----------|---------|--------------------------------------------------------------------|
+| `id`      | Integer | Unique identifier of the used car.                                 |
+| `name`    | String  | Name or model of the used car                                      |  
+| `price`   | String  | Displayed price in euros, formatted as a string.                   |
+| `year`    | String  | Year of registration or manufacturing.                             |
+| `mileage` | String  | Kilometers driven, formatted as a string.                          |
+| `fuel`    | String  | Type of fuel.                                                      |
+| `status`  | String  | Overall condition.                                                 |
+| `image`   | String  | Public URL of the first (overview) image of the car.               |
+
+<br>
+
+### 2. Get used car info
+- **Description**: Returns complete details for a specific used car, including technical specifications and all associated images.
+- **URL**: `/api/usedCarInfo`
+- **Method**: `GET`
+- **Query Params**: `id` (of the requested used car)
+- **Response**: `JSON`
+<pre>
+  {
+  "used_car_info": [
+    {
+      "id": 1,
+      "engine_displacement": "1.200",
+      "cylinders": "4",
+      "power": "69",
+      "transmission": "Manuale (5)",
+      "consumption": "5,5-6,0",
+      "emission_class": "Euro 6",
+      "emissions": "127-137",
+      "doors": "5",
+      "bodywork": "Utilitaria",
+      "external_color": "Rosso",
+      "internal_color": "Grigio/Rosso",
+      "internal_material": "Tessuto",
+      "seats": "5",
+      "images": [
+        "https://..."
+        ...
+      ]
+    },
+    ...
+  ]
+}
+</pre>
+
+| Field               | Type             | Description                                                                |
+|--------------------|------------------|-----------------------------------------------------------------------------|
+| `id`               | Integer          | Unique identifier of the used car.                                          |
+| `engine_displacement` | String        | Engine size in liters.                                                      |
+| `cylinders`        | String           | Number of engine cylinders.                                                 |
+| `power`            | String           | Engine power in CV.                                                         |
+| `transmission`     | String           | Type of transmission.                                                       |
+| `consumption`      | String           | Fuel consumption in L/100km.                                                |
+| `emission_class`   | String           | Emission standard.                                                          |
+| `emissions`        | String           | CO₂ emissions in g/km.                                                      |
+| `doors`            | String           | Number of doors.                                                            |
+| `bodywork`         | String           | Body type.                                                                  |
+| `external_color`   | String           | Exterior color of the car.                                                  |
+| `internal_color`   | String           | Interior color scheme.                                                      |
+| `internal_material`| String           | Interior material.                                                          |
+| `seats`            | String           | Number of seats.                                                            |
+| `images`           | Array of Strings | List of public image URLs for this car.                                     |
 
 <br>
 
@@ -294,8 +330,8 @@ Environment-specific secrets (Supabase project keys) are:
 
 | Category         | Score (%)                     |
 |------------------|-------------------------------|
-| Performance      |             90                |
-| Accessibility    |             96                |
+| Performance      |             96                |
+| Accessibility    |             90                |
 | Best Practices   |            100                |
 | SEO              |            100                |
 
@@ -304,10 +340,10 @@ Environment-specific secrets (Supabase project keys) are:
 | Metric                    | Target                   |
 |---------------------------|--------------------------|
 | First Contentful Paint    |          0.9 s           |
-| Largest Contentful Paint  |       2.4 s              |
+| Largest Contentful Paint  |       2.7 s              |
 | Total Blocking Time       |            60 ms         |
 | Cumulative Layout Shift   |             0            |
-| Speed Index               |            3.9 s         |
+| Speed Index               |            2.1 s         |
 
 <br>
 
@@ -317,3 +353,7 @@ Environment-specific secrets (Supabase project keys) are:
 
 ## 👨‍💻 Author
 **Michele Patella**
+
+<br>
+
+> Last update: 
