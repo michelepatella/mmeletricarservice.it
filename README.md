@@ -1,16 +1,16 @@
 # 🌐 [mmeletricarservice.it](https://mmeletricarservice.it)
 
 ### 📚 Table of Content
-- [Overview](#️-overview)
-- [Tech Stack](#️-tech-stack)
-- [Pages & Project Structure](#-pages--project-structure)
-- [Software Engineering Principles](#-software-engineering-principles)
-- [System Architecture](#%EF%B8%8F-system-architecture)
-- [Serverless Functions](#%EF%B8%8F-serverless-functions)
-- [Testing](#-testing)
-- [Deployment & CI/CD](#-deployment--cicd)
-- [Performance & Optimization](#-performance--optimization)
-- [Author](#-author)
+- [👁️ Overview](#️-overview)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🔗 Pages & Project Structure](#-pages--project-structure)
+- [📌 Software Engineering Principles](#-software-engineering-principles)
+- [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
+- [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
+- [🧪 Testing](#-testing)
+- [📦 Deployment & CI/CD](#-deployment--cicd)
+- [📈 Metrics](#-metrics)
+- [👨‍💻 Author](#-author)
 
 <br>
 
@@ -328,7 +328,7 @@ Environment-specific secrets (Supabase project keys) are:
 <br>
 <br>
 
-## 📈 Performance & Optimization
+## 📈 Metrics
 
 ### 📊 Lighthouse Scores
 
