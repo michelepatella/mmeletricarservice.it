@@ -396,7 +396,7 @@ Environment-specific secrets (Supabase project keys) are:
 | Cumulative Layout Shift   |             0            |
 | Speed Index               |            2.1 s         |
 
-### ☁️ Supabase 
+### ☁️ Backend / Baas (Supabase) 
 
 | Metric                    | Target (Average)         |
 |---------------------------|--------------------------|
