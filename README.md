@@ -308,7 +308,7 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 
 <br>
 
-## 🚀 Deployment
+## 📦 Deployment
 The project follows a fully automated deployment pipeline using **Vercel** and **GitHub** : 
 - Vercel is connected to the GitHub repository
 - Every successful commit to main is automatically built and deployed to https://mmeletricarservice.it
