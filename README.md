@@ -237,9 +237,9 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 |-----------|---------|--------------------------------------------------------------------|
 | `id`      | Integer | Unique identifier of the used car.                                 |
 | `name`    | String  | Name or model of the used car                                      |  
-| `price`   | String  | Displayed price in euros, formatted as a string.                   |
-| `year`    | String  | Year of registration or manufacturing.                             |
-| `mileage` | String  | Kilometers driven, formatted as a string.                          |
+| `price`   | Float   | Displayed price in euros, formatted as a string.                   |
+| `year`    | Integer | Year of registration or manufacturing.                             |
+| `mileage` | Integer | Kilometers driven, formatted as a string.                          |
 | `fuel`    | String  | Type of fuel.                                                      |
 | `status`  | String  | Overall condition.                                                 |
 | `image`   | String  | Public URL of the first (overview) image of the car.               |
@@ -283,19 +283,19 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 | Field               | Type             | Description                                                                |
 |--------------------|------------------|-----------------------------------------------------------------------------|
 | `id`               | Integer          | Unique identifier of the used car.                                          |
-| `engine_displacement` | String        | Engine size in liters.                                                      |
-| `cylinders`        | String           | Number of engine cylinders.                                                 |
-| `power`            | String           | Engine power in CV.                                                         |
+| `engine_displacement` | Integer       | Engine size in liters.                                                      |
+| `cylinders`        | Integer          | Number of engine cylinders.                                                 |
+| `power`            | Integer          | Engine power in CV.                                                         |
 | `transmission`     | String           | Type of transmission.                                                       |
 | `consumption`      | String           | Fuel consumption in L/100km.                                                |
 | `emission_class`   | String           | Emission standard.                                                          |
 | `emissions`        | String           | CO₂ emissions in g/km.                                                      |
-| `doors`            | String           | Number of doors.                                                            |
+| `doors`            | Integer          | Number of doors.                                                            |
 | `bodywork`         | String           | Body type.                                                                  |
 | `external_color`   | String           | Exterior color of the car.                                                  |
 | `internal_color`   | String           | Interior color scheme.                                                      |
 | `internal_material`| String           | Interior material.                                                          |
-| `seats`            | String           | Number of seats.                                                            |
+| `seats`            | Integer           | Number of seats.                                                           |
 | `images`           | Array of Strings | List of public image URLs for this car.                                     |
 
 <br>
