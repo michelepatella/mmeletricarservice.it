@@ -6,7 +6,7 @@
 - [Pages & Project Structure](#-pages--project-structure)
 - [Software Engineering Principles](#-software-engineering-principles)
 - [System Architecture](#%EF%B8%8F-system-architecture)
-- [Serverless Functions](#-serverless-functions)
+- [Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [Testing](#-testing)
 - [Deployment](#-deployment)
 - [Performance & Optimization](#-performance--optimization)
