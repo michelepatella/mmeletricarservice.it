@@ -119,6 +119,7 @@ This project follows the best practices of software engineering:
 
 2. 🛠️ **Maintainability**:
    - Clean and consistent codebase
+   - Code formatting by using Prettier
    - Well-documented (including docstrings) code
    - In-code documentation and meaningful naming conventions
    - Text centralized in a `const.js` file for easier updates
