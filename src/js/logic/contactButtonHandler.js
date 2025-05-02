@@ -1,31 +1,31 @@
-import {EMAIL, EMAIL_PEC, FACEBOOK, PHONE} from "../utils/const";
+import { EMAIL, EMAIL_PEC, FACEBOOK, PHONE } from "../utils/const";
 
 /**
  * Method to call when the email button is clicked
  */
 export function onEmailButtonClick() {
-    window.location.href = 'mailto:' + EMAIL;
+  window.location.href = "mailto:" + EMAIL;
 }
 
 /**
  * Method to call when the pec email button is clicked
  */
 export function onPecButtonClick() {
-    window.location.href = 'mailto:' + EMAIL_PEC;
+  window.location.href = "mailto:" + EMAIL_PEC;
 }
 
 /**
  * Method to call when the facebook button is clicked
  */
 export function onFacebookButtonClick() {
-    window.open(FACEBOOK, "_blank");
+  window.open(FACEBOOK, "_blank");
 }
 
 /**
  * Method to call when the phone button is clicked
  */
 export function onPhoneButtonClick() {
-    window.location.href = 'tel:'+ PHONE;
+  window.location.href = "tel:" + PHONE;
 }
 
 /**
@@ -36,8 +36,8 @@ export function onPhoneButtonClick() {
  * "MM Eletricar Service": onFacebookButtonClick}}
  */
 export const contactClickHandler = {
-    [PHONE]: onPhoneButtonClick,
-    [EMAIL]: onEmailButtonClick,
-    [EMAIL_PEC]: onPecButtonClick,
-    'MM Eletricar Service': onFacebookButtonClick,
+  [PHONE]: onPhoneButtonClick,
+  [EMAIL]: onEmailButtonClick,
+  [EMAIL_PEC]: onPecButtonClick,
+  "MM Eletricar Service": onFacebookButtonClick,
 };

@@ -1,4 +1,4 @@
-import { Layout } from 'antd';
+import { Layout } from "antd";
 import HomeHeader from "../components/home/HomeHeader";
 import HomeContent from "../components/home/HomeContent";
 import BackgroundContainer from "../components/sections/BackgroundContainer";
@@ -6,10 +6,7 @@ import BackgroundContainer from "../components/sections/BackgroundContainer";
 /**
  * Home Layout definition
  */
-const {
-    Header,
-    Content
-} = Layout;
+const { Header, Content } = Layout;
 
 /**
  * Home section
@@ -17,34 +14,27 @@ const {
  * @constructor
  */
 function Home() {
-    return (
+  return (
+    <>
+      <BackgroundContainer
+        image="/images/home-image.avif"
+        custStyle={{ marginBottom: "var(--section_margin_bottom)" }}
+      >
+        {/* Home Layout */}
+        <Layout className="home-layout" id="home">
+          {/* Home header */}
+          <Header className="home-header">
+            <HomeHeader />
+          </Header>
 
-        <>
-            <BackgroundContainer
-                image="/images/home-image.avif"
-                custStyle={{marginBottom: 'var(--section_margin_bottom)'}}>
-
-                {/* Home Layout */}
-                <Layout
-                    className="home-layout"
-                    id="home">
-
-                    {/* Home header */}
-                    <Header className="home-header">
-                        <HomeHeader/>
-                    </Header>
-
-                    {/* Home content */}
-                    <Content className="home-content">
-                        <HomeContent/>
-                    </Content>
-
-                </Layout>
-
-            </BackgroundContainer>
-        </>
-
-    );
+          {/* Home content */}
+          <Content className="home-content">
+            <HomeContent />
+          </Content>
+        </Layout>
+      </BackgroundContainer>
+    </>
+  );
 }
 
 export default Home;

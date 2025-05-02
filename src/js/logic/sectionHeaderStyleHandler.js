@@ -4,13 +4,13 @@
  * @returns {{fontFamily: string, color: string, marginBottom: number, opacity: number, fontWeight: string}}
  */
 export const handleSectionNameStyle = () => {
-    return {
-        marginBottom: 0,
-        fontFamily: 'Roboto, sans-serif',
-        fontWeight: "bold",
-        color: "var(--yellow_color)",
-        opacity: 'var(--text_low_opacity)',
-    };
+  return {
+    marginBottom: 0,
+    fontFamily: "Roboto, sans-serif",
+    fontWeight: "bold",
+    color: "var(--yellow_color)",
+    opacity: "var(--text_low_opacity)",
+  };
 };
 
 /**
@@ -19,9 +19,9 @@ export const handleSectionNameStyle = () => {
  * @returns {{textAlign: string, width: string}}
  */
 export const handleSubtitleStyle = () => {
-    return {
-        width: "var(--section_header_subtitle_width)",
-        textAlign: "center",
-        opacity: 'var(--text_low_opacity)'
-    };
+  return {
+    width: "var(--section_header_subtitle_width)",
+    textAlign: "center",
+    opacity: "var(--text_low_opacity)",
+  };
 };

@@ -1,6 +1,6 @@
 import React from "react";
-import {LeftOutlined} from "@ant-design/icons";
-import {BACK_BUTTON_LABEL} from "../../utils/const";
+import { LeftOutlined } from "@ant-design/icons";
+import { BACK_BUTTON_LABEL } from "../../utils/const";
 import CustomText from "./CustomText";
 
 /**
@@ -9,20 +9,19 @@ import CustomText from "./CustomText";
  * @constructor
  */
 function CustomBackButton() {
-    return (
+  return (
+    <span className="custom-back-button">
+      {/* Close button */}
+      <LeftOutlined />
 
-        <span className="custom-back-button">
-            {/* Close button */}
-            <LeftOutlined/>
-
-            {/* Close label */}
-            <CustomText
-                type="body"
-                disableAnimation={true}
-                text={BACK_BUTTON_LABEL} />
-        </span>
-
-    );
+      {/* Close label */}
+      <CustomText
+        type="body"
+        disableAnimation={true}
+        text={BACK_BUTTON_LABEL}
+      />
+    </span>
+  );
 }
 
 export default CustomBackButton;

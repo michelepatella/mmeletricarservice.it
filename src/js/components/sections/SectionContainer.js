@@ -6,21 +6,15 @@
  * @returns {JSX.Element}
  * @constructor
  */
-function SectionContainer({children, id, custStyle}) {
+function SectionContainer({ children, id, custStyle }) {
+  //combine static and dynamic style
+  const style = { ...custStyle };
 
-    //combine static and dynamic style
-    const style = {...custStyle};
-
-    return (
-
-        <div
-            id={id}
-            className="section-container"
-            style={style}>
-            {children}
-        </div>
-
-    );
+  return (
+    <div id={id} className="section-container" style={style}>
+      {children}
+    </div>
+  );
 }
 
 export default SectionContainer;

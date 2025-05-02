@@ -1,52 +1,52 @@
 /* Contacts Footer styles */
 .contacts-footer {
-    width: var(--contacts_footer_width);
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    z-index: 99;
-    color: white;
-    background-color: var(--background_color);
+  width: var(--contacts_footer_width);
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  z-index: 99;
+  color: white;
+  background-color: var(--background_color);
 }
 
 /* Contacts Footer text styles */
 .contact-footer-text {
-    font-size: var(--caption_text_font_size);
-    text-align: left;
+  font-size: var(--caption_text_font_size);
+  text-align: left;
 }
 
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
-    .contact-footer-text {
-        margin-left: var(--section_margin_left_big);
-    }
+  .contact-footer-text {
+    margin-left: var(--section_margin_left_big);
+  }
 }
 
 /* ------ Medium screen landscape ------- */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .contact-footer-text {
-        margin-left: var(--section_margin_left_medium);
-    }
+  .contact-footer-text {
+    margin-left: var(--section_margin_left_medium);
+  }
 }
 
 /* ------ Medium screen portrait ------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .contact-footer-text {
-        margin-left: var(--section_margin_left_medium);
-    }
+  .contact-footer-text {
+    margin-left: var(--section_margin_left_medium);
+  }
 }
 
 /* ------ Small screen portrait ------- */
 @media (max-width: 767px) and (orientation: portrait) {
-    .contact-footer-text {
-        margin-left: var(--section_margin_left_small_portrait);
-    }
+  .contact-footer-text {
+    margin-left: var(--section_margin_left_small_portrait);
+  }
 }
 
 /* ------ Small screen landscape ------- */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
-    .contact-footer-text {
-        margin-left: var(--section_margin_left_small_landscape);
-    }
+  .contact-footer-text {
+    margin-left: var(--section_margin_left_small_landscape);
+  }
 }

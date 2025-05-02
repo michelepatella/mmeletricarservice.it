@@ -1,28 +1,28 @@
 /* Custom Cookie Button styles */
 .cookie-button {
-    width: var(--float_button_dimension);
-    height: var(--float_button_dimension);
-    bottom: var(--float_button_margins);
-    right: var(--float_button_margins);
-    position: fixed;
-    z-index: 99999;
-    border-radius: 50%;
-    border: none;
-    background-color: var(--blue_color);
-    background-image: url('../../../../public/icons/cookie_icon.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+  width: var(--float_button_dimension);
+  height: var(--float_button_dimension);
+  bottom: var(--float_button_margins);
+  right: var(--float_button_margins);
+  position: fixed;
+  z-index: 99999;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--blue_color);
+  background-image: url("../../../../public/icons/cookie_icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .cookie-button:hover {
-    scale: 1.1;
-    bottom: var(--float_button_margins) !important;
-    position: fixed;
-    z-index: 99999 !important;
-    border-radius: 50% !important;
-    border: none !important;
-    background-color: var(--blue_color) !important;
-    background-image: url('../../../../public/icons/cookie_icon.svg') !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
+  scale: 1.1;
+  bottom: var(--float_button_margins) !important;
+  position: fixed;
+  z-index: 99999 !important;
+  border-radius: 50% !important;
+  border: none !important;
+  background-color: var(--blue_color) !important;
+  background-image: url("../../../../public/icons/cookie_icon.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }

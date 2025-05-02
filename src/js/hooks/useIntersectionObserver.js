@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 /**
  * Custom hook to track if a section is visible or not
@@ -6,48 +6,44 @@ import { useEffect, useState } from 'react';
  * @returns {boolean}
  */
 const useIntersectionObserver = (ref) => {
+  //declare state to track visibility of the element
+  const [isVisible, setIsVisible] = useState(false);
 
-    //declare state to track visibility of the element
-    const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    //options for the IntersectionObserver
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
 
-    useEffect(() => {
+    //create an IntersectionObserver instance
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries?.forEach((entry) => {
+        if (entry?.isIntersecting) {
+          //if element is in view, update state and add CSS class
+          setIsVisible(true);
+          entry?.target?.classList?.add("in-view");
 
-        //options for the IntersectionObserver
-        const options = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.5,
-        };
+          //stop observing once the element is visible
+          observer?.unobserve(entry?.target);
+        } else {
+          //if element is out of view, update state
+          setIsVisible(false);
+        }
+      });
+    }, options);
 
-        //create an IntersectionObserver instance
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries?.forEach(entry => {
-                if (entry?.isIntersecting) {
-                    //if element is in view, update state and add CSS class
-                    setIsVisible(true);
-                    entry?.target?.classList?.add('in-view');
+    //start observing the element if the ref is valid
+    if (ref && ref?.current) observer?.observe(ref?.current);
 
-                    //stop observing once the element is visible
-                    observer?.unobserve(entry?.target);
-                } else {
-                    //if element is out of view, update state
-                    setIsVisible(false);
-                }
-            });
-        }, options);
+    //cleanup function to stop observing when component unmounts
+    return () => {
+      if (ref && ref?.current) observer?.unobserve(ref?.current);
+    };
+  }, [ref]); //run effect when ref changes
 
-        //start observing the element if the ref is valid
-        if (ref && ref?.current)
-            observer?.observe(ref?.current);
-
-        //cleanup function to stop observing when component unmounts
-        return () => {
-            if (ref && ref?.current)
-                observer?.unobserve(ref?.current);
-        };
-    }, [ref]); //run effect when ref changes
-
-    return isVisible;
+  return isVisible;
 };
 
 export default useIntersectionObserver;

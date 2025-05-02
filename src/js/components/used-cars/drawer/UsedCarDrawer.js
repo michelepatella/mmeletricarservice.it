@@ -1,9 +1,9 @@
-import React, {useState} from "react";
-import {Drawer, Flex} from "antd";
-import {LoadingOutlined} from "@ant-design/icons";
-import {onUsedCarDrawerClose} from "../../../logic/usedCarDrawerHandler";
-import {useUsedCarData} from "../../../hooks/useUsedCarData";
-import {useDrawerBackButtonHandler} from "../../../hooks/useDrawerBackDrawer";
+import React, { useState } from "react";
+import { Drawer, Flex } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
+import { onUsedCarDrawerClose } from "../../../logic/usedCarDrawerHandler";
+import { useUsedCarData } from "../../../hooks/useUsedCarData";
+import { useDrawerBackButtonHandler } from "../../../hooks/useDrawerBackDrawer";
 import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
 import UsedCarDrawerInfoPanel from "./UsedCarDrawerInfoPanel";
 import CustomBackButton from "../../custom/CustomBackButton";
@@ -15,77 +15,68 @@ import CustomBackButton from "../../custom/CustomBackButton";
  * @constructor
  */
 function UsedCarDrawer(props) {
+  //get the info of the used car of interest
+  const usedCarInfo = props.usedCarInfo?.find(
+    (car) => car?.id === props.usedCarOverview?.id,
+  );
 
-    //get the info of the used car of interest
-    const usedCarInfo = props.usedCarInfo?.find((car) =>
-        car?.id === props.usedCarOverview?.id
-    );
+  //get used car info (if needed)
+  const [isCarLoading, setIsCarLoading] = useState(true);
+  useUsedCarData(
+    "usedCarInfo?id=" + props.usedCarOverview?.id,
+    props.setUsedCarInfo,
+    setIsCarLoading,
+    usedCarInfo !== undefined,
+  );
 
-    //get used car info (if needed)
-    const [isCarLoading, setIsCarLoading] = useState(true);
-    useUsedCarData(
-        'usedCarInfo?id=' + props.usedCarOverview?.id,
-        props.setUsedCarInfo,
-        setIsCarLoading,
-        usedCarInfo !== undefined
-    )
+  //to capture back button click
+  useDrawerBackButtonHandler(props.setIsDrawerOpen);
 
-    //to capture back button click
-    useDrawerBackButtonHandler(props.setIsDrawerOpen)
-
-    return (
-        <>
-
-            {/* Drawer */}
-            <Drawer
-                className="used-car-drawer"
-                closeIcon={<CustomBackButton/>}
-                onClose={() => onUsedCarDrawerClose(props.setIsDrawerOpen)}
-                open={true}>
-
-                {
-                    isCarLoading ?
-                        //loading outlined until the
-                        //system is loading the used cars
-                        <LoadingOutlined
-                            className="loading-outlined"
-                            spin={isCarLoading}
-                            style={{ width: "100%" }} />
-                    :
-                        <>
-                            <Flex vertical>
-                                {/* Flex container (info panel + carousel) */}
-                                <Flex
-                                    className="used-car-drawer-flex-horizontal"
-                                    width="60%">
-
-                                    {/* Flex vertical container with info panel */}
-                                    <Flex
-                                        vertical
-                                        className="used-car-drawer-flex-vertical"
-                                        width="40%">
-
-                                        {/* Info Panel (Name, Price, Overview info,
+  return (
+    <>
+      {/* Drawer */}
+      <Drawer
+        className="used-car-drawer"
+        closeIcon={<CustomBackButton />}
+        onClose={() => onUsedCarDrawerClose(props.setIsDrawerOpen)}
+        open={true}
+      >
+        {isCarLoading ? (
+          //loading outlined until the
+          //system is loading the used cars
+          <LoadingOutlined
+            className="loading-outlined"
+            spin={isCarLoading}
+            style={{ width: "100%" }}
+          />
+        ) : (
+          <>
+            <Flex vertical>
+              {/* Flex container (info panel + carousel) */}
+              <Flex className="used-car-drawer-flex-horizontal" width="60%">
+                {/* Flex vertical container with info panel */}
+                <Flex
+                  vertical
+                  className="used-car-drawer-flex-vertical"
+                  width="40%"
+                >
+                  {/* Info Panel (Name, Price, Overview info,
                                         CTA button and Collapse with details) */}
-                                        <UsedCarDrawerInfoPanel
-                                            usedCarOverview={props.usedCarOverview}
-                                            usedCarInfo={usedCarInfo} />
+                  <UsedCarDrawerInfoPanel
+                    usedCarOverview={props.usedCarOverview}
+                    usedCarInfo={usedCarInfo}
+                  />
+                </Flex>
 
-                                    </Flex>
-
-                                    {/* Carousel */}
-                                    <UsedCarDrawerCarousel usedCarInfo={usedCarInfo} />
-
-                                </Flex>
-                            </Flex>
-                        </>
-                }
-
-            </Drawer>
-
-        </>
-
-    );
+                {/* Carousel */}
+                <UsedCarDrawerCarousel usedCarInfo={usedCarInfo} />
+              </Flex>
+            </Flex>
+          </>
+        )}
+      </Drawer>
+    </>
+  );
 }
 
 export default UsedCarDrawer;

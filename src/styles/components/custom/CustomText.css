@@ -1,120 +1,124 @@
 /* Text Animation */
 @keyframes slideUpHeading {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Heading styles */
 .custom-heading {
-    margin-bottom: 0;
-    color: var(--yellow_color);
-    text-align: left;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 1.5s ease, transform 1.5s ease;
+  margin-bottom: 0;
+  color: var(--yellow_color);
+  text-align: left;
+  font-weight: bold;
+  opacity: 0;
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease;
 }
 
 .custom-heading.in-view {
-    animation: slideUpHeading 1.5s ease forwards;
+  animation: slideUpHeading 1.5s ease forwards;
 }
 
 /* Subheading and body styles */
 .custom-subheading,
 .custom-body {
-    opacity: 0;
-    color: white;
-    text-align: left;
-    transition: opacity 1.8s ease, transform 1.8s ease;
+  opacity: 0;
+  color: white;
+  text-align: left;
+  transition:
+    opacity 1.8s ease,
+    transform 1.8s ease;
 }
 
 .custom-subheading.in-view,
 .custom-body.in-view {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Caption styles */
 .custom-caption {
-    color: white;
-    font-size: var(--caption_text_font_size);
+  color: white;
+  font-size: var(--caption_text_font_size);
 }
 
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
-    .custom-heading {
-        font-size: var(--heading_font_size_big);
-    }
+  .custom-heading {
+    font-size: var(--heading_font_size_big);
+  }
 
-    .custom-subheading {
-        font-size: var(--subheading_font_size_big);
-    }
+  .custom-subheading {
+    font-size: var(--subheading_font_size_big);
+  }
 
-    .custom-body {
-        font-size: var(--body_font_size_big);
-    }
+  .custom-body {
+    font-size: var(--body_font_size_big);
+  }
 }
 
 /* ------ Medium screen portrait ------ */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .custom-heading {
-        font-size: var(--heading_font_size_medium);
-    }
+  .custom-heading {
+    font-size: var(--heading_font_size_medium);
+  }
 
-    .custom-subheading {
-        font-size: var(--subheading_font_size_medium);
-    }
+  .custom-subheading {
+    font-size: var(--subheading_font_size_medium);
+  }
 
-    .custom-body {
-        font-size: var(--body_font_size_medium);
-    }
+  .custom-body {
+    font-size: var(--body_font_size_medium);
+  }
 }
 
 /* ------ Medium screen landscape ------ */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .custom-heading {
-        font-size: var(--heading_font_size_medium);
-    }
+  .custom-heading {
+    font-size: var(--heading_font_size_medium);
+  }
 
-    .custom-subheading {
-        font-size: var(--subheading_font_size_medium);
-    }
+  .custom-subheading {
+    font-size: var(--subheading_font_size_medium);
+  }
 
-    .custom-body {
-        font-size: var(--body_font_size_medium);
-    }
+  .custom-body {
+    font-size: var(--body_font_size_medium);
+  }
 }
 
 /* ------ Small screen portrait ------ */
 @media (max-width: 767px) {
-    .custom-heading {
-        font-size: var(--heading_font_size_small);
-    }
+  .custom-heading {
+    font-size: var(--heading_font_size_small);
+  }
 
-    .custom-subheading {
-        font-size: var(--subheading_font_size_small);
-    }
+  .custom-subheading {
+    font-size: var(--subheading_font_size_small);
+  }
 
-    .custom-body {
-        font-size: var(--body_font_size_small);
-    }
+  .custom-body {
+    font-size: var(--body_font_size_small);
+  }
 }
 
 /* ------ Small screen landscape ------ */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
-    .custom-heading {
-        font-size: var(--heading_font_size_small);
-    }
+  .custom-heading {
+    font-size: var(--heading_font_size_small);
+  }
 
-    .custom-subheading {
-        font-size: var(--subheading_font_size_small);
-    }
+  .custom-subheading {
+    font-size: var(--subheading_font_size_small);
+  }
 
-    .custom-body {
-        font-size: var(--body_font_size_small);
-    }
+  .custom-body {
+    font-size: var(--body_font_size_small);
+  }
 }

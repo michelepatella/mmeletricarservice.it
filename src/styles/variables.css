@@ -1,170 +1,144 @@
-:root{
+:root {
+  /* Font family */
+  --font_family: "Poppins", "sans-serif";
 
-    /* Font family */
-    --font_family: 'Poppins', 'sans-serif';
+  /* Colors */
+  --background_color: #141414;
+  --darker_background_color: #0f0f0f;
+  --dark_gray_border_color: #1b1b1b;
+  --light_gray_border_color: #333333;
+  --yellow_color: #f8de4d;
+  --blue_color: #005fcc;
 
+  /* Font size */
+  --home_title_font_size_big: 80px;
+  --home_title_font_size_medium: 60px;
+  --home_title_font_size_small: 35px;
 
-    /* Colors */
-    --background_color: #141414;
-    --darker_background_color: #0f0f0f;
-    --dark_gray_border_color: #1B1B1B;
-    --light_gray_border_color: #333333;
-    --yellow_color: #F8DE4D;
-    --blue_color: #005FCC;
+  --home_subtitle_font_size_big: 35px;
+  --home_subtitle_font_size_medium: 25px;
+  --home_subtitle_font_size_small: 20px;
 
+  --heading_font_size_big: 45px;
+  --heading_font_size_medium: 40px;
+  --heading_font_size_small: 25px;
 
-    /* Font size */
-    --home_title_font_size_big: 80px;
-    --home_title_font_size_medium: 60px;
-    --home_title_font_size_small: 35px;
+  --subheading_font_size_big: 25px;
+  --subheading_font_size_medium: 20px;
+  --subheading_font_size_small: 18px;
 
-    --home_subtitle_font_size_big: 35px;
-    --home_subtitle_font_size_medium: 25px;
-    --home_subtitle_font_size_small: 20px;
+  --body_font_size_big: 20px;
+  --body_font_size_medium: 18px;
+  --body_font_size_small: 16px;
 
-    --heading_font_size_big: 45px;
-    --heading_font_size_medium: 40px;
-    --heading_font_size_small: 25px;
+  --caption_text_font_size: clamp(12px, 2vw, 15px);
 
-    --subheading_font_size_big: 25px;
-    --subheading_font_size_medium: 20px;
-    --subheading_font_size_small: 18px;
+  /* Components (General) */
+  --low_opacity: 0.8;
+  --border_radius: 5px;
+  --gap_button_label: 0.5rem;
+  --float_button_dimension: 40px;
+  --float_button_margins: 10px;
 
-    --body_font_size_big: 20px;
-    --body_font_size_medium: 18px;
-    --body_font_size_small: 16px;
+  /* Custom Icon Button */
+  --custom_icon_button_margins: clamp(5px, 2vw, 10px);
+  --custom_icon_button_dimension: clamp(18px, 5vw, 20px);
 
-    --caption_text_font_size: clamp(12px, 2vw, 15px);;
+  /* Custom Button */
+  --custom_button_padding: 19px 16px 19px 16px;
+  --cta_button_margin_top: 3rem;
+  --cta_button_width_medium_landscape: 40%;
 
+  /* Custom Back Button */
+  --custom_back_button_padding_top: 20px;
 
-    /* Components (General) */
-    --low_opacity: 0.8;
-    --border_radius: 5px;
-    --gap_button_label: 0.5rem;
-    --float_button_dimension: 40px;
-    --float_button_margins: 10px;
+  /* Cookie Consent Banner */
+  --cookie_consent_banner_button_padding: 11px 20px 11px 22px;
 
+  /* Info Card */
+  --info_card_icon_dimension: 30px;
+  --info_card_flex_margin_top: 50px;
+  --info_card_flex_gap: 20px;
+  --info_card_width_big: 80%;
+  --info_card_width_medium: 60%;
+  --info_card_width_small_portrait: 90%;
 
-    /* Custom Icon Button */
-    --custom_icon_button_margins: clamp(5px, 2vw, 10px);
-    --custom_icon_button_dimension: clamp(18px, 5vw, 20px);
+  /* Used Cars Card */
+  --used_car_card_padding: 15px 15px 0 15px;
+  --used_car_card_width: 300px;
+  --used_car_card_gap: 2rem;
 
+  /* Used Car Overview */
+  --used_car_overview_text_margin_top: 4px;
+  --used_car_overview_container_margin_top: 1rem;
 
-    /* Custom Button */
-    --custom_button_padding: 19px 16px 19px 16px;
-    --cta_button_margin_top: 3rem;
-    --cta_button_width_medium_landscape: 40%;
+  /* Used Car Drawer */
+  --used_car_drawer_flex_horizontal_gap_big_medium: 2rem;
+  --used_car_drawer_flex_horizontal_gap_small: 3rem;
+  --used_car_drawer_header_padding_left_big: 4rem;
+  --used_car_drawer_header_padding_left_small_portrait_medium_portrait: 3.2rem;
+  --used_car_drawer_header_padding_left_small_landscape_medium_landscape: 3.2rem;
 
+  /* Used Car Drawer Info Panel */
+  --used_car_drawer_info_panel_padding: 1.5rem;
 
-    /* Custom Back Button */
-    --custom_back_button_padding_top: 20px;
+  /* Used Car Drawer Carousel */
+  --used_car_drawer_carousel_container_width_big: 75%;
+  --used_car_drawer_carousel_container_width_medium_portrait: 100%;
+  --used_car_drawer_carousel_container_width_medium_landscape: 60%;
+  --used_car_drawer_carousel_container_width_small: 100%;
+  --used_car_drawer_carousel_max_height_big_medium_lanscape_small_landscape: 80vh;
+  --used_car_drawer_carousel_max_height_medium_portrait_small_portrait: 40vh;
 
+  /* Used Car Drawer Collapse */
+  --used_car_drawer_collapse_margin_top: 80px;
+  --used_car_drawer_collapse_header_margin_top_bottom: 10px;
 
-    /* Cookie Consent Banner */
-    --cookie_consent_banner_button_padding: 11px 20px 11px 22px;
+  /* Section Container */
+  --section_container_width: 60%;
+  --section_container_width_small_portrait: 75%;
+  --section_max_width: 120%;
 
+  /* Section Header */
+  --section_header_padding: 20px;
+  --section_header_margin_bottom: 50px;
+  --section_header_subtitle_width: 85%;
 
-    /* Info Card */
-    --info_card_icon_dimension: 30px;
-    --info_card_flex_margin_top: 50px;
-    --info_card_flex_gap: 20px;
-    --info_card_width_big: 80%;
-    --info_card_width_medium: 60%;
-    --info_card_width_small_portrait: 90%;
+  /* Background Container */
+  --background_container_height: 130vh;
 
+  /* Menu */
+  --menu_items_gap: 30px;
+  --menu_childrens_padding_left: 60px;
+  --menu_ink_margin_top: 10px;
 
-    /* Used Cars Card */
-    --used_car_card_padding: 15px 15px 0 15px;
-    --used_car_card_width: 300px;
-    --used_car_card_gap: 2rem;
+  /* General section margins */
+  --section_margin_bottom: 180px;
+  --section_margin_left_big: 250px;
+  --section_margin_left_medium: 190px;
+  --section_margin_left_small_portrait: 20px;
+  --section_margin_left_small_landscape: 15px;
 
+  /* Home section */
+  --home_header_padding_bottom: 5px;
+  --home_header_padding_right: 10px;
+  --home_header_gap: 20px;
 
-    /* Used Car Overview */
-    --used_car_overview_text_margin_top: 4px;
-    --used_car_overview_container_margin_top: 1rem;
+  /* Who we are */
+  --video_width: 80%;
 
+  /* Used cars */
+  --used_cars_padding: 1rem;
+  --used_cars_scroll_label_margin_left: 22%;
+  --unavailable_used_cars_image_dimension: 250px;
 
-    /* Used Car Drawer */
-    --used_car_drawer_flex_horizontal_gap_big_medium: 2rem;
-    --used_car_drawer_flex_horizontal_gap_small: 3rem;
-    --used_car_drawer_header_padding_left_big: 4rem;
-    --used_car_drawer_header_padding_left_small_portrait_medium_portrait: 3.2rem;
-    --used_car_drawer_header_padding_left_small_landscape_medium_landscape: 3.2rem;
+  /* Where we are section */
+  --google_maps_margin_top: 50px;
+  --google_maps_height: 60vh;
+  --google_maps_unavailable_background_size: 10%;
+  --google_maps_unavailable_description_margins: 15% 5% 0 5%;
 
-
-    /* Used Car Drawer Info Panel */
-    --used_car_drawer_info_panel_padding: 1.5rem;
-
-
-    /* Used Car Drawer Carousel */
-    --used_car_drawer_carousel_container_width_big: 75%;
-    --used_car_drawer_carousel_container_width_medium_portrait: 100%;
-    --used_car_drawer_carousel_container_width_medium_landscape: 60%;
-    --used_car_drawer_carousel_container_width_small: 100%;
-    --used_car_drawer_carousel_max_height_big_medium_lanscape_small_landscape: 80vh;
-    --used_car_drawer_carousel_max_height_medium_portrait_small_portrait: 40vh;
-
-
-    /* Used Car Drawer Collapse */
-    --used_car_drawer_collapse_margin_top: 80px;
-    --used_car_drawer_collapse_header_margin_top_bottom: 10px;
-
-
-    /* Section Container */
-    --section_container_width: 60%;
-    --section_container_width_small_portrait: 75%;
-    --section_max_width: 120%;
-
-
-    /* Section Header */
-    --section_header_padding: 20px;
-    --section_header_margin_bottom: 50px;
-    --section_header_subtitle_width: 85%;
-
-
-    /* Background Container */
-    --background_container_height: 130vh;
-
-
-    /* Menu */
-    --menu_items_gap: 30px;
-    --menu_childrens_padding_left: 60px;
-    --menu_ink_margin_top: 10px;
-
-
-    /* General section margins */
-    --section_margin_bottom: 180px;
-    --section_margin_left_big: 250px;
-    --section_margin_left_medium: 190px;
-    --section_margin_left_small_portrait: 20px;
-    --section_margin_left_small_landscape: 15px;
-
-
-    /* Home section */
-    --home_header_padding_bottom: 5px;
-    --home_header_padding_right: 10px;
-    --home_header_gap: 20px;
-
-
-    /* Who we are */
-    --video_width: 80%;
-
-
-    /* Used cars */
-    --used_cars_padding: 1rem;
-    --used_cars_scroll_label_margin_left: 22%;
-    --unavailable_used_cars_image_dimension: 250px;
-
-
-    /* Where we are section */
-    --google_maps_margin_top: 50px;
-    --google_maps_height: 60vh;
-    --google_maps_unavailable_background_size: 10%;
-    --google_maps_unavailable_description_margins: 15% 5% 0 5%;
-
-
-    /* Contacts section */
-    --contact_buttons_gap: 30px;
-    --contacts_footer_width: 90%;
-
+  /* Contacts section */
+  --contact_buttons_gap: 30px;
+  --contacts_footer_width: 90%;
 }

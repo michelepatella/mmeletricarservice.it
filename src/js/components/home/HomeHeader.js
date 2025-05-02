@@ -1,7 +1,7 @@
 import {
-    onEmailButtonClick,
-    onFacebookButtonClick,
-    onPhoneButtonClick
+  onEmailButtonClick,
+  onFacebookButtonClick,
+  onPhoneButtonClick,
 } from "../../logic/contactButtonHandler";
 import CustomIconButton from "../custom/CustomIconButton";
 
@@ -11,26 +11,27 @@ import CustomIconButton from "../custom/CustomIconButton";
  * @constructor
  */
 function HomeHeader() {
-    return (
+  return (
+    <>
+      {/* Email Button */}
+      <CustomIconButton
+        src="/icons/email_icon.svg"
+        onClick={onEmailButtonClick}
+      />
 
-        <>
-            {/* Email Button */}
-            <CustomIconButton
-                src="/icons/email_icon.svg"
-                onClick={onEmailButtonClick} />
+      {/* Facebook Button */}
+      <CustomIconButton
+        src="/icons/facebook_icon.svg"
+        onClick={onFacebookButtonClick}
+      />
 
-            {/* Facebook Button */}
-            <CustomIconButton
-                src="/icons/facebook_icon.svg"
-                onClick={onFacebookButtonClick} />
-
-            {/* Phone Button */}
-            <CustomIconButton
-                src="/icons/phone_icon.svg"
-                onClick={onPhoneButtonClick} />
-        </>
-
-    );
+      {/* Phone Button */}
+      <CustomIconButton
+        src="/icons/phone_icon.svg"
+        onClick={onPhoneButtonClick}
+      />
+    </>
+  );
 }
 
 export default HomeHeader;

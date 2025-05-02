@@ -1,23 +1,33 @@
 # 🌐 [mmeletricarservice.it](https://mmeletricarservice.it)
 
 ### 📌 What
+
 A production-ready, full-stack web application developed for MM Eletricar Service, an Italian car workshop and used car dealership.
 <br>
+
 ### ❓ Why
+
 To enhance the company's digital presence and operational efficiency through a modern, responsive, and informative web platform.
 <br>
+
 ### 👤 Who
+
 Designed for customers, providing detailed information about the company — including its values, location, and contact details — along with an overview of services and a seamless browsing experience for available used vehicles.
 <br>
+
 ### 📅 When
+
 Launched in February 2025.
 <br>
+
 ### 🌎 Where
+
 The web application is available at https://mmeletricarservice.it 🌐
 
 <br>
 
 ## 👁️ Table of Content
+
 - [Tech Stack](#️-tech-stack)
 - [Pages & Project Structure](#-pages--project-structure)
 - [System Architecture](#%EF%B8%8F-system-architecture)
@@ -26,25 +36,25 @@ The web application is available at https://mmeletricarservice.it 🌐
 - [Deployment](#-deployment)
 - [Performance & Optimization](#-performance--optimization)
 - [Author](#-author)
-  
+
 <br>
 
 ## 🛠️ Tech Stack
 
-| Layer                 | Technology                         |
-|-----------------------|------------------------------------|
-| Frontend              | React.js                           |
-| UI Library            | Ant Design                         |
-| Styling               | CSS  / Custom Design Tokens        |
-| Animations            | CSS / Framer Motion                |
-| API Communication     | Serverless API (Vercel Functions)  |
-| Backend-as-a-Service  | Supabase (PostgreSQL, Storage)     |
-| Environment variables | .env + Vercel Dashboard            |
-| Deployment            | Vercel                             |
-| SEO & Metadata        | Meta tags + React Helmet           |                        
-| Analytics             | Vercel Analytics                   |
+| Layer                 | Technology                        |
+| --------------------- | --------------------------------- |
+| Frontend              | React.js                          |
+| UI Library            | Ant Design                        |
+| Styling               | CSS / Custom Design Tokens        |
+| Animations            | CSS / Framer Motion               |
+| API Communication     | Serverless API (Vercel Functions) |
+| Backend-as-a-Service  | Supabase (PostgreSQL, Storage)    |
+| Environment variables | .env + Vercel Dashboard           |
+| Deployment            | Vercel                            |
+| SEO & Metadata        | Meta tags + React Helmet          |
+| Analytics             | Vercel Analytics                  |
 
-<br> 
+<br>
 
 ## 🔗 Pages & Project Structure
 
@@ -101,25 +111,30 @@ The **project structure** is the following one:
 
 <br>
 
-## 🏗️ System Architecture 
+## 🏗️ System Architecture
+
 🌐 **Client-side (React app)**
-  - Supabase interactions via Serverless API
+
+- Supabase interactions via Serverless API
 
 ⚙️ **Serverless Functions**
-   - Implemented as Vercel Functions
-   - Act as middleware between frontend and backend
-     
+
+- Implemented as Vercel Functions
+- Act as middleware between frontend and backend
+
 ☁️ **Backend / BaaS (Supabase)**
-   - PostgreSQL database for used car data
-   - Storage bucket for used car images
-   - Row-level security with custom policies
-   - Optimized with indexes for performance
-   - Accessed via RESTful API
+
+- PostgreSQL database for used car data
+- Storage bucket for used car images
+- Row-level security with custom policies
+- Optimized with indexes for performance
+- Accessed via RESTful API
 
 📦 **Deployment**
-   - Source control: GitHub
-   - Automatic deployment to Vercel on push to main
-<br> 
+
+- Source control: GitHub
+- Automatic deployment to Vercel on push to main
+  <br>
 
 ![image](https://github.com/user-attachments/assets/14279d07-681d-4c55-9175-cb0619df5960)
 
@@ -130,7 +145,7 @@ The **project structure** is the following one:
 
 This project follows the best practices of software engineering:
 
-1. 🧱 **Modularity**: 
+1. 🧱 **Modularity**:
    - Components follow the Single Responsibility Principle
    - Clear separation between UI, business logic, and styling
    - Logic encapsulated via custom hooks and shared utility functions
@@ -182,33 +197,35 @@ This project follows the best practices of software engineering:
 <br>
 
 8. 🧠 **Abstraction**:
-      - Business logic abstracted via hooks and helper functions
-      - Reusable component library supports consistent UI patterns
-      - Centralized configuration (env, theming, routing)
+   - Business logic abstracted via hooks and helper functions
+   - Reusable component library supports consistent UI patterns
+   - Centralized configuration (env, theming, routing)
 
 <br>
 
 9. 🔄 **Change Readiness**:
-      - Environment variables and settings externalized for flexibility
-      - Scalable deployment workflow (automatic deploy on Vercel)
+   - Environment variables and settings externalized for flexibility
+   - Scalable deployment workflow (automatic deploy on Vercel)
 
 <br>
 
 10. 👤 **Usability**:
-      - Clean and intuitive UI aligned with branding
-      - Accessibility best practices
-      - Responsive navigation (anchor menu on desktop, drawer on mobile)
-      - Fast feedback to user actions
-      - Consistency across the whole app (colors, layout, etc.)
-      - Mobile-first design, tested on 20+ devices and viewports
-      - Clear visual hierarchy and reduced cognitive load (e.g. accordion for specs)
+    - Clean and intuitive UI aligned with branding
+    - Accessibility best practices
+    - Responsive navigation (anchor menu on desktop, drawer on mobile)
+    - Fast feedback to user actions
+    - Consistency across the whole app (colors, layout, etc.)
+    - Mobile-first design, tested on 20+ devices and viewports
+    - Clear visual hierarchy and reduced cognitive load (e.g. accordion for specs)
 
 <br>
 
 ## 📡 API Documentation
+
 The following API endpoints are implemented as Serverless Functions, hosted on Vercel.
 
 ### 1. Get used cars overview
+
 - **Description**: Returns an array of used car overviews with the first available image for each car.
 - **URL**: `/api/usedCarsOverview`
 - **Method**: `GET`
@@ -233,20 +250,21 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 }
 </pre>
 
-| Field     | Type    | Description                                                        |
-|-----------|---------|--------------------------------------------------------------------|
-| `id`      | Integer | Unique identifier of the used car.                                 |
-| `name`    | String  | Name or model of the used car                                      |  
-| `price`   | String  | Displayed price in euros, formatted as a string.                   |
-| `year`    | String  | Year of registration or manufacturing.                             |
-| `mileage` | String  | Kilometers driven, formatted as a string.                          |
-| `fuel`    | String  | Type of fuel.                                                      |
-| `status`  | String  | Overall condition.                                                 |
-| `image`   | String  | Public URL of the first (overview) image of the car.               |
+| Field     | Type    | Description                                          |
+| --------- | ------- | ---------------------------------------------------- |
+| `id`      | Integer | Unique identifier of the used car.                   |
+| `name`    | String  | Name or model of the used car                        |
+| `price`   | String  | Displayed price in euros, formatted as a string.     |
+| `year`    | String  | Year of registration or manufacturing.               |
+| `mileage` | String  | Kilometers driven, formatted as a string.            |
+| `fuel`    | String  | Type of fuel.                                        |
+| `status`  | String  | Overall condition.                                   |
+| `image`   | String  | Public URL of the first (overview) image of the car. |
 
 <br>
 
 ### 2. Get used car info
+
 - **Description**: Returns complete details for a specific used car, including technical specifications and all associated images.
 - **URL**: `/api/usedCarInfo`
 - **Method**: `GET`
@@ -280,23 +298,23 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 }
 </pre>
 
-| Field               | Type             | Description                                                                |
-|--------------------|------------------|-----------------------------------------------------------------------------|
-| `id`               | Integer          | Unique identifier of the used car.                                          |
-| `engine_displacement` | String        | Engine size in liters.                                                      |
-| `cylinders`        | String           | Number of engine cylinders.                                                 |
-| `power`            | String           | Engine power in CV.                                                         |
-| `transmission`     | String           | Type of transmission.                                                       |
-| `consumption`      | String           | Fuel consumption in L/100km.                                                |
-| `emission_class`   | String           | Emission standard.                                                          |
-| `emissions`        | String           | CO₂ emissions in g/km.                                                      |
-| `doors`            | String           | Number of doors.                                                            |
-| `bodywork`         | String           | Body type.                                                                  |
-| `external_color`   | String           | Exterior color of the car.                                                  |
-| `internal_color`   | String           | Interior color scheme.                                                      |
-| `internal_material`| String           | Interior material.                                                          |
-| `seats`            | String           | Number of seats.                                                            |
-| `images`           | Array of Strings | List of public image URLs for this car.                                     |
+| Field                 | Type             | Description                             |
+| --------------------- | ---------------- | --------------------------------------- |
+| `id`                  | Integer          | Unique identifier of the used car.      |
+| `engine_displacement` | String           | Engine size in liters.                  |
+| `cylinders`           | String           | Number of engine cylinders.             |
+| `power`               | String           | Engine power in CV.                     |
+| `transmission`        | String           | Type of transmission.                   |
+| `consumption`         | String           | Fuel consumption in L/100km.            |
+| `emission_class`      | String           | Emission standard.                      |
+| `emissions`           | String           | CO₂ emissions in g/km.                  |
+| `doors`               | String           | Number of doors.                        |
+| `bodywork`            | String           | Body type.                              |
+| `external_color`      | String           | Exterior color of the car.              |
+| `internal_color`      | String           | Interior color scheme.                  |
+| `internal_material`   | String           | Interior material.                      |
+| `seats`               | String           | Number of seats.                        |
+| `images`              | Array of Strings | List of public image URLs for this car. |
 
 <br>
 
@@ -305,7 +323,9 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 <br>
 
 ## 🚀 Deployment
-The project follows a fully automated deployment pipeline using **Vercel** and **GitHub** : 
+
+The project follows a fully automated deployment pipeline using **Vercel** and **GitHub** :
+
 - Vercel is connected to the GitHub repository
 - Every successful commit to main is automatically built and deployed to https://mmeletricarservice.it
 - Preview deploys are generated for other branches and PRs
@@ -314,6 +334,7 @@ The project follows a fully automated deployment pipeline using **Vercel** and *
 
 **🔐 Environment Variables**
 Environment-specific secrets (Supabase project keys) are:
+
 - Defined in a local `.env` file (excluded from version control)
 - Securely configured via the Vercel Dashboard
 - Not exposed to the browser
@@ -328,22 +349,22 @@ Environment-specific secrets (Supabase project keys) are:
 
 ### 📊 Lighthouse Scores
 
-| Category         | Score (%)                     |
-|------------------|-------------------------------|
-| Performance      |             96                |
-| Accessibility    |             90                |
-| Best Practices   |            100                |
-| SEO              |            100                |
+| Category       | Score (%) |
+| -------------- | --------- |
+| Performance    | 96        |
+| Accessibility  | 90        |
+| Best Practices | 100       |
+| SEO            | 100       |
 
 ### ⚡️ Performance
 
-| Metric                    | Target                   |
-|---------------------------|--------------------------|
-| First Contentful Paint    |          0.9 s           |
-| Largest Contentful Paint  |       2.7 s              |
-| Total Blocking Time       |            60 ms         |
-| Cumulative Layout Shift   |             0            |
-| Speed Index               |            2.1 s         |
+| Metric                   | Target |
+| ------------------------ | ------ |
+| First Contentful Paint   | 0.9 s  |
+| Largest Contentful Paint | 2.7 s  |
+| Total Blocking Time      | 60 ms  |
+| Cumulative Layout Shift  | 0      |
+| Speed Index              | 2.1 s  |
 
 <br>
 
@@ -352,8 +373,9 @@ Environment-specific secrets (Supabase project keys) are:
 <br>
 
 ## 👨‍💻 Author
+
 **Michele Patella**
 
 <br>
 
-> Last update: 
+> Last update:

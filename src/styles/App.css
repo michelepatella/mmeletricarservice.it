@@ -1,5 +1,6 @@
 /*body of the entire web page*/
-html, body {
+html,
+body {
   margin: 0;
   font-family: var(--font_family);
   background-color: var(--background_color);

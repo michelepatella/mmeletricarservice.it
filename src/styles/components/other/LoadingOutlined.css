@@ -1,9 +1,9 @@
 /* Loading Outlines styles */
 .loading-outlined {
-    width: var(--section_max_width);
-    display: flex;
-    align-items: center;
-    align-self: center;
-    justify-content: center;
-    color: white;
+  width: var(--section_max_width);
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  color: white;
 }
