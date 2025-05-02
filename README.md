@@ -1,6 +1,19 @@
 # 🌐 [mmeletricarservice.it](https://mmeletricarservice.it)
 
-A **production-ready**, **full-stack web application** developed for an Italian **car workshop** and **used car dealership**, named **MM Eletricar Service**, designed to enhance the digital presence and operational efficiency of the Company. The platform provides customers with clear and detailed information about the company itself — including its values, location, and contact details — as well as an overview of its services and a seamless browsing experience for available used cars.
+### 📌 What?
+A production-ready, full-stack web application developed for an Italian car workshop and used car dealership, named MM Eletricar Service.
+
+<br>
+
+### ❓ Why?
+To enhance the digital presence and operational efficiency of the Company.
+
+<br>
+
+### 👤 Who?
+To customers, providing clear and detailed information about the company itself — including its values, location, and contact details — as well as an overview of its services and a seamless browsing experience for available used cars.
+
+<br>
 
 Built with **React.js**, **Ant Design**, **CSS** and **Supabase**, and deployed on **Vercel**, the application offers a **modern and responsive UI** while adhering to core **software engineering principles** and optimizing for key **performance metrics**.
 
