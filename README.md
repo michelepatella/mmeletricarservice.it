@@ -74,65 +74,10 @@ The **project structure** is the following one:
 ├── package.json
 ├── public
 │   ├── doc 
-│   │   ├── Cookie Policy - MM Eletricar Service.pdf
-│   │   ├── Note Legali - Auto Usate - MM Eletricar Service.pdf
-│   │   └── Privacy Policy - MM Eletricar Service.pdf
 │   ├── favicon 
-│   │   ├── apple-touch-icon.png
-│   │   ├── favicon-96x96.png
-│   │   ├── favicon.ico
-│   │   ├── favicon.svg
-│   │   ├── site.webmanifest
-│   │   ├── web-app-manifest-192x192.png
-│   │   └── web-app-manifest-512x512.png
 │   ├── font 
-│   │   ├── OFL.txt
-│   │   ├── Poppins-Black.ttf
-│   │   ├── Poppins-BlackItalic.ttf
-│   │   ├── Poppins-Bold.ttf
-│   │   ├── Poppins-BoldItalic.ttf
-│   │   ├── Poppins-ExtraBold.ttf
-│   │   ├── Poppins-ExtraBoldItalic.ttf
-│   │   ├── Poppins-ExtraLight.ttf
-│   │   ├── Poppins-ExtraLightItalic.ttf
-│   │   ├── Poppins-Italic.ttf
-│   │   ├── Poppins-Light.ttf
-│   │   ├── Poppins-LightItalic.ttf
-│   │   ├── Poppins-Medium.ttf
-│   │   ├── Poppins-MediumItalic.ttf
-│   │   ├── Poppins-Regular.ttf
-│   │   ├── Poppins-SemiBold.ttf
-│   │   ├── Poppins-SemiBoldItalic.ttf
-│   │   ├── Poppins-Thin.ttf
-│   │   └── Poppins-ThinItalic.ttf
 │   ├── icons 
-│   │   ├── air_icon.svg
-│   │   ├── anti_theft_icon.svg
-│   │   ├── arrow.svg
-│   │   ├── calendar_icon.svg
-│   │   ├── control_panel_icon.svg
-│   │   ├── cookie_icon.svg
-│   │   ├── cpu_icon.svg
-│   │   ├── dashboard_icon.svg
-│   │   ├── diagnosis_icon.svg
-│   │   ├── electric_icon.svg
-│   │   ├── email_icon.svg
-│   │   ├── engine_icon.svg
-│   │   ├── facebook_icon.svg
-│   │   ├── filter_icon.svg
-│   │   ├── fuel_icon.svg
-│   │   ├── key_icon.svg
-│   │   ├── map_icon.svg
-│   │   ├── phone_icon.svg
-│   │   ├── road_icon.svg
-│   │   ├── status_icon.svg
-│   │   └── wrench_icon.svg
 │   ├── images
-│   │   ├── animation-logo.mp4
-│   │   ├── empty-carousel-image.svg
-│   │   ├── empty-used-cars-image.avif
-│   │   ├── home-image.avif
-│   │   └── services-image.avif
 │   ├── index.html
 │   ├── manifest.json
 │   └── robots.txt
