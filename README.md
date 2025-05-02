@@ -6,7 +6,7 @@
 - [🔗 Pages & Project Structure](#-pages--project-structure)
 - [📌 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
-- [☁️ Backend / Baas (Supabase)] (#-backend--baas-supabase)
+- [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [🧪 Testing](#-testing)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
