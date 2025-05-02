@@ -163,6 +163,7 @@ This project follows the best practices of software engineering:
    - Comprehensive error handling for API and UI
    - Loading states and fallback UIs improve resilience
    - Clear feedback and user messages in edge cases
+   - try-catch blocks and logging implemented
 
 <br>
   
