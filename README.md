@@ -156,6 +156,7 @@ This project follows the best practices of software engineering:
     - GDPR compliance: cookie consent, legal/privacy notes
     - Safe handling of third-party cookies
     - No sensitive data exposed client-side
+    - Row-Level Security (RLS) policies on Supabase
 
 <br>
    
