@@ -1,7 +1,7 @@
 # 🌐 [mmeletricarservice.it](https://mmeletricarservice.it)
 
 ### 👁️ Table of Content
-- [Overview](#️-❺🅦overview)
+- [Overview](#️🅦-overview)
 - [Tech Stack](#️-tech-stack)
 - [Pages & Project Structure](#-pages--project-structure)
 - [System Architecture](#%EF%B8%8F-system-architecture)
