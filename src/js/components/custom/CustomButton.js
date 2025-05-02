@@ -26,8 +26,7 @@ function CustomButton(props){
                 props.icon &&
                     <img
                         src={props.icon}
-                        alt="button-icon"
-                        loading="lazy" />
+                        alt="button-icon" />
             }
 
             {props.text}

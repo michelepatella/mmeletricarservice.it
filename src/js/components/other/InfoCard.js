@@ -26,8 +26,7 @@ function InfoCard(props){
                         <img
                             className="info-card-icon"
                             src={props.icon}
-                            alt="info-card-icon"
-                            loading="lazy" />
+                            alt="info-card-icon" />
                     }
 
                     {/* Title */}

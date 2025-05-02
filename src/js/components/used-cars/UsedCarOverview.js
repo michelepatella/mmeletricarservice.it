@@ -27,8 +27,7 @@ function UsedCarOverview (props) {
                                 {/* Icon */}
                                 <img
                                     src={info?.icon}
-                                    alt="icon"
-                                    loading="lazy" />
+                                    alt="icon" />
 
                                 {/* Info title, if its needs to be shown, otherwise show the text */}
                                 <CustomText
