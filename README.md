@@ -138,8 +138,8 @@ This project follows the best practices of software engineering:
    -  Frontend components and routes structured for future expansion
    -  Vercel's serverless functions scale automatically with demand, including a caching system to improve performance and reduce the latency
    -  Caching layer to reduce redundant API calls, using `useState`
-      - All redundant request are rejected ❌
-      - All multilple simultaneous requests are rejected  ❌
+     - All redundant request are rejected ❌
+     - All multilple simultaneous requests are rejected  ❌
 
 <br>
   
