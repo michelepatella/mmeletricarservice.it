@@ -404,12 +404,12 @@ Environment-specific secrets (Supabase project keys) are:
 | Memory Usage              |            45%           | 
 | Average CPU Usage         |            0.74%         |
 
-### 🚀 Serverless Functions  
+### ⚙️ Serverless Functions  
 
 | Metric                    | Target                   |
 |---------------------------|--------------------------|
 | Error rate                |          0%              |
-| Timeout                   |       0.3%               |
+| Timeout rate              |       0.3%               |
 | Time to First Byte        |   573 ms  (Average)      |
 | Memory Usage              |  116 MB (Average)        |
 
