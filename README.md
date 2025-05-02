@@ -396,6 +396,23 @@ Environment-specific secrets (Supabase project keys) are:
 | Cumulative Layout Shift   |             0            |
 | Speed Index               |            2.1 s         |
 
+### ☁️ Supabase 
+
+| Metric                    | Target (Average)         |
+|---------------------------|--------------------------|
+| API Response Speed        |          111.5 ms        |
+| Memory Usage              |            45%           | 
+| Average CPU Usage         |            0.74%         |
+
+### 🚀 Serverless Functions  
+
+| Metric                    | Target                   |
+|---------------------------|--------------------------|
+| Error rate                |          0%              |
+| Timeout                   |       0.3%               |
+| Time to First Byte        |   573 ms  (Average)      |
+| Memory Usage              |  116 MB (Average)        |
+
 <br>
 
 > More details: [Lighthouse Report](./lighthouse.pdf)
