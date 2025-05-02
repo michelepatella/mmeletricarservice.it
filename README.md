@@ -1,6 +1,6 @@
 # 🌐 [mmeletricarservice.it](https://mmeletricarservice.it)
 
-### 👁️ Table of Content
+### 📚 Table of Content
 - [Overview](#️-overview)
 - [Tech Stack](#️-tech-stack)
 - [Pages & Project Structure](#-pages--project-structure)
@@ -13,7 +13,7 @@
 
 <br>
 
-## ❺🅦 Overview
+## 👁️ Overview
 ### 📌 What
 A production-ready, full-stack web application developed for MM Eletricar Service, an Italian car workshop and used car dealership.
 <br>
