@@ -199,7 +199,7 @@ This project follows the best practices of software engineering:
    - Optimized with indexes for performance
    - Accessed via RESTful API
 
-📦 **Deployment % CI/CD**
+📦 **Deployment & CI/CD**
    - Source control: GitHub
    - Automatic deployment to Vercel on push to main
 <br> 
