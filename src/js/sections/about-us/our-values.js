@@ -8,6 +8,7 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import SectionContainer from "../../components/sections/SectionContainer";
 import CustomText from "../../components/custom/CustomText";
 import SectionHeader from "../../components/sections/SectionHeader";
+import { Helmet } from "react-helmet";
 
 /**
  * Our values section
@@ -20,17 +21,28 @@ function OurValues() {
   useIntersectionObserver(imageRef);
 
   return (
-    <SectionContainer id="i-nostri-valori">
-      {/* Section header */}
-      <SectionHeader
-        section="I NOSTRI VALORI"
-        title={OUR_VALUES_TITLE}
-        subtitle={OUR_VALUES_SUBTITLE}
-      />
+    <>
+      {/* React Helmet */}
+      <Helmet>
+        <title>MM Eletricar Service - I nostri valori</title>
+        <meta
+          name="description"
+          content="MM Eletricar Service si impegna a costruire relazioni di fiducia con i clienti, fornendo soluzioni di qualità, affidabili e su misura."
+        />
+      </Helmet>
 
-      {/* Description */}
-      <CustomText type="body" text={OUR_VALUES_DESCRIPTION} />
-    </SectionContainer>
+      <SectionContainer id="i-nostri-valori">
+        {/* Section header */}
+        <SectionHeader
+          section="I NOSTRI VALORI"
+          title={OUR_VALUES_TITLE}
+          subtitle={OUR_VALUES_SUBTITLE}
+        />
+
+        {/* Description */}
+        <CustomText type="body" text={OUR_VALUES_DESCRIPTION} />
+      </SectionContainer>
+    </>
   );
 }
 

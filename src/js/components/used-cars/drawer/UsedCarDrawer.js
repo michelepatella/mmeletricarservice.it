@@ -7,6 +7,7 @@ import { useDrawerBackButtonHandler } from "../../../hooks/useDrawerBackDrawer";
 import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
 import UsedCarDrawerInfoPanel from "./UsedCarDrawerInfoPanel";
 import CustomBackButton from "../../custom/CustomBackButton";
+import { Helmet } from "react-helmet";
 
 /**
  * Used Car Drawer
@@ -34,6 +35,19 @@ function UsedCarDrawer(props) {
 
   return (
     <>
+      {/* React Helmet */}
+      <Helmet>
+        <title>{props.usedCarOverview?.name} a Gravina in Puglia (BA)</title>
+        <meta
+          name="description"
+          content={
+            "Scopri i dettagli su" +
+            props.usedCarOverview?.name +
+            "a Gravina in Puglia (BA)."
+          }
+        />
+      </Helmet>
+
       {/* Drawer */}
       <Drawer
         className="used-car-drawer"

@@ -13,6 +13,7 @@ import SectionContainer from "../components/sections/SectionContainer";
 import CustomText from "../components/custom/CustomText";
 import InfoCard from "../components/other/InfoCard";
 import SectionHeader from "../components/sections/SectionHeader";
+import { Helmet } from "react-helmet";
 
 /**
  * Where We Are section
@@ -22,6 +23,15 @@ import SectionHeader from "../components/sections/SectionHeader";
 function WhereWeAre(props) {
   return (
     <>
+      {/* React Helmet */}
+      <Helmet>
+        <title>MM Eletricar Service - Dove siamo</title>
+        <meta
+          name="description"
+          content="MM Eletricar Service si trova a Gravina in Puglia (BA), in via G. Bizet, 63."
+        />
+      </Helmet>
+
       <SectionContainer id="dove-siamo">
         {/* Section header */}
         <SectionHeader

@@ -15,6 +15,7 @@ import SectionContainer from "../../components/sections/SectionContainer";
 import UsedCarCard from "../../components/used-cars/UsedCarCard";
 import SectionHeader from "../../components/sections/SectionHeader";
 import CustomText from "../../components/custom/CustomText";
+import { Helmet } from "react-helmet";
 
 /**
  * Used cars section
@@ -33,50 +34,61 @@ function UsedCars() {
   );
 
   return (
-    <SectionContainer id="auto-usate">
-      {/* Section Header */}
-      <SectionHeader
-        section="AUTO USATE"
-        title={USED_CARS_TITLE}
-        subtitle={USED_CARS_SUBTITLE}
-      />
+    <>
+      {/* React Helmet */}
+      <Helmet>
+        <title>MM Eletricar Service - Auto usate</title>
+        <meta
+          name="description"
+          content="Auto usate garantite a Gravina in Puglia (BA). Auto selezionate di qualità, convenienti ed affidabili."
+        />
+      </Helmet>
 
-      {/* While the cars are loading show the loading outlined. As soon
+      <SectionContainer id="auto-usate">
+        {/* Section Header */}
+        <SectionHeader
+          section="AUTO USATE"
+          title={USED_CARS_TITLE}
+          subtitle={USED_CARS_SUBTITLE}
+        />
+
+        {/* While the cars are loading show the loading outlined. As soon
                 as the loading is finished, if data is not empty, show it. */}
-      {areCarsLoading ? (
-        <LoadingOutlined className="loading-outlined" spin={areCarsLoading} />
-      ) : usedCarsOverview?.length > 0 ? (
-        <>
-          {/* Show all the available used cars */}
-          <div className="used-cars-container">
-            {usedCarsOverview?.map((car, index) => (
-              <UsedCarCard key={index} usedCarOverview={car} />
-            ))}
-          </div>
+        {areCarsLoading ? (
+          <LoadingOutlined className="loading-outlined" spin={areCarsLoading} />
+        ) : usedCarsOverview?.length > 0 ? (
+          <>
+            {/* Show all the available used cars */}
+            <div className="used-cars-container">
+              {usedCarsOverview?.map((car, index) => (
+                <UsedCarCard key={index} usedCarOverview={car} />
+              ))}
+            </div>
 
-          {/* Scroll label */}
-          <CustomText
-            type="body"
-            text={USED_CAR_SCROLL_LABEL_TEXT}
-            style={handleScrollLabelStyle()}
-          />
-        </>
-      ) : (
-        //unavailable used cars label + image
-        <div className="unavailable-used-cars-container">
-          <CustomText
-            type="body"
-            text={USED_CARS_UNAVAILABLE_DESCRIPTION}
-            style={handleUnavailableUsedCarDescriptionStyle()}
-          />
-          <img
-            src="/images/empty-used-cars-image.avif"
-            alt="unavailable-used-cars"
-            loading="lazy"
-          />
-        </div>
-      )}
-    </SectionContainer>
+            {/* Scroll label */}
+            <CustomText
+              type="body"
+              text={USED_CAR_SCROLL_LABEL_TEXT}
+              style={handleScrollLabelStyle()}
+            />
+          </>
+        ) : (
+          //unavailable used cars label + image
+          <div className="unavailable-used-cars-container">
+            <CustomText
+              type="body"
+              text={USED_CARS_UNAVAILABLE_DESCRIPTION}
+              style={handleUnavailableUsedCarDescriptionStyle()}
+            />
+            <img
+              src="/images/empty-used-cars-image.avif"
+              alt="unavailable-used-cars"
+              loading="lazy"
+            />
+          </div>
+        )}
+      </SectionContainer>
+    </>
   );
 }
 

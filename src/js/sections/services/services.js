@@ -4,6 +4,7 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import SectionContainer from "../../components/sections/SectionContainer";
 import BackgroundContainer from "../../components/sections/BackgroundContainer";
 import SectionHeader from "../../components/sections/SectionHeader";
+import { Helmet } from "react-helmet";
 
 /**
  * Services section
@@ -17,6 +18,15 @@ function Services() {
 
   return (
     <>
+      {/* React Helmet */}
+      <Helmet>
+        <title>MM Eletricar Service - Servizi</title>
+        <meta
+          name="description"
+          content="Riparazioni, manutenzioni, diagnosi elettroniche e vendita di auto usate a Gravina in Puglia (BA)."
+        />
+      </Helmet>
+
       <BackgroundContainer image="/images/services-image.avif">
         <SectionContainer id="servizi">
           {/* Section Header */}

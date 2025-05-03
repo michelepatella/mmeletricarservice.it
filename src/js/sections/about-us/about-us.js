@@ -9,6 +9,7 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import SectionContainer from "../../components/sections/SectionContainer";
 import CustomText from "../../components/custom/CustomText";
 import SectionHeader from "../../components/sections/SectionHeader";
+import { Helmet } from "react-helmet";
 
 /**
  * About us section
@@ -23,29 +24,40 @@ function AboutUs() {
   useVideoAnimation(videoRef, isVideoVisible);
 
   return (
-    <SectionContainer id="chi-siamo">
-      {/* Section header */}
-      <SectionHeader
-        section="CHI SIAMO"
-        title={ABOUT_US_TITLE}
-        subtitle={ABOUT_US_SUBTITLE}
-        children={
-          <video
-            className="video"
-            ref={videoRef}
-            src="/images/animation-logo.mp4"
-            type="video/mp4"
-            loop={false}
-            controls={false}
-            muted
-            playsInline
-          />
-        }
-      />
+    <>
+      {/* React Helmet */}
+      <Helmet>
+        <title>MM Eletricar Service - Chi siamo</title>
+        <meta
+          name="description"
+          content="MM Eletricar Service, officina elettrauto a Gravina in Puglia (BA), nata dall'unione di esperienza a passione."
+        />
+      </Helmet>
 
-      {/* Description */}
-      <CustomText type="body" text={ABOUT_US_DESCRIPTION} />
-    </SectionContainer>
+      <SectionContainer id="chi-siamo">
+        {/* Section header */}
+        <SectionHeader
+          section="CHI SIAMO"
+          title={ABOUT_US_TITLE}
+          subtitle={ABOUT_US_SUBTITLE}
+          children={
+            <video
+              className="video"
+              ref={videoRef}
+              src="/images/animation-logo.mp4"
+              type="video/mp4"
+              loop={false}
+              controls={false}
+              muted
+              playsInline
+            />
+          }
+        />
+
+        {/* Description */}
+        <CustomText type="body" text={ABOUT_US_DESCRIPTION} />
+      </SectionContainer>
+    </>
   );
 }
 
