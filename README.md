@@ -410,6 +410,20 @@ Environment-specific secrets (Supabase project keys) are:
 <br>
 <br>
 
+## 🔍 SEO
+
+Search engine optimization has been implemented to ensure the web application is discoverable and ranks well for relevant queries.
+
+- **Meta Tags**: Each page (`index.html`, section pages, and used car listings) includes a unique `<title>` and `<meta description>`.
+- **React Helmet**: SEO tags are dynamically injected based on the current route.
+- **Clean URLs**: Localized, human-readable URLs enhance both user experience and search relevance.
+- **Keyword-Optimized Content**: Text content has been carefully crafted with relevant keywords to improve rankings.
+- **HTTPS**: The entire application runs over a secure HTTPS connection.
+- **Google Maps Integration**: Embedded Google Maps via `<iframe>` supports local SEO targeting.
+- **Favicon and Branding**: A custom favicon and consistent branding improve recognizability in search results and browser tabs.
+
+<br>
+
 ## 📈 Metrics
 
 ### 📊 Lighthouse Scores
