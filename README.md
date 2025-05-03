@@ -13,6 +13,7 @@
 - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [🔍 SEO](#-seo)
 - [📈 Metrics](#-metrics)
+- [🌎 Impact on the Real World](#-impact-on-the-real-world)
 - [👨‍💻 Author](#-author)
 
 <br>
@@ -479,19 +480,19 @@ Search engine optimization has been implemented to ensure the web application is
 
 ## 🌎 Impact on the Real World
 
-- **Enhanced Operational Efficiency**  
+### 💻 Enhanced Operational Efficiency
   The web application allows customers to effortlessly explore all the services offered by the company and access essential information such as location, contact details, and opening hours. It also enables users to browse available used cars, view detailed specifications, and easily contact the business for inquiries. This reduces the workload on customer support while delivering high-quality, accurate, and timely information to clients.
 
-- **Support for Local Businesses**  
+### 🏙️ Support for Local Businesses 
   As a local car dealership, the company gains a competitive edge through this digital platform, allowing it to stand out against larger, more established competitors. This visibility promotes local economic growth and can contribute to job creation within the community.
 
-- **Empowerment Through Information**  
+### 💡 Empowerment Through Information  
   By offering detailed car specifications and transparent service descriptions, the application empowers customers to make better-informed decisions. This leads to increased confidence, satisfaction, and trust during the buying or service request process.
 
-- **Reduction of Information Asymmetry**  
+### ⚖️ Reduction of Information Asymmetry
   Traditionally, customers rely heavily on sales representatives for information. The application bridges this gap by making relevant data openly available, ensuring more balanced, transparent interactions between the company and its clients.
 
-- **Data-Driven Business Insights**  
+### 📊 Data-Driven Business Insights
   The platform can collect anonymized user interaction data, which can be analyzed to understand customer behavior, and optimize inventory. This enables data-informed decisions that enhance long-term strategy.
 
 
