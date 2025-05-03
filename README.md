@@ -64,8 +64,6 @@ The web application is available at https://mmeletricarservice.it 🌐
 
 ## 🔗 Project Structure
 
-The **project structure** is the following one:
-
 <pre>
 .
 ├── README.md
@@ -226,13 +224,13 @@ This project follows the best practices of software engineering:
 
 The client-side is a modern, production-grade React.js application.
 
-- **Component-driven Architecture**: UI compose of reusable, atomic components
-- **Routing**: Navigation managed via Hash Routing, supporting both static and dynamic routes
-- **Styling & Theming**: Styling using Ant Design components, CSS and design tokens
-- **State Management**: Local state handled with React's hooks (`useState`, `useEffect`, etc.) and logic is abstracted into custom hooks to promote reuse
-- **Data Fetching**: All data interactions go through serverless functions, acting as middleware between the frontend and Supabase, managed via a custom hook acting as fecthing manager
-- **Performance & Optimization**: Lazy loading, image modern formats and other tricks to optimize performance
-- **Responsive & Accessible UI**: Design follows mobile-first approach, enhanced by advanced UI components and animations
+- **Component-driven Architecture**: UI compose of reusable, atomic components.
+- **Routing**: Navigation managed via Hash Routing, supporting both static and dynamic routes.
+- **Styling & Theming**: Styling using Ant Design components, CSS and design tokens.
+- **State Management**: Local state handled with React's hooks (`useState`, `useEffect`, etc.) and logic is abstracted into custom hooks to promote reuse.
+- **Data Fetching**: All data interactions go through serverless functions, acting as middleware between the frontend and Supabase, managed via a custom hook acting as fecthing manager.
+- **Performance & Optimization**: Lazy loading, image modern formats and other tricks to optimize performance.
+- **Responsive & Accessible UI**: Design follows mobile-first approach, enhanced by advanced UI components and animations.
 
 The application is composed of static and dynamic routes to serve both marketing and functional purposes:
 
@@ -389,7 +387,7 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 
 ## 📦 Deployment & CI/CD
 
-The project follows a fully automated deployment pipeline using **Vercel** and **GitHub** :
+The project follows a fully automated deployment pipeline using Vercel and GitHub :
 
 - Vercel is connected to the GitHub repository
 - Every successful commit to main is automatically built and deployed to https://mmeletricarservice.it
