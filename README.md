@@ -289,7 +289,7 @@ The API endpoints are implemented as Serverless Functions, hosted on Vercel, and
 | Field     | Type    | Description                                          |
 | --------- | ------- | ---------------------------------------------------- |
 | `id`      | Integer | Unique identifier of the used car.                   |
-| `name`    | String  | Name or model of the used car                        |
+| `name`    | String  | Name or model of the used car.                       |
 | `price`   | Float   | Displayed price in euros.                            |
 | `year`    | Integer | Year of registration or manufacturing.               |
 | `mileage` | Integer | Kilometers driven.                                   |
