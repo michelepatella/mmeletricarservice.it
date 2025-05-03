@@ -167,6 +167,7 @@ This project follows the best practices of software engineering:
     - GDPR compliance: cookie consent, legal/privacy notes
     - Safe handling of third-party cookies
     - No sensitive data exposed client-side
+    - Row-Level Security (RLS) policies on Supabase
 
 <br>
    
@@ -422,6 +423,23 @@ Environment-specific secrets (Supabase project keys) are:
 | Total Blocking Time      | 60 ms  |
 | Cumulative Layout Shift  | 0      |
 | Speed Index              | 2.1 s  |
+
+### ☁️ Backend / Baas (Supabase) 
+
+| Metric                    | Target (Average)         |
+|---------------------------|--------------------------|
+| API Response Speed        |          111.5 ms        |
+| Memory Usage              |            45%           | 
+| Average CPU Usage         |            0.74%         |
+
+### ⚙️ Serverless Functions  
+
+| Metric                    | Target                   |
+|---------------------------|--------------------------|
+| Error rate                |          0%              |
+| Timeout rate              |       0.3%               |
+| Time to First Byte        |   573 ms  (Average)      |
+| Memory Usage              |  116 MB (Average)        |
 
 <br>
 
