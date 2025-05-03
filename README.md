@@ -251,7 +251,7 @@ The client-side is a modern, production-grade React.js application.
 
 ## ⚙️ Serverless Functions
 
-The following API endpoints are implemented as Serverless Functions, hosted on Vercel.
+The following API endpoints are implemented as Serverless Functions, hosted on Vercel, and managed via a custom hook acting as API manager.
 
 ### 1. Get used cars overview
 
