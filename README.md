@@ -68,33 +68,33 @@ The **project structure** is the following one:
 <pre>
 .
 ├── README.md
-├── api 
+├── api # contains the serverless functions
 ├── lighthouse.pdf
 ├── package-lock.json
 ├── package.json
 ├── public
-│   ├── doc 
-│   ├── favicon 
-│   ├── font 
-│   ├── icons 
-│   ├── images
+│   ├── doc # contains the Cookie and Privacy Policy, and the Legal Notes documents
+│   ├── favicon # contains the customized favicon
+│   ├── font # contains the font family used across the whole web application (Poppins)
+│   ├── icons # contains the icons used in the web application
+│   ├── images # contains the images used in the web application
 │   ├── index.html
 │   ├── manifest.json
 │   └── robots.txt
 └── src
     ├── index.css
     ├── index.js
-    ├── js
+    ├── js 
     │   ├── App.js
-    │   ├── components 
-    │   ├── hooks
-    │   ├── logic
-    │   ├── sections
-    │   └── utils
+    │   ├── components # contains all the web application components
+    │   ├── hooks # contains all custom hooks
+    │   ├── logic # contains all the business logic of the web application
+    │   ├── sections # contains all the section files
+    │   └── utils # contains utility files
     └── styles 
         ├── App.css
-        ├── components
-        ├── sections
+        ├── components # contains component styles
+        ├── sections # contains section styles
         └── variables.css
 
 18 directories, 69 files
