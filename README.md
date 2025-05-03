@@ -4,13 +4,14 @@
 
 - [👁️ Overview](#️-overview)
 - [🛠️ Tech Stack](#️-tech-stack)
-- [🔗 Pages & Project Structure](#-pages--project-structure)
+- [🔗 Project Structure](#-project-structure)
 - [📌 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
 - [🌐 Client-side (React app)](#-client-side-react-app)
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
+- [🔍 SEO](#-seo)
 - [📈 Metrics](#-metrics)
 - [👨‍💻 Author](#-author)
 
@@ -56,59 +57,45 @@ The web application is available at https://mmeletricarservice.it 🌐
 | Backend-as-a-Service  | Supabase (PostgreSQL, Storage)    |
 | Environment variables | .env + Vercel Dashboard           |
 | Deployment            | Vercel                            |
-| SEO & Metadata        | Meta tags + React Helmet          |
+| SEO                   | Meta tags + React Helmet          |
 | Analytics             | Vercel Analytics                  |
 
 <br>
 
-## 🔗 Pages & Project Structure
-
-The application is composed of static and dynamic routes to serve both marketing and functional purposes:
-
-- **Home** (`/`) – Landing page
-- **About Us** (`/chi-siamo`) – Company overview, team, and history
-- **Our Values** (`/i-nostri-valori`) – Company's mission and core values
-- **Services** (`/servizi`) – Introduction to the offered services
-- **All Services** (`/tutti-i-servizi`) – Detailed list of provided services
-- **Used Cars** (`/auto-usate`) – Grid of available used cars displayed via cards
-- **Car Details** (`/auto-usate*id*`) – Dynamic route rendered as a full-screen drawer with technical specs, gallery, and contact CTA
-- **Location** (`/dove-siamo`) – Location, business hours, and embedded Google Maps
-- **Contacts** (`/contatti`) – Contact information, including phone, email and social media link
-
-Navigation is fully responsive with a desktop anchor menu and mobile drawer for optimal UX.
+## 🔗 Project Structure
 
 The **project structure** is the following one:
 
 <pre>
 .
 ├── README.md
-├── api 
+├── api # contains the serverless functions
 ├── lighthouse.pdf
 ├── package-lock.json
 ├── package.json
 ├── public
-│   ├── doc 
-│   ├── favicon 
-│   ├── font 
-│   ├── icons 
-│   ├── images
+│   ├── doc # contains the Cookie and Privacy Policy, and the Legal Notes documents
+│   ├── favicon # contains the customized favicon
+│   ├── font # contains the font family used across the whole web application (Poppins)
+│   ├── icons # contains the icons used in the web application
+│   ├── images # contains the images used in the web application
 │   ├── index.html
 │   ├── manifest.json
 │   └── robots.txt
 └── src
     ├── index.css
     ├── index.js
-    ├── js
+    ├── js 
     │   ├── App.js
-    │   ├── components 
-    │   ├── hooks
-    │   ├── logic
-    │   ├── sections
-    │   └── utils
+    │   ├── components # contains all the web application components
+    │   ├── hooks # contains all custom hooks
+    │   ├── logic # contains all the business logic of the web application
+    │   ├── sections # contains all the section files
+    │   └── utils # contains utility files
     └── styles 
         ├── App.css
-        ├── components
-        ├── sections
+        ├── components # contains component styles
+        ├── sections # contains section styles
         └── variables.css
 
 18 directories, 69 files
@@ -247,11 +234,32 @@ The client-side is a modern, production-grade React.js application.
 - **Performance & Optimization**: Lazy loading, image modern formats and other tricks to optimize performance
 - **Responsive & Accessible UI**: Design follows mobile-first approach, enhanced by advanced UI components and animations
 
+The application is composed of static and dynamic routes to serve both marketing and functional purposes:
+
+- **Home** (`/`) – Landing page
+- **About Us** (`/chi-siamo`) – Company overview, team, and history
+- **Our Values** (`/i-nostri-valori`) – Company's mission and core values
+- **Services** (`/servizi`) – Introduction to the offered services
+- **All Services** (`/tutti-i-servizi`) – Detailed list of provided services
+- **Used Cars** (`/auto-usate`) – Grid of available used cars displayed via cards
+- **Car Details** (`/auto-usate*id*`) – Dynamic route rendered as a full-screen drawer with technical specs, gallery, and contact CTA
+- **Location** (`/dove-siamo`) – Location, business hours, and embedded Google Maps
+- **Contacts** (`/contatti`) – Contact information, including phone, email and social media link
+
+Navigation is fully responsive with a desktop anchor menu and mobile drawer for optimal UX.
+
 <br>
 
 ## ⚙️ Serverless Functions
 
-The following API endpoints are implemented as Serverless Functions, hosted on Vercel.
+The API endpoints are implemented as Serverless Functions, hosted on Vercel, and managed via a custom hook acting as API manager, whose logic is shown below.
+
+<br>
+
+<img width="912" alt="image" src="https://github.com/user-attachments/assets/c989baea-4a7b-4ca3-a57a-e5f546105658" />
+
+<br>
+<br>
 
 ### 1. Get used cars overview
 
@@ -282,7 +290,7 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 | Field     | Type    | Description                                          |
 | --------- | ------- | ---------------------------------------------------- |
 | `id`      | Integer | Unique identifier of the used car.                   |
-| `name`    | String  | Name or model of the used car                        |
+| `name`    | String  | Name or model of the used car.                       |
 | `price`   | Float   | Displayed price in euros.                            |
 | `year`    | Integer | Year of registration or manufacturing.               |
 | `mileage` | Integer | Kilometers driven.                                   |
@@ -401,6 +409,20 @@ Environment-specific secrets (Supabase project keys) are:
 <img width="651" alt="image" src="https://github.com/user-attachments/assets/e63ab0a0-10a9-4089-bcb1-f39296f57e9e" />
 <br>
 <br>
+<br>
+
+## 🔍 SEO
+
+Search engine optimization has been implemented to ensure the web application is discoverable and ranks well for relevant queries.
+
+- **Meta Tags**: Each page (`index.html`, section pages, and used car listings) includes a unique `<title>` and `<meta description>`.
+- **React Helmet**: SEO tags are dynamically injected based on the current route.
+- **Clean URLs**: Localized, human-readable URLs enhance both user experience and search relevance.
+- **Keyword-Optimized Content**: Text content has been carefully crafted with relevant keywords to improve rankings.
+- **HTTPS**: The entire application runs over a secure HTTPS connection.
+- **Google Maps Integration**: Embedded Google Maps via `<iframe>` supports local SEO targeting.
+- **Favicon and Branding**: A custom favicon and consistent branding improve recognizability in search results and browser tabs.
+
 <br>
 
 ## 📈 Metrics
