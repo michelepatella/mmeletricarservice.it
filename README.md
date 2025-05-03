@@ -451,15 +451,25 @@ Search engine optimization has been implemented to ensure the web application is
 | API Response Speed        |          111.5 ms        |
 | Memory Usage              |            45%           | 
 | Average CPU Usage         |            0.74%         |
+| CPU Throttle              |            11.7%         |
+| Hot start                 |            35.3%         |
+| Cold start                |            33.3%         |
+| Prewarmed start           |            31.4%         |
 
 ### ⚙️ Serverless Functions  
 
-| Metric                    | Target                   |
+| Metric                    | Target (Average)         |
 |---------------------------|--------------------------|
 | Error rate                |          0%              |
 | Timeout rate              |       0.3%               |
-| Time to First Byte        |   573 ms  (Average)      |
-| Memory Usage              |  116 MB (Average)        |
+| Time to First Byte        |   573 ms                 |
+| Memory Usage              |  116 MB                  |
+
+### 📦 Deployment & CI/CD
+
+| Metric                    | Target (Average)         |
+|---------------------------|--------------------------|
+| Deploy time               |          42 s            |
 
 <br>
 
