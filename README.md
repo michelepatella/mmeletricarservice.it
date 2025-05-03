@@ -4,7 +4,7 @@
 
 - [👁️ Overview](#️-overview)
 - [🛠️ Tech Stack](#️-tech-stack)
-- [🔗 Pages & Project Structure](#-pages--project-structure)
+- [🔗 Project Structure](#-project-structure)
 - [📌 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
 - [🌐 Client-side (React app)](#-client-side-react-app)
@@ -61,21 +61,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 
 <br>
 
-## 🔗 Pages & Project Structure
-
-The application is composed of static and dynamic routes to serve both marketing and functional purposes:
-
-- **Home** (`/`) – Landing page
-- **About Us** (`/chi-siamo`) – Company overview, team, and history
-- **Our Values** (`/i-nostri-valori`) – Company's mission and core values
-- **Services** (`/servizi`) – Introduction to the offered services
-- **All Services** (`/tutti-i-servizi`) – Detailed list of provided services
-- **Used Cars** (`/auto-usate`) – Grid of available used cars displayed via cards
-- **Car Details** (`/auto-usate*id*`) – Dynamic route rendered as a full-screen drawer with technical specs, gallery, and contact CTA
-- **Location** (`/dove-siamo`) – Location, business hours, and embedded Google Maps
-- **Contacts** (`/contatti`) – Contact information, including phone, email and social media link
-
-Navigation is fully responsive with a desktop anchor menu and mobile drawer for optimal UX.
+## 🔗 Project Structure
 
 The **project structure** is the following one:
 
@@ -246,6 +232,20 @@ The client-side is a modern, production-grade React.js application.
 - **Data Fetching**: All data interactions go through serverless functions, acting as middleware between the frontend and Supabase, managed via a custom hook acting as fecthing manager
 - **Performance & Optimization**: Lazy loading, image modern formats and other tricks to optimize performance
 - **Responsive & Accessible UI**: Design follows mobile-first approach, enhanced by advanced UI components and animations
+
+The application is composed of static and dynamic routes to serve both marketing and functional purposes:
+
+- **Home** (`/`) – Landing page
+- **About Us** (`/chi-siamo`) – Company overview, team, and history
+- **Our Values** (`/i-nostri-valori`) – Company's mission and core values
+- **Services** (`/servizi`) – Introduction to the offered services
+- **All Services** (`/tutti-i-servizi`) – Detailed list of provided services
+- **Used Cars** (`/auto-usate`) – Grid of available used cars displayed via cards
+- **Car Details** (`/auto-usate*id*`) – Dynamic route rendered as a full-screen drawer with technical specs, gallery, and contact CTA
+- **Location** (`/dove-siamo`) – Location, business hours, and embedded Google Maps
+- **Contacts** (`/contatti`) – Contact information, including phone, email and social media link
+
+Navigation is fully responsive with a desktop anchor menu and mobile drawer for optimal UX.
 
 <br>
 
