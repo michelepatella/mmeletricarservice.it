@@ -258,6 +258,7 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 <img width="761" alt="image" src="https://github.com/user-attachments/assets/5b9a2717-1ebb-4025-a9a0-97218b438d5b" />
 
 <br>
+<br>
 
 ### 1. Get used cars overview
 
