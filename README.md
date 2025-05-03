@@ -11,7 +11,7 @@
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
-- [🔍 SEO](#-seo)
+- [🔍 SEO & Analytics](#-seo--analytics)
 - [📈 Metrics](#-metrics)
 - [🌎 Impact on the Real World](#-impact-on-the-real-world)
 - [👨‍💻 Author](#-author)
@@ -410,7 +410,7 @@ Environment-specific secrets (Supabase project keys) are:
 <br>
 <br>
 
-## 🔍 SEO
+## 🔍 SEO & Analytics
 
 Search engine optimization has been implemented to ensure the web application is discoverable and ranks well for relevant queries.
 
@@ -422,6 +422,22 @@ Search engine optimization has been implemented to ensure the web application is
 - **Google Maps Integration**: Embedded Google Maps via `<iframe>` supports local SEO targeting.
 - **Favicon and Branding**: A custom favicon and consistent branding improve recognizability in search results and browser tabs.
 
+Vercel Analytics is used to monitor and optimize the UX and app performance. It offers valuable insights into the real-world usage of the app, including key metrics such as: 
+- Visitors
+- Page Views
+- Bounce Rate
+- Countries
+-  Devices
+-  Browsers
+-  Operating Systems 
+-  Pages
+-  Routes
+-  Hostname
+-  Referrers
+-  UTM Parameters
+
+Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring compliance with privacy regulations while delivering essential insights into the app's performance and user engagement. This approach ensures that the application can continuously improve based on real, actionable data, without compromising user privacy.
+ 
 <br>
 
 ## 📈 Metrics
