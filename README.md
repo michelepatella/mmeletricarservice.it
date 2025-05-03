@@ -56,7 +56,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 | Backend-as-a-Service  | Supabase (PostgreSQL, Storage)    |
 | Environment variables | .env + Vercel Dashboard           |
 | Deployment            | Vercel                            |
-| SEO & Metadata        | Meta tags + React Helmet          |
+| SEO                   | Meta tags + React Helmet          |
 | Analytics             | Vercel Analytics                  |
 
 <br>
