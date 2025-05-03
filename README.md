@@ -11,6 +11,7 @@
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
+- [🔍 SEO](#-seo)
 - [📈 Metrics](#-metrics)
 - [👨‍💻 Author](#-author)
 
