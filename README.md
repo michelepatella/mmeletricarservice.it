@@ -255,7 +255,7 @@ The following API endpoints are implemented as Serverless Functions, hosted on V
 
 <br>
 
-<img width="761" alt="image" src="https://github.com/user-attachments/assets/5b9a2717-1ebb-4025-a9a0-97218b438d5b" />
+<img width="912" alt="image" src="https://github.com/user-attachments/assets/c989baea-4a7b-4ca3-a57a-e5f546105658" />
 
 <br>
 <br>
