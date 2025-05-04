@@ -11,6 +11,7 @@
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [🔄 Data Fetching & Caching](#-data-fetching--caching)
 - [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
+- [🔐 Environment Variables](#-environment-variables)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [🔍 SEO & Analytics](#-seo--analytics)
 - [📈 Metrics](#-metrics)
