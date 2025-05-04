@@ -1,6 +1,7 @@
 import React from "react";
 import { HashRouter } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Button } from "antd";
 import {
   handleCookieButtonClick,
@@ -59,37 +60,41 @@ function App() {
     setIsCookiesBannerVisible,
   } = useCookieConsent();
 
+  const queryClient = new QueryClient();
+
   return (
     <>
       <Analytics />
       <HashRouter>
-        <>
-          {/* Cookies button */}
-          <Button
-            className="cookie-button"
-            onClick={() => handleCookieButtonClick(setIsCookiesBannerVisible)}
-          />
+        <QueryClientProvider client={queryClient}>
+          <>
+            {/* Cookies button */}
+            <Button
+              className="cookie-button"
+              onClick={() => handleCookieButtonClick(setIsCookiesBannerVisible)}
+            />
 
-          {/* Cookie Consent Banner */}
-          <CookieConsentBanner
-            isCookiesBannerVisible={isCookiesBannerVisible}
-            handleAcceptCookies={handleAcceptCookies}
-            handleDeclineCookies={handleDeclineCookies}
-          />
+            {/* Cookie Consent Banner */}
+            <CookieConsentBanner
+              isCookiesBannerVisible={isCookiesBannerVisible}
+              handleAcceptCookies={handleAcceptCookies}
+              handleDeclineCookies={handleDeclineCookies}
+            />
 
-          {/* Menu */}
-          <Menu />
+            {/* Menu */}
+            <Menu />
 
-          {/* Sections */}
-          <Home />
-          <AboutUs />
-          <OurValues />
-          <Services />
-          <AllServices />
-          <UsedCars />
-          <WhereWeAre cookiesAccepted={cookiesAccepted} />
-          <Contacts />
-        </>
+            {/* Sections */}
+            <Home />
+            <AboutUs />
+            <OurValues />
+            <Services />
+            <AllServices />
+            <UsedCars />
+            <WhereWeAre cookiesAccepted={cookiesAccepted} />
+            <Contacts />
+          </>
+        </QueryClientProvider>
       </HashRouter>
     </>
   );

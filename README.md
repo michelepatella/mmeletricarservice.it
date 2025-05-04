@@ -446,22 +446,22 @@ Search engine optimization has been implemented to ensure the web application is
 | Cumulative Layout Shift  | 0      |
 | Speed Index              | 2.1 s  |
 
-### ☁️ Backend / Baas (Supabase) 
+### ☁️ Backend / Baas (Supabase)
 
-| Metric                    | Target (Average)         |
-|---------------------------|--------------------------|
-| API Response Speed        |          111.5 ms        |
-| Memory Usage              |            45%           | 
-| Average CPU Usage         |            0.74%         |
+| Metric             | Target (Average) |
+| ------------------ | ---------------- |
+| API Response Speed | 111.5 ms         |
+| Memory Usage       | 45%              |
+| Average CPU Usage  | 0.74%            |
 
-### ⚙️ Serverless Functions  
+### ⚙️ Serverless Functions
 
-| Metric                    | Target                   |
-|---------------------------|--------------------------|
-| Error rate                |          0%              |
-| Timeout rate              |       0.3%               |
-| Time to First Byte        |   573 ms  (Average)      |
-| Memory Usage              |  116 MB (Average)        |
+| Metric             | Target           |
+| ------------------ | ---------------- |
+| Error rate         | 0%               |
+| Timeout rate       | 0.3%             |
+| Time to First Byte | 573 ms (Average) |
+| Memory Usage       | 116 MB (Average) |
 
 <br>
 

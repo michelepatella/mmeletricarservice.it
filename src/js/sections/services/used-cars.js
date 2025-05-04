@@ -1,5 +1,10 @@
-import React, { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { fetchUsedCarData } from "../../utils/fetcher";
 import { LoadingOutlined } from "@ant-design/icons";
+import SectionContainer from "../../components/sections/SectionContainer";
+import SectionHeader from "../../components/sections/SectionHeader";
+import UsedCarCard from "../../components/used-cars/UsedCarCard";
+import CustomText from "../../components/custom/CustomText";
 import {
   USED_CARS_TITLE,
   USED_CARS_SUBTITLE,
@@ -10,28 +15,19 @@ import {
   handleScrollLabelStyle,
   handleUnavailableUsedCarDescriptionStyle,
 } from "../../logic/usedCarsStyleHandler";
-import { useUsedCarData } from "../../hooks/useUsedCarData";
-import SectionContainer from "../../components/sections/SectionContainer";
-import UsedCarCard from "../../components/used-cars/UsedCarCard";
-import SectionHeader from "../../components/sections/SectionHeader";
-import CustomText from "../../components/custom/CustomText";
 import { Helmet } from "react-helmet";
 
 /**
  * Used cars section
- * @returns {Element}
+ * @returns {JSX.Element}
  * @constructor
  */
 function UsedCars() {
-  //get used cars overview information
-  const [usedCarsOverview, setUsedCarsOverview] = useState([]);
-  const [areCarsLoading, setAreCarsLoading] = useState(true);
-  useUsedCarData(
-    "usedCarsOverview",
-    setUsedCarsOverview,
-    setAreCarsLoading,
-    false,
-  );
+  const { data: usedCarsOverview, isLoading } = useQuery({
+    queryKey: ["usedCarsOverview"],
+    queryFn: () => fetchUsedCarData("usedCarsOverview"),
+    staleTime: 1000 * 60 * 5,
+  });
 
   return (
     <>
@@ -54,13 +50,15 @@ function UsedCars() {
 
         {/* While the cars are loading show the loading outlined. As soon
                 as the loading is finished, if data is not empty, show it. */}
-        {areCarsLoading ? (
-          <LoadingOutlined className="loading-outlined" spin={areCarsLoading} />
-        ) : usedCarsOverview?.length > 0 ? (
+        {isLoading ? (
+          <LoadingOutlined className="loading-outlined" spin />
+        ) : //check if data is not empty
+        usedCarsOverview?.length > 0 ? (
           <>
             {/* Show all the available used cars */}
             <div className="used-cars-container">
-              {usedCarsOverview?.map((car, index) => (
+              {usedCarsOverview.map((car, index) => (
+                //add a used car card for each available car
                 <UsedCarCard key={index} usedCarOverview={car} />
               ))}
             </div>
@@ -73,13 +71,16 @@ function UsedCars() {
             />
           </>
         ) : (
-          //unavailable used cars label + image
+          //if data is empty
           <div className="unavailable-used-cars-container">
+            {/* Unavailable used cars description */}
             <CustomText
               type="body"
               text={USED_CARS_UNAVAILABLE_DESCRIPTION}
               style={handleUnavailableUsedCarDescriptionStyle()}
             />
+
+            {/* Unavailable used cars image */}
             <img
               src="/images/empty-used-cars-image.avif"
               alt="unavailable-used-cars"

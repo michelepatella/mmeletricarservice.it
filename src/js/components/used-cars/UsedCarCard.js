@@ -18,7 +18,6 @@ function UsedCarCard(props) {
   //to manage when the drawer is open/closed
   //and set that state
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [usedCarInfo, setUsedCarInfo] = useState([]);
 
   //check if the current used car has been requested by a link
   useOpenDrawerByLink(setIsDrawerOpen, props.usedCarOverview?.id?.toString());
@@ -84,8 +83,6 @@ function UsedCarCard(props) {
       {/* Used Car Drawer including car's details when the card is clicked */}
       {isDrawerOpen && (
         <UsedCarDrawer
-          usedCarInfo={usedCarInfo}
-          setUsedCarInfo={setUsedCarInfo}
           usedCarOverview={props.usedCarOverview}
           setIsDrawerOpen={setIsDrawerOpen}
         />
