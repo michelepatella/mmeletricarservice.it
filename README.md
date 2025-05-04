@@ -10,7 +10,7 @@
 - [🌐 Client-side](#-client-side)
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [🔄 Data Fetching & Caching](#-data-fetching--caching)
-- [☁️ Backend / Baas](#%EF%B8%8F-backend--baas)
+- [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [🔍 SEO & Analytics](#-seo--analytics)
 - [📈 Metrics](#-metrics)
@@ -372,7 +372,7 @@ Data fecthing and caching are handled using React Query, a powerful and scalable
 
 <br>
 
-## ☁️ Backend / Baas
+## ☁️ Backend / BaaS
 
 The backend architecture levarages Supabase as a Backend-as-a-Service platform, combining PostgreSQL database and Storage bucket in a scalable environment.
 
