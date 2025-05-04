@@ -9,7 +9,7 @@
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
 - [🌐 Client-side (React app)](#-client-side-react-app)
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
-- [🔄 Data Fetching & Caching](#-data-fecthing--caching)
+- [🔄 Data Fetching & Caching](#-data-fetching--caching)
 - [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [🔍 SEO & Analytics](#-seo--analytics)
