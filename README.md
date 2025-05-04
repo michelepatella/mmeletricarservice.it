@@ -11,8 +11,9 @@
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
-- [🔍 SEO](#-seo)
+- [🔍 SEO & Analytics](#-seo--analytics)
 - [📈 Metrics](#-metrics)
+- [🌎 Impact on the Real World](#-impact-on-the-real-world)
 - [👨‍💻 Author](#-author)
 
 <br>
@@ -63,8 +64,6 @@ The web application is available at https://mmeletricarservice.it 🌐
 <br>
 
 ## 🔗 Project Structure
-
-The **project structure** is the following one:
 
 <pre>
 .
@@ -226,13 +225,13 @@ This project follows the best practices of software engineering:
 
 The client-side is a modern, production-grade React.js application.
 
-- **Component-driven Architecture**: UI compose of reusable, atomic components
-- **Routing**: Navigation managed via Hash Routing, supporting both static and dynamic routes
-- **Styling & Theming**: Styling using Ant Design components, CSS and design tokens
-- **State Management**: Local state handled with React's hooks (`useState`, `useEffect`, etc.) and logic is abstracted into custom hooks to promote reuse
-- **Data Fetching**: All data interactions go through serverless functions, acting as middleware between the frontend and Supabase, managed via a custom hook acting as fecthing manager
-- **Performance & Optimization**: Lazy loading, image modern formats and other tricks to optimize performance
-- **Responsive & Accessible UI**: Design follows mobile-first approach, enhanced by advanced UI components and animations
+- **Component-driven Architecture**: UI compose of reusable, atomic components.
+- **Routing**: Navigation managed via Hash Routing, supporting both static and dynamic routes.
+- **Styling & Theming**: Styling using Ant Design components, CSS and design tokens.
+- **State Management**: Local state handled with React's hooks (`useState`, `useEffect`, etc.) and logic is abstracted into custom hooks to promote reuse.
+- **Data Fetching**: All data interactions go through serverless functions, acting as middleware between the frontend and Supabase, managed via a custom hook acting as fecthing manager.
+- **Performance & Optimization**: Lazy loading, image modern formats and other tricks to optimize performance.
+- **Responsive & Accessible UI**: Design follows mobile-first approach, enhanced by advanced UI components and animations.
 
 The application is composed of static and dynamic routes to serve both marketing and functional purposes:
 
@@ -389,7 +388,7 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 
 ## 📦 Deployment & CI/CD
 
-The project follows a fully automated deployment pipeline using **Vercel** and **GitHub** :
+The project follows a fully automated deployment pipeline using Vercel and GitHub :
 
 - Vercel is connected to the GitHub repository
 - Every successful commit to main is automatically built and deployed to https://mmeletricarservice.it
@@ -411,7 +410,7 @@ Environment-specific secrets (Supabase project keys) are:
 <br>
 <br>
 
-## 🔍 SEO
+## 🔍 SEO & Analytics
 
 Search engine optimization has been implemented to ensure the web application is discoverable and ranks well for relevant queries.
 
@@ -423,6 +422,22 @@ Search engine optimization has been implemented to ensure the web application is
 - **Google Maps Integration**: Embedded Google Maps via `<iframe>` supports local SEO targeting.
 - **Favicon and Branding**: A custom favicon and consistent branding improve recognizability in search results and browser tabs.
 
+Vercel Analytics is used to monitor and optimize the UX and app performance. It offers valuable insights into the real-world usage of the app, including key metrics such as: 
+- Visitors
+- Page Views
+- Bounce Rate
+- Countries
+-  Devices
+-  Browsers
+-  Operating Systems 
+-  Pages
+-  Routes
+-  Hostname
+-  Referrers
+-  UTM Parameters
+
+Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring compliance with privacy regulations while delivering essential insights into the app's performance and user engagement. This approach ensures that the application can continuously improve based on real, actionable data, without compromising user privacy.
+ 
 <br>
 
 ## 📈 Metrics
@@ -446,26 +461,56 @@ Search engine optimization has been implemented to ensure the web application is
 | Cumulative Layout Shift  | 0      |
 | Speed Index              | 2.1 s  |
 
-### ☁️ Backend / Baas (Supabase)
+### ☁️ Backend / Baas (Supabase) 
 
-| Metric             | Target (Average) |
-| ------------------ | ---------------- |
-| API Response Speed | 111.5 ms         |
-| Memory Usage       | 45%              |
-| Average CPU Usage  | 0.74%            |
+| Metric                    | Target (Average)         |
+|---------------------------|--------------------------|
+| API Response Speed        |          111.5 ms        |
+| Memory Usage              |            45%           | 
+| Average CPU Usage         |            0.74%         |
+| CPU Throttle              |            11.7%         |
+| Hot start                 |            35.3%         |
+| Cold start                |            33.3%         |
+| Prewarmed start           |            31.4%         |
 
-### ⚙️ Serverless Functions
+### ⚙️ Serverless Functions  
 
-| Metric             | Target           |
-| ------------------ | ---------------- |
-| Error rate         | 0%               |
-| Timeout rate       | 0.3%             |
-| Time to First Byte | 573 ms (Average) |
-| Memory Usage       | 116 MB (Average) |
+| Metric                    | Target (Average)         |
+|---------------------------|--------------------------|
+| Error rate                |          0%              |
+| Timeout rate              |       0.3%               |
+| Time to First Byte        |   573 ms                 |
+| Memory Usage              |  116 MB                  |
+
+### 📦 Deployment & CI/CD
+
+| Metric                    | Target (Average)         |
+|---------------------------|--------------------------|
+| Deploy time               |          42 s            |
 
 <br>
 
 > More details: [Lighthouse Report](./lighthouse.pdf)
+
+<br>
+
+## 🌎 Impact on the Real World
+
+### 💻 Enhanced Operational Efficiency
+  The web application allows customers to effortlessly explore all the services offered by the company and access essential information such as location, contact details, and opening hours. It also enables users to browse available used cars, view detailed specifications, and easily contact the business for inquiries. This reduces the workload on customer support while delivering high-quality, accurate, and timely information to clients.
+
+### 🏙️ Support for Local Businesses 
+  As a local car dealership, the company gains a competitive edge through this digital platform, allowing it to stand out against larger, more established competitors. This visibility promotes local economic growth and can contribute to job creation within the community.
+
+### 💡 Empowerment Through Information  
+  By offering detailed car specifications and transparent service descriptions, the application empowers customers to make better-informed decisions. This leads to increased confidence, satisfaction, and trust during the buying or service request process.
+
+### ⚖️ Reduction of Information Asymmetry
+  Traditionally, customers rely heavily on sales representatives for information. The application bridges this gap by making relevant data openly available, ensuring more balanced, transparent interactions between the company and its clients.
+
+### 📊 Data-Driven Business Insights
+  The platform can collect anonymized user interaction data, which can be analyzed to understand customer behavior, and optimize inventory. This enables data-informed decisions that enhance long-term strategy.
+
 
 <br>
 
