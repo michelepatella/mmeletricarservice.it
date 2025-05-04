@@ -1,15 +1,17 @@
 import React, { useRef } from "react";
+import { Helmet } from "react-helmet";
 import {
-  ABOUT_US_DESCRIPTION,
-  ABOUT_US_SUBTITLE,
-  ABOUT_US_TITLE,
+    ABOUT_US_DESCRIPTION,
+    ABOUT_US_SUBTITLE,
+    ABOUT_US_TITLE,
+    HELMET_ABOUT_US_DESCRIPTION,
+    HELMET_ABOUT_US_TITLE,
 } from "../../utils/const";
 import { useVideoAnimation } from "../../hooks/useVideoAnimation";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import SectionContainer from "../../components/sections/SectionContainer";
 import CustomText from "../../components/custom/CustomText";
 import SectionHeader from "../../components/sections/SectionHeader";
-import { Helmet } from "react-helmet";
 
 /**
  * About us section
@@ -27,10 +29,10 @@ function AboutUs() {
     <>
       {/* React Helmet */}
       <Helmet>
-        <title>MM Eletricar Service - Chi siamo</title>
+        <title>{HELMET_ABOUT_US_TITLE}</title>
         <meta
           name="description"
-          content="MM Eletricar Service, officina elettrauto a Gravina in Puglia (BA), nata dall'unione di esperienza a passione."
+          content={HELMET_ABOUT_US_DESCRIPTION}
         />
       </Helmet>
 

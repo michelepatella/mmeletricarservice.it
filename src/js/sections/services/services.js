@@ -1,10 +1,15 @@
 import React, { useRef } from "react";
-import { SERVICES_TITLE, SERVICES_SUBTITLE } from "../../utils/const";
+import { Helmet } from "react-helmet";
+import {
+    SERVICES_TITLE,
+    SERVICES_SUBTITLE,
+    HELMET_SERVICES_TITLE,
+    HELMET_SERVICES_DESCRIPTION
+} from "../../utils/const";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import SectionContainer from "../../components/sections/SectionContainer";
 import BackgroundContainer from "../../components/sections/BackgroundContainer";
 import SectionHeader from "../../components/sections/SectionHeader";
-import { Helmet } from "react-helmet";
 
 /**
  * Services section
@@ -20,10 +25,10 @@ function Services() {
     <>
       {/* React Helmet */}
       <Helmet>
-        <title>MM Eletricar Service - Servizi</title>
+        <title>{HELMET_SERVICES_TITLE}</title>
         <meta
           name="description"
-          content="Riparazioni, manutenzioni, diagnosi elettroniche e vendita di auto usate a Gravina in Puglia (BA)."
+          content={HELMET_SERVICES_DESCRIPTION}
         />
       </Helmet>
 

@@ -1,9 +1,13 @@
-import { ALL_SERVICES } from "../../utils/const";
+import { Helmet } from "react-helmet";
+import {
+    ALL_SERVICES,
+    HELMET_ALL_SERVICES_DESCRIPTION,
+    HELMET_ALL_SERVICES_TITLE
+} from "../../utils/const";
 import { handleSectionNameStyle } from "../../logic/sectionHeaderStyleHandler";
 import InfoCard from "../../components/other/InfoCard";
 import SectionContainer from "../../components/sections/SectionContainer";
 import CustomText from "../../components/custom/CustomText";
-import { Helmet } from "react-helmet";
 
 /**
  * All services section
@@ -15,10 +19,10 @@ function AllServices() {
     <>
       {/* React Helmet */}
       <Helmet>
-        <title>MM Eletricar Service - Tutti i servizi</title>
+        <title>{HELMET_ALL_SERVICES_TITLE}</title>
         <meta
           name="description"
-          content="Servizi di manutenzione auto: riparazione parabrezza, centralina, conta km, diagnosi elettronica, ricarica aria condizionata, duplicazione chiavi e installazione antifurti e tanto altro a Gravina in Puglia (BA)."
+          content={HELMET_ALL_SERVICES_DESCRIPTION}
         />
       </Helmet>
 

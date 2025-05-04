@@ -1,21 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchUsedCarData } from "../../utils/fetcher";
+import { Helmet } from "react-helmet";
 import { LoadingOutlined } from "@ant-design/icons";
-import SectionContainer from "../../components/sections/SectionContainer";
-import SectionHeader from "../../components/sections/SectionHeader";
-import UsedCarCard from "../../components/used-cars/UsedCarCard";
-import CustomText from "../../components/custom/CustomText";
+import { fetchUsedCarData } from "../../utils/fetcher";
 import {
   USED_CARS_TITLE,
   USED_CARS_SUBTITLE,
   USED_CAR_SCROLL_LABEL_TEXT,
   USED_CARS_UNAVAILABLE_DESCRIPTION,
+  HELMET_USED_CAR_TITLE,
+  HELMET_USED_CAR_DESCRIPTION,
 } from "../../utils/const";
 import {
   handleScrollLabelStyle,
   handleUnavailableUsedCarDescriptionStyle,
 } from "../../logic/usedCarsStyleHandler";
-import { Helmet } from "react-helmet";
+import SectionContainer from "../../components/sections/SectionContainer";
+import SectionHeader from "../../components/sections/SectionHeader";
+import UsedCarCard from "../../components/used-cars/UsedCarCard";
+import CustomText from "../../components/custom/CustomText";
 
 /**
  * Used cars section
@@ -33,10 +35,10 @@ function UsedCars() {
     <>
       {/* React Helmet */}
       <Helmet>
-        <title>MM Eletricar Service - Auto usate</title>
+        <title>{HELMET_USED_CAR_TITLE}</title>
         <meta
           name="description"
-          content="Auto usate garantite a Gravina in Puglia (BA). Auto selezionate di qualità, convenienti ed affidabili."
+          content={HELMET_USED_CAR_DESCRIPTION}
         />
       </Helmet>
 

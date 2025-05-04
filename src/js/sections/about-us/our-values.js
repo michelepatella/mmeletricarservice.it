@@ -1,14 +1,16 @@
 import React, { useRef } from "react";
+import { Helmet } from "react-helmet";
 import {
-  OUR_VALUES_DESCRIPTION,
-  OUR_VALUES_SUBTITLE,
-  OUR_VALUES_TITLE,
+    HELMET_OUR_VALUES_DESCRIPTION,
+    HELMET_OUR_VALUES_TITLE,
+    OUR_VALUES_DESCRIPTION,
+    OUR_VALUES_SUBTITLE,
+    OUR_VALUES_TITLE,
 } from "../../utils/const";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import SectionContainer from "../../components/sections/SectionContainer";
 import CustomText from "../../components/custom/CustomText";
 import SectionHeader from "../../components/sections/SectionHeader";
-import { Helmet } from "react-helmet";
 
 /**
  * Our values section
@@ -24,10 +26,10 @@ function OurValues() {
     <>
       {/* React Helmet */}
       <Helmet>
-        <title>MM Eletricar Service - I nostri valori</title>
+        <title>{HELMET_OUR_VALUES_TITLE}</title>
         <meta
           name="description"
-          content="MM Eletricar Service si impegna a costruire relazioni di fiducia con i clienti, fornendo soluzioni di qualità, affidabili e su misura."
+          content={HELMET_OUR_VALUES_DESCRIPTION}
         />
       </Helmet>
 

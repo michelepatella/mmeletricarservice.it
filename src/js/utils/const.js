@@ -308,3 +308,28 @@ export const CONTACTS = [
 ];
 export const CONTACT_FOOTER_TEXT =
   RAG_SOCIALE + ". " + SITE + ". P. IVA: " + P_IVA + ". REA: " + REA + ".";
+
+/**------------- React Helmet contents -------------**/
+export const HELMET_HOME_TITLE = "MM Eletricar Service - Home"
+export const HELMET_HOME_DESCRIPTION = "MM Eletricar Service, officina elettrauto e vendita di auto usate a Gravina in Puglia (BA)."
+
+export const HELMET_ABOUT_US_TITLE = "MM Eletricar Service - Chi siamo"
+export const HELMET_ABOUT_US_DESCRIPTION = "MM Eletricar Service, officina elettrauto a Gravina in Puglia (BA), nata dall'unione di esperienza a passione."
+
+export const HELMET_OUR_VALUES_TITLE = "MM Eletricar Service - I nostri valori"
+export const HELMET_OUR_VALUES_DESCRIPTION = "MM Eletricar Service si impegna a costruire relazioni di fiducia con i clienti, fornendo soluzioni di qualità, affidabili e su misura."
+
+export const HELMET_SERVICES_TITLE = "MM Eletricar Service - Servizi"
+export const HELMET_SERVICES_DESCRIPTION = "Riparazioni, manutenzioni, diagnosi elettroniche e vendita di auto usate a Gravina in Puglia (BA)."
+
+export const HELMET_ALL_SERVICES_TITLE = "MM Eletricar Service - Tutti i servizi"
+export const HELMET_ALL_SERVICES_DESCRIPTION = "Servizi di manutenzione auto: riparazione parabrezza, centralina, conta km, diagnosi elettronica, ricarica aria condizionata, duplicazione chiavi e installazione antifurti e tanto altro a Gravina in Puglia (BA)."
+
+export const HELMET_USED_CAR_TITLE = "MM Eletricar Service - Auto usate"
+export const HELMET_USED_CAR_DESCRIPTION = "Auto usate garantite a Gravina in Puglia (BA). Auto selezionate di qualità, convenienti ed affidabili."
+
+export const HELMET_WHERE_WE_ARE_TITLE = "MM Eletricar Service - Dove siamo"
+export const HELMET_WHERE_WE_ARE_DESCRIPTION = "MM Eletricar Service si trova a Gravina in Puglia (BA), in via G. Bizet, 63."
+
+export const HELMET_CONTACTS_TITLE = "MM Eletricar Service - Contatti"
+export const HELMET_CONTACTS_DESCRIPTION = "Contatta MM Eletricar Service per informazioni, appuntamenti o richieste di assistenza."

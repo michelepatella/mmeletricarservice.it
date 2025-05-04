@@ -1,8 +1,9 @@
 import { Layout } from "antd";
+import { Helmet } from "react-helmet";
+import {HELMET_HOME_DESCRIPTION, HELMET_HOME_TITLE} from "../utils/const";
 import HomeHeader from "../components/home/HomeHeader";
 import HomeContent from "../components/home/HomeContent";
 import BackgroundContainer from "../components/sections/BackgroundContainer";
-import { Helmet } from "react-helmet";
 
 /**
  * Home Layout definition
@@ -19,10 +20,10 @@ function Home() {
     <>
       {/* React Helmet */}
       <Helmet>
-        <title>MM Eletricar Service - Home</title>
+        <title>{HELMET_HOME_TITLE}</title>
         <meta
           name="description"
-          content="MM Eletricar Service, officina elettrauto e vendita di auto usate a Gravina in Puglia (BA)."
+          content={HELMET_HOME_DESCRIPTION}
         />
       </Helmet>
 

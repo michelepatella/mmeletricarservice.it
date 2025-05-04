@@ -1,9 +1,12 @@
+import { Helmet } from "react-helmet";
 import {
-  WHERE_WE_ARE_INFO,
-  WHERE_WE_ARE_DESCRIPTION,
-  WHERE_WE_ARE_TITLE,
-  GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
-  WHERE_WE_ARE_SUBTITLE,
+    WHERE_WE_ARE_INFO,
+    WHERE_WE_ARE_DESCRIPTION,
+    WHERE_WE_ARE_TITLE,
+    GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
+    WHERE_WE_ARE_SUBTITLE,
+    HELMET_WHERE_WE_ARE_TITLE,
+    HELMET_WHERE_WE_ARE_DESCRIPTION,
 } from "../utils/const";
 import {
   handleGoogleMapsContainerStyle,
@@ -13,7 +16,6 @@ import SectionContainer from "../components/sections/SectionContainer";
 import CustomText from "../components/custom/CustomText";
 import InfoCard from "../components/other/InfoCard";
 import SectionHeader from "../components/sections/SectionHeader";
-import { Helmet } from "react-helmet";
 
 /**
  * Where We Are section
@@ -25,10 +27,10 @@ function WhereWeAre(props) {
     <>
       {/* React Helmet */}
       <Helmet>
-        <title>MM Eletricar Service - Dove siamo</title>
+        <title>{HELMET_WHERE_WE_ARE_TITLE}</title>
         <meta
           name="description"
-          content="MM Eletricar Service si trova a Gravina in Puglia (BA), in via G. Bizet, 63."
+          content={HELMET_WHERE_WE_ARE_DESCRIPTION}
         />
       </Helmet>
 

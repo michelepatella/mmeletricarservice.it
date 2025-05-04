@@ -33,7 +33,7 @@ function UsedCarDrawer({ usedCarOverview, setIsDrawerOpen }) {
         <title>{usedCarOverview?.name} a Gravina in Puglia (BA)</title>
         <meta
           name="description"
-          content={`Scopri i dettagli su ${usedCarOverview?.name} a Gravina in Puglia (BA).`}
+          content={"Scopri i dettagli su " + usedCarOverview?.name + " a Gravina in Puglia (BA)."}
         />
       </Helmet>
 

@@ -1,7 +1,11 @@
 import { Layout } from "antd";
+import { Helmet } from "react-helmet";
+import {
+    HELMET_CONTACTS_DESCRIPTION,
+    HELMET_CONTACTS_TITLE
+} from "../utils/const";
 import ContactsFooter from "../components/contacts/ContactsFooter";
 import ContactsContent from "../components/contacts/ContactsContent";
-import { Helmet } from "react-helmet";
 
 /**
  * Contacts Layout definition
@@ -18,10 +22,10 @@ function Contacts() {
     <>
       {/* React Helmet */}
       <Helmet>
-        <title>MM Eletricar Service - Contatti</title>
+        <title>{HELMET_CONTACTS_TITLE}</title>
         <meta
           name="description"
-          content="Contatta MM Eletricar Service per informazioni, appuntamenti o richieste di assistenza."
+          content={HELMET_CONTACTS_DESCRIPTION}
         />
       </Helmet>
 
