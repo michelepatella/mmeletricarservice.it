@@ -365,7 +365,7 @@ Response example:
 
 <br>
 
-## 🔄 Data Fetching & Caching with React Query
+## 🔄 Data Fetching & Caching
 
 **Declarative Data Fetching**
 - Minimizes redundant requests
