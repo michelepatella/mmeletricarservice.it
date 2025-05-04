@@ -169,9 +169,9 @@ This project follows the best practices of software engineering:
 <br>
 
 8. 🧠 **Abstraction**:
-   - Business logic abstracted via hooks and helper functions
+   - Business logic abstracted via hooks and functions
    - Reusable component library supports consistent UI patterns
-   - Centralized configuration (env, theming, routing)
+   - Centralized configuration
 
 <br>
 
