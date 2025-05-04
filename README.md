@@ -7,10 +7,10 @@
 - [🔗 Project Structure](#-project-structure)
 - [📌 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
-- [🌐 Client-side (React app)](#-client-side-react-app)
+- [🌐 Client-side](#-client-side)
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [🔄 Data Fetching & Caching](#-data-fetching--caching)
-- [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
+- [☁️ Backend / Baas](#%EF%B8%8F-backend--baas)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [🔍 SEO & Analytics](#-seo--analytics)
 - [📈 Metrics](#-metrics)
@@ -194,11 +194,10 @@ This project follows the best practices of software engineering:
 
 ## 🏗️ System Architecture
 
-🌐 **Client-side (React app)**
+🌐 **Client-side**
 
 - Supabase interactions via Serverless API
-- Client-side caching stores fetched data for the session duration
-- Redundant API calls are prevented
+- Interaction implemented via React Query, called from React components
 
 ⚙️ **Serverless Functions**
 
@@ -208,15 +207,13 @@ This project follows the best practices of software engineering:
 🔄 **Data Fetching & Caching**
 
 - Handled via React Query
-- Redundant request prevented
+- Redundant requests prevented
 - Better managament of loading, error, and success states
 
-☁️ **Backend / BaaS (Supabase)**
+☁️ **Backend / BaaS**
 
 - PostgreSQL database for used car data
 - Storage bucket for used car images
-- Row-level security with custom policies
-- Optimized with indexes for performance
 - Accessed via RESTful API
 
 📦 **Deployment & CI/CD**
@@ -225,12 +222,12 @@ This project follows the best practices of software engineering:
 - Automatic deployment to Vercel on push to main
   <br>
 
-![image](https://github.com/user-attachments/assets/14279d07-681d-4c55-9175-cb0619df5960)
+<img width="776" alt="image" src="https://github.com/user-attachments/assets/1d2d3b30-c13b-476a-8401-cab627842d89" />
 
 <br>
 <br>
 
-## 🌐 Client-side (React app)
+## 🌐 Client-side
 
 The client-side is a modern, production-grade React.js application.
 
@@ -374,7 +371,7 @@ Data fecthing and caching are handled using React Query, a powerful and scalable
 
 <br>
 
-## ☁️ Backend / Baas (Supabase)
+## ☁️ Backend / Baas
 
 The backend architecture levarages Supabase as a Backend-as-a-Service platform, combining PostgreSQL database and Storage bucket in a scalable environment.
 
