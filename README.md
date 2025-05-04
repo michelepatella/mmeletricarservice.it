@@ -390,6 +390,8 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 - All used car images are stored in Supabase buckets with public access policies
 - Folder naming follows a strict convention (id of the used car) to allow deterministic fetching
 
+<br>
+
 ### 🔐 Row-Level Security (RLS)
 
 - RLS policies restrict accesses
