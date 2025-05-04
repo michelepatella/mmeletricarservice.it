@@ -53,8 +53,8 @@ The web application is available at https://mmeletricarservice.it 🌐
 | --------------------- | --------------------------------- |
 | Frontend              | React.js                          |
 | UI Library            | Ant Design                        |
-| Styling               | CSS / Custom Design Tokens        |
-| Animations            | CSS / Framer Motion               |
+| Styling               | CSS + Custom Design Tokens        |
+| Animations            | CSS + Framer Motion               |
 | API Communication     | Serverless API (Vercel Functions) |
 | Fetching & Caching    | React Query                       |
 | Backend-as-a-Service  | Supabase (PostgreSQL, Storage)    |
