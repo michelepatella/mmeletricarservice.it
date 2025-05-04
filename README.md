@@ -49,19 +49,19 @@ The web application is available at https://mmeletricarservice.it 🌐
 
 ## 🛠️ Tech Stack
 
-| Layer                 | Technology                        |
-| --------------------- | --------------------------------- |
-| Frontend              | React.js                          |
-| UI Library            | Ant Design                        |
-| Styling               | CSS + Custom Design Tokens        |
-| Animations            | CSS + Framer Motion               |
-| API Communication     | Serverless API (Vercel Functions) |
-| Fetching & Caching    | React Query                       |
-| Backend-as-a-Service  | Supabase (PostgreSQL, Storage)    |
-| Environment variables | .env + Vercel Dashboard           |
-| Deployment            | Vercel                            |
-| SEO                   | Meta tags + React Helmet          |
-| Analytics             | Vercel Analytics                  |
+| Layer                 | Technology                          |
+| --------------------- | ----------------------------------- |
+| ⚛️ Frontend             | React.js                          |
+| 🖌️ UI Library           | Ant Design                        |
+| 🎨 Styling              | CSS + Custom Design Tokens        |
+| 🌀 Animations           | CSS + Framer Motion               |
+| ⚙️ API Communication    | Serverless API (Vercel Functions) |
+| 🔄 Fetching & Caching   | React Query                       |
+| ☁️ Backend-as-a-Service | Supabase (PostgreSQL, Storage)    |
+| 🔐 Environment variables| .env + Vercel Dashboard           |
+| 📦 Deployment & CI/CD   | Vercel + GitHub                   |
+| 🔍 SEO                  | Meta tags + React Helmet          |
+| 📈 Analytics            | Vercel Analytics                  |
 
 <br>
 
