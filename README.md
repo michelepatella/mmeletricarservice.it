@@ -375,7 +375,7 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 ### 💿 Data Layer
 
 - Relational database
-- Index created on the `id` field to optimize query performance
+- Index created on the `id` fields to optimize query performance
 - Foreign key relationships established among tables to maintain data integrity
 - `ON DELETE CASCADE` to ensure the proper handling of related data when records are deleted
 - Attributes governed by contraints to enforce rules for data quality and consistency (`NOT NULL`, `CHECK`)
@@ -402,7 +402,7 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 
 ## 📦 Deployment & CI/CD
 
-The project follows a fully automated deployment pipeline using Vercel and GitHub :
+The project follows a fully automated deployment pipeline using Vercel and GitHub:
 
 - Vercel is connected to the GitHub repository
 - Every successful commit to main is automatically built and deployed to https://mmeletricarservice.it
@@ -410,7 +410,14 @@ The project follows a fully automated deployment pipeline using Vercel and GitHu
 - Real-time analytics and performance insights are available via Vercel Dashboard
 - Rollbacks and previous deploys are tracked for recovery or auditing
 
-**🔐 Environment Variables**
+<br>
+
+<img width="651" alt="image" src="https://github.com/user-attachments/assets/e63ab0a0-10a9-4089-bcb1-f39296f57e9e" />
+
+<br>
+<br>
+
+## 🔐 Environment Variables
 Environment-specific secrets (Supabase project keys) are:
 
 - Defined in a local `.env` file (excluded from version control)
@@ -419,16 +426,11 @@ Environment-specific secrets (Supabase project keys) are:
 
 <br>
 
-<img width="651" alt="image" src="https://github.com/user-attachments/assets/e63ab0a0-10a9-4089-bcb1-f39296f57e9e" />
-<br>
-<br>
-<br>
-
 ## 🔍 SEO & Analytics
 
 Search engine optimization has been implemented to ensure the web application is discoverable and ranks well for relevant queries.
 
-- **Meta Tags**: Each page (`index.html`, section pages, and used car listings) includes a unique `<title>` and `<meta description>`.
+- **Meta Tags**: Each page (`index.html`, section pages, and used car drawers) includes a unique `<title>` and `<meta description>`.
 - **React Helmet**: SEO tags are dynamically injected based on the current route.
 - **Clean URLs**: Localized, human-readable URLs enhance both user experience and search relevance.
 - **Keyword-Optimized Content**: Text content has been carefully crafted with relevant keywords to improve rankings.
@@ -524,7 +526,6 @@ Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring 
 
 ### 📊 Data-Driven Business Insights
   The platform can collect anonymized user interaction data, which can be analyzed to understand customer behavior, and optimize inventory. This enables data-informed decisions that enhance long-term strategy.
-
 
 <br>
 
