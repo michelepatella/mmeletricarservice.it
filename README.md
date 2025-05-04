@@ -205,6 +205,12 @@ This project follows the best practices of software engineering:
 - Implemented as Vercel Functions
 - Act as middleware between frontend and backend
 
+🔄 **Data Fetching & Caching**
+
+- Handled via React Query
+- Redundant request prevented
+- Better managament of loading, error, and success states
+
 ☁️ **Backend / BaaS (Supabase)**
 
 - PostgreSQL database for used car data
@@ -361,9 +367,9 @@ Response example:
 <br>
 
 ## 🔄 Data Fetching & Caching
-Data fecthing and caching are handled using React Query, a powerful asynchronous state management library.
+Data fecthing and caching are handled using React Query, a powerful and scalable asynchronous state management library.
 - Declarative and cache-first data fecthing, ensuring minimal redundant requests
-- Built-in support for  loading, error and success states, reducing boilerplate and improving UI responsiveness
+- Built-in support for loading, error and success states, reducing boilerplate and improving UI responsiveness
 - Automatic background refetching and stale data handling, keeping data fresh without manual pooling
 
 <br>
