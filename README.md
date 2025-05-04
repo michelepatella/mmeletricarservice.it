@@ -56,7 +56,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 | Styling               | CSS / Custom Design Tokens        |
 | Animations            | CSS / Framer Motion               |
 | API Communication     | Serverless API (Vercel Functions) |
-| Caching & Fetching    | React Query                       |
+| Fetching & Caching    | React Query                       |
 | Backend-as-a-Service  | Supabase (PostgreSQL, Storage)    |
 | Environment variables | .env + Vercel Dashboard           |
 | Deployment            | Vercel                            |
