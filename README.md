@@ -264,6 +264,22 @@ The API endpoints are implemented as Serverless Functions, hosted on Vercel, and
 - **Query Params**: `None`
 - **Response**: `JSON`
 
+<br>
+
+| Field     | Type    | Description                                          |
+| --------- | ------- | ---------------------------------------------------- |
+| `id`      | Integer | Unique identifier of the used car.                   |
+| `name`    | String  | Name or model of the used car.                       |
+| `price`   | Float   | Displayed price in euros.                            |
+| `year`    | Integer | Year of registration or manufacturing.               |
+| `mileage` | Integer | Kilometers driven.                                   |
+| `fuel`    | String  | Type of fuel.                                        |
+| `status`  | String  | Overall condition.                                   |
+| `image`   | String  | Public URL of the first (overview) image of the car. |
+
+<br>
+
+Response example:
 <pre>
   {
   "used_cars_overview": [
@@ -282,17 +298,6 @@ The API endpoints are implemented as Serverless Functions, hosted on Vercel, and
 }
 </pre>
 
-| Field     | Type    | Description                                          |
-| --------- | ------- | ---------------------------------------------------- |
-| `id`      | Integer | Unique identifier of the used car.                   |
-| `name`    | String  | Name or model of the used car.                       |
-| `price`   | Float   | Displayed price in euros.                            |
-| `year`    | Integer | Year of registration or manufacturing.               |
-| `mileage` | Integer | Kilometers driven.                                   |
-| `fuel`    | String  | Type of fuel.                                        |
-| `status`  | String  | Overall condition.                                   |
-| `image`   | String  | Public URL of the first (overview) image of the car. |
-
 <br>
 
 ### 2. Get used car info
@@ -302,6 +307,29 @@ The API endpoints are implemented as Serverless Functions, hosted on Vercel, and
 - **Method**: `GET`
 - **Query Params**: `id` (of the requested used car)
 - **Response**: `JSON`
+
+<br>
+
+| Field                 | Type             | Description                             |
+| --------------------- | ---------------- | --------------------------------------- |
+| `id`                  | Integer          | Unique identifier of the used car.      |
+| `engine_displacement` | Integer          | Engine size in liters.                  |
+| `cylinders`           | Integer          | Number of engine cylinders.             |
+| `power`               | Integer          | Engine power in CV.                     |
+| `transmission`        | String           | Type of transmission.                   |
+| `consumption`         | String           | Fuel consumption in L/100km (min-max).  |
+| `emission_class`      | String           | Emission standard.                      |
+| `emissions`           | String           | CO₂ emissions in g/km (min-max).        |
+| `doors`               | Integer          | Number of doors.                        |
+| `bodywork`            | String           | Body type.                              |
+| `external_color`      | String           | Exterior color of the car.              |
+| `internal_color`      | String           | Interior color scheme.                  |
+| `internal_material`   | String           | Interior material.                      |
+| `seats`               | Integer          | Number of seats.                        |
+| `images`              | Array of Strings | List of public image URLs for this car. |
+
+<br>
+
 <pre>
   {
   "used_car_info": [
@@ -329,24 +357,6 @@ The API endpoints are implemented as Serverless Functions, hosted on Vercel, and
   ]
 }
 </pre>
-
-| Field                 | Type             | Description                             |
-| --------------------- | ---------------- | --------------------------------------- |
-| `id`                  | Integer          | Unique identifier of the used car.      |
-| `engine_displacement` | Integer          | Engine size in liters.                  |
-| `cylinders`           | Integer          | Number of engine cylinders.             |
-| `power`               | Integer          | Engine power in CV.                     |
-| `transmission`        | String           | Type of transmission.                   |
-| `consumption`         | String           | Fuel consumption in L/100km (min-max).  |
-| `emission_class`      | String           | Emission standard.                      |
-| `emissions`           | String           | CO₂ emissions in g/km (min-max).        |
-| `doors`               | Integer          | Number of doors.                        |
-| `bodywork`            | String           | Body type.                              |
-| `external_color`      | String           | Exterior color of the car.              |
-| `internal_color`      | String           | Interior color scheme.                  |
-| `internal_material`   | String           | Interior material.                      |
-| `seats`               | Integer          | Number of seats.                        |
-| `images`              | Array of Strings | List of public image URLs for this car. |
 
 <br>
 
