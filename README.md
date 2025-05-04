@@ -220,7 +220,8 @@ This project follows the best practices of software engineering:
 
 - Source control: GitHub
 - Automatic deployment to Vercel on push to main
-  <br>
+
+<br>
 
 <img width="776" alt="image" src="https://github.com/user-attachments/assets/1d2d3b30-c13b-476a-8401-cab627842d89" />
 
