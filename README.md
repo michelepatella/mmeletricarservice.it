@@ -9,6 +9,7 @@
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
 - [🌐 Client-side (React app)](#-client-side-react-app)
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
+- [🔄 Data Fetching & Caching](#-data-fecthing--caching)
 - [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [🔍 SEO & Analytics](#-seo--analytics)
@@ -55,6 +56,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 | Styling               | CSS / Custom Design Tokens        |
 | Animations            | CSS / Framer Motion               |
 | API Communication     | Serverless API (Vercel Functions) |
+| Caching & Fetching    | React Query                       |
 | Backend-as-a-Service  | Supabase (PostgreSQL, Storage)    |
 | Environment variables | .env + Vercel Dashboard           |
 | Deployment            | Vercel                            |
@@ -135,9 +137,10 @@ This project follows the best practices of software engineering:
    -  Indexes created to optimize queries, ensuring fast and scalable data retrieval
    -  Frontend components and routes structured for future expansion
    -  Vercel's serverless functions scale automatically with demand, including a caching system to improve performance and reduce the latency
-   -  Caching layer to reduce redundant API calls, using `useState`
-      - Redundant request are rejected ❌
-      - Multiple simultaneous requests for the same data are prevented ❌
+   - Caching layer to reduce redundant API calls, handled with React Query
+     - Automatic deduplication of requests
+     - Background re-fetching for data freshness
+     - Query invalidation for precise cache control
 
 <br>
   
@@ -229,7 +232,7 @@ The client-side is a modern, production-grade React.js application.
 - **Routing**: Navigation managed via Hash Routing, supporting both static and dynamic routes.
 - **Styling & Theming**: Styling using Ant Design components, CSS and design tokens.
 - **State Management**: Local state handled with React's hooks (`useState`, `useEffect`, etc.) and logic is abstracted into custom hooks to promote reuse.
-- **Data Fetching**: All data interactions go through serverless functions, acting as middleware between the frontend and Supabase, managed via a custom hook acting as fecthing manager.
+- **Data Fecthing & Caching**: Data fetching and caching handled via React Query.
 - **Performance & Optimization**: Lazy loading, image modern formats and other tricks to optimize performance.
 - **Responsive & Accessible UI**: Design follows mobile-first approach, enhanced by advanced UI components and animations.
 
@@ -251,13 +254,8 @@ Navigation is fully responsive with a desktop anchor menu and mobile drawer for 
 
 ## ⚙️ Serverless Functions
 
-The API endpoints are implemented as Serverless Functions, hosted on Vercel, and managed via a custom hook acting as API manager, whose logic is shown below.
+The API endpoints are implemented as Serverless Functions, hosted on Vercel, and accessed through a centralized fecther utility. This architecture allows for modular, scalable, and stateless backend logic with minimal overhead.
 
-<br>
-
-<img width="912" alt="image" src="https://github.com/user-attachments/assets/c989baea-4a7b-4ca3-a57a-e5f546105658" />
-
-<br>
 <br>
 
 ### 1. Get used cars overview
@@ -351,6 +349,15 @@ The API endpoints are implemented as Serverless Functions, hosted on Vercel, and
 | `internal_material`   | String           | Interior material.                      |
 | `seats`               | Integer          | Number of seats.                        |
 | `images`              | Array of Strings | List of public image URLs for this car. |
+
+<br>
+
+## 🔄 Data Fetching & Caching
+Data fecthing and caching are handled using React Query, a powerful asynchronous state management library.
+- Declarative and cache-first data fecthing, ensuring minimal redundant requests
+- Built-in support for loading, error, and success states, reducing boilerplate and improving UI responsiveness
+- Automatic background refetching and stale data handling, keeping data fresh without manual pooling
+- Mutation management with optimistic updates, ideal for write operation that require a seamless UX
 
 <br>
 
