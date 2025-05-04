@@ -422,11 +422,16 @@ The project follows a fully automated deployment pipeline using Vercel and GitHu
 <br>
 
 ## 🔐 Environment Variables
+
+Environment variables are used to manage in a secure, scalable and maintanable way, all sensible configurations and secrets of the web application.
+
 Environment-specific secrets (Supabase project keys) are:
 
-- Defined in a local `.env` file (excluded from version control)
-- Securely configured via the Vercel Dashboard
+- Defined in a local `.env` file, excluded from version control, by using `.gitignore`
+- Securely configured via the Vercel Dashboard, to manage them in a centralized and secure way
 - Not exposed to the browser
+- Taken from `.env` while developing the application
+- Injected by Vercel, when the application is deployed
 
 <br>
 
