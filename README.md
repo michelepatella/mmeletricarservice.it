@@ -355,9 +355,8 @@ The API endpoints are implemented as Serverless Functions, hosted on Vercel, and
 ## 🔄 Data Fetching & Caching
 Data fecthing and caching are handled using React Query, a powerful asynchronous state management library.
 - Declarative and cache-first data fecthing, ensuring minimal redundant requests
-- Built-in support for loading, error, and success states, reducing boilerplate and improving UI responsiveness
+- Built-in support for  loading, error and success states, reducing boilerplate and improving UI responsiveness
 - Automatic background refetching and stale data handling, keeping data fresh without manual pooling
-- Mutation management with optimistic updates, ideal for write operation that require a seamless UX
 
 <br>
 
