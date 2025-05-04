@@ -59,7 +59,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 | ⚙️ API Communication    | Serverless API (Vercel Functions) |
 | 🔄 Fetching & Caching   | React Query                       |
 | ☁️ Backend-as-a-Service | Supabase (PostgreSQL, Storage)    |
-| 🔐 Environment variables| .env + Vercel Dashboard           |
+| 🔐 Environment Variables| .env + Vercel Dashboard           |
 | 📦 Deployment & CI/CD   | Vercel + GitHub                   |
 | 🔍 SEO                  | Meta tags + React Helmet          |
 | 📈 Analytics            | Vercel Analytics                  |
@@ -365,11 +365,31 @@ Response example:
 
 <br>
 
-## 🔄 Data Fetching & Caching
-Data fecthing and caching are handled using React Query, a powerful and scalable asynchronous state management library.
-- Declarative and cache-first data fecthing, ensuring minimal redundant requests
-- Built-in support for loading, error and success states, reducing boilerplate and improving UI responsiveness
-- Automatic background refetching and stale data handling, keeping data fresh without manual pooling
+## 🔄 Data Fetching & Caching with React Query
+
+**Declarative Data Fetching**
+- Minimizes redundant requests
+- Simplifies data fetching using `useQuery`
+
+**Cache-First Approach**
+- Retrieves data from cache before network request
+- Cached data is revalidated for freshness
+
+**Automatic Background Refetching**
+- Periodic background re-fetching for up-to-date info
+- Reduces perceived latency for a seamless UX
+
+**Stale-While-Revalidate**
+- Shows cached data immediately while fetching new data
+- New data replaces old data seamlessly for an uninterrupted experience
+
+**Error Handling & Retries**
+- Built-in retry mechanism with exponential backoff for failed requests
+- Ensures resilience during temporary issues (e.g., network failures)
+
+**Query Deduplication**
+- Prevents redundant requests for the same data
+- Reduces server load and improves performance
 
 <br>
 
