@@ -256,8 +256,6 @@ Navigation is fully responsive with a desktop anchor menu and mobile drawer for 
 
 The API endpoints are implemented as Serverless Functions, hosted on Vercel, and accessed through a centralized fecther utility. This architecture allows for modular, scalable, and stateless backend logic with minimal overhead.
 
-<br>
-
 ### 1. Get used cars overview
 
 - **Description**: Returns an array of used car overviews with the first available image for each car.
