@@ -7,10 +7,12 @@
 - [🔗 Project Structure](#-project-structure)
 - [📌 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
-- [🌐 Client-side (React app)](#-client-side-react-app)
+- [🌐 Client-side](#-client-side)
 - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
-- [☁️ Backend / Baas (Supabase)](#%EF%B8%8F-backend--baas-supabase)
+- [🔄 Data Fetching & Caching](#-data-fetching--caching)
+- [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
+- [🔐 Environment Variables](#-environment-variables)
 - [🔍 SEO & Analytics](#-seo--analytics)
 - [📈 Metrics](#-metrics)
 - [🌎 Impact on the Real World](#-impact-on-the-real-world)
@@ -48,18 +50,19 @@ The web application is available at https://mmeletricarservice.it 🌐
 
 ## 🛠️ Tech Stack
 
-| Layer                 | Technology                        |
-| --------------------- | --------------------------------- |
-| Frontend              | React.js                          |
-| UI Library            | Ant Design                        |
-| Styling               | CSS / Custom Design Tokens        |
-| Animations            | CSS / Framer Motion               |
-| API Communication     | Serverless API (Vercel Functions) |
-| Backend-as-a-Service  | Supabase (PostgreSQL, Storage)    |
-| Environment variables | .env + Vercel Dashboard           |
-| Deployment            | Vercel                            |
-| SEO                   | Meta tags + React Helmet          |
-| Analytics             | Vercel Analytics                  |
+| Layer                 | Technology                          |
+| --------------------- | ----------------------------------- |
+| ⚛️ Frontend             | React.js                          |
+| 🖌️ UI Library           | Ant Design                        |
+| 🎨 Styling              | CSS + Custom Design Tokens        |
+| 🌀 Animations           | CSS + Framer Motion               |
+| ⚙️ API Communication    | Serverless API (Vercel Functions) |
+| 🔄 Fetching & Caching   | React Query                       |
+| ☁️ Backend-as-a-Service | Supabase (PostgreSQL, Storage)    |
+| 🔐 Environment Variables| .env + Vercel Dashboard           |
+| 📦 Deployment & CI/CD   | Vercel + GitHub                   |
+| 🔍 SEO                  | Meta tags + React Helmet          |
+| 📈 Analytics            | Vercel Analytics                  |
 
 <br>
 
@@ -135,9 +138,10 @@ This project follows the best practices of software engineering:
    -  Indexes created to optimize queries, ensuring fast and scalable data retrieval
    -  Frontend components and routes structured for future expansion
    -  Vercel's serverless functions scale automatically with demand, including a caching system to improve performance and reduce the latency
-   -  Caching layer to reduce redundant API calls, using `useState`
-      - Redundant request are rejected ❌
-      - Multiple simultaneous requests for the same data are prevented ❌
+   -  Fecthing and caching handled with React Query
+      - Automatic deduplication of requests
+      - Background re-fetching for data freshness
+      - Query invalidation for precise cache control
 
 <br>
   
@@ -166,9 +170,9 @@ This project follows the best practices of software engineering:
 <br>
 
 8. 🧠 **Abstraction**:
-   - Business logic abstracted via hooks and helper functions
+   - Business logic abstracted via hooks and functions
    - Reusable component library supports consistent UI patterns
-   - Centralized configuration (env, theming, routing)
+   - Centralized configuration
 
 <br>
 
@@ -191,37 +195,41 @@ This project follows the best practices of software engineering:
 
 ## 🏗️ System Architecture
 
-🌐 **Client-side (React app)**
+🌐 **Client-side**
 
 - Supabase interactions via Serverless API
-- Client-side caching stores fetched data for the session duration
-- Redundant API calls are prevented
+- Interaction implemented via React Query, called from React components
 
 ⚙️ **Serverless Functions**
 
 - Implemented as Vercel Functions
 - Act as middleware between frontend and backend
 
-☁️ **Backend / BaaS (Supabase)**
+🔄 **Data Fetching & Caching**
+
+- Handled via React Query
+- Redundant requests prevented
+- Better managament of loading, error, and success states
+
+☁️ **Backend / BaaS**
 
 - PostgreSQL database for used car data
 - Storage bucket for used car images
-- Row-level security with custom policies
-- Optimized with indexes for performance
 - Accessed via RESTful API
 
 📦 **Deployment & CI/CD**
 
 - Source control: GitHub
 - Automatic deployment to Vercel on push to main
-  <br>
 
-![image](https://github.com/user-attachments/assets/14279d07-681d-4c55-9175-cb0619df5960)
+<br>
+
+<img width="776" alt="image" src="https://github.com/user-attachments/assets/1d2d3b30-c13b-476a-8401-cab627842d89" />
 
 <br>
 <br>
 
-## 🌐 Client-side (React app)
+## 🌐 Client-side
 
 The client-side is a modern, production-grade React.js application.
 
@@ -229,7 +237,7 @@ The client-side is a modern, production-grade React.js application.
 - **Routing**: Navigation managed via Hash Routing, supporting both static and dynamic routes.
 - **Styling & Theming**: Styling using Ant Design components, CSS and design tokens.
 - **State Management**: Local state handled with React's hooks (`useState`, `useEffect`, etc.) and logic is abstracted into custom hooks to promote reuse.
-- **Data Fetching**: All data interactions go through serverless functions, acting as middleware between the frontend and Supabase, managed via a custom hook acting as fecthing manager.
+- **Data Fecthing & Caching**: Data fetching and caching handled via React Query.
 - **Performance & Optimization**: Lazy loading, image modern formats and other tricks to optimize performance.
 - **Responsive & Accessible UI**: Design follows mobile-first approach, enhanced by advanced UI components and animations.
 
@@ -251,14 +259,7 @@ Navigation is fully responsive with a desktop anchor menu and mobile drawer for 
 
 ## ⚙️ Serverless Functions
 
-The API endpoints are implemented as Serverless Functions, hosted on Vercel, and managed via a custom hook acting as API manager, whose logic is shown below.
-
-<br>
-
-<img width="912" alt="image" src="https://github.com/user-attachments/assets/c989baea-4a7b-4ca3-a57a-e5f546105658" />
-
-<br>
-<br>
+The API endpoints are implemented as Serverless Functions, hosted on Vercel, and accessed through a centralized fecther utility. This architecture allows for modular, scalable, and stateless backend logic with minimal overhead.
 
 ### 1. Get used cars overview
 
@@ -268,6 +269,22 @@ The API endpoints are implemented as Serverless Functions, hosted on Vercel, and
 - **Query Params**: `None`
 - **Response**: `JSON`
 
+<br>
+
+| Field     | Type    | Description                                          |
+| --------- | ------- | ---------------------------------------------------- |
+| `id`      | Integer | Unique identifier of the used car.                   |
+| `name`    | String  | Name or model of the used car.                       |
+| `price`   | Float   | Displayed price in euros.                            |
+| `year`    | Integer | Year of registration or manufacturing.               |
+| `mileage` | Integer | Kilometers driven.                                   |
+| `fuel`    | String  | Type of fuel.                                        |
+| `status`  | String  | Overall condition.                                   |
+| `image`   | String  | Public URL of the first (overview) image of the car. |
+
+<br>
+
+Response example:
 <pre>
   {
   "used_cars_overview": [
@@ -286,17 +303,6 @@ The API endpoints are implemented as Serverless Functions, hosted on Vercel, and
 }
 </pre>
 
-| Field     | Type    | Description                                          |
-| --------- | ------- | ---------------------------------------------------- |
-| `id`      | Integer | Unique identifier of the used car.                   |
-| `name`    | String  | Name or model of the used car.                       |
-| `price`   | Float   | Displayed price in euros.                            |
-| `year`    | Integer | Year of registration or manufacturing.               |
-| `mileage` | Integer | Kilometers driven.                                   |
-| `fuel`    | String  | Type of fuel.                                        |
-| `status`  | String  | Overall condition.                                   |
-| `image`   | String  | Public URL of the first (overview) image of the car. |
-
 <br>
 
 ### 2. Get used car info
@@ -306,6 +312,29 @@ The API endpoints are implemented as Serverless Functions, hosted on Vercel, and
 - **Method**: `GET`
 - **Query Params**: `id` (of the requested used car)
 - **Response**: `JSON`
+
+<br>
+
+| Field                 | Type             | Description                             |
+| --------------------- | ---------------- | --------------------------------------- |
+| `id`                  | Integer          | Unique identifier of the used car.      |
+| `engine_displacement` | Integer          | Engine size in liters.                  |
+| `cylinders`           | Integer          | Number of engine cylinders.             |
+| `power`               | Integer          | Engine power in CV.                     |
+| `transmission`        | String           | Type of transmission.                   |
+| `consumption`         | String           | Fuel consumption in L/100km (min-max).  |
+| `emission_class`      | String           | Emission standard.                      |
+| `emissions`           | String           | CO₂ emissions in g/km (min-max).        |
+| `doors`               | Integer          | Number of doors.                        |
+| `bodywork`            | String           | Body type.                              |
+| `external_color`      | String           | Exterior color of the car.              |
+| `internal_color`      | String           | Interior color scheme.                  |
+| `internal_material`   | String           | Interior material.                      |
+| `seats`               | Integer          | Number of seats.                        |
+| `images`              | Array of Strings | List of public image URLs for this car. |
+
+<br>
+
 <pre>
   {
   "used_car_info": [
@@ -334,34 +363,44 @@ The API endpoints are implemented as Serverless Functions, hosted on Vercel, and
 }
 </pre>
 
-| Field                 | Type             | Description                             |
-| --------------------- | ---------------- | --------------------------------------- |
-| `id`                  | Integer          | Unique identifier of the used car.      |
-| `engine_displacement` | Integer          | Engine size in liters.                  |
-| `cylinders`           | Integer          | Number of engine cylinders.             |
-| `power`               | Integer          | Engine power in CV.                     |
-| `transmission`        | String           | Type of transmission.                   |
-| `consumption`         | String           | Fuel consumption in L/100km (min-max).  |
-| `emission_class`      | String           | Emission standard.                      |
-| `emissions`           | String           | CO₂ emissions in g/km (min-max).        |
-| `doors`               | Integer          | Number of doors.                        |
-| `bodywork`            | String           | Body type.                              |
-| `external_color`      | String           | Exterior color of the car.              |
-| `internal_color`      | String           | Interior color scheme.                  |
-| `internal_material`   | String           | Interior material.                      |
-| `seats`               | Integer          | Number of seats.                        |
-| `images`              | Array of Strings | List of public image URLs for this car. |
+<br>
+
+## 🔄 Data Fetching & Caching
+
+**Declarative Data Fetching**
+- Minimizes redundant requests
+- Simplifies data fetching using `useQuery`
+
+**Cache-First Approach**
+- Retrieves data from cache before network request
+- Cached data is revalidated for freshness
+
+**Automatic Background Refetching**
+- Periodic background re-fetching for up-to-date info
+- Reduces perceived latency for a seamless UX
+
+**Stale-While-Revalidate**
+- Shows cached data immediately while fetching new data
+- New data replaces old data seamlessly for an uninterrupted experience
+
+**Error Handling & Retries**
+- Built-in retry mechanism with exponential backoff for failed requests
+- Ensures resilience during temporary issues (e.g., network failures)
+
+**Query Deduplication**
+- Prevents redundant requests for the same data
+- Reduces server load and improves performance
 
 <br>
 
-## ☁️ Backend / Baas (Supabase)
+## ☁️ Backend / BaaS
 
 The backend architecture levarages Supabase as a Backend-as-a-Service platform, combining PostgreSQL database and Storage bucket in a scalable environment.
 
 ### 💿 Data Layer
 
 - Relational database
-- Index created on the `id` field to optimize query performance
+- Index created on the `id` fields to optimize query performance
 - Foreign key relationships established among tables to maintain data integrity
 - `ON DELETE CASCADE` to ensure the proper handling of related data when records are deleted
 - Attributes governed by contraints to enforce rules for data quality and consistency (`NOT NULL`, `CHECK`)
@@ -370,6 +409,8 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 
 - All used car images are stored in Supabase buckets with public access policies
 - Folder naming follows a strict convention (id of the used car) to allow deterministic fetching
+
+<br>
 
 ### 🔐 Row-Level Security (RLS)
 
@@ -388,7 +429,7 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 
 ## 📦 Deployment & CI/CD
 
-The project follows a fully automated deployment pipeline using Vercel and GitHub :
+The project follows a fully automated deployment pipeline using Vercel and GitHub:
 
 - Vercel is connected to the GitHub repository
 - Every successful commit to main is automatically built and deployed to https://mmeletricarservice.it
@@ -396,25 +437,32 @@ The project follows a fully automated deployment pipeline using Vercel and GitHu
 - Real-time analytics and performance insights are available via Vercel Dashboard
 - Rollbacks and previous deploys are tracked for recovery or auditing
 
-**🔐 Environment Variables**
-Environment-specific secrets (Supabase project keys) are:
-
-- Defined in a local `.env` file (excluded from version control)
-- Securely configured via the Vercel Dashboard
-- Not exposed to the browser
-
 <br>
 
 <img width="651" alt="image" src="https://github.com/user-attachments/assets/e63ab0a0-10a9-4089-bcb1-f39296f57e9e" />
+
 <br>
 <br>
+
+## 🔐 Environment Variables
+
+Environment variables are used to manage in a secure, scalable and maintanable way, all sensible configurations and secrets of the web application.
+
+Environment-specific secrets (Supabase project keys) are:
+
+- Defined in a local `.env` file, excluded from version control, by using `.gitignore`
+- Securely configured via the Vercel Dashboard, to manage them in a centralized and secure way
+- Not exposed to the browser
+- Taken from `.env` while developing the application
+- Injected by Vercel, when the application is deployed
+
 <br>
 
 ## 🔍 SEO & Analytics
 
 Search engine optimization has been implemented to ensure the web application is discoverable and ranks well for relevant queries.
 
-- **Meta Tags**: Each page (`index.html`, section pages, and used car listings) includes a unique `<title>` and `<meta description>`.
+- **Meta Tags**: Each page (`index.html`, section pages, and used car drawers) includes a unique `<title>` and `<meta description>`.
 - **React Helmet**: SEO tags are dynamically injected based on the current route.
 - **Clean URLs**: Localized, human-readable URLs enhance both user experience and search relevance.
 - **Keyword-Optimized Content**: Text content has been carefully crafted with relevant keywords to improve rankings.
@@ -510,7 +558,6 @@ Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring 
 
 ### 📊 Data-Driven Business Insights
   The platform can collect anonymized user interaction data, which can be analyzed to understand customer behavior, and optimize inventory. This enables data-informed decisions that enhance long-term strategy.
-
 
 <br>
 
