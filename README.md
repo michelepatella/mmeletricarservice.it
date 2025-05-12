@@ -565,4 +565,4 @@ Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring 
 
 <br>
 
-> Last update: 12/05/2025
+> Last update: May 12, 2025
