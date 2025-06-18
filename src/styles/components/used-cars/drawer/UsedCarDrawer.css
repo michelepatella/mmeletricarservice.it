@@ -12,7 +12,7 @@
 .used-car-drawer,
 .ant-drawer-header {
   font-family: var(--font_family);
-  background: var(--darker_background_color) !important;
+  background: transparent !important;
 }
 
 .ant-drawer-content-wrapper {
@@ -43,7 +43,7 @@
     border: 1px solid var(--light_gray_border_color);
     border-radius: var(--border_radius);
     padding: var(--used_car_drawer_info_panel_padding);
-    background-color: var(--darker_background_color);
+    background-color: transparent;
     box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
   }
 
@@ -78,7 +78,7 @@
     border: 1px solid var(--light_gray_border_color);
     border-radius: var(--border_radius);
     padding: var(--used_car_drawer_info_panel_padding);
-    background-color: var(--darker_background_color);
+    background-color: transparent;
     box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
   }
 
