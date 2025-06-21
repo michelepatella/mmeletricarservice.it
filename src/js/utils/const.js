@@ -1,7 +1,7 @@
-/**------------- data -------------**/
+/**------------- Data -------------**/
 export const STALE_TIME = 1000 * 60 * 5;
 
-/**------------- contacts information -------------**/
+/**------------- Contacts information -------------**/
 export const EMAIL = "mmeletricarservice@libero.it";
 export const EMAIL_PEC = "mmeletricarservice@pec.buffetti.it";
 export const FACEBOOK =
@@ -13,14 +13,14 @@ export const RAG_SOCIALE =
 export const SITE = "Via G. Bizet 63, 70024 Gravina in Puglia (BA), Italia";
 export const REA = "640711";
 
-/**------------- cookies -------------**/
+/**------------- Cookies -------------**/
 export const COOKIE_CONSENT_BANNER_DESCRIPTION =
   'Questo sito utilizza i cookie. Cliccando su "Accetta", acconsenti all\'uso dei cookie. Cliccando su "Rifiuta", rifiuti l\'uso dei cookie. Per maggiori informazioni consulta la nostra ';
 export const COOKIE_ACCEPT_BUTTON_TEXT = "Accetta cookie di terze parti";
 export const COOKIE_DECLINE_BUTTON_TEXT = "Rifiuta cookie di terze parti";
 export const COOKIE_EXPIRATION_DATE = 30;
 
-/**------------- sections definition -------------**/
+/**------------- Sections -------------**/
 export const SECTIONS = [
   {
     id: "home",
