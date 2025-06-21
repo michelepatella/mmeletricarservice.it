@@ -12,17 +12,8 @@ function HomeHeader() {
 	return (
 		<>
 			{/* Add a home header button for each button specified */}
-			{homeHeaderButtons.map((
-				{
-					src,
-					onClick
-				}
-			) => (
-				<CustomIconButton
-					key={src}
-					src={src}
-					onClick={onClick}
-				/>
+			{homeHeaderButtons.map(({ src, onClick }) => (
+				<CustomIconButton key={src} src={src} onClick={onClick} />
 			))}
 		</>
 	);

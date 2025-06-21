@@ -1,7 +1,4 @@
-import {
-	HOME_TITLE,
-	HOME_SUBTITLE
-} from "../../utils/const";
+import { HOME_TITLE, HOME_SUBTITLE } from "../../utils/const";
 
 /**
  * This component represents the content

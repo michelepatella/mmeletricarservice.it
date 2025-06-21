@@ -23,29 +23,20 @@ import UsedCarOverview from "./UsedCarOverview";
 function UsedCarCard(props) {
 	// State to manage when the drawer, showing used car
 	// details, is open or not
-	const [
-		isDrawerOpen,
-		setIsDrawerOpen
-	] = useState(false);
+	const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
 	// To check if the current used cars has been requested
 	// externally, so that the drawer will be automatically open
-	useOpenDrawerByLink(
-		setIsDrawerOpen,
-		props.usedCarOverview?.id?.toString()
-	);
+	useOpenDrawerByLink(setIsDrawerOpen, props.usedCarOverview?.id?.toString());
 
 	return (
 		<>
 			<div
 				className="used-cars-card"
 				onClick={() =>
-					onUsedCarDrawerOpen(
-						setIsDrawerOpen,
-						props.usedCarOverview?.id
-					)
-				}>
-
+					onUsedCarDrawerOpen(setIsDrawerOpen, props.usedCarOverview?.id)
+				}
+			>
 				{/* Presentation image (if any, informative text otherwise) */}
 				<div className="used-cars-card-image-container">
 					{props.usedCarOverview?.image ? (
@@ -64,11 +55,7 @@ function UsedCarCard(props) {
 				</div>
 
 				{/* Flex container to show car's information */}
-				<Flex
-					className="used-car-card-overview-flex"
-					gap="small"
-					align="start">
-
+				<Flex className="used-car-card-overview-flex" gap="small" align="start">
 					{/* Name of the car */}
 					<CustomText
 						type="subheading"
@@ -91,9 +78,7 @@ function UsedCarCard(props) {
 								new Intl.NumberFormat("it-IT", {
 									style: "currency",
 									currency: "EUR",
-								}).format(parseFloat(
-									props.usedCarOverview?.price
-								)) || "-"
+								}).format(parseFloat(props.usedCarOverview?.price)) || "-"
 							}
 							disableAnimation={true}
 							style={handleNamePriceStyle()}

@@ -24,10 +24,7 @@ function SectionHeader(props) {
 	useIntersectionObserver(ref);
 
 	return (
-		<div
-			ref={ref}
-			className="section-header">
-
+		<div ref={ref} className="section-header">
 			{/* Section name */}
 			<CustomText
 				type="body"
@@ -51,7 +48,6 @@ function SectionHeader(props) {
 
 			{/* Other contents (if any) */}
 			{props.children}
-
 		</div>
 	);
 }

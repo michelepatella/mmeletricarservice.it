@@ -50,19 +50,19 @@ The web application is available at https://mmeletricarservice.it 🌐
 
 ## 🛠️ Tech Stack
 
-| Layer                 | Technology                          |
-| --------------------- | ----------------------------------- |
-| ⚛️ Frontend             | React.js                          |
-| 🖌️ UI Library           | Ant Design                        |
-| 🎨 Styling              | CSS + Custom Design Tokens        |
-| 🌀 Animations           | CSS + Framer Motion               |
-| ⚙️ API Communication    | Serverless API (Vercel Functions) |
-| 🔄 Fetching & Caching   | React Query                       |
-| ☁️ Backend-as-a-Service | Supabase (PostgreSQL, Storage)    |
-| 🔐 Environment Variables| .env + Vercel Dashboard           |
-| 📦 Deployment & CI/CD   | Vercel + GitHub                   |
-| 🔍 SEO                  | Meta tags                         |
-| 📈 Analytics            | Vercel Analytics                  |
+| Layer                    | Technology                        |
+| ------------------------ | --------------------------------- |
+| ⚛️ Frontend              | React.js                          |
+| 🖌️ UI Library            | Ant Design                        |
+| 🎨 Styling               | CSS + Custom Design Tokens        |
+| 🌀 Animations            | CSS + Framer Motion               |
+| ⚙️ API Communication     | Serverless API (Vercel Functions) |
+| 🔄 Fetching & Caching    | React Query                       |
+| ☁️ Backend-as-a-Service  | Supabase (PostgreSQL, Storage)    |
+| 🔐 Environment Variables | .env + Vercel Dashboard           |
+| 📦 Deployment & CI/CD    | Vercel + GitHub                   |
+| 🔍 SEO                   | Meta tags                         |
+| 📈 Analytics             | Vercel Analytics                  |
 
 <br>
 
@@ -285,6 +285,7 @@ The API endpoints are implemented as Serverless Functions, hosted on Vercel, and
 <br>
 
 Response example:
+
 <pre>
   {
   "used_cars_overview": [
@@ -368,26 +369,32 @@ Response example:
 ## 🔄 Data Fetching & Caching
 
 **Declarative Data Fetching**
+
 - Minimizes redundant requests
 - Simplifies data fetching using `useQuery`
 
 **Cache-First Approach**
+
 - Retrieves data from cache before network request
 - Cached data is revalidated for freshness
 
 **Automatic Background Refetching**
+
 - Periodic background re-fetching for up-to-date info
 - Reduces perceived latency for a seamless UX
 
 **Stale-While-Revalidate**
+
 - Shows cached data immediately while fetching new data
 - New data replaces old data seamlessly for an uninterrupted experience
 
 **Error Handling & Retries**
+
 - Built-in retry mechanism with exponential backoff for failed requests
 - Ensures resilience during temporary issues (e.g., network failures)
 
 **Query Deduplication**
+
 - Prevents redundant requests for the same data
 - Reduces server load and improves performance
 
@@ -462,22 +469,23 @@ Search engine optimization has been implemented to ensure the web application is
 - **Google Maps Integration**: Embedded Google Maps via `<iframe>` supports local SEO targeting.
 - **Favicon and Branding**: A custom favicon and consistent branding improve recognizability in search results and browser tabs.
 
-Vercel Analytics is used to monitor and optimize the UX and app performance. It offers valuable insights into the real-world usage of the app, including key metrics such as: 
+Vercel Analytics is used to monitor and optimize the UX and app performance. It offers valuable insights into the real-world usage of the app, including key metrics such as:
+
 - Visitors
 - Page Views
 - Bounce Rate
 - Countries
--  Devices
--  Browsers
--  Operating Systems 
--  Pages
--  Routes
--  Hostname
--  Referrers
--  UTM Parameters
+- Devices
+- Browsers
+- Operating Systems
+- Pages
+- Routes
+- Hostname
+- Referrers
+- UTM Parameters
 
 Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring compliance with privacy regulations while delivering essential insights into the app's performance and user engagement. This approach ensures that the application can continuously improve based on real, actionable data, without compromising user privacy.
- 
+
 <br>
 
 ## 📈 Metrics
@@ -501,32 +509,32 @@ Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring 
 | Cumulative Layout Shift  | 0      |
 | Speed Index              | 2.1 s  |
 
-### ☁️ Backend / Baas (Supabase) 
+### ☁️ Backend / Baas (Supabase)
 
-| Metric                    | Target (Average)         |
-|---------------------------|--------------------------|
-| API Response Speed        |            111.5 ms      |
-| Memory Usage              |            45%           | 
-| Average CPU Usage         |            0.74%         |
-| CPU Throttle              |            11.7%         |
-| Hot start                 |            35.3%         |
-| Cold start                |            33.3%         |
-| Prewarmed start           |            31.4%         |
+| Metric             | Target (Average) |
+| ------------------ | ---------------- |
+| API Response Speed | 111.5 ms         |
+| Memory Usage       | 45%              |
+| Average CPU Usage  | 0.74%            |
+| CPU Throttle       | 11.7%            |
+| Hot start          | 35.3%            |
+| Cold start         | 33.3%            |
+| Prewarmed start    | 31.4%            |
 
-### ⚙️ Serverless Functions  
+### ⚙️ Serverless Functions
 
-| Metric                    | Target (Average)         |
-|---------------------------|--------------------------|
-| Error rate                |          0%              |
-| Timeout rate              |         0.3%             |
-| Time to First Byte        |        573 ms            |
-| Memory Usage              |        116 MB            |
+| Metric             | Target (Average) |
+| ------------------ | ---------------- |
+| Error rate         | 0%               |
+| Timeout rate       | 0.3%             |
+| Time to First Byte | 573 ms           |
+| Memory Usage       | 116 MB           |
 
 ### 📦 Deployment & CI/CD
 
-| Metric                    | Target (Average)         |
-|---------------------------|--------------------------|
-| Deploy time               |          42 s            |
+| Metric      | Target (Average) |
+| ----------- | ---------------- |
+| Deploy time | 42 s             |
 
 <br>
 
@@ -537,19 +545,24 @@ Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring 
 ## 🌎 Impact on the Real World
 
 ### 💻 Enhanced Operational Efficiency
-  The web application allows customers to effortlessly explore all the services offered by the company and access essential information such as location, contact details, and opening hours. It also enables users to browse available used cars, view detailed specifications, and easily contact the business for inquiries. This reduces the workload on customer support while delivering high-quality, accurate, and timely information to clients.
 
-### 🏙️ Support for Local Businesses 
-  As a local car dealership, the company gains a competitive edge through this digital platform, allowing it to stand out against larger, more established competitors. This visibility promotes local economic growth and can contribute to job creation within the community.
+The web application allows customers to effortlessly explore all the services offered by the company and access essential information such as location, contact details, and opening hours. It also enables users to browse available used cars, view detailed specifications, and easily contact the business for inquiries. This reduces the workload on customer support while delivering high-quality, accurate, and timely information to clients.
 
-### 💡 Empowerment Through Information  
-  By offering detailed car specifications and transparent service descriptions, the application empowers customers to make better-informed decisions. This leads to increased confidence, satisfaction, and trust during the buying or service request process.
+### 🏙️ Support for Local Businesses
+
+As a local car dealership, the company gains a competitive edge through this digital platform, allowing it to stand out against larger, more established competitors. This visibility promotes local economic growth and can contribute to job creation within the community.
+
+### 💡 Empowerment Through Information
+
+By offering detailed car specifications and transparent service descriptions, the application empowers customers to make better-informed decisions. This leads to increased confidence, satisfaction, and trust during the buying or service request process.
 
 ### ⚖️ Reduction of Information Asymmetry
-  Traditionally, customers rely heavily on sales representatives for information. The application bridges this gap by making relevant data openly available, ensuring more balanced, transparent interactions between the company and its clients.
+
+Traditionally, customers rely heavily on sales representatives for information. The application bridges this gap by making relevant data openly available, ensuring more balanced, transparent interactions between the company and its clients.
 
 ### 📊 Data-Driven Business Insights
-  The platform can collect anonymized user interaction data, which can be analyzed to understand customer behavior, and optimize inventory. This enables data-informed decisions that enhance long-term strategy.
+
+The platform can collect anonymized user interaction data, which can be analyzed to understand customer behavior, and optimize inventory. This enables data-informed decisions that enhance long-term strategy.
 
 <br>
 

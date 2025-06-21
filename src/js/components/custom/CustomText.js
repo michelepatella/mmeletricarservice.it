@@ -34,11 +34,7 @@ function CustomText(props) {
 		// The custom text, provided as <p> element
 		<p
 			className={"custom-" + props.type}
-			ref={
-				props.disableAnimation ?
-					null :
-					textRef
-			}
+			ref={props.disableAnimation ? null : textRef}
 			style={style}
 			dangerouslySetInnerHTML={{ __html: props.text }}
 		/>

@@ -11,13 +11,7 @@ import { handleContainerStyle } from "../../logic/backgroundContainerStyleHandle
  * @returns {JSX.Element}
  * @constructor
  */
-function BackgroundContainer(
-	{
-		image,
-		children,
-		custStyle
-	}
-){
+function BackgroundContainer({ image, children, custStyle }) {
 	// Combine predefined and customized styles
 	// to get the final background container style
 	const style = {
@@ -34,8 +28,9 @@ function BackgroundContainer(
 			whileInView={{ opacity: 1 }}
 			transition={{
 				duration: 2.0,
-				ease: "easeOut"
-			}}>
+				ease: "easeOut",
+			}}
+		>
 			{children}
 		</motion.div>
 	);

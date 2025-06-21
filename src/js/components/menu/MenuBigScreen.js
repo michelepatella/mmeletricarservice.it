@@ -12,11 +12,7 @@ import { useMenu } from "../../hooks/useMenu";
  */
 function MenuBigScreen() {
 	// Prepare anchor menu elements
-	const {
-		menuItems,
-		menuItemControls,
-		section
-	} = useMenu();
+	const { menuItems, menuItemControls, section } = useMenu();
 
 	return (
 		<div className="menu-container-big">

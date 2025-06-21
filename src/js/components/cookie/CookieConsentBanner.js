@@ -3,7 +3,7 @@ import {
 	COOKIE_ACCEPT_BUTTON_TEXT,
 	COOKIE_CONSENT_BANNER_DESCRIPTION,
 	COOKIE_DECLINE_BUTTON_TEXT,
-	COOKIE_EXPIRATION_DATE
+	COOKIE_EXPIRATION_DATE,
 } from "../../utils/const";
 
 /**
@@ -33,31 +33,29 @@ function CookieConsentBanner(props) {
 					declineButtonText={COOKIE_DECLINE_BUTTON_TEXT}
 					enableDeclineButton={true}
 					onAccept={props.handleAcceptCookies}
-					onDecline={props.handleDeclineCookies}>
-
+					onDecline={props.handleDeclineCookies}
+				>
 					{/* Cookie banner description */}
 					{COOKIE_CONSENT_BANNER_DESCRIPTION}
-
 					{/* Links to the privacy policy and to the cookie policy */}
 					<a
 						href="/docs/Privacy%20Policy%20-%20MM%20Eletricar%20Service.pdf"
 						className="policy-link"
 						target="_blank"
-						rel="noopener noreferrer">
+						rel="noopener noreferrer"
+					>
 						Privacy Policy
 					</a>{" "}
-
 					e{" "}
-
 					<a
 						href="/docs/Cookie%20Policy%20-%20MM%20Eletricar%20Service.pdf"
 						className="policy-link"
 						target="_blank"
-						rel="noopener noreferrer">
+						rel="noopener noreferrer"
+					>
 						Cookie Policy
 					</a>
 					. 🍪
-
 				</CookieConsent>
 			)}
 		</>

@@ -1,13 +1,6 @@
 import React from "react";
-import {
-	Button,
-	Drawer,
-	Menu as AntMenu
-} from "antd";
-import {
-	CloseOutlined,
-	MenuOutlined
-} from "@ant-design/icons";
+import { Button, Drawer, Menu as AntMenu } from "antd";
+import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 import { useMenu } from "../../hooks/useMenu";
 import {
 	handleParentStyle,
@@ -24,12 +17,7 @@ import {
  */
 function MenuSmallScreen() {
 	// Prepare hamburger menu elements
-	const {
-		menuItems,
-		section,
-		visible,
-		toggleDrawer
-	} = useMenu();
+	const { menuItems, section, visible, toggleDrawer } = useMenu();
 
 	return (
 		<div className="menu-container-small">
@@ -47,29 +35,21 @@ function MenuSmallScreen() {
 			<Drawer
 				placement="right"
 				closable
-				closeIcon={
-					<CloseOutlined className="close-outline" />
-				}
+				closeIcon={<CloseOutlined className="close-outline" />}
 				onClose={toggleDrawer}
-				open={visible}>
-
+				open={visible}
+			>
 				{/* Menu */}
 				<AntMenu mode="inline">
-
 					{/* Parent and children items generation */}
 					{menuItems?.map((menuItem) => (
 						<React.Fragment key={menuItem?.key}>
-
 							{/* Parent items generation */}
 							<AntMenu.Item
 								key={menuItem?.key}
 								onClick={menuItem?.onClick}
-								style={
-									handleParentStyle(
-										section,
-										menuItem
-									)
-								}>
+								style={handleParentStyle(section, menuItem)}
+							>
 								{menuItem?.title}
 							</AntMenu.Item>
 
@@ -80,23 +60,15 @@ function MenuSmallScreen() {
 										key={child?.key}
 										className="ant-menu-item-child"
 										onClick={child?.onClick}
-										style={
-											handleChildrenStyle(
-												section,
-												child
-											)
-										}>
+										style={handleChildrenStyle(section, child)}
+									>
 										{child?.title}
 									</AntMenu.Item>
 								))}
-
 						</React.Fragment>
 					))}
-
 				</AntMenu>
-
 			</Drawer>
-
 		</div>
 	);
 }

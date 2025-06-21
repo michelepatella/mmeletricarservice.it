@@ -1,8 +1,4 @@
-import {
-	CONTACTS_TITLE,
-	CONTACTS,
-	CONTACTS_SUBTITLE
-} from "../../utils/const";
+import { CONTACTS_TITLE, CONTACTS, CONTACTS_SUBTITLE } from "../../utils/const";
 import { contactClickHandler } from "../../logic/contactButtonHandler";
 import CustomButton from "../custom/CustomButton";
 import SectionContainer from "../sections/SectionContainer";
@@ -20,7 +16,6 @@ function ContactsContent() {
 	return (
 		<>
 			<SectionContainer id="contatti">
-
 				{/* Contact section header (with title and subtitle) */}
 				<SectionHeader
 					section="CONTATTI"
@@ -31,10 +26,7 @@ function ContactsContent() {
 				{/* Contact buttons container (contains all the contact buttons) */}
 				<div className="contact-buttons-container">
 					{/* Add a button for each contact available */}
-					{CONTACTS?.map((
-						contact,
-						index
-					) => (
+					{CONTACTS?.map((contact, index) => (
 						<CustomButton
 							key={index}
 							isContact={true}
@@ -45,7 +37,6 @@ function ContactsContent() {
 						/>
 					))}
 				</div>
-
 			</SectionContainer>
 		</>
 	);

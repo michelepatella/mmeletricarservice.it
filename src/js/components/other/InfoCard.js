@@ -15,13 +15,8 @@ function InfoCard(props) {
 		<>
 			{/* Info Card global container */}
 			<div className="info-card">
-
 				{/* Flex container */}
-				<Flex
-					className="info-card-flex"
-					gap="small"
-					align="start">
-
+				<Flex className="info-card-flex" gap="small" align="start">
 					{/* Informative icon */}
 					{props.icon && (
 						<img
@@ -37,7 +32,6 @@ function InfoCard(props) {
 						text={props.title}
 						style={handleTitleStyle()}
 					/>
-
 				</Flex>
 
 				{/* Informative description */}
@@ -46,7 +40,6 @@ function InfoCard(props) {
 					text={props.description}
 					style={{ marginTop: "0" }}
 				/>
-
 			</div>
 		</>
 	);

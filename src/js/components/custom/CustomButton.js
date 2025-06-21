@@ -30,16 +30,10 @@ function CustomButton(props) {
 						: "custom-button"
 			}
 			onClick={props.onClick}
-			style={style}>
-
+			style={style}
+		>
 			{/* Button's icon (if any) */}
-			{
-				props.icon &&
-				<img
-					src={props.icon}
-					alt="button-icon"
-				/>
-			}
+			{props.icon && <img src={props.icon} alt="button-icon" />}
 
 			{props.text}
 		</Button>

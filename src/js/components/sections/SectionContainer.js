@@ -8,13 +8,7 @@
  * @returns {JSX.Element}
  * @constructor
  */
-function SectionContainer(
-	{
-		children,
-		id,
-		custStyle
-	}
-) {
+function SectionContainer({ children, id, custStyle }) {
 	// Use only the customized styles
 	// to get the final section container style
 	const style = { ...custStyle };
@@ -22,10 +16,7 @@ function SectionContainer(
 	return (
 		// The section division containing all the
 		// children representing the section components
-		<div
-			id={id}
-			className="section-container"
-			style={style}>
+		<div id={id} className="section-container" style={style}>
 			{children}
 		</div>
 	);

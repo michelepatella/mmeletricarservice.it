@@ -16,26 +16,15 @@ import CustomText from "../custom/CustomText";
 function UsedCarOverview(props) {
 	return (
 		<>
-			{USED_CAR_OVERVIEW?.map((
-				info,
-				index
-			) => (
+			{USED_CAR_OVERVIEW?.map((info, index) => (
 				// Add each used car overview information
-				<div
-					key={index}
-					className="used-car-overview-container">
-
+				<div key={index} className="used-car-overview-container">
 					{/* Global Flex container (vertical) */}
 					<Flex vertical>
-
 						{/* Flex container (horizontal) */}
 						<Flex gap="small">
-
 							{/* Icon */}
-							<img
-								src={info?.icon}
-								alt="icon"
-							/>
+							<img src={info?.icon} alt="icon" />
 
 							{/* Info title, if it needs to be shown, otherwise show the text only*/}
 							<CustomText
@@ -46,9 +35,7 @@ function UsedCarOverview(props) {
 										: props.usedCarOverview?.[info?.name] || "-"
 								}
 								disableAnimation={true}
-								style={
-									handleTextOverviewStyle(props.showTitle)
-								}
+								style={handleTextOverviewStyle(props.showTitle)}
 							/>
 						</Flex>
 
@@ -56,10 +43,7 @@ function UsedCarOverview(props) {
 						{props.showTitle && (
 							<CustomText
 								type="body"
-								text={
-									props.usedCarOverview?.[info?.name]
-									|| "-"
-								}
+								text={props.usedCarOverview?.[info?.name] || "-"}
 								disableAnimation={true}
 								style={handleTextOverviewStyle()}
 							/>

@@ -57,7 +57,7 @@ export const homeHeaderButtons = [
 	},
 	{
 		src: "/icons/facebook_icon.svg",
-		onClick: onFacebookButtonClick
+		onClick: onFacebookButtonClick,
 	},
 	{
 		src: "/icons/phone_icon.svg",
