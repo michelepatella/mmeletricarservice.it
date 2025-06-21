@@ -1,9 +1,9 @@
 /* Contacts Layout styles */
 .contacts-layout {
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	font-family: var(--font_family);
-	background-color: var(--background_color);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: var(--font_family);
+  background-color: var(--background_color);
 }

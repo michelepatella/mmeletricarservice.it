@@ -1,5 +1,5 @@
 /* Video styles */
 .video {
-	width: var(--video_width);
-	height: auto;
+  width: var(--video_width);
+  height: auto;
 }

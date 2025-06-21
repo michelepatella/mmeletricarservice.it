@@ -11,19 +11,19 @@ import CustomText from "./CustomText";
  * @constructor
  */
 function CustomBackButton() {
-	return (
-		<span className="custom-back-button">
-			{/* Close button symbol */}
-			<LeftOutlined />
+  return (
+    <span className="custom-back-button">
+      {/* Close button symbol */}
+      <LeftOutlined />
 
-			{/* Label for the close button */}
-			<CustomText
-				type="body"
-				disableAnimation={true}
-				text={BACK_BUTTON_LABEL}
-			/>
-		</span>
-	);
+      {/* Label for the close button */}
+      <CustomText
+        type="body"
+        disableAnimation={true}
+        text={BACK_BUTTON_LABEL}
+      />
+    </span>
+  );
 }
 
 export default CustomBackButton;

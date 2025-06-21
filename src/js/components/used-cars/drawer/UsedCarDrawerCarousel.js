@@ -10,49 +10,35 @@ import { Carousel, Image } from "antd";
  * @constructor
  */
 function UsedCarDrawerCarousel(props) {
-	return (
-		<div className="carousel-container">
-			{/* Carousel */}
-			<Carousel
-				arrows
-				swipeToSlide={true}
-				infinite={false}
-			>
-				{/* Show all the images available */}
-				{props.usedCarInfo?.images?.length > 0 ? (
-
-					// In case there is at least one available image
-					props.usedCarInfo?.images?.map((
-						item,
-						index
-					) => (
-						<Image.PreviewGroup
-							key={index}
-							preview={{
-								maskClosable: true,
-							}}
-						>
-							<Image
-								src={item}
-								preview={true}
-							/>
-						</Image.PreviewGroup>
-					))
-
-				) : (
-
-					// In case of any image available, show an image
-					// indicating the user that no image is available for that car
-					<Image
-						src="/images/empty-carousel-image.svg"
-						dots={false}
-						preview={false}
-					/>
-
-				)}
-			</Carousel>
-		</div>
-	);
+  return (
+    <div className="carousel-container">
+      {/* Carousel */}
+      <Carousel arrows swipeToSlide={true} infinite={false}>
+        {/* Show all the images available */}
+        {props.usedCarInfo?.images?.length > 0 ? (
+          // In case there is at least one available image
+          props.usedCarInfo?.images?.map((item, index) => (
+            <Image.PreviewGroup
+              key={index}
+              preview={{
+                maskClosable: true,
+              }}
+            >
+              <Image src={item} preview={true} />
+            </Image.PreviewGroup>
+          ))
+        ) : (
+          // In case of any image available, show an image
+          // indicating the user that no image is available for that car
+          <Image
+            src="/images/empty-carousel-image.svg"
+            dots={false}
+            preview={false}
+          />
+        )}
+      </Carousel>
+    </div>
+  );
 }
 
 export default UsedCarDrawerCarousel;

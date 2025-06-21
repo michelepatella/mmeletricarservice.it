@@ -9,17 +9,17 @@
  * @constructor
  */
 function SectionContainer({ children, id, custStyle }) {
-	// Use only the customized styles
-	// to get the final section container style-handling
-	const style = { ...custStyle };
+  // Use only the customized styles
+  // to get the final section container style-handling
+  const style = { ...custStyle };
 
-	return (
-		// The section division containing all the
-		// children representing the section components
-		<div id={id} className="section-container" style={style}>
-			{children}
-		</div>
-	);
+  return (
+    // The section division containing all the
+    // children representing the section components
+    <div id={id} className="section-container" style={style}>
+      {children}
+    </div>
+  );
 }
 
 export default SectionContainer;

@@ -12,28 +12,28 @@ import { handleContainerStyle } from "../../logic/style-handling/backgroundConta
  * @constructor
  */
 function BackgroundContainer({ image, children, custStyle }) {
-	// Combine predefined and customized styles
-	// to get the final background container style-handling
-	const style = {
-		...handleContainerStyle(image),
-		...custStyle,
-	};
+  // Combine predefined and customized styles
+  // to get the final background container style-handling
+  const style = {
+    ...handleContainerStyle(image),
+    ...custStyle,
+  };
 
-	return (
-		// Motion division for containing the background
-		// and to generate an animation
-		<motion.div
-			style={style}
-			initial={{ opacity: 0 }}
-			whileInView={{ opacity: 1 }}
-			transition={{
-				duration: 2.0,
-				ease: "easeOut",
-			}}
-		>
-			{children}
-		</motion.div>
-	);
+  return (
+    // Motion division for containing the background
+    // and to generate an animation
+    <motion.div
+      style={style}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        duration: 2.0,
+        ease: "easeOut",
+      }}
+    >
+      {children}
+    </motion.div>
+  );
 }
 
 export default BackgroundContainer;

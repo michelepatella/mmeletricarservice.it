@@ -13,22 +13,22 @@ const { Content, Footer } = Layout;
  * @constructor
  */
 function Contacts() {
-	return (
-		<>
-			{/* Contacts Layout */}
-			<Layout className="contacts-layout" id="contacts">
-				{/* Contacts content */}
-				<Content className="contacts-content">
-					<ContactsContent />
-				</Content>
+  return (
+    <>
+      {/* Contacts Layout */}
+      <Layout className="contacts-layout" id="contacts">
+        {/* Contacts content */}
+        <Content className="contacts-content">
+          <ContactsContent />
+        </Content>
 
-				{/* Contacts footer */}
-				<Footer className="contacts-footer">
-					<ContactsFooter />
-				</Footer>
-			</Layout>
-		</>
-	);
+        {/* Contacts footer */}
+        <Footer className="contacts-footer">
+          <ContactsFooter />
+        </Footer>
+      </Layout>
+    </>
+  );
 }
 
 export default Contacts;

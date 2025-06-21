@@ -1,6 +1,5 @@
 /* Home Layout styles */
 .home-layout {
-	width: 100%;
-	font-family: var(--font_family);
-	background: transparent;
+  font-family: var(--font_family);
+  background: transparent;
 }
