@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { handleContainerStyle } from "../../logic/backgroundContainerStyleHandler";
+import { handleContainerStyle } from "../../logic/style-handling/backgroundContainerStyleHandler";
 
 /**
  * This component defines the background container of a section.
@@ -13,7 +13,7 @@ import { handleContainerStyle } from "../../logic/backgroundContainerStyleHandle
  */
 function BackgroundContainer({ image, children, custStyle }) {
 	// Combine predefined and customized styles
-	// to get the final background container style
+	// to get the final background container style-handling
 	const style = {
 		...handleContainerStyle(image),
 		...custStyle,

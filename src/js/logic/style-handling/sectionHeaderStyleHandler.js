@@ -1,7 +1,13 @@
 /**
- * Method to handle the style of the name of the
- * section of the section header dynamically
- * @returns {{fontFamily: string, color: string, marginBottom: number, opacity: number, fontWeight: string}}
+ * Method to handle the style-handling of the name of the
+ * section of the section header dynamically.
+ * @returns {{
+ * fontFamily: string,
+ * color: string,
+ * marginBottom: number,
+ * opacity: number,
+ * fontWeight: string
+ * }}
  */
 export const handleSectionNameStyle = () => {
 	return {
@@ -14,9 +20,12 @@ export const handleSectionNameStyle = () => {
 };
 
 /**
- * Method to handle the style of the subtitle
+ * Method to handle the style-handling of the subtitle
  * of the section header dynamically
- * @returns {{textAlign: string, width: string}}
+ * @returns {{
+ * textAlign: string,
+ * width: string
+ * }}
  */
 export const handleSubtitleStyle = () => {
 	return {

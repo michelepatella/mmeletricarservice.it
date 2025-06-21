@@ -1,6 +1,10 @@
 /**
- * Method to handle the Google Maps container style (when not available) dynamically
- * @returns {{background: string, opacity: string}}
+ * Method to handle the Google Maps container
+ * style-handling (when not available) dynamically.
+ * @returns {{
+ * background: string,
+ * opacity: string
+ * }}
  */
 export const handleGoogleMapsContainerStyle = () => {
 	return {
@@ -14,8 +18,14 @@ export const handleGoogleMapsContainerStyle = () => {
 };
 
 /**
- * Method to handle the description when Google Maps is not available dynamically
- * @returns {{marginRight: string, textAlign: string, marginTop: string, marginLeft: string}}
+ * Method to handle the description when Google
+ * Maps is not available dynamically.
+ * @returns {{
+ * marginRight: string,
+ * textAlign: string,
+ * marginTop: string,
+ * marginLeft: string
+ * }}
  */
 export const handleGoogleMapsUnavailableDescriptionStyle = () => {
 	return {

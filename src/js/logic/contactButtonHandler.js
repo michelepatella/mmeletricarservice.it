@@ -1,28 +1,28 @@
 import { EMAIL, EMAIL_PEC, FACEBOOK, PHONE } from "../utils/const";
 
 /**
- * Method to call when the email button is clicked
+ * Method to call when the email button is clicked.
  */
 export function onEmailButtonClick() {
 	window.location.href = "mailto:" + EMAIL;
 }
 
 /**
- * Method to call when the pec email button is clicked
+ * Method to call when the pec email button is clicked.
  */
 export function onPecButtonClick() {
 	window.location.href = "mailto:" + EMAIL_PEC;
 }
 
 /**
- * Method to call when the facebook button is clicked
+ * Method to call when the facebook button is clicked.
  */
 export function onFacebookButtonClick() {
 	window.open(FACEBOOK, "_blank");
 }
 
 /**
- * Method to call when the phone button is clicked
+ * Method to call when the phone button is clicked.
  */
 export function onPhoneButtonClick() {
 	window.location.href = "tel:" + PHONE;
@@ -43,14 +43,14 @@ export const contactClickHandler = {
 };
 
 /**
- * Definition of the home header buttons.
+ * Definition of the home header contact buttons.
  * @type {[
  * {onClick: onEmailButtonClick, src: string},
  * {onClick: onFacebookButtonClick, src: string},
  * {onClick: onPhoneButtonClick, src: string}
  * ]}
  */
-export const homeHeaderButtons = [
+export const homeHeaderContactButtons = [
 	{
 		src: "/icons/email_icon.svg",
 		onClick: onEmailButtonClick,

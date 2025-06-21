@@ -1,14 +1,16 @@
 import React from "react";
 import { CONTACTS, CTA_BUTTON_TEXT, PHONE } from "../../../utils/const";
 import { contactClickHandler } from "../../../logic/contactButtonHandler";
-import { handleNamePriceStyle } from "../../../logic/usedCarsStyleHandler";
+import { handleNamePriceStyle } from "../../../logic/style-handling/usedCarsStyleHandler";
 import CustomText from "../../custom/CustomText";
 import UsedCarOverview from "../UsedCarOverview";
 import CustomButton from "../../custom/CustomButton";
 import UsedCarDrawerCollapse from "./UsedCarDrawerCollapse";
 
 /**
- * Used Car Drawer Info Panel
+ * This component represents the info panel shown in the
+ * used car drawer, It contains all the information of an used
+ * car, including overview information and details.
  * @param props
  * @returns {React.JSX.Element}
  * @constructor
@@ -16,25 +18,12 @@ import UsedCarDrawerCollapse from "./UsedCarDrawerCollapse";
 function UsedCarDrawerInfoPanel(props) {
 	return (
 		<>
+
 			{/* Name of the car */}
 			<CustomText
 				type="heading"
-				text={props.usedCarOverview?.name || "-"}
-				disableAnimation={true}
-				style={{
-					marginTop: 0,
-					...handleNamePriceStyle(),
-				}}
-			/>
-
-			{/* Price */}
-			<CustomText
-				type="subheading"
 				text={
-					new Intl.NumberFormat("it-IT", {
-						style: "currency",
-						currency: "EUR",
-					}).format(parseFloat(props.usedCarOverview?.price)) || "-"
+					props.usedCarOverview?.name || "-"
 				}
 				disableAnimation={true}
 				style={{
@@ -43,7 +32,25 @@ function UsedCarDrawerInfoPanel(props) {
 				}}
 			/>
 
-			{/* Car's overview */}
+			{/* Price of the car */}
+			<CustomText
+				type="subheading"
+				text={
+					new Intl.NumberFormat("it-IT", {
+						style: "currency",
+						currency: "EUR",
+					}).format(parseFloat(
+						props.usedCarOverview?.price
+					)) || "-"
+				}
+				disableAnimation={true}
+				style={{
+					marginTop: 0,
+					...handleNamePriceStyle(),
+				}}
+			/>
+
+			{/* Car's overview information */}
 			<UsedCarOverview
 				showTitle={true}
 				usedCarOverview={props.usedCarOverview}
@@ -54,16 +61,24 @@ function UsedCarDrawerInfoPanel(props) {
 				isContact={true}
 				isCta={true}
 				text={CTA_BUTTON_TEXT}
-				icon={CONTACTS.find((contact) => contact?.value === PHONE)?.icon}
+				icon={CONTACTS.find(
+						contact =>
+							contact?.value === PHONE
+				)?.icon}
 				onClick={
 					contactClickHandler[
-						CONTACTS.find((contact) => contact?.value === PHONE)?.value
+						CONTACTS.find(
+							contact =>
+								contact?.value === PHONE
+						)?.value
 					]
 				}
 			/>
 
-			{/* Collapse with all used car information */}
-			<UsedCarDrawerCollapse usedCarInfo={props.usedCarInfo} />
+			{/* Collapse with all used car details */}
+			<UsedCarDrawerCollapse
+				usedCarInfo={props.usedCarInfo}
+			/>
 		</>
 	);
 }

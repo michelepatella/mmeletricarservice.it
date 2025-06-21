@@ -6,7 +6,7 @@ import {
 	handleParentStyle,
 	handleChildrenStyle,
 	handleHamburgerButtonStyle,
-} from "../../logic/menuStyleHandler";
+} from "../../logic/style-handling/menuStyleHandler";
 
 /**
  * This component represents the menu for small screens (e.g., smartphone).

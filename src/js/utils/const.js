@@ -1,3 +1,6 @@
+/**------------- data -------------**/
+export const STALE_TIME = 1000 * 60 * 5
+
 /**------------- contacts information -------------**/
 export const EMAIL = "mmeletricarservice@libero.it";
 export const EMAIL_PEC = "mmeletricarservice@pec.buffetti.it";

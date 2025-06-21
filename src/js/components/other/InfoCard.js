@@ -1,5 +1,5 @@
 import { Flex } from "antd";
-import { handleTitleStyle } from "../../logic/infoCardStyleHandler";
+import { handleTitleStyle } from "../../logic/style-handling/infoCardStyleHandler";
 import CustomText from "../custom/CustomText";
 
 /**

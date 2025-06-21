@@ -24,7 +24,7 @@ function CustomText(props) {
 	useIntersectionObserver(textRef);
 
 	// Combine predefined and customized styles
-	// to get the final text style
+	// to get the final text style-handling
 	const style = {
 		...(props.disableAnimation ? { opacity: "1" } : {}),
 		...props.style,

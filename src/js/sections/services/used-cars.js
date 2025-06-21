@@ -10,7 +10,7 @@ import {
 import {
 	handleScrollLabelStyle,
 	handleUnavailableUsedCarDescriptionStyle,
-} from "../../logic/usedCarsStyleHandler";
+} from "../../logic/style-handling/usedCarsStyleHandler";
 import SectionContainer from "../../components/sections/SectionContainer";
 import SectionHeader from "../../components/sections/SectionHeader";
 import UsedCarCard from "../../components/used-cars/UsedCarCard";

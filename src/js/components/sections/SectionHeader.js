@@ -3,7 +3,7 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import {
 	handleSectionNameStyle,
 	handleSubtitleStyle,
-} from "../../logic/sectionHeaderStyleHandler";
+} from "../../logic/style-handling/sectionHeaderStyleHandler";
 import CustomText from "../custom/CustomText";
 
 /**

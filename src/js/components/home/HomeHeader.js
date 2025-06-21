@@ -1,5 +1,5 @@
 import CustomIconButton from "../custom/CustomIconButton";
-import { homeHeaderButtons } from "../../logic/contactButtonHandler";
+import { homeHeaderContactButtons } from "../../logic/contactButtonHandler";
 
 /**
  * This component represents the header
@@ -12,7 +12,7 @@ function HomeHeader() {
 	return (
 		<>
 			{/* Add a home header button for each button specified */}
-			{homeHeaderButtons.map(({ src, onClick }) => (
+			{homeHeaderContactButtons.map(({ src, onClick }) => (
 				<CustomIconButton key={src} src={src} onClick={onClick} />
 			))}
 		</>

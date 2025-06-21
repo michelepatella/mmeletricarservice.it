@@ -8,7 +8,7 @@ import {
 import {
 	handleGoogleMapsContainerStyle,
 	handleGoogleMapsUnavailableDescriptionStyle,
-} from "../logic/whereWeAreStyleHandler";
+} from "../logic/style-handling/whereWeAreStyleHandler";
 import SectionContainer from "../components/sections/SectionContainer";
 import CustomText from "../components/custom/CustomText";
 import InfoCard from "../components/other/InfoCard";

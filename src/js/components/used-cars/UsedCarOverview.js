@@ -1,6 +1,6 @@
 import { Flex } from "antd";
 import { USED_CAR_OVERVIEW } from "../../utils/const";
-import { handleTextOverviewStyle } from "../../logic/usedCarsStyleHandler";
+import { handleTextOverviewStyle } from "../../logic/style-handling/usedCarsStyleHandler";
 import CustomText from "../custom/CustomText";
 
 /**
