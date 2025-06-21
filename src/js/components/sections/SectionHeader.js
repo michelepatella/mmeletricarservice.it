@@ -1,49 +1,59 @@
 import React, { useRef } from "react";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import {
-  handleSectionNameStyle,
-  handleSubtitleStyle,
+	handleSectionNameStyle,
+	handleSubtitleStyle,
 } from "../../logic/sectionHeaderStyleHandler";
 import CustomText from "../custom/CustomText";
 
 /**
- * Section Header
+ * This component represents the section header.
+ * The section header is used in the section to show its name,
+ * a title, and a description of the section. The section header is
+ * characterized by an entry animation, triggered whenever it becomes
+ * visible in the browser. The section header can be used to show
+ * other elements (such as images or videos).
  * @param props
  * @returns {React.JSX.Element}
  * @constructor
  */
 function SectionHeader(props) {
-  //to animate the whole header
-  const ref = useRef(null);
-  useIntersectionObserver(ref);
+	// Definition of a header reference, useful to generate
+	// an entry animation when the section becomes visible
+	const ref = useRef(null);
+	useIntersectionObserver(ref);
 
-  return (
-    <div ref={ref} className="section-header">
-      {/* Section title */}
-      <CustomText
-        type="body"
-        text={"• " + props.section}
-        style={handleSectionNameStyle()}
-      />
+	return (
+		<div
+			ref={ref}
+			className="section-header">
 
-      {/* Title */}
-      <CustomText
-        type="heading"
-        text={props.title}
-        style={{ textAlign: "center" }}
-      />
+			{/* Section name */}
+			<CustomText
+				type="body"
+				text={"• " + props.section}
+				style={handleSectionNameStyle()}
+			/>
 
-      {/* Subtitle */}
-      <CustomText
-        type="subheading"
-        text={props.subtitle}
-        style={handleSubtitleStyle()}
-      />
+			{/* Section title */}
+			<CustomText
+				type="heading"
+				text={props.title}
+				style={{ textAlign: "center" }}
+			/>
 
-      {/* Other contents (if any) */}
-      {props.children}
-    </div>
-  );
+			{/* Section subtitle */}
+			<CustomText
+				type="subheading"
+				text={props.subtitle}
+				style={handleSubtitleStyle()}
+			/>
+
+			{/* Other contents (if any) */}
+			{props.children}
+
+		</div>
+	);
 }
 
 export default SectionHeader;

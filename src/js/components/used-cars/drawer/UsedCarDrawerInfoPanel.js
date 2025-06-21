@@ -14,58 +14,58 @@ import UsedCarDrawerCollapse from "./UsedCarDrawerCollapse";
  * @constructor
  */
 function UsedCarDrawerInfoPanel(props) {
-  return (
-    <>
-      {/* Name of the car */}
-      <CustomText
-        type="heading"
-        text={props.usedCarOverview?.name || "-"}
-        disableAnimation={true}
-        style={{
-          marginTop: 0,
-          ...handleNamePriceStyle(),
-        }}
-      />
+	return (
+		<>
+			{/* Name of the car */}
+			<CustomText
+				type="heading"
+				text={props.usedCarOverview?.name || "-"}
+				disableAnimation={true}
+				style={{
+					marginTop: 0,
+					...handleNamePriceStyle(),
+				}}
+			/>
 
-      {/* Price */}
-      <CustomText
-        type="subheading"
-        text={
-          new Intl.NumberFormat("it-IT", {
-            style: "currency",
-            currency: "EUR",
-          }).format(parseFloat(props.usedCarOverview?.price)) || "-"
-        }
-        disableAnimation={true}
-        style={{
-          marginTop: 0,
-          ...handleNamePriceStyle(),
-        }}
-      />
+			{/* Price */}
+			<CustomText
+				type="subheading"
+				text={
+					new Intl.NumberFormat("it-IT", {
+						style: "currency",
+						currency: "EUR",
+					}).format(parseFloat(props.usedCarOverview?.price)) || "-"
+				}
+				disableAnimation={true}
+				style={{
+					marginTop: 0,
+					...handleNamePriceStyle(),
+				}}
+			/>
 
-      {/* Car's overview */}
-      <UsedCarOverview
-        showTitle={true}
-        usedCarOverview={props.usedCarOverview}
-      />
+			{/* Car's overview */}
+			<UsedCarOverview
+				showTitle={true}
+				usedCarOverview={props.usedCarOverview}
+			/>
 
-      {/* Call-To-Action Button */}
-      <CustomButton
-        isContact={true}
-        isCta={true}
-        text={CTA_BUTTON_TEXT}
-        icon={CONTACTS.find((contact) => contact?.value === PHONE)?.icon}
-        onClick={
-          contactClickHandler[
-            CONTACTS.find((contact) => contact?.value === PHONE)?.value
-          ]
-        }
-      />
+			{/* Call-To-Action Button */}
+			<CustomButton
+				isContact={true}
+				isCta={true}
+				text={CTA_BUTTON_TEXT}
+				icon={CONTACTS.find((contact) => contact?.value === PHONE)?.icon}
+				onClick={
+					contactClickHandler[
+						CONTACTS.find((contact) => contact?.value === PHONE)?.value
+					]
+				}
+			/>
 
-      {/* Collapse with all used car information */}
-      <UsedCarDrawerCollapse usedCarInfo={props.usedCarInfo} />
-    </>
-  );
+			{/* Collapse with all used car information */}
+			<UsedCarDrawerCollapse usedCarInfo={props.usedCarInfo} />
+		</>
+	);
 }
 
 export default UsedCarDrawerInfoPanel;

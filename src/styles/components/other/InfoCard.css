@@ -1,43 +1,43 @@
 /* Info Card styles */
 .info-card {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  background-color: var(--background_color);
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	background-color: var(--background_color);
 }
 
 /* Info Card Icon styles */
 .info-card-icon {
-  width: var(--info_card_icon_dimension);
-  height: var(--info_card_icon_dimension);
+	width: var(--info_card_icon_dimension);
+	height: var(--info_card_icon_dimension);
 }
 
 /* Info Card Flex container styles */
 .info-card-flex {
-  margin-top: var(--info_card_flex_margin_top);
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: var(--info_card_flex_gap);
+	margin-top: var(--info_card_flex_margin_top);
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: var(--info_card_flex_gap);
 }
 
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
-  .info-card {
-    width: var(--info_card_width_big);
-  }
+	.info-card {
+		width: var(--info_card_width_big);
+	}
 }
 
 /* ------ Medium screen (portrait and landscape) ------ */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .info-card {
-    width: var(--info_card_width_medium);
-  }
+	.info-card {
+		width: var(--info_card_width_medium);
+	}
 }
 
 /* ------ Small screens ------ */
 @media (max-width: 767px) {
-  .info-card {
-    width: var(--info_card_width_small_portrait);
-  }
+	.info-card {
+		width: var(--info_card_width_small_portrait);
+	}
 }

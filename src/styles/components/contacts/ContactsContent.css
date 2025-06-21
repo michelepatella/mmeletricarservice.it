@@ -1,8 +1,8 @@
 /* Contact buttons container styles */
 .contact-buttons-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: var(--contact_buttons_gap);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: var(--contact_buttons_gap);
 }

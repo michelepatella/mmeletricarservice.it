@@ -1,69 +1,69 @@
 /* Collapse styles */
 .used-car-drawer-collapse {
-  margin-top: var(--used_car_drawer_collapse_margin_top);
-  border: none;
-  border-radius: 0;
+	margin-top: var(--used_car_drawer_collapse_margin_top);
+	border: none;
+	border-radius: 0;
 }
 
 /* Collapse item styles */
 .ant-collapse-item {
-  border: none !important;
+	border: none !important;
 }
 
 /* Collapse Header and its text styles */
 .ant-collapse-header-text {
-  color: white !important;
-  font-weight: bold;
-  font-family: var(--font_family);
+	color: white !important;
+	font-weight: bold;
+	font-family: var(--font_family);
 }
 
 .ant-collapse-header {
-  margin: var(--used_car_drawer_collapse_header_margin_top_bottom) 0
-    var(--used_car_drawer_collapse_header_margin_top_bottom) 0;
-  border: none !important;
-  padding-left: 0 !important;
+	margin: var(--used_car_drawer_collapse_header_margin_top_bottom) 0
+		var(--used_car_drawer_collapse_header_margin_top_bottom) 0;
+	border: none !important;
+	padding-left: 0 !important;
 }
 
 /* Collapse content styles */
 .ant-collapse-content-box,
 .ant-collapse-content {
-  color: white;
-  font-family: var(--font_family);
-  border: none !important;
-  border-left: 0.5px solid var(--yellow_color) !important;
-  border-radius: 0 !important;
-  background-color: transparent !important;
+	color: white;
+	font-family: var(--font_family);
+	border: none !important;
+	border-left: 0.5px solid var(--yellow_color) !important;
+	border-radius: 0 !important;
+	background-color: transparent !important;
 }
 
 /* Collapse expand icon styles */
 .ant-collapse-expand-icon {
-  color: white;
+	color: white;
 }
 
 /* Collapse lists styles */
 .used-car-drawer-collapse-inner-list,
 .used-car-drawer-collapse-outer-list {
-  padding-inline-start: 0 !important;
-  margin-block-start: 0 !important;
+	padding-inline-start: 0 !important;
+	margin-block-start: 0 !important;
 }
 
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
-  .ant-collapse-header-text {
-    font-size: var(--body_font_size_big);
-  }
+	.ant-collapse-header-text {
+		font-size: var(--body_font_size_big);
+	}
 }
 
 /* ------ Medium screen (portrait and landscape) ------ */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .ant-collapse-header-text {
-    font-size: var(--body_font_size_medium);
-  }
+	.ant-collapse-header-text {
+		font-size: var(--body_font_size_medium);
+	}
 }
 
 /* ------ Small screen (portrait and landscape) ------ */
 @media (max-width: 767px) {
-  .ant-collapse-header-text {
-    font-size: var(--body_font_size_small);
-  }
+	.ant-collapse-header-text {
+		font-size: var(--body_font_size_small);
+	}
 }

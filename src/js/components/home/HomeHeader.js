@@ -1,37 +1,31 @@
-import {
-  onEmailButtonClick,
-  onFacebookButtonClick,
-  onPhoneButtonClick,
-} from "../../logic/contactButtonHandler";
 import CustomIconButton from "../custom/CustomIconButton";
+import { homeHeaderButtons } from "../../logic/contactButtonHandler";
 
 /**
- * Header of Home section
+ * This component represents the header
+ * of the Home section. It contains the company
+ * contact buttons, making them rapidly accessible.
  * @returns {Element}
  * @constructor
  */
 function HomeHeader() {
-  return (
-    <>
-      {/* Email Button */}
-      <CustomIconButton
-        src="/icons/email_icon.svg"
-        onClick={onEmailButtonClick}
-      />
-
-      {/* Facebook Button */}
-      <CustomIconButton
-        src="/icons/facebook_icon.svg"
-        onClick={onFacebookButtonClick}
-      />
-
-      {/* Phone Button */}
-      <CustomIconButton
-        src="/icons/phone_icon.svg"
-        onClick={onPhoneButtonClick}
-      />
-    </>
-  );
+	return (
+		<>
+			{/* Add a home header button for each button specified */}
+			{homeHeaderButtons.map((
+				{
+					src,
+					onClick
+				}
+			) => (
+				<CustomIconButton
+					key={src}
+					src={src}
+					onClick={onClick}
+				/>
+			))}
+		</>
+	);
 }
 
 export default HomeHeader;

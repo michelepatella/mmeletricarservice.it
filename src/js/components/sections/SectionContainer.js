@@ -1,20 +1,34 @@
 /**
- * Section Container
+ * This component represents the section container.
+ * As its name suggests, it is used as container for containing
+ * all the components which compose a section.
  * @param children
  * @param id
  * @param custStyle
  * @returns {JSX.Element}
  * @constructor
  */
-function SectionContainer({ children, id, custStyle }) {
-  //combine static and dynamic style
-  const style = { ...custStyle };
+function SectionContainer(
+	{
+		children,
+		id,
+		custStyle
+	}
+) {
+	// Use only the customized styles
+	// to get the final section container style
+	const style = { ...custStyle };
 
-  return (
-    <div id={id} className="section-container" style={style}>
-      {children}
-    </div>
-  );
+	return (
+		// The section division containing all the
+		// children representing the section components
+		<div
+			id={id}
+			className="section-container"
+			style={style}>
+			{children}
+		</div>
+	);
 }
 
 export default SectionContainer;

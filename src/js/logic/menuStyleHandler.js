@@ -5,9 +5,9 @@
  * @returns {{textDecoration: (string), fontWeight: (string)}}
  */
 export const handleParentStyle = (section, menuItem) => {
-  return {
-    fontWeight: section === menuItem?.href.replace("#", "") ? "bold" : "normal",
-  };
+	return {
+		fontWeight: section === menuItem?.href.replace("#", "") ? "bold" : "normal",
+	};
 };
 
 /**
@@ -17,10 +17,10 @@ export const handleParentStyle = (section, menuItem) => {
  * @returns {{textDecoration: (string), paddingLeft: string, fontWeight: (string)}}
  */
 export const handleChildrenStyle = (section, child) => {
-  return {
-    fontWeight: section === child?.href.replace("#", "") ? "bold" : "normal",
-    paddingLeft: "var(--menu_childrens_padding_left)",
-  };
+	return {
+		fontWeight: section === child?.href.replace("#", "") ? "bold" : "normal",
+		paddingLeft: "var(--menu_childrens_padding_left)",
+	};
 };
 
 /**
@@ -29,7 +29,7 @@ export const handleChildrenStyle = (section, child) => {
  * @returns {{display: (string)}}
  */
 export const handleHamburgerButtonStyle = (visible) => {
-  return {
-    display: visible ? "none" : "flex",
-  };
+	return {
+		display: visible ? "none" : "flex",
+	};
 };

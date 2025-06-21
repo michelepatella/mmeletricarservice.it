@@ -17,54 +17,54 @@ import { Helmet } from "react-helmet";
  * @constructor
  */
 function UsedCarDrawer({ usedCarOverview, setIsDrawerOpen }) {
-  const { data: usedCarInfo, isLoading } = useQuery({
-    queryKey: ["usedCarInfo", usedCarOverview?.id],
-    queryFn: () => fetchUsedCarData("usedCarInfo?id=" + usedCarOverview?.id),
-    enabled: !!usedCarOverview?.id,
-    staleTime: 1000 * 60 * 5,
-  });
+	const { data: usedCarInfo, isLoading } = useQuery({
+		queryKey: ["usedCarInfo", usedCarOverview?.id],
+		queryFn: () => fetchUsedCarData("usedCarInfo?id=" + usedCarOverview?.id),
+		enabled: !!usedCarOverview?.id,
+		staleTime: 1000 * 60 * 5,
+	});
 
-  useDrawerBackButtonHandler(setIsDrawerOpen);
+	useDrawerBackButtonHandler(setIsDrawerOpen);
 
-  return (
-    <>
-      {/* Drawer */}
-      <Drawer
-        className="used-car-drawer"
-        closeIcon={<CustomBackButton />}
-        onClose={() => onUsedCarDrawerClose(setIsDrawerOpen)}
-        open
-      >
-        {isLoading ? (
-          //loading outlined until the
-          //system is loading the used cars
-          <LoadingOutlined className="loading-outlined" spin />
-        ) : (
-          <Flex vertical>
-            {/* Flex container (info panel + carousel) */}
-            <Flex className="used-car-drawer-flex-horizontal" width="60%">
-              {/* Flex vertical container with info panel */}
-              <Flex
-                vertical
-                className="used-car-drawer-flex-vertical"
-                width="40%"
-              >
-                {/* Info Panel (Name, Price, Overview info,
+	return (
+		<>
+			{/* Drawer */}
+			<Drawer
+				className="used-car-drawer"
+				closeIcon={<CustomBackButton />}
+				onClose={() => onUsedCarDrawerClose(setIsDrawerOpen)}
+				open
+			>
+				{isLoading ? (
+					//loading outlined until the
+					//system is loading the used cars
+					<LoadingOutlined className="loading-outlined" spin />
+				) : (
+					<Flex vertical>
+						{/* Flex container (info panel + carousel) */}
+						<Flex className="used-car-drawer-flex-horizontal" width="60%">
+							{/* Flex vertical container with info panel */}
+							<Flex
+								vertical
+								className="used-car-drawer-flex-vertical"
+								width="40%"
+							>
+								{/* Info Panel (Name, Price, Overview info,
                                      CTA button and Collapse with details) */}
-                <UsedCarDrawerInfoPanel
-                  usedCarOverview={usedCarOverview}
-                  usedCarInfo={usedCarInfo}
-                />
-              </Flex>
+								<UsedCarDrawerInfoPanel
+									usedCarOverview={usedCarOverview}
+									usedCarInfo={usedCarInfo}
+								/>
+							</Flex>
 
-              {/* Carousel */}
-              <UsedCarDrawerCarousel usedCarInfo={usedCarInfo} />
-            </Flex>
-          </Flex>
-        )}
-      </Drawer>
-    </>
-  );
+							{/* Carousel */}
+							<UsedCarDrawerCarousel usedCarInfo={usedCarInfo} />
+						</Flex>
+					</Flex>
+				)}
+			</Drawer>
+		</>
+	);
 }
 
 export default UsedCarDrawer;

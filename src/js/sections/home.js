@@ -14,27 +14,29 @@ const { Header, Content } = Layout;
  * @constructor
  */
 function Home() {
-  return (
-    <>
-      <BackgroundContainer
-        image="/images/home-image.avif"
-        custStyle={{ marginBottom: "var(--section_margin_bottom)" }}
-      >
-        {/* Home Layout */}
-        <Layout className="home-layout" id="home">
-          {/* Home header */}
-          <Header className="home-header">
-            <HomeHeader />
-          </Header>
+	return (
+		<>
+			<BackgroundContainer
+				image="/images/home-image.avif"
+				custStyle={{
+					marginBottom: "var(--section_margin_bottom)",
+				}}
+			>
+				{/* Home Layout */}
+				<Layout className="home-layout" id="home">
+					{/* Home header */}
+					<Header className="home-header">
+						<HomeHeader />
+					</Header>
 
-          {/* Home content */}
-          <Content className="home-content">
-            <HomeContent />
-          </Content>
-        </Layout>
-      </BackgroundContainer>
-    </>
-  );
+					{/* Home content */}
+					<Content className="home-content">
+						<HomeContent />
+					</Content>
+				</Layout>
+			</BackgroundContainer>
+		</>
+	);
 }
 
 export default Home;
