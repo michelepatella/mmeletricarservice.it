@@ -437,11 +437,6 @@ The project follows a fully automated deployment pipeline using Vercel and GitHu
 
 <br>
 
-<img width="651" alt="image" src="https://github.com/user-attachments/assets/e63ab0a0-10a9-4089-bcb1-f39296f57e9e" />
-
-<br>
-<br>
-
 ## 🔐 Environment Variables
 
 Environment variables are used to manage in a secure, scalable and maintanable way, all sensible configurations and secrets of the web application.
