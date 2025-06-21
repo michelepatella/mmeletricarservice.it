@@ -34,7 +34,7 @@ To enhance the company's digital presence and operational efficiency through a m
 
 ### 👤 Who
 
-Designed for customers, providing detailed information about the company — including its values, location, and contact details — along with an overview of services and a seamless browsing experience for available used vehicles.
+Designed for customers, providing detailed information about the company—including its values, location, and contact details—along with an overview of services and a seamless browsing experience for available used vehicles.
 <br>
 
 ### 📅 When
@@ -61,7 +61,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 | ☁️ Backend-as-a-Service | Supabase (PostgreSQL, Storage)    |
 | 🔐 Environment Variables| .env + Vercel Dashboard           |
 | 📦 Deployment & CI/CD   | Vercel + GitHub                   |
-| 🔍 SEO                  | Meta tags + React Helmet          |
+| 🔍 SEO                  | Meta tags                         |
 | 📈 Analytics            | Vercel Analytics                  |
 
 <br>
@@ -461,7 +461,6 @@ Environment-specific secrets (Supabase project keys) are:
 Search engine optimization has been implemented to ensure the web application is discoverable and ranks well for relevant queries.
 
 - **Meta Tags**: Each page (`index.html`, section pages, and used car drawers) includes a unique `<title>` and `<meta description>`.
-- **React Helmet**: SEO tags are dynamically injected based on the current route.
 - **Clean URLs**: Localized, human-readable URLs enhance both user experience and search relevance.
 - **Keyword-Optimized Content**: Text content has been carefully crafted with relevant keywords to improve rankings.
 - **HTTPS**: The entire application runs over a secure HTTPS connection.
@@ -511,7 +510,7 @@ Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring 
 
 | Metric                    | Target (Average)         |
 |---------------------------|--------------------------|
-| API Response Speed        |          111.5 ms        |
+| API Response Speed        |            111.5 ms      |
 | Memory Usage              |            45%           | 
 | Average CPU Usage         |            0.74%         |
 | CPU Throttle              |            11.7%         |
@@ -524,9 +523,9 @@ Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring 
 | Metric                    | Target (Average)         |
 |---------------------------|--------------------------|
 | Error rate                |          0%              |
-| Timeout rate              |       0.3%               |
-| Time to First Byte        |   573 ms                 |
-| Memory Usage              |  116 MB                  |
+| Timeout rate              |         0.3%             |
+| Time to First Byte        |        573 ms            |
+| Memory Usage              |        116 MB            |
 
 ### 📦 Deployment & CI/CD
 
@@ -565,4 +564,4 @@ Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring 
 
 <br>
 
-> Last update: May 12, 2025
+> Last update: June 21, 2025
