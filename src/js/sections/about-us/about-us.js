@@ -1,11 +1,8 @@
 import React, { useRef } from "react";
-import { Helmet } from "react-helmet";
 import {
     ABOUT_US_DESCRIPTION,
     ABOUT_US_SUBTITLE,
-    ABOUT_US_TITLE,
-    HELMET_ABOUT_US_DESCRIPTION,
-    HELMET_ABOUT_US_TITLE,
+    ABOUT_US_TITLE
 } from "../../utils/const";
 import { useVideoAnimation } from "../../hooks/useVideoAnimation";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
@@ -27,15 +24,6 @@ function AboutUs() {
 
   return (
     <>
-      {/* React Helmet */}
-      <Helmet>
-        <title>{HELMET_ABOUT_US_TITLE}</title>
-        <meta
-          name="description"
-          content={HELMET_ABOUT_US_DESCRIPTION}
-        />
-      </Helmet>
-
       <SectionContainer id="chi-siamo">
         {/* Section header */}
         <SectionHeader

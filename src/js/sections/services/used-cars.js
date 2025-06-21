@@ -1,14 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
-import { Helmet } from "react-helmet";
 import { LoadingOutlined } from "@ant-design/icons";
 import { fetchUsedCarData } from "../../utils/fetcher";
 import {
   USED_CARS_TITLE,
   USED_CARS_SUBTITLE,
   USED_CAR_SCROLL_LABEL_TEXT,
-  USED_CARS_UNAVAILABLE_DESCRIPTION,
-  HELMET_USED_CAR_TITLE,
-  HELMET_USED_CAR_DESCRIPTION,
+  USED_CARS_UNAVAILABLE_DESCRIPTION
 } from "../../utils/const";
 import {
   handleScrollLabelStyle,
@@ -33,15 +30,6 @@ function UsedCars() {
 
   return (
     <>
-      {/* React Helmet */}
-      <Helmet>
-        <title>{HELMET_USED_CAR_TITLE}</title>
-        <meta
-          name="description"
-          content={HELMET_USED_CAR_DESCRIPTION}
-        />
-      </Helmet>
-
       <SectionContainer id="auto-usate">
         {/* Section Header */}
         <SectionHeader

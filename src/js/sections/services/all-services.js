@@ -1,9 +1,4 @@
-import { Helmet } from "react-helmet";
-import {
-    ALL_SERVICES,
-    HELMET_ALL_SERVICES_DESCRIPTION,
-    HELMET_ALL_SERVICES_TITLE
-} from "../../utils/const";
+import {ALL_SERVICES} from "../../utils/const";
 import { handleSectionNameStyle } from "../../logic/sectionHeaderStyleHandler";
 import InfoCard from "../../components/other/InfoCard";
 import SectionContainer from "../../components/sections/SectionContainer";
@@ -17,15 +12,6 @@ import CustomText from "../../components/custom/CustomText";
 function AllServices() {
   return (
     <>
-      {/* React Helmet */}
-      <Helmet>
-        <title>{HELMET_ALL_SERVICES_TITLE}</title>
-        <meta
-          name="description"
-          content={HELMET_ALL_SERVICES_DESCRIPTION}
-        />
-      </Helmet>
-
       <SectionContainer id="tutti-i-servizi">
         {/* Section title */}
         <CustomText

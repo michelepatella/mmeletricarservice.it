@@ -1,12 +1,9 @@
-import { Helmet } from "react-helmet";
 import {
     WHERE_WE_ARE_INFO,
     WHERE_WE_ARE_DESCRIPTION,
     WHERE_WE_ARE_TITLE,
     GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
-    WHERE_WE_ARE_SUBTITLE,
-    HELMET_WHERE_WE_ARE_TITLE,
-    HELMET_WHERE_WE_ARE_DESCRIPTION,
+    WHERE_WE_ARE_SUBTITLE
 } from "../utils/const";
 import {
   handleGoogleMapsContainerStyle,
@@ -25,15 +22,6 @@ import SectionHeader from "../components/sections/SectionHeader";
 function WhereWeAre(props) {
   return (
     <>
-      {/* React Helmet */}
-      <Helmet>
-        <title>{HELMET_WHERE_WE_ARE_TITLE}</title>
-        <meta
-          name="description"
-          content={HELMET_WHERE_WE_ARE_DESCRIPTION}
-        />
-      </Helmet>
-
       <SectionContainer id="dove-siamo">
         {/* Section header */}
         <SectionHeader

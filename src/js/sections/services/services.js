@@ -1,10 +1,7 @@
 import React, { useRef } from "react";
-import { Helmet } from "react-helmet";
 import {
     SERVICES_TITLE,
-    SERVICES_SUBTITLE,
-    HELMET_SERVICES_TITLE,
-    HELMET_SERVICES_DESCRIPTION
+    SERVICES_SUBTITLE
 } from "../../utils/const";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import SectionContainer from "../../components/sections/SectionContainer";
@@ -23,15 +20,6 @@ function Services() {
 
   return (
     <>
-      {/* React Helmet */}
-      <Helmet>
-        <title>{HELMET_SERVICES_TITLE}</title>
-        <meta
-          name="description"
-          content={HELMET_SERVICES_DESCRIPTION}
-        />
-      </Helmet>
-
       <BackgroundContainer image="/images/services-image.avif">
         <SectionContainer id="servizi">
           {/* Section Header */}

@@ -28,15 +28,6 @@ function UsedCarDrawer({ usedCarOverview, setIsDrawerOpen }) {
 
   return (
     <>
-      {/* React Helmet */}
-      <Helmet>
-        <title>{usedCarOverview?.name} a Gravina in Puglia (BA)</title>
-        <meta
-          name="description"
-          content={"Scopri i dettagli su " + usedCarOverview?.name + " a Gravina in Puglia (BA)."}
-        />
-      </Helmet>
-
       {/* Drawer */}
       <Drawer
         className="used-car-drawer"

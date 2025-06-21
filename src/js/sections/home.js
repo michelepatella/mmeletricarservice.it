@@ -1,6 +1,4 @@
 import { Layout } from "antd";
-import { Helmet } from "react-helmet";
-import {HELMET_HOME_DESCRIPTION, HELMET_HOME_TITLE} from "../utils/const";
 import HomeHeader from "../components/home/HomeHeader";
 import HomeContent from "../components/home/HomeContent";
 import BackgroundContainer from "../components/sections/BackgroundContainer";
@@ -18,15 +16,6 @@ const { Header, Content } = Layout;
 function Home() {
   return (
     <>
-      {/* React Helmet */}
-      <Helmet>
-        <title>{HELMET_HOME_TITLE}</title>
-        <meta
-          name="description"
-          content={HELMET_HOME_DESCRIPTION}
-        />
-      </Helmet>
-
       <BackgroundContainer
         image="/images/home-image.avif"
         custStyle={{ marginBottom: "var(--section_margin_bottom)" }}

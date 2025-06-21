@@ -1,8 +1,5 @@
 import React, { useRef } from "react";
-import { Helmet } from "react-helmet";
 import {
-    HELMET_OUR_VALUES_DESCRIPTION,
-    HELMET_OUR_VALUES_TITLE,
     OUR_VALUES_DESCRIPTION,
     OUR_VALUES_SUBTITLE,
     OUR_VALUES_TITLE,
@@ -24,15 +21,6 @@ function OurValues() {
 
   return (
     <>
-      {/* React Helmet */}
-      <Helmet>
-        <title>{HELMET_OUR_VALUES_TITLE}</title>
-        <meta
-          name="description"
-          content={HELMET_OUR_VALUES_DESCRIPTION}
-        />
-      </Helmet>
-
       <SectionContainer id="i-nostri-valori">
         {/* Section header */}
         <SectionHeader
