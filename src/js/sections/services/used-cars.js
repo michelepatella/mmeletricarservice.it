@@ -32,7 +32,7 @@ function UsedCars() {
     isLoading
   } = useQuery({
     queryKey: ["usedCarsOverview"],
-    queryFn: () => fetchUsedCarData("usedCarsOverview"),
+    queryFn: () => fetchUsedCarData("used-cars-overview/usedCarsOverview"),
     staleTime: STALE_TIME,
   });
 

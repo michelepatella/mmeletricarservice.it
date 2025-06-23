@@ -26,7 +26,7 @@ function UsedCarDrawer({ usedCarOverview, setIsDrawerOpen }) {
       isLoading
   } = useQuery({
     queryKey: ["usedCarInfo", usedCarOverview?.id],
-    queryFn: () => fetchUsedCarData("usedCarInfo?id=" + usedCarOverview?.id),
+    queryFn: () => fetchUsedCarData("used-car-info/usedCarInfo?id=" + usedCarOverview?.id),
     enabled: !!usedCarOverview?.id,
     staleTime: STALE_TIME,
   });

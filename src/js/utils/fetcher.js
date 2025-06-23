@@ -22,7 +22,7 @@ export const fetchUsedCarData = async (endpoint) => {
     const { used_car_info } = data;
 
     // Return data
-    if (endpoint === "usedCarsOverview") {
+    if (endpoint.includes("usedCarsOverview")) {
       return data?.used_cars_overview;
     } else {
       return used_car_info;
