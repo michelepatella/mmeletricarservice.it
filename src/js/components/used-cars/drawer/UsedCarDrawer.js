@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchUsedCarData } from "../../../utils/fetcher";
-import {Alert, Drawer, Flex} from "antd";
+import {Drawer, Flex} from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
-import {ERROR_MESSAGE, STALE_TIME} from "../../../utils/const";
+import {STALE_TIME} from "../../../utils/const";
 import { onUsedCarDrawerClose } from "../../../logic/handling/usedCarDrawerHandler";
-import { useDrawerBackButtonHandler } from "../../../hooks/useDrawerBackDrawer";
+import { useDrawerBackButtonHandler } from "../../../hooks/useDrawerBackButton";
 import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
 import UsedCarDrawerInfoPanel from "./UsedCarDrawerInfoPanel";
 import CustomBackButton from "../../custom/CustomBackButton";
@@ -22,7 +22,7 @@ import CustomBackButton from "../../custom/CustomBackButton";
 function UsedCarDrawer({ usedCarOverview, setIsDrawerOpen }) {
   // Fetch used car details and images
   const {
-      data: usedCarInfo,
+      data,
       isLoading
   } = useQuery({
     queryKey: ["usedCarInfo", usedCarOverview?.id],
@@ -30,6 +30,7 @@ function UsedCarDrawer({ usedCarOverview, setIsDrawerOpen }) {
     enabled: !!usedCarOverview?.id,
     staleTime: STALE_TIME,
   });
+  const usedCarInfo = data?.used_car_info || null;
 
   // Back button handler to capture whenever the user
   // clicks the back button

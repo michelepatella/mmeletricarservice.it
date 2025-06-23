@@ -4,7 +4,8 @@ export const STALE_TIME = 1000 * 60 * 5;
 /**------------- Contacts information -------------**/
 export const EMAIL = "mmeletricarservice@libero.it";
 export const EMAIL_PEC = "mmeletricarservice@pec.buffetti.it";
-export const FACEBOOK =
+export const FACEBOOK_PAGE_NAME = "MM Eletricar Service";
+export const FACEBOOK_LINK =
   "https://www.facebook.com/profile.php?id=61573235319851&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true";
 export const PHONE = "0803267837";
 export const P_IVA = "08650830725";
@@ -307,7 +308,7 @@ export const CONTACTS = [
     icon: "/icons/email_icon.svg",
   },
   {
-    value: "MM Eletricar Service",
+    value: FACEBOOK_PAGE_NAME,
     icon: "/icons/facebook_icon.svg",
   },
 ];

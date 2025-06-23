@@ -1,4 +1,4 @@
-import { EMAIL, EMAIL_PEC, FACEBOOK, PHONE } from "../../utils/const";
+import { EMAIL, EMAIL_PEC, FACEBOOK_LINK, PHONE } from "../../utils/const";
 
 /**
  * Method to call when the email button is clicked.
@@ -18,7 +18,7 @@ export function onPecButtonClick() {
  * Method to call when the facebook button is clicked.
  */
 export function onFacebookButtonClick() {
-  window.open(FACEBOOK, "_blank");
+  window.open(FACEBOOK_LINK, "_blank");
 }
 
 /**

@@ -28,13 +28,14 @@ import CustomText from "../../components/custom/CustomText";
 function UsedCars() {
   // Load used cars overview information from the backend
   const {
-    data: usedCarsOverview,
+    data,
     isLoading
   } = useQuery({
     queryKey: ["usedCarsOverview"],
     queryFn: () => fetchUsedCarData("used-cars-overview/usedCarsOverview"),
     staleTime: STALE_TIME,
   });
+  const usedCarsOverview = data?.used_cars_overview || [];
 
   return (
     <>

@@ -7,7 +7,7 @@ import { USED_CAR_ALL_INFO } from "../../../utils/const";
  * This component represents a collapse used into the
  * used car drawer to contain all the information of a specific
  * category. The user can expand the collapse corresponding to a
- * category (e.g., 'Motore e Prestazioni') to show all the information contained.
+ * category (e.g., 'Engine and Performance') to show all the information contained.
  * @returns {React.JSX.Element}
  * @constructor
  */
