@@ -16,7 +16,7 @@
 }
 
 .ant-drawer-content-wrapper {
-  width: 100vw !important;
+  width: var(--used_car_drawer_content_wrapper_width) !important;
   position: fixed;
   animation: slideDrawerRight 0.4s ease-out;
 }
@@ -29,7 +29,7 @@
 
 /* User car drawer flex horizontal container styles */
 .used-car-drawer-flex-horizontal {
-  height: 100% !important;
+  height: var(--used_car_drawer_flex_horizontal_height) !important;
 }
 
 /* ----------- Big screen ----------- */
@@ -40,11 +40,11 @@
   }
 
   .used-car-drawer-flex-vertical {
-    border: 1px solid var(--light_gray_border_color);
+    border: var(--used_car_drawer_flex_horizontal_vertical_border) solid var(--light_gray_border_color);
     border-radius: var(--border_radius);
     padding: var(--used_car_drawer_info_panel_padding);
     background-color: transparent;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--used_car_drawer_flex_horizontal_vertical_box_shadow);
   }
 
   .ant-drawer-header {
@@ -75,11 +75,11 @@
   }
 
   .used-car-drawer-flex-vertical {
-    border: 1px solid var(--light_gray_border_color);
+    border: var(--used_car_drawer_flex_horizontal_vertical_border) solid var(--light_gray_border_color);
     border-radius: var(--border_radius);
     padding: var(--used_car_drawer_info_panel_padding);
     background-color: transparent;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--used_car_drawer_flex_horizontal_vertical_box_shadow);
   }
 
   .ant-drawer-header {

@@ -2,7 +2,7 @@
 .used-car-drawer-collapse {
   margin-top: var(--used_car_drawer_collapse_margin_top);
   border: none;
-  border-radius: 0;
+  border-radius: var(--used_car_drawer_collapse_border_radius);
 }
 
 /* Collapse item styles */
@@ -18,10 +18,9 @@
 }
 
 .ant-collapse-header {
-  margin: var(--used_car_drawer_collapse_header_margin_top_bottom) 0
-    var(--used_car_drawer_collapse_header_margin_top_bottom) 0;
+  margin: var(--used_car_drawer_collapse_header_margins);
   border: none !important;
-  padding-left: 0 !important;
+  padding-left: var(--used_car_drawer_collapse_header_padding_left) !important;
 }
 
 /* Collapse content styles */
@@ -30,8 +29,8 @@
   color: white;
   font-family: var(--font_family);
   border: none !important;
-  border-left: 0.5px solid var(--yellow_color) !important;
-  border-radius: 0 !important;
+  border-left: var(--used_car_drawer_collapse_content_border_left) solid var(--yellow_color) !important;
+  border-radius: var(--used_car_drawer_collapse_content_border_radius) !important;
   background-color: transparent !important;
 }
 
@@ -43,8 +42,8 @@
 /* Collapse lists styles */
 .used-car-drawer-collapse-inner-list,
 .used-car-drawer-collapse-outer-list {
-  padding-inline-start: 0 !important;
-  margin-block-start: 0 !important;
+  padding-inline-start: var(--used_car_drawer_collapse_lists_padding_inline_start) !important;
+  margin-block-start: var(--used_car_drawer_collapse_lists_margin_block_start) !important;
 }
 
 /* ------ Big screen ------- */

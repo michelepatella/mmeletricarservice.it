@@ -2,7 +2,7 @@
 .custom-button {
   color: white;
   font-family: var(--font_family);
-  border: 1px solid white;
+  border: var(--custom_button_border) solid white;
   border-radius: var(--border_radius);
   padding: var(--custom_button_padding);
   background-color: var(--background_color) !important;
@@ -11,10 +11,10 @@
 
 .custom-button:hover {
   font-family: var(--font_family) !important;
-  border: 1px solid white !important;
+  border: var(--custom_button_border) solid white !important;
   border-radius: var(--border_radius) !important;
   padding: var(--custom_button_padding) !important;
-  filter: invert(1);
+  filter: invert(var(--custom_button_filter_perc));
   transition: all 0.3s ease !important;
 }
 
@@ -22,7 +22,7 @@
 .contact-button {
   color: white;
   font-family: var(--font_family);
-  padding: 0;
+  padding: var(--contact_button_padding);
   box-shadow: none;
   background-color: transparent !important;
 }
@@ -41,7 +41,7 @@
 }
 
 .cta-button:hover {
-  transform: scale(1.03);
+  transform: scale(var(--cta_button_scale));
   border-radius: var(--border_radius) !important;
 }
 

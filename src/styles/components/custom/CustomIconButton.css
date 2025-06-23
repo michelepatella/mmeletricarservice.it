@@ -2,7 +2,7 @@
 .custom-icon-button {
   margin-top: var(--custom_icon_button_margins);
   margin-right: var(--custom_icon_button_margins);
-  padding: 0;
+  padding: var(--custom_icon_button_padding);
   border: none;
   cursor: pointer;
   background: none;
@@ -10,7 +10,7 @@
 }
 
 .custom-icon-button:hover {
-  transform: scale(1.1);
+  transform: scale(var(--custom_icon_button_scale));
 }
 
 /* Custom Icon Button img styles */

@@ -1,14 +1,14 @@
 /* Carousel container styles */
 .carousel-container {
-  max-width: 100%;
+  max-width: var(--used_car_drawer_carousel_container_max_width);
   border-radius: var(--border_radius) !important;
 }
 
 /* Carousel image container styles */
 .carousel-container .ant-image {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
+  width: var(--used_car_drawer_carousel_image_width);
+  height: var(--used_car_drawer_carousel_image_height);
+  max-width: var(--used_car_drawer_carousel_image_max_width);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,9 +17,9 @@
 
 /* Carousel image styles */
 .carousel-container .ant-image-img {
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
+  width: var(--used_car_drawer_carousel_image_width);
+  height: var(--used_car_drawer_carousel_image_height);
+  max-width: var(--used_car_drawer_carousel_image_max_width);
   object-fit: cover;
   border-radius: var(--border_radius) !important;
 }

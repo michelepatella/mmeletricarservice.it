@@ -22,24 +22,24 @@
   color: white !important;
   background-color: transparent !important;
   border: none !important;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  z-index: 1000 !important;
+  box-shadow: var(--hamburger_button_box_shadow);
+  backdrop-filter: blur(var(--hamburger_button_backdrop_filter_blur));
+  z-index: var(--hamburger_button_z_index) !important;
 }
 
 /* Menu containers styles */
 .menu-container-big {
   display: block;
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
+  top: var(--menu_container_big_top);
+  left: var(--menu_container_big_left);
+  z-index: var(--menu_container_big_z_index);
 }
 
 .menu-container-small {
   display: block;
   position: fixed;
-  z-index: 99999;
+  z-index: var(--menu_container_small_z_index);
 }
 
 /* Small menu general styles */
@@ -103,7 +103,7 @@
 
 /* Big menu ink styles */
 .ant-anchor-ink {
-  width: 2px;
+  width: var(--menu_anchor_ink_width);
   margin-top: var(--menu_ink_margin_top);
   background-color: var(--yellow_color) !important;
 }

@@ -8,6 +8,7 @@
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
   transition: opacity 0.5s ease-out;
 }
 

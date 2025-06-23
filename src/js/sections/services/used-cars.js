@@ -1,12 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
 import { LoadingOutlined } from "@ant-design/icons";
-import { fetchUsedCarData } from "../../utils/fetcher";
 import {
   USED_CARS_TITLE,
   USED_CARS_SUBTITLE,
   USED_CAR_SCROLL_LABEL_TEXT,
   USED_CARS_UNAVAILABLE_DESCRIPTION,
-  STALE_TIME
 } from "../../utils/const";
 import {
   handleScrollLabelStyle,
@@ -16,6 +13,7 @@ import SectionContainer from "../../components/sections/SectionContainer";
 import SectionHeader from "../../components/sections/SectionHeader";
 import UsedCarCard from "../../components/used-cars/UsedCarCard";
 import CustomText from "../../components/custom/CustomText";
+import {useUsedCarsOverview} from "../../hooks/useUsedCarsOverview";
 
 /**
  * This component represents the Used car section.
@@ -27,15 +25,7 @@ import CustomText from "../../components/custom/CustomText";
  */
 function UsedCars() {
   // Load used cars overview information from the backend
-  const {
-    data,
-    isLoading
-  } = useQuery({
-    queryKey: ["usedCarsOverview"],
-    queryFn: () => fetchUsedCarData("used-cars-overview/usedCarsOverview"),
-    staleTime: STALE_TIME,
-  });
-  const usedCarsOverview = data?.used_cars_overview || [];
+  const { usedCarsOverview, isLoading } = useUsedCarsOverview();
 
   return (
     <>

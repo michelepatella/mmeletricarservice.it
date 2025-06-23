@@ -5,8 +5,8 @@
   bottom: var(--float_button_margins);
   right: var(--float_button_margins);
   position: fixed;
-  z-index: 99999;
-  border-radius: 50%;
+  z-index: var(--cookie_button_z_index);
+  border-radius: var(--cookie_button_border_radius);
   border: none;
   background-color: var(--blue_color);
   background-image: url("../../../../public/icons/cookie_icon.svg");
@@ -15,11 +15,11 @@
 }
 
 .cookie-button:hover {
-  scale: 1.1;
+  scale: var(--cookie_button_scale);
   bottom: var(--float_button_margins) !important;
   position: fixed;
-  z-index: 99999 !important;
-  border-radius: 50% !important;
+  z-index: var(--cookie_button_z_index) !important;
+  border-radius: var(--cookie_button_border_radius) !important;
   border: none !important;
   background-color: var(--blue_color) !important;
   background-image: url("../../../../public/icons/cookie_icon.svg") !important;

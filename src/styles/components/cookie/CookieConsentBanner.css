@@ -3,7 +3,7 @@
   font-size: var(--caption_text_font_size) !important;
   font-family: var(--font_family) !important;
   color: white !important;
-  z-index: 9999999 !important;
+  z-index: var(--cookie_consent_banner_z_index) !important;
   background: var(--background_color) !important;
 }
 
@@ -12,7 +12,7 @@
 #rcc-confirm-button {
   font-size: var(--caption_text_font_size) !important;
   font-family: var(--font_family) !important;
-  border: 1px solid white !important;
+  border: var(--cookie_consent_banner_border_buttons) solid white !important;
   border-radius: var(--border_radius) !important;
   padding: var(--cookie_consent_banner_button_padding) !important;
   transition: all 0.3s ease;

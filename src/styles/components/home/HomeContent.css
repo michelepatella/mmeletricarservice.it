@@ -12,22 +12,22 @@
 
 /* Home Title styles */
 .home-title {
-  margin-bottom: 0;
+  margin-bottom: var(--home_title_margin_bottom);
   color: var(--yellow_color);
   text-align: center;
   opacity: 0;
   animation: slideUpHomeTitle 1.5s ease forwards;
-  animation-delay: 0.7s;
+  animation-delay: var(--home_title_animation_delay);
 }
 
 /* Home Subtitle styles */
 .home-subtitle {
-  margin-top: 0;
+  margin-top: var(--home_subtitle_margin_top);
   color: white;
   text-align: center;
   opacity: 0;
   animation: slideUpHomeTitle 1.5s ease forwards;
-  animation-delay: 1.5s;
+  animation-delay: var(--home_subtitle_animation_delay);
 }
 
 /* ------ Big screen ------- */
