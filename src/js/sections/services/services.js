@@ -1,22 +1,22 @@
-import React, { useRef } from "react";
+import React from "react";
 import { SERVICES_TITLE, SERVICES_SUBTITLE } from "../../utils/const";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import SectionContainer from "../../components/sections/SectionContainer";
 import BackgroundContainer from "../../components/sections/BackgroundContainer";
 import SectionHeader from "../../components/sections/SectionHeader";
 
 /**
- * Services section
+ * This component represents the Service section.
+ * This section is just an introduction to the services offered by the
+ * company and the used cars available.
  * @returns {Element}
  * @constructor
  */
 function Services() {
-  //IntersectionObserver to generate the animation when the section is visible
-  const imageRef = useRef(null);
-  useIntersectionObserver(imageRef);
 
   return (
     <>
+      {/* Background container to contain the whole section and
+       use a customized background */}
       <BackgroundContainer image="/images/services-image.avif">
         <SectionContainer id="servizi">
           {/* Section Header */}

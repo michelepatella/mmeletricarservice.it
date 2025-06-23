@@ -1,78 +1,106 @@
-import { createClient } from "@supabase/supabase-js";
-
-const supabase = createClient(
-  process.env.DATABASE_URL,
-  process.env.SUPABASE_ANON_KEY,
-);
+import {supabase} from "./setup";
 
 /**
- * API to get all the used car information
+ * The following API retrieves all the information and images
+ * stored for a requested used car. The information retrieved include:
+ * - Engine and Performance
+ * - Emissions and Consumption
+ * - Exterior
+ * - Comfort and Interior
+ * While all the information is retrieved by running a query
+ * over the corresponding column, the images are retrieved from the
+ * storage bucket.
  * @param req
  * @param res
  * @returns {Promise<*>}
  */
 export default async function handler(req, res) {
   try {
+
+    // Read the id of the used car for which
+    // to retrieve information
     const { id } = req.query;
 
-    //get all engine and performance data
-    let { data: engine_performance, enginePerformanceError } = await supabase
-      .from("engine_and_performance")
-      .select("*")
-      .eq("id", id);
+    // Retrieve all engine and performance data
+    let {
+      data: engine_performance,
+      enginePerformanceError
+    } = await supabase
+        .from("engine_and_performance")
+        .select("*")
+        .eq("id", id);
 
-    //check if any error
+    // Check if any error occurred
     if (enginePerformanceError) {
-      console.log(enginePerformanceError);
+      console.error(enginePerformanceError);
     }
 
-    //get all emissions and consumption data
-    let { data: emissions_consumption, emissionsConsumptionError } =
-      await supabase.from("emissions_and_consumption").select("*").eq("id", id);
+    // Retrieve all emissions and consumption data
+    let {
+      data: emissions_consumption,
+      emissionsConsumptionError
+    } = await supabase
+        .from("emissions_and_consumption")
+        .select("*")
+        .eq("id", id);
 
-    //check if any error
+    // Check if any error occurred
     if (emissionsConsumptionError) {
-      console.log(emissionsConsumptionError);
+      console.error(emissionsConsumptionError);
     }
 
-    //get all exterior data
-    let { data: exterior, exteriorError } = await supabase
-      .from("exterior")
-      .select("*")
-      .eq("id", id);
+    // Retrieve all exterior data
+    let {
+      data: exterior,
+      exteriorError
+    } = await supabase
+        .from("exterior")
+        .select("*")
+        .eq("id", id);
 
-    //check if any error
+    // Check if any error occurred
     if (exteriorError) {
-      console.log(exteriorError);
+      console.error(exteriorError);
     }
 
-    //get all comfort and interior data
-    let { data: comfort_interior, comfortInteriorError } = await supabase
-      .from("comfort_and_interior")
-      .select("*")
-      .eq("id", id);
+    // Retrieve all comfort and interior data
+    let {
+      data: comfort_interior,
+      comfortInteriorError
+    } = await supabase
+        .from("comfort_and_interior")
+        .select("*")
+        .eq("id", id);
 
-    //check if any error
+    // Check if any error
     if (comfortInteriorError) {
-      console.log(comfortInteriorError);
+      console.error(comfortInteriorError);
     }
 
-    //get all the images of the car
-    const { data: files, error: imagesError } = await supabase.storage
-      .from("car-images")
-      .list(id);
+    // Retrieve all the images of the car
+    const {
+      data: files,
+      error: imagesError
+    } = await supabase.storage
+        .from("car-images")
+        .list(id);
 
     let imageUrls = [];
-    //if no error and there's at least an image
-    if (!imagesError && files?.length > 0) {
+    // If no error occurred and there's at least one image
+    if (
+        !imagesError &&
+        files?.length > 0
+    ) {
       imageUrls = files.map(
         (file) =>
-          supabase.storage.from("car-images").getPublicUrl(id + "/" + file.name)
-            .data.publicUrl,
+          supabase.storage
+              .from("car-images")
+              .getPublicUrl(id + "/" + file.name)
+              .data.publicUrl,
       );
     }
 
-    //collect all data together
+    // Collect all the retrieved data together
     const used_car_info = {
       ...engine_performance?.[0],
       ...emissions_consumption?.[0],
@@ -81,10 +109,14 @@ export default async function handler(req, res) {
       images: imageUrls,
     };
 
-    //return all data about used cars
-    res.status(200).json({ used_car_info: used_car_info });
+    // Return all the data about the used car
+    res.status(200).json({
+      used_car_info: used_car_info
+    });
   } catch (error) {
-    //handle errors
-    return res.status(400).json({ error: error.message });
+    // Handle errors
+    return res.status(400).json({
+      error: error.message
+    });
   }
 }

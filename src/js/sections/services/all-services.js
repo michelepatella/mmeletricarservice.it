@@ -5,7 +5,9 @@ import SectionContainer from "../../components/sections/SectionContainer";
 import CustomText from "../../components/custom/CustomText";
 
 /**
- * All services section
+ * This section represents All service section. The
+ * section shows all the specialized services that the company
+ * offers via informative cards (characterized by icon, title, and description).
  * @returns {Element}
  * @constructor
  */
@@ -20,10 +22,11 @@ function AllServices() {
           style={handleSectionNameStyle()}
         />
 
-        {/* Info Card for each service */}
-        {ALL_SERVICES?.map((service, index) => (
+        {/* Add an informative card for each
+        service offered by the company */}
+        {ALL_SERVICES?.map((service) => (
           <InfoCard
-            key={index}
+            key={service.title}
             title={service?.title}
             description={service?.description}
             icon={service?.icon}

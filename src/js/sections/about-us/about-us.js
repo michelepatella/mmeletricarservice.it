@@ -11,13 +11,15 @@ import CustomText from "../../components/custom/CustomText";
 import SectionHeader from "../../components/sections/SectionHeader";
 
 /**
- * About us section
+ * This component represents the About us sections,
+ * which aims at presenting the company.
  * @returns {Element}
  * @constructor
  */
 function AboutUs() {
-  //IntersectionObserver to generate the animation and
-  //start the video when the section is visible
+  // Create a reference for the video inserted into
+  // the section header, which shows a logo animation
+  // to be started when the section becomes visible
   const videoRef = useRef(null);
   const isVideoVisible = useIntersectionObserver(videoRef);
   useVideoAnimation(videoRef, isVideoVisible);
@@ -25,7 +27,7 @@ function AboutUs() {
   return (
     <>
       <SectionContainer id="chi-siamo">
-        {/* Section header */}
+        {/* Section header (title, subtitle, and video animation) */}
         <SectionHeader
           section="CHI SIAMO"
           title={ABOUT_US_TITLE}
@@ -44,8 +46,11 @@ function AboutUs() {
           }
         />
 
-        {/* Description */}
-        <CustomText type="body" text={ABOUT_US_DESCRIPTION} />
+        {/* Presentation of the company */}
+        <CustomText
+            type="body"
+            text={ABOUT_US_DESCRIPTION}
+        />
       </SectionContainer>
     </>
   );

@@ -1,24 +1,20 @@
-import React, { useRef } from "react";
+import React from "react";
 import {
   OUR_VALUES_DESCRIPTION,
   OUR_VALUES_SUBTITLE,
   OUR_VALUES_TITLE,
 } from "../../utils/const";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import SectionContainer from "../../components/sections/SectionContainer";
 import CustomText from "../../components/custom/CustomText";
 import SectionHeader from "../../components/sections/SectionHeader";
 
 /**
- * Our values section
+ * This component represents Our values section,
+ * which aims to describe objectives, mission, and values of the company.
  * @returns {Element}
  * @constructor
  */
 function OurValues() {
-  //IntersectionObserver to generate the animation when the section is visible
-  const imageRef = useRef(null);
-  useIntersectionObserver(imageRef);
-
   return (
     <>
       <SectionContainer id="i-nostri-valori">
@@ -29,8 +25,12 @@ function OurValues() {
           subtitle={OUR_VALUES_SUBTITLE}
         />
 
-        {/* Description */}
-        <CustomText type="body" text={OUR_VALUES_DESCRIPTION} />
+        {/* Description of the company
+        objectives, mission, and values  */}
+        <CustomText
+            type="body"
+            text={OUR_VALUES_DESCRIPTION}
+        />
       </SectionContainer>
     </>
   );

@@ -26,9 +26,9 @@ function ContactsContent() {
         {/* Contact buttons container (contains all the contact buttons) */}
         <div className="contact-buttons-container">
           {/* Add a button for each contact available */}
-          {CONTACTS?.map((contact, index) => (
+          {CONTACTS?.map((contact) => (
             <CustomButton
-              key={index}
+              key={contact.value}
               isContact={true}
               isCta={false}
               text={contact?.value}

@@ -17,9 +17,9 @@ function UsedCarDrawerCarousel(props) {
         {/* Show all the images available */}
         {props.usedCarInfo?.images?.length > 0 ? (
           // In case there is at least one available image
-          props.usedCarInfo?.images?.map((item, index) => (
+          props.usedCarInfo?.images?.map((item) => (
             <Image.PreviewGroup
-              key={index}
+              key={item}
               preview={{
                 maskClosable: true,
               }}

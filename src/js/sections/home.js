@@ -3,19 +3,22 @@ import HomeHeader from "../components/home/HomeHeader";
 import HomeContent from "../components/home/HomeContent";
 import BackgroundContainer from "../components/sections/BackgroundContainer";
 
-/**
- * Home Layout definition
- */
+// Home Layout definition:
+// it's composed by a header and a content
 const { Header, Content } = Layout;
 
 /**
- * Home section
+ * This component represents the Home section. It is divided into two parts:
+ * - Header: contains contact buttons to rapidly contact the company
+ * - Content: contains title and description
  * @returns {JSX.Element}
  * @constructor
  */
 function Home() {
   return (
     <>
+      {/* Background container to contain the whole section and
+       use a customized background */}
       <BackgroundContainer
         image="/images/home-image.avif"
         custStyle={{
@@ -23,7 +26,10 @@ function Home() {
         }}
       >
         {/* Home Layout */}
-        <Layout className="home-layout" id="home">
+        <Layout
+            className="home-layout"
+            id="home"
+        >
           {/* Home header */}
           <Header className="home-header">
             <HomeHeader />
