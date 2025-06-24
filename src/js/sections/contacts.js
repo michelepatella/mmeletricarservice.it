@@ -1,6 +1,6 @@
 import { Layout } from "antd";
 import ContactsFooter from "../components/contacts/ContactsFooter";
-import ContactsContent from "../components/contacts/ContactsContent";
+import ContactsContent from "../components/contacts/ContactsContent/ContactsContent";
 
 // Contati Layout definition:
 // it's composed by a content and footer

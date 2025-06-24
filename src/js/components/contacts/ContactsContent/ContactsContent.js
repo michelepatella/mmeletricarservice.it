@@ -1,8 +1,8 @@
-import { CONTACTS_TITLE, CONTACTS, CONTACTS_SUBTITLE } from "../../utils/const";
-import { contactClickHandler } from "../../logic/handling/contactButtonHandler";
-import CustomButton from "../custom/CustomButton";
-import SectionContainer from "../sections/SectionContainer";
-import SectionHeader from "../sections/SectionHeader";
+import { CONTACTS_TITLE, CONTACTS, CONTACTS_SUBTITLE } from "../../../utils/const";
+import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
+import CustomButton from "../../custom/CustomButton";
+import SectionContainer from "../../sections/SectionContainer";
+import SectionHeader from "../../sections/SectionHeader";
 
 /**
  * This component represent the content
