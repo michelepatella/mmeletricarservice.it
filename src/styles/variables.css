@@ -196,7 +196,8 @@
   --video_width: 80%;
 
   /* -------- Used cars -------- */
-  --used_cars_padding: 1rem;
+  --used_cars_container_padding: 1rem;
+  --used_cars_container_linear_gradient: 30px;
   --used_cars_scroll_label_margin_left: 22%;
   --unavailable_used_cars_image_dimension: 250px;
 

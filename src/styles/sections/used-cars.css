@@ -3,13 +3,19 @@
   width: var(--section_max_width);
   display: flex;
   flex-direction: row;
-  padding: var(--used_cars_padding);
+  padding: var(--used_cars_container_padding);
   gap: var(--used_car_card_gap);
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   transition: opacity 0.5s ease-out;
+  mask-image: linear-gradient(
+          to right,
+          transparent 0px, black var(--used_cars_container_linear_gradient),
+          black calc(100% - var(--used_cars_container_linear_gradient)),
+          transparent 100%
+  );
 }
 
 .used-cars-container::-webkit-scrollbar {
