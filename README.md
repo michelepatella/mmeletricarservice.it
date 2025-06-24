@@ -410,7 +410,7 @@ Response example:
 
 The backend architecture levarages Supabase as a Backend-as-a-Service platform, combining PostgreSQL database and Storage bucket in a scalable environment.
 
-** 💿 Data Layer **
+💿 **Data Layer**
 
 - Relational database
 - Index created on the `id` fields to optimize query performance
@@ -418,12 +418,12 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 - `ON DELETE CASCADE` to ensure the proper handling of related data when records are deleted
 - Attributes governed by contraints to enforce rules for data quality and consistency (`NOT NULL`, `CHECK`)
 
-** 🖼️ Storage **
+🖼️ **Storage**
 
 - All used car images are stored in Supabase buckets with public access policies
 - Folder naming follows a strict convention (id of the used car) to allow deterministic fetching
 
-** 🔐 Row-Level Security (RLS) **
+🔐 **Row-Level Security (RLS)**
 
 - RLS policies restrict accesses
 - Insert/update/delete operations are blocked client-side and managed exclusively through admin interfaces
