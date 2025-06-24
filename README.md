@@ -50,20 +50,20 @@ The web application is available at https://mmeletricarservice.it 🌐
 
 ## 🛠️ Tech Stack
 
-| Layer                    | Technology                        |
-| ------------------------ | ----------------------------------|
-| ⚛️ Frontend              | React.js                          | 
-| 🖌️ UI Library            | Ant Design                        |
-| 🎨 Styling               | CSS + Custom Design Tokens        |
-| 🌀 Animations            | CSS + Framer Motion               |
-| ⚙️ API Communication     | Serverless API (Vercel Functions) |
-| 🔄 Fetching & Caching    | React Query                       |
-| ☁️ Backend-as-a-Service  | Supabase (PostgreSQL, Storage)    |
-| 🔐 Environment Variables | .env + Vercel Dashboard           |
-| 🧪 Testing               | Jest + React Testing Library      |
-| 📦 Deployment & CI/CD    | Vercel + GitHub                   |
-| 🔍 SEO                   | Meta tags                         |
-| 📈 Analytics             | Vercel Analytics                  |
+| Layer                    | Technology                              |
+| ------------------------ | --------------------------------------- |
+| ⚛️ Frontend              | React.js                                |  
+| 🖌️ UI Library            | Ant Design                              |
+| 🎨 Styling               | CSS + Custom Design Tokens              |
+| 🌀 Animations            | CSS + Framer Motion                     |
+| ⚙️ API Communication     | Serverless API (Vercel Functions)       |
+| 🔄 Fetching & Caching    | React Query                             |
+| ☁️ Backend-as-a-Service  | Supabase (PostgreSQL, Storage)          |
+| 🔐 Environment Variables | .env + Vercel Dashboard                 |
+| 🧪 Testing               | Jest + React Testing Library            |
+| 📦 Deployment & CI/CD    | Vercel + GitHub                         |
+| 🔍 SEO                   | Clean URLs, HTTPS, Meta Tags, Local SEO |
+| 📈 Analytics             | Vercel Analytics                        |
 
 <br>
 
@@ -148,9 +148,8 @@ This project follows the best practices of software engineering:
 <br>
   
 5. ✅ **Reliability & Robustness**:
-   - Comprehensive error handling for API and UI
+   - Error handling for API and UI
    - Loading states and fallback UIs improve resilience
-   - Clear feedback and user messages in edge cases
    - try-catch blocks and logging implemented
    - Automated unit and integration tests with Jest and React Testing Library
 
@@ -181,7 +180,7 @@ This project follows the best practices of software engineering:
 
 9. 🔄 **Change Readiness**:
    - Environment variables and settings externalized for flexibility
-   - Scalable deployment workflow (automatic deploy on Vercel)
+   - Scalable deployment workflow
    - CI/CD pipeline with automatic builds, preview deployments, and production rollbacks
    - Tests run on each push to `main` to ensure stability before deploy
 
@@ -239,13 +238,13 @@ This project follows the best practices of software engineering:
 
 The client-side is a modern, production-grade React.js application.
 
-- **Component-driven Architecture**: UI compose of reusable, atomic components.
-- **Routing**: Navigation managed via Hash Routing, supporting both static and dynamic routes.
-- **Styling & Theming**: Styling using Ant Design components, CSS and design tokens.
-- **State Management**: Local state handled with React's hooks (`useState`, `useEffect`, etc.) and logic is abstracted into custom hooks to promote reuse.
-- **Data Fecthing & Caching**: Data fetching and caching handled via React Query.
-- **Performance & Optimization**: Lazy loading, image modern formats and other tricks to optimize performance.
-- **Responsive & Accessible UI**: Design follows mobile-first approach, enhanced by advanced UI components and animations.
+- **Component-driven Architecture**: UI compose of reusable, atomic components
+- **Routing**: Navigation managed via Hash Routing, supporting both static and dynamic routes
+- **Styling & Theming**: Styling using Ant Design components, CSS and design tokens
+- **State Management**: Local state handled with React's hooks (`useState`, `useEffect`, etc.) and logic is abstracted into custom hooks to promote reuse
+- **Data Fecthing & Caching**: Data fetching and caching handled via React Query
+- **Performance & Optimization**: Lazy loading, image modern formats and other tricks to optimize performance
+- **Responsive & Accessible UI**: Design follows mobile-first approach, enhanced by advanced UI components and animations
 
 The application is composed of static and dynamic routes to serve both marketing and functional purposes:
 
@@ -440,14 +439,14 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 
 ## 📦 Deployment & CI/CD
 
-- Fully automated pipeline with Vercel and GitHub integration.
-- Commits to `main` trigger instant production builds at [mmeletricarservice.it](https://mmeletricarservice.it).
-- Preview deployments created for all branches and PRs for testing and review.
-- CI runs tests on every push and PR.
-- Real-time build, deployment, and performance monitoring via Vercel Dashboard.
-- Versioned deploys with easy rollback to previous stable releases.
-- Secure management of environment variables and secrets in Vercel.
-- Enables rapid, reliable delivery aligned with modern DevOps best practices.
+- Fully automated pipeline with Vercel and GitHub integration
+- Commits to `main` trigger instant production builds at [mmeletricarservice.it](https://mmeletricarservice.it)
+- Preview deployments created for all branches and PRs for testing and review
+- CI runs tests on every push and PR
+- Real-time build, deployment, and performance monitoring via Vercel Dashboard
+- Versioned deploys with easy rollback to previous stable releases
+- Secure management of environment variables and secrets in Vercel
+- Enables rapid, reliable delivery aligned with modern DevOps best practices
 
 <br>
 
@@ -469,12 +468,11 @@ Environment-specific secrets (Supabase project keys) are:
 
 Search engine optimization has been implemented to ensure the web application is discoverable and ranks well for relevant queries.
 
-- **Meta Tags**: Each page (`index.html`, section pages, and used car drawers) includes a unique `<title>` and `<meta description>`.
-- **Clean URLs**: Localized, human-readable URLs enhance both user experience and search relevance.
-- **Keyword-Optimized Content**: Text content has been carefully crafted with relevant keywords to improve rankings.
-- **HTTPS**: The entire application runs over a secure HTTPS connection.
-- **Google Maps Integration**: Embedded Google Maps via `<iframe>` supports local SEO targeting.
-- **Favicon and Branding**: A custom favicon and consistent branding improve recognizability in search results and browser tabs.
+- **Clean URLs**: Localized, human-readable URLs enhance both user experience and search relevance
+- **Keyword-Optimized Content**: Text content has been carefully crafted with relevant keywords to improve rankings
+- **HTTPS**: The entire application runs over a secure HTTPS connection
+- **Google Maps Integration**: Embedded Google Maps via `<iframe>` supports local SEO targeting
+- **Favicon and Branding**: A custom favicon and consistent branding improve recognizability in search results and browser tabs
 
 Vercel Analytics is used to monitor and optimize the UX and app performance. It offers valuable insights into the real-world usage of the app, including key metrics such as:
 
@@ -579,4 +577,4 @@ The platform can collect anonymized user interaction data, which can be analyzed
 
 <br>
 
-> Last update: June 21, 2025
+> Last update: June 24, 2025
