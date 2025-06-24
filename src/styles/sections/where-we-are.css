@@ -12,5 +12,6 @@
   width: var(--google_maps_iframe_width);
   height: var(--google_maps_iframe_height);
   border: var(--google_maps_iframe_border);
-  filter: invert(var(--google_maps_iframe_filter_perc)) hue-rotate(var(--google_maps_iframe_filter_rotation));
+  filter: invert(var(--google_maps_iframe_filter_perc))
+    hue-rotate(var(--google_maps_iframe_filter_rotation));
 }

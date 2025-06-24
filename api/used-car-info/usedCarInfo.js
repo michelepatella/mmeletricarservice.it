@@ -1,8 +1,8 @@
-import {getEnginePerformanceData} from "./getters/getEnginePerformanceData.js";
-import {getEmissionsConsumptionData} from "./getters/getEmissionsConsumptionsData.js";
-import {getExteriorData} from "./getters/getExteriorData.js";
-import {getComfortInteriorData} from "./getters/getComfortInteriorData.js";
-import {getCarImages} from "./getters/getCarImages.js";
+import { getEnginePerformanceData } from "./getters/getEnginePerformanceData.js";
+import { getEmissionsConsumptionData } from "./getters/getEmissionsConsumptionsData.js";
+import { getExteriorData } from "./getters/getExteriorData.js";
+import { getComfortInteriorData } from "./getters/getComfortInteriorData.js";
+import { getCarImages } from "./getters/getCarImages.js";
 
 /**
  * The following API retrieves all the information and images
@@ -20,22 +20,21 @@ import {getCarImages} from "./getters/getCarImages.js";
  */
 export default async function handler(req, res) {
   try {
-
     // Read the id of the used car for which
     // to retrieve information
     const { id } = req.query;
 
     // Retrieve engine and performance data
-    const engine_performance = await getEnginePerformanceData(id)
+    const engine_performance = await getEnginePerformanceData(id);
 
     // Retrieve emissions and consumptions data
-    const emissions_consumption = await getEmissionsConsumptionData(id)
+    const emissions_consumption = await getEmissionsConsumptionData(id);
 
     // Retrieve exterior data
-    const exterior = await getExteriorData(id)
+    const exterior = await getExteriorData(id);
 
     // Retrieve comfort and interior data
-    const comfort_interior = await getComfortInteriorData(id)
+    const comfort_interior = await getComfortInteriorData(id);
 
     // Retrieve all the images of the car
     const imageUrls = await getCarImages(id);
@@ -51,14 +50,13 @@ export default async function handler(req, res) {
 
     // Return all the data about the used car
     res.status(200).json({
-      used_car_info: used_car_info
+      used_car_info: used_car_info,
     });
-
   } catch (error) {
     // Handle errors
     console.log(error);
     return res.status(400).json({
-      error: error.message
+      error: error.message,
     });
   }
 }

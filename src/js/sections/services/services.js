@@ -12,7 +12,6 @@ import SectionHeader from "../../components/sections/SectionHeader";
  * @constructor
  */
 function Services() {
-
   return (
     <>
       {/* Background container to contain the whole section and

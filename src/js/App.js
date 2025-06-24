@@ -3,9 +3,7 @@ import { HashRouter } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Button } from "antd";
-import {
-  useCookieConsent,
-} from "./hooks/useCookieConsent";
+import { useCookieConsent } from "./hooks/useCookieConsent";
 import Home from "./sections/home";
 import AboutUs from "./sections/about-us/about-us";
 import OurValues from "./sections/about-us/our-values";
@@ -44,7 +42,7 @@ import "../styles/components/other/Menu.css";
 import "../styles/components/other/InfoCard.css";
 import "../styles/components/other/LoadingOutlined.css";
 import "../styles/variables.css";
-import {handleCookieButtonClick} from "./logic/handling/cookieButtonHandler";
+import { handleCookieButtonClick } from "./logic/handling/cookieButtonHandler";
 
 /**
  * App

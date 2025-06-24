@@ -29,8 +29,11 @@
   color: white;
   font-family: var(--font_family);
   border: none !important;
-  border-left: var(--used_car_drawer_collapse_content_border_left) solid var(--yellow_color) !important;
-  border-radius: var(--used_car_drawer_collapse_content_border_radius) !important;
+  border-left: var(--used_car_drawer_collapse_content_border_left) solid
+    var(--yellow_color) !important;
+  border-radius: var(
+    --used_car_drawer_collapse_content_border_radius
+  ) !important;
   background-color: transparent !important;
 }
 
@@ -42,8 +45,12 @@
 /* Collapse lists styles */
 .used-car-drawer-collapse-inner-list,
 .used-car-drawer-collapse-outer-list {
-  padding-inline-start: var(--used_car_drawer_collapse_lists_padding_inline_start) !important;
-  margin-block-start: var(--used_car_drawer_collapse_lists_margin_block_start) !important;
+  padding-inline-start: var(
+    --used_car_drawer_collapse_lists_padding_inline_start
+  ) !important;
+  margin-block-start: var(
+    --used_car_drawer_collapse_lists_margin_block_start
+  ) !important;
 }
 
 /* ------ Big screen ------- */

@@ -1,11 +1,11 @@
-import {Drawer, Flex} from "antd";
+import { Drawer, Flex } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 import { onUsedCarDrawerClose } from "../../../logic/handling/usedCarDrawerHandler";
 import { useDrawerBackButtonHandler } from "../../../hooks/useDrawerBackButton";
 import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
 import UsedCarDrawerInfoPanel from "./UsedCarDrawerInfoPanel";
 import CustomBackButton from "../../custom/CustomBackButton";
-import {useUsedCarInfo} from "../../../hooks/useUsedCarInfo";
+import { useUsedCarInfo } from "../../../hooks/useUsedCarInfo";
 
 /**
  * This component represents the used car drawer,
@@ -19,9 +19,9 @@ import {useUsedCarInfo} from "../../../hooks/useUsedCarInfo";
  */
 function UsedCarDrawer({ usedCarOverview, setIsDrawerOpen }) {
   // Fetch used car details and images
-    const { usedCarInfo, isLoading } = useUsedCarInfo(
-        { usedCarId: usedCarOverview?.id }
-    );
+  const { usedCarInfo, isLoading } = useUsedCarInfo({
+    usedCarId: usedCarOverview?.id,
+  });
 
   // Back button handler to capture whenever the user
   // clicks the back button

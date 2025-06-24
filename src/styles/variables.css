@@ -101,7 +101,8 @@
   --used_car_drawer_flex_horizontal_gap_big_medium: 2rem;
   --used_car_drawer_flex_horizontal_gap_small: 3rem;
   --used_car_drawer_flex_horizontal_vertical_border: 1px;
-  --used_car_drawer_flex_horizontal_vertical_box_shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+  --used_car_drawer_flex_horizontal_vertical_box_shadow: 0 50px 50px
+    rgba(0, 0, 0, 0.2);
   --used_car_drawer_header_padding_left_big: 4rem;
   --used_car_drawer_header_padding_left_small_portrait_medium_portrait: 3.2rem;
   --used_car_drawer_header_padding_left_small_landscape_medium_landscape: 3.2rem;

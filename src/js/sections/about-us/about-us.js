@@ -47,10 +47,7 @@ function AboutUs() {
         />
 
         {/* Presentation of the company */}
-        <CustomText
-            type="body"
-            text={ABOUT_US_DESCRIPTION}
-        />
+        <CustomText type="body" text={ABOUT_US_DESCRIPTION} />
       </SectionContainer>
     </>
   );

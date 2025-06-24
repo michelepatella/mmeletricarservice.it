@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import {STALE_TIME} from "../utils/const";
-import {fetchUsedCarData} from "../utils/fetcher";
+import { STALE_TIME } from "../utils/const";
+import { fetchUsedCarData } from "../utils/fetcher";
 
 /**
  * Custom hook to fetch the overview list of used cars, by
@@ -13,24 +13,19 @@ import {fetchUsedCarData} from "../utils/fetcher";
  * }}
  */
 export const useUsedCarsOverview = () => {
-    // useQuery to fetch all used
-    // car overview information
-    const {
-        data,
-        isLoading,
-        isError
-    } = useQuery({
-        queryKey: ["usedCarsOverview"],
-        queryFn: () => fetchUsedCarData("used-cars-overview/usedCarsOverview"),
-        staleTime: STALE_TIME,
-    });
+  // useQuery to fetch all used
+  // car overview information
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["usedCarsOverview"],
+    queryFn: () => fetchUsedCarData("used-cars-overview/usedCarsOverview"),
+    staleTime: STALE_TIME,
+  });
 
-    // Check if any error
-    if (isError)
-        console.error("Error while fetching used cars overview data.");
+  // Check if any error
+  if (isError) console.error("Error while fetching used cars overview data.");
 
-    return {
-        usedCarsOverview: data?.used_cars_overview || [],
-        isLoading
-    };
+  return {
+    usedCarsOverview: data?.used_cars_overview || [],
+    isLoading,
+  };
 };

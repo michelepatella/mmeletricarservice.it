@@ -3,7 +3,8 @@ import {
   WHERE_WE_ARE_DESCRIPTION,
   WHERE_WE_ARE_TITLE,
   GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
-  WHERE_WE_ARE_SUBTITLE, GOOGLE_MAPS_LINK,
+  WHERE_WE_ARE_SUBTITLE,
+  GOOGLE_MAPS_LINK,
 } from "../utils/const";
 import {
   handleGoogleMapsContainerStyle,
@@ -25,7 +26,6 @@ function WhereWeAre(props) {
   return (
     <>
       <SectionContainer id="dove-siamo">
-
         {/* Section header */}
         <SectionHeader
           section="DOVE SIAMO"
@@ -34,10 +34,7 @@ function WhereWeAre(props) {
         />
 
         {/* Description */}
-        <CustomText
-            type="body"
-            text={WHERE_WE_ARE_DESCRIPTION}
-        />
+        <CustomText type="body" text={WHERE_WE_ARE_DESCRIPTION} />
 
         {/* Google Maps (shown only in case of cookie accepting) */}
         {props.cookiesAccepted ? (

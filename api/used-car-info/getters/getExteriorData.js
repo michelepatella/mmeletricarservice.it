@@ -7,20 +7,17 @@ import { supabase } from "../../setup.js";
  * @returns {Promise<Object|null>}
  */
 export async function getExteriorData(id) {
-    // Retrieve all exterior data
-    const {
-        data: exterior,
-        error: exteriorError,
-    } = await supabase
-        .from("exterior")
-        .select("*")
-        .eq("id", id);
+  // Retrieve all exterior data
+  const { data: exterior, error: exteriorError } = await supabase
+    .from("exterior")
+    .select("*")
+    .eq("id", id);
 
-    // Check if any error occurred
-    if (exteriorError) {
-        console.error(exteriorError);
-        return null;
-    }
+  // Check if any error occurred
+  if (exteriorError) {
+    console.error(exteriorError);
+    return null;
+  }
 
-    return exterior?.[0] || null;
+  return exterior?.[0] || null;
 }

@@ -18,10 +18,7 @@ function Contacts() {
   return (
     <>
       {/* Contacts Layout */}
-      <Layout
-          className="contacts-layout"
-          id="contacts"
-      >
+      <Layout className="contacts-layout" id="contacts">
         {/* Contacts content */}
         <Content className="contacts-content">
           <ContactsContent />

@@ -27,10 +27,7 @@ function OurValues() {
 
         {/* Description of the company
         objectives, mission, and values  */}
-        <CustomText
-            type="body"
-            text={OUR_VALUES_DESCRIPTION}
-        />
+        <CustomText type="body" text={OUR_VALUES_DESCRIPTION} />
       </SectionContainer>
     </>
   );

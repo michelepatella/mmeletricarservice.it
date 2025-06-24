@@ -7,20 +7,15 @@ import { supabase } from "../../setup.js";
  * @returns {Promise<Object|null>}
  */
 export async function getEmissionsConsumptionData(id) {
-    // Retrieve all emissions and consumptions data
-    const {
-        data: emissions_consumption,
-        error: emissionsConsumptionError,
-    } = await supabase
-        .from("emissions_and_consumption")
-        .select("*")
-        .eq("id", id);
+  // Retrieve all emissions and consumptions data
+  const { data: emissions_consumption, error: emissionsConsumptionError } =
+    await supabase.from("emissions_and_consumption").select("*").eq("id", id);
 
-    // Check if any error occurred
-    if (emissionsConsumptionError) {
-        console.error(emissionsConsumptionError);
-        return null;
-    }
+  // Check if any error occurred
+  if (emissionsConsumptionError) {
+    console.error(emissionsConsumptionError);
+    return null;
+  }
 
-    return emissions_consumption?.[0] || null;
+  return emissions_consumption?.[0] || null;
 }

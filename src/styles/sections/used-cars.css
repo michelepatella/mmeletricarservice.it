@@ -11,10 +11,11 @@
   scroll-snap-type: x mandatory;
   transition: opacity 0.5s ease-out;
   mask-image: linear-gradient(
-          to right,
-          transparent 0px, black var(--used_cars_container_linear_gradient),
-          black calc(100% - var(--used_cars_container_linear_gradient)),
-          transparent 100%
+    to right,
+    transparent 0px,
+    black var(--used_cars_container_linear_gradient),
+    black calc(100% - var(--used_cars_container_linear_gradient)),
+    transparent 100%
   );
 }
 

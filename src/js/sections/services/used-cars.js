@@ -13,7 +13,7 @@ import SectionContainer from "../../components/sections/SectionContainer";
 import SectionHeader from "../../components/sections/SectionHeader";
 import UsedCarCard from "../../components/used-cars/UsedCarCard";
 import CustomText from "../../components/custom/CustomText";
-import {useUsedCarsOverview} from "../../hooks/useUsedCarsOverview";
+import { useUsedCarsOverview } from "../../hooks/useUsedCarsOverview";
 
 /**
  * This component represents the Used car section.
@@ -39,13 +39,8 @@ function UsedCars() {
 
         {/* Until data is being loaded show a loading outlined */}
         {isLoading ? (
-          <LoadingOutlined
-              className="loading-outlined"
-              spin
-          />
-        ) :
-
-        // Used cars overview information loading is finished, first
+          <LoadingOutlined className="loading-outlined" spin />
+        ) : // Used cars overview information loading is finished, first
         // check if there is at least one used car available
         usedCarsOverview?.length > 0 ? (
           <>
@@ -53,10 +48,7 @@ function UsedCars() {
             <div className="used-cars-container">
               {usedCarsOverview.map((car) => (
                 // Add a used car card for each available car
-                <UsedCarCard
-                    key={car.id}
-                    usedCarOverview={car}
-                />
+                <UsedCarCard key={car.id} usedCarOverview={car} />
               ))}
             </div>
 
@@ -68,9 +60,7 @@ function UsedCars() {
               style={handleScrollLabelStyle()}
             />
           </>
-
         ) : (
-
           // If no used car is available or an error occurred,
           // show an informative message
           <div className="unavailable-used-cars-container">

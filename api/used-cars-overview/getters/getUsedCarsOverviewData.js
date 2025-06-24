@@ -7,16 +7,14 @@ import { supabase } from "../../setup.js";
  * @returns {Promise<array|null>}
  */
 export async function getUsedCarsOverviewData() {
-    // Retrieve used cars overview information
-    const { data, error } = await supabase
-        .from("used_car")
-        .select("*");
+  // Retrieve used cars overview information
+  const { data, error } = await supabase.from("used_car").select("*");
 
-    // Check if any error occurred
-    if (error) {
-        console.error(error);
-        return null;
-    }
+  // Check if any error occurred
+  if (error) {
+    console.error(error);
+    return null;
+  }
 
-    return data;
+  return data;
 }

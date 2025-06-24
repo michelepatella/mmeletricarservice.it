@@ -19,7 +19,6 @@ export const fetchUsedCarData = async (endpoint) => {
 
     // Return the response in JSON format
     return await res.json();
-
   } catch (error) {
     // Handle errors while acquiring data
     console.error("Error while fetching data:", error);

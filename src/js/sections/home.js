@@ -26,10 +26,7 @@ function Home() {
         }}
       >
         {/* Home Layout */}
-        <Layout
-            className="home-layout"
-            id="home"
-        >
+        <Layout className="home-layout" id="home">
           {/* Home header */}
           <Header className="home-header">
             <HomeHeader />
