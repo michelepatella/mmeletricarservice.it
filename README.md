@@ -434,13 +434,14 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 
 ## 📦 Deployment & CI/CD
 
-The project follows a fully automated deployment pipeline using Vercel and GitHub:
-
-- Vercel is connected to the GitHub repository
-- Every successful commit to main is automatically built and deployed to https://mmeletricarservice.it
-- Preview deploys are generated for other branches and PRs
-- Real-time analytics and performance insights are available via Vercel Dashboard
-- Rollbacks and previous deploys are tracked for recovery or auditing
+- Fully automated pipeline with Vercel and GitHub integration.
+- Commits to `main` trigger instant production builds at [mmeletricarservice.it](https://mmeletricarservice.it).
+- Preview deployments created for all branches and PRs for testing and review.
+- CI runs tests on every push and PR.
+- Real-time build, deployment, and performance monitoring via Vercel Dashboard.
+- Versioned deploys with easy rollback to previous stable releases.
+- Secure management of environment variables and secrets in Vercel.
+- Enables rapid, reliable delivery aligned with modern DevOps best practices.
 
 <br>
 
