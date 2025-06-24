@@ -51,8 +51,8 @@ The web application is available at https://mmeletricarservice.it 🌐
 ## 🛠️ Tech Stack
 
 | Layer                    | Technology                        |
-| ------------------------ | --------------------------------- |
-| ⚛️ Frontend              | React.js                          |
+| ------------------------ | ----------------------------------|
+| ⚛️ Frontend              | React.js                          | 
 | 🖌️ UI Library            | Ant Design                        |
 | 🎨 Styling               | CSS + Custom Design Tokens        |
 | 🌀 Animations            | CSS + Framer Motion               |
@@ -60,6 +60,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 | 🔄 Fetching & Caching    | React Query                       |
 | ☁️ Backend-as-a-Service  | Supabase (PostgreSQL, Storage)    |
 | 🔐 Environment Variables | .env + Vercel Dashboard           |
+| 🧪 Testing               | Jest + React Testing Library      |
 | 📦 Deployment & CI/CD    | Vercel + GitHub                   |
 | 🔍 SEO                   | Meta tags                         |
 | 📈 Analytics             | Vercel Analytics                  |
@@ -70,37 +71,37 @@ The web application is available at https://mmeletricarservice.it 🌐
 
 <pre>
 .
-├── README.md
+├── .github/workflows # contains the CI pipeline
 ├── api # contains the serverless functions
-├── lighthouse.pdf
-├── package-lock.json
-├── package.json
 ├── public
-│   ├── doc # contains the Cookie and Privacy Policy, and the Legal Notes documents
+│   ├── docs # contains the Cookie and Privacy Policy, and the Legal Notes documents
 │   ├── favicon # contains the customized favicon
-│   ├── font # contains the font family used across the whole web application (Poppins)
+│   ├── font # contains the font family used across the whole web application
 │   ├── icons # contains the icons used in the web application
 │   ├── images # contains the images used in the web application
 │   ├── index.html
 │   ├── manifest.json
 │   └── robots.txt
 └── src
-    ├── index.css
-    ├── index.js
     ├── js 
-    │   ├── App.js
     │   ├── components # contains all the web application components
     │   ├── hooks # contains all custom hooks
-    │   ├── logic # contains all the business logic of the web application
+    │   ├── logic # contains the whole business logic of the web application
     │   ├── sections # contains all the section files
     │   └── utils # contains utility files
+    │   ├── App.js
     └── styles 
-        ├── App.css
         ├── components # contains component styles
         ├── sections # contains section styles
+        ├── App.css
         └── variables.css
+    ├── index.css
+    ├── index.js
+├── README.md 
+├── lighthouse.pdf
+├── package-lock.json
+├── package.json
 
-18 directories, 69 files
 </pre>
 
 <br>
@@ -124,6 +125,7 @@ This project follows the best practices of software engineering:
    - In-code documentation and meaningful naming conventions
    - Text centralized in a `const.js` file for easier updates
    - Use of CSS variables and design tokens
+   - Tests are colocated with components for better traceability
 
 <br>
    
@@ -150,6 +152,7 @@ This project follows the best practices of software engineering:
    - Loading states and fallback UIs improve resilience
    - Clear feedback and user messages in edge cases
    - try-catch blocks and logging implemented
+   - Automated unit and integration tests with Jest and React Testing Library
 
 <br>
   
@@ -179,6 +182,8 @@ This project follows the best practices of software engineering:
 9. 🔄 **Change Readiness**:
    - Environment variables and settings externalized for flexibility
    - Scalable deployment workflow (automatic deploy on Vercel)
+   - CI/CD pipeline with automatic builds, preview deployments, and production rollbacks
+   - Tests run on each push to `main` to ensure stability before deploy
 
 <br>
 
@@ -219,8 +224,9 @@ This project follows the best practices of software engineering:
 
 📦 **Deployment & CI/CD**
 
-- Source control: GitHub
-- Automatic deployment to Vercel on push to main
+- GitHub + Vercel: automatic deploys on push to `main` and previews for PRs  
+- CI pipeline runs automated unit and integration tests on every commit  
+- Rollbacks, env variables, and analytics managed via Vercel dashboard  
 
 <br>
 
@@ -368,32 +374,32 @@ Response example:
 
 ## 🔄 Data Fetching & Caching
 
-**Declarative Data Fetching**
+**📡 Declarative Data Fetching**
 
 - Minimizes redundant requests
 - Simplifies data fetching using `useQuery`
 
-**Cache-First Approach**
+**🧠 Cache-First Approach**
 
 - Retrieves data from cache before network request
 - Cached data is revalidated for freshness
 
-**Automatic Background Refetching**
+**🔁 Automatic Background Refetching**
 
 - Periodic background re-fetching for up-to-date info
 - Reduces perceived latency for a seamless UX
 
-**Stale-While-Revalidate**
+**⏳ Stale-While-Revalidate**
 
 - Shows cached data immediately while fetching new data
 - New data replaces old data seamlessly for an uninterrupted experience
 
-**Error Handling & Retries**
+**🛡️ Error Handling & Retries**
 
 - Built-in retry mechanism with exponential backoff for failed requests
 - Ensures resilience during temporary issues (e.g., network failures)
 
-**Query Deduplication**
+**🚫 Query Deduplication**
 
 - Prevents redundant requests for the same data
 - Reduces server load and improves performance
