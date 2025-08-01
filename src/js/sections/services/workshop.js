@@ -5,20 +5,20 @@ import SectionContainer from "../../components/sections/SectionContainer";
 import CustomText from "../../components/custom/CustomText";
 
 /**
- * This section represents All service section. The
+ * This section represents Workshop section. The
  * section shows all the specialized services that the company
  * offers via informative cards (characterized by icon, title, and description).
  * @returns {Element}
  * @constructor
  */
-function AllServices() {
+function Workshop() {
   return (
     <>
-      <SectionContainer id="tutti-i-servizi">
+      <SectionContainer id="officina">
         {/* Section title */}
         <CustomText
           type="body"
-          text="• TUTTI I SERVIZI"
+          text="• OFFICINA"
           style={handleSectionNameStyle()}
         />
 
@@ -37,4 +37,4 @@ function AllServices() {
   );
 }
 
-export default AllServices;
+export default Workshop;

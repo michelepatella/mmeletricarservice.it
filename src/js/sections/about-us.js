@@ -3,12 +3,12 @@ import {
   ABOUT_US_DESCRIPTION,
   ABOUT_US_SUBTITLE,
   ABOUT_US_TITLE,
-} from "../../utils/const";
-import { useVideoAnimation } from "../../hooks/useVideoAnimation";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import SectionContainer from "../../components/sections/SectionContainer";
-import CustomText from "../../components/custom/CustomText";
-import SectionHeader from "../../components/sections/SectionHeader";
+} from "../utils/const";
+import { useVideoAnimation } from "../hooks/useVideoAnimation";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import SectionContainer from "../components/sections/SectionContainer";
+import CustomText from "../components/custom/CustomText";
+import SectionHeader from "../components/sections/SectionHeader";
 
 /**
  * This component represents the About us sections,

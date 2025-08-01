@@ -5,10 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Button } from "antd";
 import { useCookieConsent } from "./hooks/useCookieConsent";
 import Home from "./sections/home";
-import AboutUs from "./sections/about-us/about-us";
-import OurValues from "./sections/about-us/our-values";
+import AboutUs from "./sections/about-us";
+import OurValues from "./sections/our-values";
 import Services from "./sections/services/services";
-import AllServices from "./sections/services/all-services";
+import Workshop from "./sections/services/workshop";
 import UsedCars from "./sections/services/used-cars";
 import WhereWeAre from "./sections/where-we-are";
 import Contacts from "./sections/contacts";
@@ -87,7 +87,7 @@ function App() {
             <AboutUs />
             <OurValues />
             <Services />
-            <AllServices />
+            <Workshop />
             <UsedCars />
             <WhereWeAre cookiesAccepted={cookiesAccepted} />
             <Contacts />

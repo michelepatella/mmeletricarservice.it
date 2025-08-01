@@ -30,20 +30,18 @@ export const SECTIONS = [
   {
     id: "chi-siamo",
     title: "Chi siamo",
-    children: [
-      {
-        id: "i-nostri-valori",
-        title: "I nostri valori",
-      },
-    ],
+  },
+  {
+    id: "i-nostri-valori",
+    title: "I nostri valori",
   },
   {
     id: "servizi",
     title: "Servizi",
     children: [
       {
-        id: "tutti-i-servizi",
-        title: "Tutti i servizi",
+        id: "officina",
+        title: "Officina",
       },
       {
         id: "auto-usate",
@@ -92,7 +90,7 @@ export const SERVICES_TITLE = "Eccellenza in ogni servizio";
 export const SERVICES_SUBTITLE =
   "Manutenzioni, riparazioni e diagnosi elettroniche: solo il meglio per la tua auto.";
 
-/**------------- "All services" texts -------------**/
+/**------------- "Workshop" texts -------------**/
 export const ALL_SERVICES = [
   {
     title: "Manutenzione centralina",

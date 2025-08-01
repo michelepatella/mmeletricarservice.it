@@ -3,10 +3,10 @@ import {
   OUR_VALUES_DESCRIPTION,
   OUR_VALUES_SUBTITLE,
   OUR_VALUES_TITLE,
-} from "../../utils/const";
-import SectionContainer from "../../components/sections/SectionContainer";
-import CustomText from "../../components/custom/CustomText";
-import SectionHeader from "../../components/sections/SectionHeader";
+} from "../utils/const";
+import SectionContainer from "../components/sections/SectionContainer";
+import CustomText from "../components/custom/CustomText";
+import SectionHeader from "../components/sections/SectionHeader";
 
 /**
  * This component represents Our values section,
