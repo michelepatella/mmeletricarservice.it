@@ -4,7 +4,7 @@ import {
   COOKIE_CONSENT_BANNER_DESCRIPTION,
   COOKIE_DECLINE_BUTTON_TEXT,
   COOKIE_EXPIRATION_DATE,
-} from "../../utils/const";
+} from "../../../utils/const";
 
 /**
  * This component represents the cookie
