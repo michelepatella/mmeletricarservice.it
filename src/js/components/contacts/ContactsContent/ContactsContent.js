@@ -1,4 +1,9 @@
-import { CONTACTS_TITLE, CONTACTS, CONTACTS_SUBTITLE } from "../../../utils/const";
+import {
+    CONTACTS_TITLE,
+    CONTACTS,
+    CONTACTS_SUBTITLE,
+    CONTACTS_SECTION_NAME
+} from "../../../utils/const";
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
 import CustomButton from "../../custom/CustomButton";
 import SectionContainer from "../../sections/SectionContainer";
@@ -18,7 +23,7 @@ function ContactsContent() {
       <SectionContainer id="contatti">
         {/* Contact section header (with title and subtitle) */}
         <SectionHeader
-          section="CONTATTI"
+          section={CONTACTS_SECTION_NAME}
           title={CONTACTS_TITLE}
           subtitle={CONTACTS_SUBTITLE}
         />

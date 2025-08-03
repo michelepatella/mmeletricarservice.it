@@ -1,5 +1,5 @@
 import { Layout } from "antd";
-import ContactsFooter from "../components/contacts/ContactsFooter";
+import ContactsFooter from "../components/contacts/ContactsFooter/ContactsFooter";
 import ContactsContent from "../components/contacts/ContactsContent/ContactsContent";
 
 // Contati Layout definition:

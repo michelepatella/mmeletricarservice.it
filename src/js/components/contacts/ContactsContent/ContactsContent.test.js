@@ -12,9 +12,9 @@ beforeAll(() => {
 });
 
 // Definition of expected results
-const section_name = "CONTATTI"
-const contact_title = "Contacts Title"
-const contact_subtitle = "Contacts Subtitle"
+const contacts_section_name = "Contacts Section Name"
+const contacts_title = "Contacts Title"
+const contacts_subtitle = "Contacts Subtitle"
 const phone = "Phone"
 const email = "Email"
 const emailPec = "Email PEC"
@@ -24,10 +24,11 @@ const emailIcon = "email-icon"
 const emailPecIcon = "email-pec-icon"
 const facebookIcon = "facebook-icon"
 
-// Mock the company contacts
+// Mock the company contacts and section's texts
 jest.mock("../../../utils/const", () => ({
-    CONTACTS_TITLE: contact_title,
-    CONTACTS_SUBTITLE: contact_subtitle,
+    CONTACTS_SECTION_NAME: contacts_section_name,
+    CONTACTS_TITLE: contacts_title,
+    CONTACTS_SUBTITLE: contacts_subtitle,
     CONTACTS: [
         {
             value: phone,
@@ -55,10 +56,10 @@ const mockEmailPecHandler = jest.fn();
 const mockFacebookHandler = jest.fn();
 jest.mock("../../../logic/handling/contactButtonHandler", () => ({
     contactClickHandler: {
-        [phone]: (...args) => mockPhoneHandler(...args),
-        [email]: (...args) => mockEmailHandler(...args),
-        [emailPec]: (...args) => mockEmailPecHandler(...args),
-        [facebook]: (...args) => mockFacebookHandler(...args),
+        Phone: (...args) => mockPhoneHandler(...args),
+        Email: (...args) => mockEmailHandler(...args),
+        "Email PEC": (...args) => mockEmailPecHandler(...args),
+        Facebook: (...args) => mockFacebookHandler(...args),
     }
 }));
 
@@ -76,19 +77,27 @@ describe("ContactsContent", () => {
         // Test if it renders the section name correctly
         test("renders with correct section name", () => {
             render(<ContactsContent />);
-            expect(screen.getByText((content) => content.includes(section_name))).toBeInTheDocument();
+            expect(
+                screen.getByText(
+                    (content) => content.includes(contacts_section_name)
+                )
+            ).toBeInTheDocument();
         });
 
         // Test if it renders the section title correctly
         test("renders with correct title", () => {
             render(<ContactsContent />);
-            expect(screen.getByText(contact_title)).toBeInTheDocument();
+            expect(
+                screen.getByText(contacts_title)
+            ).toBeInTheDocument();
         });
 
         // Test if it renders the section subtitle correctly
         test("renders with correct subtitle", () => {
             render(<ContactsContent />);
-            expect(screen.getByText(contact_subtitle)).toBeInTheDocument();
+            expect(
+                screen.getByText(contacts_subtitle)
+            ).toBeInTheDocument();
         });
     });
 
@@ -104,7 +113,9 @@ describe("ContactsContent", () => {
             [facebook],
         ])("renders button with text: %s", (contactText) => {
             render(<ContactsContent />);
-            expect(screen.getByText(contactText)).toBeInTheDocument();
+            expect(
+                screen.getByText(contactText)
+            ).toBeInTheDocument();
         });
 
         // Test if all the buttons, once clicked,

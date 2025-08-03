@@ -1,4 +1,9 @@
-import { CONTACT_FOOTER_TEXT } from "../../utils/const";
+import {CONTACT_FOOTER_TEXT, COOKIE_POLICY_TEXT, LEGAL_NOTES_TEXT, PRIVACY_POLICY_TEXT} from "../../../utils/const";
+import {
+  COOKIE_POLICY_LINK,
+  LEGAL_NOTES_LINK,
+  PRIVACY_POLICY_LINK
+} from "../../../utils/links";
 
 /**
  * This component represents the footer
@@ -18,30 +23,30 @@ function ContactsFooter() {
           <br></br>
           {/* Privacy policy link */}
           <a
-            href="/docs/Privacy%20Policy%20-%20MM%20Eletricar%20Service.pdf"
+            href={PRIVACY_POLICY_LINK}
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
-            PRIVACY POLICY
+            {PRIVACY_POLICY_TEXT}
           </a>{" "}
           |{/* Cookie policy link */}
           <a
-            href="/docs/Cookie%20Policy%20-%20MM%20Eletricar%20Service.pdf"
+            href={COOKIE_POLICY_LINK}
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
-            COOKIE POLICY
+            {COOKIE_POLICY_TEXT}
           </a>{" "}
           |{/* Legal notes link */}
           <a
-            href="/docs/Note%20Legali%20-%20Auto%20Usate%20-%20MM%20Eletricar%20Service.pdf"
+            href={LEGAL_NOTES_LINK}
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
-            NOTE LEGALI
+            {LEGAL_NOTES_TEXT}
           </a>
         </p>
       </div>
