@@ -1,8 +1,13 @@
-import {CONTACT_FOOTER_TEXT, COOKIE_POLICY_TEXT, LEGAL_NOTES_TEXT, PRIVACY_POLICY_TEXT} from "../../../utils/const";
+import {
+  CONTACT_FOOTER_TEXT,
+  COOKIE_POLICY_TEXT,
+  LEGAL_NOTES_TEXT,
+  PRIVACY_POLICY_TEXT,
+} from "../../../utils/const";
 import {
   COOKIE_POLICY_LINK,
   LEGAL_NOTES_LINK,
-  PRIVACY_POLICY_LINK
+  PRIVACY_POLICY_LINK,
 } from "../../../utils/links";
 
 /**
@@ -40,11 +45,7 @@ function ContactsFooter() {
             {COOKIE_POLICY_TEXT}
           </a>{" "}
           |{/* Legal notes link */}
-          <a
-            href={LEGAL_NOTES_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={LEGAL_NOTES_LINK} target="_blank" rel="noopener noreferrer">
             {" "}
             {LEGAL_NOTES_TEXT}
           </a>

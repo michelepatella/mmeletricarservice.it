@@ -1,8 +1,8 @@
 import {
-    CONTACTS_TITLE,
-    CONTACTS,
-    CONTACTS_SUBTITLE,
-    CONTACTS_SECTION_NAME
+  CONTACTS_TITLE,
+  CONTACTS,
+  CONTACTS_SUBTITLE,
+  CONTACTS_SECTION_NAME,
 } from "../../../utils/const";
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
 import CustomButton from "../../custom/CustomButton";

@@ -4,7 +4,13 @@ import {
   COOKIE_CONSENT_BANNER_DESCRIPTION,
   COOKIE_DECLINE_BUTTON_TEXT,
   COOKIE_EXPIRATION_DATE,
+  COOKIE_POLICY_TEXT,
+  PRIVACY_POLICY_TEXT,
 } from "../../../utils/const";
+import {
+  COOKIE_POLICY_LINK,
+  PRIVACY_POLICY_LINK
+} from "../../../utils/links";
 
 /**
  * This component represents the cookie
@@ -39,23 +45,22 @@ function CookieConsentBanner(props) {
           {COOKIE_CONSENT_BANNER_DESCRIPTION}
           {/* Links to the privacy policy and to the cookie policy */}
           <a
-            href="/docs/Privacy%20Policy%20-%20MM%20Eletricar%20Service.pdf"
+            href={PRIVACY_POLICY_LINK}
             className="policy-link"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Privacy Policy
+            {PRIVACY_POLICY_TEXT}
           </a>{" "}
           e{" "}
           <a
-            href="/docs/Cookie%20Policy%20-%20MM%20Eletricar%20Service.pdf"
+            href={COOKIE_POLICY_LINK}
             className="policy-link"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Cookie Policy
+            {COOKIE_POLICY_TEXT}
           </a>
-          . 🍪
         </CookieConsent>
       )}
     </>

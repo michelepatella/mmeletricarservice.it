@@ -52,7 +52,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 
 | Layer                    | Technology                              |
 | ------------------------ | --------------------------------------- |
-| ⚛️ Frontend              | React.js                                |  
+| ⚛️ Frontend              | React.js                                |
 | 🖌️ UI Library            | Ant Design                              |
 | 🎨 Styling               | CSS + Custom Design Tokens              |
 | 🌀 Animations            | CSS + Framer Motion                     |
@@ -223,9 +223,9 @@ This project follows the best practices of software engineering:
 
 📦 **Deployment & CI/CD**
 
-- GitHub + Vercel: automatic deploys on push to `main` and previews for PRs  
-- CI pipeline runs automated unit and integration tests on every commit  
-- Rollbacks, env variables, and analytics managed via Vercel dashboard  
+- GitHub + Vercel: automatic deploys on push to `main` and previews for PRs
+- CI pipeline runs automated unit and integration tests on every commit
+- Rollbacks, env variables, and analytics managed via Vercel dashboard
 
 <br>
 
