@@ -76,33 +76,31 @@ describe("ContactsContent", () => {
     test("renders with correct section name", () => {
       render(<ContactsContent />);
       expect(
-        screen.getByText((content) => content.includes(contacts_section_name)),
+        screen.getByText((content) =>
+            content.includes(contacts_section_name)
+        ),
       ).toBeInTheDocument();
     });
 
     // Test if it renders the section title correctly
     test("renders with correct title", () => {
       render(<ContactsContent />);
-      expect(screen.getByText(contacts_title)).toBeInTheDocument();
+      expect(
+          screen.getByText(contacts_title)
+      ).toBeInTheDocument();
     });
 
     // Test if it renders the section subtitle correctly
     test("renders with correct subtitle", () => {
       render(<ContactsContent />);
-      expect(screen.getByText(contacts_subtitle)).toBeInTheDocument();
+      expect(
+          screen.getByText(contacts_subtitle)
+      ).toBeInTheDocument();
     });
   });
 
   // Test contact buttons visualized into ContactContent
   describe("Contact buttons", () => {
-    // Test if all the buttons have the correct props
-    test.each([[phone], [email], [emailPec], [facebook]])(
-      "renders button with text: %s",
-      (contactText) => {
-        render(<ContactsContent />);
-        expect(screen.getByText(contactText)).toBeInTheDocument();
-      },
-    );
 
     // Test if all the buttons are rendered
     // with the expected texts
@@ -110,7 +108,9 @@ describe("ContactsContent", () => {
       "renders button with text: %s",
       (contactText) => {
         render(<ContactsContent />);
-        expect(screen.getByText(contactText)).toBeInTheDocument();
+        expect(
+            screen.getByText(contactText)
+        ).toBeInTheDocument();
       },
     );
 

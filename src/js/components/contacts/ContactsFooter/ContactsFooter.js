@@ -45,7 +45,11 @@ function ContactsFooter() {
             {COOKIE_POLICY_TEXT}
           </a>{" "}
           |{/* Legal notes link */}
-          <a href={LEGAL_NOTES_LINK} target="_blank" rel="noopener noreferrer">
+          <a
+              href={LEGAL_NOTES_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+          >
             {" "}
             {LEGAL_NOTES_TEXT}
           </a>

@@ -72,7 +72,9 @@ describe("CookieConsentBanner", () => {
 
   // Test if it renders the banner when visible
   test("renders the content of cookie consent banner when visible", () => {
-    render(<CookieConsentBanner isCookiesBannerVisible={true} />);
+    render(
+        <CookieConsentBanner isCookiesBannerVisible={true} />
+    );
 
     expect(
       screen.getByText((content) =>
@@ -80,22 +82,32 @@ describe("CookieConsentBanner", () => {
       ),
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content) => content.includes(cookieAcceptButtonText)),
+      screen.getByText((content) =>
+          content.includes(cookieAcceptButtonText)
+      ),
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content) => content.includes(cookieDeclineButtonText)),
+      screen.getByText((content) =>
+          content.includes(cookieDeclineButtonText)
+      ),
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content) => content.includes(privacyPolicyText)),
+      screen.getByText((content) =>
+          content.includes(privacyPolicyText)
+      ),
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content) => content.includes(cookiePolicyText)),
+      screen.getByText((content) =>
+          content.includes(cookiePolicyText)
+      ),
     ).toBeInTheDocument();
   });
 
   // Test if it doesn't render the banner when not visible
   test("doesn't render the content of cookie consent banner when not visible", () => {
-    render(<CookieConsentBanner isCookiesBannerVisible={false} />);
+    render(
+        <CookieConsentBanner isCookiesBannerVisible={false} />
+    );
 
     expect(
       screen.queryByText((content) =>
@@ -103,7 +115,9 @@ describe("CookieConsentBanner", () => {
       ),
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByText((content) => content.includes(cookieAcceptButtonText)),
+      screen.queryByText((content) =>
+          content.includes(cookieAcceptButtonText)
+      ),
     ).not.toBeInTheDocument();
     expect(
       screen.queryByText((content) =>
@@ -111,16 +125,22 @@ describe("CookieConsentBanner", () => {
       ),
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByText((content) => content.includes(privacyPolicyText)),
+      screen.queryByText((content) =>
+          content.includes(privacyPolicyText)
+      ),
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByText((content) => content.includes(cookiePolicyText)),
+      screen.queryByText((content) =>
+          content.includes(cookiePolicyText)
+      ),
     ).not.toBeInTheDocument();
   });
 
   // Test if it renders links to privacy and cookie policies correctly
   test("renders links to privacy and cookie policies correctly", () => {
-    render(<CookieConsentBanner isCookiesBannerVisible={true} />);
+    render(
+        <CookieConsentBanner isCookiesBannerVisible={true} />
+    );
 
     // Test if each link is correctly displayed
     links.forEach((link) => {
@@ -163,7 +183,9 @@ describe("CookieConsentBanner", () => {
   // Test if it sets the correct cookie expiration date
   test("sets the correct cookie expiration date", () => {
     // Render the component with the visibility active
-    render(<CookieConsentBanner isCookiesBannerVisible={true} />);
+    render(
+        <CookieConsentBanner isCookiesBannerVisible={true} />
+    );
 
     const mockCookieConsent = screen.getByTestId("mock-cookie-consent");
     expect(mockCookieConsent).toHaveAttribute(
