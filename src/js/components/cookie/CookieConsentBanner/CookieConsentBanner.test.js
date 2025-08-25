@@ -12,6 +12,9 @@ const cookiePolicyText = "Cookie Policy Text";
 const privacyPolicyText = "Privacy Policy Text";
 const cookiePolicyHref = "cookie-policy-link";
 const privacyPolicyHref = "privacy-policy-link";
+const targetAttr = "_blank";
+const relAttr = "noopener noreferrer";
+const cookieConsentTestId = "mock-cookie-consent"
 
 // Definition of links to be tested
 const links = [
@@ -35,7 +38,7 @@ jest.mock("react-cookie-consent", () => {
     onDecline,
     ...props
   }) => (
-    <div data-testid="mock-cookie-consent" {...props}>
+    <div data-testid={cookieConsentTestId} {...props}>
       {children}
       <button onClick={onAccept}>{buttonText}</button>
       <button onClick={onDecline}>{declineButtonText}</button>
@@ -147,8 +150,8 @@ describe("CookieConsentBanner", () => {
       const domLink = screen.getByText(link.text);
       expect(domLink).toBeInTheDocument();
       expect(domLink).toHaveAttribute("href", link.href);
-      expect(domLink).toHaveAttribute("target", "_blank");
-      expect(domLink).toHaveAttribute("rel", "noopener noreferrer");
+      expect(domLink).toHaveAttribute("target", targetAttr);
+      expect(domLink).toHaveAttribute("rel", relAttr);
     });
   });
 
@@ -187,7 +190,7 @@ describe("CookieConsentBanner", () => {
         <CookieConsentBanner isCookiesBannerVisible={true} />
     );
 
-    const mockCookieConsent = screen.getByTestId("mock-cookie-consent");
+    const mockCookieConsent = screen.getByTestId(cookieConsentTestId);
     expect(mockCookieConsent).toHaveAttribute(
       "expires",
       cookieExpirationDate.toString(),

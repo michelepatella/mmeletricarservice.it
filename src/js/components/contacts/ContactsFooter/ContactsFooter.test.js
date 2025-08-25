@@ -11,6 +11,8 @@ const cookiePolicyText = "Cookie Policy Text";
 const cookiePolicyHref = "cookie-policy-link";
 const legalNotesText = "Legal Notes Text";
 const legalNotesHref = "legal-notes-link";
+const targetAttr = "_blank";
+const relAttr = "noopener noreferrer";
 
 // Definition of links to be tested
 const links = [
@@ -54,7 +56,9 @@ describe("ContactsFooter", () => {
   test("renders with correct footer text", () => {
     render(<ContactsFooter />);
     expect(
-      screen.getByText((content) => content.includes(footerText)),
+      screen.getByText((content) =>
+          content.includes(footerText)
+      ),
     ).toBeInTheDocument();
   });
 
@@ -67,8 +71,8 @@ describe("ContactsFooter", () => {
       const domLink = screen.getByText(link.text);
       expect(domLink).toBeInTheDocument();
       expect(domLink).toHaveAttribute("href", link.href);
-      expect(domLink).toHaveAttribute("target", "_blank");
-      expect(domLink).toHaveAttribute("rel", "noopener noreferrer");
+      expect(domLink).toHaveAttribute("target", targetAttr);
+      expect(domLink).toHaveAttribute("rel", relAttr);
     });
   });
 });

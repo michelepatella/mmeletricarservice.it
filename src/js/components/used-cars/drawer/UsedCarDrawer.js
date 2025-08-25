@@ -4,7 +4,7 @@ import { onUsedCarDrawerClose } from "../../../logic/handling/usedCarDrawerHandl
 import { useDrawerBackButtonHandler } from "../../../hooks/useDrawerBackButton";
 import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
 import UsedCarDrawerInfoPanel from "./UsedCarDrawerInfoPanel";
-import CustomBackButton from "../../custom/CustomBackButton";
+import CustomBackButton from "../../custom/CustomBackButton/CustomBackButton";
 import { useUsedCarInfo } from "../../../hooks/useUsedCarInfo";
 
 /**
