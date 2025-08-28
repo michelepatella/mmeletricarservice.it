@@ -70,18 +70,9 @@ describe("ContactsFooter", () => {
 		links.forEach((link) => {
 			const domLink = screen.getByText(link.text);
 			expect(domLink).toBeInTheDocument();
-			expect(domLink).toHaveAttribute(
-				"href",
-				link.href
-			);
-			expect(domLink).toHaveAttribute(
-				"target",
-				targetAttr
-			);
-			expect(domLink).toHaveAttribute(
-				"rel",
-				relAttr
-			);
+			expect(domLink).toHaveAttribute("href", link.href);
+			expect(domLink).toHaveAttribute("target", targetAttr);
+			expect(domLink).toHaveAttribute("rel", relAttr);
 		});
 	});
 });

@@ -1,12 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import {
-	render,
-	screen
-} from "@testing-library/react";
-import {
-	BACK_BUTTON_LABEL
-} from "../../../utils/const";
+import { render, screen } from "@testing-library/react";
+import { BACK_BUTTON_LABEL } from "../../../utils/const";
 import CustomBackButton from "./CustomBackButton";
 
 // Definition of expected results
