@@ -1,7 +1,10 @@
 import React from "react";
 import { HashRouter } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import {
+	QueryClient,
+	QueryClientProvider,
+} from "@tanstack/react-query";
 import { Button } from "antd";
 import { useCookieConsent } from "./hooks/useCookieConsent";
 import Home from "./sections/home";
@@ -50,52 +53,58 @@ import { handleCookieButtonClick } from "./logic/handling/cookieButtonHandler";
  * @constructor
  */
 function App() {
-  const {
-    cookiesAccepted,
-    isCookiesBannerVisible,
-    handleAcceptCookies,
-    handleDeclineCookies,
-    setIsCookiesBannerVisible,
-  } = useCookieConsent();
+	const {
+		cookiesAccepted,
+		isCookiesBannerVisible,
+		handleAcceptCookies,
+		handleDeclineCookies,
+		setIsCookiesBannerVisible,
+	} = useCookieConsent();
 
-  const queryClient = new QueryClient();
+	const queryClient = new QueryClient();
 
-  return (
-    <>
-      <Analytics />
-      <HashRouter>
-        <QueryClientProvider client={queryClient}>
-          <>
-            {/* Cookies button */}
-            <Button
-              className="cookie-button"
-              onClick={() => handleCookieButtonClick(setIsCookiesBannerVisible)}
-            />
+	return (
+		<>
+			<Analytics />
+			<HashRouter>
+				<QueryClientProvider client={queryClient}>
+					<>
+						{/* Cookies button */}
+						<Button
+							className="cookie-button"
+							onClick={() =>
+								handleCookieButtonClick(
+									setIsCookiesBannerVisible
+								)
+							}
+						/>
 
-            {/* Cookie Consent Banner */}
-            <CookieConsentBanner
-              isCookiesBannerVisible={isCookiesBannerVisible}
-              handleAcceptCookies={handleAcceptCookies}
-              handleDeclineCookies={handleDeclineCookies}
-            />
+						{/* Cookie Consent Banner */}
+						<CookieConsentBanner
+							isCookiesBannerVisible={
+								isCookiesBannerVisible
+							}
+							handleAcceptCookies={handleAcceptCookies}
+							handleDeclineCookies={handleDeclineCookies}
+						/>
 
-            {/* Menu */}
-            <Menu />
+						{/* Menu */}
+						<Menu />
 
-            {/* Sections */}
-            <Home />
-            <AboutUs />
-            <OurValues />
-            <Services />
-            <Workshop />
-            <UsedCars />
-            <WhereWeAre cookiesAccepted={cookiesAccepted} />
-            <Contacts />
-          </>
-        </QueryClientProvider>
-      </HashRouter>
-    </>
-  );
+						{/* Sections */}
+						<Home />
+						<AboutUs />
+						<OurValues />
+						<Services />
+						<Workshop />
+						<UsedCars />
+						<WhereWeAre cookiesAccepted={cookiesAccepted} />
+						<Contacts />
+					</>
+				</QueryClientProvider>
+			</HashRouter>
+		</>
+	);
 }
 
 export default App;

@@ -1,6 +1,9 @@
 import React from "react";
 import { Collapse } from "antd";
-import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
+import {
+	MinusOutlined,
+	PlusOutlined,
+} from "@ant-design/icons";
 import { USED_CAR_ALL_INFO } from "../../../utils/const";
 
 /**
@@ -12,44 +15,49 @@ import { USED_CAR_ALL_INFO } from "../../../utils/const";
  * @constructor
  */
 function UsedCarDrawerCollapse(props) {
-  return (
-    <Collapse
-      className="used-car-drawer-collapse"
-      accordion
-      expandIcon={({ isActive }) =>
-        isActive ? <MinusOutlined /> : <PlusOutlined />
-      }
-      // Add all the items to the collapse
-      items={USED_CAR_ALL_INFO?.map(({ key, label, children }) => ({
-        key,
-        label,
-        children: (
-          // Show all the information belonging
-          // to a specific category via list
-          <li className="used-car-drawer-collapse-outer-list">
-            {children?.map((item) => (
-              <ul
-                key={item?.name}
-                className="used-car-drawer-collapse-inner-list"
-              >
-                {/* Information name */}
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: item?.title,
-                  }}
-                />
+	return (
+		<Collapse
+			className="used-car-drawer-collapse"
+			accordion
+			expandIcon={({ isActive }) =>
+				isActive ? <MinusOutlined /> : <PlusOutlined />
+			}
+			// Add all the items to the collapse
+			items={USED_CAR_ALL_INFO?.map(
+				({ key, label, children }) => ({
+					key,
+					label,
+					children: (
+						// Show all the information belonging
+						// to a specific category via list
+						<li className="used-car-drawer-collapse-outer-list">
+							{children?.map((item) => (
+								<ul
+									key={item?.name}
+									className="used-car-drawer-collapse-inner-list"
+								>
+									{/* Information name */}
+									<span
+										dangerouslySetInnerHTML={{
+											__html: item?.title,
+										}}
+									/>
 
-                {/* Information textual value */}
-                <div>
-                  <span>{props.usedCarInfo?.[item?.name] || "-"}</span>
-                </div>
-              </ul>
-            ))}
-          </li>
-        ),
-      }))}
-    />
-  );
+									{/* Information textual value */}
+									<div>
+										<span>
+											{props.usedCarInfo?.[item?.name] ||
+												"-"}
+										</span>
+									</div>
+								</ul>
+							))}
+						</li>
+					),
+				})
+			)}
+		/>
+	);
 }
 
 export default UsedCarDrawerCollapse;

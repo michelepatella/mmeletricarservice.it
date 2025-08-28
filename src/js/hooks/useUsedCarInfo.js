@@ -10,21 +10,24 @@ import { STALE_TIME } from "../utils/const";
  * @returns {{isLoading: boolean, usedCarInfo: ({images: string[]}|null)}}
  */
 export const useUsedCarInfo = ({ usedCarId }) => {
-  // useQuery to fetch used car info for a
-  // specific used car
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["usedCarInfo", usedCarId],
-    queryFn: () =>
-      fetchUsedCarData("used-car-info/usedCarInfo?id=" + usedCarId),
-    enabled: !!usedCarId,
-    staleTime: STALE_TIME,
-  });
+	// useQuery to fetch used car info for a
+	// specific used car
+	const { data, isLoading, isError } = useQuery({
+		queryKey: ["usedCarInfo", usedCarId],
+		queryFn: () =>
+			fetchUsedCarData(
+				"used-car-info/usedCarInfo?id=" + usedCarId
+			),
+		enabled: !!usedCarId,
+		staleTime: STALE_TIME,
+	});
 
-  // Check if any error
-  if (isError) console.error("Error while fetching used car data.");
+	// Check if any error
+	if (isError)
+		console.error("Error while fetching used car data.");
 
-  return {
-    usedCarInfo: data?.used_car_info || null,
-    isLoading,
-  };
+	return {
+		usedCarInfo: data?.used_car_info || null,
+		isLoading,
+	};
 };

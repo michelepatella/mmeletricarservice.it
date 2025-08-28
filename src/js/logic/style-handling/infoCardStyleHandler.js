@@ -6,8 +6,8 @@
  * }}
  */
 export const handleTitleStyle = () => {
-  return {
-    fontWeight: "bold",
-    color: "var(--yellow_color)",
-  };
+	return {
+		fontWeight: "bold",
+		color: "var(--yellow_color)",
+	};
 };

@@ -7,10 +7,10 @@
  * }}
  */
 export const handleNamePriceStyle = () => {
-  return {
-    fontWeight: "bold",
-    alignSelf: "right",
-  };
+	return {
+		fontWeight: "bold",
+		alignSelf: "right",
+	};
 };
 
 /**
@@ -23,13 +23,14 @@ export const handleNamePriceStyle = () => {
  * }}
  */
 export const handleTextOverviewStyle = (isTitleVisible) => {
-  return {
-    marginTop: 0,
-    marginBottom: "var(--used_car_overview_text_margin_top)",
-    fontFamily: "Poppins",
-    fontWeight: isTitleVisible ? "bold" : "normal",
-    opacity: "var(--text_low_opacity)",
-  };
+	return {
+		marginTop: 0,
+		marginBottom:
+			"var(--used_car_overview_text_margin_top)",
+		fontFamily: "Poppins",
+		fontWeight: isTitleVisible ? "bold" : "normal",
+		opacity: "var(--text_low_opacity)",
+	};
 };
 
 /**
@@ -42,11 +43,11 @@ export const handleTextOverviewStyle = (isTitleVisible) => {
  * }}
  */
 export const handleScrollLabelStyle = () => {
-  return {
-    marginLeft: "var(--used_cars_scroll_label_margin_left)",
-    textAlign: "center",
-    opacity: "var(--text_low_opacity)",
-  };
+	return {
+		marginLeft: "var(--used_cars_scroll_label_margin_left)",
+		textAlign: "center",
+		opacity: "var(--text_low_opacity)",
+	};
 };
 
 /**
@@ -57,9 +58,10 @@ export const handleScrollLabelStyle = () => {
  * opacity: string
  * }}
  */
-export const handleUnavailableUsedCarDescriptionStyle = () => {
-  return {
-    textAlign: "center",
-    opacity: "var(--low_opacity)",
-  };
-};
+export const handleUnavailableUsedCarDescriptionStyle =
+	() => {
+		return {
+			textAlign: "center",
+			opacity: "var(--low_opacity)",
+		};
+	};

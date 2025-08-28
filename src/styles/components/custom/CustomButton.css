@@ -1,78 +1,78 @@
 /* Custom Button styles */
 .custom-button {
-  color: white;
-  font-family: var(--font_family);
-  border: var(--custom_button_border) solid white;
-  border-radius: var(--border_radius);
-  padding: var(--custom_button_padding);
-  background-color: var(--background_color) !important;
-  transition: all 0.3s ease;
+	color: white;
+	font-family: var(--font_family);
+	border: var(--custom_button_border) solid white;
+	border-radius: var(--border_radius);
+	padding: var(--custom_button_padding);
+	background-color: var(--background_color) !important;
+	transition: all 0.3s ease;
 }
 
 .custom-button:hover {
-  font-family: var(--font_family) !important;
-  border: var(--custom_button_border) solid white !important;
-  border-radius: var(--border_radius) !important;
-  padding: var(--custom_button_padding) !important;
-  filter: invert(var(--custom_button_filter_perc));
-  transition: all 0.3s ease !important;
+	font-family: var(--font_family) !important;
+	border: var(--custom_button_border) solid white !important;
+	border-radius: var(--border_radius) !important;
+	padding: var(--custom_button_padding) !important;
+	filter: invert(var(--custom_button_filter_perc));
+	transition: all 0.3s ease !important;
 }
 
 /* Contact button styles */
 .contact-button {
-  color: white;
-  font-family: var(--font_family);
-  padding: var(--contact_button_padding);
-  box-shadow: none;
-  background-color: transparent !important;
+	color: white;
+	font-family: var(--font_family);
+	padding: var(--contact_button_padding);
+	box-shadow: none;
+	background-color: transparent !important;
 }
 
 /* CTA button styles */
 .cta-button {
-  margin-top: var(--cta_button_margin_top);
-  color: white;
-  font-size: var(--caption_text_font_size);
-  font-weight: bold;
-  font-family: var(--font_family);
-  border-radius: var(--border_radius);
-  padding: var(--custom_button_padding);
-  background-color: var(--blue_color) !important;
-  transition: all 0.3s ease;
+	margin-top: var(--cta_button_margin_top);
+	color: white;
+	font-size: var(--caption_text_font_size);
+	font-weight: bold;
+	font-family: var(--font_family);
+	border-radius: var(--border_radius);
+	padding: var(--custom_button_padding);
+	background-color: var(--blue_color) !important;
+	transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-  transform: scale(var(--cta_button_scale));
-  border-radius: var(--border_radius) !important;
+	transform: scale(var(--cta_button_scale));
+	border-radius: var(--border_radius) !important;
 }
 
 /* ------- Big screen ------- */
 @media (min-width: 1025px) {
-  .custom-button {
-    font-size: var(--body_font_size_big);
-  }
+	.custom-button {
+		font-size: var(--body_font_size_big);
+	}
 
-  .contact-button {
-    font-size: var(--body_font_size_big);
-  }
+	.contact-button {
+		font-size: var(--body_font_size_big);
+	}
 }
 
 /* ------- Medium screens (portrait and landscape) ------- */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .custom-button {
-    font-size: var(--body_font_size_medium);
-  }
+	.custom-button {
+		font-size: var(--body_font_size_medium);
+	}
 }
 
 /* ------- Medium screen portrait ------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .cta-button {
-    width: var(--cta_button_width_medium_landscape);
-  }
+	.cta-button {
+		width: var(--cta_button_width_medium_landscape);
+	}
 }
 
 /* ------- Small screen (portrait and landscape) ------- */
 @media (max-width: 767px) {
-  .custom-button {
-    font-size: var(--body_font_size_small);
-  }
+	.custom-button {
+		font-size: var(--body_font_size_small);
+	}
 }

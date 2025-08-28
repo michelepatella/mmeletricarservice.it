@@ -15,31 +15,31 @@ const { Header, Content } = Layout;
  * @constructor
  */
 function Home() {
-  return (
-    <>
-      {/* Background container to contain the whole section and
+	return (
+		<>
+			{/* Background container to contain the whole section and
        use a customized background */}
-      <BackgroundContainer
-        image="/images/home-image.avif"
-        custStyle={{
-          marginBottom: "var(--section_margin_bottom)",
-        }}
-      >
-        {/* Home Layout */}
-        <Layout className="home-layout" id="home">
-          {/* Home header */}
-          <Header className="home-header">
-            <HomeHeader />
-          </Header>
+			<BackgroundContainer
+				image="/images/home-image.avif"
+				custStyle={{
+					marginBottom: "var(--section_margin_bottom)",
+				}}
+			>
+				{/* Home Layout */}
+				<Layout className="home-layout" id="home">
+					{/* Home header */}
+					<Header className="home-header">
+						<HomeHeader />
+					</Header>
 
-          {/* Home content */}
-          <Content className="home-content">
-            <HomeContent />
-          </Content>
-        </Layout>
-      </BackgroundContainer>
-    </>
-  );
+					{/* Home content */}
+					<Content className="home-content">
+						<HomeContent />
+					</Content>
+				</Layout>
+			</BackgroundContainer>
+		</>
+	);
 }
 
 export default Home;

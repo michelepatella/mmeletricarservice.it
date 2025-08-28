@@ -14,45 +14,53 @@ import CustomText from "../custom/CustomText";
  * @constructor
  */
 function UsedCarOverview(props) {
-  return (
-    <>
-      {USED_CAR_OVERVIEW?.map((info, index) => (
-        // Add each used car overview information
-        <div key={index} className="used-car-overview-container">
-          {/* Global Flex container (vertical) */}
-          <Flex vertical>
-            {/* Flex container (horizontal) */}
-            <Flex gap="small">
-              {/* Icon */}
-              <img src={info?.icon} alt="icon" />
+	return (
+		<>
+			{USED_CAR_OVERVIEW?.map((info, index) => (
+				// Add each used car overview information
+				<div
+					key={index}
+					className="used-car-overview-container"
+				>
+					{/* Global Flex container (vertical) */}
+					<Flex vertical>
+						{/* Flex container (horizontal) */}
+						<Flex gap="small">
+							{/* Icon */}
+							<img src={info?.icon} alt="icon" />
 
-              {/* Info title, if it needs to be shown, otherwise show the text only*/}
-              <CustomText
-                type="body"
-                text={
-                  props.showTitle
-                    ? info?.title
-                    : props.usedCarOverview?.[info?.name] || "-"
-                }
-                disableAnimation={true}
-                style={handleTextOverviewStyle(props.showTitle)}
-              />
-            </Flex>
+							{/* Info title, if it needs to be shown, otherwise show the text only*/}
+							<CustomText
+								type="body"
+								text={
+									props.showTitle
+										? info?.title
+										: props.usedCarOverview?.[info?.name] ||
+											"-"
+								}
+								disableAnimation={true}
+								style={handleTextOverviewStyle(
+									props.showTitle
+								)}
+							/>
+						</Flex>
 
-            {/* Text (in case the title is visible and the text is now below it) */}
-            {props.showTitle && (
-              <CustomText
-                type="body"
-                text={props.usedCarOverview?.[info?.name] || "-"}
-                disableAnimation={true}
-                style={handleTextOverviewStyle()}
-              />
-            )}
-          </Flex>
-        </div>
-      ))}
-    </>
-  );
+						{/* Text (in case the title is visible and the text is now below it) */}
+						{props.showTitle && (
+							<CustomText
+								type="body"
+								text={
+									props.usedCarOverview?.[info?.name] || "-"
+								}
+								disableAnimation={true}
+								style={handleTextOverviewStyle(false)}
+							/>
+						)}
+					</Flex>
+				</div>
+			))}
+		</>
+	);
 }
 
 export default UsedCarOverview;

@@ -13,15 +13,15 @@ import MenuBigScreen from "./MenuBigScreen";
  * @constructor
  */
 const Menu = () => {
-  return (
-    <>
-      {/* Menu for big screens (Anchor menu) */}
-      <MenuBigScreen />
+	return (
+		<>
+			{/* Menu for big screens (Anchor menu) */}
+			<MenuBigScreen />
 
-      {/* Menu for small screens (Hamburger menu) */}
-      <MenuSmallScreen />
-    </>
-  );
+			{/* Menu for small screens (Hamburger menu) */}
+			<MenuSmallScreen />
+		</>
+	);
 };
 
 export default Menu;

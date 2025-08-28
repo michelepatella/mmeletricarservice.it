@@ -1,36 +1,39 @@
 /* Cookie Consent styles*/
 .CookieConsent {
-  font-size: var(--caption_text_font_size) !important;
-  font-family: var(--font_family) !important;
-  color: white !important;
-  z-index: var(--cookie_consent_banner_z_index) !important;
-  background: var(--background_color) !important;
+	font-size: var(--caption_text_font_size) !important;
+	font-family: var(--font_family) !important;
+	color: white !important;
+	z-index: var(--cookie_consent_banner_z_index) !important;
+	background: var(--background_color) !important;
 }
 
 /* Cookie Consent buttons styles */
 .CookieConsent #rcc-decline-button,
 #rcc-confirm-button {
-  font-size: var(--caption_text_font_size) !important;
-  font-family: var(--font_family) !important;
-  border: var(--cookie_consent_banner_border_buttons) solid white !important;
-  border-radius: var(--border_radius) !important;
-  padding: var(--cookie_consent_banner_button_padding) !important;
-  transition: all 0.3s ease;
+	font-size: var(--caption_text_font_size) !important;
+	font-family: var(--font_family) !important;
+	border: var(--cookie_consent_banner_border_buttons) solid
+		white !important;
+	border-radius: var(--border_radius) !important;
+	padding: var(
+		--cookie_consent_banner_button_padding
+	) !important;
+	transition: all 0.3s ease;
 }
 
 .CookieConsent #rcc-confirm-button {
-  background-color: white !important;
-  color: black !important;
+	background-color: white !important;
+	color: black !important;
 }
 
 .CookieConsent #rcc-decline-button {
-  background-color: transparent !important;
-  color: white !important;
+	background-color: transparent !important;
+	color: white !important;
 }
 
 /* Policy links styles */
 .policy-link {
-  color: white;
-  text-decoration: underline;
-  font-weight: bold;
+	color: white;
+	text-decoration: underline;
+	font-weight: bold;
 }

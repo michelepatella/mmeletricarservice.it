@@ -13,19 +13,25 @@ import { fetchUsedCarData } from "../utils/fetcher";
  * }}
  */
 export const useUsedCarsOverview = () => {
-  // useQuery to fetch all used
-  // car overview information
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["usedCarsOverview"],
-    queryFn: () => fetchUsedCarData("used-cars-overview/usedCarsOverview"),
-    staleTime: STALE_TIME,
-  });
+	// useQuery to fetch all used
+	// car overview information
+	const { data, isLoading, isError } = useQuery({
+		queryKey: ["usedCarsOverview"],
+		queryFn: () =>
+			fetchUsedCarData(
+				"used-cars-overview/usedCarsOverview"
+			),
+		staleTime: STALE_TIME,
+	});
 
-  // Check if any error
-  if (isError) console.error("Error while fetching used cars overview data.");
+	// Check if any error
+	if (isError)
+		console.error(
+			"Error while fetching used cars overview data."
+		);
 
-  return {
-    usedCarsOverview: data?.used_cars_overview || [],
-    isLoading,
-  };
+	return {
+		usedCarsOverview: data?.used_cars_overview || [],
+		isLoading,
+	};
 };

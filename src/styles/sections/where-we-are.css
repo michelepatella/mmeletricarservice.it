@@ -1,17 +1,17 @@
 /* Google Maps container styles */
 .google-maps-container {
-  width: var(--section_max_width);
-  height: var(--google_maps_height);
-  margin-top: var(--google_maps_margin_top);
-  overflow: hidden;
-  border-radius: var(--border_radius);
+	width: var(--section_max_width);
+	height: var(--google_maps_height);
+	margin-top: var(--google_maps_margin_top);
+	overflow: hidden;
+	border-radius: var(--border_radius);
 }
 
 /* Google Maps iframe styles */
 .google-maps-iframe {
-  width: var(--google_maps_iframe_width);
-  height: var(--google_maps_iframe_height);
-  border: var(--google_maps_iframe_border);
-  filter: invert(var(--google_maps_iframe_filter_perc))
-    hue-rotate(var(--google_maps_iframe_filter_rotation));
+	width: var(--google_maps_iframe_width);
+	height: var(--google_maps_iframe_height);
+	border: var(--google_maps_iframe_border);
+	filter: invert(var(--google_maps_iframe_filter_perc))
+		hue-rotate(var(--google_maps_iframe_filter_rotation));
 }

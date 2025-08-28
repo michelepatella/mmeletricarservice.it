@@ -1,8 +1,8 @@
 import {
-  CONTACTS_TITLE,
-  CONTACTS,
-  CONTACTS_SUBTITLE,
-  CONTACTS_SECTION_NAME,
+	CONTACTS_TITLE,
+	CONTACTS,
+	CONTACTS_SUBTITLE,
+	CONTACTS_SECTION_NAME,
 } from "../../../utils/const";
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
 import CustomButton from "../../custom/CustomButton";
@@ -18,33 +18,33 @@ import SectionHeader from "../../sections/SectionHeader";
  * @constructor
  */
 function ContactsContent() {
-  return (
-    <>
-      <SectionContainer id="contatti">
-        {/* Contact section header (with title and subtitle) */}
-        <SectionHeader
-          section={CONTACTS_SECTION_NAME}
-          title={CONTACTS_TITLE}
-          subtitle={CONTACTS_SUBTITLE}
-        />
+	return (
+		<>
+			<SectionContainer id="contatti">
+				{/* Contact section header (with title and subtitle) */}
+				<SectionHeader
+					section={CONTACTS_SECTION_NAME}
+					title={CONTACTS_TITLE}
+					subtitle={CONTACTS_SUBTITLE}
+				/>
 
-        {/* Contact buttons container (contains all the contact buttons) */}
-        <div className="contact-buttons-container">
-          {/* Add a button for each contact available */}
-          {CONTACTS?.map((contact) => (
-            <CustomButton
-              key={contact.value}
-              isContact={true}
-              isCta={false}
-              text={contact?.value}
-              icon={contact?.icon}
-              onClick={contactClickHandler[contact?.value]}
-            />
-          ))}
-        </div>
-      </SectionContainer>
-    </>
-  );
+				{/* Contact buttons container (contains all the contact buttons) */}
+				<div className="contact-buttons-container">
+					{/* Add a button for each contact available */}
+					{CONTACTS?.map((contact) => (
+						<CustomButton
+							key={contact.value}
+							isContact={true}
+							isCta={false}
+							text={contact?.value}
+							icon={contact?.icon}
+							onClick={contactClickHandler[contact?.value]}
+						/>
+					))}
+				</div>
+			</SectionContainer>
+		</>
+	);
 }
 
 export default ContactsContent;

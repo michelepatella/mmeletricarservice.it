@@ -9,14 +9,18 @@ import { homeHeaderContactButtons } from "../../logic/handling/contactButtonHand
  * @constructor
  */
 function HomeHeader() {
-  return (
-    <>
-      {/* Add a home header button for each button specified */}
-      {homeHeaderContactButtons.map(({ src, onClick }) => (
-        <CustomIconButton key={src} src={src} onClick={onClick} />
-      ))}
-    </>
-  );
+	return (
+		<>
+			{/* Add a home header button for each button specified */}
+			{homeHeaderContactButtons.map(({ src, onClick }) => (
+				<CustomIconButton
+					key={src}
+					src={src}
+					onClick={onClick}
+				/>
+			))}
+		</>
+	);
 }
 
 export default HomeHeader;

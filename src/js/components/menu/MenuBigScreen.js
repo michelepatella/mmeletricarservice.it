@@ -11,28 +11,29 @@ import { useMenu } from "../../hooks/useMenu";
  * @constructor
  */
 function MenuBigScreen() {
-  // Prepare anchor menu elements
-  const { menuItems, menuItemControls, section } = useMenu();
+	// Prepare anchor menu elements
+	const { menuItems, menuItemControls, section } =
+		useMenu();
 
-  return (
-    <div className="menu-container-big">
-      {/* Motion division for the menu animation */}
-      <motion.div
-        animate={menuItemControls}
-        initial={{
-          opacity: 0,
-          x: -100,
-        }}
-      >
-        {/* Menu */}
-        <Anchor
-          affix={false}
-          items={menuItems}
-          getCurrentAnchor={() => "#" + section}
-        />
-      </motion.div>
-    </div>
-  );
+	return (
+		<div className="menu-container-big">
+			{/* Motion division for the menu animation */}
+			<motion.div
+				animate={menuItemControls}
+				initial={{
+					opacity: 0,
+					x: -100,
+				}}
+			>
+				{/* Menu */}
+				<Anchor
+					affix={false}
+					items={menuItems}
+					getCurrentAnchor={() => "#" + section}
+				/>
+			</motion.div>
+		</div>
+	);
 }
 
 export default MenuBigScreen;

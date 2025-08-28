@@ -21,81 +21,95 @@ import UsedCarOverview from "./UsedCarOverview";
  * @constructor
  */
 function UsedCarCard(props) {
-  // State to manage when the drawer, showing used car
-  // details, is open or not
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+	// State to manage when the drawer, showing used car
+	// details, is open or not
+	const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  // To check if the current used cars has been requested
-  // externally, so that the drawer will be automatically open
-  useOpenDrawerByLink(setIsDrawerOpen, props.usedCarOverview?.id?.toString());
+	// To check if the current used cars has been requested
+	// externally, so that the drawer will be automatically open
+	useOpenDrawerByLink(
+		setIsDrawerOpen,
+		props.usedCarOverview?.id?.toString()
+	);
 
-  return (
-    <>
-      <div
-        className="used-cars-card"
-        onClick={() =>
-          onUsedCarDrawerOpen(setIsDrawerOpen, props.usedCarOverview?.id)
-        }
-      >
-        {/* Presentation image (if any, informative text otherwise) */}
-        <div className="used-cars-card-image-container">
-          {props.usedCarOverview?.image ? (
-            <img
-              src={props.usedCarOverview?.image}
-              alt="auto-image"
-              loading="lazy"
-            />
-          ) : (
-            <CustomText
-              type="caption"
-              text={USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION}
-              disableAnimation={true}
-            />
-          )}
-        </div>
+	return (
+		<>
+			<div
+				className="used-cars-card"
+				onClick={() =>
+					onUsedCarDrawerOpen(
+						setIsDrawerOpen,
+						props.usedCarOverview?.id
+					)
+				}
+			>
+				{/* Presentation image (if any, informative text otherwise) */}
+				<div className="used-cars-card-image-container">
+					{props.usedCarOverview?.image ? (
+						<img
+							src={props.usedCarOverview?.image}
+							alt="auto-image"
+							loading="lazy"
+						/>
+					) : (
+						<CustomText
+							type="caption"
+							text={
+								USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION
+							}
+							disableAnimation={true}
+						/>
+					)}
+				</div>
 
-        {/* Flex container to show car's information */}
-        <Flex className="used-car-card-overview-flex" gap="small" align="start">
-          {/* Name of the car */}
-          <CustomText
-            type="subheading"
-            text={props.usedCarOverview?.name}
-            disableAnimation={true}
-            style={handleNamePriceStyle()}
-          />
+				{/* Flex container to show car's information */}
+				<Flex
+					className="used-car-card-overview-flex"
+					gap="small"
+					align="start"
+				>
+					{/* Name of the car */}
+					<CustomText
+						type="subheading"
+						text={props.usedCarOverview?.name}
+						disableAnimation={true}
+						style={handleNamePriceStyle()}
+					/>
 
-          {/* Car's overview information */}
-          <UsedCarOverview
-            showTitle={false}
-            usedCarOverview={props.usedCarOverview}
-          />
+					{/* Car's overview information */}
+					<UsedCarOverview
+						showTitle={false}
+						usedCarOverview={props.usedCarOverview}
+					/>
 
-          {/* Car price (in Euro) */}
-          <div className="used-cars-card-price-container">
-            <CustomText
-              type="body"
-              text={
-                new Intl.NumberFormat("it-IT", {
-                  style: "currency",
-                  currency: "EUR",
-                }).format(parseFloat(props.usedCarOverview?.price)) || "-"
-              }
-              disableAnimation={true}
-              style={handleNamePriceStyle()}
-            />
-          </div>
-        </Flex>
-      </div>
+					{/* Car price (in Euro) */}
+					<div className="used-cars-card-price-container">
+						<CustomText
+							type="body"
+							text={
+								new Intl.NumberFormat("it-IT", {
+									style: "currency",
+									currency: "EUR",
+								}).format(
+									parseFloat(props.usedCarOverview?.price)
+								) || "-"
+							}
+							disableAnimation={true}
+							style={handleNamePriceStyle()}
+						/>
+					</div>
+				</Flex>
+			</div>
 
-      {/* Used Car Drawer including car's details when the card is clicked */}
-      {isDrawerOpen && (
-        <UsedCarDrawer
-          usedCarOverview={props.usedCarOverview}
-          setIsDrawerOpen={setIsDrawerOpen}
-        />
-      )}
-    </>
-  );
+			{/* Used Car Drawer including car's details when the card is clicked */}
+			{isDrawerOpen && (
+				<UsedCarDrawer
+					usedCarOverview={props.usedCarOverview}
+					setIsDrawerOpen={setIsDrawerOpen}
+				/>
+			)}
+		</>
+	);
 }
 
 export default UsedCarCard;

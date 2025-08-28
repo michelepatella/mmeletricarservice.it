@@ -15,29 +15,33 @@ import { Button } from "antd";
  * @param props
  */
 function CustomButton(props) {
-  // Combine predefined and customized style-handling to get
-  // the final custom button style-handling
-  const style = { ...props.style };
+	// Combine predefined and customized style-handling to get
+	// the final custom button style-handling
+	const style = {
+		...props.style,
+	};
 
-  return (
-    <Button
-      type="primary"
-      className={
-        props.isContact && !props.isCta
-          ? "contact-button"
-          : props.isContact
-            ? "cta-button"
-            : "custom-button"
-      }
-      onClick={props.onClick}
-      style={style}
-    >
-      {/* Button's icon (if any) */}
-      {props.icon && <img src={props.icon} alt="button-icon" />}
+	return (
+		<Button
+			type="primary"
+			className={
+				props.isContact && !props.isCta
+					? "contact-button"
+					: props.isContact
+						? "cta-button"
+						: "custom-button"
+			}
+			onClick={props.onClick}
+			style={style}
+		>
+			{/* Button's icon (if any) */}
+			{props.icon && (
+				<img src={props.icon} alt="button-icon" />
+			)}
 
-      {props.text}
-    </Button>
-  );
+			{props.text}
+		</Button>
+	);
 }
 
 export default CustomButton;

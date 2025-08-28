@@ -12,29 +12,29 @@ import CustomText from "../../components/custom/CustomText";
  * @constructor
  */
 function Workshop() {
-  return (
-    <>
-      <SectionContainer id="officina">
-        {/* Section title */}
-        <CustomText
-          type="body"
-          text="• OFFICINA"
-          style={handleSectionNameStyle()}
-        />
+	return (
+		<>
+			<SectionContainer id="officina">
+				{/* Section title */}
+				<CustomText
+					type="body"
+					text="• OFFICINA"
+					style={handleSectionNameStyle()}
+				/>
 
-        {/* Add an informative card for each
+				{/* Add an informative card for each
         service offered by the company */}
-        {ALL_SERVICES?.map((service) => (
-          <InfoCard
-            key={service.title}
-            title={service?.title}
-            description={service?.description}
-            icon={service?.icon}
-          />
-        ))}
-      </SectionContainer>
-    </>
-  );
+				{ALL_SERVICES?.map((service) => (
+					<InfoCard
+						key={service.title}
+						title={service?.title}
+						description={service?.description}
+						icon={service?.icon}
+					/>
+				))}
+			</SectionContainer>
+		</>
+	);
 }
 
 export default Workshop;

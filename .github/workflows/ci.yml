@@ -25,5 +25,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Check code formatting with Prettier
+        run: npm run check-format
+
       - name: Run tests
         run: npm test -- --watchAll=false

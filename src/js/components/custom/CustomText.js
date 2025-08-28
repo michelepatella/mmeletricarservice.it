@@ -18,27 +18,33 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver";
  * @constructor
  */
 function CustomText(props) {
-  // Definition of a text reference, useful to generate
-  // an entry animation when the text becomes visible
-  const textRef = useRef(null);
-  useIntersectionObserver(textRef);
+	// Definition of a text reference, useful to generate
+	// an entry animation when the text becomes visible
+	const textRef = useRef(null);
+	useIntersectionObserver(textRef);
 
-  // Combine predefined and customized styles
-  // to get the final text style-handling
-  const style = {
-    ...(props.disableAnimation ? { opacity: "1" } : {}),
-    ...props.style,
-  };
+	// Combine predefined and customized styles
+	// to get the final text style-handling
+	const style = {
+		...(props.disableAnimation
+			? {
+					opacity: "1",
+				}
+			: {}),
+		...props.style,
+	};
 
-  return (
-    // The custom text, provided as <p> element
-    <p
-      className={"custom-" + props.type}
-      ref={props.disableAnimation ? null : textRef}
-      style={style}
-      dangerouslySetInnerHTML={{ __html: props.text }}
-    />
-  );
+	return (
+		// The custom text, provided as <p> element
+		<p
+			className={"custom-" + props.type}
+			ref={props.disableAnimation ? null : textRef}
+			style={style}
+			dangerouslySetInnerHTML={{
+				__html: props.text,
+			}}
+		/>
+	);
 }
 
 export default CustomText;

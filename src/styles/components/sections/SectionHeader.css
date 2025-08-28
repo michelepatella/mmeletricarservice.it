@@ -1,22 +1,23 @@
 /* Section Header styles */
 .section-header {
-  width: var(--section_max_width);
-  margin-bottom: var(--section_header_margin_bottom);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: var(--section_header_padding);
-  border: var(--section_header_border) solid var(--dark_gray_border_color);
-  border-radius: var(--border_radius);
-  background: transparent;
-  box-shadow: var(--section_header_box_shadow);
-  opacity: 0;
-  transition:
-    opacity 1.8s ease,
-    transform 1.8s ease;
+	width: var(--section_max_width);
+	margin-bottom: var(--section_header_margin_bottom);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: var(--section_header_padding);
+	border: var(--section_header_border) solid
+		var(--dark_gray_border_color);
+	border-radius: var(--border_radius);
+	background: transparent;
+	box-shadow: var(--section_header_box_shadow);
+	opacity: 0;
+	transition:
+		opacity 1.8s ease,
+		transform 1.8s ease;
 }
 
 .section-header.in-view {
-  opacity: 1;
+	opacity: 1;
 }

@@ -6,22 +6,27 @@ import { onUsedCarDrawerClose } from "../logic/handling/usedCarDrawerHandler";
  * of the used car drawer.
  * @param setIsDrawerOpen
  */
-export const useDrawerBackButtonHandler = (setIsDrawerOpen) => {
-  useEffect(() => {
-    /**
-     * To close the used car drawer when the
-     * back button is clicked
-     */
-    const handleBackButton = () => {
-      onUsedCarDrawerClose(setIsDrawerOpen);
-    };
+export const useDrawerBackButtonHandler = (
+	setIsDrawerOpen
+) => {
+	useEffect(() => {
+		/**
+		 * To close the used car drawer when the
+		 * back button is clicked
+		 */
+		const handleBackButton = () => {
+			onUsedCarDrawerClose(setIsDrawerOpen);
+		};
 
-    // Add a listener for popstate
-    window.addEventListener("popstate", handleBackButton);
+		// Add a listener for popstate
+		window.addEventListener("popstate", handleBackButton);
 
-    // Clear the listener
-    return () => {
-      window.removeEventListener("popstate", handleBackButton);
-    };
-  }, [setIsDrawerOpen]);
+		// Clear the listener
+		return () => {
+			window.removeEventListener(
+				"popstate",
+				handleBackButton
+			);
+		};
+	}, [setIsDrawerOpen]);
 };
