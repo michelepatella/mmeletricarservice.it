@@ -543,10 +543,6 @@ Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring 
 
 <br>
 
-> More details: [Lighthouse Report](./lighthouse.pdf)
-
-<br>
-
 ## 🌎 Impact on the Real World
 
 ### 💻 Enhanced Operational Efficiency
