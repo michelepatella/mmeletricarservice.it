@@ -15,6 +15,11 @@ const useIntersectionObserver = (ref, threshold = 0.5) => {
 	 * Keep track of the element's state (visible or not)
 	 */
 	useEffect(() => {
+
+		// Get the reference
+		const node = ref?.current;
+		if (!node) return;
+
 		// Options for the IntersectionObserver
 		const options = {
 			root: null,
@@ -43,13 +48,13 @@ const useIntersectionObserver = (ref, threshold = 0.5) => {
 		);
 
 		// Start observing the element if the ref is valid
-		if (ref && ref?.current)
-			observer?.observe(ref?.current);
+		if (ref && node)
+			observer?.observe(node);
 
 		// Cleanup function to stop observing when component unmounts
 		return () => {
-			if (ref && ref?.current)
-				observer?.unobserve(ref?.current);
+			if (ref && node)
+				observer?.unobserve(node);
 		};
 	}, [ref, threshold]);
 
