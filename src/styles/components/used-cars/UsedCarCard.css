@@ -2,7 +2,7 @@
 .used-cars-card {
 	width: var(--used_car_card_width);
 	padding: var(--used_car_card_padding);
-	background: transparent;
+	background: var(--dark_background_color);
 	border-radius: var(--border_radius);
 	border: var(--used_car_card_border) solid
 		var(--dark_gray_border_color);
