@@ -38,41 +38,24 @@ export const onUsedCarDrawerOpen = (
  * @param setIsDrawerOpen
  */
 export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
-	// Remove drawer-open class to trigger CSS closing animation
+	// Set the drawer closed
+	setIsDrawerOpen(false);
+
+	// Make the menu visible and the page scrollable
 	document.body.classList.remove("drawer-open");
+	document.documentElement.style.overflow = "auto";
+	document.body.style.overflow = "auto";
+	document.body.style.position = "";
+	document.body.style.top = "";
+	document.body.style.width = "";
 
-	// Get the drawer element
-	const drawer = document.querySelector(".ant-drawer-content-wrapper");
+	// Restore scroll position
+	window.scrollTo({
+		top: previousScrollY,
+		left: 0,
+		behavior: "instant",
+	});
 
-	if (drawer) {
-		// Wait for the animation to finish before actually closing
-		drawer.addEventListener(
-			"animationend",
-			() => {
-				// Set the drawer closed
-				setIsDrawerOpen(false);
-
-				// Make the menu visible and the page scrollable
-				document.documentElement.style.overflow = "auto";
-				document.body.style.overflow = "auto";
-				document.body.style.position = "";
-				document.body.style.top = "";
-				document.body.style.width = "";
-
-				// Restore scroll position
-				window.scrollTo({
-					top: previousScrollY,
-					left: 0,
-					behavior: "instant",
-				});
-
-				// Redirect the user to the used cars page
-				window.history.replaceState({}, "", "/");
-			},
-			{ once: true }
-		);
-	} else {
-		// Fallback if the element doesn't exist
-		setIsDrawerOpen(false);
-	}
+	// Redirect the user to the used cars page
+	window.history.replaceState({}, "", "/");
 };

@@ -1,18 +1,10 @@
-/* Drawer Animations */
+/* In Drawer Animation */
 @keyframes slideDrawerRight {
 	from {
 		transform: translateX(100%);
 	}
 	to {
 		transform: translateX(0);
-	}
-}
-@keyframes slideDrawerLeft {
-	from {
-		transform: translateX(0);
-	}
-	to {
-		transform: translateX(100%);
 	}
 }
 
@@ -25,16 +17,10 @@
 
 .ant-drawer-content-wrapper {
 	width: var(
-		--used_car_drawer_content_wrapper_width
+			--used_car_drawer_content_wrapper_width
 	) !important;
 	position: fixed;
-}
-
-body.drawer-open .ant-drawer-content-wrapper {
-	animation: slideDrawerRight 0.4s ease-out forwards;
-}
-body:not(.drawer-open) .ant-drawer-content-wrapper {
-	animation: slideDrawerLeft 0.4s ease-out forwards;
+	animation: slideDrawerRight 0.4s ease-out;
 }
 
 /* Hide menus  */
@@ -46,7 +32,7 @@ body:not(.drawer-open) .ant-drawer-content-wrapper {
 /* User car drawer flex horizontal container styles */
 .used-car-drawer-flex-horizontal {
 	height: var(
-		--used_car_drawer_flex_horizontal_height
+			--used_car_drawer_flex_horizontal_height
 	) !important;
 }
 
@@ -55,26 +41,26 @@ body:not(.drawer-open) .ant-drawer-content-wrapper {
 	.used-car-drawer-flex-horizontal {
 		flex-direction: row;
 		gap: var(
-			--used_car_drawer_flex_horizontal_gap_big_medium
+				--used_car_drawer_flex_horizontal_gap_big_medium
 		);
 	}
 
 	.used-car-drawer-flex-vertical {
 		border: var(
 				--used_car_drawer_flex_horizontal_vertical_border
-			)
-			solid var(--light_gray_border_color);
+		)
+		solid var(--light_gray_border_color);
 		border-radius: var(--border_radius);
 		padding: var(--used_car_drawer_info_panel_padding);
 		background-color: transparent;
 		box-shadow: var(
-			--used_car_drawer_flex_horizontal_vertical_box_shadow
+				--used_car_drawer_flex_horizontal_vertical_box_shadow
 		);
 	}
 
 	.ant-drawer-header {
 		padding-left: var(
-			--used_car_drawer_header_padding_left_big
+				--used_car_drawer_header_padding_left_big
 		) !important;
 	}
 }
@@ -85,13 +71,13 @@ body:not(.drawer-open) .ant-drawer-content-wrapper {
 		flex-direction: column-reverse;
 		justify-content: start;
 		gap: var(
-			--used_car_drawer_flex_horizontal_gap_big_medium
+				--used_car_drawer_flex_horizontal_gap_big_medium
 		);
 	}
 
 	.ant-drawer-header {
 		padding-left: var(
-			--used_car_drawer_header_padding_left_small_portrait_medium_portrait
+				--used_car_drawer_header_padding_left_small_portrait_medium_portrait
 		) !important;
 	}
 }
@@ -101,26 +87,26 @@ body:not(.drawer-open) .ant-drawer-content-wrapper {
 	.used-car-drawer-flex-horizontal {
 		flex-direction: row;
 		gap: var(
-			--used_car_drawer_flex_horizontal_gap_big_medium
+				--used_car_drawer_flex_horizontal_gap_big_medium
 		);
 	}
 
 	.used-car-drawer-flex-vertical {
 		border: var(
 				--used_car_drawer_flex_horizontal_vertical_border
-			)
-			solid var(--light_gray_border_color);
+		)
+		solid var(--light_gray_border_color);
 		border-radius: var(--border_radius);
 		padding: var(--used_car_drawer_info_panel_padding);
 		background-color: transparent;
 		box-shadow: var(
-			--used_car_drawer_flex_horizontal_vertical_box_shadow
+				--used_car_drawer_flex_horizontal_vertical_box_shadow
 		);
 	}
 
 	.ant-drawer-header {
 		padding-left: var(
-			--used_car_drawer_header_padding_left_small_landscape_medium_landscape
+				--used_car_drawer_header_padding_left_small_landscape_medium_landscape
 		) !important;
 	}
 }
@@ -135,7 +121,7 @@ body:not(.drawer-open) .ant-drawer-content-wrapper {
 
 	.ant-drawer-header {
 		padding-left: var(
-			--used_car_drawer_header_padding_left_small_portrait_medium_portrait
+				--used_car_drawer_header_padding_left_small_portrait_medium_portrait
 		) !important;
 	}
 }
@@ -150,7 +136,7 @@ body:not(.drawer-open) .ant-drawer-content-wrapper {
 
 	.ant-drawer-header {
 		padding-left: var(
-			--used_car_drawer_header_padding_left_small_landscape_medium_landscape
+				--used_car_drawer_header_padding_left_small_landscape_medium_landscape
 		) !important;
 	}
 }
