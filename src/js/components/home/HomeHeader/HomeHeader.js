@@ -1,5 +1,5 @@
-import CustomIconButton from "../custom/CustomIconButton/CustomIconButton";
-import { homeHeaderContactButtons } from "../../logic/handling/contactButtonHandler";
+import CustomIconButton from "../../custom/CustomIconButton/CustomIconButton";
+import { homeHeaderContactButtons } from "../../../logic/handling/contactButtonHandler";
 
 /**
  * This component represents the header
