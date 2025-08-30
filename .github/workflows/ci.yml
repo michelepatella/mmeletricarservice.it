@@ -25,11 +25,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Lint code with ESLint
-        run: npm run lint
-
-      - name: Format code with Prettier
-        run: npx prettier --write .
+      - name: Lint + Prettier check
+        run: npm run lint:check
 
       - name: Run tests
         run: npm test -- --watchAll=false
