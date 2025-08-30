@@ -25,10 +25,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Check and format code
-        run: |
-          npx prettier --check .
-          npx prettier --write .
+      - name: Check code formatting with Prettier
+        run: npx prettier --check .
+
+      - name: Format code with Prettier
+        run: npx prettier --write .
 
       - name: Run tests
         run: npm test -- --watchAll=false
