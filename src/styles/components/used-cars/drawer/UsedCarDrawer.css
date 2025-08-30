@@ -1,10 +1,18 @@
-/* In Drawer Animation */
+/* Drawer Animations */
 @keyframes slideDrawerRight {
 	from {
 		transform: translateX(100%);
 	}
 	to {
 		transform: translateX(0);
+	}
+}
+@keyframes slideDrawerLeft {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(100%);
 	}
 }
 
@@ -20,7 +28,13 @@
 		--used_car_drawer_content_wrapper_width
 	) !important;
 	position: fixed;
-	animation: slideDrawerRight 0.4s ease-out;
+}
+
+body.drawer-open .ant-drawer-content-wrapper {
+	animation: slideDrawerRight 0.4s ease-out forwards;
+}
+body:not(.drawer-open) .ant-drawer-content-wrapper {
+	animation: slideDrawerLeft 0.4s ease-out forwards;
 }
 
 /* Hide menus  */
