@@ -12,7 +12,7 @@ import { supabase } from "../../setup.js";
  */
 export async function getEnginePerformanceData(id) {
 	// Retrieve all engine and performance data
-	let { data: engine_performance, enginePerformanceError } =
+	let { data: enginePerformance, enginePerformanceError } =
 		await supabase
 			.from("engine_and_performance")
 			.select("*")
@@ -24,5 +24,5 @@ export async function getEnginePerformanceData(id) {
 		return null;
 	}
 
-	return engine_performance?.[0] || null;
+	return enginePerformance?.[0] || null;
 }

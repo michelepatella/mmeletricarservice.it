@@ -16,9 +16,9 @@ beforeAll(() => {
 });
 
 // Definition of expected results
-const contacts_section_name = "Contacts Section Name";
-const contacts_title = "Contacts Title";
-const contacts_subtitle = "Contacts Subtitle";
+const contactsSectionName = "Contacts Section Name";
+const contactsTitle = "Contacts Title";
+const contactsSubtitle = "Contacts Subtitle";
 const phone = "Phone";
 const email = "Email";
 const emailPec = "Email PEC";
@@ -30,9 +30,9 @@ const facebookIcon = "facebook-icon";
 
 // Mock the company contacts and section's texts
 jest.mock("../../../utils/const", () => ({
-	CONTACTS_SECTION_NAME: contacts_section_name,
-	CONTACTS_TITLE: contacts_title,
-	CONTACTS_SUBTITLE: contacts_subtitle,
+	CONTACTS_SECTION_NAME: contactsSectionName,
+	CONTACTS_TITLE: contactsTitle,
+	CONTACTS_SUBTITLE: contactsSubtitle,
 	CONTACTS: [
 		{
 			value: phone,
@@ -102,7 +102,7 @@ describe("ContactsContent", () => {
 
 			expect(
 				screen.getByText((content) =>
-					content.includes(contacts_section_name)
+					content.includes(contactsSectionName)
 				)
 			).toBeInTheDocument();
 		});
@@ -112,7 +112,7 @@ describe("ContactsContent", () => {
 			render(<ContactsContent />);
 
 			expect(
-				screen.getByText(contacts_title)
+				screen.getByText(contactsTitle)
 			).toBeInTheDocument();
 		});
 
@@ -121,7 +121,7 @@ describe("ContactsContent", () => {
 			render(<ContactsContent />);
 
 			expect(
-				screen.getByText(contacts_subtitle)
+				screen.getByText(contactsSubtitle)
 			).toBeInTheDocument();
 		});
 	});

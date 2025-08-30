@@ -9,7 +9,7 @@ import { supabase } from "../../setup.js";
 export async function getEmissionsConsumptionData(id) {
 	// Retrieve all emissions and consumptions data
 	const {
-		data: emissions_consumption,
+		data: emissionsConsumption,
 		error: emissionsConsumptionError,
 	} = await supabase
 		.from("emissions_and_consumption")
@@ -22,5 +22,5 @@ export async function getEmissionsConsumptionData(id) {
 		return null;
 	}
 
-	return emissions_consumption?.[0] || null;
+	return emissionsConsumption?.[0] || null;
 }

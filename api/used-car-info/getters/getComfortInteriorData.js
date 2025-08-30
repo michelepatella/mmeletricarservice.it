@@ -9,7 +9,7 @@ import { supabase } from "../../setup.js";
 export async function getComfortInteriorData(id) {
 	// Retrieve all comfort and interior data
 	const {
-		data: comfort_interior,
+		data: comfortInterior,
 		error: comfortInteriorError,
 	} = await supabase
 		.from("comfort_and_interior")
@@ -22,5 +22,5 @@ export async function getComfortInteriorData(id) {
 		return null;
 	}
 
-	return comfort_interior?.[0] || null;
+	return comfortInterior?.[0] || null;
 }

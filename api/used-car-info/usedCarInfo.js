@@ -25,35 +25,35 @@ export default async function handler(req, res) {
 		const { id } = req.query;
 
 		// Retrieve engine and performance data
-		const engine_performance =
+		const enginePerformance =
 			await getEnginePerformanceData(id);
 
 		// Retrieve emissions and consumptions data
-		const emissions_consumption =
+		const emissionsConsumption =
 			await getEmissionsConsumptionData(id);
 
 		// Retrieve exterior data
 		const exterior = await getExteriorData(id);
 
 		// Retrieve comfort and interior data
-		const comfort_interior =
+		const comfortInterior =
 			await getComfortInteriorData(id);
 
 		// Retrieve all the images of the car
 		const imageUrls = await getCarImages(id);
 
 		// Collect all the retrieved data together
-		const used_car_info = {
-			...engine_performance,
-			...emissions_consumption,
+		const usedCarInfo = {
+			...enginePerformance,
+			...emissionsConsumption,
 			...exterior,
-			...comfort_interior,
+			...comfortInterior,
 			images: imageUrls,
 		};
 
 		// Return all the data about the used car
 		res.status(200).json({
-			used_car_info: used_car_info,
+			used_car_info: usedCarInfo,
 		});
 	} catch (error) {
 		// Handle errors
