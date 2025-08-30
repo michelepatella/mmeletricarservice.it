@@ -19,8 +19,8 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"check": "eslint . && prettier --check \"**/*.{js,jsx,json,css,html,md}\" && react-scripts test --watchAll=false",
-		"fix": "eslint . --fix && prettier --write \"**/*.{js,jsx,json,css,html,md}\""
+		"check": "eslint . && prettier --check .",
+		"fix": "eslint . --fix && prettier --write ."
 	},
 	"eslintConfig": {
 		"extends": [
