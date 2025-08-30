@@ -11,7 +11,7 @@ import {
 	handleGoogleMapsUnavailableDescriptionStyle,
 } from "../logic/style-handling/whereWeAreStyleHandler";
 import SectionContainer from "../components/sections/SectionContainer";
-import CustomText from "../components/custom/CustomText";
+import CustomText from "../components/custom/CustomText/CustomText";
 import InfoCard from "../components/other/InfoCard";
 import SectionHeader from "../components/sections/SectionHeader";
 

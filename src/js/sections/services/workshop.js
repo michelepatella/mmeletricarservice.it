@@ -2,7 +2,7 @@ import { ALL_SERVICES } from "../../utils/const";
 import { handleSectionNameStyle } from "../../logic/style-handling/sectionHeaderStyleHandler";
 import InfoCard from "../../components/other/InfoCard";
 import SectionContainer from "../../components/sections/SectionContainer";
-import CustomText from "../../components/custom/CustomText";
+import CustomText from "../../components/custom/CustomText/CustomText";
 
 /**
  * This section represents Workshop section. The

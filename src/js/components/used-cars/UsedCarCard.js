@@ -5,7 +5,7 @@ import { onUsedCarDrawerOpen } from "../../logic/handling/usedCarDrawerHandler";
 import { handleNamePriceStyle } from "../../logic/style-handling/usedCarsStyleHandler";
 import { useOpenDrawerByLink } from "../../hooks/useOpenDrawerByLink";
 import UsedCarDrawer from "./drawer/UsedCarDrawer";
-import CustomText from "../custom/CustomText";
+import CustomText from "../custom/CustomText/CustomText";
 import UsedCarOverview from "./UsedCarOverview";
 
 /**

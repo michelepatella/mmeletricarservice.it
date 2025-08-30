@@ -1,6 +1,6 @@
 import { Flex } from "antd";
 import { handleTitleStyle } from "../../logic/style-handling/infoCardStyleHandler";
-import CustomText from "../custom/CustomText";
+import CustomText from "../custom/CustomText/CustomText";
 
 /**
  * This component represents an info card. It is composed by

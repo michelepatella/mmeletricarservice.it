@@ -12,7 +12,7 @@ import {
 import SectionContainer from "../../components/sections/SectionContainer";
 import SectionHeader from "../../components/sections/SectionHeader";
 import UsedCarCard from "../../components/used-cars/UsedCarCard";
-import CustomText from "../../components/custom/CustomText";
+import CustomText from "../../components/custom/CustomText/CustomText";
 import { useUsedCarsOverview } from "../../hooks/useUsedCarsOverview";
 
 /**

@@ -1,7 +1,7 @@
 import React from "react";
 import { LeftOutlined } from "@ant-design/icons";
 import { BACK_BUTTON_LABEL } from "../../../utils/const";
-import CustomText from "../CustomText";
+import CustomText from "../CustomText/CustomText";
 
 /**
  * This component defines a custom back

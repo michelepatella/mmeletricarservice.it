@@ -6,7 +6,7 @@ import {
 } from "../../../utils/const";
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
 import { handleNamePriceStyle } from "../../../logic/style-handling/usedCarsStyleHandler";
-import CustomText from "../../custom/CustomText";
+import CustomText from "../../custom/CustomText/CustomText";
 import UsedCarOverview from "../UsedCarOverview";
 import CustomButton from "../../custom/CustomButton/CustomButton";
 import UsedCarDrawerCollapse from "./UsedCarDrawerCollapse";

@@ -5,7 +5,7 @@ import {
 	OUR_VALUES_TITLE,
 } from "../utils/const";
 import SectionContainer from "../components/sections/SectionContainer";
-import CustomText from "../components/custom/CustomText";
+import CustomText from "../components/custom/CustomText/CustomText";
 import SectionHeader from "../components/sections/SectionHeader";
 
 /**

@@ -4,7 +4,7 @@ import {
 	handleSectionNameStyle,
 	handleSubtitleStyle,
 } from "../../logic/style-handling/sectionHeaderStyleHandler";
-import CustomText from "../custom/CustomText";
+import CustomText from "../custom/CustomText/CustomText";
 
 /**
  * This component represents the section header.

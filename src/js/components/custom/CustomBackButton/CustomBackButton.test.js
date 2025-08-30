@@ -23,7 +23,7 @@ jest.mock("@ant-design/icons", () => ({
 }));
 
 // Mock the CustomText component
-jest.mock("../CustomText", () => ({
+jest.mock("../CustomText/CustomText", () => ({
 	__esModule: true,
 	default: ({ type, disableAnimation, text }) => (
 		<span
