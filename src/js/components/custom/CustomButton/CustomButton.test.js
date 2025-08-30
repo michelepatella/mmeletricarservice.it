@@ -91,9 +91,9 @@ describe("CustomButton", () => {
 			/>
 		);
 
-        fireEvent.click(
-            screen.getByRole("button", { name: customButtonText })
-        );
+		fireEvent.click(
+			screen.getByRole("button", { name: customButtonText })
+		);
 		expect(customButtonClickHandler).toHaveBeenCalledTimes(
 			1
 		);
