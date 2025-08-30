@@ -20,6 +20,7 @@ const cookiePolicyHref = "cookie-policy-link";
 const privacyPolicyHref = "privacy-policy-link";
 const targetAttr = "_blank";
 const relAttr = "noopener noreferrer";
+
 const cookieConsentTestId = "mock-cookie-consent";
 
 // Definition of links to be tested
@@ -77,6 +78,7 @@ const mockHandleDeclineCookies = jest.fn();
 
 // Run the test
 describe("CookieConsentBanner", () => {
+
 	// Clear all mocks before running the test
 	beforeEach(() => {
 		jest.clearAllMocks();

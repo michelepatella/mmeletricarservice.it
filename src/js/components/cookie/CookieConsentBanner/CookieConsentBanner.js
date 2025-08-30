@@ -4,6 +4,7 @@ import {
 	COOKIE_CONSENT_BANNER_DESCRIPTION,
 	COOKIE_DECLINE_BUTTON_TEXT,
 	COOKIE_EXPIRATION_DATE,
+	COOKIE_NAME,
 	COOKIE_POLICY_TEXT,
 	PRIVACY_POLICY_TEXT,
 } from "../../../utils/const";
@@ -31,7 +32,7 @@ function CookieConsentBanner(props) {
 			{/* Banner for consenting/declining cookies */}
 			{props.isCookiesBannerVisible && (
 				<CookieConsent
-					cookieName="cookieConsent"
+					cookieName={COOKIE_NAME}
 					expires={COOKIE_EXPIRATION_DATE}
 					visible={true}
 					location="bottom"

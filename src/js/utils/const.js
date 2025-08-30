@@ -17,6 +17,7 @@ export const SITE =
 export const REA = "640711";
 
 /**------------- Cookies -------------**/
+export const COOKIE_NAME = "cookieConsent";
 export const COOKIE_CONSENT_BANNER_DESCRIPTION =
 	'Questo sito utilizza i cookie. Cliccando su "Accetta", acconsenti all\'uso dei cookie. Cliccando su "Rifiuta", rifiuti l\'uso dei cookie. Per maggiori informazioni consulta la nostra ';
 export const COOKIE_ACCEPT_BUTTON_TEXT =

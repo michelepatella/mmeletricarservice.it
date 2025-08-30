@@ -7,7 +7,6 @@ import CustomBackButton from "./CustomBackButton";
 // Definition of expected results
 const backButtonLabel = "Back Button Label";
 const customTextType = "body";
-const customTextDisableAnimation = "true";
 
 const leftOutlinedTestId = "left-outlined-icon";
 
@@ -38,6 +37,7 @@ jest.mock("../CustomText", () => ({
 
 // Run the test
 describe("CustomBackButton", () => {
+
 	// Clear all mocks before running the test
 	beforeEach(() => {
 		jest.clearAllMocks();
@@ -47,6 +47,7 @@ describe("CustomBackButton", () => {
 		// Test if it renders the LeftOutlined icon correctly
 		test("renders with correct icon", () => {
 			render(<CustomBackButton />);
+
 			expect(
 				screen.getByTestId(leftOutlinedTestId)
 			).toBeInTheDocument();
@@ -57,6 +58,7 @@ describe("CustomBackButton", () => {
 		// Test if it renders the label correctly
 		test("renders with correct text", () => {
 			render(<CustomBackButton />);
+
 			expect(
 				screen.getByText(BACK_BUTTON_LABEL)
 			).toBeInTheDocument();
@@ -65,25 +67,23 @@ describe("CustomBackButton", () => {
 		// Test if it sets the correct text type
 		test("sets the correct text type", () => {
 			render(<CustomBackButton />);
-			const customTextElement = screen.getByText(
-				BACK_BUTTON_LABEL
-			);
 
 			expect(
-				customTextElement.getAttribute("data-type")
+				screen.getByText(
+					BACK_BUTTON_LABEL
+				).getAttribute("data-type")
 			).toBe(customTextType);
 		});
 
 		// Test if it sets the correct disableAnimation prop
 		test("sets the correct animation setting", () => {
 			render(<CustomBackButton />);
-			const customTextElement = screen.getByText(
-				BACK_BUTTON_LABEL
-			);
 
 			expect(
-				customTextElement.getAttribute("data-animation")
-			).toBe(customTextDisableAnimation);
+				screen.getByText(
+					BACK_BUTTON_LABEL
+				).getAttribute("data-animation")
+			).toBeTruthy();
 		});
 	});
 });

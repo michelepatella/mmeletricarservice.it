@@ -47,6 +47,7 @@ jest.mock("../../../utils/links", () => ({
 
 // Run the test
 describe("ContactsFooter", () => {
+
 	// Clear all mocks before running the test
 	beforeEach(() => {
 		jest.clearAllMocks();
@@ -55,6 +56,7 @@ describe("ContactsFooter", () => {
 	// Test if it renders the footer text correctly
 	test("renders with correct footer text", () => {
 		render(<ContactsFooter />);
+
 		expect(
 			screen.getByText((content) =>
 				content.includes(footerText)
