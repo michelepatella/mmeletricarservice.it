@@ -15,7 +15,7 @@ import Workshop from "./sections/services/workshop";
 import UsedCars from "./sections/services/used-cars";
 import WhereWeAre from "./sections/where-we-are";
 import Contacts from "./sections/contacts";
-import Menu from "./components/menu/Menu";
+import Menu from "./components/menu/Menu/Menu";
 import CookieConsentBanner from "./components/cookie/CookieConsentBanner/CookieConsentBanner";
 import "../index.css";
 import "../styles/App.css";
