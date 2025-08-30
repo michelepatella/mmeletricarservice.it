@@ -72,7 +72,7 @@ jest.mock(
 );
 
 // Mock CustomButton
-jest.mock("../../custom/CustomButton", () => ({
+jest.mock("../../custom/CustomButton/CustomButton", () => ({
 	__esModule: true,
 	default: ({ text, isContact, isCta, icon, onClick }) => (
 		<button
@@ -128,7 +128,6 @@ describe("ContactsContent", () => {
 
 	// Test contact buttons visualized into ContactContent
 	describe("Contact buttons", () => {
-
 		// Test if all the buttons are rendered
 		// with the expected texts
 		test.each([[phone], [email], [emailPec], [facebook]])(
@@ -154,42 +153,40 @@ describe("ContactsContent", () => {
 			(contactText, mockHandler) => {
 				render(<ContactsContent />);
 
-				fireEvent.click(
-					screen.getByText(contactText)
-				);
+				fireEvent.click(screen.getByText(contactText));
 				expect(mockHandler).toHaveBeenCalled();
 			}
 		);
 
 		// Test if all buttons are set as contact buttons
-		test.each([
-			[phone, phoneIcon],
-			[email, emailIcon],
-			[emailPec, emailPecIcon],
-			[facebook, facebookIcon],
-		])("sets %s button as contact button", (contactText) => {
-			render(<ContactsContent />);
+		test.each([[phone], [email], [emailPec], [facebook]])(
+			"sets %s button as contact button",
+			(contactText) => {
+				render(<ContactsContent />);
 
-			expect(
-				screen.getByText(contactText).getAttribute("data-contact")
-			).toBeTruthy();
-		});
+				expect(
+					screen
+						.getByText(contactText)
+						.getAttribute("data-contact")
+				).toBeTruthy();
+			}
+		);
 
 		// Test if all buttons are not set as
 		// CTA buttons
-		test.each([
-			[phone, phoneIcon],
-			[email, emailIcon],
-			[emailPec, emailPecIcon],
-			[facebook, facebookIcon],
-		])("sets %s buttons not as CTA button", (contactText) => {
-			render(<ContactsContent />);
+		test.each([[phone], [email], [emailPec], [facebook]])(
+			"sets %s buttons not as CTA button",
+			(contactText) => {
+				render(<ContactsContent />);
 
-			expect(
-				// eslint-disable-next-line testing-library/prefer-presence-queries
-				screen.getByText(contactText).getAttribute("data-cta") === "true"
-			).toBeFalsy();
-		});
+				expect(
+					screen
+						// eslint-disable-next-line testing-library/prefer-presence-queries
+						.getByText(contactText)
+						.getAttribute("data-cta") === "true"
+				).toBeFalsy();
+			}
+		);
 
 		// Test if all buttons have the correct icon
 		test.each([
@@ -197,12 +194,15 @@ describe("ContactsContent", () => {
 			[email, emailIcon],
 			[emailPec, emailPecIcon],
 			[facebook, facebookIcon],
-		])("sets the correct icon to %s button", (contactText, expectedIcon) => {
-			render(<ContactsContent />);
+		])(
+			"sets the correct icon to %s button",
+			(contactText, expectedIcon) => {
+				render(<ContactsContent />);
 
-			expect(
-				screen.getByText(contactText)
-			).toHaveAttribute("data-icon", expectedIcon);
-		});
+				expect(
+					screen.getByText(contactText)
+				).toHaveAttribute("data-icon", expectedIcon);
+			}
+		);
 	});
 });

@@ -47,7 +47,6 @@ jest.mock("../../../utils/links", () => ({
 
 // Run the test
 describe("ContactsFooter", () => {
-
 	// Clear all mocks before running the test
 	beforeEach(() => {
 		jest.clearAllMocks();

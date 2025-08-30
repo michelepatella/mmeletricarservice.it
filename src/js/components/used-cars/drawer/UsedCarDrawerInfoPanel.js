@@ -8,7 +8,7 @@ import { contactClickHandler } from "../../../logic/handling/contactButtonHandle
 import { handleNamePriceStyle } from "../../../logic/style-handling/usedCarsStyleHandler";
 import CustomText from "../../custom/CustomText";
 import UsedCarOverview from "../UsedCarOverview";
-import CustomButton from "../../custom/CustomButton";
+import CustomButton from "../../custom/CustomButton/CustomButton";
 import UsedCarDrawerCollapse from "./UsedCarDrawerCollapse";
 
 /**

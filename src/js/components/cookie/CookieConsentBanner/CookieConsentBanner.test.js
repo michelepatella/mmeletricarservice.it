@@ -78,7 +78,6 @@ const mockHandleDeclineCookies = jest.fn();
 
 // Run the test
 describe("CookieConsentBanner", () => {
-
 	// Clear all mocks before running the test
 	beforeEach(() => {
 		jest.clearAllMocks();

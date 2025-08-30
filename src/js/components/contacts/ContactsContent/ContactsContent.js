@@ -5,7 +5,7 @@ import {
 	CONTACTS_SECTION_NAME,
 } from "../../../utils/const";
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
-import CustomButton from "../../custom/CustomButton";
+import CustomButton from "../../custom/CustomButton/CustomButton";
 import SectionContainer from "../../sections/SectionContainer";
 import SectionHeader from "../../sections/SectionHeader";
 

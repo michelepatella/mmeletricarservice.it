@@ -37,7 +37,6 @@ jest.mock("../CustomText", () => ({
 
 // Run the test
 describe("CustomBackButton", () => {
-
 	// Clear all mocks before running the test
 	beforeEach(() => {
 		jest.clearAllMocks();
@@ -69,9 +68,9 @@ describe("CustomBackButton", () => {
 			render(<CustomBackButton />);
 
 			expect(
-				screen.getByText(
-					BACK_BUTTON_LABEL
-				).getAttribute("data-type")
+				screen
+					.getByText(BACK_BUTTON_LABEL)
+					.getAttribute("data-type")
 			).toBe(customTextType);
 		});
 
@@ -80,9 +79,9 @@ describe("CustomBackButton", () => {
 			render(<CustomBackButton />);
 
 			expect(
-				screen.getByText(
-					BACK_BUTTON_LABEL
-				).getAttribute("data-animation")
+				screen
+					.getByText(BACK_BUTTON_LABEL)
+					.getAttribute("data-animation")
 			).toBeTruthy();
 		});
 	});

@@ -16,7 +16,7 @@
 	color: var(--yellow_color);
 	text-align: center;
 	opacity: 0;
-	animation: slideUpHomeTitle 1.0s ease forwards;
+	animation: slideUpHomeTitle 1s ease forwards;
 	animation-delay: var(--home_title_animation_delay);
 }
 
@@ -26,7 +26,7 @@
 	color: white;
 	text-align: center;
 	opacity: 0;
-	animation: slideUpHomeTitle 1.0s ease forwards;
+	animation: slideUpHomeTitle 1s ease forwards;
 	animation-delay: var(--home_subtitle_animation_delay);
 }
 
