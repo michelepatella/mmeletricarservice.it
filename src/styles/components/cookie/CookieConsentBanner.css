@@ -1,3 +1,13 @@
+/* Cookie Consent animations */
+@keyframes slideUp {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
 /* Cookie Consent styles*/
 .CookieConsent {
 	font-size: var(--caption_text_font_size) !important;
@@ -5,6 +15,7 @@
 	color: white !important;
 	z-index: var(--cookie_consent_banner_z_index) !important;
 	background: var(--background_color) !important;
+	animation: slideUp 0.3s ease-out forwards;
 }
 
 /* Cookie Consent buttons styles */
