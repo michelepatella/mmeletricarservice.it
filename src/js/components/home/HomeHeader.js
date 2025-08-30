@@ -1,4 +1,4 @@
-import CustomIconButton from "../custom/CustomIconButton";
+import CustomIconButton from "../custom/CustomIconButton/CustomIconButton";
 import { homeHeaderContactButtons } from "../../logic/handling/contactButtonHandler";
 
 /**
