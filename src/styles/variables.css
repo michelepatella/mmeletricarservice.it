@@ -61,6 +61,7 @@
 	--custom_back_button_padding_top: 20px;
 
 	/* -------- Cookie Consent Banner + Cookie Button -------- */
+	--cookie_consent_banner_width: 60%;
 	--cookie_consent_banner_button_padding: 11px 20px 11px
 		22px;
 	--cookie_consent_banner_z_index: 9999999;

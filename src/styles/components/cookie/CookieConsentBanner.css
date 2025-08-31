@@ -21,6 +21,7 @@
 /* Cookie Consent buttons styles */
 .CookieConsent #rcc-decline-button,
 #rcc-confirm-button {
+	width: var(--cookie_consent_banner_width);
 	font-size: var(--caption_text_font_size) !important;
 	font-family: var(--font_family) !important;
 	border: var(--cookie_consent_banner_border_buttons) solid
