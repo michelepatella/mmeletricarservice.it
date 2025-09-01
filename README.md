@@ -183,36 +183,6 @@ This project follows the best practices of software engineering:
 
 ## 🏗️ System Architecture
 
-🌐 **Client-side**
-
-- Supabase interactions via Serverless API
-- Interaction implemented via React Query, called from React components
-
-⚙️ **Serverless Functions**
-
-- Implemented as Vercel Functions
-- Act as middleware between frontend and backend
-
-🔄 **Data Fetching & Caching**
-
-- Handled via React Query
-- Redundant requests prevented
-- Better managament of loading, error, and success states
-
-☁️ **Backend / BaaS**
-
-- PostgreSQL database for used car data
-- Storage bucket for used car images
-- Accessed via RESTful API
-
-📦 **Deployment & CI/CD**
-
-- GitHub + Vercel: automatic deploys on push to `main` and previews for PRs
-- CI pipeline runs automated unit and integration tests on every commit
-- Rollbacks, env variables, and analytics managed via Vercel dashboard
-
-<br>
-
 <img width="776" alt="image" src="https://github.com/user-attachments/assets/1d2d3b30-c13b-476a-8401-cab627842d89" />
 
 <br>
