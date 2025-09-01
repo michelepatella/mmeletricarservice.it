@@ -4,7 +4,6 @@
 
 - [👁️ Overview](#️-overview)
 - [🛠️ Tech Stack](#️-tech-stack)
-- [🔗 Project Structure](#-project-structure)
 - [📌 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
 - [🌐 Client-side](#-client-side)
@@ -29,12 +28,12 @@ A production-ready, full-stack web application developed for MM Eletricar Servic
 
 ### ❓ Why
 
-To enhance the company's digital presence and operational efficiency through a modern, responsive, and informative web platform.
+To enhance the company's digital presence and give customers clear, accessible information for confident decision-making. 
 <br>
 
 ### 👤 Who
 
-Designed for customers, providing detailed information about the company—including its values, location, and contact details—along with an overview of services and a seamless browsing experience for available used vehicles.
+Designed for customers exploring company details, services, and used vehicles.
 <br>
 
 ### 📅 When
@@ -56,53 +55,18 @@ The web application is available at https://mmeletricarservice.it 🌐
 | 🖌️ UI Library            | Ant Design                              |
 | 🎨 Styling               | CSS + Custom Design Tokens              |
 | 🌀 Animations            | CSS + Framer Motion                     |
-| ⚙️ API Communication     | Serverless API (Vercel Functions)       |
+| 🧭 Routing               | React Router (HashRouter)               |
+| 🧩 State Management      | React Hooks + Custom Hooks              |
 | 🔄 Fetching & Caching    | React Query                             |
+| ⚙️ API Communication     | Serverless API (Vercel Functions)       |
 | ☁️ Backend-as-a-Service  | Supabase (PostgreSQL, Storage)          |
 | 🔐 Environment Variables | .env + Vercel Dashboard                 |
 | 🧪 Testing               | Jest + React Testing Library            |
+| 🧹 Code Quality          | ESLint + Prettier                       |
 | 📦 Deployment & CI/CD    | Vercel + GitHub                         |
 | 🔍 SEO                   | Clean URLs, HTTPS, Meta Tags, Local SEO |
+| 📊 Monitoring            | Vercel Logs + Error Tracking            |
 | 📈 Analytics             | Vercel Analytics                        |
-
-<br>
-
-## 🔗 Project Structure
-
-<pre>
-.
-├── .github/workflows # contains the CI pipeline
-├── api # contains the serverless functions
-├── public
-│   ├── docs # contains the Cookie and Privacy Policy, and the Legal Notes documents
-│   ├── favicon # contains the customized favicon
-│   ├── font # contains the font family used across the whole web application
-│   ├── icons # contains the icons used in the web application
-│   ├── images # contains the images used in the web application
-│   ├── index.html
-│   ├── manifest.json
-│   └── robots.txt
-└── src
-    ├── js 
-    │   ├── components # contains all the web application components
-    │   ├── hooks # contains all custom hooks
-    │   ├── logic # contains the whole business logic of the web application
-    │   ├── sections # contains all the section files
-    │   └── utils # contains utility files
-    │   ├── App.js
-    └── styles 
-        ├── components # contains component styles
-        ├── sections # contains section styles
-        ├── App.css
-        └── variables.css
-    ├── index.css
-    ├── index.js
-├── README.md 
-├── lighthouse.pdf
-├── package-lock.json
-├── package.json
-
-</pre>
 
 <br>
 
@@ -110,90 +74,110 @@ The web application is available at https://mmeletricarservice.it 🌐
 
 This project follows the best practices of software engineering:
 
-1. 🧱 **Modularity**:
-   - Components follow the Single Responsibility Principle
-   - Clear separation between UI, business logic, and styling
-   - Logic encapsulated via custom hooks and shared utility functions
-   - Sections are structured as atomic, composable components
+<details>
+<summary>🧱 <strong>Modularity</strong></summary>
 
-<br>
+- Components follow the Single Responsibility Principle
+- Clear separation between UI, business logic, and styling
+- Logic encapsulated via custom hooks and shared utility functions
+- Sections are structured as atomic, composable components
 
-2. 🛠️ **Maintainability**:
-   - Clean and consistent codebase
-   - Code formatting by using Prettier
-   - Well-documented (including docstrings) code
-   - In-code documentation and meaningful naming conventions
-   - Text centralized in a `const.js` file for easier updates
-   - Use of CSS variables and design tokens
-   - Tests are colocated with components for better traceability
+</details>
 
-<br>
+<details>
+<summary>🛠️ <strong>Maintainability</strong></summary>
+
+- Clean and consistent codebase
+- ESLint and Prettier for formatting
+- Well-documented code with meaningful names and docstrings
+- Centralized constants and links (`const.js` and `links.js`) for easier updates
+- Use of centralized CSS variables and design tokens
+- Tests colocated with components for better traceability
+
+</details>
    
-3. ♻️ **Reusability**:
-   - Common components reused across multiple pages (texts, buttons, section layouts, etc.)
-   - DRY (Don't Repeat Yourself) principles followed across logic and styles
+<details>
+<summary>♻️ <strong>Reusability</strong></summary>
 
-<br>
+- Common components reused across multiple pages
+- DRY (Don't Repeat Yourself) principles followed across logic and styles
+
+</details>
   
-4. 🚀 **Scalability**:
-   -  Backend powered by Supabase (PostgreSQL, serverless), allowing seamless scaling
-   -  Indexes created to optimize queries, ensuring fast and scalable data retrieval
-   -  Frontend components and routes structured for future expansion
-   -  Vercel's serverless functions scale automatically with demand, including a caching system to improve performance and reduce the latency
-   -  Fecthing and caching handled with React Query
-      - Automatic deduplication of requests
-      - Background re-fetching for data freshness
-      - Query invalidation for precise cache control
+<details>
+<summary>🚀 <strong>Scalability</strong></summary>
 
-<br>
+- Backend powered by Supabase (PostgreSQL), allowing seamless scaling
+- Indexes created to optimize data retrieval
+- Vercel's serverless functions scale automatically with demand, including a caching system
+- Fetching and caching handled with React Query
+  - Automatic deduplication of requests
+  - Background re-fetching for data freshness
+  - Query invalidation for precise cache control
+
+</details>
   
-5. ✅ **Reliability & Robustness**:
-   - Error handling for API and UI
-   - Loading states and fallback UIs improve resilience
-   - try-catch blocks and logging implemented
-   - Automated unit and integration tests with Jest and React Testing Library
+<details>
+<summary>✅ <strong>Reliability & Robustness</strong></summary>
 
-<br>
-  
-6. 🔐 **Security & Compliance**:
-    - GDPR compliance: cookie consent, legal/privacy notes
-    - Safe handling of third-party cookies
-    - No sensitive data exposed client-side
-    - Row-Level Security (RLS) policies on Supabase
+- Error handling for API and UI (try-catch, logging, and Vercel monitoring)
+- Loading states and fallback UIs improve resilience
+- Automated tests with Jest and React Testing Library
+- Data integrity ensured via database constraints, foreign keys, and Row-Level Security policies
 
-<br>
-   
-7. ⚡️ **Performance & Efficiency**:
-      - Lazy loading
-      - Modern image format (AVIF)
-      - Optimized for Lighthouse metrics and fast time-to-interactive
-      - Caching used car data during the session
+</details>
 
-<br>
+<details>
+<summary>🔐 <strong>Security & Compliance</strong></summary>
 
-8. 🧠 **Abstraction**:
-   - Business logic abstracted via hooks and functions
-   - Reusable component library supports consistent UI patterns
-   - Centralized configuration
+- GDPR compliance: cookie consent, legal/privacy notes
+- Safe handling of third-party cookies
+- No sensitive data exposed client-side
+- Row-Level Security policies on Supabase
 
-<br>
+</details>
 
-9. 🔄 **Change Readiness**:
-   - Environment variables and settings externalized for flexibility
-   - Scalable deployment workflow
-   - CI/CD pipeline with automatic builds, preview deployments, and production rollbacks
-   - Tests run on each push to `main` to ensure stability before deploy
+<details>
+<summary>⚡️ <strong>Performance & Efficiency</strong></summary>
 
-<br>
+- Lazy loading
+- Modern image format (AVIF)
+- Optimized for Lighthouse metrics
+- Session caching of used car data
+- React Query for efficient data fetching and caching
 
-10. 👤 **Usability**:
-    - Clean and intuitive UI aligned with branding
-    - Accessibility best practices
-    - Responsive navigation (anchor menu on desktop, drawer on mobile)
-    - Fast feedback to user actions
-    - Consistency across the whole app (colors, layout, etc.)
-    - Mobile-first design, tested on 20+ devices and viewports
-    - Clear visual hierarchy and reduced cognitive load (e.g. accordion for specs)
+</details>
+
+<details>
+<summary>🧠 <strong>Abstraction</strong></summary>
+
+- Business logic abstracted via hooks and functions
+- Reusable component library supports consistent UI patterns
+- Centralized configuration
+
+</details>
+
+<details>
+<summary>🔄 <strong>Change Readiness</strong></summary>
+
+- Environment variables and settings externalized for flexibility
+- Scalable deployment workflow supporting future changes
+- CI/CD pipeline ensure safe, repeatable updates
+
+</details>
+
+<details>
+<summary>👤 <strong>Usability</strong></summary>
+
+- Clean, intuitive, and consistent UI aligned with branding
+- Accessibility best practices
+- Responsive navigation (anchor menu on desktop, drawer on mobile)
+- Fast feedback to user actions
+- Mobile-first design, tested on 20+ devices and viewports
+- Clear visual hierarchy to reduce cognitive load
+- SEO-optimized for discoverability
+
+</details>
 
 <br>
 
@@ -545,25 +529,23 @@ Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring 
 
 ## 🌎 Impact on the Real World
 
+The platform demonstrates how thoughtful design and technology can directly improve customer experience and business performance.
+
 ### 💻 Enhanced Operational Efficiency
 
-The web application allows customers to effortlessly explore all the services offered by the company and access essential information such as location, contact details, and opening hours. It also enables users to browse available used cars, view detailed specifications, and easily contact the business for inquiries. This reduces the workload on customer support while delivering high-quality, accurate, and timely information to clients.
+Customers can easily explore services, access company information, and browse used cars with detailed specifications, reducing customer support workload while providing accurate, timely information.
 
 ### 🏙️ Support for Local Businesses
 
-As a local car dealership, the company gains a competitive edge through this digital platform, allowing it to stand out against larger, more established competitors. This visibility promotes local economic growth and can contribute to job creation within the community.
+The digital platform helps the local business stand out, boosting visibility, and supporting economic growth.
 
 ### 💡 Empowerment Through Information
 
-By offering detailed car specifications and transparent service descriptions, the application empowers customers to make better-informed decisions. This leads to increased confidence, satisfaction, and trust during the buying or service request process.
-
-### ⚖️ Reduction of Information Asymmetry
-
-Traditionally, customers rely heavily on sales representatives for information. The application bridges this gap by making relevant data openly available, ensuring more balanced, transparent interactions between the company and its clients.
+Providing clear information, the platform helps customers make informed decisions, increasing confidence and trust.
 
 ### 📊 Data-Driven Business Insights
 
-The platform can collect anonymized user interaction data, which can be analyzed to understand customer behavior, and optimize inventory. This enables data-informed decisions that enhance long-term strategy.
+The platform collects anonymized usage data useful to understand customer behavior, optimize inventory, and guide long-term strategy.
 
 <br>
 
