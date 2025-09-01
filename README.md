@@ -28,7 +28,7 @@ A production-ready, full-stack web application developed for MM Eletricar Servic
 
 ### ❓ Why
 
-To enhance the company's digital presence and give customers clear, accessible information for confident decision-making. 
+To enhance the company's digital presence and give customers clear, accessible information for confident decision-making.
 <br>
 
 ### 👤 Who
