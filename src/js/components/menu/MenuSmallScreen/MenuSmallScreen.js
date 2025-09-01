@@ -4,12 +4,12 @@ import {
 	CloseOutlined,
 	MenuOutlined,
 } from "@ant-design/icons";
-import { useMenu } from "../../hooks/useMenu";
+import { useMenu } from "../../../hooks/useMenu";
 import {
 	handleParentStyle,
 	handleChildrenStyle,
 	handleHamburgerButtonStyle,
-} from "../../logic/style-handling/menuStyleHandler";
+} from "../../../logic/style-handling/menuStyleHandler";
 
 /**
  * This component represents the menu for small screens (e.g., smartphone).
@@ -40,7 +40,10 @@ function MenuSmallScreen() {
 				placement="right"
 				closable
 				closeIcon={
-					<CloseOutlined className="close-outline" />
+					<CloseOutlined
+						className="close-outline"
+						data-testid="drawer-close-icon"
+					/>
 				}
 				onClose={toggleDrawer}
 				open={visible}

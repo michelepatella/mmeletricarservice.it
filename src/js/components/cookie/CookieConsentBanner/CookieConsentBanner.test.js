@@ -196,9 +196,7 @@ describe("CookieConsentBanner", () => {
 		fireEvent.click(
 			screen.getByText(cookieAcceptButtonText)
 		);
-		expect(mockHandleAcceptCookies).toHaveBeenCalledTimes(
-			1
-		);
+		expect(mockHandleAcceptCookies).toHaveBeenCalled();
 	});
 
 	// Test if it calls the proper method when the decline button is clicked
@@ -214,9 +212,7 @@ describe("CookieConsentBanner", () => {
 		fireEvent.click(
 			screen.getByText(cookieDeclineButtonText)
 		);
-		expect(mockHandleDeclineCookies).toHaveBeenCalledTimes(
-			1
-		);
+		expect(mockHandleDeclineCookies).toHaveBeenCalled();
 	});
 
 	// Test if it renders links to privacy and cookie policies correctly

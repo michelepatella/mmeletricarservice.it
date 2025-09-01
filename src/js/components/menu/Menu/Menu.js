@@ -1,4 +1,4 @@
-import MenuSmallScreen from "../MenuSmallScreen";
+import MenuSmallScreen from "../MenuSmallScreen/MenuSmallScreen";
 import MenuBigScreen from "../MenuBigScreen/MenuBigScreen";
 
 /**

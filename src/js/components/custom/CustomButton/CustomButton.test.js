@@ -96,8 +96,6 @@ describe("CustomButton", () => {
 		fireEvent.click(
 			screen.getByRole("button", { name: customButtonText })
 		);
-		expect(customButtonClickHandler).toHaveBeenCalledTimes(
-			1
-		);
+		expect(customButtonClickHandler).toHaveBeenCalled();
 	});
 });

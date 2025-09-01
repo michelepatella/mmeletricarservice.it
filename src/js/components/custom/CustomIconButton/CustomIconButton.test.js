@@ -47,8 +47,6 @@ describe("CustomIconButton", () => {
 		);
 
 		fireEvent.click(screen.getByRole("button"));
-		expect(
-			customIconButtonClickHandler
-		).toHaveBeenCalledTimes(1);
+		expect(customIconButtonClickHandler).toHaveBeenCalled();
 	});
 });

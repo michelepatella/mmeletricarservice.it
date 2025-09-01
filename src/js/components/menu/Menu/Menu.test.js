@@ -10,9 +10,10 @@ const menuSmallTestId = "menu-small";
 jest.mock("../MenuBigScreen/MenuBigScreen", () => () => (
 	<div data-testid={menuBigTestId} />
 ));
-jest.mock("../MenuSmallScreen", () => () => (
-	<div data-testid={menuSmallTestId} />
-));
+jest.mock(
+	"../MenuSmallScreen/MenuSmallScreen",
+	() => () => <div data-testid={menuSmallTestId} />
+);
 
 // Run tests
 describe("Menu", () => {
