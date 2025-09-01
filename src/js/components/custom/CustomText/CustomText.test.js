@@ -30,11 +30,16 @@ describe("CustomText", () => {
 		["heading", customTextHeadingClass],
 		["subheading", customTextSubheadingClass],
 		["body", customTextBodyClass],
-		["caption", customTextCaptionClass]
-	])("applies correct class for %s", (type, expectedClass) => {
-		render(<CustomText text={customText} type={type} />);
-		expect(screen.getByText(customText)).toHaveClass(expectedClass);
-	});
+		["caption", customTextCaptionClass],
+	])(
+		"applies correct class for %s",
+		(type, expectedClass) => {
+			render(<CustomText text={customText} type={type} />);
+			expect(screen.getByText(customText)).toHaveClass(
+				expectedClass
+			);
+		}
+	);
 
 	// Test if it renders the text correctly
 	test("renders with correct text", () => {

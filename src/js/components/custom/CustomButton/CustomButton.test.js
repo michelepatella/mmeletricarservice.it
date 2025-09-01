@@ -31,12 +31,18 @@ describe("CustomButton", () => {
 	test.each([
 		[{}, genericCustomButtonClass],
 		[{ isContact: true }, contactCustomButtonClass],
-		[{ isContact: true, isCta: true }, ctaCustomButtonClass]
+		[
+			{ isContact: true, isCta: true },
+			ctaCustomButtonClass,
+		],
 	])("applies correct class %#", (props, expectedClass) => {
-		render(<CustomButton text={customButtonText} {...props} />);
+		render(
+			<CustomButton text={customButtonText} {...props} />
+		);
 
-		expect(screen.getByRole("button", { name: customButtonText }))
-			.toHaveClass(expectedClass);
+		expect(
+			screen.getByRole("button", { name: customButtonText })
+		).toHaveClass(expectedClass);
 	});
 
 	// Test if it renders the text correctly

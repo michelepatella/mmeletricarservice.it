@@ -46,7 +46,11 @@ jest.mock("react-cookie-consent", () => {
 		onDecline,
 		...props
 	}) => (
-		<div data-testid={cookieConsentTestId} data-enable-decline-button={enableDeclineButton} {...props}>
+		<div
+			data-testid={cookieConsentTestId}
+			data-enable-decline-button={enableDeclineButton}
+			{...props}
+		>
 			{children}
 			<button onClick={onAccept}>{buttonText}</button>
 			<button onClick={onDecline}>
@@ -171,8 +175,12 @@ describe("CookieConsentBanner", () => {
 			<CookieConsentBanner isCookiesBannerVisible={true} />
 		);
 
-		const mockCookieConsent = screen.getByTestId(cookieConsentTestId);
-		expect(mockCookieConsent.dataset.enableDeclineButton).toBeTruthy();
+		const mockCookieConsent = screen.getByTestId(
+			cookieConsentTestId
+		);
+		expect(
+			mockCookieConsent.dataset.enableDeclineButton
+		).toBeTruthy();
 	});
 
 	// Test if it calls the proper method when the accept button is clicked
@@ -215,7 +223,11 @@ describe("CookieConsentBanner", () => {
 	test.each(links)(
 		"renders link %s correctly",
 		({ text, href }) => {
-			render(<CookieConsentBanner isCookiesBannerVisible={true} />);
+			render(
+				<CookieConsentBanner
+					isCookiesBannerVisible={true}
+				/>
+			);
 
 			const domLink = screen.getByText(text);
 			expect(domLink).toBeInTheDocument();

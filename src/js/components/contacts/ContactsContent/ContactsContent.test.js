@@ -96,7 +96,6 @@ describe("ContactsContent", () => {
 
 	// Test SectionHeader used in ContactContent
 	describe("SectionHeader", () => {
-
 		// Test if it renders the section name correctly
 		test("renders with correct section name", () => {
 			render(<ContactsContent />);
