@@ -39,13 +39,14 @@ const links = [
 jest.mock("react-cookie-consent", () => {
 	return ({
 		buttonText,
+		enableDeclineButton,
 		declineButtonText,
 		children,
 		onAccept,
 		onDecline,
 		...props
 	}) => (
-		<div data-testid={cookieConsentTestId} {...props}>
+		<div data-testid={cookieConsentTestId} data-enable-decline-button={enableDeclineButton} {...props}>
 			{children}
 			<button onClick={onAccept}>{buttonText}</button>
 			<button onClick={onDecline}>
@@ -78,7 +79,7 @@ const mockHandleDeclineCookies = jest.fn();
 
 // Run the test
 describe("CookieConsentBanner", () => {
-	// Clear all mocks before running the test
+	// Clear all mocks before running each test
 	beforeEach(() => {
 		jest.clearAllMocks();
 	});
@@ -149,20 +150,29 @@ describe("CookieConsentBanner", () => {
 		).not.toBeInTheDocument();
 	});
 
-	// Test if it renders links to privacy and cookie policies correctly
-	test("renders links to privacy and cookie policies correctly", () => {
+	// Test if it sets the correct cookie expiration date
+	test("sets the correct cookie expiration date", () => {
 		render(
 			<CookieConsentBanner isCookiesBannerVisible={true} />
 		);
 
-		// Test if each link is correctly displayed
-		links.forEach((link) => {
-			const domLink = screen.getByText(link.text);
-			expect(domLink).toBeInTheDocument();
-			expect(domLink).toHaveAttribute("href", link.href);
-			expect(domLink).toHaveAttribute("target", targetAttr);
-			expect(domLink).toHaveAttribute("rel", relAttr);
-		});
+		const mockCookieConsent = screen.getByTestId(
+			cookieConsentTestId
+		);
+		expect(mockCookieConsent).toHaveAttribute(
+			"expires",
+			cookieExpirationDate.toString()
+		);
+	});
+
+	// Test if it enables decline button
+	test("enables decline button", () => {
+		render(
+			<CookieConsentBanner isCookiesBannerVisible={true} />
+		);
+
+		const mockCookieConsent = screen.getByTestId(cookieConsentTestId);
+		expect(mockCookieConsent.dataset.enableDeclineButton).toBeTruthy();
 	});
 
 	// Test if it calls the proper method when the accept button is clicked
@@ -201,18 +211,17 @@ describe("CookieConsentBanner", () => {
 		);
 	});
 
-	// Test if it sets the correct cookie expiration date
-	test("sets the correct cookie expiration date", () => {
-		render(
-			<CookieConsentBanner isCookiesBannerVisible={true} />
-		);
+	// Test if it renders links to privacy and cookie policies correctly
+	test.each(links)(
+		"renders link %s correctly",
+		({ text, href }) => {
+			render(<CookieConsentBanner isCookiesBannerVisible={true} />);
 
-		const mockCookieConsent = screen.getByTestId(
-			cookieConsentTestId
-		);
-		expect(mockCookieConsent).toHaveAttribute(
-			"expires",
-			cookieExpirationDate.toString()
-		);
-	});
+			const domLink = screen.getByText(text);
+			expect(domLink).toBeInTheDocument();
+			expect(domLink).toHaveAttribute("href", href);
+			expect(domLink).toHaveAttribute("target", targetAttr);
+			expect(domLink).toHaveAttribute("rel", relAttr);
+		}
+	);
 });

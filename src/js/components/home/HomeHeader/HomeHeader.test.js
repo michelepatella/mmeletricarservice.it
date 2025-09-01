@@ -43,7 +43,7 @@ jest.mock(
 // Run tests
 describe("HomeHeader", () => {
 	beforeEach(() => {
-		// Clear all mocks before running the test
+		// Clear all mocks before running each test
 		jest.clearAllMocks();
 	});
 
@@ -61,7 +61,7 @@ describe("HomeHeader", () => {
 	});
 
 	// Test if all the contact buttons
-	// are rendered correctly (i.e., with correct src)
+	// are rendered correctly
 	test("renders the correct contact buttons", () => {
 		render(<HomeHeader />);
 

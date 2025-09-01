@@ -21,9 +21,22 @@ const customButtonClickHandler = jest.fn();
 
 // Run tests
 describe("CustomButton", () => {
-	// Clear all mocks before running the test
+	// Clear all mocks before running each test
 	beforeEach(() => {
 		jest.clearAllMocks();
+	});
+
+	// Test if it applies the correct button's class
+	// based on the passed props
+	test.each([
+		[{}, genericCustomButtonClass],
+		[{ isContact: true }, contactCustomButtonClass],
+		[{ isContact: true, isCta: true }, ctaCustomButtonClass]
+	])("applies correct class %#", (props, expectedClass) => {
+		render(<CustomButton text={customButtonText} {...props} />);
+
+		expect(screen.getByRole("button", { name: customButtonText }))
+			.toHaveClass(expectedClass);
 	});
 
 	// Test if it renders the text correctly
@@ -37,40 +50,8 @@ describe("CustomButton", () => {
 		).toBeInTheDocument();
 	});
 
-	// Test if it applies the correct button's class
-	// based on the passed props
-	test("applies correct class for generic custom button", () => {
-		render(<CustomButton text={customButtonText} />);
-
-		expect(
-			screen.getByRole("button", { name: customButtonText })
-		).toHaveClass(genericCustomButtonClass);
-	});
-	test("applies correct class for contact button", () => {
-		render(
-			<CustomButton text={customButtonText} isContact />
-		);
-
-		expect(
-			screen.getByRole("button", { name: customButtonText })
-		).toHaveClass(contactCustomButtonClass);
-	});
-	test("applies correct class for CTA button", () => {
-		render(
-			<CustomButton
-				text={customButtonText}
-				isContact
-				isCta
-			/>
-		);
-
-		expect(
-			screen.getByRole("button", { name: customButtonText })
-		).toHaveClass(ctaCustomButtonClass);
-	});
-
 	// Test if it correctly renders the icon when provided
-	test("renders icon when provided", () => {
+	test("renders with correct icon when provided", () => {
 		render(<CustomButton icon={customButtonIcon} />);
 
 		const icon = screen.getByAltText(
@@ -79,6 +60,21 @@ describe("CustomButton", () => {
 
 		expect(icon).toBeInTheDocument();
 		expect(icon).toHaveAttribute("src", customButtonIcon);
+	});
+
+	// Test if it applies the custom style
+	// when passed
+	test("applies custom style if any", () => {
+		render(
+			<CustomButton
+				text={customButtonText}
+				style={customButtonStyle}
+			/>
+		);
+
+		expect(
+			screen.getByRole("button", { name: customButtonText })
+		).toHaveStyle(customButtonStyle);
 	});
 
 	// Test if it calls the passed onClick handler
@@ -97,20 +93,5 @@ describe("CustomButton", () => {
 		expect(customButtonClickHandler).toHaveBeenCalledTimes(
 			1
 		);
-	});
-
-	// Test if it applies the custom style
-	// when passed
-	test("applies custom style if any", () => {
-		render(
-			<CustomButton
-				text={customButtonText}
-				style={customButtonStyle}
-			/>
-		);
-
-		expect(
-			screen.getByRole("button", { name: customButtonText })
-		).toHaveStyle(customButtonStyle);
 	});
 });

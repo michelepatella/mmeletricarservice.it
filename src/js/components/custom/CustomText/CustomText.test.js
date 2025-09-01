@@ -19,9 +19,21 @@ const customTextStyle = { color: "black" };
 
 // Run tests
 describe("CustomText", () => {
-	// Clear all mocks before running the test
+	// Clear all mocks before running each test
 	beforeEach(() => {
 		jest.clearAllMocks();
+	});
+
+	// Test if it applies the correct class
+	// based on text type
+	test.each([
+		["heading", customTextHeadingClass],
+		["subheading", customTextSubheadingClass],
+		["body", customTextBodyClass],
+		["caption", customTextCaptionClass]
+	])("applies correct class for %s", (type, expectedClass) => {
+		render(<CustomText text={customText} type={type} />);
+		expect(screen.getByText(customText)).toHaveClass(expectedClass);
 	});
 
 	// Test if it renders the text correctly
@@ -33,39 +45,6 @@ describe("CustomText", () => {
 				content.includes(customText)
 			)
 		).toBeInTheDocument();
-	});
-
-	// Test if it applies the correct class
-	// based on text type
-	test("applies correct class for heading", () => {
-		render(<CustomText text={customText} type="heading" />);
-
-		expect(screen.getByText(customText)).toHaveClass(
-			customTextHeadingClass
-		);
-	});
-	test("applies correct class for subheading", () => {
-		render(
-			<CustomText text={customText} type="subheading" />
-		);
-
-		expect(screen.getByText(customText)).toHaveClass(
-			customTextSubheadingClass
-		);
-	});
-	test("applies correct class for body", () => {
-		render(<CustomText text={customText} type="body" />);
-
-		expect(screen.getByText(customText)).toHaveClass(
-			customTextBodyClass
-		);
-	});
-	test("applies correct class for caption", () => {
-		render(<CustomText text={customText} type="caption" />);
-
-		expect(screen.getByText(customText)).toHaveClass(
-			customTextCaptionClass
-		);
 	});
 
 	// Test if it applies custom style when passed

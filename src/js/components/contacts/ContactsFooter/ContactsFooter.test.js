@@ -47,7 +47,7 @@ jest.mock("../../../utils/links", () => ({
 
 // Run the test
 describe("ContactsFooter", () => {
-	// Clear all mocks before running the test
+	// Clear all mocks before running each test
 	beforeEach(() => {
 		jest.clearAllMocks();
 	});
@@ -64,16 +64,16 @@ describe("ContactsFooter", () => {
 	});
 
 	// Test if it renders all the footer links correctly
-	test("renders with correct footer links", () => {
-		render(<ContactsFooter />);
+	test.each(links)(
+		"renders link %s correctly",
+		({ text, href }) => {
+			render(<ContactsFooter />);
 
-		// Test if each link is correctly displayed
-		links.forEach((link) => {
-			const domLink = screen.getByText(link.text);
+			const domLink = screen.getByText(text);
 			expect(domLink).toBeInTheDocument();
-			expect(domLink).toHaveAttribute("href", link.href);
+			expect(domLink).toHaveAttribute("href", href);
 			expect(domLink).toHaveAttribute("target", targetAttr);
 			expect(domLink).toHaveAttribute("rel", relAttr);
-		});
-	});
+		}
+	);
 });

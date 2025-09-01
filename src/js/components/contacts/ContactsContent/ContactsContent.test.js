@@ -89,13 +89,14 @@ jest.mock("../../custom/CustomButton/CustomButton", () => ({
 
 // Run the test
 describe("ContactsContent", () => {
-	// Clear all mocks before running the test
+	// Clear all mocks before running each test
 	beforeEach(() => {
 		jest.clearAllMocks();
 	});
 
 	// Test SectionHeader used in ContactContent
 	describe("SectionHeader", () => {
+
 		// Test if it renders the section name correctly
 		test("renders with correct section name", () => {
 			render(<ContactsContent />);
@@ -141,23 +142,6 @@ describe("ContactsContent", () => {
 			}
 		);
 
-		// Test if all the buttons, once clicked,
-		// trigger the corresponding contact button handler
-		test.each([
-			[phone, mockPhoneHandler],
-			[email, mockEmailHandler],
-			[emailPec, mockEmailPecHandler],
-			[facebook, mockFacebookHandler],
-		])(
-			"clicking %s button triggers the handler",
-			(contactText, mockHandler) => {
-				render(<ContactsContent />);
-
-				fireEvent.click(screen.getByText(contactText));
-				expect(mockHandler).toHaveBeenCalled();
-			}
-		);
-
 		// Test if all buttons are set as contact buttons
 		test.each([[phone], [email], [emailPec], [facebook]])(
 			"sets %s button as contact button",
@@ -181,8 +165,7 @@ describe("ContactsContent", () => {
 
 				expect(
 					screen
-						// eslint-disable-next-line testing-library/prefer-presence-queries
-						.getByText(contactText)
+						.queryByText(contactText)
 						.getAttribute("data-cta") === "true"
 				).toBeFalsy();
 			}
@@ -202,6 +185,23 @@ describe("ContactsContent", () => {
 				expect(
 					screen.getByText(contactText)
 				).toHaveAttribute("data-icon", expectedIcon);
+			}
+		);
+
+		// Test if all the buttons, once clicked,
+		// trigger the corresponding contact button handler
+		test.each([
+			[phone, mockPhoneHandler],
+			[email, mockEmailHandler],
+			[emailPec, mockEmailPecHandler],
+			[facebook, mockFacebookHandler],
+		])(
+			"clicking %s button triggers the handler",
+			(contactText, mockHandler) => {
+				render(<ContactsContent />);
+
+				fireEvent.click(screen.getByText(contactText));
+				expect(mockHandler).toHaveBeenCalled();
 			}
 		);
 	});

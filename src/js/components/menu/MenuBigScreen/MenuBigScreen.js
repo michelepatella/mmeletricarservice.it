@@ -1,6 +1,6 @@
 import { Anchor } from "antd";
 import { motion } from "framer-motion";
-import { useMenu } from "../../hooks/useMenu";
+import { useMenu } from "../../../hooks/useMenu";
 
 /**
  * This component represents the anchor menu
@@ -19,6 +19,8 @@ function MenuBigScreen() {
 		<div className="menu-container-big">
 			{/* Motion division for the menu animation */}
 			<motion.div
+				className="motion-div"
+				role="region"
 				animate={menuItemControls}
 				initial={{
 					opacity: 0,

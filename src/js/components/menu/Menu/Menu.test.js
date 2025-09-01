@@ -7,7 +7,7 @@ const menuBigTestId = "menu-big";
 const menuSmallTestId = "menu-small";
 
 // Mock both big and small menu
-jest.mock("../MenuBigScreen", () => () => (
+jest.mock("../MenuBigScreen/MenuBigScreen", () => () => (
 	<div data-testid={menuBigTestId} />
 ));
 jest.mock("../MenuSmallScreen", () => () => (
@@ -16,7 +16,7 @@ jest.mock("../MenuSmallScreen", () => () => (
 
 // Run tests
 describe("Menu", () => {
-	// Clear all mocks before running the test
+	// Clear all mocks before running each test
 	beforeEach(() => {
 		jest.clearAllMocks();
 	});

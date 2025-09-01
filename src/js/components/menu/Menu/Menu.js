@@ -1,5 +1,5 @@
 import MenuSmallScreen from "../MenuSmallScreen";
-import MenuBigScreen from "../MenuBigScreen";
+import MenuBigScreen from "../MenuBigScreen/MenuBigScreen";
 
 /**
  * This component represent the Menu of the

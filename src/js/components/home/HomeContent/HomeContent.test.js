@@ -15,7 +15,7 @@ jest.mock("../../../utils/const", () => ({
 
 // Run the test
 describe("HomeContent", () => {
-	// Clear all mocks before running the test
+	// Clear all mocks before running each test
 	beforeEach(() => {
 		jest.clearAllMocks();
 	});

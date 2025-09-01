@@ -16,7 +16,7 @@ const customIconButtonClickHandler = jest.fn();
 
 // Run tests
 describe("CustomIconButton", () => {
-	// Clear all mocks before running the test
+	// Clear all mocks before running each test
 	beforeEach(() => {
 		jest.clearAllMocks();
 	});

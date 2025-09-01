@@ -37,14 +37,14 @@ jest.mock("../CustomText/CustomText", () => ({
 
 // Run the test
 describe("CustomBackButton", () => {
-	// Clear all mocks before running the test
+	// Clear all mocks before running each test
 	beforeEach(() => {
 		jest.clearAllMocks();
 	});
 
 	describe("LeftOutlined", () => {
 		// Test if it renders the LeftOutlined icon correctly
-		test("renders with correct icon", () => {
+		test("renders icon correctly", () => {
 			render(<CustomBackButton />);
 
 			expect(
