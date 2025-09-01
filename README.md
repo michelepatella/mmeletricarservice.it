@@ -75,7 +75,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 This project follows the best practices of software engineering:
 
 <details>
-<summary>🧱 <strong>Modularity</strong></summary>
+<summary>🧱 ### Modularity</summary>
 
 - Components follow the Single Responsibility Principle
 - Clear separation between UI, business logic, and styling
