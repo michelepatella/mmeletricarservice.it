@@ -215,7 +215,8 @@ It's responsible for:
 - Cache-first retrieval using `STALE_TIME` to minimize unnecessary network requests
 - Error logging when a fetch fails
 - Query deduplication to prevent simultaneous duplicate requests and reduce server load
-  <br>
+
+<br>
 
 ### ⚙️ Serverless Functions
 
