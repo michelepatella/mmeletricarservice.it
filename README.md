@@ -367,6 +367,7 @@ It ensures that code changes are validated, deployed reliably, and made availabl
 
 🛡️ **Responsibility**  
 It's responsible for:
+
 - Continuous Integration (CI) on every push to `main`:
   - Install dependencies
   - Run linting and Prettier checks
