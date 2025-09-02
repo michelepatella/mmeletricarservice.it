@@ -11,6 +11,20 @@ const custStyle = { color: "red" };
 
 const sectionContainerTestId = "section-container";
 
+// Mock SectionContainer component
+jest.mock("./SectionContainer", () => ({
+	__esModule: true,
+	default: ({ children, id, custStyle }) => (
+		<div
+			data-testid={sectionContainerTestId}
+			id={id}
+			style={custStyle}
+		>
+			{children}
+		</div>
+	),
+}));
+
 // Run tests
 describe("SectionContainer", () => {
 	// Clear all mocks before

@@ -35,6 +35,19 @@ const menuItems = [
 
 const drawerCloseIconTestId = "drawer-close-icon";
 
+// Mock CloseOutlined
+jest.mock("@ant-design/icons", () => {
+	const originalModule = jest.requireActual(
+		"@ant-design/icons"
+	);
+	return {
+		...originalModule,
+		CloseOutlined: (props) => (
+			<div data-testid={drawerCloseIconTestId} {...props} />
+		),
+	};
+});
+
 // Mock custom hook
 jest.mock("../../../hooks/useMenu", () => ({
 	useMenu: jest.fn(),

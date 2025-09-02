@@ -40,10 +40,7 @@ function MenuSmallScreen() {
 				placement="right"
 				closable
 				closeIcon={
-					<CloseOutlined
-						className="close-outline"
-						data-testid="drawer-close-icon"
-					/>
+					<CloseOutlined className="close-outline" />
 				}
 				onClose={toggleDrawer}
 				open={visible}
