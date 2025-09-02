@@ -36,9 +36,7 @@ describe("BackgroundContainer", () => {
 	// the children
 	test("renders children correctly", () => {
 		render(
-			<BackgroundContainer>
-				{childrenContent}
-			</BackgroundContainer>
+			<BackgroundContainer children={childrenContent} />
 		);
 
 		expect(
@@ -52,13 +50,11 @@ describe("BackgroundContainer", () => {
 			<BackgroundContainer
 				image={imageUrl}
 				custStyle={custStyle}
-			>
-				{childrenContent}
-			</BackgroundContainer>
+			/>
 		);
 
-		const container = screen.getByTestId(motionDivTestId);
-
-		expect(container).toHaveStyle(combinedStyle);
+		expect(screen.getByTestId(motionDivTestId)).toHaveStyle(
+			combinedStyle
+		);
 	});
 });

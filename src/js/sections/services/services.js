@@ -3,7 +3,7 @@ import {
 	SERVICES_TITLE,
 	SERVICES_SUBTITLE,
 } from "../../utils/const";
-import SectionContainer from "../../components/sections/SectionContainer";
+import SectionContainer from "../../components/sections/SectionContainer/SectionContainer";
 import BackgroundContainer from "../../components/sections/BackgroundContainer/BackgroundContainer";
 import SectionHeader from "../../components/sections/SectionHeader";
 

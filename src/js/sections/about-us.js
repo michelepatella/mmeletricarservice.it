@@ -6,7 +6,7 @@ import {
 } from "../utils/const";
 import { useVideoAnimation } from "../hooks/useVideoAnimation";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import SectionContainer from "../components/sections/SectionContainer";
+import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
 import SectionHeader from "../components/sections/SectionHeader";
 

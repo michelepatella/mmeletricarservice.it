@@ -54,7 +54,7 @@ describe("CustomText", () => {
 	});
 
 	// Test if it applies custom style when passed
-	test("applies custom style if any", () => {
+	test("applies custom style correctly", () => {
 		render(
 			<CustomText
 				text={customText}

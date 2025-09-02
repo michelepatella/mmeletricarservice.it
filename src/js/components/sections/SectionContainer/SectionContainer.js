@@ -20,6 +20,7 @@ function SectionContainer({ children, id, custStyle }) {
 		// children representing the section components
 		<div
 			id={id}
+			data-testid="section-container"
 			className="section-container"
 			style={style}
 		>

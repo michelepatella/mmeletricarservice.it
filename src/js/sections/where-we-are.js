@@ -10,7 +10,7 @@ import {
 	handleGoogleMapsContainerStyle,
 	handleGoogleMapsUnavailableDescriptionStyle,
 } from "../logic/style-handling/whereWeAreStyleHandler";
-import SectionContainer from "../components/sections/SectionContainer";
+import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
 import InfoCard from "../components/other/InfoCard/InfoCard";
 import SectionHeader from "../components/sections/SectionHeader";

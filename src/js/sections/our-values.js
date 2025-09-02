@@ -4,7 +4,7 @@ import {
 	OUR_VALUES_SUBTITLE,
 	OUR_VALUES_TITLE,
 } from "../utils/const";
-import SectionContainer from "../components/sections/SectionContainer";
+import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
 import SectionHeader from "../components/sections/SectionHeader";
 

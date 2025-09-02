@@ -81,7 +81,7 @@ describe("CustomButton", () => {
 
 	// Test if it applies the custom style
 	// when passed
-	test("applies custom style if any", () => {
+	test("applies custom style correctly", () => {
 		render(
 			<CustomButton
 				text={customButtonText}
