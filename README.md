@@ -75,12 +75,20 @@ The web application is available at https://mmeletricarservice.it 🌐
 This project follows the best practices of software engineering:
 
 <details>
-<summary>🧱 <strong>Modularity</strong></summary>
+<summary>🧠 <strong>Abstraction</strong></summary>
 
-- Components follow the Single Responsibility Principle
-- Clear separation between UI, business logic, and styling
-- Logic encapsulated via custom hooks and shared utility functions
-- Sections are structured as atomic, composable components
+- Business logic abstracted via hooks and functions
+- Reusable component library supports consistent UI patterns
+- Centralized configuration
+
+</details>
+
+<details>
+<summary>🔄 <strong>Change Readiness</strong></summary>
+
+- Environment variables and settings externalized for flexibility
+- Scalable deployment workflow supporting future changes
+- CI/CD pipeline ensure safe, repeatable updates
 
 </details>
 
@@ -95,7 +103,38 @@ This project follows the best practices of software engineering:
 - Tests colocated with components for better traceability
 
 </details>
-   
+
+<details>
+<summary>🧱 <strong>Modularity</strong></summary>
+
+- Components follow the Single Responsibility Principle
+- Clear separation between UI, business logic, and styling
+- Logic encapsulated via custom hooks and shared utility functions
+- Sections are structured as atomic, composable components
+
+</details>
+
+<details>
+<summary>⚡️ <strong>Performance & Efficiency</strong></summary>
+
+- Lazy loading
+- Modern image format (AVIF)
+- Optimized for Lighthouse metrics
+- Session caching of used car data
+- React Query for efficient data fetching and caching
+
+</details>
+
+<details>
+<summary>✅ <strong>Reliability & Robustness</strong></summary>
+
+- Error handling for API and UI (try-catch, logging, and Vercel monitoring)
+- Loading states and fallback UIs improve resilience
+- Automated tests with Jest and React Testing Library
+- Data integrity ensured via database constraints, foreign keys, and Row-Level Security policies
+
+</details>
+
 <details>
 <summary>♻️ <strong>Reusability</strong></summary>
 
@@ -116,16 +155,6 @@ This project follows the best practices of software engineering:
   - Query invalidation for precise cache control
 
 </details>
-  
-<details>
-<summary>✅ <strong>Reliability & Robustness</strong></summary>
-
-- Error handling for API and UI (try-catch, logging, and Vercel monitoring)
-- Loading states and fallback UIs improve resilience
-- Automated tests with Jest and React Testing Library
-- Data integrity ensured via database constraints, foreign keys, and Row-Level Security policies
-
-</details>
 
 <details>
 <summary>🔐 <strong>Security & Compliance</strong></summary>
@@ -134,35 +163,6 @@ This project follows the best practices of software engineering:
 - Safe handling of third-party cookies
 - No sensitive data exposed client-side
 - Row-Level Security policies on Supabase
-
-</details>
-
-<details>
-<summary>⚡️ <strong>Performance & Efficiency</strong></summary>
-
-- Lazy loading
-- Modern image format (AVIF)
-- Optimized for Lighthouse metrics
-- Session caching of used car data
-- React Query for efficient data fetching and caching
-
-</details>
-
-<details>
-<summary>🧠 <strong>Abstraction</strong></summary>
-
-- Business logic abstracted via hooks and functions
-- Reusable component library supports consistent UI patterns
-- Centralized configuration
-
-</details>
-
-<details>
-<summary>🔄 <strong>Change Readiness</strong></summary>
-
-- Environment variables and settings externalized for flexibility
-- Scalable deployment workflow supporting future changes
-- CI/CD pipeline ensure safe, repeatable updates
 
 </details>
 
