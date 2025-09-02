@@ -377,7 +377,6 @@ It's responsible for:
   - Build the project
   - Deploy to Vercel production environment (hosting the client-side and serverless functions, managing environment variables, and providing logs and analytics)
 - Creating preview deployments for all branches
-- Real-time monitoring of builds, deployments, and performance via Vercel Dashboard
 - Versioned deploys allowing easy rollback to previous stable releases
 
 <br>
