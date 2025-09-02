@@ -4,7 +4,7 @@ import {
 	SERVICES_SUBTITLE,
 } from "../../utils/const";
 import SectionContainer from "../../components/sections/SectionContainer";
-import BackgroundContainer from "../../components/sections/BackgroundContainer";
+import BackgroundContainer from "../../components/sections/BackgroundContainer/BackgroundContainer";
 import SectionHeader from "../../components/sections/SectionHeader";
 
 /**

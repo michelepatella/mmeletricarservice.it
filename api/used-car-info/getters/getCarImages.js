@@ -26,6 +26,6 @@ export async function getCarImages(id) {
 		(file) =>
 			supabase.storage
 				.from("car-images")
-				.getPublicUrl(`${id}/${file.name}`).data.publicUrl
+				.getPublicUrl(id + "/" + file.name).data.publicUrl
 	);
 }

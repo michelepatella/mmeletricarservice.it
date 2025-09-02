@@ -26,5 +26,5 @@ export async function getPresentationUsedCarImage(carId) {
 
 	return supabase.storage
 		.from("car-images")
-		.getPublicUrl(`${carId}/${file.name}`).data.publicUrl;
+		.getPublicUrl(carId + "/" + file.name).data.publicUrl;
 }

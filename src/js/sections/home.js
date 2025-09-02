@@ -1,7 +1,7 @@
 import { Layout } from "antd";
 import HomeHeader from "../components/home/HomeHeader/HomeHeader";
 import HomeContent from "../components/home/HomeContent/HomeContent";
-import BackgroundContainer from "../components/sections/BackgroundContainer";
+import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
 
 // Home Layout definition:
 // it's composed by a header and a content

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { handleContainerStyle } from "../../logic/style-handling/backgroundContainerStyleHandler";
+import { handleContainerStyle } from "../../../logic/style-handling/backgroundContainerStyleHandler";
 
 /**
  * This component defines the background container of a section.
@@ -27,6 +27,7 @@ function BackgroundContainer({
 		// Motion division for containing the background
 		// and to generate an animation
 		<motion.div
+			data-testid="background-container-motion-div"
 			style={style}
 			initial={{
 				opacity: 0,
