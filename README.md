@@ -21,12 +21,12 @@
 
 ## 👁️ Overview
 
-#### 📌 What
+📌 **What**
 
 A production-ready, full-stack web application developed for MM Eletricar Service, an Italian car workshop and used car dealership.
 <br>
 
-#### ❓ Why
+❓ **Why**
 
 To enhance the company's digital presence and give customers clear, accessible information for confident decision-making.
 <br>
@@ -192,53 +192,30 @@ The system is built on a **Jamstack architecture** shown below:
 
 ### 🌐 Client-side
 
-🎯 **Role**
-It represents the UI of the application, developed as a Single-Page Application. 
-It represents everything the user sees and interacts with.
+🎯 **Role**    
+It represents the UI of the application, developed as a Single-Page Application.  
+It represents the frontend of the system: everything the user sees and interacts with.
 
-🛡️ **Responsibility**
-It's responsible for:
-  - UI rendering  
-  - User interactions managing  
-  - Data fetching, caching, and displaying (via *Data Fetching & Caching* layer)
-    
-🔗 **Interactions**
-It calls serverless APIs via *Data Fetching & Caching* layer, receiving, processing, and showing API responses.
+🛡️ **Responsibility**  
+It's responsible for:  
+- UI rendering (through *React Components*)
+- User interactions management 
+- Data fetching and caching (via its internal *Data Fetching & Caching* layer)
 
 <br>
 
 ### 🔄 Data Fetching & Caching
 
-**📡 Declarative Data Fetching**
+🎯 **Role**  
+It serves as the dedicated layer to manage all data fetching and caching in the client-side application.  
+It ensures efficient, reliable, and up-to-date data delivery.
 
-- Minimizes redundant requests
-- Simplifies data fetching using `useQuery`
-
-**🧠 Cache-First Approach**
-
-- Retrieves data from cache before network request
-- Cached data is revalidated for freshness
-
-**🔁 Automatic Background Refetching**
-
-- Periodic background re-fetching for up-to-date info
-- Reduces perceived latency for a seamless UX
-
-**⏳ Stale-While-Revalidate**
-
-- Shows cached data immediately while fetching new data
-- New data replaces old data seamlessly for an uninterrupted experience
-
-**🛡️ Error Handling & Retries**
-
-- Built-in retry mechanism with exponential backoff for failed requests
-- Ensures resilience during temporary issues (e.g., network failures)
-
-**🚫 Query Deduplication**
-
-- Prevents redundant requests for the same data
-- Reduces server load and improves performance
-
+🛡️ **Responsibility**  
+It's responsible for:  
+- Data fetching using `useQuery`, custom logic and hooks 
+- Cache-first retrieval using `STALE_TIME` to minimize unnecessary network requests  
+- Error logging when a fetch fails
+- Query deduplication to prevent simultaneous duplicate requests and reduce server load
 <br>
 
 ### ⚙️ Serverless Functions
