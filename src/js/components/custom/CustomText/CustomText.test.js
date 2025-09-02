@@ -16,6 +16,7 @@ const customTextSubheadingClass = "custom-subheading";
 const customTextBodyClass = "custom-body";
 const customTextCaptionClass = "custom-caption";
 const customTextStyle = { color: "black" };
+const disableAnimationOpacity = "1";
 
 // Run tests
 describe("CustomText", () => {
@@ -67,13 +68,18 @@ describe("CustomText", () => {
 	});
 
 	// Test if disableAnimation sets opacity to 1
-	test("sets opacity to 1 when disableAnimation is true", () => {
-		render(
-			<CustomText text={customText} disableAnimation />
-		);
+	test(
+		"sets opacity to " +
+			disableAnimationOpacity +
+			" when disableAnimation is true",
+		() => {
+			render(
+				<CustomText text={customText} disableAnimation />
+			);
 
-		expect(screen.getByText(customText).style.opacity).toBe(
-			"1"
-		);
-	});
+			expect(
+				screen.getByText(customText).style.opacity
+			).toBe(disableAnimationOpacity);
+		}
+	);
 });

@@ -33,6 +33,8 @@ const menuItems = [
 	},
 ];
 
+const drawerCloseIconTestId = "drawer-close-icon";
+
 // Mock custom hook
 jest.mock("../../../hooks/useMenu", () => ({
 	useMenu: jest.fn(),
@@ -67,9 +69,9 @@ describe("MenuSmallScreen", () => {
 		test("renders hamburger button correctly", () => {
 			render(<MenuSmallScreen />);
 
-			const hamburgerButton = screen.getByRole("button");
-
-			expect(hamburgerButton).toBeInTheDocument();
+			expect(
+				screen.getByRole("button")
+			).toBeInTheDocument();
 		});
 
 		// Test if the hamburger button
@@ -89,9 +91,7 @@ describe("MenuSmallScreen", () => {
 		test("calls toggleDrawer when hamburger button is clicked", () => {
 			render(<MenuSmallScreen />);
 
-			const hamburgerButton = screen.getByRole("button");
-
-			fireEvent.click(hamburgerButton);
+			fireEvent.click(screen.getByRole("button"));
 			expect(toggleDrawer).toHaveBeenCalled();
 		});
 	});
@@ -114,8 +114,9 @@ describe("MenuSmallScreen", () => {
 		test("renders Drawer when visible", () => {
 			render(<MenuSmallScreen />);
 
-			const drawer = screen.getByRole("dialog");
-			expect(drawer).toBeInTheDocument();
+			expect(
+				screen.getByRole("dialog")
+			).toBeInTheDocument();
 		});
 
 		// Test if it renders the drawer
@@ -123,11 +124,9 @@ describe("MenuSmallScreen", () => {
 		test("renders Drawer with correct close icon", () => {
 			render(<MenuSmallScreen />);
 
-			const closeIcon = screen.getByTestId(
-				"drawer-close-icon"
-			);
-
-			expect(closeIcon).toBeInTheDocument();
+			expect(
+				screen.getByTestId(drawerCloseIconTestId)
+			).toBeInTheDocument();
 		});
 
 		// Test if toggleDrawer is called
@@ -135,11 +134,9 @@ describe("MenuSmallScreen", () => {
 		test("calls toggleDrawer when Drawer is closed", () => {
 			render(<MenuSmallScreen />);
 
-			const closeIcon = screen.getByTestId(
-				"drawer-close-icon"
+			fireEvent.click(
+				screen.getByTestId(drawerCloseIconTestId)
 			);
-			fireEvent.click(closeIcon);
-
 			expect(toggleDrawer).toHaveBeenCalled();
 		});
 	});
@@ -163,8 +160,9 @@ describe("MenuSmallScreen", () => {
 			render(<MenuSmallScreen />);
 
 			menuItems.forEach((item) => {
-				const parent = screen.getByText(item.title);
-				expect(parent).toBeInTheDocument();
+				expect(
+					screen.getByText(item.title)
+				).toBeInTheDocument();
 			});
 		});
 
@@ -186,8 +184,7 @@ describe("MenuSmallScreen", () => {
 			render(<MenuSmallScreen />);
 
 			menuItems.forEach((item) => {
-				const parent = screen.getByText(item.title);
-				fireEvent.click(parent);
+				fireEvent.click(screen.getByText(item.title));
 				expect(item.onClick).toHaveBeenCalled();
 			});
 		});

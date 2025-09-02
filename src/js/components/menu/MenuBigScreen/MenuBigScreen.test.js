@@ -43,8 +43,7 @@ describe("MenuBigScreen", () => {
 	test("renders motion.div correctly", () => {
 		render(<MenuBigScreen />);
 
-		const motionDiv = screen.getByRole("region");
-		expect(motionDiv).toBeInTheDocument();
+		expect(screen.getByRole("region")).toBeInTheDocument();
 	});
 
 	// Test if it renders the menu with the items

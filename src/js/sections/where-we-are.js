@@ -12,7 +12,7 @@ import {
 } from "../logic/style-handling/whereWeAreStyleHandler";
 import SectionContainer from "../components/sections/SectionContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
-import InfoCard from "../components/other/InfoCard";
+import InfoCard from "../components/other/InfoCard/InfoCard";
 import SectionHeader from "../components/sections/SectionHeader";
 
 /**

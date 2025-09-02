@@ -22,7 +22,7 @@ describe("CustomIconButton", () => {
 	});
 
 	// Test if it correctly renders the icon
-	test("renders icon", () => {
+	test("renders with correct icon", () => {
 		render(<CustomIconButton src={customIconButtonImg} />);
 
 		const icon = screen.getByAltText(

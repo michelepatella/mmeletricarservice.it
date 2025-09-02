@@ -56,8 +56,8 @@ describe("CustomButton", () => {
 		).toBeInTheDocument();
 	});
 
-	// Test if it correctly renders the icon when provided
-	test("renders with correct icon when provided", () => {
+	// Test if it correctly renders the icon if provided
+	test("renders with correct icon if provided", () => {
 		render(<CustomButton icon={customButtonIcon} />);
 
 		const icon = screen.getByAltText(
@@ -66,6 +66,17 @@ describe("CustomButton", () => {
 
 		expect(icon).toBeInTheDocument();
 		expect(icon).toHaveAttribute("src", customButtonIcon);
+	});
+
+	// Test if it doesn't render the icon if not provided
+	test("doesn't render the icon if not provided", () => {
+		render(<CustomButton />);
+
+		const icon = screen.queryByAltText(
+			customButtonIconAltAttr
+		);
+
+		expect(icon).not.toBeInTheDocument();
 	});
 
 	// Test if it applies the custom style
