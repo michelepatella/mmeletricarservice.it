@@ -6,11 +6,11 @@
 - [🛠️ Tech Stack](#️-tech-stack)
 - [📌 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
-- [🌐 Client-side](#-client-side)
-- [🔄 Data Fetching & Caching](#-data-fetching--caching)
-- [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
-- [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
-- [📦 Deployment & CI/CD](#-deployment--cicd)
+  - [🌐 Client-side](#-client-side)
+  - [🔄 Data Fetching & Caching](#-data-fetching--caching)
+  - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
+  - [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
+  - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [🔐 Environment Variables](#-environment-variables)
 - [🔍 SEO & Analytics](#-seo--analytics)
 - [📈 Metrics](#-metrics)
@@ -21,12 +21,12 @@
 
 ## 👁️ Overview
 
-📌 **What**
+#### 📌 What
 
 A production-ready, full-stack web application developed for MM Eletricar Service, an Italian car workshop and used car dealership.
 <br>
 
-❓ **Why**
+#### ❓ Why
 
 To enhance the company's digital presence and give customers clear, accessible information for confident decision-making.
 <br>
@@ -190,24 +190,24 @@ The system is built on a **Jamstack architecture** shown below:
 <br>
 <br>
 
-## 🌐 Client-side
+### 🌐 Client-side
 
-### 🎯 Role
+🎯 **Role**
 It represents the UI of the application, developed as a Single-Page Application. 
 It represents everything the user sees and interacts with.
 
-### 🛡️ Responsibility
+🛡️ **Responsibility**
 It's responsible for:
   - UI rendering  
   - User interactions managing  
   - Data fetching, caching, and displaying (via *Data Fetching & Caching* layer)
     
-### 🔗 Interactions
+🔗 **Interactions**
 It calls serverless APIs via *Data Fetching & Caching* layer, receiving, processing, and showing API responses.
 
 <br>
 
-## 🔄 Data Fetching & Caching
+### 🔄 Data Fetching & Caching
 
 **📡 Declarative Data Fetching**
 
@@ -241,11 +241,11 @@ It calls serverless APIs via *Data Fetching & Caching* layer, receiving, process
 
 <br>
 
-## ⚙️ Serverless Functions
+### ⚙️ Serverless Functions
 
 The API endpoints are implemented as Serverless Functions, hosted on Vercel, and accessed through a centralized fecther utility. This architecture allows for modular, scalable, and stateless backend logic with minimal overhead.
 
-### 1. Get used cars overview
+#### 1. Get used cars overview
 
 - **Description**: Returns an array of used car overviews with the first available image for each car.
 - **URL**: `/api/usedCarsOverview`
@@ -290,7 +290,7 @@ Response example:
 
 <br>
 
-### 2. Get used car info
+#### 2. Get used car info
 
 - **Description**: Returns complete details for a specific used car, including technical specifications and all associated images.
 - **URL**: `/api/usedCarInfo`
@@ -350,7 +350,7 @@ Response example:
 
 <br>
 
-## ☁️ Backend / BaaS
+### ☁️ Backend / BaaS
 
 The backend architecture levarages Supabase as a Backend-as-a-Service platform, combining PostgreSQL database and Storage bucket in a scalable environment.
 
@@ -382,7 +382,7 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 <br>
 <br>
 
-## 📦 Deployment & CI/CD
+### 📦 Deployment & CI/CD
 
 - Fully automated pipeline with Vercel and GitHub integration
 - Commits to `main` trigger instant production builds at [mmeletricarservice.it](https://mmeletricarservice.it)
