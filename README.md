@@ -150,9 +150,6 @@ This project follows the best practices of software engineering:
 - Indexes created to optimize data retrieval
 - Vercel's serverless functions scale automatically with demand, including a caching system
 - Fetching and caching handled with React Query
-  - Automatic deduplication of requests
-  - Background re-fetching for data freshness
-  - Query invalidation for precise cache control
 
 </details>
 
