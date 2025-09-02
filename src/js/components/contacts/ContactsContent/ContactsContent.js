@@ -7,7 +7,7 @@ import {
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
 import CustomButton from "../../custom/CustomButton/CustomButton";
 import SectionContainer from "../../sections/SectionContainer/SectionContainer";
-import SectionHeader from "../../sections/SectionHeader";
+import SectionHeader from "../../sections/SectionHeader/SectionHeader";
 
 /**
  * This component represent the content

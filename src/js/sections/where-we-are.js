@@ -13,7 +13,7 @@ import {
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
 import InfoCard from "../components/other/InfoCard/InfoCard";
-import SectionHeader from "../components/sections/SectionHeader";
+import SectionHeader from "../components/sections/SectionHeader/SectionHeader";
 
 /**
  * This component represents the Where we are section.

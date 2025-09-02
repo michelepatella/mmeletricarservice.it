@@ -6,7 +6,7 @@ import {
 } from "../utils/const";
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
-import SectionHeader from "../components/sections/SectionHeader";
+import SectionHeader from "../components/sections/SectionHeader/SectionHeader";
 
 /**
  * This component represents Our values section,

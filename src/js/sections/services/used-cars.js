@@ -10,7 +10,7 @@ import {
 	handleUnavailableUsedCarDescriptionStyle,
 } from "../../logic/style-handling/usedCarsStyleHandler";
 import SectionContainer from "../../components/sections/SectionContainer/SectionContainer";
-import SectionHeader from "../../components/sections/SectionHeader";
+import SectionHeader from "../../components/sections/SectionHeader/SectionHeader";
 import UsedCarCard from "../../components/used-cars/UsedCarCard";
 import CustomText from "../../components/custom/CustomText/CustomText";
 import { useUsedCarsOverview } from "../../hooks/useUsedCarsOverview";

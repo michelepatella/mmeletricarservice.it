@@ -7,14 +7,6 @@ import {
 } from "@testing-library/react";
 import ContactsContent from "./ContactsContent";
 
-// Mock IntersectionObserver
-beforeAll(() => {
-	global.IntersectionObserver = class {
-		observe() {}
-		unobserve() {}
-	};
-});
-
 // Definition of expected results
 const contactsSectionName = "Contacts Section Name";
 const contactsTitle = "Contacts Title";
@@ -27,6 +19,12 @@ const phoneIcon = "phone-icon";
 const emailIcon = "email-icon";
 const emailPecIcon = "email-pec-icon";
 const facebookIcon = "facebook-icon";
+
+// Mock IntersectionObserver hook
+jest.mock("../../../hooks/useIntersectionObserver", () => ({
+	__esModule: true,
+	default: jest.fn(),
+}));
 
 // Mock the company contacts and section's texts
 jest.mock("../../../utils/const", () => ({

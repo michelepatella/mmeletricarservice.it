@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 import {
 	handleSectionNameStyle,
 	handleSubtitleStyle,
-} from "../../logic/style-handling/sectionHeaderStyleHandler";
-import CustomText from "../custom/CustomText/CustomText";
+} from "../../../logic/style-handling/sectionHeaderStyleHandler";
+import CustomText from "../../custom/CustomText/CustomText";
 
 /**
  * This component represents the section header.

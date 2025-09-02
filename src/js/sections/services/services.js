@@ -5,7 +5,7 @@ import {
 } from "../../utils/const";
 import SectionContainer from "../../components/sections/SectionContainer/SectionContainer";
 import BackgroundContainer from "../../components/sections/BackgroundContainer/BackgroundContainer";
-import SectionHeader from "../../components/sections/SectionHeader";
+import SectionHeader from "../../components/sections/SectionHeader/SectionHeader";
 
 /**
  * This component represents the Service section.
