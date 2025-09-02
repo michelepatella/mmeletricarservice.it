@@ -190,7 +190,7 @@ The system is built on a **Jamstack architecture** shown below:
 ### 🌐 Client-side
 
 🎯 **Role**  
-It represents the UI of the application, developed as a Single-Page Application.  
+It represents the UI of the application, developed as a Single-Page Application and deployed on Vercel.  
 It represents the frontend of the system: everything the user sees and interacts with.
 
 🛡️ **Responsibility**  
@@ -361,14 +361,24 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 
 ### 📦 Deployment & CI/CD
 
-- Fully automated pipeline with Vercel and GitHub integration
-- Commits to `main` trigger instant production builds at [mmeletricarservice.it](https://mmeletricarservice.it)
-- Preview deployments created for all branches and PRs for testing and review
-- CI runs tests on every push and PR
-- Real-time build, deployment, and performance monitoring via Vercel Dashboard
-- Versioned deploys with easy rollback to previous stable releases
-- Secure management of environment variables and secrets in Vercel
-- Enables rapid, reliable delivery aligned with modern DevOps best practices
+🎯 **Role**  
+It provides a fully automated pipeline to build, test, and deploy the application.  
+It ensures that code changes are validated, deployed reliably, and made available to users quickly.
+
+🛡️ **Responsibility**  
+It's responsible for:
+- Continuous Integration (CI) on every push to `main`:
+  - Install dependencies
+  - Run linting and Prettier checks
+  - Run automated tests
+  - Build the project
+- Continuous Deployment (CD) triggered after successful CI:
+  - Install dependencies
+  - Build the project
+  - Deploy to Vercel production environment (hosting the client-side and serverless functions, managing environment variables, and providing logs and analytics)
+- Creating preview deployments for all branches
+- Real-time monitoring of builds, deployments, and performance via Vercel Dashboard
+- Versioned deploys allowing easy rollback to previous stable releases
 
 <br>
 
