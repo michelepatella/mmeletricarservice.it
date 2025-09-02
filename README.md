@@ -53,19 +53,19 @@ The web application is available at https://mmeletricarservice.it 🌐
 | ------------------------ | --------------------------------------- |
 | ⚛️ Frontend              | React.js                                |
 | 🖌️ UI Library            | Ant Design                              |
-| 🎨 Styling               | CSS + Custom Design Tokens              |
-| 🌀 Animations            | CSS + Framer Motion                     |
+| 🎨 Styling               | CSS, Custom Design Tokens               |
+| 🌀 Animations            | CSS, Framer Motion                      |
 | 🧭 Routing               | React Router (HashRouter)               |
-| 🧩 State Management      | React Hooks + Custom Hooks              |
+| 🧩 State Management      | React Hooks, Custom Hooks               |
 | 🔄 Fetching & Caching    | React Query                             |
 | ⚙️ API Communication     | Serverless API (Vercel Functions)       |
 | ☁️ Backend-as-a-Service  | Supabase (PostgreSQL, Storage)          |
-| 🔐 Environment Variables | .env + Vercel Dashboard                 |
-| 🧪 Testing               | Jest + React Testing Library            |
-| 🧹 Code Quality          | ESLint + Prettier                       |
-| 📦 Deployment & CI/CD    | Vercel + GitHub                         |
+| 🔐 Environment Variables | .env, Vercel Dashboard                  |
+| 🧪 Testing               | Jest, React Testing Library             |
+| 🧹 Code Quality          | ESLint, Prettier                        |
+| 📦 Deployment & CI/CD    | Vercel, GitHub                          |
 | 🔍 SEO                   | Clean URLs, HTTPS, Meta Tags, Local SEO |
-| 📊 Monitoring            | Vercel Logs + Error Tracking            |
+| 📊 Monitoring            | Vercel Logs, Error Tracking             |
 | 📈 Analytics             | Vercel Analytics                        |
 
 <br>
@@ -73,80 +73,6 @@ The web application is available at https://mmeletricarservice.it 🌐
 ## 📌 Software Engineering Principles
 
 This project follows the best practices of software engineering:
-
-<details>
-<summary>🧱 <strong>Modularity</strong></summary>
-
-- Components follow the Single Responsibility Principle
-- Clear separation between UI, business logic, and styling
-- Logic encapsulated via custom hooks and shared utility functions
-- Sections are structured as atomic, composable components
-
-</details>
-
-<details>
-<summary>🛠️ <strong>Maintainability</strong></summary>
-
-- Clean and consistent codebase
-- ESLint and Prettier for formatting
-- Well-documented code with meaningful names and docstrings
-- Centralized constants and links (`const.js` and `links.js`) for easier updates
-- Use of centralized CSS variables and design tokens
-- Tests colocated with components for better traceability
-
-</details>
-   
-<details>
-<summary>♻️ <strong>Reusability</strong></summary>
-
-- Common components reused across multiple pages
-- DRY (Don't Repeat Yourself) principles followed across logic and styles
-
-</details>
-  
-<details>
-<summary>🚀 <strong>Scalability</strong></summary>
-
-- Backend powered by Supabase (PostgreSQL), allowing seamless scaling
-- Indexes created to optimize data retrieval
-- Vercel's serverless functions scale automatically with demand, including a caching system
-- Fetching and caching handled with React Query
-  - Automatic deduplication of requests
-  - Background re-fetching for data freshness
-  - Query invalidation for precise cache control
-
-</details>
-  
-<details>
-<summary>✅ <strong>Reliability & Robustness</strong></summary>
-
-- Error handling for API and UI (try-catch, logging, and Vercel monitoring)
-- Loading states and fallback UIs improve resilience
-- Automated tests with Jest and React Testing Library
-- Data integrity ensured via database constraints, foreign keys, and Row-Level Security policies
-
-</details>
-
-<details>
-<summary>🔐 <strong>Security & Compliance</strong></summary>
-
-- GDPR compliance: cookie consent, legal/privacy notes
-- Safe handling of third-party cookies
-- No sensitive data exposed client-side
-- Row-Level Security policies on Supabase
-
-</details>
-
-<details>
-<summary>⚡️ <strong>Performance & Efficiency</strong></summary>
-
-- Lazy loading
-- Modern image format (AVIF)
-- Optimized for Lighthouse metrics
-- Session caching of used car data
-- React Query for efficient data fetching and caching
-
-</details>
 
 <details>
 <summary>🧠 <strong>Abstraction</strong></summary>
@@ -167,6 +93,80 @@ This project follows the best practices of software engineering:
 </details>
 
 <details>
+<summary>🛠️ <strong>Maintainability</strong></summary>
+
+- Clean and consistent codebase
+- ESLint and Prettier for formatting
+- Well-documented code with meaningful names and docstrings
+- Centralized constants and links (`const.js` and `links.js`) for easier updates
+- Use of centralized CSS variables and design tokens
+- Tests colocated with components for better traceability
+
+</details>
+
+<details>
+<summary>🧱 <strong>Modularity</strong></summary>
+
+- Components follow the Single Responsibility Principle
+- Clear separation between UI, business logic, and styling
+- Logic encapsulated via custom hooks and shared utility functions
+- Sections are structured as atomic, composable components
+
+</details>
+
+<details>
+<summary>⚡️ <strong>Performance & Efficiency</strong></summary>
+
+- Lazy loading
+- Modern image format (AVIF)
+- Optimized for Lighthouse metrics
+- Session caching of used car data
+- React Query for efficient data fetching and caching
+
+</details>
+
+<details>
+<summary>✅ <strong>Reliability & Robustness</strong></summary>
+
+- Error handling for API and UI (try-catch, logging, and Vercel monitoring)
+- Loading states and fallback UIs improve resilience
+- Automated tests with Jest and React Testing Library
+- Data integrity ensured via database constraints, foreign keys, and Row-Level Security policies
+
+</details>
+
+<details>
+<summary>♻️ <strong>Reusability</strong></summary>
+
+- Common components reused across multiple pages
+- DRY (Don't Repeat Yourself) principles followed across logic and styles
+
+</details>
+  
+<details>
+<summary>🚀 <strong>Scalability</strong></summary>
+
+- Backend powered by Supabase (PostgreSQL), allowing seamless scaling
+- Indexes created to optimize data retrieval
+- Vercel's serverless functions scale automatically with demand, including a caching system
+- Fetching and caching handled with React Query
+  - Automatic deduplication of requests
+  - Background re-fetching for data freshness
+  - Query invalidation for precise cache control
+
+</details>
+
+<details>
+<summary>🔐 <strong>Security & Compliance</strong></summary>
+
+- GDPR compliance: cookie consent, legal/privacy notes
+- Safe handling of third-party cookies
+- No sensitive data exposed client-side
+- Row-Level Security policies on Supabase
+
+</details>
+
+<details>
 <summary>👤 <strong>Usability</strong></summary>
 
 - Clean, intuitive, and consistent UI aligned with branding
@@ -182,6 +182,8 @@ This project follows the best practices of software engineering:
 <br>
 
 ## 🏗️ System Architecture
+
+The system is built on a **Jamstack architecture** shown below:
 
 <img width="776" alt="image" src="https://github.com/user-attachments/assets/1d2d3b30-c13b-476a-8401-cab627842d89" />
 
