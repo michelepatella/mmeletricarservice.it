@@ -53,19 +53,19 @@ The web application is available at https://mmeletricarservice.it 🌐
 | ------------------------ | --------------------------------------- |
 | ⚛️ Frontend              | React.js                                |
 | 🖌️ UI Library            | Ant Design                              |
-| 🎨 Styling               | CSS + Custom Design Tokens              |
-| 🌀 Animations            | CSS + Framer Motion                     |
+| 🎨 Styling               | CSS, Custom Design Tokens               |
+| 🌀 Animations            | CSS, Framer Motion                      |
 | 🧭 Routing               | React Router (HashRouter)               |
-| 🧩 State Management      | React Hooks + Custom Hooks              |
+| 🧩 State Management      | React Hooks, Custom Hooks               |
 | 🔄 Fetching & Caching    | React Query                             |
 | ⚙️ API Communication     | Serverless API (Vercel Functions)       |
 | ☁️ Backend-as-a-Service  | Supabase (PostgreSQL, Storage)          |
-| 🔐 Environment Variables | .env + Vercel Dashboard                 |
-| 🧪 Testing               | Jest + React Testing Library            |
-| 🧹 Code Quality          | ESLint + Prettier                       |
-| 📦 Deployment & CI/CD    | Vercel + GitHub                         |
+| 🔐 Environment Variables | .env, Vercel Dashboard                  |
+| 🧪 Testing               | Jest, React Testing Library             |
+| 🧹 Code Quality          | ESLint, Prettier                        |
+| 📦 Deployment & CI/CD    | Vercel, GitHub                          |
 | 🔍 SEO                   | Clean URLs, HTTPS, Meta Tags, Local SEO |
-| 📊 Monitoring            | Vercel Logs + Error Tracking            |
+| 📊 Monitoring            | Vercel Logs, Error Tracking             |
 | 📈 Analytics             | Vercel Analytics                        |
 
 <br>
