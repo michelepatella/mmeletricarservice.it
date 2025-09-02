@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import MenuBigScreen from "./MenuBigScreen";
 import { useMenu } from "../../../hooks/useMenu";
 
-// Definition of expected results
+// Definition of menu items
 const menuItems = [
 	{
 		key: "section1",

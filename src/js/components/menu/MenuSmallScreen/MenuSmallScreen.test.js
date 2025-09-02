@@ -8,21 +8,22 @@ import {
 import MenuSmallScreen from "./MenuSmallScreen";
 import { useMenu } from "../../../hooks/useMenu";
 
-// Definition of expected results
+// Definition of menu items
+const child = [
+	{
+		key: "section1-1",
+		title: "Child 1 Title",
+		href: "#section1-1",
+		onClick: jest.fn(),
+	},
+];
 const menuItems = [
 	{
 		key: "section1",
 		title: "Section 1 Title",
 		href: "#section1",
 		onClick: jest.fn(),
-		children: [
-			{
-				key: "section1-1",
-				title: "Child 1 Title",
-				href: "#section1-1",
-				onClick: jest.fn(),
-			},
-		],
+		children: [child[0]],
 	},
 	{
 		key: "section2",
@@ -140,6 +141,66 @@ describe("MenuSmallScreen", () => {
 			fireEvent.click(closeIcon);
 
 			expect(toggleDrawer).toHaveBeenCalled();
+		});
+	});
+
+	// Test drawer content
+	describe("Drawer content", () => {
+		// Mock custom hook before
+		// running each test
+		beforeEach(() => {
+			useMenu.mockReturnValueOnce({
+				menuItems,
+				section: menuItems[0].key,
+				visible: true,
+				toggleDrawer,
+			});
+		});
+
+		// Test if it correctly renders all
+		// parent menu items
+		test("renders all parent menu items correctly", () => {
+			render(<MenuSmallScreen />);
+
+			menuItems.forEach((item) => {
+				const parent = screen.getByText(item.title);
+				expect(parent).toBeInTheDocument();
+			});
+		});
+
+		// Test if it correctly renders all
+		// child menu items
+		test("renders all children menu items correctly", () => {
+			render(<MenuSmallScreen />);
+
+			child.forEach((item) => {
+				expect(
+					screen.getByText(item.title)
+				).toBeInTheDocument();
+			});
+		});
+
+		// Test if once each parent menu item is
+		// clicked, onClick is called
+		test("calls onClick when parent menu items are clicked", () => {
+			render(<MenuSmallScreen />);
+
+			menuItems.forEach((item) => {
+				const parent = screen.getByText(item.title);
+				fireEvent.click(parent);
+				expect(item.onClick).toHaveBeenCalled();
+			});
+		});
+
+		// Test if once each child menu item is
+		// clicked, onClick is called
+		test("calls onClick when children menu items are clicked", () => {
+			render(<MenuSmallScreen />);
+
+			child.forEach((item) => {
+				fireEvent.click(screen.getByText(item.title));
+				expect(item.onClick).toHaveBeenCalled();
+			});
 		});
 	});
 });
