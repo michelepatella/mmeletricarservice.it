@@ -7,8 +7,8 @@
 - [📌 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
 - [🌐 Client-side](#-client-side)
-- [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [🔄 Data Fetching & Caching](#-data-fetching--caching)
+- [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
 - [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [🔐 Environment Variables](#-environment-variables)
@@ -21,27 +21,27 @@
 
 ## 👁️ Overview
 
-### 📌 What
+📌 **What**
 
 A production-ready, full-stack web application developed for MM Eletricar Service, an Italian car workshop and used car dealership.
 <br>
 
-### ❓ Why
+❓ **Why**
 
 To enhance the company's digital presence and give customers clear, accessible information for confident decision-making.
 <br>
 
-### 👤 Who
+👤 **Who**
 
 Designed for customers exploring company details, services, and used vehicles.
 <br>
 
-### 📅 When
+📅 **When**
 
 Launched in February 2025.
 <br>
 
-### 🌎 Where
+🌎 **Where**
 
 The web application is available at https://mmeletricarservice.it 🌐
 
@@ -192,29 +192,52 @@ The system is built on a **Jamstack architecture** shown below:
 
 ## 🌐 Client-side
 
-The client-side is a modern, production-grade React.js application.
+### 🎯 Role
+It represents the UI of the application, developed as a Single-Page Application. 
+It represents everything the user sees and interacts with.
 
-- **Component-driven Architecture**: UI compose of reusable, atomic components
-- **Routing**: Navigation managed via Hash Routing, supporting both static and dynamic routes
-- **Styling & Theming**: Styling using Ant Design components, CSS and design tokens
-- **State Management**: Local state handled with React's hooks (`useState`, `useEffect`, etc.) and logic is abstracted into custom hooks to promote reuse
-- **Data Fecthing & Caching**: Data fetching and caching handled via React Query
-- **Performance & Optimization**: Lazy loading, image modern formats and other tricks to optimize performance
-- **Responsive & Accessible UI**: Design follows mobile-first approach, enhanced by advanced UI components and animations
+### 🛡️ Responsibility
+It's responsible for:
+  - UI rendering  
+  - User interactions managing  
+  - Data fetching, caching, and displaying (via *Data Fetching & Caching* layer)
+    
+### 🔗 Interactions
+It calls serverless APIs via *Data Fetching & Caching* layer, receiving, processing, and showing API responses.
 
-The application is composed of static and dynamic routes to serve both marketing and functional purposes:
+<br>
 
-- **Home** (`/`) – Landing page
-- **About Us** (`/chi-siamo`) – Company overview, team, and history
-- **Our Values** (`/i-nostri-valori`) – Company's mission and core values
-- **Services** (`/servizi`) – Introduction to the offered services
-- **All Services** (`/tutti-i-servizi`) – Detailed list of provided services
-- **Used Cars** (`/auto-usate`) – Grid of available used cars displayed via cards
-- **Car Details** (`/auto-usate*id*`) – Dynamic route rendered as a full-screen drawer with technical specs, gallery, and contact CTA
-- **Location** (`/dove-siamo`) – Location, business hours, and embedded Google Maps
-- **Contacts** (`/contatti`) – Contact information, including phone, email and social media link
+## 🔄 Data Fetching & Caching
 
-Navigation is fully responsive with a desktop anchor menu and mobile drawer for optimal UX.
+**📡 Declarative Data Fetching**
+
+- Minimizes redundant requests
+- Simplifies data fetching using `useQuery`
+
+**🧠 Cache-First Approach**
+
+- Retrieves data from cache before network request
+- Cached data is revalidated for freshness
+
+**🔁 Automatic Background Refetching**
+
+- Periodic background re-fetching for up-to-date info
+- Reduces perceived latency for a seamless UX
+
+**⏳ Stale-While-Revalidate**
+
+- Shows cached data immediately while fetching new data
+- New data replaces old data seamlessly for an uninterrupted experience
+
+**🛡️ Error Handling & Retries**
+
+- Built-in retry mechanism with exponential backoff for failed requests
+- Ensures resilience during temporary issues (e.g., network failures)
+
+**🚫 Query Deduplication**
+
+- Prevents redundant requests for the same data
+- Reduces server load and improves performance
 
 <br>
 
@@ -324,40 +347,6 @@ Response example:
   ]
 }
 </pre>
-
-<br>
-
-## 🔄 Data Fetching & Caching
-
-**📡 Declarative Data Fetching**
-
-- Minimizes redundant requests
-- Simplifies data fetching using `useQuery`
-
-**🧠 Cache-First Approach**
-
-- Retrieves data from cache before network request
-- Cached data is revalidated for freshness
-
-**🔁 Automatic Background Refetching**
-
-- Periodic background re-fetching for up-to-date info
-- Reduces perceived latency for a seamless UX
-
-**⏳ Stale-While-Revalidate**
-
-- Shows cached data immediately while fetching new data
-- New data replaces old data seamlessly for an uninterrupted experience
-
-**🛡️ Error Handling & Retries**
-
-- Built-in retry mechanism with exponential backoff for failed requests
-- Ensures resilience during temporary issues (e.g., network failures)
-
-**🚫 Query Deduplication**
-
-- Prevents redundant requests for the same data
-- Reduces server load and improves performance
 
 <br>
 
