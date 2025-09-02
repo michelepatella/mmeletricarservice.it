@@ -192,15 +192,16 @@ The system is built on a **Jamstack architecture** shown below:
 
 ### 🌐 Client-side
 
-🎯 **Role**    
+🎯 **Role**  
 It represents the UI of the application, developed as a Single-Page Application.  
 It represents the frontend of the system: everything the user sees and interacts with.
 
 🛡️ **Responsibility**  
-It's responsible for:  
-- UI rendering (through *React Components*)
-- User interactions management 
-- Data fetching and caching (via its internal *Data Fetching & Caching* layer)
+It's responsible for:
+
+- UI rendering (through _React Components_)
+- User interactions management
+- Data fetching and caching (via its internal _Data Fetching & Caching_ layer)
 
 <br>
 
@@ -211,12 +212,13 @@ It serves as the dedicated layer to manage all data fetching and caching in the 
 It ensures efficient, reliable, and up-to-date data delivery.
 
 🛡️ **Responsibility**  
-It's responsible for:  
-- Data fetching using `useQuery`, custom logic and hooks 
-- Cache-first retrieval using `STALE_TIME` to minimize unnecessary network requests  
+It's responsible for:
+
+- Data fetching using `useQuery`, custom logic and hooks
+- Cache-first retrieval using `STALE_TIME` to minimize unnecessary network requests
 - Error logging when a fetch fails
 - Query deduplication to prevent simultaneous duplicate requests and reduce server load
-<br>
+  <br>
 
 ### ⚙️ Serverless Functions
 
