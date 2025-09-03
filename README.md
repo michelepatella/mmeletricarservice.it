@@ -182,7 +182,7 @@ This project follows the best practices of software engineering:
 
 The system is built on a **Jamstack architecture** shown below:
 
-<img width="776" alt="image" src="https://github.com/user-attachments/assets/1d2d3b30-c13b-476a-8401-cab627842d89" />
+<img width="500" height="800" alt="image" src="https://github.com/user-attachments/assets/12749716-971e-41ff-a924-6f5d0d78fec7" />
 
 <br>
 <br>
