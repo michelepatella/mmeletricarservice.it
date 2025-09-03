@@ -49,24 +49,24 @@ The web application is available at https://mmeletricarservice.it 🌐
 
 ## 🛠️ Tech Stack
 
-| Layer                    | Technology                              |
-| ------------------------ | --------------------------------------- |
-| ⚛️ Frontend              | React.js                                |
-| 🖌️ UI Library            | Ant Design                              |
-| 🎨 Styling               | CSS, Custom Design Tokens               |
-| 🌀 Animations            | CSS, Framer Motion                      |
-| 🧭 Routing               | React Router (HashRouter)               |
-| 🧩 State Management      | React Hooks, Custom Hooks               |
-| 🔄 Fetching & Caching    | React Query                             |
-| ⚙️ API Communication     | Serverless API (Vercel Functions)       |
-| ☁️ Backend-as-a-Service  | Supabase (PostgreSQL, Storage)          |
-| 🔐 Environment Variables | .env, Vercel, GitHub                    |
-| 🧪 Testing               | Jest, React Testing Library             |
-| 🧹 Code Quality          | ESLint, Prettier                        |
-| 📦 Deployment & CI/CD    | Vercel, GitHub Actions                  |
-| 🔍 SEO                   | Clean URLs, HTTPS, Meta Tags, Local SEO |
-| 📊 Monitoring            | Vercel Logs, Error Tracking             |
-| 📈 Analytics             | Vercel Analytics                        |
+| Layer                    | Technology                                                 |
+| ------------------------ | ---------------------------------------------------------- |
+| ⚛️ Frontend              | React.js                                                   |
+| 🖌️ UI Library            | Ant Design                                                 |
+| 🎨 Styling               | CSS, Custom Design Tokens                                  |
+| 🌀 Animations            | CSS, Framer Motion                                         |
+| 🧭 Routing               | React Router (HashRouter)                                  |
+| 🧩 State Management      | React Hooks, Custom Hooks                                  |
+| 🔄 Fetching & Caching    | React Query                                                |
+| ⚙️ API Communication     | Serverless API (Vercel Functions)                          |
+| ☁️ Backend-as-a-Service  | Supabase (PostgreSQL, Storage)                             |
+| 🔐 Environment Variables | .env, Vercel Environment Variables, GitHub Action Secrets  |
+| 🧪 Testing               | Jest, React Testing Library                                |
+| 🧹 Code Quality          | ESLint, Prettier                                           |
+| 📦 Deployment & CI/CD    | Vercel, GitHub Actions                                     |
+| 🔍 SEO                   | Clean URLs, HTTPS, Meta Tags, Local SEO                    |
+| 📊 Monitoring            | Vercel Logs, Error Tracking                                |
+| 📈 Analytics             | Vercel Analytics                                           |
 
 <br>
 
@@ -390,15 +390,22 @@ The application is deployed to Vercel, hosting the frontend and serverless funct
 
 ## 🔐 Environment Variables
 
-Environment variables are used to manage in a secure, scalable and maintanable way, all sensible configurations and secrets of the web application.
+Environment variables manage all sensitive configurations and secrets of the application in a secure, scalable, and maintainable way.
 
-Environment-specific secrets (Supabase project keys) are:
+**Sources of environment variables**:
+- **Local `.env` file** (`DATABASE_URL`, `SUPABASE_ANON_KEY`)  
+  - Used during development  
+  - Excluded from version control via `.gitignore`
+- **Vercel Environment Variables**  
+  - Centralized management for production deployments  
+  - Injected automatically during deployment
+- **GitHub Actions secrets**  
+  - Used in CI/CD workflows (e.g., `VERCEL_TOKEN`, `SUPABASE_KEY`)  
+  - Not exposed in the client-side bundle  
 
-- Defined in a local `.env` file, excluded from version control, by using `.gitignore`
-- Securely configured via the Vercel Dashboard, to manage them in a centralized and secure way
-- Not exposed to the browser
-- Taken from `.env` while developing the application
-- Injected by Vercel, when the application is deployed
+**Security guarantees**:
+- Sensitive variables are never exposed to the browser  
+- Access is limited to the runtime environment (Vercel or CI/CD)  
 
 <br>
 
