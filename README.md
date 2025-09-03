@@ -44,24 +44,24 @@ The web application is available at https://mmeletricarservice.it
 
 ## 🛠️ Tech Stack
 
-| Layer                    | Technology                                                 |
-| ------------------------ | ---------------------------------------------------------- |
-| **Frontend**             | React.js                                                   |
-| **UI Library**           | Ant Design                                                 |
-| **Styling**              | CSS, Custom Design Tokens                                  |
-| **Animations**           | CSS, Framer Motion                                         |
-| **Routing**              | React Router (HashRouter)                                  |
-| **State Management**     | React Hooks, Custom Hooks                                  |
-| **Fetching & Caching**   | React Query                                                |
-| **API Communication**    | Serverless API (Vercel Functions)                          |
-| **Backend-as-a-Service** | Supabase (PostgreSQL, Storage)                             |
-| **Environment Variables**| .env, Vercel Environment Variables, GitHub Action Secrets  |
-| **Testing**              | Jest, React Testing Library                                |
-| **Code Quality**         | ESLint, Prettier                                           |
-| **Deployment & CI/CD**   | Vercel, GitHub Actions                                     |
-| **SEO**                  | Clean URLs, HTTPS, Meta Tags, Local SEO                    |
-| **Monitoring**           | Vercel Logs, Error Tracking                                |
-| **Analytics**            | Vercel Analytics                                           |
+| Layer                     | Technology                                                |
+| ------------------------- | --------------------------------------------------------- |
+| **Frontend**              | React.js                                                  |
+| **UI Library**            | Ant Design                                                |
+| **Styling**               | CSS, Custom Design Tokens                                 |
+| **Animations**            | CSS, Framer Motion                                        |
+| **Routing**               | React Router (HashRouter)                                 |
+| **State Management**      | React Hooks, Custom Hooks                                 |
+| **Fetching & Caching**    | React Query                                               |
+| **API Communication**     | Serverless API (Vercel Functions)                         |
+| **Backend-as-a-Service**  | Supabase (PostgreSQL, Storage)                            |
+| **Environment Variables** | .env, Vercel Environment Variables, GitHub Action Secrets |
+| **Testing**               | Jest, React Testing Library                               |
+| **Code Quality**          | ESLint, Prettier                                          |
+| **Deployment & CI/CD**    | Vercel, GitHub Actions                                    |
+| **SEO**                   | Clean URLs, HTTPS, Meta Tags, Local SEO                   |
+| **Monitoring**            | Vercel Logs, Error Tracking                               |
+| **Analytics**             | Vercel Analytics                                          |
 
 <br>
 
@@ -246,8 +246,11 @@ They are responsible for:
   - Used cars overview information
   - Detailed information for a specific used car
 - Centralizing access to backend
+
 ---
+
 **🔗 Endpoints**
+
 <details>
 <summary><strong>Get Used Cars Overview</strong></summary>
  
@@ -397,18 +400,21 @@ The project uses a fully automated pipeline to validate, build, and deploy the a
 
 **🧪 Continuous Integration (CI)**  
 Runs on every push, and pull request to `main`:
-  - Install dependencies
-  - Run linting and Prettier checks
-  - Run automated tests
-  - Build the project
+
+- Install dependencies
+- Run linting and Prettier checks
+- Run automated tests
+- Build the project
 
 **🚀 Continuous Deployment (CD)**  
 Triggered after successful CI:
-  - Install dependencies
-  - Build the project
-  - Deploy to Vercel
 
-The application is deployed to Vercel, hosting the frontend and serverless functions, with features including:  
+- Install dependencies
+- Build the project
+- Deploy to Vercel
+
+The application is deployed to Vercel, hosting the frontend and serverless functions, with features including:
+
 - Domain management
 - Preview deployments for all branches and pull requests
 - Versioned deployments with easy rollback to previous stable releases
@@ -417,24 +423,25 @@ The application is deployed to Vercel, hosting the frontend and serverless funct
 - Automatic scaling with traffic demand
 - Security features including firewall
 - Logs monitoring
-- Integrated analytics 
+- Integrated analytics
 
 <br>
 
 ## 🔐 Environment Variables
 
-Environment variables manage all sensitive configurations and secrets of the application in a secure, scalable, and maintainable way.  
+Environment variables manage all sensitive configurations and secrets of the application in a secure, scalable, and maintainable way.
 
-Sources of environment variables:  
-- **📝 Local `.env` file** (`DATABASE_URL`, `SUPABASE_ANON_KEY`)  
-  - Used during development  
+Sources of environment variables:
+
+- **📝 Local `.env` file** (`DATABASE_URL`, `SUPABASE_ANON_KEY`)
+  - Used during development
   - Excluded from version control via `.gitignore`
-- **☁️ Vercel Environment Variables** (`DATABASE_URL`, `SUPABASE_ANON_KEY`)  
-  - Used for production deployments  
+- **☁️ Vercel Environment Variables** (`DATABASE_URL`, `SUPABASE_ANON_KEY`)
+  - Used for production deployments
   - Injected automatically during deployment
-- **🔒 GitHub Actions Secrets**  
-  - Used in CI/CD pipeline (`VERCEL_TOKEN`)  
-  - Not exposed to the client-side  
+- **🔒 GitHub Actions Secrets**
+  - Used in CI/CD pipeline (`VERCEL_TOKEN`)
+  - Not exposed to the client-side
 
 <br>
 
@@ -442,14 +449,16 @@ Sources of environment variables:
 
 The application implements search engine optimization to improve discoverability and ranking, and analytics to monitor user engagement and performance, without compromising user privacy.
 
-**📈 SEO features** include:  
+**📈 SEO features** include:
+
 - Clean, human-readable URLs
 - Keyword-optimized content
 - HTTPS for secure connections
 - Embedded Google Maps for local SEO targeting
 - Favicon and consistent branding
 
-**📊 Analytics features** (via Vercel Analytics) include:  
+**📊 Analytics features** (via Vercel Analytics) include:
+
 - Actionable insights to optimize UX and app performance:
   - Visitors (total number of application's visitors)
   - Page views (total number of pages viewed)
