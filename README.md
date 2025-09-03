@@ -390,22 +390,18 @@ The application is deployed to Vercel, hosting the frontend and serverless funct
 
 ## 🔐 Environment Variables
 
-Environment variables manage all sensitive configurations and secrets of the application in a secure, scalable, and maintainable way.
+Environment variables manage all sensitive configurations and secrets of the application in a secure, scalable, and maintainable way.  
 
-**Sources of environment variables**:
-- **Local `.env` file** (`DATABASE_URL`, `SUPABASE_ANON_KEY`)  
+Sources of environment variables:  
+- **📝 Local `.env` file** (`DATABASE_URL`, `SUPABASE_ANON_KEY`)  
   - Used during development  
   - Excluded from version control via `.gitignore`
-- **Vercel Environment Variables**  
-  - Centralized management for production deployments  
+- **☁️ Vercel Environment Variables** (`DATABASE_URL`, `SUPABASE_ANON_KEY`)  
+  - Used for production deployments  
   - Injected automatically during deployment
-- **GitHub Actions secrets**  
-  - Used in CI/CD workflows (e.g., `VERCEL_TOKEN`, `SUPABASE_KEY`)  
-  - Not exposed in the client-side bundle  
-
-**Security guarantees**:
-- Sensitive variables are never exposed to the browser  
-- Access is limited to the runtime environment (Vercel or CI/CD)  
+- **🔒 GitHub Actions Secrets**  
+  - Used in CI/CD pipeline (`VERCEL_TOKEN`)  
+  - Not exposed to the client-side  
 
 <br>
 
