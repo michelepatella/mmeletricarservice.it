@@ -60,7 +60,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 | 🔄 Fetching & Caching    | React Query                             |
 | ⚙️ API Communication     | Serverless API (Vercel Functions)       |
 | ☁️ Backend-as-a-Service  | Supabase (PostgreSQL, Storage)          |
-| 🔐 Environment Variables | .env, Vercel Dashboard                  |
+| 🔐 Environment Variables | .env, Vercel Dashboard, GitHub Secrets  |
 | 🧪 Testing               | Jest, React Testing Library             |
 | 🧹 Code Quality          | ESLint, Prettier                        |
 | 📦 Deployment & CI/CD    | Vercel, GitHub                          |
