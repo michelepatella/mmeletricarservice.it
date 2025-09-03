@@ -203,7 +203,7 @@ This project follows the best practices of software engineering:
 
 The system is built on a **Jamstack architecture** shown below:
 
-<img width="500" height="800" alt="image" src="https://github.com/user-attachments/assets/12749716-971e-41ff-a924-6f5d0d78fec7" />
+<img width="510" height="724" alt="image" src="https://github.com/user-attachments/assets/1b4d45ea-a60e-4c9a-8e45-011ec04bb873" />
 
 <br>
 <br>
@@ -395,7 +395,8 @@ It is responsible for:
 <details>
 <summary><strong>Database Schema</strong></summary>
 <br>
-<img width="568" height="606" alt="image" src="https://github.com/user-attachments/assets/b3dc98dd-f9ac-4756-bf9c-017f9fbb9437" />
+<img width="557" height="608" alt="image" src="https://github.com/user-attachments/assets/d6ca57c2-d858-430f-99e3-b59570cae5a1" />
+
 </details>
   
 <br>
