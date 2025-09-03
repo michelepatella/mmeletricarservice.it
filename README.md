@@ -400,44 +400,42 @@ The project uses a fully automated pipeline to validate, build, and deploy the a
 
 <br>
 
+**🧪 Continuous Integration (CI)**  
+Runs on every push, and pull request to `main`:
+
+> 1. Install dependencies
+> 2. Run linting and Prettier checks
+> 3. Run automated tests
+> 4. Build the project
+
+**🚀 Continuous Deployment (CD)**  
+Triggered after successful CI:
+
+> 1. Install dependencies
+> 2. Build the project
+> 3. Deploy to Vercel
+
+<br>
+
+The application is deployed to Vercel, hosting the frontend and serverless functions.
+
+---
+
 <details>
-<summary><strong>🧪 Continuous Integration (CI)</strong></summary>
+<summary>📦 <strong>Deployment Features</strong></summary>
 
 <br>
-
-> Runs on every push, and pull request to `main`:
->
-> - Install dependencies
-> - Run linting and Prettier checks
-> - Run automated tests
-> - Build the project
+  
+> - Domain management
+> - Preview deployments for all branches and pull requests
+> - Versioned deployments with easy rollback to previous stable releases
+> - Management of environment variables
+> - Automatic caching of static content and serverless responses at the edge
+> - Automatic scaling with traffic demand
+> - Security features including firewall
+> - Logs monitoring
+> - Integrated analytics
 </details>
-
-<details>
-<summary><strong>🚀 Continuous Deployment (CD)</strong></summary>
-
-<br>
-
-> Triggered after successful CI:
->
-> - Install dependencies
-> - Build the project
-> - Deploy to Vercel
-</details>
-
-<br>
-
-The application is deployed to Vercel, hosting the frontend and serverless functions, with features including:
-
-- Domain management
-- Preview deployments for all branches and pull requests
-- Versioned deployments with easy rollback to previous stable releases
-- Management of environment variables
-- Automatic caching of static content and serverless responses at the edge
-- Automatic scaling with traffic demand
-- Security features including firewall
-- Logs monitoring
-- Integrated analytics
 
 <br>
 
@@ -447,15 +445,34 @@ Environment variables manage all sensitive configurations and secrets of the app
 
 Sources of environment variables:
 
-- **📝 Local `.env` file** (`DATABASE_URL`, `SUPABASE_ANON_KEY`)
-  - Used during development
-  - Excluded from version control via `.gitignore`
-- **☁️ Vercel Environment Variables** (`DATABASE_URL`, `SUPABASE_ANON_KEY`)
-  - Used for production deployments
-  - Injected automatically during deployment
-- **🔒 GitHub Actions Secrets**
-  - Used in CI/CD pipeline (`VERCEL_TOKEN`)
-  - Not exposed to the client-side
+<details>
+<summary><strong>📝 Local .env file</strong>  
+  
+Used during development and excluded from version control via `.gitignore`.
+</summary>
+
+> - `DATABASE_URL`
+> - `SUPABASE_ANON_KEY`
+</details>
+
+<details>
+<summary><strong>☁️ Vercel Environment Variables</strong>
+
+Used for production deployments.
+</summary>
+
+> - `DATABASE_URL`
+> - `SUPABASE_ANON_KEY`
+</details>
+
+<details>
+<summary><strong>🔒 GitHub Actions Secrets</strong>
+
+Used in CI/CD pipeline.
+</summary>
+
+> - `VERCEL_TOKEN`
+</details>
 
 <br>
 
@@ -463,7 +480,7 @@ Sources of environment variables:
 
 The application implements search engine optimization to improve discoverability and ranking, and analytics to monitor user engagement and performance, without compromising user privacy.
 
-**📈 SEO features** include:
+📈 **SEO features** includes:
 
 - Clean, human-readable URLs
 - Keyword-optimized content
@@ -471,22 +488,32 @@ The application implements search engine optimization to improve discoverability
 - Embedded Google Maps for local SEO targeting
 - Favicon and consistent branding
 
-**📊 Analytics features** (via Vercel Analytics) include:
+📊 **Analytics features** (via Vercel Analytics)
 
-- Actionable insights to optimize UX and app performance:
-  - Visitors (total number of application's visitors)
-  - Page views (total number of pages viewed)
-  - Bounce rate (% of visitors who leave after viewing only one page)
-  - Pages (specific pages viewed)
-  - Routes (specific referrers viewed)
-  - Referrers (sources that referreed users to the application)
-  - UTM parameters (campaign tracking information from URLs)
-  - Countries (geographic locations of the visitors)
-  - Devices (types of devices used to access the application)
-  - Browsers (web browsers used by the visitors)
-  - Operating systems (operating system of the devices accessing the application)
+- Actionable insights to optimize UX and app performance  
 - Privacy-friendly, cookie-free solution
 
+---
+
+<details>
+<summary>📊 <strong>Analytics Metrics</strong></summary>
+
+<br>
+
+> - Visitors (total number of application's visitors)  
+> - Page views (total number of pages viewed)  
+> - Bounce rate (% of visitors who leave after viewing only one page)  
+> - Pages (specific pages viewed)  
+> - Routes (specific referrers viewed)  
+> - Referrers (sources that referred users to the application)  
+> - UTM parameters (campaign tracking information from URLs)  
+> - Countries (geographic locations of the visitors)  
+> - Devices (types of devices used to access the application)  
+> - Browsers (web browsers used by the visitors)  
+> - Operating systems (operating system of the devices accessing the application)  
+> - Privacy-friendly, cookie-free solution
+
+</details>
 <br>
 
 ## 📈 Metrics
