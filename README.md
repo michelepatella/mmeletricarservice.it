@@ -249,7 +249,7 @@ They are responsible for:
 
 ---
 
-**🔗 Endpoints**
+**🔗 APIs**
 
 <details>
 <summary><strong>Get Used Cars Overview</strong></summary>
