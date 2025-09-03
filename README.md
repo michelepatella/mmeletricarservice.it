@@ -395,7 +395,7 @@ It is responsible for:
 <details>
 <summary><strong>Database Schema</strong></summary>
 <br>
-<img width="557" height="608" alt="image" src="https://github.com/user-attachments/assets/d6ca57c2-d858-430f-99e3-b59570cae5a1" />
+<img width="607" height="658" alt="image" src="https://github.com/user-attachments/assets/d6ca57c2-d858-430f-99e3-b59570cae5a1" />
 
 </details>
   
@@ -405,8 +405,6 @@ It is responsible for:
 ## 📦 Deployment & CI/CD
 
 The project uses a fully automated pipeline to validate, build, and deploy the application.
-
-<br>
 
 **🧪 Continuous Integration (CI)**  
 Runs on every push, and pull request to `main`:
@@ -422,8 +420,6 @@ Triggered after successful CI:
 > 1. Install dependencies
 > 2. Build the project
 > 3. Deploy to Vercel
-
-<br>
 
 The application is deployed to Vercel, hosting the frontend and serverless functions.
 
@@ -456,7 +452,7 @@ Sources of environment variables:
 <details>
 <summary><strong>📝 Local .env file</strong>  
   
-Used during development and excluded from version control via `.gitignore`.
+Used in development and ignored by version control.
 </summary>
 
 > - `DATABASE_URL`
