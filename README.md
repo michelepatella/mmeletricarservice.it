@@ -376,11 +376,12 @@ It provides the backend infrastructure of the application, leveraging Supabase a
 It combines a PostgreSQL relational database and a Storage bucket in a scalable environment.
 
 🛡️ **Responsibility**  
-It is responsible for:  
+It is responsible for:
+
 - Data management
-  - Managing relational data in a PostgreSQL database  
-  - Optimizing query performance with indexes on `id` fields  
-  - Enforcing data integrity with foreign key relationships and constraints (`NOT NULL`, `CHECK`)  
+  - Managing relational data in a PostgreSQL database
+  - Optimizing query performance with indexes on `id` fields
+  - Enforcing data integrity with foreign key relationships and constraints (`NOT NULL`, `CHECK`)
   - Ensuring consistency by handling cascading deletes with `ON DELETE CASCADE`
 - Storage
   - Storing and serving all used car images in Supabase Storage
@@ -457,25 +458,30 @@ Used in development and ignored by version control.
 
 > - `DATABASE_URL`
 > - `SUPABASE_ANON_KEY`
+
 </details>
 
 <details>
 <summary><strong>☁️ Vercel Environment Variables</strong>
 
 Used for production deployments.
+
 </summary>
 
 > - `DATABASE_URL`
 > - `SUPABASE_ANON_KEY`
+
 </details>
 
 <details>
 <summary><strong>🔒 GitHub Actions Secrets</strong>
 
 Used in CI/CD pipeline.
+
 </summary>
 
 > - `VERCEL_TOKEN`
+
 </details>
 
 <br>
@@ -494,7 +500,7 @@ The application implements search engine optimization to improve discoverability
 
 📊 **Analytics features** (via Vercel Analytics)
 
-- Actionable insights to optimize UX and app performance  
+- Actionable insights to optimize UX and app performance
 - Privacy-friendly, cookie-free solution
 
 ---
@@ -504,17 +510,17 @@ The application implements search engine optimization to improve discoverability
 
 <br>
 
-> - Visitors (total number of application's visitors)  
-> - Page views (total number of pages viewed)  
-> - Bounce rate (% of visitors who leave after viewing only one page)  
-> - Pages (specific pages viewed)  
-> - Routes (specific referrers viewed)  
-> - Referrers (sources that referred users to the application)  
-> - UTM parameters (campaign tracking information from URLs)  
-> - Countries (geographic locations of the visitors)  
-> - Devices (types of devices used to access the application)  
-> - Browsers (web browsers used by the visitors)  
-> - Operating systems (operating system of the devices accessing the application)  
+> - Visitors (total number of application's visitors)
+> - Page views (total number of pages viewed)
+> - Bounce rate (% of visitors who leave after viewing only one page)
+> - Pages (specific pages viewed)
+> - Routes (specific referrers viewed)
+> - Referrers (sources that referred users to the application)
+> - UTM parameters (campaign tracking information from URLs)
+> - Countries (geographic locations of the visitors)
+> - Devices (types of devices used to access the application)
+> - Browsers (web browsers used by the visitors)
+> - Operating systems (operating system of the devices accessing the application)
 > - Privacy-friendly, cookie-free solution
 
 </details>
@@ -575,22 +581,26 @@ The application implements search engine optimization to improve discoverability
 The platform demonstrates how thoughtful design and technology can directly improve customer experience and business performance.
 
 💻 **Operational Efficiency**
-> Easy access to information.  
-> Reduced support workload.  
-  
-🏙️ **Local Business Impact**  
-> Increased visibility.  
-> Local business stands out.  
 
-💡 **Informed Decisions**    
+> Easy access to information.  
+> Reduced support workload.
+
+🏙️ **Local Business Impact**
+
+> Increased visibility.  
+> Local business stands out.
+
+💡 **Informed Decisions**
+
 > Clear information.  
 > Informed decisions.  
-> Increased trust.  
+> Increased trust.
 
-📊 **Data Insights**  
+📊 **Data Insights**
+
 > Customer insights.  
 >  Understanding behavior.  
->  Optimized inventory.  
+>  Optimized inventory.
 
 <br>
 
