@@ -63,7 +63,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 | 🔐 Environment Variables | .env, Vercel Dashboard, GitHub Secrets  |
 | 🧪 Testing               | Jest, React Testing Library             |
 | 🧹 Code Quality          | ESLint, Prettier                        |
-| 📦 Deployment & CI/CD    | Vercel, GitHub                          |
+| 📦 Deployment & CI/CD    | Vercel, GitHub Actions                  |
 | 🔍 SEO                   | Clean URLs, HTTPS, Meta Tags, Local SEO |
 | 📊 Monitoring            | Vercel Logs, Error Tracking             |
 | 📈 Analytics             | Vercel Analytics                        |
