@@ -51,22 +51,22 @@ The web application is available at https://mmeletricarservice.it 🌐
 
 | Layer                    | Technology                                                 |
 | ------------------------ | ---------------------------------------------------------- |
-| ⚛️ Frontend              | React.js                                                   |
-| 🖌️ UI Library            | Ant Design                                                 |
-| 🎨 Styling               | CSS, Custom Design Tokens                                  |
-| 🌀 Animations            | CSS, Framer Motion                                         |
-| 🧭 Routing               | React Router (HashRouter)                                  |
-| 🧩 State Management      | React Hooks, Custom Hooks                                  |
-| 🔄 Fetching & Caching    | React Query                                                |
-| ⚙️ API Communication     | Serverless API (Vercel Functions)                          |
-| ☁️ Backend-as-a-Service  | Supabase (PostgreSQL, Storage)                             |
-| 🔐 Environment Variables | .env, Vercel Environment Variables, GitHub Action Secrets  |
-| 🧪 Testing               | Jest, React Testing Library                                |
-| 🧹 Code Quality          | ESLint, Prettier                                           |
-| 📦 Deployment & CI/CD    | Vercel, GitHub Actions                                     |
-| 🔍 SEO                   | Clean URLs, HTTPS, Meta Tags, Local SEO                    |
-| 📊 Monitoring            | Vercel Logs, Error Tracking                                |
-| 📈 Analytics             | Vercel Analytics                                           |
+| **Frontend**             | React.js                                                   |
+| **UI Library**           | Ant Design                                                 |
+| **Styling**              | CSS, Custom Design Tokens                                  |
+| **Animations**           | CSS, Framer Motion                                         |
+| **Routing**              | React Router (HashRouter)                                  |
+| **State Management**     | React Hooks, Custom Hooks                                  |
+| **Fetching & Caching**   | React Query                                                |
+| **API Communication**    | Serverless API (Vercel Functions)                          |
+| **Backend-as-a-Service** | Supabase (PostgreSQL, Storage)                             |
+| **Environment Variables**| .env, Vercel Environment Variables, GitHub Action Secrets  |
+| **Testing**              | Jest, React Testing Library                                |
+| **Code Quality**         | ESLint, Prettier                                           |
+| **Deployment & CI/CD**   | Vercel, GitHub Actions                                     |
+| **SEO**                  | Clean URLs, HTTPS, Meta Tags, Local SEO                    |
+| **Monitoring**           | Vercel Logs, Error Tracking                                |
+| **Analytics**            | Vercel Analytics                                           |
 
 <br>
 
