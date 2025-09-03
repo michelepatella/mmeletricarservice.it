@@ -364,33 +364,35 @@ They are responsible for:
 
 ### ☁️ Backend / BaaS
 
-The backend architecture levarages Supabase as a Backend-as-a-Service platform, combining PostgreSQL database and Storage bucket in a scalable environment.
+🎯 **Role**  
+It provides the backend infrastructure of the application, leveraging Supabase as a Backend-as-a-Service (BaaS) platform.  
+It combines a PostgreSQL relational database and a Storage bucket in a scalable environment.
 
-💿 **Data Layer**
-
-- Relational database
-- Index created on the `id` fields to optimize query performance
-- Foreign key relationships established among tables to maintain data integrity
-- `ON DELETE CASCADE` to ensure the proper handling of related data when records are deleted
-- Attributes governed by contraints to enforce rules for data quality and consistency (`NOT NULL`, `CHECK`)
-
-🖼️ **Storage**
-
-- All used car images are stored in Supabase buckets with public access policies
-- Folder naming follows a strict convention (id of the used car) to allow deterministic fetching
-
-🔐 **Row-Level Security (RLS)**
-
-- RLS policies restrict accesses
-- Insert/update/delete operations are blocked client-side and managed exclusively through admin interfaces
-- Policies are written in SQL to robust protection
+🛡️ **Responsibility**  
+It is responsible for:  
+- Data management
+  - Managing relational data in a PostgreSQL database  
+  - Optimizing query performance with indexes on `id` fields  
+  - Enforcing data integrity with foreign key relationships and constraints (`NOT NULL`, `CHECK`)  
+  - Ensuring consistency by handling cascading deletes with `ON DELETE CASCADE`
+- Storage
+  - Storing and serving all used car images in Supabase Storage
+  - Organizing folders with deterministic naming
+- Security
+  - Enforcing Row-Level Security (RLS) to restrict access at row level
+  - Blocking insert/update/delete operations client-side
+  - Defining fine-grained access rules through SQL-based policies
 
 <br>
 
-**Schema**:
+---
 
-<img width="863" alt="image" src="https://github.com/user-attachments/assets/d24ccc16-5b29-4b38-b0b5-695cc110c280" />
-
+<details>
+<summary><strong>🗄️ Database Schema</strong></summary>
+<br>
+<img width="568" height="606" alt="image" src="https://github.com/user-attachments/assets/b3dc98dd-f9ac-4756-bf9c-017f9fbb9437" />
+</details>
+  
 <br>
 <br>
 
