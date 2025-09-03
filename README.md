@@ -252,7 +252,7 @@ They are responsible for:
 **🔗 APIs**
 
 <details>
-<summary><strong>Get Used Cars Overview</strong></summary>
+<summary><strong>Used Cars Overview</strong></summary>
  
 <br>
    
@@ -300,7 +300,7 @@ They are responsible for:
 </details>
 
 <details>
-<summary><strong>Get Used Car Information</strong></summary>
+<summary><strong>Used Car Information</strong></summary>
 
 <br>
   
