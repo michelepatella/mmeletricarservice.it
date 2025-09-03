@@ -407,30 +407,29 @@ Sources of environment variables:
 
 ## 🔍 SEO & Analytics
 
-Search engine optimization has been implemented to ensure the web application is discoverable and ranks well for relevant queries.
+The application implements search engine optimization to improve discoverability and ranking, and analytics to monitor user engagement and performance, without compromising user privacy.
 
-- **Clean URLs**: Localized, human-readable URLs enhance both user experience and search relevance
-- **Keyword-Optimized Content**: Text content has been carefully crafted with relevant keywords to improve rankings
-- **HTTPS**: The entire application runs over a secure HTTPS connection
-- **Google Maps Integration**: Embedded Google Maps via `<iframe>` supports local SEO targeting
-- **Favicon and Branding**: A custom favicon and consistent branding improve recognizability in search results and browser tabs
+**SEO features** include:  
+- Clean, human-readable URLs
+- Keyword-optimized content
+- HTTPS for secure connections
+- Embedded Google Maps for local SEO targeting
+- Favicon and consistent branding
 
-Vercel Analytics is used to monitor and optimize the UX and app performance. It offers valuable insights into the real-world usage of the app, including key metrics such as:
-
-- Visitors
-- Page Views
-- Bounce Rate
-- Countries
-- Devices
-- Browsers
-- Operating Systems
-- Pages
-- Routes
-- Hostname
-- Referrers
-- UTM Parameters
-
-Vercel Analytics provides a privacy-friendly and cookie-free solution, ensuring compliance with privacy regulations while delivering essential insights into the app's performance and user engagement. This approach ensures that the application can continuously improve based on real, actionable data, without compromising user privacy.
+**Analytics features** (via Vercel Analytics) include:  
+- Actionable insights to optimize UX and app performance:
+  - Visitors (total number of application's visitors)
+  - Page views (total number of pages viewed)
+  - Bounce rate (% of visitors who leave after viewing only one page)
+  - Pages (specific pages viewed)
+  - Routes (specific referrers viewed)
+  - Referrers (sources that referreed users to the application)
+  - UTM parameters (campaign tracking information from URLs)
+  - Countries (geographic locations of the visitors)
+  - Devices (types of devices used to access the application)
+  - Browsers (web browsers used by the visitors)
+  - Operating systems (operating system of the devices accessing the application)
+- Privacy-friendly, cookie-free solution
 
 <br>
 
