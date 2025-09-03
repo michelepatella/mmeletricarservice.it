@@ -349,7 +349,7 @@ They are responsible for:
 >      "internal_color": "Black",
 >      "internal_material": "Fabric",
 >      "images": [
->        "https://..."
+>        "https://...",
 >        ...
 >      ]
 >    }
