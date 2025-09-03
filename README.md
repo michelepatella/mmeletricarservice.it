@@ -1,4 +1,4 @@
-# 🌐 [mmeletricarservice.it](https://mmeletricarservice.it)
+# [mmeletricarservice.it](https://mmeletricarservice.it)
 
 ### 📚 Table of Content
 
@@ -21,29 +21,24 @@
 
 ## 👁️ Overview
 
-📌 **What**
-
+📌 **What**  
 A production-ready, full-stack web application developed for MM Eletricar Service, an Italian car workshop and used car dealership.
 <br>
-
-❓ **Why**
-
+<br>
+❓ **Why**  
 To enhance the company's digital presence and give customers clear, accessible information for confident decision-making.
 <br>
-
-👤 **Who**
-
+<br>
+👤 **Who**  
 Designed for customers exploring company details, services, and used vehicles.
 <br>
-
-📅 **When**
-
+<br>
+📅 **When**  
 Launched in February 2025.
 <br>
-
-🌎 **Where**
-
-The web application is available at https://mmeletricarservice.it 🌐
+<br>
+🌎 **Where**  
+The web application is available at https://mmeletricarservice.it
 
 <br>
 
@@ -75,103 +70,123 @@ The web application is available at https://mmeletricarservice.it 🌐
 This project follows the best practices of software engineering:
 
 <details>
-<summary>🧠 <strong>Abstraction</strong></summary>
+<summary><strong>Abstraction</strong></summary>
 
-- Business logic abstracted via hooks and functions
-- Reusable component library supports consistent UI patterns
-- Centralized configuration
+<br>
 
-</details>
-
-<details>
-<summary>🔄 <strong>Change Readiness</strong></summary>
-
-- Environment variables and settings externalized for flexibility
-- CI/CD pipeline ensure safe, repeatable updates
+> - Business logic abstracted via hooks and functions
+> - Reusable component library supports consistent UI patterns
+> - Centralized configuration
 
 </details>
 
 <details>
-<summary>🛠️ <strong>Maintainability</strong></summary>
+<summary><strong>Change Readiness</strong></summary>
 
-- Clean and consistent codebase
-- ESLint and Prettier for formatting
-- Well-documented code with meaningful names and docstrings
-- Centralized constants and links (`const.js` and `links.js`) for easier updates
-- Use of centralized CSS variables
-- Tests colocated with components for better traceability
+<br>
+
+> - Environment variables and settings externalized for flexibility
+> - CI/CD pipeline ensure safe, repeatable updates
 
 </details>
 
 <details>
-<summary>🧱 <strong>Modularity</strong></summary>
+<summary><strong>Maintainability</strong></summary>
 
-- Components follow the Single Responsibility Principle
-- Clear separation between UI, business logic, and styling
-- Logic encapsulated via custom hooks and shared utility functions
-- Sections are structured as atomic, composable components
+<br>
 
-</details>
-
-<details>
-<summary>⚡️ <strong>Performance & Efficiency</strong></summary>
-
-- Lazy loading
-- Modern image format (AVIF)
-- Optimized for Lighthouse metrics
-- Session caching of used car data
-- React Query for efficient data fetching and caching
+> - Clean and consistent codebase
+> - ESLint and Prettier for formatting
+> - Well-documented code with meaningful names and docstrings
+> - Centralized constants and links (`const.js` and `links.js`) for easier updates
+> - Use of centralized CSS variables
+> - Tests colocated with components for better traceability
 
 </details>
 
 <details>
-<summary>✅ <strong>Reliability & Robustness</strong></summary>
+<summary><strong>Modularity</strong></summary>
 
-- Error handling for API and UI (try-catch, logging, and Vercel monitoring)
-- Loading states and fallback UIs improve resilience
-- Automated tests with Jest and React Testing Library
-- Data integrity ensured via database constraints, foreign keys, and Row-Level Security policies
+<br>
+
+> - Components follow the Single Responsibility Principle
+> - Clear separation between UI, business logic, and styling
+> - Logic encapsulated via custom hooks and shared utility functions
+> - Sections are structured as atomic, composable components
 
 </details>
 
 <details>
-<summary>♻️ <strong>Reusability</strong></summary>
+<summary><strong>Performance & Efficiency</strong></summary>
 
-- Common components reused across multiple pages
-- DRY (Don't Repeat Yourself) principles followed across logic and styles
+<br>
+
+> - Lazy loading
+> - Modern image format (AVIF)
+> - Optimized for Lighthouse metrics
+> - Session caching of used car data
+> - React Query for efficient data fetching and caching
+
+</details>
+
+<details>
+<summary><strong>Reliability & Robustness</strong></summary>
+
+<br>
+
+> - Error handling for API and UI (try-catch, logging, and Vercel monitoring)
+> - Loading states and fallback UIs improve resilience
+> - Automated tests with Jest and React Testing Library
+> - Data integrity ensured via database constraints, foreign keys, and Row-Level Security policies
+
+</details>
+
+<details>
+<summary><strong>Reusability</strong></summary>
+
+<br>
+
+> - Common components reused across multiple pages
+> - DRY (Don't Repeat Yourself) principles followed across logic and styles
 
 </details>
   
 <details>
-<summary>🚀 <strong>Scalability</strong></summary>
+<summary><strong>Scalability</strong></summary>
 
-- Backend powered by Supabase (PostgreSQL), allowing seamless scaling
-- Indexes created to optimize data retrieval
-- Vercel's serverless functions scale automatically with demand, including a caching system
-- Fetching and caching handled with React Query
-- Scalable CI/CD pipeline
+<br>
 
-</details>
-
-<details>
-<summary>🔐 <strong>Security & Compliance</strong></summary>
-
-- GDPR compliance: cookie consent, legal/privacy notes
-- Safe handling of third-party cookies
-- No sensitive data exposed client-side
-- Row-Level Security policies on Supabase
+> - Backend powered by Supabase (PostgreSQL), allowing seamless scaling
+> - Indexes created to optimize data retrieval
+> - Vercel's serverless functions scale automatically with demand, including a caching system
+> - Fetching and caching handled with React Query
+> - Scalable CI/CD pipeline
 
 </details>
 
 <details>
-<summary>👤 <strong>Usability</strong></summary>
+<summary><strong>Security & Compliance</strong></summary>
 
-- Clean, intuitive, and consistent UI aligned with branding
-- Accessibility best practices
-- Responsive navigation (anchor menu on desktop, drawer on mobile)
-- Fast feedback to user actions
-- Mobile-first design, tested on 20+ devices and viewports
-- Clear visual hierarchy to reduce cognitive load
+<br>
+
+> - GDPR compliance: cookie consent, legal/privacy notes
+> - Safe handling of third-party cookies
+> - No sensitive data exposed client-side
+> - Row-Level Security policies on Supabase
+
+</details>
+
+<details>
+<summary><strong>Usability</strong></summary>
+
+<br>
+
+> - Clean, intuitive, and consistent UI aligned with branding
+> - Accessibility best practices
+> - Responsive navigation (anchor menu on desktop, drawer on mobile)
+> - Fast feedback to user actions
+> - Mobile-first design, tested on 20+ devices and viewports
+> - Clear visual hierarchy to reduce cognitive load
 
 </details>
 
@@ -193,7 +208,7 @@ It represents the UI of the application, developed as a Single-Page Application.
 It represents the frontend of the system: everything the user sees and interacts with.
 
 🛡️ **Responsibility**  
-It's responsible for:
+It is responsible for:
 
 - UI rendering (through _React Components_)
 - User interactions management
@@ -208,7 +223,7 @@ It serves as the dedicated layer to manage all data fetching and caching in the 
 It ensures efficient, reliable, and up-to-date data delivery.
 
 🛡️ **Responsibility**  
-It's responsible for:
+It is responsible for:
 
 - Data fetching using `useQuery`, custom logic and hooks
 - Cache-first retrieval using `STALE_TIME` to minimize unnecessary network requests
@@ -219,111 +234,129 @@ It's responsible for:
 
 ### ⚙️ Serverless Functions
 
-The API endpoints are implemented as Serverless Functions, hosted on Vercel, and accessed through a centralized fecther utility. This architecture allows for modular, scalable, and stateless backend logic with minimal overhead.
+🎯 **Role**  
+They implement the API endpoints of the application.  
+They provide modular, scalable, and stateless backend logic with minimal overhead.
 
-#### 1. Get used cars overview
+🛡️ **Responsibility**  
+They are responsible for:
 
-- **Description**: Returns an array of used car overviews with the first available image for each car.
-- **URL**: `/api/usedCarsOverview`
-- **Method**: `GET`
-- **Query Params**: `None`
-- **Response**: `JSON`
+- Handling requests in a stateless manner
+- Retrieving data from backend including:
+  - Used cars overview information
+  - Detailed information for a specific used car
+- Centralizing access to backend
+---
+**🔗 Endpoints**
+<details>
+<summary><strong>Get Used Cars Overview</strong></summary>
+ 
+<br>
+   
+> - **Description**: Returns an array of used car overview information for each available car, including relevant technical specifications and a presentation image.
+> - **URL**: `/api/usedCarsOverview`
+> - **Method**: `GET`
+> - **Query Params**: `None`
+> - **Response**: `JSON`
+> 
+> <br>
+> 
+> | Field     | Type    | Description                                              |
+> | --------- | ------- | ---------------------------------------------------------|
+> | `id`      | Integer | Unique identifier of the used car.                       |
+> | `name`    | String  | Name or model of the used car.                           |
+> | `price`   | Float   | Displayed price in €.                                    |
+> | `year`    | Integer | Year of registration or manufacturing.                   |
+> | `mileage` | Integer | Kilometers driven.                                       |
+> | `fuel`    | String  | Type of fuel.                                            |
+> | `status`  | String  | Overall condition.                                       |
+> | `image`   | String  | Public URL of the first (presentation) image of the car. |
+> 
+> <br>
+> 
+> Response example:
+> 
+> <pre>
+>   {
+>   "used_cars_overview": [
+>     {
+>       "id": 1,
+>       "name": "Fiat Panda",
+>       "price": 7199.99,
+>       "year": 2015,
+>       "mileage": 80000,
+>       "fuel": "Diesel",
+>       "status": "Excellent",
+>       "image": "https://..."
+>     },
+>     ...
+>   ]
+> }
+> </pre>
+
+</details>
+
+<details>
+<summary><strong>Get Used Car Information</strong></summary>
 
 <br>
-
-| Field     | Type    | Description                                          |
-| --------- | ------- | ---------------------------------------------------- |
-| `id`      | Integer | Unique identifier of the used car.                   |
-| `name`    | String  | Name or model of the used car.                       |
-| `price`   | Float   | Displayed price in euros.                            |
-| `year`    | Integer | Year of registration or manufacturing.               |
-| `mileage` | Integer | Kilometers driven.                                   |
-| `fuel`    | String  | Type of fuel.                                        |
-| `status`  | String  | Overall condition.                                   |
-| `image`   | String  | Public URL of the first (overview) image of the car. |
-
-<br>
-
-Response example:
-
-<pre>
-  {
-  "used_cars_overview": [
-    {
-      "id": 1,
-      "name": "Fiat Panda",
-      "price": 7200,
-      "year": 2015,
-      "mileage": 80000,
-      "fuel": "Diesel",
-      "status": "Ottimo",
-      "image": "https://..."
-    },
-    ...
-  ]
-}
-</pre>
-
-<br>
-
-#### 2. Get used car info
-
-- **Description**: Returns complete details for a specific used car, including technical specifications and all associated images.
-- **URL**: `/api/usedCarInfo`
-- **Method**: `GET`
-- **Query Params**: `id` (of the requested used car)
-- **Response**: `JSON`
-
-<br>
-
-| Field                 | Type             | Description                             |
-| --------------------- | ---------------- | --------------------------------------- |
-| `id`                  | Integer          | Unique identifier of the used car.      |
-| `engine_displacement` | Integer          | Engine size in liters.                  |
-| `cylinders`           | Integer          | Number of engine cylinders.             |
-| `power`               | Integer          | Engine power in CV.                     |
-| `transmission`        | String           | Type of transmission.                   |
-| `consumption`         | String           | Fuel consumption in L/100km (min-max).  |
-| `emission_class`      | String           | Emission standard.                      |
-| `emissions`           | String           | CO₂ emissions in g/km (min-max).        |
-| `doors`               | Integer          | Number of doors.                        |
-| `bodywork`            | String           | Body type.                              |
-| `external_color`      | String           | Exterior color of the car.              |
-| `internal_color`      | String           | Interior color scheme.                  |
-| `internal_material`   | String           | Interior material.                      |
-| `seats`               | Integer          | Number of seats.                        |
-| `images`              | Array of Strings | List of public image URLs for this car. |
-
-<br>
-
-<pre>
-  {
-  "used_car_info": [
-    {
-      "id": 1,
-      "engine_displacement": 1200,
-      "cylinders": 4,
-      "power": 69,
-      "transmission": "Manuale (5)",
-      "consumption": "5,5-6,0",
-      "emission_class": "Euro 6",
-      "emissions": "127-137",
-      "doors": 5,
-      "bodywork": "Utilitaria",
-      "external_color": "Rosso",
-      "internal_color": "Grigio/Rosso",
-      "internal_material": "Tessuto",
-      "seats": 5,
-      "images": [
-        "https://..."
-        ...
-      ]
-    },
-    ...
-  ]
-}
-</pre>
-
+  
+> - **Description**: Returns all details for a specific used car, including technical specifications and images.
+> - **URL**: `/api/usedCarInfo`
+> - **Method**: `GET`
+> - **Query Params**: `id` (ID of the requested used car)
+> - **Response**: `JSON`
+> 
+> <br>
+> 
+> | Field                 | Type             | Description                                   |
+> | --------------------- | ---------------- | ----------------------------------------------|
+> | `id`                  | Integer          | Unique identifier of the used car.            |
+> | `power`               | Integer          | Engine power in CV (horsepower).              |
+> | `engine_displacement` | Integer          | Engine displacement in cc (cubic centimeters).|
+> | `cylinders`           | Integer          | Number of engine cylinders.                   |
+> | `transmission`        | String           | Type of transmission.                         |
+> | `consumption`         | String           | Fuel consumption in L/100km (min-max).        |
+> | `emissions`           | String           | CO₂ emissions in g/km (min-max).              |
+> | `emission_class`      | String           | Emission standard.                            |
+> | `bodywork`            | String           | Body type.                                    |
+> | `doors`               | Integer          | Number of doors.                              |
+> | `external_color`      | String           | Exterior color of the car.                    |
+> | `seats`               | Integer          | Number of seats.                              |
+> | `internal_color`      | String           | Interior color scheme.                        |
+> | `internal_material`   | String           | Interior material.                            |
+> | `images`              | Array of Strings | List of public image URLs for this car.       |
+> 
+> <br>
+> 
+> Response example:
+>
+> <pre>
+>   {
+>   "used_car_info": {
+>      "id": 1,
+>      "power": 69,
+>      "engine_displacement": 1200,
+>      "cylinders": 4,
+>      "transmission": "Manual (5)",
+>      "consumption": "5,5-6,0",
+>      "emissions": "127-137",
+>      "emission_class": "Euro 6",
+>      "bodywork": "City car",
+>      "doors": 5,
+>      "external_color": "Red",
+>      "seats": 5,
+>      "internal_color": "Black",
+>      "internal_material": "Fabric",
+>      "images": [
+>        "https://..."
+>        ...
+>      ]
+>    }
+> }
+> </pre>
+</details>
+  
 <br>
 
 ### ☁️ Backend / BaaS
@@ -487,20 +520,19 @@ The application implements search engine optimization to improve discoverability
 
 The platform demonstrates how thoughtful design and technology can directly improve customer experience and business performance.
 
-### 💻 Enhanced Operational Efficiency
-
+💻 **Enhanced Operational Efficiency**  
 Customers can easily explore services, access company information, and browse used cars with detailed specifications, reducing customer support workload while providing accurate, timely information.
-
-### 🏙️ Support for Local Businesses
-
+<br>
+<br>
+🏙️ **Support for Local Businesses**  
 The digital platform helps the local business stand out, boosting visibility, and supporting economic growth.
-
-### 💡 Empowerment Through Information
-
+<br>
+<br>
+💡**Empowerment Through Information**  
 Providing clear information, the platform helps customers make informed decisions, increasing confidence and trust.
-
-### 📊 Data-Driven Business Insights
-
+<br>
+<br>
+📊 **Data-Driven Business Insights**  
 The platform collects anonymized usage data useful to understand customer behavior, optimize inventory, and guide long-term strategy.
 
 <br>
