@@ -10,7 +10,7 @@
   - [🔄 Data Fetching & Caching](#-data-fetching--caching)
   - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
   - [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
-  - [📦 Deployment & CI/CD](#-deployment--cicd)
+- [📦 Deployment & CI/CD](#-deployment--cicd)
 - [🔐 Environment Variables](#-environment-variables)
 - [🔍 SEO & Analytics](#-seo--analytics)
 - [📈 Metrics](#-metrics)
@@ -60,7 +60,7 @@ The web application is available at https://mmeletricarservice.it 🌐
 | 🔄 Fetching & Caching    | React Query                             |
 | ⚙️ API Communication     | Serverless API (Vercel Functions)       |
 | ☁️ Backend-as-a-Service  | Supabase (PostgreSQL, Storage)          |
-| 🔐 Environment Variables | .env, Vercel Dashboard, GitHub Secrets  |
+| 🔐 Environment Variables | .env, Vercel, GitHub                    |
 | 🧪 Testing               | Jest, React Testing Library             |
 | 🧹 Code Quality          | ESLint, Prettier                        |
 | 📦 Deployment & CI/CD    | Vercel, GitHub Actions                  |
@@ -87,7 +87,6 @@ This project follows the best practices of software engineering:
 <summary>🔄 <strong>Change Readiness</strong></summary>
 
 - Environment variables and settings externalized for flexibility
-- Scalable deployment workflow supporting future changes
 - CI/CD pipeline ensure safe, repeatable updates
 
 </details>
@@ -99,7 +98,7 @@ This project follows the best practices of software engineering:
 - ESLint and Prettier for formatting
 - Well-documented code with meaningful names and docstrings
 - Centralized constants and links (`const.js` and `links.js`) for easier updates
-- Use of centralized CSS variables and design tokens
+- Use of centralized CSS variables
 - Tests colocated with components for better traceability
 
 </details>
@@ -150,6 +149,7 @@ This project follows the best practices of software engineering:
 - Indexes created to optimize data retrieval
 - Vercel's serverless functions scale automatically with demand, including a caching system
 - Fetching and caching handled with React Query
+- Scalable CI/CD pipeline
 
 </details>
 
@@ -172,7 +172,6 @@ This project follows the best practices of software engineering:
 - Fast feedback to user actions
 - Mobile-first design, tested on 20+ devices and viewports
 - Clear visual hierarchy to reduce cognitive load
-- SEO-optimized for discoverability
 
 </details>
 
@@ -190,7 +189,7 @@ The system is built on a **Jamstack architecture** shown below:
 ### 🌐 Client-side
 
 🎯 **Role**  
-It represents the UI of the application, developed as a Single-Page Application and deployed on Vercel.  
+It represents the UI of the application, developed as a Single-Page Application.  
 It represents the frontend of the system: everything the user sees and interacts with.
 
 🛡️ **Responsibility**  
@@ -213,8 +212,8 @@ It's responsible for:
 
 - Data fetching using `useQuery`, custom logic and hooks
 - Cache-first retrieval using `STALE_TIME` to minimize unnecessary network requests
-- Error logging when a fetch fails
 - Query deduplication to prevent simultaneous duplicate requests and reduce server load
+- Error logging when a fetch fails
 
 <br>
 
@@ -359,26 +358,32 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 <br>
 <br>
 
-### 📦 Deployment & CI/CD
+## 📦 Deployment & CI/CD
 
-🎯 **Role**  
-It provides a fully automated pipeline to build, test, and deploy the application.  
-It ensures that code changes are validated, deployed reliably, and made available to users quickly.
+The project uses a fully automated pipeline to validate, build, and deploy the application.
 
-🛡️ **Responsibility**  
-It's responsible for:
-
-- Continuous Integration (CI) on every push to `main`:
+**Continuous Integration (CI)**  
+Runs on every push, and pull request to `main`:
   - Install dependencies
   - Run linting and Prettier checks
   - Run automated tests
   - Build the project
-- Continuous Deployment (CD) triggered after successful CI:
+
+**Continuous Deployment (CD)**  
+Triggered after successful CI:
   - Install dependencies
   - Build the project
-  - Deploy to Vercel production environment (hosting the client-side and serverless functions, managing environment variables, and providing logs and analytics)
-- Creating preview deployments for all branches
-- Versioned deploys allowing easy rollback to previous stable releases
+  - Deploy to Vercel
+
+The application is deployed to Vercel, hosting the frontend and serverless functions, with features including:  
+- Domain management
+- Preview deployments for all branches and pull requests
+- Versioned deployments with easy rollback to previous stable releases
+- Management of environment variables
+- Automatic caching of static content and serverless responses at the edge
+- Security features including firewall
+- Automatic scaling with traffic demand
+- Integrated analytics 
 
 <br>
 
