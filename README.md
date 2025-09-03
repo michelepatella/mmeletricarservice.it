@@ -383,8 +383,6 @@ It is responsible for:
   - Blocking insert/update/delete operations client-side
   - Defining fine-grained access rules through SQL-based policies
 
-<br>
-
 ---
 
 <details>
@@ -400,20 +398,34 @@ It is responsible for:
 
 The project uses a fully automated pipeline to validate, build, and deploy the application.
 
-**🧪 Continuous Integration (CI)**  
-Runs on every push, and pull request to `main`:
+<br>
 
-- Install dependencies
-- Run linting and Prettier checks
-- Run automated tests
-- Build the project
+<details>
+<summary><strong>🧪 Continuous Integration (CI)</strong></summary>
 
-**🚀 Continuous Deployment (CD)**  
-Triggered after successful CI:
+<br>
 
-- Install dependencies
-- Build the project
-- Deploy to Vercel
+> Runs on every push, and pull request to `main`:
+>
+> - Install dependencies
+> - Run linting and Prettier checks
+> - Run automated tests
+> - Build the project
+</details>
+
+<details>
+<summary><strong>🚀 Continuous Deployment (CD)</strong></summary>
+
+<br>
+
+> Triggered after successful CI:
+>
+> - Install dependencies
+> - Build the project
+> - Deploy to Vercel
+</details>
+
+<br>
 
 The application is deployed to Vercel, hosting the frontend and serverless functions, with features including:
 
