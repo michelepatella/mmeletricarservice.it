@@ -393,7 +393,7 @@ It is responsible for:
 ---
 
 <details>
-<summary><strong>🗄️ Database Schema</strong></summary>
+<summary><strong>Database Schema</strong></summary>
 <br>
 <img width="568" height="606" alt="image" src="https://github.com/user-attachments/assets/b3dc98dd-f9ac-4756-bf9c-017f9fbb9437" />
 </details>
@@ -429,7 +429,7 @@ The application is deployed to Vercel, hosting the frontend and serverless funct
 ---
 
 <details>
-<summary>📦 <strong>Deployment Features</strong></summary>
+<summary><strong>Deployment Features</strong></summary>
 
 <br>
   
@@ -503,7 +503,7 @@ The application implements search engine optimization to improve discoverability
 ---
 
 <details>
-<summary>📊 <strong>Analytics Metrics</strong></summary>
+<summary><strong>Analytics Metrics</strong></summary>
 
 <br>
 
@@ -577,20 +577,23 @@ The application implements search engine optimization to improve discoverability
 
 The platform demonstrates how thoughtful design and technology can directly improve customer experience and business performance.
 
-💻 **Enhanced Operational Efficiency**  
-Customers can easily explore services, access company information, and browse used cars with detailed specifications, reducing customer support workload while providing accurate, timely information.
-<br>
-<br>
-🏙️ **Support for Local Businesses**  
-The digital platform helps the local business stand out, boosting visibility, and supporting economic growth.
-<br>
-<br>
-💡**Empowerment Through Information**  
-Providing clear information, the platform helps customers make informed decisions, increasing confidence and trust.
-<br>
-<br>
-📊 **Data-Driven Business Insights**  
-The platform collects anonymized usage data useful to understand customer behavior, optimize inventory, and guide long-term strategy.
+💻 **Operational Efficiency**
+> Easy access to information.  
+> Reduced support workload.  
+  
+🏙️ **Local Business Impact**  
+> Increased visibility.  
+> Local business stands out.  
+
+💡 **Informed Decisions**    
+> Clear information.  
+> Informed decisions.  
+> Increased trust.  
+
+📊 **Data Insights**  
+> Customer insights.  
+>  Understanding behavior.  
+>  Optimized inventory.  
 
 <br>
 
