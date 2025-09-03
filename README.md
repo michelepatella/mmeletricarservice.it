@@ -362,14 +362,14 @@ The backend architecture levarages Supabase as a Backend-as-a-Service platform, 
 
 The project uses a fully automated pipeline to validate, build, and deploy the application.
 
-**Continuous Integration (CI)**  
+**🧪 Continuous Integration (CI)**  
 Runs on every push, and pull request to `main`:
   - Install dependencies
   - Run linting and Prettier checks
   - Run automated tests
   - Build the project
 
-**Continuous Deployment (CD)**  
+**🚀 Continuous Deployment (CD)**  
 Triggered after successful CI:
   - Install dependencies
   - Build the project
