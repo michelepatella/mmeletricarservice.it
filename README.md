@@ -381,8 +381,9 @@ The application is deployed to Vercel, hosting the frontend and serverless funct
 - Versioned deployments with easy rollback to previous stable releases
 - Management of environment variables
 - Automatic caching of static content and serverless responses at the edge
-- Security features including firewall
 - Automatic scaling with traffic demand
+- Security features including firewall
+- Logs monitoring
 - Integrated analytics 
 
 <br>
