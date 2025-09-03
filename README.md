@@ -409,14 +409,14 @@ Sources of environment variables:
 
 The application implements search engine optimization to improve discoverability and ranking, and analytics to monitor user engagement and performance, without compromising user privacy.
 
-**SEO features** include:  
+**📈 SEO features** include:  
 - Clean, human-readable URLs
 - Keyword-optimized content
 - HTTPS for secure connections
 - Embedded Google Maps for local SEO targeting
 - Favicon and consistent branding
 
-**Analytics features** (via Vercel Analytics) include:  
+**📊 Analytics features** (via Vercel Analytics) include:  
 - Actionable insights to optimize UX and app performance:
   - Visitors (total number of application's visitors)
   - Page views (total number of pages viewed)
