@@ -417,7 +417,7 @@ Runs on every push, and pull request to `main`:
 > 3. Run automated tests
 > 4. Build the project
 
-Additionally, every push to `main` triggers an automatic SonarQube Cloud analysis to monitor code quality.  
+Additionally, every push to `main` triggers an automatic SonarQube Cloud analysis to monitor code quality.
 
 **🚀 Continuous Deployment (CD)**  
 Triggered after successful CI:
@@ -426,7 +426,7 @@ Triggered after successful CI:
 > 2. Build the project
 > 3. Deploy to Vercel
 
-The application is deployed to Vercel, hosting the frontend and serverless functions.  
+The application is deployed to Vercel, hosting the frontend and serverless functions.
 
 ---
 
@@ -646,16 +646,16 @@ The application implements search engine optimization to improve discoverability
 > <br>  
 > **Relieability Issues**  
 > 0
-> <br>   
+> <br>  
 > **Maintainability Issues**  
 > 0
 > <br>  
 > **Security Hotspots**  
 > 0
-> 
-> <br>  
 >
-> <br>  
+> <br>
+>
+> <br>
 >
 > **Density**  
 > 0%
@@ -669,9 +669,9 @@ The application implements search engine optimization to improve discoverability
 > **Duplicated Files**  
 > 0
 >
-> <br>  
+> <br>
 >
-> <br>  
+> <br>
 >
 > **Lines of Code**  
 > 4,845
@@ -685,6 +685,7 @@ The application implements search engine optimization to improve discoverability
 > **Comments**  
 > 19.3%
 > <br>
+
 </details>
 <br>
 
