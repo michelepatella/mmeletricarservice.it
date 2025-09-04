@@ -38,14 +38,16 @@ function UsedCars() {
 			/>
 
 			{/* Until data is being loaded show a loading outlined */}
-			{isLoading ? (
+			{isLoading && (
 				<LoadingOutlined
 					className="loading-outlined"
 					spin
 				/>
-			) : // Used cars overview information loading is finished, first
-			// check if there is at least one used car available
-			usedCarsOverview?.length > 0 ? (
+			)}
+
+			{/* Used cars overview information loading is finished, first
+			check if there is at least one used car available */}
+			{!isLoading && usedCarsOverview?.length > 0 && (
 				<>
 					{/* Show all the available used cars via cards */}
 					<div className="used-cars-container">
@@ -66,25 +68,29 @@ function UsedCars() {
 						style={handleScrollLabelStyle()}
 					/>
 				</>
-			) : (
-				// If no used car is available or an error occurred,
-				// show an informative message
-				<div className="unavailable-used-cars-container">
-					{/* Unavailable used cars message */}
-					<CustomText
-						type="body"
-						text={USED_CARS_UNAVAILABLE_DESCRIPTION}
-						style={handleUnavailableUsedCarDescriptionStyle()}
-					/>
-
-					{/* Unavailable used cars image */}
-					<img
-						src="/images/empty-used-cars-image.avif"
-						alt="unavailable-used-cars"
-						loading="lazy"
-					/>
-				</div>
 			)}
+
+			{/* If no used car is available or an error occurred,
+			show an informative message */}
+			{!isLoading &&
+				(!usedCarsOverview ||
+					usedCarsOverview.length === 0) && (
+					<div className="unavailable-used-cars-container">
+						{/* Unavailable used cars message */}
+						<CustomText
+							type="body"
+							text={USED_CARS_UNAVAILABLE_DESCRIPTION}
+							style={handleUnavailableUsedCarDescriptionStyle()}
+						/>
+
+						{/* Unavailable used cars image */}
+						<img
+							src="/images/empty-used-cars-image.avif"
+							alt="unavailable-used-cars"
+							loading="lazy"
+						/>
+					</div>
+				)}
 		</SectionContainer>
 	);
 }
