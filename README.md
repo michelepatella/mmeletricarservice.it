@@ -207,7 +207,22 @@ The system is built on a **Jamstack architecture** shown below:
 
 <img width="510" height="724" alt="image" src="https://github.com/user-attachments/assets/1b4d45ea-a60e-4c9a-8e45-011ec04bb873" />
 
+---
+
+<details>
+<summary><strong>Data Flow</strong></summary>
+
 <br>
+
+> 1. _Client-side_ requests data via _Data Fetching & Caching_ layer.
+> 2. If not cached, requests are sent to _Serverless Functions_.
+> 3. _Serverless Functions_ fetch data from _Backend / BaaS_.
+> 4. Data is cached on the client for `STALE_TIME` duration by _Data Fetching & Caching_ layer.
+> 5. _Client-side_ renders _React Components_ based on the fetched/cached data.
+>
+> Note: Caching at Vercel's edge may prevent requests from reaching backend, serving cached responses instead.
+</details>
+
 <br>
 
 ### 🌐 Client-side
