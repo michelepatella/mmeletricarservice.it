@@ -656,7 +656,7 @@ The application implements search engine optimization to improve discoverability
 > <br>
 >
 > <br>
->
+>  
 > **Density**  
 > 0%
 > <br>  
@@ -687,12 +687,13 @@ The application implements search engine optimization to improve discoverability
 >
 > <br>
 >
-> <br>
-> **Cyclomatic Complexity**  
-> 3.26
 > <br>  
+>  
+> **Cyclomatic Complexity**   
+> 3.26  
+> <br>
 > **Cognitive Complexity**  
-> 1.86
+> 1.86  
 > <br>  
 
 </details>
