@@ -1,5 +1,6 @@
 /* Used cars card styles */
 .used-cars-card {
+	font-family: var(--font_family);
 	width: var(--used_car_card_width);
 	padding: var(--used_car_card_padding);
 	background: transparent;

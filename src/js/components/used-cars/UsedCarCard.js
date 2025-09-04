@@ -34,8 +34,9 @@ function UsedCarCard(props) {
 
 	return (
 		<>
-			<div
+			<button
 				className="used-cars-card"
+				type="button"
 				onClick={() =>
 					onUsedCarDrawerOpen(
 						setIsDrawerOpen,
@@ -99,7 +100,7 @@ function UsedCarCard(props) {
 						/>
 					</div>
 				</Flex>
-			</div>
+			</button>
 
 			{/* Used Car Drawer including car's details when the card is clicked */}
 			{isDrawerOpen && (
