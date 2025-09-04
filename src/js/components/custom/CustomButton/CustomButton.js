@@ -27,7 +27,7 @@ function CustomButton(props) {
 			className={
 				props.isContact
 					? { true: "cta-button", false: "contact-button" }[
-							props.isCta
+							props.isCta ? "true" : "false"
 						]
 					: "custom-button"
 			}
