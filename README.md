@@ -5,7 +5,10 @@
       mmeletricarservice.it
     </a>
   </h1>
+  <h4>Designed, Developed, and Documented by Michele Patella.</h4>
 </div>
+
+<br>
 
 ### 📚 Table of Content
 
@@ -22,7 +25,6 @@
 - [🔍 SEO & Analytics](#-seo--analytics)
 - [📈 Metrics](#-metrics)
 - [🌎 Impact on the Real World](#-impact-on-the-real-world)
-- [👨‍💻 Author](#-author)
 
 <br>
 
@@ -51,24 +53,25 @@ The web application is available at https://mmeletricarservice.it
 
 ## 🛠️ Tech Stack
 
-| Layer                     | Technology                                                |
-| ------------------------- | --------------------------------------------------------- |
-| **Frontend**              | React.js                                                  |
-| **UI Library**            | Ant Design                                                |
-| **Styling**               | CSS, Custom Design Tokens                                 |
-| **Animations**            | CSS, Framer Motion                                        |
-| **Routing**               | React Router (HashRouter)                                 |
-| **State Management**      | React Hooks, Custom Hooks                                 |
-| **Fetching & Caching**    | React Query                                               |
-| **API Communication**     | Serverless API (Vercel Functions)                         |
-| **Backend-as-a-Service**  | Supabase (PostgreSQL, Storage)                            |
-| **Environment Variables** | .env, Vercel Environment Variables, GitHub Action Secrets |
-| **Testing**               | Jest, React Testing Library                               |
-| **Code Quality**          | ESLint, Prettier                                          |
-| **Deployment & CI/CD**    | Vercel, GitHub Actions                                    |
-| **SEO**                   | Clean URLs, HTTPS, Meta Tags, Local SEO                   |
-| **Monitoring**            | Vercel Logs, Error Tracking                               |
-| **Analytics**             | Vercel Analytics                                          |
+| Layer                            | Technology                                                |
+| ---------------------------------| --------------------------------------------------------- |
+| **Frontend**                     | React.js                                                  |
+| **UI Library**                   | Ant Design                                                |
+| **Styling**                      | CSS, Custom Design Tokens                                 |
+| **Animations**                   | CSS, Framer Motion                                        |
+| **Routing**                      | React Router (HashRouter)                                 |
+| **State Management**             | React Hooks, Custom Hooks                                 |
+| **Fetching & Caching**           | React Query                                               |
+| **API Communication**            | Serverless API (Vercel Functions)                         |
+| **Backend-as-a-Service**         | Supabase (PostgreSQL, Storage)                            |
+| **Environment Variables**        | .env, Vercel Environment Variables, GitHub Action Secrets |
+| **Testing**                      | Jest, React Testing Library                               |
+| **Code Quality**                 | ESLint, Prettier                                          |
+| **Deployment & CI/CD**           | Vercel, GitHub Actions                                    |
+| **Development & Version Control**| Node.js, npm, Git, GitHub                                 |
+| **SEO**                          | Clean URLs, HTTPS, Meta Tags, Local SEO                   |
+| **Monitoring**                   | Vercel Logs, Error Tracking                               |
+| **Analytics**                    | Vercel Analytics                                          |
 
 <br>
 
@@ -601,12 +604,6 @@ The platform demonstrates how thoughtful design and technology can directly impr
 > Customer insights.  
 >  Understanding behavior.  
 >  Optimized inventory.
-
-<br>
-
-## 👨‍💻 Author
-
-**Michele Patella**
 
 <br>
 
