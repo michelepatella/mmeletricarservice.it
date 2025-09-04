@@ -214,16 +214,17 @@ The system is built on a **Jamstack architecture** shown below:
 
 <br>
 
-> 1. _React Components_ on the _Client-side_ request data via the _Data Fetching & Caching_ layer  
+> 1. _React Components_ on the _Client-side_ request data via the _Data Fetching & Caching_ layer
 > 2. If the requested data is not cached on the client  
->   2.1. _Data Fetching & Caching_ layer sends requests to _Serverless Functions_  
->   2.2. If not cached at Vercel's edge, _Serverless Functions_ may fetch requested data from _Backend / BaaS_  
->   2.3. _Serverless Functions_ send back requested data to the _Data Fetching & Caching_ layer  
->   2.4. _Data Fetching & Caching_ layer caches received data on the client for `STALE_TIME` duration  
+>    2.1. _Data Fetching & Caching_ layer sends requests to _Serverless Functions_  
+>    2.2. If not cached at Vercel's edge, _Serverless Functions_ may fetch requested data from _Backend / BaaS_  
+>    2.3. _Serverless Functions_ send back requested data to the _Data Fetching & Caching_ layer  
+>    2.4. _Data Fetching & Caching_ layer caches received data on the client for `STALE_TIME` duration
 > 3. Otherwise  
->    3.1. _Data Fetching & Caching_ layer retrieves requested data from the cache  
-> 4. _Data Fetching & Caching_ layer returns requested data to the _React Components_    
-> 5. _Client-side_ renders _React Components_ based on the data received  
+>    3.1. _Data Fetching & Caching_ layer retrieves requested data from the cache
+> 4. _Data Fetching & Caching_ layer returns requested data to the _React Components_
+> 5. _Client-side_ renders _React Components_ based on the data received
+
 </details>
 
 <br>
@@ -712,7 +713,7 @@ The application implements search engine optimization to improve discoverability
 > <br>
 > **Cognitive Complexity**  
 > 1.86  
-> <br>  
+> <br>
 
 </details>
 <br>
