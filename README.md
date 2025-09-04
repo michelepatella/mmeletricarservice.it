@@ -53,25 +53,25 @@ The web application is available at https://mmeletricarservice.it
 
 ## 🛠️ Tech Stack
 
-| Layer                            | Technology                                                |
-| ---------------------------------| --------------------------------------------------------- |
-| **Frontend**                     | React.js                                                  |
-| **UI Library**                   | Ant Design                                                |
-| **Styling**                      | CSS, Custom Design Tokens                                 |
-| **Animations**                   | CSS, Framer Motion                                        |
-| **Routing**                      | React Router (HashRouter)                                 |
-| **State Management**             | React Hooks, Custom Hooks                                 |
-| **Fetching & Caching**           | React Query                                               |
-| **API Communication**            | Serverless API (Vercel Functions)                         |
-| **Backend-as-a-Service**         | Supabase (PostgreSQL, Storage)                            |
-| **Environment Variables**        | .env, Vercel Environment Variables, GitHub Action Secrets |
-| **Testing**                      | Jest, React Testing Library                               |
-| **Code Quality**                 | ESLint, Prettier                                          |
-| **Deployment & CI/CD**           | Vercel, GitHub Actions                                    |
-| **Development & Version Control**| Node.js, npm, Git, GitHub                                 |
-| **SEO**                          | Clean URLs, HTTPS, Meta Tags, Local SEO                   |
-| **Monitoring**                   | Vercel Logs, Supabase Logs, Error Tracking                |
-| **Analytics**                    | Vercel Analytics                                          |
+| Layer                             | Technology                                                |
+| --------------------------------- | --------------------------------------------------------- |
+| **Frontend**                      | React.js                                                  |
+| **UI Library**                    | Ant Design                                                |
+| **Styling**                       | CSS, Custom Design Tokens                                 |
+| **Animations**                    | CSS, Framer Motion                                        |
+| **Routing**                       | React Router (HashRouter)                                 |
+| **State Management**              | React Hooks, Custom Hooks                                 |
+| **Fetching & Caching**            | React Query                                               |
+| **API Communication**             | Serverless API (Vercel Functions)                         |
+| **Backend-as-a-Service**          | Supabase (PostgreSQL, Storage)                            |
+| **Environment Variables**         | .env, Vercel Environment Variables, GitHub Action Secrets |
+| **Testing**                       | Jest, React Testing Library                               |
+| **Code Quality**                  | ESLint, Prettier                                          |
+| **Deployment & CI/CD**            | Vercel, GitHub Actions                                    |
+| **Development & Version Control** | Node.js, npm, Git, GitHub                                 |
+| **SEO**                           | Clean URLs, HTTPS, Meta Tags, Local SEO                   |
+| **Monitoring**                    | Vercel Logs, Supabase Logs, Error Tracking                |
+| **Analytics**                     | Vercel Analytics                                          |
 
 <br>
 
@@ -554,18 +554,18 @@ The application implements search engine optimization to improve discoverability
 > 0
 > <br>  
 > **Speed Index**  
-> 2.2 s     
+> 2.2 s
 
 </details>
 
-<br> 
+<br>
 
 <details>
 <summary>
 <strong>⚙️ Serverless Functions Metrics</strong> 
 <br>
 <em>Average metrics collected from 200+ API invocations over a 12h period by Vercel Observability.</em>
-</summary>  
+</summary>
 
 <br>
 
@@ -585,9 +585,10 @@ The application implements search engine optimization to improve discoverability
 > 730 ms
 > <br>  
 > **Start Type**  
-> *Hot*: 97.2%  
-> *Cold*: 2.4%  
-> *Prewarmed*: 0–4%
+> _Hot_: 97.2%  
+> _Cold_: 2.4%  
+> _Prewarmed_: 0–4%
+
 </details>
 
 <details>
@@ -595,7 +596,7 @@ The application implements search engine optimization to improve discoverability
 <strong>☁️ BaaS Metrics</strong> 
 <br>
 <em>Average metrics collected from 200+ requests over a 12h period by Supabase Reports.</em>
-</summary>  
+</summary>
 
 <br>
 
@@ -603,7 +604,8 @@ The application implements search engine optimization to improve discoverability
 > 269 ms
 > <br>  
 > **Storage Response Speed**  
-> 269 ms  
+> 269 ms
+
 </details>
 
 <details>
@@ -611,7 +613,7 @@ The application implements search engine optimization to improve discoverability
 <strong>📦 Deployment & CI/CD Metrics</strong> 
 <br>
 <em>Average metrics collected over a 30 days period by Vercel Deployments and GitHub Insights.</em>
-</summary>  
+</summary>
 
 <br>
 
@@ -625,7 +627,8 @@ The application implements search engine optimization to improve discoverability
 > 2m 22s
 > <br>  
 > **Job Queue Time**  
-> 3s  
+> 3s
+
 </details>
 <br>
 
