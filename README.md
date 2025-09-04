@@ -684,7 +684,16 @@ The application implements search engine optimization to improve discoverability
 > <br>  
 > **Comments**  
 > 19.3%
+>
 > <br>
+>
+> <br>
+> **Cyclomatic Complexity**  
+> 3.26
+> <br>  
+> **Cognitive Complexity**  
+> 1.86
+> <br>  
 
 </details>
 <br>
