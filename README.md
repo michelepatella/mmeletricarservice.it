@@ -680,7 +680,7 @@ The application implements search engine optimization to improve discoverability
 > 822
 > <br>  
 > **Functions**  
-> 822
+> 301
 > <br>  
 > **Comments**  
 > 19.3%
