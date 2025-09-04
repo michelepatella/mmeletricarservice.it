@@ -97,74 +97,71 @@ export const SERVICES_SUBTITLE =
 	"Manutenzioni, riparazioni e diagnosi elettroniche: solo il meglio per la tua auto.";
 
 /**------------- "Workshop" texts -------------**/
-export const ALL_SERVICES = [
-	{
-		title: "Manutenzione centralina",
-		description:
-			"Controllo ed aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.",
-		icon: "/icons/cpu_icon.svg",
-	},
-	{
-		title: "Riparazione parabrezza",
-		description:
-			"Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.",
-		icon: "/icons/wrench_icon.svg",
-	},
-	{
-		title: "Pannello di controllo",
-		description:
-			"Riparazione e calibrazione di strumenti digitali ed analogici del cruscotto.",
-		icon: "/icons/control_panel_icon.svg",
-	},
-	{
-		title: "Riparazione conta km",
-		description:
-			"Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.",
-		icon: "/icons/dashboard_icon.svg",
-	},
-	{
-		title: "Ripristino EGR e DPF",
-		description:
-			"Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.",
-		icon: "/icons/filter_icon.svg",
-	},
-	{
-		title: "Ricarica aria condizionata",
-		description:
-			"Ripristino del gas refrigerante per garantire un climatizzatore efficiente ed aria fresca.",
-		icon: "/icons/air_icon.svg",
-	},
-	{
-		title: "Diagnosi iniezione",
-		description:
-			"Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.",
-		icon: "/icons/engine_icon.svg",
-	},
-	{
-		title: "Duplicazione chiavi e telecomandi",
-		description:
-			"Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.",
-		icon: "/icons/key_icon.svg",
-	},
-	{
-		title: "Diagnosi elettronica",
-		description:
-			"Individuazione e risoluzione di guasti elettronici per un'analisi precisa del tuo veicolo.",
-		icon: "/icons/diagnosis_icon.svg",
-	},
-	{
-		title: "Veicoli ibridi ed elettrici",
-		description:
-			"Manutenzione specializzata per veicoli ibridi ed elettrici.",
-		icon: "/icons/electric_icon.svg",
-	},
-	{
-		title: "Installazione antifurti",
-		description:
-			"Soluzioni antifurto satellitari Igla e meccanici Defender per la protezione del tuo veicolo.",
-		icon: "/icons/anti_theft_icon.svg",
-	},
+const servicesData = [
+	[
+		"Manutenzione centralina",
+		"Controllo ed aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.",
+		"/icons/cpu_icon.svg",
+	],
+	[
+		"Riparazione parabrezza",
+		"Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.",
+		"/icons/wrench_icon.svg",
+	],
+	[
+		"Pannello di controllo",
+		"Riparazione e calibrazione di strumenti digitali ed analogici del cruscotto.",
+		"/icons/control_panel_icon.svg",
+	],
+	[
+		"Riparazione conta km",
+		"Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.",
+		"/icons/dashboard_icon.svg",
+	],
+	[
+		"Ripristino EGR e DPF",
+		"Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.",
+		"/icons/filter_icon.svg",
+	],
+	[
+		"Ricarica aria condizionata",
+		"Ripristino del gas refrigerante per garantire un climatizzatore efficiente ed aria fresca.",
+		"/icons/air_icon.svg",
+	],
+	[
+		"Diagnosi iniezione",
+		"Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.",
+		"/icons/engine_icon.svg",
+	],
+	[
+		"Duplicazione chiavi e telecomandi",
+		"Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.",
+		"/icons/key_icon.svg",
+	],
+	[
+		"Diagnosi elettronica",
+		"Individuazione e risoluzione di guasti elettronici per un'analisi precisa del tuo veicolo.",
+		"/icons/diagnosis_icon.svg",
+	],
+	[
+		"Veicoli ibridi ed elettrici",
+		"Manutenzione specializzata per veicoli ibridi ed elettrici.",
+		"/icons/electric_icon.svg",
+	],
+	[
+		"Installazione antifurti",
+		"Soluzioni antifurto satellitari Igla e meccanici Defender per la protezione del tuo veicolo.",
+		"/icons/anti_theft_icon.svg",
+	],
 ];
+
+export const ALL_SERVICES = servicesData.map(
+	([title, description, icon]) => ({
+		title,
+		description,
+		icon,
+	})
+);
 
 /**------------- "Used cars" texts -------------**/
 export const USED_CARS_TITLE =
