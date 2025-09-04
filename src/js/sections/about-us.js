@@ -25,33 +25,28 @@ function AboutUs() {
 	useVideoAnimation(videoRef, isVideoVisible);
 
 	return (
-		<>
-			<SectionContainer id="chi-siamo">
-				{/* Section header (title, subtitle, and video animation) */}
-				<SectionHeader
-					section="CHI SIAMO"
-					title={ABOUT_US_TITLE}
-					subtitle={ABOUT_US_SUBTITLE}
-					children={
-						<video
-							className="video"
-							ref={videoRef}
-							src="/images/animation-logo.mp4"
-							loop={false}
-							controls={false}
-							muted
-							playsInline
-						/>
-					}
-				/>
+		<SectionContainer id="chi-siamo">
+			{/* Section header (title, subtitle, and video animation) */}
+			<SectionHeader
+				section="CHI SIAMO"
+				title={ABOUT_US_TITLE}
+				subtitle={ABOUT_US_SUBTITLE}
+				children={
+					<video
+						className="video"
+						ref={videoRef}
+						src="/images/animation-logo.mp4"
+						loop={false}
+						controls={false}
+						muted
+						playsInline
+					/>
+				}
+			/>
 
-				{/* Presentation of the company */}
-				<CustomText
-					type="body"
-					text={ABOUT_US_DESCRIPTION}
-				/>
-			</SectionContainer>
-		</>
+			{/* Presentation of the company */}
+			<CustomText type="body" text={ABOUT_US_DESCRIPTION} />
+		</SectionContainer>
 	);
 }
 

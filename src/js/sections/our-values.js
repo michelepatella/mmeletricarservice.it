@@ -16,23 +16,21 @@ import SectionHeader from "../components/sections/SectionHeader/SectionHeader";
  */
 function OurValues() {
 	return (
-		<>
-			<SectionContainer id="i-nostri-valori">
-				{/* Section header */}
-				<SectionHeader
-					section="I NOSTRI VALORI"
-					title={OUR_VALUES_TITLE}
-					subtitle={OUR_VALUES_SUBTITLE}
-				/>
+		<SectionContainer id="i-nostri-valori">
+			{/* Section header */}
+			<SectionHeader
+				section="I NOSTRI VALORI"
+				title={OUR_VALUES_TITLE}
+				subtitle={OUR_VALUES_SUBTITLE}
+			/>
 
-				{/* Description of the company
+			{/* Description of the company
         objectives, mission, and values  */}
-				<CustomText
-					type="body"
-					text={OUR_VALUES_DESCRIPTION}
-				/>
-			</SectionContainer>
-		</>
+			<CustomText
+				type="body"
+				text={OUR_VALUES_DESCRIPTION}
+			/>
+		</SectionContainer>
 	);
 }
 

@@ -13,27 +13,25 @@ import CustomText from "../../components/custom/CustomText/CustomText";
  */
 function Workshop() {
 	return (
-		<>
-			<SectionContainer id="officina">
-				{/* Section title */}
-				<CustomText
-					type="body"
-					text="• OFFICINA"
-					style={handleSectionNameStyle()}
-				/>
+		<SectionContainer id="officina">
+			{/* Section title */}
+			<CustomText
+				type="body"
+				text="• OFFICINA"
+				style={handleSectionNameStyle()}
+			/>
 
-				{/* Add an informative card for each
+			{/* Add an informative card for each
         service offered by the company */}
-				{ALL_SERVICES?.map((service) => (
-					<InfoCard
-						key={service.title}
-						title={service?.title}
-						description={service?.description}
-						icon={service?.icon}
-					/>
-				))}
-			</SectionContainer>
-		</>
+			{ALL_SERVICES?.map((service) => (
+				<InfoCard
+					key={service.title}
+					title={service?.title}
+					description={service?.description}
+					icon={service?.icon}
+				/>
+			))}
+		</SectionContainer>
 	);
 }
 
