@@ -60,20 +60,19 @@ function MenuSmallScreen() {
 							</AntMenu.Item>
 
 							{/* Children items generation */}
-							{menuItem?.children &&
-								menuItem?.children?.map((child) => (
-									<AntMenu.Item
-										key={child?.key}
-										className="ant-menu-item-child"
-										onClick={child?.onClick}
-										style={handleChildrenStyle(
-											section,
-											child
-										)}
-									>
-										{child?.title}
-									</AntMenu.Item>
-								))}
+							{menuItem?.children?.map((child) => (
+								<AntMenu.Item
+									key={child?.key}
+									className="ant-menu-item-child"
+									onClick={child?.onClick}
+									style={handleChildrenStyle(
+										section,
+										child
+									)}
+								>
+									{child?.title}
+								</AntMenu.Item>
+							))}
 						</React.Fragment>
 					))}
 				</AntMenu>
