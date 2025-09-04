@@ -69,7 +69,6 @@ The web application is available at https://mmeletricarservice.it
 | **Code Quality**                  | ESLint, Prettier                                          |
 | **Deployment & CI/CD**            | Vercel, GitHub Actions                                    |
 | **Development & Version Control** | Node.js, npm, Git, GitHub                                 |
-| **SEO**                           | Clean URLs, HTTPS, Meta Tags, Local SEO                   |
 | **Monitoring**                    | Vercel Logs, Supabase Logs, Error Tracking                |
 | **Analytics**                     | Vercel Analytics                                          |
 
