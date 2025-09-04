@@ -70,7 +70,7 @@ The web application is available at https://mmeletricarservice.it
 | **Deployment & CI/CD**           | Vercel, GitHub Actions                                    |
 | **Development & Version Control**| Node.js, npm, Git, GitHub                                 |
 | **SEO**                          | Clean URLs, HTTPS, Meta Tags, Local SEO                   |
-| **Monitoring**                   | Vercel Logs, Error Tracking                               |
+| **Monitoring**                   | Vercel Logs, Supabase Logs, Error Tracking                |
 | **Analytics**                    | Vercel Analytics                                          |
 
 <br>
@@ -501,7 +501,7 @@ The application implements search engine optimization to improve discoverability
 - Embedded Google Maps for local SEO targeting
 - Favicon and consistent branding
 
-📊 **Analytics features** (via Vercel Analytics)
+📊 **Analytics features** (via Vercel Analytics) includes:
 
 - Actionable insights to optimize UX and app performance
 - Privacy-friendly, cookie-free solution
@@ -519,64 +519,114 @@ The application implements search engine optimization to improve discoverability
 > - Pages (specific pages viewed)
 > - Routes (specific referrers viewed)
 > - Referrers (sources that referred users to the application)
-> - UTM parameters (campaign tracking information from URLs)
 > - Countries (geographic locations of the visitors)
 > - Devices (types of devices used to access the application)
 > - Browsers (web browsers used by the visitors)
 > - Operating systems (operating system of the devices accessing the application)
-> - Privacy-friendly, cookie-free solution
 
 </details>
 <br>
 
 ## 📈 Metrics
 
-### 📊 Lighthouse Scores
+<br>
 
-| Category       | Score (%) |
-| -------------- | --------- |
-| Performance    | 96        |
-| Accessibility  | 90        |
-| Best Practices | 100       |
-| SEO            | 100       |
+**📊 Lighthouse Metrics**:
+![Frame 2 (2)](https://github.com/user-attachments/assets/263c2b63-bbe5-4b5b-82d2-9cc903590c4f)
 
-### ⚡️ Performance
+---
 
-| Metric                   | Target |
-| ------------------------ | ------ |
-| First Contentful Paint   | 0.9 s  |
-| Largest Contentful Paint | 2.7 s  |
-| Total Blocking Time      | 60 ms  |
-| Cumulative Layout Shift  | 0      |
-| Speed Index              | 2.1 s  |
+<details>
+<summary><strong>Performance Metrics</strong></summary>
 
-### ☁️ Backend / Baas (Supabase)
+<br>
 
-| Metric             | Target (Average) |
-| ------------------ | ---------------- |
-| API Response Speed | 111.5 ms         |
-| Memory Usage       | 45%              |
-| Average CPU Usage  | 0.74%            |
-| CPU Throttle       | 11.7%            |
-| Hot start          | 35.3%            |
-| Cold start         | 33.3%            |
-| Prewarmed start    | 31.4%            |
+> **First Contentful Paint**  
+> 0.9 s
+> <br>  
+> **Largest Contentful Paint**  
+> 2.9 s
+> <br>  
+> **Total Blocking Time**  
+> 50 ms
+> <br>  
+> **Cumulative Layout Shift**  
+> 0
+> <br>  
+> **Speed Index**  
+> 2.2 s     
 
-### ⚙️ Serverless Functions
+</details>
 
-| Metric             | Target (Average) |
-| ------------------ | ---------------- |
-| Error rate         | 0%               |
-| Timeout rate       | 0.3%             |
-| Time to First Byte | 573 ms           |
-| Memory Usage       | 116 MB           |
+<br> 
 
-### 📦 Deployment & CI/CD
+<details>
+<summary>
+<strong>⚙️ Serverless Functions Metrics</strong> 
+<br>
+<em>Average metrics collected from 200+ API invocations over a 12h period by Vercel Observability.</em>
+</summary>  
 
-| Metric      | Target (Average) |
-| ----------- | ---------------- |
-| Deploy time | 42 s             |
+<br>
 
+> **Execution Duration**  
+> 269 ms
+> <br>  
+> **Error Rate**  
+> 0%
+> <br>  
+> **Timeout**  
+> 0%
+> <br>  
+> **Memory Usage**  
+> 118 MB
+> <br>  
+> **Time to First Byte**  
+> 730 ms
+> <br>  
+> **Start Type**  
+> *Hot*: 97.2%  
+> *Cold*: 2.4%  
+> *Prewarmed*: 0–4%
+</details>
+
+<details>
+<summary>
+<strong>☁️ BaaS Metrics</strong> 
+<br>
+<em>Average metrics collected from 200+ requests over a 12h period by Supabase Reports.</em>
+</summary>  
+
+<br>
+
+> **API Gateway Response Speed**  
+> 269 ms
+> <br>  
+> **Storage Response Speed**  
+> 269 ms  
+</details>
+
+<details>
+<summary>
+<strong>📦 Deployment & CI/CD Metrics</strong> 
+<br>
+<em>Average metrics collected over a 30 days period by Vercel Deployments and GitHub Insights.</em>
+</summary>  
+
+<br>
+
+> **Deployment Success Rate**  
+> 99%
+> <br>  
+> **CI Duration**  
+> 49s
+> <br>  
+> **CD Duration**  
+> 2m 22s
+> <br>  
+> **Job Queue Time**  
+> 3s  
+</details>
 <br>
 
 ## 🌎 Impact on the Real World
@@ -606,5 +656,6 @@ The platform demonstrates how thoughtful design and technology can directly impr
 >  Optimized inventory.
 
 <br>
+<br>
 
-> Last update: June 24, 2025
+Last update: _June 24, 2025_
