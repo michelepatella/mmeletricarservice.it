@@ -7,8 +7,12 @@ import { handleContainerStyle } from "../../../logic/style-handling/backgroundCo
 // Mock IntersectionObserver
 beforeAll(() => {
 	global.IntersectionObserver = class {
-		observe() {}
-		unobserve() {}
+		observe() {
+			return null;
+		}
+		unobserve() {
+			return null;
+		}
 	};
 });
 
