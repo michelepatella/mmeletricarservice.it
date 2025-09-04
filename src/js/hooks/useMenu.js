@@ -4,6 +4,95 @@ import { scrollToSection } from "../utils/scrollToSection";
 import { useAnimation } from "framer-motion";
 
 /**
+ * Helper method to check element visibility
+ * and update current section
+ */
+const checkAndUpdateSection = (id, closestDistanceRef) => {
+	// Read the element
+	const element = document.getElementById(id);
+
+	if (!element)
+		return {
+			closestDistance: closestDistanceRef,
+			currentSection: null,
+		};
+
+	// Calculate the distance element-top
+	const rect = element.getBoundingClientRect();
+	const distanceToTop = Math.abs(rect?.top);
+
+	// Check if the section is within the viewport
+	if (
+		rect?.top < window.innerHeight &&
+		rect?.bottom > 0 &&
+		distanceToTop < closestDistanceRef
+	) {
+		// New closest distance and new current
+		// section identified
+		return {
+			closestDistance: distanceToTop,
+			currentSection: id,
+		};
+	}
+
+	return {
+		closestDistance: closestDistanceRef,
+		currentSection: null,
+	};
+};
+
+/**
+ * Helper method to get the current section in view
+ */
+const getCurrentSection = () => {
+	let currentSection = "";
+	let closestDistance = Infinity;
+
+	// Loop through each section to
+	// determine which is in view
+	SECTIONS?.forEach((sec) => {
+		// Check for sections
+		const result = checkAndUpdateSection(
+			sec?.id,
+			closestDistance
+		);
+		if (result.currentSection) {
+			closestDistance = result.closestDistance;
+			currentSection = result.currentSection;
+		}
+
+		// Check for child sections
+		sec?.children?.forEach((child) => {
+			const childResult = checkAndUpdateSection(
+				child?.id,
+				closestDistance
+			);
+			if (childResult.currentSection) {
+				closestDistance = childResult.closestDistance;
+				currentSection = childResult.currentSection;
+			}
+		});
+	});
+
+	return currentSection;
+};
+
+/**
+ * Helper method to map children menu items
+ */
+const mapChildren = (children, parentIndex, setVisible) =>
+	children?.map((child, childIndex) => ({
+		key:
+			"section-" +
+			(parentIndex + 1) +
+			"-child-" +
+			(childIndex + 1),
+		href: "#" + child?.id,
+		title: child?.title,
+		onClick: () => scrollToSection(child?.id, setVisible),
+	}));
+
+/**
  * Custom hook to manage (anchor and hamburger) menu behavior.
  * @returns {{
  * visible: boolean,
@@ -55,54 +144,8 @@ export const useMenu = () => {
 		 * Method to handle menu scrolling
 		 */
 		const handleScroll = () => {
-			let currentSection = "";
-			let closestDistance = Infinity;
-
-			/**
-			 * Helper method to check element visibility
-			 * and update current section
-			 */
-			const checkAndUpdateSection = (id) => {
-				// Read the element
-				const element = document.getElementById(id);
-
-				if (element) {
-					// Calculate the distance element-top
-					const rect = element.getBoundingClientRect();
-					const distanceToTop = Math.abs(rect?.top);
-
-					// Check if the section is within the viewport
-					if (
-						rect?.top < window.innerHeight &&
-						rect?.bottom > 0
-					) {
-						// If the current element is the closest
-						// to the top, track it
-						if (distanceToTop < closestDistance) {
-							// New closest distance and new
-							// current section identified
-							closestDistance = distanceToTop;
-							currentSection = id;
-						}
-					}
-				}
-			};
-
-			// Loop through each section to determine which is in view
-			SECTIONS?.forEach((sec) => {
-				// Check for sections
-				checkAndUpdateSection(sec?.id);
-
-				// Check for child sections
-				if (sec?.children) {
-					sec?.children?.forEach((child) => {
-						checkAndUpdateSection(child?.id);
-					});
-				}
-			});
-
 			// Update the state with the current section
-			setSection(currentSection);
+			setSection(getCurrentSection());
 		};
 
 		// Add scroll event listener
@@ -123,19 +166,11 @@ export const useMenu = () => {
 		href: "#" + section?.id,
 		title: section?.title,
 		onClick: () => scrollToSection(section?.id, setVisible),
-		children: section?.children
-			? section?.children?.map((child, childIndex) => ({
-					key:
-						"section-" +
-						(index + 1) +
-						"-child-" +
-						(childIndex + 1),
-					href: "#" + child?.id,
-					title: child?.title,
-					onClick: () =>
-						scrollToSection(child?.id, setVisible),
-				}))
-			: undefined,
+		children: mapChildren(
+			section?.children,
+			index,
+			setVisible
+		),
 	}));
 
 	return {
