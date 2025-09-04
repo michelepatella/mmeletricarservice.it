@@ -21,16 +21,16 @@ function CustomButton(props) {
 		...props.style,
 	};
 
+	const buttonClass = props.isContact
+		? props.isCta
+			? "cta-button"
+			: "contact-button"
+		: "custom-button";
+
 	return (
 		<Button
 			type="primary"
-			className={
-				props.isContact
-					? { true: "cta-button", false: "contact-button" }[
-							props.isCta ? "true" : "false"
-						]
-					: "custom-button"
-			}
+			className={buttonClass}
 			onClick={props.onClick}
 			style={style}
 		>
