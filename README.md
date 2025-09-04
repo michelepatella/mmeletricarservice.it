@@ -218,14 +218,14 @@ The system is built on a **Jamstack architecture** shown below:
 > 2. If the requested data is not cached on the client  
 >   2.1. _Data Fetching & Caching_ layer sends requests to _Serverless Functions_  
 >   2.2. If the requested data is not cached at Vercel's edge  
->     &nbsp;&nbsp;&nbsp;&nbsp;2.2.1. _Serverless Functions_ fetch data from the _Backend / BaaS_  
->     &nbsp;&nbsp;&nbsp;&nbsp;2.2.2. The received data is returned to the _Data Fetching & Caching_ layer  
+>     &nbsp;&nbsp;&nbsp;&nbsp;2.2.1. _Serverless Functions_ fetch requested data from the _Backend / BaaS_  
+>     &nbsp;&nbsp;&nbsp;&nbsp;2.2.2. _Serverless Functions_ send back to the _Data Fetching & Caching_ layer the requested data received by the _Backend / BaaS_    
 >   2.3. Otherwise  
 >       &nbsp;&nbsp;&nbsp;&nbsp;2.3.1. Data cached at Vercel's edge is returned to the _Data Fetching & Caching_ layer  
 >   2.4. _Data Fetching & Caching_ caches received data on the client for `STALE_TIME` duration  
-> 4. Otherwise  
->    3.1. _Data Fetching & Caching_ layer retrieves cached data  
-> 5. _Client-side_ renders _React Components_ based on the data received by the _Data Fetching & Caching_ layer  
+> 3. Otherwise  
+>    3.1. _Data Fetching & Caching_ layer retrieves requested data from the cache 
+> 4. _Client-side_ renders _React Components_ based on the data received by the _Data Fetching & Caching_ layer  
 </details>
 
 <br>
