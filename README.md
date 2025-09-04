@@ -215,7 +215,7 @@ The system is built on a **Jamstack architecture** shown below:
 <br>
 
 > 1. _Client-side_ requests data via _Data Fetching & Caching_ layer.
-> 2. If not cached, requests are sent to _Serverless Functions_.
+> 2. If not cached, requests are sent to _Serverless Functions_ by _Data Fetching & Caching_ layer.
 > 3. _Serverless Functions_ fetch data from _Backend / BaaS_.
 > 4. Data is cached on the client for `STALE_TIME` duration by _Data Fetching & Caching_ layer.
 > 5. _Client-side_ renders _React Components_ based on the fetched/cached data.
