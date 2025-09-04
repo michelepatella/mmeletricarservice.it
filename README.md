@@ -66,7 +66,7 @@ The web application is available at https://mmeletricarservice.it
 | **Backend-as-a-Service**          | Supabase (PostgreSQL, Storage)                            |
 | **Environment Variables**         | .env, Vercel Environment Variables, GitHub Action Secrets |
 | **Testing**                       | Jest, React Testing Library                               |
-| **Code Quality**                  | ESLint, Prettier                                          |
+| **Code Quality**                  | ESLint, Prettier, SonarQube                               |
 | **Deployment & CI/CD**            | Vercel, GitHub Actions                                    |
 | **Development & Version Control** | Node.js, npm, Git, GitHub                                 |
 | **Monitoring**                    | Vercel Logs, Supabase Logs, Error Tracking                |
