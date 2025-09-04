@@ -17,10 +17,10 @@ function MenuBigScreen() {
 
 	return (
 		<div className="menu-container-big">
-			{/* Motion division for the menu animation */}
-			<motion.div
-				className="motion-div"
-				role="region"
+			{/* Motion section for the menu animation */}
+			<motion.section
+				className="motion-section"
+				aria-label="Menu"
 				animate={menuItemControls}
 				initial={{
 					opacity: 0,
@@ -33,7 +33,7 @@ function MenuBigScreen() {
 					items={menuItems}
 					getCurrentAnchor={() => "#" + section}
 				/>
-			</motion.div>
+			</motion.section>
 		</div>
 	);
 }

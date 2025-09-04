@@ -27,7 +27,7 @@ function BackgroundContainer({
 		// Motion division for containing the background
 		// and to generate an animation
 		<motion.div
-			data-testid="background-container-motion-div"
+			data-testid="background-container-motion-section"
 			style={style}
 			initial={{
 				opacity: 0,

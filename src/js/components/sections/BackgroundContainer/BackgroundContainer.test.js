@@ -22,7 +22,8 @@ const combinedStyle = {
 	...custStyle,
 };
 
-const motionDivTestId = "background-container-motion-div";
+const motionSectionTestId =
+	"background-container-motion-section";
 
 // Run tests
 describe("BackgroundContainer", () => {
@@ -53,8 +54,8 @@ describe("BackgroundContainer", () => {
 			/>
 		);
 
-		expect(screen.getByTestId(motionDivTestId)).toHaveStyle(
-			combinedStyle
-		);
+		expect(
+			screen.getByTestId(motionSectionTestId)
+		).toHaveStyle(combinedStyle);
 	});
 });
