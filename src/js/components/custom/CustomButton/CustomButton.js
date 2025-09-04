@@ -21,16 +21,14 @@ function CustomButton(props) {
 		...props.style,
 	};
 
-	const buttonClass = props.isContact
-		? props.isCta
-			? "cta-button"
-			: "contact-button"
-		: "custom-button";
-
 	return (
 		<Button
 			type="primary"
-			className={buttonClass}
+			className={
+				(props.isContact && props.isCta && "cta-button") ||
+				(props.isContact && "contact-button") ||
+				"custom-button"
+			}
 			onClick={props.onClick}
 			style={style}
 		>
