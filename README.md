@@ -22,7 +22,7 @@
   - [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [🔐 Environment Variables](#-environment-variables)
-- [🔍 SEO, Analytics & Monitoring](#-seo--analytics--monitoring)
+- [🔍 SEO, Analytics & Monitoring](-seo-analytics--monitoring)
 - [📈 Metrics](#-metrics)
 - [🌎 Impact on the Real World](#-impact-on-the-real-world)
 
