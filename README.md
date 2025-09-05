@@ -403,16 +403,14 @@ It is responsible for:
   - Managing relational data in a PostgreSQL database
   - Optimizing query performance with indexes on `id` fields
   - Enforcing data integrity with foreign key relationships and constraints (`NOT NULL`, `CHECK`)
-  - Using enumerated types (ENUMs) for controlled values
-  - Validating complex data formats through functions and triggers
-  - Ensuring consistency by handling cascading deletes with `ON DELETE CASCADE`
+  - Using enumerated types (ENUMs) for controlled values (e.g., `internal_material_type`, `emission_class_type`, `transmission_type`)
+  - Validating complex data formats through functions and triggers (e.g., min-max validation for `consumption` and `emissions` fields)
 - Storage
   - Storing and serving all used car images in Supabase Storage
   - Organizing folders with deterministic naming
 - Security
   - Enforcing Row-Level Security (RLS) to restrict access at row level
-  - Blocking insert/update/delete operations client-side
-  - Defining fine-grained access rules through SQL-based policies
+  - Defining access policies to read and write data
 
 ---
 
