@@ -526,7 +526,7 @@ The application implements search engine optimization to improve discoverability
 - Actionable insights to optimize UX and app performance
 - Privacy-friendly, cookie-free solution
 
-📊 **Monitoring features** (via Vercel Logs, Supabase Logs and Error Logging) includes:  
+📊 **Monitoring features** (via Vercel Logs, Supabase Logs and error logging) includes:  
 - Serverless functions monitoring through:
   - Vercel Logs
   - Automatic errors and failed requests Logging, supporting rapid debugging and issue resolution 
@@ -616,6 +616,17 @@ The application implements search engine optimization to improve discoverability
 > - Time (timestamp of the request)    
 > - Event message (raw log message)  
 > - Metadata (key information including backend type, command type, database name, user name, process ID, session ID, session start time, client connection, SQL state code, and virtual transaction ID)   
+</details>
+
+<details>
+<summary><strong>Storage Logs Details</strong></summary>
+
+<br>
+
+> - Log ID (unique identifier of the log event)  
+> - Time (timestamp of the request)    
+> - Event message (raw log message)  
+> - Metadata (key information including request method, path, client IP, trace ID, project/tenant, region, response status, response headers, server info, log level, and response time)   
 </details>
 </details>
 <br>
