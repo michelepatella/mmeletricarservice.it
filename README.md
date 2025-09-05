@@ -22,7 +22,7 @@
   - [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [🔐 Environment Variables](#-environment-variables)
-- [🔍 SEO, Analytics & Monitoring](#-seo-analytics--monitoring)
+- [🖥️ SEO, Analytics & Monitoring](#%EF%B8%8F-seo-analytics--monitoring)
 - [📈 Metrics](#-metrics)
 - [🌎 Impact on the Real World](#-impact-on-the-real-world)
 
@@ -509,11 +509,11 @@ Used in CI/CD pipeline.
 
 <br>
 
-## 🔍 SEO, Analytics & Monitoring
+## 🖥️ SEO, Analytics & Monitoring
 
 The application implements search engine optimization to improve discoverability and ranking, and analytics to monitor user engagement and performance, without compromising user privacy.
 
-📈 **SEO features** includes:
+🔍 **SEO features** includes:
 
 - Clean, human-readable URLs
 - Keyword-optimized content
@@ -552,8 +552,9 @@ The application implements search engine optimization to improve discoverability
 > - Devices (types of devices used to access the application)
 > - Browsers (web browsers used by the visitors)
 > - Operating systems (operating system of the devices accessing the application)
-
 </details>
+
+<br>
 
 <details>
 <summary><strong>Vercel Logs Details</strong></summary>
@@ -584,6 +585,38 @@ The application implements search engine optimization to improve discoverability
 > - Message (log or function messages, if any)  
 > - Advanced tracking (trace ID, session ID, invocation ID, and instance ID)  
 > - Concurrency (number of concurrent function instances)
+</details>
+
+<details>
+<summary><strong>Supabase Logs Details</strong></summary>
+
+<br>
+
+<details>
+<summary><strong>API Gateway Logs Details</strong></summary>
+
+<br>
+
+> - Log ID (unique identifier of the log event)  
+> - Time (timestamp of the request)  
+> - Request method (HTTP method)   
+> - Status (HTTP response code)  
+> - Path (request path)  
+> - User agent (client user agent)  
+> - Event message (raw log message)  
+> - Metadata (key information including client IP, geolocation, cache status, TLS/security info, load balancer/gateway details)   
+</details>
+
+<details>
+<summary><strong>Postgres Logs Details</strong></summary>
+
+<br>
+
+> - Log ID (unique identifier of the log event)  
+> - Time (timestamp of the request)    
+> - Event message (raw log message)  
+> - Metadata (key information including backend type, command type, database name, user name, process ID, session ID, session start time, client connection, SQL state code, and virtual transaction ID)   
+</details>
 </details>
 <br>
 
