@@ -737,7 +737,7 @@ The application implements search engine optimization to improve discoverability
 
 <details>
 <summary>
-<strong>🧹Code Quality</strong> 
+<strong>🛠️ Code Metrics</strong> 
 <br>
 <em>Metrics by SonarQube Cloud.</em>
 </summary>
