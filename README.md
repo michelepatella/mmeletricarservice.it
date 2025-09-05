@@ -511,7 +511,7 @@ Used in CI/CD pipeline.
 
 ## 🖥️ SEO, Analytics & Monitoring
 
-The application implements search engine optimization to improve discoverability and ranking, and analytics to monitor user engagement and performance, without compromising user privacy.
+The application implements search engine optimization to improve discoverability and ranking, analytics to monitor user engagement and performance, and monitoring to track system operations and backend activity, all while preserving user privacy.  
 
 🔍 **SEO features** includes:
 
@@ -529,7 +529,7 @@ The application implements search engine optimization to improve discoverability
 📊 **Monitoring features** (via Vercel Logs, Supabase Logs and error logging) includes:  
 - Serverless functions monitoring through:
   - Vercel Logs
-  - Automatic errors and failed requests Logging, supporting rapid debugging and issue resolution 
+  - Automatic errors and failed requests logging, supporting rapid debugging and issue resolution 
 - Backend / BaaS monitoring through Supabase Logs, including:
   - API Gateway Logs
   - Postgres Logs
@@ -593,7 +593,7 @@ The application implements search engine optimization to improve discoverability
 <br>
 
 <details>
-<summary><strong>API Gateway Logs Details</strong></summary>
+<summary>API Gateway Logs Details</summary>
 
 <br>
 
@@ -608,7 +608,7 @@ The application implements search engine optimization to improve discoverability
 </details>
 
 <details>
-<summary><strong>Postgres Logs Details</strong></summary>
+<summary>Postgres Logs Details</summary>
 
 <br>
 
@@ -619,7 +619,7 @@ The application implements search engine optimization to improve discoverability
 </details>
 
 <details>
-<summary><strong>Storage Logs Details</strong></summary>
+<summary>Storage Logs Details</summary>
 
 <br>
 
