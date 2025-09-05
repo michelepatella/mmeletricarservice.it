@@ -422,8 +422,6 @@ It provides the backend infrastructure of the application, leveraging Supabase a
 
 Environment variables manage all sensitive configurations and secrets of the application.
 
-Sources of environment variables:
-
 <details>
 <summary><strong>📝 Local .env file</strong>  
   
