@@ -5,7 +5,7 @@
       mmeletricarservice.it
     </a>
   </h1>
-  <h4>Built by Michele Patella.</h4>
+  <h4>Built end-to-end by Michele Patella.</h4>
 </div>
 
 <br>
