@@ -416,8 +416,10 @@ It is responsible for:
 
 <details>
 <summary><strong>Database Schema</strong></summary>
+
 <br>
-<img width="560" height="605" alt="image" src="https://github.com/user-attachments/assets/c778d06e-e4ff-4bef-a964-33197f9c52b3" />
+
+> <img width="560" height="605" alt="image" src="https://github.com/user-attachments/assets/c778d06e-e4ff-4bef-a964-33197f9c52b3" />
 
 </details>
   
@@ -476,34 +478,34 @@ Sources of environment variables:
 <details>
 <summary><strong>📝 Local .env file</strong>  
   
-Used in development and ignored by version control.
+_Used in development and ignored by version control._
 </summary>
 
-> - `DATABASE_URL`
-> - `SUPABASE_ANON_KEY`
+> - Database URL
+> - Supabase anon key
 
 </details>
 
 <details>
 <summary><strong>☁️ Vercel Environment Variables</strong>
 
-Used for production deployments.
+_Used for production deployments._
 
 </summary>
 
-> - `DATABASE_URL`
-> - `SUPABASE_ANON_KEY`
+> - Database URL
+> - Supabase anon key
 
 </details>
 
 <details>
 <summary><strong>🔒 GitHub Actions Secrets</strong>
 
-Used in CI/CD pipeline.
+_Used in CI/CD pipeline._
 
 </summary>
 
-> - `VERCEL_TOKEN`
+> - Vercel token
 
 </details>
 
