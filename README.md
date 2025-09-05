@@ -26,6 +26,7 @@
 - [🌎 Impact on the Real World](#-impact-on-the-real-world)
 
 <br>
+
 <br>
 
 ## 👁️ Overview
@@ -50,6 +51,7 @@ Launched in February 2025.
 The web application is available at [mmeletricarservice.it](https://mmeletricarservice.it).
 
 <br>
+
 <br>
 
 ## 🛠️ Tech Stack
@@ -75,6 +77,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 | **Analytics**                     | Vercel Analytics                                          |
 
 <br>
+
 <br>
 
 ## 📌 Software Engineering Principles
@@ -203,6 +206,7 @@ How this project follows software engineering best practices.
 </details>
 
 <br>
+
 <br>
 
 ## 🏗️ System Architecture
@@ -414,6 +418,7 @@ It provides the backend infrastructure of the application, leveraging Supabase a
 </details>
   
 <br>
+
 <br>
 
 ## 💻 From Development to Deployment 🚀
@@ -457,7 +462,7 @@ _Used in CI/CD pipeline._
 </details>
 
 <br>
-
+   
 ### 🛠️ Development Environment & Version Control
 The application is built with Node.js and leverages npm as package manager to install dependencies (`npm install`), manage libraries, and run scripts.  
 
@@ -473,7 +478,7 @@ The project uses Git for version control, hosted on GitHub.
 
 <details>
 <summary><strong>npm scripts</strong></summary>
-
+  
 <br>
 
 > - `npm run start`  
@@ -533,6 +538,7 @@ Triggered after successful CI:
 </details>
 
 <br>
+
 <br>
 
 ## 🖥️ SEO, Analytics & Monitoring 
@@ -564,7 +570,9 @@ Triggered after successful CI:
    - Postgres Logs
    - Storage Logs
 
-All while preserving user privacy.
+<br> 
+
+<strong>All while preserving user privacy.</strong>
 
 ---
 
@@ -667,6 +675,7 @@ All while preserving user privacy.
 </details>
 
 <br>
+
 <br>
 
 ## 📈 Metrics
@@ -840,6 +849,7 @@ All while preserving user privacy.
 </details>
 
 <br>
+
 <br>
 
 ## 🌎 Impact on the Real World
@@ -869,6 +879,7 @@ The platform shows how smart design and technology can boost customer experience
 >  Optimized inventory.
 
 <br>
+
 <br>
 
 Last update: _June 24, 2025_
