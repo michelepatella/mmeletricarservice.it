@@ -264,7 +264,7 @@ It is responsible for:
 
 🎯 **Role**  
 They implement the API endpoints of the application.  
-They provide modular, scalable, and stateless backend logic with minimal overhead.
+They provide modular, scalable, and stateless backend logic.
 
 🛡️ **Responsibility**  
 They are responsible for:
