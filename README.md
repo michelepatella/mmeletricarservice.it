@@ -420,7 +420,7 @@ It provides the backend infrastructure of the application, leveraging Supabase a
 
 ### 🔐 Environment Variables
 
-Environment variables manage all sensitive configurations and secrets of the application.
+They manage all sensitive configurations and secrets of the application.
 
 <details>
 <summary><strong>📝 Local .env file</strong>  
