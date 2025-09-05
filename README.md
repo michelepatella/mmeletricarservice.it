@@ -417,7 +417,7 @@ It is responsible for:
 <details>
 <summary><strong>Database Schema</strong></summary>
 <br>
-<img width="607" height="658" alt="image" src="https://github.com/user-attachments/assets/d6ca57c2-d858-430f-99e3-b59570cae5a1" />
+<img width="560" height="605" alt="image" src="https://github.com/user-attachments/assets/c778d06e-e4ff-4bef-a964-33197f9c52b3" />
 
 </details>
   
