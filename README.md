@@ -560,30 +560,30 @@ The application implements search engine optimization to improve discoverability
 
 <br>
 
-> - **Time** – Timestamp of the request  
-> - **Environment** – Deployment environment (production, preview, development)  
-> - **Branch** – Git branch of the deployment  
-> - **Project ID** – Vercel project identifier   
-> - **Function** – Name of the serverless function invoked  
-> - **Type** – Log type (request, function, etc.)  
-> - **Level** – Log level (info, error, warning)  
-> - **Status** – HTTP response code  
-> - **Request Method** – HTTP method (GET, POST, etc.)  
-> - **Path** – Request path  
-> - **Query Parameters** – Request query string  
-> - **Request ID** – Unique request identifier  
-> - **Host** – Server host handling the request  
-> - **User Agent** – Client user agent  
-> - **Vercel Cache** – Cache status (hit/miss)  
-> - **Region** – Execution region  
-> - **Duration (ms)** – Execution time of the function  
-> - **Max Memory Used (MB)** – Peak memory consumption  
-> - **Memory Size (MB)** – Memory allocated to the function  
-> - **Deployment Domain** – Deployment domain  
-> - **Deployment ID** – Deployment identifier  
-> - **Message** – Log or function messages (if any)  
-> - **Advanced Tracking** – Trace ID, Session ID, Invocation ID, and Instance ID  
-> - **Concurrency** – Number of concurrent function instances
+> - Time (timestamp of the request)  
+> - Environment (deployment environment)  
+> - Branch (git branch of the deployment)  
+> - Project ID (Vercel project identifier)   
+> - Function (name of the serverless function invoked)  
+> - Type (log type)  
+> - Level (log level)  
+> - Status (HTTP response code)  
+> - Request method (HTTP method)  
+> - Path (request path)  
+> - Query parameters (request query string)  
+> - Request ID (unique request identifier)  
+> - Host (server host handling the request)  
+> - User agent (client user agent)  
+> - Vercel cache (cache status)  
+> - Region (execution region)  
+> - Duration (execution time of the function in ms)  
+> - Max memory used (Peak memory consumption in MB)   
+> - Memory size (memory allocated to the function in MB)   
+> - Deployment domain (deployment domain)  
+> - Deployment ID (deployment identifier)    
+> - Message (log or function messages, if any)  
+> - Advanced tracking (trace ID, session ID, invocation ID, and instance ID)  
+> - Concurrency (number of concurrent function instances)
 </details>
 <br>
 
