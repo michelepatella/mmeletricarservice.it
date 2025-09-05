@@ -488,8 +488,7 @@ The project uses Git for version control, hosted on GitHub.
 > - `npm run start`  
 >   <em>Starts the local development server (only frontend, no serverless functions).</em>
 > - `npm run build`  
->   <em>Creates an optimized production build of the app.</em>  
->
+>   <em>Creates an optimized production build of the app.</em>
 > - `npm run test`  
 >   <em>Runs all test suites.</em>
 > - `npm run code:check`  
