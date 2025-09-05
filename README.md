@@ -5,7 +5,7 @@
       mmeletricarservice.it
     </a>
   </h1>
-  <h4>Designed, Developed, and Documented by Michele Patella.</h4>
+  <h4>Built by Michele Patella.</h4>
 </div>
 
 <br>
