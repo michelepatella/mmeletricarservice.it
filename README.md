@@ -577,7 +577,7 @@ The application implements search engine optimization to improve discoverability
 > - Vercel cache (cache status)  
 > - Region (execution region)  
 > - Duration (execution time of the function in ms)  
-> - Max memory used (Peak memory consumption in MB)   
+> - Max memory used (peak memory consumption in MB)   
 > - Memory size (memory allocated to the function in MB)   
 > - Deployment domain (deployment domain)  
 > - Deployment ID (deployment identifier)    
