@@ -20,18 +20,18 @@
   - [🔄 Data Fetching & Caching](#-data-fetching--caching)
   - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
   - [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
-- [📦 Deployment & CI/CD](#-deployment--cicd)
-- [🔐 Environment Variables](#-environment-variables)
+- [💻 From Development to Deployment 🚀](#-from-development-to-deployment-)
 - [🖥️ SEO, Analytics & Monitoring](#%EF%B8%8F-seo-analytics--monitoring)
 - [📈 Metrics](#-metrics)
 - [🌎 Impact on the Real World](#-impact-on-the-real-world)
 
 <br>
+<br>
 
 ## 👁️ Overview
 
 📌 **What**  
-A production-ready, full-stack web application developed for MM Eletricar Service, an Italian car workshop and used car dealership.
+A full-stack web application for MM Eletricar Service, deployed and live, serving an Italian car workshop and used car dealership.
 <br>
 <br>
 ❓ **Why**  
@@ -47,8 +47,9 @@ Launched in February 2025.
 <br>
 <br>
 🌎 **Where**  
-The web application is available at https://mmeletricarservice.it
+The web application is available at [mmeletricarservice.it](https://mmeletricarservice.it).
 
+<br>
 <br>
 
 ## 🛠️ Tech Stack
@@ -64,19 +65,21 @@ The web application is available at https://mmeletricarservice.it
 | **Fetching & Caching**            | React Query                                               |
 | **API Communication**             | Serverless API (Vercel Functions)                         |
 | **Backend-as-a-Service**          | Supabase (PostgreSQL, Storage)                            |
-| **Testing**                       | Jest, React Testing Library                               |
-| **Development & Version Control** | Node.js, npm, Git, GitHub                                 |
+| **Development Environment**       | Node.js, npm                                              |
+| **Version Control**               | Git, GitHub                                               |
 | **Code Quality**                  | ESLint, Prettier, SonarQube                               |
+| **Testing**                       | Jest, React Testing Library                               |
 | **Deployment & CI/CD**            | Vercel, GitHub Actions                                    |
 | **Environment Variables**         | .env, Vercel Environment Variables, GitHub Action Secrets |
 | **Monitoring**                    | Vercel Logs, Supabase Logs, Error Logging                 |
 | **Analytics**                     | Vercel Analytics                                          |
 
 <br>
+<br>
 
 ## 📌 Software Engineering Principles
 
-This project follows the best practices of software engineering:
+How this project follows software engineering best practices.
 
 <details>
 <summary><strong>Abstraction</strong></summary>
@@ -200,10 +203,11 @@ This project follows the best practices of software engineering:
 </details>
 
 <br>
+<br>
 
 ## 🏗️ System Architecture
 
-The system is built on a **Jamstack architecture** shown below:
+The system is built on a Jamstack architecture:
 
 <img width="510" height="724" alt="image" src="https://github.com/user-attachments/assets/1b4d45ea-a60e-4c9a-8e45-011ec04bb873" />
 
@@ -232,48 +236,37 @@ The system is built on a **Jamstack architecture** shown below:
 ### 🌐 Client-side
 
 🎯 **Role**  
-It represents the UI of the application, developed as a Single-Page Application.  
-It represents the frontend of the system: everything the user sees and interacts with.
+It implements the frontend of the application as a Single-Page Application (SPA).  
 
 🛡️ **Responsibility**  
-It is responsible for:
-
-- UI rendering (through _React Components_)
-- User interactions management
-- Data fetching and caching (via its internal _Data Fetching & Caching_ layer)
+- Rendering the UI (through _React Components_)
+- Managing user interactions  
+- Fetching and caching data (via its internal _Data Fetching & Caching_ layer)
 
 <br>
 
 ### 🔄 Data Fetching & Caching
 
 🎯 **Role**  
-It serves as the dedicated layer to manage all data fetching and caching in the client-side application.  
-It ensures efficient, reliable, and up-to-date data delivery.
+It manages client-side data fetching and caching.  
 
 🛡️ **Responsibility**  
-It is responsible for:
-
-- Data fetching using `useQuery`, custom logic and hooks
-- Cache-first retrieval using `STALE_TIME` to minimize unnecessary network requests
-- Query deduplication to prevent simultaneous duplicate requests and reduce server load
-- Error logging when a fetch fails
+- Fetching data using `useQuery`, custom logic and hooks
+- Retrieving from cache first with `STALE_TIME` to minimize network requests  
+- Deduplicating queries to avoid simultaneous duplicate requests
+- Logging errors when a fetch fails
 
 <br>
 
 ### ⚙️ Serverless Functions
 
 🎯 **Role**  
-They implement the API endpoints of the application.  
-They provide modular, scalable, and stateless backend logic.
+They implement API endpoints with modular, scalable, stateless backend logic.
 
 🛡️ **Responsibility**  
-They are responsible for:
-
 - Handling requests in a stateless manner
-- Retrieving data from backend including:
-  - Used cars overview information
-  - Detailed information for a specific used car
-- Centralizing access to backend
+- Retrieving data from backend (used cars overview, specific car details)
+- Centralizing backend access
 
 ---
 
@@ -284,7 +277,7 @@ They are responsible for:
  
 <br>
    
-> - **Description**: Returns an array of used car overview information for each available car, including relevant technical specifications and a presentation image.
+> - **Description**: Returns an array of available used cars with key specs and a presentation image.
 > - **URL**: `/api/usedCarsOverview`
 > - **Method**: `GET`
 > - **Query Params**: `None`
@@ -296,7 +289,7 @@ They are responsible for:
 > | --------- | ------- | ---------------------------------------------------------|
 > | `id`      | Integer | Unique identifier of the used car.                       |
 > | `name`    | String  | Name or model of the used car.                           |
-> | `price`   | Float   | Displayed price in €.                                    |
+> | `price`   | Float   | Price in €.                                              |
 > | `year`    | Integer | Year of registration or manufacturing.                   |
 > | `mileage` | Integer | Kilometers driven.                                       |
 > | `fuel`    | String  | Type of fuel.                                            |
@@ -332,7 +325,7 @@ They are responsible for:
 
 <br>
   
-> - **Description**: Returns all details for a specific used car, including technical specifications and images.
+> - **Description**: Returns full details and images of a specific used car.
 > - **URL**: `/api/usedCarInfo`
 > - **Method**: `GET`
 > - **Query Params**: `id` (ID of the requested used car)
@@ -393,24 +386,21 @@ They are responsible for:
 ### ☁️ Backend / BaaS
 
 🎯 **Role**  
-It provides the backend infrastructure of the application, leveraging Supabase as a Backend-as-a-Service (BaaS) platform.  
-It combines a PostgreSQL relational database and a Storage bucket in a scalable environment.
+It provides the backend infrastructure of the application, leveraging Supabase as a Backend-as-a-Service (BaaS) platform, including a PostgreSQL database and Storage bucket.  
 
 🛡️ **Responsibility**  
-It is responsible for:
-
-- Data management
-  - Managing relational data in a PostgreSQL database
-  - Optimizing query performance with indexes on `id` fields
-  - Enforcing data integrity with foreign key relationships and constraints (`NOT NULL`, `CHECK`)
-  - Using enumerated types (ENUMs) for controlled values (e.g., `internal_material_type`)
-  - Validating complex data formats through functions and triggers (e.g., min-max validation for `consumption` and `emissions` fields)
-- Storage
-  - Storing and serving all used car images in Supabase Storage
-  - Organizing folders with deterministic naming
-- Security
-  - Enforcing Row-Level Security (RLS) to restrict access at row level
-  - Defining access policies to read and write data
+- **Data**
+  - Stores relational data in PostgreSQL  
+  - Optimizes query performance with indexes on `id` fields
+  - Enforces data integrity with foreign keys and constraints (`NOT NULL`, `CHECK`)
+  - Uses enumerated types (ENUMs) for controlled values
+  - Validates complex data formats through functions and triggers
+- **Storage**
+  - Stores and serves used car images
+  - Organizes folders with deterministic naming
+- **Security**
+  - Enforces Row-Level Security (RLS) to restrict access at row level
+  - Defines access policies for reading and writing data
 
 ---
 
@@ -426,52 +416,11 @@ It is responsible for:
 <br>
 <br>
 
-## 📦 Deployment & CI/CD
+## 💻 From Development to Deployment 🚀
 
-The project uses a fully automated pipeline to validate, build, and deploy the application.
+### 🔐 Environment Variables
 
-**🧪 Continuous Integration (CI)**  
-Runs on every push, and pull request to `main`:
-
-> 1. Install dependencies
-> 2. Run linting and Prettier checks
-> 3. Run automated tests
-> 4. Build the project
-
-Additionally, every push to `main` triggers an automatic SonarQube Cloud analysis to monitor code quality.
-
-**🚀 Continuous Deployment (CD)**  
-Triggered after successful CI:
-
-> 1. Install dependencies
-> 2. Build the project
-> 3. Deploy to Vercel
-
-The application is deployed to Vercel, hosting the frontend and serverless functions.
-
----
-
-<details>
-<summary><strong>Deployment Features</strong></summary>
-
-<br>
-  
-> - Domain management
-> - Preview deployments for all branches and pull requests
-> - Versioned deployments with easy rollback to previous stable releases
-> - Management of environment variables
-> - Automatic caching of static content and serverless responses at the edge
-> - Automatic scaling with traffic demand
-> - Security features including firewall
-> - Logs monitoring
-> - Integrated analytics
-</details>
-
-<br>
-
-## 🔐 Environment Variables
-
-Environment variables manage all sensitive configurations and secrets of the application in a secure, scalable, and maintainable way.
+Environment variables manage all sensitive configurations and secrets of the application.
 
 Sources of environment variables:
 
@@ -511,32 +460,115 @@ _Used in CI/CD pipeline._
 
 <br>
 
+### 🛠️ Development Environment & Version Control
+The application is built with Node.js and leverages npm as package manager to install dependencies (`npm install`), manage libraries, and run scripts.  
+
+To run the full local environment (frontend + serverless functions) and simulate the production environment:        
+  
+`vercel dev`
+
+_Note_: This command requires the Vercel CLI.  
+
+The project uses Git for version control, hosted on GitHub.
+
+---
+
+<details>
+<summary><strong>npm scripts</strong></summary>
+
+<br>
+
+> - `npm run start`  
+> <em>Starts the local development server (only frontend, no serverless functions).</em>  
+>  
+> - `npm run build`  
+> <em>Creates an optimized production build of the app.</em>  
+>   
+> - `npm run test`  
+> <em>Runs all test suites.</em>
+>   
+> - `npm run code:check`   
+> <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
+>   
+> - `npm run code:fix`  
+> <em>Automatically fixes linting issues and formats code with Prettier.</em>
+</details>
+
+<br>
+
+### 🚀 Deployment & CI/CD
+The application is deployed to Vercel, hosting the frontend and serverless functions, with a full CI/CD automation:
+
+**🧪 Continuous Integration (CI)**  
+Runs on every push, and pull request to `main`:
+
+> 1. Install dependencies
+> 2. Run linting and Prettier checks
+> 3. Run automated tests
+> 4. Build the project
+
+Additionally, every push to `main` triggers an automatic SonarQube Cloud analysis to monitor code quality.
+
+**🚀 Continuous Deployment (CD)**  
+Triggered after successful CI:
+
+> 1. Install dependencies
+> 2. Build the project
+> 3. Deploy to Vercel
+
+---
+
+<details>
+<summary><strong>Deployment Features</strong></summary>
+
+<br>
+  
+> - Domain management
+> - Preview deployments for all branches and pull requests
+> - Versioned deployments with easy rollback to previous stable releases
+> - Management of environment variables
+> - Automatic caching of static content and serverless responses at the edge
+> - Automatic scaling with traffic demand
+> - Security features including firewall
+> - Logs monitoring
+> - Integrated analytics
+</details>
+
+<br>
+<br>
+
 ## 🖥️ SEO, Analytics & Monitoring
 
-The application implements search engine optimization to improve discoverability and ranking, analytics to monitor user engagement and performance, and monitoring to track system operations and backend activity, all while preserving user privacy.
+The application implements:  
 
-🔍 **SEO features** includes:
-
+🔍 <strong>Search engine optimization</strong>  
+<em>To improve discoverability and ranking.</em> 
 - Clean, human-readable URLs
 - Keyword-optimized content
 - HTTPS for secure connections
 - Embedded Google Maps for local SEO targeting
 - Favicon and consistent branding
 
-📈 **Analytics features** (via Vercel Analytics) includes:
+<br>
 
-- Actionable insights to optimize UX and app performance
+📈 <strong>Analytics</strong>  
+<em>To monitor user engagement and performance.</em> 
+- Actionable insights
 - Privacy-friendly, cookie-free solution
 
-📊 **Monitoring features** (via Vercel Logs, Supabase Logs and error logging) includes:
+<br>
 
+📊 <strong>Monitoring</strong>  
+<em>To track system operations and backend activities.</em> 
 - Serverless functions monitoring through:
-  - Vercel Logs
-  - Automatic errors and failed requests logging, supporting rapid debugging and issue resolution
+   - Vercel Logs
+   - Automatic logging of errors and failed requests for faster debugging
 - Backend / BaaS monitoring through Supabase Logs, including:
-  - API Gateway Logs
-  - Postgres Logs
-  - Storage Logs
+   - API Gateway Logs
+   - Postgres Logs
+   - Storage Logs
+
+All while preserving user privacy.
 
 ---
 
@@ -637,6 +669,8 @@ The application implements search engine optimization to improve discoverability
 
 </details>
 </details>
+
+<br>
 <br>
 
 ## 📈 Metrics
@@ -722,7 +756,7 @@ The application implements search engine optimization to improve discoverability
 
 <details>
 <summary>
-<strong>📦 Deployment & CI/CD Metrics</strong> 
+<strong>🚀 Deployment & CI/CD Metrics</strong> 
 <br>
 <em>Average metrics collected over a 30 days period by Vercel Deployments and GitHub Insights.</em>
 </summary>
@@ -808,11 +842,13 @@ The application implements search engine optimization to improve discoverability
 > <br>
 
 </details>
+
+<br>
 <br>
 
 ## 🌎 Impact on the Real World
 
-The platform demonstrates how thoughtful design and technology can directly improve customer experience and business performance.
+The platform shows how smart design and technology can boost customer experience and business impact.
 
 💻 **Operational Efficiency**
 
