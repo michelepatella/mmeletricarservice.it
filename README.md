@@ -22,7 +22,7 @@
   - [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
 - [📦 Deployment & CI/CD](#-deployment--cicd)
 - [🔐 Environment Variables](#-environment-variables)
-- [🔍 SEO & Analytics](#-seo--analytics)
+- [🔍 SEO, Analytics & Monitoring](#-seo--analytics)
 - [📈 Metrics](#-metrics)
 - [🌎 Impact on the Real World](#-impact-on-the-real-world)
 
@@ -69,7 +69,7 @@ The web application is available at https://mmeletricarservice.it
 | **Code Quality**                  | ESLint, Prettier, SonarQube                               |
 | **Deployment & CI/CD**            | Vercel, GitHub Actions                                    |
 | **Development & Version Control** | Node.js, npm, Git, GitHub                                 |
-| **Monitoring**                    | Vercel Logs, Supabase Logs, Error Tracking                |
+| **Monitoring**                    | Vercel Logs, Supabase Logs, Error Logging                 |
 | **Analytics**                     | Vercel Analytics                                          |
 
 <br>
@@ -509,7 +509,7 @@ Used in CI/CD pipeline.
 
 <br>
 
-## 🔍 SEO & Analytics
+## 🔍 SEO, Analytics & Monitoring
 
 The application implements search engine optimization to improve discoverability and ranking, and analytics to monitor user engagement and performance, without compromising user privacy.
 
@@ -521,10 +521,19 @@ The application implements search engine optimization to improve discoverability
 - Embedded Google Maps for local SEO targeting
 - Favicon and consistent branding
 
-📊 **Analytics features** (via Vercel Analytics) includes:
+📈 **Analytics features** (via Vercel Analytics) includes:
 
 - Actionable insights to optimize UX and app performance
 - Privacy-friendly, cookie-free solution
+
+📊 **Monitoring features** (via Vercel Logs, Supabase Logs and Error Logging) includes:  
+- Serverless functions monitoring through:
+  - Vercel Logs
+  - Automatic errors and failed requests Logging, supporting rapid debugging and issue resolution 
+- Backend / BaaS monitoring through Supabase Logs, including:
+  - API Gateway Logs
+  - Postgres Logs
+  - Storage Logs
 
 ---
 
@@ -544,6 +553,37 @@ The application implements search engine optimization to improve discoverability
 > - Browsers (web browsers used by the visitors)
 > - Operating systems (operating system of the devices accessing the application)
 
+</details>
+
+<details>
+<summary><strong>Vercel Logs Details</strong></summary>
+
+<br>
+
+> - **Time** – Timestamp of the request  
+> - **Environment** – Deployment environment (production, preview, development)  
+> - **Branch** – Git branch of the deployment  
+> - **Project ID** – Vercel project identifier   
+> - **Function** – Name of the serverless function invoked  
+> - **Type** – Log type (request, function, etc.)  
+> - **Level** – Log level (info, error, warning)  
+> - **Status** – HTTP response code  
+> - **Request Method** – HTTP method (GET, POST, etc.)  
+> - **Path** – Request path  
+> - **Query Parameters** – Request query string  
+> - **Request ID** – Unique request identifier  
+> - **Host** – Server host handling the request  
+> - **User Agent** – Client user agent  
+> - **Vercel Cache** – Cache status (hit/miss)  
+> - **Region** – Execution region  
+> - **Duration (ms)** – Execution time of the function  
+> - **Max Memory Used (MB)** – Peak memory consumption  
+> - **Memory Size (MB)** – Memory allocated to the function  
+> - **Deployment Domain** – Deployment domain  
+> - **Deployment ID** – Deployment identifier  
+> - **Message** – Log or function messages (if any)  
+> - **Advanced Tracking** – Trace ID, Session ID, Invocation ID, and Instance ID  
+> - **Concurrency** – Number of concurrent function instances
 </details>
 <br>
 
