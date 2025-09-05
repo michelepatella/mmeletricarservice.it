@@ -18,9 +18,8 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"check": "eslint . && prettier --check .",
-		"fix": "eslint . --fix && prettier --write ."
+		"code:check": "eslint . && prettier --check .",
+		"code:fix": "eslint . --fix && prettier --write ."
 	},
 	"eslintConfig": {
 		"extends": [

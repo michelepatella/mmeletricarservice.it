@@ -26,7 +26,7 @@ jobs:
         run: npm install
 
       - name: Lint + Prettier check
-        run: npm run check
+        run: npm run code:check
 
       - name: Run tests
         run: npm test -- --watchAll=false
