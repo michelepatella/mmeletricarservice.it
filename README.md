@@ -64,11 +64,11 @@ The web application is available at https://mmeletricarservice.it
 | **Fetching & Caching**            | React Query                                               |
 | **API Communication**             | Serverless API (Vercel Functions)                         |
 | **Backend-as-a-Service**          | Supabase (PostgreSQL, Storage)                            |
-| **Environment Variables**         | .env, Vercel Environment Variables, GitHub Action Secrets |
 | **Testing**                       | Jest, React Testing Library                               |
-| **Deployment & CI/CD**            | Vercel, GitHub Actions                                    |
 | **Development & Version Control** | Node.js, npm, Git, GitHub                                 |
 | **Code Quality**                  | ESLint, Prettier, SonarQube                               |
+| **Deployment & CI/CD**            | Vercel, GitHub Actions                                    |
+| **Environment Variables**         | .env, Vercel Environment Variables, GitHub Action Secrets |
 | **Monitoring**                    | Vercel Logs, Supabase Logs, Error Logging                 |
 | **Analytics**                     | Vercel Analytics                                          |
 
