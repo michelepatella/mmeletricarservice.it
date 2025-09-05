@@ -56,25 +56,25 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 ## 🛠️ Tech Stack
 
-| Layer                             | Technology                                                |
-| --------------------------------- | --------------------------------------------------------- |
-| **Frontend**                      | React.js                                                  |
-| **UI Library**                    | Ant Design                                                |
-| **Styling**                       | CSS, Custom Design Tokens                                 |
-| **Animations**                    | CSS, Framer Motion                                        |
-| **Routing**                       | React Router (HashRouter)                                 |
-| **State Management**              | React Hooks, Custom Hooks                                 |
-| **Fetching & Caching**            | React Query                                               |
-| **API Communication**             | Serverless API (Vercel Functions)                         |
-| **Backend-as-a-Service**          | Supabase (PostgreSQL, Storage)                            |
-| **Development Environment**       | Node.js, npm                                              |
-| **Version Control**               | Git, GitHub                                               |
-| **Code Quality**                  | ESLint, Prettier, SonarQube                               |
-| **Testing**                       | Jest, React Testing Library                               |
-| **Deployment & CI/CD**            | Vercel, GitHub Actions                                    |
-| **Environment Variables**         | .env, Vercel Environment Variables, GitHub Action Secrets |
-| **Monitoring**                    | Vercel Logs, Supabase Logs, Error Logging                 |
-| **Analytics**                     | Vercel Analytics                                          |
+| Layer                       | Technology                                                |
+| --------------------------- | --------------------------------------------------------- |
+| **Frontend**                | React.js                                                  |
+| **UI Library**              | Ant Design                                                |
+| **Styling**                 | CSS, Custom Design Tokens                                 |
+| **Animations**              | CSS, Framer Motion                                        |
+| **Routing**                 | React Router (HashRouter)                                 |
+| **State Management**        | React Hooks, Custom Hooks                                 |
+| **Fetching & Caching**      | React Query                                               |
+| **API Communication**       | Serverless API (Vercel Functions)                         |
+| **Backend-as-a-Service**    | Supabase (PostgreSQL, Storage)                            |
+| **Development Environment** | Node.js, npm                                              |
+| **Version Control**         | Git, GitHub                                               |
+| **Code Quality**            | ESLint, Prettier, SonarQube                               |
+| **Testing**                 | Jest, React Testing Library                               |
+| **Deployment & CI/CD**      | Vercel, GitHub Actions                                    |
+| **Environment Variables**   | .env, Vercel Environment Variables, GitHub Action Secrets |
+| **Monitoring**              | Vercel Logs, Supabase Logs, Error Logging                 |
+| **Analytics**               | Vercel Analytics                                          |
 
 <br>
 
@@ -240,11 +240,12 @@ The system is built on a Jamstack architecture:
 ### 🌐 Client-side
 
 🎯 **Role**  
-It implements the frontend of the application as a Single-Page Application (SPA).  
+It implements the frontend of the application as a Single-Page Application (SPA).
 
-🛡️ **Responsibility**  
+🛡️ **Responsibility**
+
 - Rendering the UI (through _React Components_)
-- Managing user interactions  
+- Managing user interactions
 - Fetching and caching data (via its internal _Data Fetching & Caching_ layer)
 
 <br>
@@ -252,11 +253,12 @@ It implements the frontend of the application as a Single-Page Application (SPA)
 ### 🔄 Data Fetching & Caching
 
 🎯 **Role**  
-It manages client-side data fetching and caching.  
+It manages client-side data fetching and caching.
 
-🛡️ **Responsibility**  
+🛡️ **Responsibility**
+
 - Fetching data using `useQuery`, custom logic and hooks
-- Retrieving from cache first with `STALE_TIME` to minimize network requests  
+- Retrieving from cache first with `STALE_TIME` to minimize network requests
 - Deduplicating queries to avoid simultaneous duplicate requests
 - Logging errors when a fetch fails
 
@@ -267,7 +269,8 @@ It manages client-side data fetching and caching.
 🎯 **Role**  
 They implement API endpoints with modular, scalable, stateless backend logic.
 
-🛡️ **Responsibility**  
+🛡️ **Responsibility**
+
 - Handling requests in a stateless manner
 - Retrieving data from backend (used cars overview, specific car details)
 - Centralizing backend access
@@ -390,11 +393,12 @@ They implement API endpoints with modular, scalable, stateless backend logic.
 ### ☁️ Backend / BaaS
 
 🎯 **Role**  
-It provides the backend infrastructure of the application, leveraging Supabase as a Backend-as-a-Service (BaaS) platform, including a PostgreSQL database and Storage bucket.  
+It provides the backend infrastructure of the application, leveraging Supabase as a Backend-as-a-Service (BaaS) platform, including a PostgreSQL database and Storage bucket.
 
-🛡️ **Responsibility**  
+🛡️ **Responsibility**
+
 - **Data**
-  - Stores relational data in PostgreSQL  
+  - Stores relational data in PostgreSQL
   - Optimizes query performance with indexes on `id` fields
   - Enforces data integrity with foreign keys and constraints (`NOT NULL`, `CHECK`)
   - Uses enumerated types (ENUMs) for controlled values
@@ -464,13 +468,13 @@ _Used in CI/CD pipeline._
 <br>
    
 ### 🛠️ Development Environment & Version Control
-The application is built with Node.js and leverages npm as package manager to install dependencies (`npm install`), manage libraries, and run scripts.  
+The application is built with Node.js and leverages npm as package manager to install dependencies (`npm install`), manage libraries, and run scripts.
 
-To run the full local environment (frontend + serverless functions) and simulate the production environment:        
-  
+To run the full local environment (frontend + serverless functions) and simulate the production environment:
+
 `vercel dev`
 
-_Note_: This command requires the Vercel CLI.  
+_Note_: This command requires the Vercel CLI.
 
 The project uses Git for version control, hosted on GitHub.
 
@@ -482,24 +486,23 @@ The project uses Git for version control, hosted on GitHub.
 <br>
 
 > - `npm run start`  
-> <em>Starts the local development server (only frontend, no serverless functions).</em>  
->  
+>   <em>Starts the local development server (only frontend, no serverless functions).</em>
 > - `npm run build`  
-> <em>Creates an optimized production build of the app.</em>  
->   
+>   <em>Creates an optimized production build of the app.</em>  
+>
 > - `npm run test`  
-> <em>Runs all test suites.</em>
->   
-> - `npm run code:check`   
-> <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
->   
+>   <em>Runs all test suites.</em>
+> - `npm run code:check`  
+>   <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
 > - `npm run code:fix`  
-> <em>Automatically fixes linting issues and formats code with Prettier.</em>
+>   <em>Automatically fixes linting issues and formats code with Prettier.</em>
+
 </details>
 
 <br>
 
 ### 🚀 Deployment & CI/CD
+
 The application is deployed to Vercel, hosting the frontend and serverless functions, with a full CI/CD automation:
 
 **🧪 Continuous Integration (CI)**  
@@ -541,10 +544,11 @@ Triggered after successful CI:
 
 <br>
 
-## 🖥️ SEO, Analytics & Monitoring 
+## 🖥️ SEO, Analytics & Monitoring
 
 🔍 <strong>Search engine optimization</strong>  
-<em>To improve discoverability and ranking.</em> 
+<em>To improve discoverability and ranking.</em>
+
 - Clean, human-readable URLs
 - Keyword-optimized content
 - HTTPS for secure connections
@@ -554,23 +558,25 @@ Triggered after successful CI:
 <br>
 
 📈 <strong>Analytics</strong>  
-<em>To monitor user engagement and performance.</em> 
+<em>To monitor user engagement and performance.</em>
+
 - Actionable insights
 - Privacy-friendly, cookie-free solution
 
 <br>
 
 📊 <strong>Monitoring</strong>  
-<em>To track system operations and backend activities.</em> 
-- Serverless functions monitoring through:
-   - Vercel Logs
-   - Automatic logging of errors and failed requests for faster debugging
-- Backend / BaaS monitoring through Supabase Logs, including:
-   - API Gateway Logs
-   - Postgres Logs
-   - Storage Logs
+<em>To track system operations and backend activities.</em>
 
-<br> 
+- Serverless functions monitoring through:
+  - Vercel Logs
+  - Automatic logging of errors and failed requests for faster debugging
+- Backend / BaaS monitoring through Supabase Logs, including:
+  - API Gateway Logs
+  - Postgres Logs
+  - Storage Logs
+
+<br>
 
 <strong>All while preserving user privacy.</strong>
 
