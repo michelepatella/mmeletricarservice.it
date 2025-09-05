@@ -511,7 +511,7 @@ Used in CI/CD pipeline.
 
 ## 🖥️ SEO, Analytics & Monitoring
 
-The application implements search engine optimization to improve discoverability and ranking, analytics to monitor user engagement and performance, and monitoring to track system operations and backend activity, all while preserving user privacy.  
+The application implements search engine optimization to improve discoverability and ranking, analytics to monitor user engagement and performance, and monitoring to track system operations and backend activity, all while preserving user privacy.
 
 🔍 **SEO features** includes:
 
@@ -526,10 +526,11 @@ The application implements search engine optimization to improve discoverability
 - Actionable insights to optimize UX and app performance
 - Privacy-friendly, cookie-free solution
 
-📊 **Monitoring features** (via Vercel Logs, Supabase Logs and error logging) includes:  
+📊 **Monitoring features** (via Vercel Logs, Supabase Logs and error logging) includes:
+
 - Serverless functions monitoring through:
   - Vercel Logs
-  - Automatic errors and failed requests logging, supporting rapid debugging and issue resolution 
+  - Automatic errors and failed requests logging, supporting rapid debugging and issue resolution
 - Backend / BaaS monitoring through Supabase Logs, including:
   - API Gateway Logs
   - Postgres Logs
@@ -552,6 +553,7 @@ The application implements search engine optimization to improve discoverability
 > - Devices (types of devices used to access the application)
 > - Browsers (web browsers used by the visitors)
 > - Operating systems (operating system of the devices accessing the application)
+
 </details>
 
 <br>
@@ -561,30 +563,31 @@ The application implements search engine optimization to improve discoverability
 
 <br>
 
-> - Time (timestamp of the request)  
-> - Environment (deployment environment)  
-> - Branch (git branch of the deployment)  
-> - Project ID (Vercel project identifier)   
-> - Function (name of the serverless function invoked)  
-> - Type (log type)  
-> - Level (log level)  
-> - Status (HTTP response code)  
-> - Request method (HTTP method)  
-> - Path (request path)  
-> - Query parameters (request query string)  
-> - Request ID (unique request identifier)  
-> - Host (server host handling the request)  
-> - User agent (client user agent)  
-> - Vercel cache (cache status)  
-> - Region (execution region)  
-> - Duration (execution time of the function in ms)  
-> - Max memory used (peak memory consumption in MB)   
-> - Memory size (memory allocated to the function in MB)   
-> - Deployment domain (deployment domain)  
-> - Deployment ID (deployment identifier)    
-> - Message (log or function messages, if any)  
-> - Advanced tracking (trace ID, session ID, invocation ID, and instance ID)  
+> - Time (timestamp of the request)
+> - Environment (deployment environment)
+> - Branch (git branch of the deployment)
+> - Project ID (Vercel project identifier)
+> - Function (name of the serverless function invoked)
+> - Type (log type)
+> - Level (log level)
+> - Status (HTTP response code)
+> - Request method (HTTP method)
+> - Path (request path)
+> - Query parameters (request query string)
+> - Request ID (unique request identifier)
+> - Host (server host handling the request)
+> - User agent (client user agent)
+> - Vercel cache (cache status)
+> - Region (execution region)
+> - Duration (execution time of the function in ms)
+> - Max memory used (peak memory consumption in MB)
+> - Memory size (memory allocated to the function in MB)
+> - Deployment domain (deployment domain)
+> - Deployment ID (deployment identifier)
+> - Message (log or function messages, if any)
+> - Advanced tracking (trace ID, session ID, invocation ID, and instance ID)
 > - Concurrency (number of concurrent function instances)
+
 </details>
 
 <details>
@@ -597,14 +600,15 @@ The application implements search engine optimization to improve discoverability
 
 <br>
 
-> - Log ID (unique identifier of the log event)  
-> - Time (timestamp of the request)  
-> - Request method (HTTP method)   
-> - Status (HTTP response code)  
-> - Path (request path)  
-> - User agent (client user agent)  
-> - Event message (raw log message)  
-> - Metadata (key information including client IP, geolocation, cache status, TLS/security info, load balancer/gateway details)   
+> - Log ID (unique identifier of the log event)
+> - Time (timestamp of the request)
+> - Request method (HTTP method)
+> - Status (HTTP response code)
+> - Path (request path)
+> - User agent (client user agent)
+> - Event message (raw log message)
+> - Metadata (key information including client IP, geolocation, cache status, TLS/security info, load balancer/gateway details)
+
 </details>
 
 <details>
@@ -612,10 +616,11 @@ The application implements search engine optimization to improve discoverability
 
 <br>
 
-> - Log ID (unique identifier of the log event)  
-> - Time (timestamp of the request)    
-> - Event message (raw log message)  
-> - Metadata (key information including backend type, command type, database name, user name, process ID, session ID, session start time, client connection, SQL state code, and virtual transaction ID)   
+> - Log ID (unique identifier of the log event)
+> - Time (timestamp of the request)
+> - Event message (raw log message)
+> - Metadata (key information including backend type, command type, database name, user name, process ID, session ID, session start time, client connection, SQL state code, and virtual transaction ID)
+
 </details>
 
 <details>
@@ -623,10 +628,11 @@ The application implements search engine optimization to improve discoverability
 
 <br>
 
-> - Log ID (unique identifier of the log event)  
-> - Time (timestamp of the request)    
-> - Event message (raw log message)  
-> - Metadata (key information including request method, path, client IP, trace ID, project/tenant, region, response status, response headers, server info, log level, and response time)   
+> - Log ID (unique identifier of the log event)
+> - Time (timestamp of the request)
+> - Event message (raw log message)
+> - Metadata (key information including request method, path, client IP, trace ID, project/tenant, region, response status, response headers, server info, log level, and response time)
+
 </details>
 </details>
 <br>
