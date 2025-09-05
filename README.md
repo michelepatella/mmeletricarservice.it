@@ -403,6 +403,8 @@ It is responsible for:
   - Managing relational data in a PostgreSQL database
   - Optimizing query performance with indexes on `id` fields
   - Enforcing data integrity with foreign key relationships and constraints (`NOT NULL`, `CHECK`)
+  - Using enumerated types (ENUMs) for controlled values
+  - Validating complex data formats through functions and triggers
   - Ensuring consistency by handling cascading deletes with `ON DELETE CASCADE`
 - Storage
   - Storing and serving all used car images in Supabase Storage
