@@ -6,7 +6,7 @@
 				"url": ["https://mmeletricarservice.it"],
 				"settings": {
 					"chromeFlags": "--headless",
-					"throttlingMethod": "provided",
+					"throttlingMethod": "simulate",
 					"emulatedFormFactor": "mobile"
 				}
 			},
@@ -15,7 +15,7 @@
 				"url": ["https://mmeletricarservice.it"],
 				"settings": {
 					"chromeFlags": "--headless",
-					"throttlingMethod": "provided",
+					"throttlingMethod": "simulate",
 					"emulatedFormFactor": "desktop"
 				}
 			}
