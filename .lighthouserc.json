@@ -7,7 +7,7 @@
 				"startServerCommand": "",
 				"settings": {
 					"chromeFlags": "--headless",
-					"throttlingMethod": "simulate",
+					"throttlingMethod": "provided",
 					"emulatedFormFactor": "mobile"
 				}
 			},
@@ -17,7 +17,7 @@
 				"startServerCommand": "",
 				"settings": {
 					"chromeFlags": "--headless",
-					"throttlingMethod": "simulate",
+					"throttlingMethod": "provided",
 					"emulatedFormFactor": "desktop"
 				}
 			}
