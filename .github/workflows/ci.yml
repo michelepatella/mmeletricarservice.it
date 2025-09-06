@@ -37,6 +37,12 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Start Vercel dev server
+        run: vercel dev --listen 5000 &
+
+      - name: Wait for Vercel dev server
+        run: sleep 5
+
       - name: Install Lighthouse CI
         run: npm install -g @lhci/cli
 
