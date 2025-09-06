@@ -5,7 +5,7 @@
 				"numberOfRuns": 3,
 				"url": ["https://mmeletricarservice.it"],
 				"settings": {
-					"chromeFlags": "--headless --no-sandbox --disable-dev-shm-usage",
+					"chromeFlags": "--headless --no-sandbox --disable-dev-shm-usage --no-gpu",
 					"throttlingMethod": "devtools",
 					"emulatedFormFactor": "mobile",
 					"maxWaitForFcp": 45000,
