@@ -46,6 +46,7 @@ import "../styles/components/other/InfoCard.css";
 import "../styles/components/other/LoadingOutlined.css";
 import "../styles/variables.css";
 import { handleCookieButtonClick } from "./logic/handling/cookieButtonHandler";
+import { COOKIE_BUTTON_ARIA_LABEL } from "./utils/const";
 
 /**
  * App
@@ -70,14 +71,17 @@ function App() {
 				<QueryClientProvider client={queryClient}>
 					<>
 						{/* Cookies button */}
-						<Button
-							className="cookie-button"
-							onClick={() =>
-								handleCookieButtonClick(
-									setIsCookiesBannerVisible
-								)
-							}
-						/>
+						{!isCookiesBannerVisible && (
+							<Button
+								className="cookie-button"
+								aria-label={COOKIE_BUTTON_ARIA_LABEL}
+								onClick={() =>
+									handleCookieButtonClick(
+										setIsCookiesBannerVisible
+									)
+								}
+							/>
+						)}
 
 						{/* Cookie Consent Banner */}
 						<CookieConsentBanner

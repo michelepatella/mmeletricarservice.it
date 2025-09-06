@@ -25,8 +25,9 @@ export const COOKIE_ACCEPT_BUTTON_TEXT =
 export const COOKIE_DECLINE_BUTTON_TEXT =
 	"Rifiuta cookie di terze parti";
 export const COOKIE_EXPIRATION_DATE = 30;
+export const COOKIE_BUTTON_ARIA_LABEL = "Gestisci cookies";
 
-/**------------- Sections -------------**/
+/**------------- Menu -------------**/
 export const SECTIONS = [
 	{
 		id: "home",
@@ -63,6 +64,7 @@ export const SECTIONS = [
 		title: "Contatti",
 	},
 ];
+export const MENU_ARIA_LABEL = "Menu";
 
 /**------------- "Home" texts -------------**/
 export const HOME_TITLE =
