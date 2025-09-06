@@ -67,7 +67,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 | **Fetching & Caching**      | React Query                                               |
 | **API Communication**       | Serverless API (Vercel Functions)                         |
 | **Backend-as-a-Service**    | Supabase (PostgreSQL, Storage)                            |
-| **Development Environment** | Node.js, npm                                              |
+| **Development Environment** | Node.js, npm, Vercel CLI                                  |
 | **Version Control**         | Git, GitHub                                               |
 | **Code Quality**            | ESLint, Prettier, SonarQube                               |
 | **Testing**                 | Jest, React Testing Library                               |
