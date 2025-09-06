@@ -4,7 +4,9 @@
 			{
 				"numberOfRuns": 3,
 				"url": ["https://mmeletricarservice.it/"],
-				"startServerCommand": "",
+				"startServerCommand": "vercel dev --listen 5000",
+				"startServerReadyPattern": "Compiled successfully",
+				"waitFor": "body",
 				"settings": {
 					"chromeFlags": "--headless",
 					"throttlingMethod": "provided",
@@ -14,7 +16,9 @@
 			{
 				"numberOfRuns": 3,
 				"url": ["https://mmeletricarservice.it/"],
-				"startServerCommand": "",
+				"startServerCommand": "vercel dev --listen 5000",
+				"startServerReadyPattern": "Compiled successfully",
+				"waitFor": "body",
 				"settings": {
 					"chromeFlags": "--headless",
 					"throttlingMethod": "provided",
