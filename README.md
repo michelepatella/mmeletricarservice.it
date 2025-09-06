@@ -429,7 +429,7 @@ It provides the backend infrastructure of the application, leveraging Supabase a
 
 ### 🔐 Environment Variables
 
-They manage all sensitive configurations and secrets of the application.
+Manage all sensitive configurations and secrets of the application.
 
 <details>
 <summary><strong>📝 Local .env file</strong>  
@@ -468,66 +468,95 @@ _Used in CI/CD pipeline._
 <br>
    
 ### 🛠️ Development Environment & Version Control
-The application is built with Node.js and leverages npm as package manager to install dependencies (`npm install`), manage libraries, and run scripts.
 
-To run the full local environment (frontend + serverless functions) and simulate the production environment:
+Ensures a consistent development setup and reliabe version tracking.
 
-`vercel dev`
-
-_Note_: This command requires the Vercel CLI.
-
-The project uses Git for version control, hosted on GitHub.
-
----
+🌳 **Node.js**  
+_Executes JavaScript code in development environment._
 
 <details>
-<summary><strong>npm scripts</strong></summary>
+<summary><strong>📦 npm </strong>
   
-<br>
+_Manages dependencies, libraries, and scripts._
+</summary>
 
+> npm commands used in the project:
+>
+> - `npm install`  
+>   <em>Install dependencies.</em>
 > - `npm run start`  
 >   <em>Starts the local development server (only frontend, no serverless functions).</em>
 > - `npm run build`  
 >   <em>Creates an optimized production build of the app.</em>
 > - `npm run test`  
->   <em>Runs all test suites.</em>
+>   <em>Runs all tests.</em>
 > - `npm run code:check`  
 >   <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
 > - `npm run code:fix`  
 >   <em>Automatically fixes linting issues and formats code with Prettier.</em>
+>   
+> Others:
+> 
+> - `npx vercel --prod --yes --token $VERCEL_TOKEN`  
+>   <em>Deploys the app to Vercel in production.</em>
+</details>
 
+💻 **Vercel CLI**  
+_Runs frontend and serverless functions locally via_ `vercel dev`<em>, simulating production.</em><br><br> 
+  
+<details>
+<summary><strong>🔧 Git & GitHub</strong>  
+  
+<em>Manages code, workflows, and automated checks.</em>
+</summary>
+
+> - `main` for production, separate branches for major changes
+> - Stable deployment points marked by Git tags
+> - SonarQube integration  
+> - GitHub Actions runs CI/CD  
+> - GitHub Actions secrets for CI/CD environment variables
+> - GitHub Insights for activities and CI/CD metrics  
+</details>
+  
+<br>
+
+### ✅ Code Quality
+
+Keeps code clean, safe, and maintainable throughout development.
+
+⚖️ **ESLint**  
+_Enforces JavaScript coding standards._  
+
+🧹 **Prettier**  
+_Formats code automatically for consistency._
+
+📊 **SonarQube**  
+_Monitors code quality and highlights issues and risks on_ `main`<em> pushes.</em>
+
+---
+
+<details>
+<summary><strong>Code Quality Flow (on <code>main</code>)</strong></summary>  
+
+<br>
+
+> 1. Run `npm run code:fix` locally to fix linting and formatting issues
+> 2. Push changes to `main`
+> 3. GitHub Actions triggers in parallel:
+>    - CI, which runs `npm run code:check` to detect ESLint and Prettier issues
+>    - SonarQube, which analyzes code
 </details>
 
 <br>
 
 ### 🚀 Deployment & CI/CD
 
-The application is deployed to Vercel, hosting the frontend and serverless functions, with a full CI/CD automation:
-
-**🧪 Continuous Integration (CI)**  
-Runs on every push, and pull request to `main`:
-
-> 1. Install dependencies
-> 2. Run linting and Prettier checks
-> 3. Run automated tests
-> 4. Build the project
-
-Additionally, every push to `main` triggers an automatic SonarQube Cloud analysis to monitor code quality.
-
-**🚀 Continuous Deployment (CD)**  
-Triggered after successful CI:
-
-> 1. Install dependencies
-> 2. Build the project
-> 3. Deploy to Vercel
-
----
-
 <details>
-<summary><strong>Deployment Features</strong></summary>
-
-<br>
+<summary><strong>▲ Vercel</strong>
   
+<em>Deploys frontend and serverless functions with full CI/CD automation.</em>
+</summary>
+
 > - Domain management
 > - Preview deployments for all branches and pull requests
 > - Versioned deployments with easy rollback to previous stable releases
@@ -536,8 +565,23 @@ Triggered after successful CI:
 > - Automatic scaling with traffic demand
 > - Security features including firewall
 > - Logs monitoring
-> - Integrated analytics
+> - Integrated analytics  
 </details>
+
+**🧪 Continuous Integration (CI)**  
+_Runs on every push, and pull request to_ `main`<em>:</em>
+
+> 1. Install dependencies 
+> 2. Run linting and Prettier checks 
+> 3. Run automated tests 
+> 4. Build the project 
+
+**🚀 Continuous Deployment (CD)**  
+_Triggered after successful CI:_
+
+> 1. Install dependencies 
+> 2. Build the project 
+> 3. Deploy to Vercel 
 
 <br>
 
