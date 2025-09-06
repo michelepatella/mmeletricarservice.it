@@ -66,6 +66,9 @@ jobs:
 
           echo "All smoke tests passed."
 
+      - name: Wait for Vercel to be fully ready
+        run: sleep 15
+
       - name: Install Lighthouse CI
         run: npm install -g @lhci/cli
 
