@@ -45,7 +45,7 @@ jobs:
             -Dsonar.projectKey=$SONAR_PROJECT_KEY \
             -Dsonar.organization=$SONAR_ORGANIZATION \
             -Dsonar.sources=src \
-            -Dsonar.tests=src \
+            -Dsonar.exclusions=**/*.test.js,**/const.js,**/links.js \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=$SONAR_TOKEN
 
