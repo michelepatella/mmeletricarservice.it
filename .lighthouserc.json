@@ -23,7 +23,6 @@
 			}
 		],
 		"assert": {
-			"preset": "none",
 			"assertions": {
 				"categories:performance": [
 					"error",
