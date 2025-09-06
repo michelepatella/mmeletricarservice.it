@@ -10,7 +10,7 @@
 
 <br>
 
-## 📚 Table of Content
+<h3>📚 Table of Content</h3>
 
 - [👁️ Overview](#️-overview)
 - [🛠️ Tech Stack](#️-tech-stack)
