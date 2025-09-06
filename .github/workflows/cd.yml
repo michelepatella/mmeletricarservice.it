@@ -30,6 +30,8 @@ jobs:
         run: npx vercel --prod --yes --token $VERCEL_TOKEN
 
       - name: Smoke Tests
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           FAILED=0
 
@@ -68,6 +70,8 @@ jobs:
         run: npm install -g @lhci/cli
 
       - name: Run Lighthouse CI
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           FAILED=0
 
