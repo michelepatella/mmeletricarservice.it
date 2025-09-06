@@ -13,7 +13,10 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
-
+    env:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
+      SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
     steps:
       - uses: actions/checkout@v3
 
@@ -35,10 +38,6 @@ jobs:
         run: npm audit --audit-level=high
 
       - name: SonarCloud Scan
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
-          SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
         run: |
           npm install -g sonar-scanner
           sonar-scanner \
@@ -50,9 +49,6 @@ jobs:
             -Dsonar.login=$SONAR_TOKEN
 
       - name: Check SonarCloud Quality Gate
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
         run: |
           STATUS=$(curl -s -u $SONAR_TOKEN: "https://sonarcloud.io/api/qualitygates/project_status?projectKey=$SONAR_PROJECT_KEY" | jq -r '.projectStatus.status')
           echo "SonarCloud Quality Gate status: $STATUS"

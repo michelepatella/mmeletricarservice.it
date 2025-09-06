@@ -13,6 +13,7 @@ jobs:
     env:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       VERCEL_PROJECT_NAME: ${{ secrets.VERCEL_PROJECT_NAME }}
+      VERCEL_TEAM: ${{ secrets.VERCEL_TEAM }}
     steps:
       - uses: actions/checkout@v3
 
@@ -28,7 +29,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to Vercel
-        run: npx vercel --prod --yes --token $VERCEL_TOKEN --confirm --name $VERCEL_PROJECT_NAME
+        run: npx vercel --prod --yes --token $VERCEL_TOKEN --confirm --name $VERCEL_PROJECT_NAME --team $VERCEL_TEAM
 
       - name: Smoke Tests
         run: |
@@ -58,8 +59,8 @@ jobs:
 
           if [ $FAILED -eq 1 ]; then
             echo "One or more smoke tests failed, rolling back..."
-            PREV_DEPLOY=$(npx vercel list $VERCEL_PROJECT_NAME --token $VERCEL_TOKEN --prod | tail -n2 | head -n1 | awk '{print $1}')
-            npx vercel rollback $PREV_DEPLOY --token $VERCEL_TOKEN
+            PREV_DEPLOY=$(npx vercel list $VERCEL_PROJECT_NAME --token $VERCEL_TOKEN --prod --team $VERCEL_TEAM | tail -n2 | head -n1 | awk '{print $1}')
+            npx vercel rollback $PREV_DEPLOY --token $VERCEL_TOKEN --team $VERCEL_TEAM
             exit 1
           fi
 
@@ -76,7 +77,7 @@ jobs:
 
           if [ $FAILED -eq 1 ]; then
             echo "Lighthouse assertions failed, rolling back..."
-            PREV_DEPLOY=$(npx vercel list $VERCEL_PROJECT_NAME --token $VERCEL_TOKEN --prod | tail -n2 | head -n1 | awk '{print $1}')
-            npx vercel rollback $PREV_DEPLOY --token $VERCEL_TOKEN
+            PREV_DEPLOY=$(npx vercel list $VERCEL_PROJECT_NAME --token $VERCEL_TOKEN --prod --team $VERCEL_TEAM | tail -n2 | head -n1 | awk '{print $1}')
+            npx vercel rollback $PREV_DEPLOY --token $VERCEL_TOKEN --team $VERCEL_TEAM
             exit 1
           fi
