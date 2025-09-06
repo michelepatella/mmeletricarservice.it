@@ -28,3 +28,38 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: npx vercel --prod --yes --token $VERCEL_TOKEN
+
+      - name: Smoke Tests
+        run: |
+          FAILED=0
+
+          echo "Checking website..."
+          if ! curl -f https://mmeletricarservice.it/ ; then
+            echo "Website unreachable."
+            FAILED=1
+          fi
+
+          echo "Checking Used Cars Overview API..."
+          OVERVIEW_RESPONSE=$(curl -s https://mmeletricarservice.it/api/usedCarsOverview)
+          if [ -z "$OVERVIEW_RESPONSE" ]; then
+            echo "Used Cars Overview API failed."
+            FAILED=1
+          else
+            FIRST_ID=$(echo $OVERVIEW_RESPONSE | jq -r '.used_cars_overview[0].id // empty')
+            if [ -n "$FIRST_ID" ]; then
+              echo "Checking Used Car Info API for id=$FIRST_ID..."
+              if ! curl -f "https://mmeletricarservice.it/api/usedCarInfo?id=$FIRST_ID" ; then
+                echo "Used Car Info API failed."
+                FAILED=1
+              fi
+            fi
+          fi
+
+          if [ $FAILED -eq 1 ]; then
+            echo "One or more smoke tests failed, rolling back..."
+            PREV_DEPLOY=$(vercel list --token $VERCEL_TOKEN --prod --limit 2 | tail -n1 | awk '{print $1}')
+            vercel rollback $PREV_DEPLOY --token $VERCEL_TOKEN
+            exit 1
+          fi
+
+          echo "All smoke tests passed."
