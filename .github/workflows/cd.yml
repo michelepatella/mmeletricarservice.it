@@ -63,3 +63,20 @@ jobs:
           fi
 
           echo "All smoke tests passed."
+
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli
+
+      - name: Run Lighthouse CI
+        run: |
+          FAILED=0
+  
+          lhci autorun --collect.url=https://mmeletricarservice.it || FAILED=1
+          
+          if [ $FAILED -eq 1 ]; then
+          echo "Lighthouse assertions failed, rolling back..."
+          PREV_DEPLOY=$(vercel list --token $VERCEL_TOKEN --prod --limit 2 | tail -n1 | awk '{print $1}')
+          vercel rollback $PREV_DEPLOY --token $VERCEL_TOKEN
+          exit 1
+          fi
+
