@@ -494,16 +494,17 @@ _Manages dependencies, libraries, and scripts._
 >   <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
 > - `npm run code:fix`  
 >   <em>Automatically fixes linting issues and formats code with Prettier.</em>
->   
+>
 > Others:
-> 
+>
 > - `npx vercel --prod --yes --token $VERCEL_TOKEN`  
 >   <em>Deploys the app to Vercel in production.</em>
+
 </details>
 
 💻 **Vercel CLI**  
-_Runs frontend and serverless functions locally via_ `vercel dev`<em>, simulating production.</em><br><br> 
-  
+_Runs frontend and serverless functions locally via_ `vercel dev`<em>, simulating production.</em><br><br>
+
 <details>
 <summary><strong>🔧 Git & GitHub</strong>  
   
@@ -512,10 +513,11 @@ _Runs frontend and serverless functions locally via_ `vercel dev`<em>, simulatin
 
 > - `main` for production, separate branches for major changes
 > - Stable deployment points marked by Git tags
-> - SonarQube integration  
-> - GitHub Actions runs CI/CD  
+> - SonarQube integration
+> - GitHub Actions runs CI/CD
 > - GitHub Actions secrets for CI/CD environment variables
-> - GitHub Insights for activities and CI/CD metrics  
+> - GitHub Insights for activities and CI/CD metrics
+
 </details>
   
 <br>
@@ -525,7 +527,7 @@ _Runs frontend and serverless functions locally via_ `vercel dev`<em>, simulatin
 Keeps code clean, safe, and maintainable throughout development.
 
 ⚖️ **ESLint**  
-_Enforces JavaScript coding standards._  
+_Enforces JavaScript coding standards._
 
 🧹 **Prettier**  
 _Formats code automatically for consistency._
@@ -536,7 +538,7 @@ _Monitors code quality and highlights issues and risks on_ `main`<em> pushes.</e
 ---
 
 <details>
-<summary><strong>Code Quality Flow (on <code>main</code>)</strong></summary>  
+<summary><strong>Code Quality Flow (on <code>main</code>)</strong></summary>
 
 <br>
 
@@ -545,6 +547,7 @@ _Monitors code quality and highlights issues and risks on_ `main`<em> pushes.</e
 > 3. GitHub Actions triggers in parallel:
 >    - CI, which runs `npm run code:check` to detect ESLint and Prettier issues
 >    - SonarQube, which analyzes code
+
 </details>
 
 <br>
@@ -565,23 +568,24 @@ _Monitors code quality and highlights issues and risks on_ `main`<em> pushes.</e
 > - Automatic scaling with traffic demand
 > - Security features including firewall
 > - Logs monitoring
-> - Integrated analytics  
+> - Integrated analytics
+
 </details>
 
 **🧪 Continuous Integration (CI)**  
 _Runs on every push, and pull request to_ `main`<em>:</em>
 
-> 1. Install dependencies 
-> 2. Run linting and Prettier checks 
-> 3. Run automated tests 
-> 4. Build the project 
+> 1. Install dependencies
+> 2. Run linting and Prettier checks
+> 3. Run automated tests
+> 4. Build the project
 
 **🚀 Continuous Deployment (CD)**  
 _Triggered after successful CI:_
 
-> 1. Install dependencies 
-> 2. Build the project 
-> 3. Deploy to Vercel 
+> 1. Install dependencies
+> 2. Build the project
+> 3. Deploy to Vercel
 
 <br>
 
