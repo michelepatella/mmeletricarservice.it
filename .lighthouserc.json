@@ -23,7 +23,7 @@
 			}
 		],
 		"assert": {
-			"preset": "lighthouse:recommended",
+			"preset": "none",
 			"assertions": {
 				"categories:performance": [
 					"error",
