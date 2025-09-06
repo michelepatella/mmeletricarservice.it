@@ -16,9 +16,12 @@ import CustomText from "../custom/CustomText/CustomText";
 function UsedCarOverview(props) {
 	return (
 		<>
-			{USED_CAR_OVERVIEW?.map((info) => (
+			{USED_CAR_OVERVIEW?.map((info, index) => (
 				// Add each used car overview information
-				<div className="used-car-overview-container">
+				<div
+					key={info.name + "-" + index}
+					className="used-car-overview-container"
+				>
 					{/* Global Flex container (vertical) */}
 					<Flex vertical>
 						{/* Flex container (horizontal) */}
