@@ -5,18 +5,22 @@
 				"numberOfRuns": 3,
 				"url": ["https://mmeletricarservice.it"],
 				"settings": {
-					"chromeFlags": "--headless",
+					"chromeFlags": "--headless --no-sandbox --disable-dev-shm-usage",
 					"throttlingMethod": "simulate",
-					"emulatedFormFactor": "mobile"
+					"emulatedFormFactor": "mobile",
+					"maxWaitForFcp": 45000,
+					"maxWaitForLoad": 60000
 				}
 			},
 			{
 				"numberOfRuns": 3,
 				"url": ["https://mmeletricarservice.it"],
 				"settings": {
-					"chromeFlags": "--headless",
+					"chromeFlags": "--headless --no-sandbox --disable-dev-shm-usage",
 					"throttlingMethod": "simulate",
-					"emulatedFormFactor": "desktop"
+					"emulatedFormFactor": "desktop",
+					"maxWaitForFcp": 45000,
+					"maxWaitForLoad": 60000
 				}
 			}
 		],
