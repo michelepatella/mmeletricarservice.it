@@ -41,7 +41,7 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          PREVIEW_URL=$(npx vercel --prebuilt --yes -token $VERCEL_TOKEN | grep 'https://' | tail -n1)
+          PREVIEW_URL=$(npx vercel --prebuilt --yes --token $VERCEL_TOKEN | grep 'https://' | tail -n1)
           echo "PREVIEW_URL=$PREVIEW_URL" >> $GITHUB_ENV
 
       - name: Install Lighthouse CI
