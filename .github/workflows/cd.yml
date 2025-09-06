@@ -59,7 +59,7 @@ jobs:
 
           if [ $FAILED -eq 1 ]; then
             echo "One or more smoke tests failed, rolling back..."
-            PREV_DEPLOY=$(npx vercel list --token $VERCEL_TOKEN --prod --limit 2 | tail -n1 | awk '{print $1}')
+            PREV_DEPLOY=$(npx vercel list --token $VERCEL_TOKEN --prod | tail -n2 | head -n1 | awk '{print $1}')
             npx vercel rollback $PREV_DEPLOY --token $VERCEL_TOKEN
             exit 1
           fi
@@ -79,7 +79,7 @@ jobs:
 
           if [ $FAILED -eq 1 ]; then
             echo "Lighthouse assertions failed, rolling back..."
-            PREV_DEPLOY=$(npx vercel list --token $VERCEL_TOKEN --prod --limit 2 | tail -n1 | awk '{print $1}')
+            PREV_DEPLOY=$(npx vercel list --token $VERCEL_TOKEN --prod | tail -n2 | head -n1 | awk '{print $1}')
             npx vercel rollback $PREV_DEPLOY --token $VERCEL_TOKEN
             exit 1
           fi

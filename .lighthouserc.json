@@ -6,7 +6,7 @@
 				"url": ["https://mmeletricarservice.it"],
 				"settings": {
 					"chromeFlags": "--headless --no-sandbox --disable-dev-shm-usage",
-					"throttlingMethod": "simulate",
+					"throttlingMethod": "devtools",
 					"emulatedFormFactor": "mobile",
 					"maxWaitForFcp": 45000,
 					"maxWaitForLoad": 60000
@@ -17,7 +17,7 @@
 				"url": ["https://mmeletricarservice.it"],
 				"settings": {
 					"chromeFlags": "--headless --no-sandbox --disable-dev-shm-usage",
-					"throttlingMethod": "simulate",
+					"throttlingMethod": "devtools",
 					"emulatedFormFactor": "desktop",
 					"maxWaitForFcp": 45000,
 					"maxWaitForLoad": 60000
