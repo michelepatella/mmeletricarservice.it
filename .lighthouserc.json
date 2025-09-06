@@ -6,7 +6,7 @@
 				"url": ["https://mmeletricarservice.it"],
 				"settings": {
 					"chromeFlags": "--headless --no-sandbox --disable-dev-shm-usage --no-gpu",
-					"throttlingMethod": "devtools",
+					"throttlingMethod": "provided",
 					"emulatedFormFactor": "mobile",
 					"maxWaitForFcp": 45000,
 					"maxWaitForLoad": 120000
@@ -16,8 +16,8 @@
 				"numberOfRuns": 3,
 				"url": ["https://mmeletricarservice.it"],
 				"settings": {
-					"chromeFlags": "--headless --no-sandbox --disable-dev-shm-usage",
-					"throttlingMethod": "devtools",
+					"chromeFlags": "--headless --no-sandbox --disable-dev-shm-usage --no-gpu",
+					"throttlingMethod": "provided",
 					"emulatedFormFactor": "desktop",
 					"maxWaitForFcp": 45000,
 					"maxWaitForLoad": 120000
