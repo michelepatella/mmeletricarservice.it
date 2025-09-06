@@ -3,11 +3,6 @@
 		"collect": [
 			{
 				"numberOfRuns": 3,
-				"url": ["http://localhost:5000"],
-				"startServerCommand": "vercel dev --listen 5000",
-				"startServerReadyPattern": "Compiled successfully",
-				"waitFor": "body",
-				"waitBeforeCollect": 10000,
 				"settings": {
 					"chromeFlags": "--headless",
 					"throttlingMethod": "provided",
@@ -16,11 +11,6 @@
 			},
 			{
 				"numberOfRuns": 3,
-				"url": ["http://localhost:5000"],
-				"startServerCommand": "vercel dev --listen 5000",
-				"startServerReadyPattern": "Compiled successfully",
-				"waitFor": "body",
-				"waitBeforeCollect": 10000,
 				"settings": {
 					"chromeFlags": "--headless",
 					"throttlingMethod": "provided",

@@ -37,17 +37,16 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Start Vercel dev server
-        run: vercel dev --listen 5000 &
-
-      - name: Wait for Vercel dev server
-        run: sleep 15
+      - name: Preview deploy to Vercel
+        run: |
+          PREVIEW_URL=$(npx vercel --prebuilt --yes --token $VERCEL_TOKEN --confirm | tail -n1)
+          echo "PREVIEW_URL=$PREVIEW_URL" >> $GITHUB_ENV
 
       - name: Install Lighthouse CI
         run: npm install -g @lhci/cli
 
       - name: Run Lighthouse CI
-        run: lhci autorun
+        run: lhci autorun --collect.url=$PREVIEW_URL
 
       - name: SonarCloud Scan
         env:
