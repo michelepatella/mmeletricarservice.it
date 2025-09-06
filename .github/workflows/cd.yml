@@ -10,6 +10,9 @@ jobs:
   cd:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_PROJECT_NAME: ${{ secrets.VERCEL_PROJECT_NAME }}
     steps:
       - uses: actions/checkout@v3
 
@@ -25,13 +28,9 @@ jobs:
         run: npm run build
 
       - name: Deploy to Vercel
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: npx vercel --prod --yes --token $VERCEL_TOKEN
+        run: npx vercel --prod --yes --token $VERCEL_TOKEN --confirm --name $VERCEL_PROJECT_NAME
 
       - name: Smoke Tests
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           FAILED=0
 
@@ -59,7 +58,7 @@ jobs:
 
           if [ $FAILED -eq 1 ]; then
             echo "One or more smoke tests failed, rolling back..."
-            PREV_DEPLOY=$(npx vercel list --token $VERCEL_TOKEN --prod | tail -n2 | head -n1 | awk '{print $1}')
+            PREV_DEPLOY=$(npx vercel list $VERCEL_PROJECT_NAME --token $VERCEL_TOKEN --prod | tail -n2 | head -n1 | awk '{print $1}')
             npx vercel rollback $PREV_DEPLOY --token $VERCEL_TOKEN
             exit 1
           fi
@@ -70,8 +69,6 @@ jobs:
         run: npm install -g @lhci/cli
 
       - name: Run Lighthouse CI
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           FAILED=0
 
@@ -79,7 +76,7 @@ jobs:
 
           if [ $FAILED -eq 1 ]; then
             echo "Lighthouse assertions failed, rolling back..."
-            PREV_DEPLOY=$(npx vercel list --token $VERCEL_TOKEN --prod | tail -n2 | head -n1 | awk '{print $1}')
+            PREV_DEPLOY=$(npx vercel list $VERCEL_PROJECT_NAME --token $VERCEL_TOKEN --prod | tail -n2 | head -n1 | awk '{print $1}')
             npx vercel rollback $PREV_DEPLOY --token $VERCEL_TOKEN
             exit 1
           fi
