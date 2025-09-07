@@ -27,6 +27,7 @@ function ContactsFooter() {
 				<br></br>
 				{/* Privacy policy link */}
 				<a
+					className="policy-link"
 					href={PRIVACY_POLICY_LINK}
 					target="_blank"
 					rel="noopener noreferrer"
@@ -36,6 +37,7 @@ function ContactsFooter() {
 				</a>{" "}
 				|{/* Cookie policy link */}
 				<a
+					className="policy-link"
 					href={COOKIE_POLICY_LINK}
 					target="_blank"
 					rel="noopener noreferrer"
@@ -45,6 +47,7 @@ function ContactsFooter() {
 				</a>{" "}
 				|{/* Legal notes link */}
 				<a
+					className="policy-link"
 					href={LEGAL_NOTES_LINK}
 					target="_blank"
 					rel="noopener noreferrer"
