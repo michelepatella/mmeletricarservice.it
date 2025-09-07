@@ -444,7 +444,7 @@ _Used in CI/CD pipeline._
    
 ### 🛠️ Development Environment & Version Control
 
-Ensures a consistent development setup and reliabe version tracking.
+Ensure a consistent development setup and reliabe version tracking.
 
 🌳 **Node.js**  
 _Executes JavaScript code in development environment._
@@ -501,7 +501,7 @@ _Runs frontend and serverless functions locally via_ `vercel dev`<em>, simulatin
 
 ### ✅ Code Quality
 
-Keeps code clean, safe, and maintainable throughout development.
+Keep code clean, safe, and maintainable throughout development.
 
 ⚖️ **ESLint**  
 _Enforces JavaScript coding standards._
@@ -549,11 +549,12 @@ _Monitors code quality and highlights issues and risks on_ `main`<em> pushes.</e
 <br>
 
 ### 🚀 Deployment & CI/CD
+Manage automated delivery of the application from code to production while ensuring reliability and traceability.
 
 <details>
-<summary><strong>▲ Vercel</strong>
+<summary><strong>⚡ Vercel</strong>
   
-<em>Deploys frontend and serverless functions with full CI/CD automation.</em>
+<em>Deploys frontend and serverless functions.</em>
 </summary>
 
 > - Domain management
@@ -568,20 +569,60 @@ _Monitors code quality and highlights issues and risks on_ `main`<em> pushes.</e
 
 </details>
 
-**🧪 Continuous Integration (CI)**  
-_Runs on every push, and pull request to_ `main`<em>:</em>
+<details>
+<summary>
+<strong>🧪 Continuous Integration (CI)</strong>
+  
+<em>Runs on every push, and pull request to</em> `main`<em>.</em>
+</summary>
 
-> 1. Install dependencies
-> 2. Run linting and Prettier checks
-> 3. Run automated tests
-> 4. Build the project
+> 1. Checkout repository  
+>    <em>Retrieves the source code and prepares it for analysis.</em>
+>
+> 2. Setup Node.js   
+>    <em>Ensure the pipeline runs in the same Node.js environment as local development and production.</em>
+>
+> 3. Install dependencies  
+>    <em>Install all required packages.</em>
+>
+> 4. Run Lint and Prettier  
+>    <em>Check coding standards and formatting consistency.</em>
+>
+> 5. Build project  
+>    <em>Create an optimized build for the application.</em>
+>
+> 6. Run tests  
+>    <em>Execute all test suites.</em>
+>
+> 7. Run npm audit   
+>    <em>Detect high or critical security vulnerabilities in dependencies.</em>
+>
+> 8. Run SonarQube analysis  
+>     <em>Perform code quality analysis, checking the Quality Gate.</em>
+</details>
 
-**🚀 Continuous Deployment (CD)**  
-_Triggered after successful CI:_
-
-> 1. Install dependencies
-> 2. Build the project
-> 3. Deploy to Vercel
+<details>
+<summary>
+<strong>🚀 Continuous Deployment (CD)</strong>
+  
+<em>Triggered after successful CI.</em>
+</summary>
+  
+> 1. Checkout repository  
+>    <em>Retrieves the source code.</em>
+>
+> 2. Setup Node.js   
+>    <em>Ensure the pipeline runs in the same Node.js environment as local development and production.</em>
+>
+> 3. Install dependencies  
+>    <em>Install all required packages.</em>
+>
+> 4. Build project   
+>    <em>Create an optimized build for the application.</em>
+>
+> 5. Deploy to Vercel  
+>    <em>Deploy the application to Vercel.</em>
+</details>
 
 <br>
 
