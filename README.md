@@ -431,7 +431,7 @@ It provides the backend infrastructure of the application, leveraging Supabase a
 
 Manage all sensitive configuration and environment settings of the application.
 
-<strong>📝 Local .env file</strong>    
+<strong>📝 Local .env file</strong>  
 _Used in development and ignored by version control._
 
 <strong>☁️ Vercel Environment Variables</strong>  
@@ -459,22 +459,16 @@ _Manages dependencies, libraries, and scripts._
 >
 > - `npm install`  
 >   <em>Install dependencies.</em>
->
 > - `npm run start`  
 >   <em>Starts the local development server (only frontend, no serverless functions).</em>
->
 > - `npm run build`  
 >   <em>Creates an optimized production build of the app.</em>
->
 > - `npm run test`  
 >   <em>Runs all tests.</em>
->
 > - `npm run code:check`  
 >   <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
->
 > - `npm run code:fix`  
 >   <em>Automatically fixes linting issues and formats code with Prettier.</em>
->
 > - `npm run audit`  
 >   <em>Performs a security audit of the installed npm packages and reports vulnerabilities.</em>
 >
@@ -495,9 +489,9 @@ _Runs frontend and serverless functions locally via_ `vercel dev`<em>, simulatin
 - Conventional commit standard for commit messages
 - Stable deployment points marked by Git tags
 - GitHub Actions runs CI/CD
-- GitHub Actions secrets and variables for CI/CD  
+- GitHub Actions secrets and variables for CI/CD
 - GitHub Insights for activities and CI/CD metrics
-  
+
 <br>
 
 ### ✅ Code Quality
@@ -511,7 +505,7 @@ _Enforces JavaScript coding standards._
 _Formats code automatically for consistency._
 
 🔒 **npm audit**  
-_Checks for security vulnerabilities in project dependencies._  
+_Checks for security vulnerabilities in project dependencies._
 
 <details>
 <summary>
@@ -520,13 +514,15 @@ _Checks for security vulnerabilities in project dependencies._
 <em>Monitors code quality and highlights issues and risks on</em> `main`<em> pushes.</em>
 </summary>
 
-> **SonarQube Quality Gate** conditions on new code:  
+> **SonarQube Quality Gate** conditions on new code:
+>
 > - No new bugs are introduced (Reliability rating is A)
 > - No new vulnerabilities are introduced (Security rating is A)
 > - Limited technical debt (Maintainability rating is A)
 > - All new security hotspots are reviewed (Security Hotspots Reviewed is 100%)
 > - Sufficient test coverage (greater than or equal to 80.0%)
 > - Limited duplications (% of duplicated lines is less than or equal to 3.0%)
+
 </details>
 
 ---
@@ -548,10 +544,12 @@ _Checks for security vulnerabilities in project dependencies._
 <br>
 
 ### 🚀 Deployment & CI/CD
+
 Manage automated delivery of the application from code to production while ensuring reliability and traceability.
 
-**⚡ Vercel**    
-_Deploys frontend and serverless functions._  
+**⚡ Vercel**  
+_Deploys frontend and serverless functions._
+
 - Domain management
 - Preview deployments for all branches and pull requests
 - Versioned deployments with easy rollback to previous stable releases
@@ -573,27 +571,21 @@ _Deploys frontend and serverless functions._
 
 > 1. Checkout repository  
 >    <em>Retrieves the source code and prepares it for analysis.</em>
->
-> 2. Setup Node.js   
+> 2. Setup Node.js  
 >    <em>Ensure the pipeline runs in the same Node.js environment as local development and production.</em>
->
 > 3. Install dependencies  
 >    <em>Install all required packages.</em>
->
 > 4. Run Lint and Prettier  
 >    <em>Check coding standards and formatting consistency.</em>
->
 > 5. Build project  
 >    <em>Create an optimized build for the application.</em>
->
 > 6. Run tests  
 >    <em>Execute all test suites.</em>
->
-> 7. Run npm audit   
+> 7. Run npm audit  
 >    <em>Detect high or critical security vulnerabilities in dependencies.</em>
->
 > 8. Run SonarQube analysis  
->     <em>Perform code quality analysis, checking the Quality Gate.</em>
+>    <em>Perform code quality analysis, checking the Quality Gate.</em>
+
 </details>
 
 <details>
@@ -769,12 +761,12 @@ _Deploys frontend and serverless functions._
 
 **📊 Lighthouse Metrics**:
 
-| Metrics           | Score         |
-| ------------------| ------------- |
-| _Performance_     | **100** 🟢     |
-| _Accessibility_   | **100** 🟢     |
-| _Best Practices_  | **100** 🟢     |
-| _SEO_             | **100** 🟢     |
+| Metrics          | Score      |
+| ---------------- | ---------- |
+| _Performance_    | **100** 🟢 |
+| _Accessibility_  | **100** 🟢 |
+| _Best Practices_ | **100** 🟢 |
+| _SEO_            | **100** 🟢 |
 
 ---
 
@@ -784,19 +776,19 @@ _Deploys frontend and serverless functions._
 <br>
 
 > **First Contentful Paint**  
-> 0.9 s 
+> 0.9 s
 > <br>  
 > **Largest Contentful Paint**  
-> 2.9 s 
+> 2.9 s
 > <br>  
 > **Total Blocking Time**  
-> 50 ms 
+> 50 ms
 > <br>  
 > **Cumulative Layout Shift**  
-> 0 
+> 0
 > <br>  
 > **Speed Index**  
-> 2.2 s 
+> 2.2 s
 
 </details>
 
