@@ -437,7 +437,7 @@ _Used in development and ignored by version control._
 <strong>☁️ Vercel Environment Variables</strong>  
 _Used for production deployments._
 
-🔒 GitHub Actions Secrets and Variables</strong>  
+🔒 <strong>GitHub Actions Secrets and Variables</strong>  
 _Used in CI/CD pipeline._
 
 <br>
@@ -459,16 +459,22 @@ _Manages dependencies, libraries, and scripts._
 >
 > - `npm install`  
 >   <em>Install dependencies.</em>
+>
 > - `npm run start`  
 >   <em>Starts the local development server (only frontend, no serverless functions).</em>
+>
 > - `npm run build`  
 >   <em>Creates an optimized production build of the app.</em>
+>
 > - `npm run test`  
 >   <em>Runs all tests.</em>
+>
 > - `npm run code:check`  
 >   <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
+>
 > - `npm run code:fix`  
 >   <em>Automatically fixes linting issues and formats code with Prettier.</em>
+>
 > - `npm run audit`  
 >   <em>Performs a security audit of the installed npm packages and reports vulnerabilities.</em>
 >
@@ -482,20 +488,15 @@ _Manages dependencies, libraries, and scripts._
 💻 **Vercel CLI**  
 _Runs frontend and serverless functions locally via_ `vercel dev`<em>, simulating production.</em><br><br>
 
-<details>
-<summary><strong>🔧 Git & GitHub</strong>  
-  
+🔧 **Git & GitHub**  
 <em>Manages code, workflows, and automated checks.</em>
-</summary>
 
-> - `main` for production, separate branches for major changes
-> - Conventional commit standard for commit messages
-> - Stable deployment points marked by Git tags
-> - GitHub Actions runs CI/CD
-> - GitHub Actions secrets and variables for CI/CD  
-> - GitHub Insights for activities and CI/CD metrics
-
-</details>
+- `main` for production, separate branches for major changes
+- Conventional commit standard for commit messages
+- Stable deployment points marked by Git tags
+- GitHub Actions runs CI/CD
+- GitHub Actions secrets and variables for CI/CD  
+- GitHub Insights for activities and CI/CD metrics
   
 <br>
 
@@ -512,8 +513,21 @@ _Formats code automatically for consistency._
 🔒 **npm audit**  
 _Checks for security vulnerabilities in project dependencies._  
 
-📊 **SonarQube**  
-_Monitors code quality and highlights issues and risks on_ `main`<em> pushes.</em>
+<details>
+<summary>
+<strong>📊 SonarQube</strong>
+  
+<em>Monitors code quality and highlights issues and risks on</em> `main`<em> pushes.</em>
+</summary>
+
+> **SonarQube Quality Gate** conditions on new code:  
+> - No new bugs are introduced (Reliability rating is A)
+> - No new vulnerabilities are introduced (Security rating is A)
+> - Limited technical debt (Maintainability rating is A)
+> - All new security hotspots are reviewed (Security Hotspots Reviewed is 100%)
+> - Sufficient test coverage (greater than or equal to 80.0%)
+> - Limited duplications (% of duplicated lines is less than or equal to 3.0%)
+</details>
 
 ---
 
@@ -531,43 +545,24 @@ _Monitors code quality and highlights issues and risks on_ `main`<em> pushes.</e
 
 </details>
 
-<details>
-<summary><strong>Quality Gate (SonarQube)</strong></summary>
-
-<br>
-
-> Conditions on new code:
-> - No new bugs are introduced (Reliability rating is A)
-> - No new vulnerabilities are introduced (Security rating is A)
-> - Limited technical debt (Maintainability rating is A)
-> - All new security hotspots are reviewed (Security Hotspots Reviewed is 100%)
-> - Sufficient test coverage (greater than or equal to 80.0%)
-> - Limited duplications (% of duplicated lines is less than or equal to 3.0%)
-
-</details>
-
 <br>
 
 ### 🚀 Deployment & CI/CD
 Manage automated delivery of the application from code to production while ensuring reliability and traceability.
 
-<details>
-<summary><strong>⚡ Vercel</strong>
-  
-<em>Deploys frontend and serverless functions.</em>
-</summary>
+**⚡ Vercel**    
+_Deploys frontend and serverless functions._  
+- Domain management
+- Preview deployments for all branches and pull requests
+- Versioned deployments with easy rollback to previous stable releases
+- Management of environment variables
+- Automatic caching of static content and serverless responses at the edge
+- Automatic scaling with traffic demand
+- Security features including firewall
+- Logs monitoring
+- Integrated analytics
 
-> - Domain management
-> - Preview deployments for all branches and pull requests
-> - Versioned deployments with easy rollback to previous stable releases
-> - Management of environment variables
-> - Automatic caching of static content and serverless responses at the edge
-> - Automatic scaling with traffic demand
-> - Security features including firewall
-> - Logs monitoring
-> - Integrated analytics
-
-</details>
+<br>
 
 <details>
 <summary>
@@ -773,7 +768,13 @@ Manage automated delivery of the application from code to production while ensur
 <br>
 
 **📊 Lighthouse Metrics**:
-![Frame 2 (2)](https://github.com/user-attachments/assets/263c2b63-bbe5-4b5b-82d2-9cc903590c4f)
+
+| Metrics           | Score         |
+| ------------------| ------------- |
+| _Performance_     | **100** 🟢     |
+| _Accessibility_   | **100** 🟢     |
+| _Best Practices_  | **100** 🟢     |
+| _SEO_             | **100** 🟢     |
 
 ---
 
@@ -783,19 +784,19 @@ Manage automated delivery of the application from code to production while ensur
 <br>
 
 > **First Contentful Paint**  
-> 0.9 s
+> 0.9 s 
 > <br>  
 > **Largest Contentful Paint**  
-> 2.9 s
+> 2.9 s 
 > <br>  
 > **Total Blocking Time**  
-> 50 ms
+> 50 ms 
 > <br>  
 > **Cumulative Layout Shift**  
-> 0
+> 0 
 > <br>  
 > **Speed Index**  
-> 2.2 s
+> 2.2 s 
 
 </details>
 
@@ -948,25 +949,19 @@ The platform shows how smart design and technology can boost customer experience
 
 💻 **Operational Efficiency**
 
-> Easy access to information.  
-> Reduced support workload.
+> **Up to 20% of users exposed to the most relevant queries clicked through to access service information, reducing support requests.**
 
 🏙️ **Local Business Impact**
 
-> Increased visibility.  
-> Local business stands out.
+> **The website appears in 400+ searches over the last month, with an average position of #1 for relevant search queries, increasing the visibility of the business in its local area.**
 
 💡 **Informed Decisions**
 
-> Clear information.  
-> Informed decisions.  
-> Increased trust.
+> **More than 30% of users who visited the website clicked through to see detailed information about used cars, supporting informed purchasing decisions.**
 
 📊 **Data Insights**
 
-> Customer insights.  
->  Understanding behavior.  
->  Optimized inventory.
+> **Insights from 200+ interactions on used car pages monthly help the business to understand customer preferences and guide strategy.**
 
 <br>
 
