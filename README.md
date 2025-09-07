@@ -949,7 +949,7 @@ The platform shows how smart design and technology can boost customer experience
 
 💻 **Operational Efficiency**
 
-> **Up to 20% of users exposed to the most relevant queries clicked through to access service information, reducing support requests.**
+> **Up to 20% of users exposed to the most relevant queries clicked through to access website, reducing support requests.**
 
 🏙️ **Local Business Impact**
 
