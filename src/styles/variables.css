@@ -107,8 +107,14 @@
 	--used_car_drawer_flex_horizontal_vertical_box_shadow: 0
 		50px 50px rgba(0, 0, 0, 0.2);
 	--used_car_drawer_header_padding_left_big: 4rem;
+	--used_car_drawer_header_padding_top_big: 1rem;
+	--used_car_drawer_header_padding_bottom_big: 2rem;
 	--used_car_drawer_header_padding_left_small_portrait_medium_portrait: 3.2rem;
+	--used_car_drawer_header_padding_top_small_portrait_medium_portrait: 0.3rem;
+	--used_car_drawer_header_padding_bottom_small_portrait_medium_portrait: 1.5rem;
 	--used_car_drawer_header_padding_left_small_landscape_medium_landscape: 3.2rem;
+	--used_car_drawer_header_padding_top_small_landscape_medium_landscape: 0.3rem;
+	--used_car_drawer_header_padding_bottom_small_landscape_medium_landscape: 1.5rem;
 	--used_car_drawer_content_wrapper_width: 100vw;
 
 	/* -------- Used Car Drawer Info Panel -------- */

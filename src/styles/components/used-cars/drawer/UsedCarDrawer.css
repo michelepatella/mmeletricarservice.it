@@ -15,6 +15,11 @@
 	background: transparent !important;
 }
 
+.ant-drawer-content-wrapper .ant-drawer-header {
+	border-bottom: 1px solid var(--light_gray_border_color) !important;
+	padding: 0;
+}
+
 .ant-drawer-content-wrapper {
 	width: var(
 		--used_car_drawer_content_wrapper_width
@@ -62,6 +67,12 @@
 		padding-left: var(
 			--used_car_drawer_header_padding_left_big
 		) !important;
+		padding-top: var(
+			--used_car_drawer_header_padding_top_big
+		) !important;
+		padding-bottom: var(
+			--used_car_drawer_header_padding_bottom_big
+		) !important;
 	}
 }
 
@@ -78,6 +89,12 @@
 	.ant-drawer-header {
 		padding-left: var(
 			--used_car_drawer_header_padding_left_small_portrait_medium_portrait
+		) !important;
+		padding-bottom: var(
+			--used_car_drawer_header_padding_bottom_small_portrait_medium_portrait
+		) !important;
+		padding-top: var(
+			--used_car_drawer_header_padding_top_small_portrait_medium_portrait
 		) !important;
 	}
 }
@@ -108,6 +125,12 @@
 		padding-left: var(
 			--used_car_drawer_header_padding_left_small_landscape_medium_landscape
 		) !important;
+		padding-bottom: var(
+			--used_car_drawer_header_padding_bottom_small_landscape_medium_landscape
+		) !important;
+		padding-top: var(
+			--used_car_drawer_header_padding_top_small_landscape_medium_landscape
+		) !important;
 	}
 }
 
@@ -123,6 +146,12 @@
 		padding-left: var(
 			--used_car_drawer_header_padding_left_small_portrait_medium_portrait
 		) !important;
+		padding-bottom: var(
+			--used_car_drawer_header_padding_bottom_small_portrait_medium_portrait
+		) !important;
+		padding-top: var(
+			--used_car_drawer_header_padding_top_small_portrait_medium_portrait
+		) !important;
 	}
 }
 
@@ -137,6 +166,12 @@
 	.ant-drawer-header {
 		padding-left: var(
 			--used_car_drawer_header_padding_left_small_landscape_medium_landscape
+		) !important;
+		padding-bottom: var(
+			--used_car_drawer_header_padding_bottom_small_landscape_medium_landscape
+		) !important;
+		padding-top: var(
+			--used_car_drawer_header_padding_top_small_landscape_medium_landscape
 		) !important;
 	}
 }
