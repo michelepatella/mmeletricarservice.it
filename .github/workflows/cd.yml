@@ -29,37 +29,28 @@ jobs:
         run: npx vercel ${{ vars.VERCEL_PROD_FLAG }} ${{ vars.VERCEL_YES_FLAG }} --token ${{ secrets.VERCEL_TOKEN }} ${{ vars.VERCEL_CONFIRM_FLAG }} --name ${{ secrets.VERCEL_PROJECT_NAME }} --scope ${{ secrets.VERCEL_TEAM }}
 
       - name: Run smoke tests
-        env:
-          BASE_URL: ${{ vars.BASE_URL }}
-          USED_CARS_OVERVIEW_API_ENDPOINT: ${{ vars.USED_CARS_OVERVIEW_API_ENDPOINT }}
-          USED_CAR_INFO_API_ENDPOINT: ${{ vars.USED_CAR_INFO_API_ENDPOINT }}
-          JSON_PATH_FIRST_USED_CAR_ID: ${{ vars.JSON_PATH_FIRST_USED_CAR_ID }}
-          VERCEL_PROJECT_NAME: ${{ secrets.VERCEL_PROJECT_NAME }}
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_TEAM: ${{ secrets.VERCEL_TEAM }}
         run: |
           FAILED=0
 
-          if ! curl -f "$BASE_URL" ; then
+          if ! curl -f ${{ vars.BASE_URL }}  ; then
             FAILED=1
           fi
 
-          OVERVIEW_RESPONSE=$(curl -s "$BASE_URL$USED_CARS_OVERVIEW_API_ENDPOINT")
+          OVERVIEW_RESPONSE=$(curl -s ${{ vars.BASE_URL }}${{ vars.USED_CARS_OVERVIEW_API_ENDPOINT }})
           if [ -z "$OVERVIEW_RESPONSE" ]; then
             FAILED=1
           else
-            FIRST_ID=$(echo "$OVERVIEW_RESPONSE" | jq -r "$JSON_PATH_FIRST_USED_CAR_ID // empty")
+            FIRST_ID=$(echo $OVERVIEW_RESPONSE | jq -r ".used_cars_overview[0].id // empty")
             if [ -n "$FIRST_ID" ]; then
-              URL="${BASE_URL%/}${USED_CAR_INFO_API_ENDPOINT}?id=$FIRST_ID"
-              if ! curl -f "$URL"; then
+              if ! curl -f "${{ vars.BASE_URL }}${{ vars.USED_CAR_INFO_API_ENDPOINT }}?id=$FIRST_ID" ; then
                 FAILED=1
               fi
             fi
           fi
 
           if [ $FAILED -eq 1 ]; then
-            PREV_DEPLOY=$(npx vercel list "$VERCEL_PROJECT_NAME" --token "$VERCEL_TOKEN" --prod --scope "$VERCEL_TEAM" | sed -n '2p' | awk '{print $1}')
-            npx vercel rollback "$PREV_DEPLOY" --token "$VERCEL_TOKEN" --scope "$VERCEL_TEAM"
+            PREV_DEPLOY=$(npx vercel list ${{ secrets.VERCEL_PROJECT_NAME }} --token ${{ secrets.VERCEL_TOKEN }} --prod --scope ${{ secrets.VERCEL_TEAM }} | sed -n '2p' | awk '{print $1}')
+            npx vercel rollback $PREV_DEPLOY --token ${{ secrets.VERCEL_TOKEN }} --scope ${{ secrets.VERCEL_TEAM }}
             exit 1
           fi
 
