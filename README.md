@@ -446,7 +446,7 @@ _Used in CI/CD pipeline._
 
 <br>
    
-### 🛠️ Development Environment & Version Control
+### 💻 Development Environment & Version Control
 
 Ensure a consistent development setup and reliabe version tracking.
 
