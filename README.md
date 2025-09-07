@@ -427,43 +427,18 @@ It provides the backend infrastructure of the application, leveraging Supabase a
 
 ## 💻 From Development to Deployment 🚀
 
-### 🔐 Environment Variables
+### 🔐 Secrets & Variables
 
-Manage all sensitive configurations and secrets of the application.
+Manage all sensitive configuration and environment settings of the application.
 
-<details>
-<summary><strong>📝 Local .env file</strong>  
-  
+<strong>📝 Local .env file</strong>    
 _Used in development and ignored by version control._
-</summary>
 
-> - Database URL
-> - Supabase anon key
-
-</details>
-
-<details>
-<summary><strong>☁️ Vercel Environment Variables</strong>
-
+<strong>☁️ Vercel Environment Variables</strong>  
 _Used for production deployments._
 
-</summary>
-
-> - Database URL
-> - Supabase anon key
-
-</details>
-
-<details>
-<summary><strong>🔒 GitHub Actions Secrets</strong>
-
+🔒 GitHub Actions Secrets and Variables</strong>  
 _Used in CI/CD pipeline._
-
-</summary>
-
-> - Vercel token
-
-</details>
 
 <br>
    
@@ -494,6 +469,8 @@ _Manages dependencies, libraries, and scripts._
 >   <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
 > - `npm run code:fix`  
 >   <em>Automatically fixes linting issues and formats code with Prettier.</em>
+> - `npm run audit`  
+>   <em>Performs a security audit of the installed npm packages and reports vulnerabilities.</em>
 >
 > Others:
 >
@@ -512,10 +489,10 @@ _Runs frontend and serverless functions locally via_ `vercel dev`<em>, simulatin
 </summary>
 
 > - `main` for production, separate branches for major changes
+> - Conventional commit standard for commit messages
 > - Stable deployment points marked by Git tags
-> - SonarQube integration
 > - GitHub Actions runs CI/CD
-> - GitHub Actions secrets for CI/CD environment variables
+> - GitHub Actions secrets and variables for CI/CD  
 > - GitHub Insights for activities and CI/CD metrics
 
 </details>
@@ -532,6 +509,9 @@ _Enforces JavaScript coding standards._
 🧹 **Prettier**  
 _Formats code automatically for consistency._
 
+🔒 **npm audit**  
+_Checks for security vulnerabilities in project dependencies._  
+
 📊 **SonarQube**  
 _Monitors code quality and highlights issues and risks on_ `main`<em> pushes.</em>
 
@@ -544,9 +524,25 @@ _Monitors code quality and highlights issues and risks on_ `main`<em> pushes.</e
 
 > 1. Run `npm run code:fix` locally to fix linting and formatting issues
 > 2. Push changes to `main`
-> 3. GitHub Actions triggers in parallel:
->    - CI, which runs `npm run code:check` to detect ESLint and Prettier issues
->    - SonarQube, which analyzes code
+> 3. CI runs on `main` pushes or pull requests:
+>    - `npm run code:check` to detect ESLint and Prettier issues
+>    - `npm run audit` to detect high and critical vulnerabilites
+>    - SonarQube analysis to verify the Quality Gate
+
+</details>
+
+<details>
+<summary><strong>Quality Gate (SonarQube)</strong></summary>
+
+<br>
+
+> Conditions on new code:
+> - No new bugs are introduced (Reliability rating is A)
+> - No new vulnerabilities are introduced (Security rating is A)
+> - Limited technical debt (Maintainability rating is A)
+> - All new security hotspots are reviewed (Security Hotspots Reviewed is 100%)
+> - Sufficient test coverage (greater than or equal to 80.0%)
+> - Limited duplications (% of duplicated lines is less than or equal to 3.0%)
 
 </details>
 
