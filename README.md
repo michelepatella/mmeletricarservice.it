@@ -22,7 +22,7 @@
   - [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
 - [💻 From Development to Deployment 🚀](#-from-development-to-deployment-)
   - [🔐 Secrets & Variables](#-secrets--variables)
-  - [💻 Development Environment & Version Control](#%-development-environment--version-control)
+  - [💻 Development Environment & Version Control](#-development-environment--version-control)
   - [✅ Code Quality](#-code-quality)
   - [🚀 Deployment & CI/CD](#-deployment--cicd)
 - [🖥️ SEO, Analytics & Monitoring](#%EF%B8%8F-seo-analytics--monitoring)
