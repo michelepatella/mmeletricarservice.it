@@ -647,7 +647,7 @@ _Deploys frontend and serverless functions._
 ---
 
 <details>
-<summary><strong>Analytics Metrics</strong></summary>
+<summary><strong>Vercel Analytics metrics</strong></summary>
 
 <br>
 
