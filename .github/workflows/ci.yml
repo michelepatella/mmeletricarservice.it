@@ -24,11 +24,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build
-
       - name: Lint + Prettier check
         run: npm run code:check
+
+      - name: Build project
+        run: npm run build
 
       - name: Run tests
         run: npm run test -- --watchAll=${{ vars.TEST_WATCH_ALL }}
