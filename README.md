@@ -463,22 +463,16 @@ _Manages dependencies, libraries, and scripts._
 >
 > - `npm install`  
 >   <em>Install dependencies.</em>
->
 > - `npm run start`  
 >   <em>Starts the local development server (only frontend, no serverless functions).</em>
->
 > - `npm run build`  
 >   <em>Creates an optimized production build of the app.</em>
->
 > - `npm run test`  
 >   <em>Runs all tests.</em>
->
 > - `npm run code:check`  
 >   <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
->
 > - `npm run code:fix`  
 >   <em>Automatically fixes linting issues and formats code with Prettier.</em>
->
 > - `npm run audit`  
 >   <em>Performs a security audit of the installed npm packages and reports vulnerabilities.</em>
 >
