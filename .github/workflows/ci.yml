@@ -4,55 +4,46 @@ on:
   push:
     branches:
       - main
-      - master
   pull_request:
     branches:
       - main
-      - master
 
 jobs:
   ci:
     runs-on: ubuntu-latest
-    env:
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
-      SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: ${{ vars.SONAR_FETCH_DEPTH }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: ${{ vars.NODE_VERSION }}
 
       - name: Install dependencies
         run: npm install
+
+      - name: Build project
+        run: npm run build
 
       - name: Lint + Prettier check
         run: npm run code:check
 
       - name: Run tests
-        run: npm run test -- --watchAll=false
+        run: npm run test -- --watchAll=${{ vars.TEST_WATCH_ALL }}
 
       - name: Run npm audit
-        run: npm audit --audit-level=high
+        run: npm audit --audit-level=${{ vars.AUDIT_LEVEL }}
 
       - name: Run SonarCloud analysis
-        run: |
-          npm install -g sonar-scanner
-          sonar-scanner \
-            -Dsonar.projectKey=$SONAR_PROJECT_KEY \
-            -Dsonar.organization=$SONAR_ORGANIZATION \
-            -Dsonar.sources=src \
-            -Dsonar.exclusions=**/*.test.js,**/const.js,**/links.js \
-            -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=$SONAR_TOKEN
-
-      - name: Check SonarCloud Quality Gate
-        run: |
-          STATUS=$(curl -s -u $SONAR_TOKEN: "https://sonarcloud.io/api/qualitygates/project_status?projectKey=$SONAR_PROJECT_KEY" | jq -r '.projectStatus.status')
-          echo "SonarCloud Quality Gate status: $STATUS"
-          if [ "$STATUS" != "OK" ]; then
-            echo "Quality Gate failed."
-            exit 1
-          fi
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
+            -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
+            -Dsonar.sources=${{ vars.SONAR_SOURCES }}
+            -Dsonar.exclusions=${{ vars.SONAR_EXCLUSION }}
+            -Dsonar.qualitygate.wait=${{ vars.SONAR_QUALITY_GATE_WAIT }}

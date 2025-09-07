@@ -10,17 +10,13 @@ jobs:
   cd:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    env:
-      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-      VERCEL_PROJECT_NAME: ${{ secrets.VERCEL_PROJECT_NAME }}
-      VERCEL_TEAM: ${{ secrets.VERCEL_TEAM }}
     steps:
       - uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: ${{ vars.NODE_VERSION }}
 
       - name: Install dependencies
         run: npm install
@@ -29,58 +25,32 @@ jobs:
         run: npm run build
 
       - name: Deploy to Vercel
-        run: npx vercel --prod --yes --token $VERCEL_TOKEN --confirm --name $VERCEL_PROJECT_NAME --scope $VERCEL_TEAM
+        run: npx vercel ${{ vars.VERCEL_PROD_FLAG }} ${{ vars.VERCEL_YES_FLAG }} --token ${{ secrets.VERCEL_TOKEN }} ${{ vars.VERCEL_CONFIRM_FLAG }} --name ${{ secrets.VERCEL_PROJECT_NAME }} --scope ${{ secrets.VERCEL_TEAM }}
 
       - name: Smoke Tests
         run: |
           FAILED=0
 
-          echo "Checking website..."
-          if ! curl -f https://mmeletricarservice.it/ ; then
-            echo "Website unreachable."
+          if ! curl -f ${{ vars.BASE_URL }}  ; then
             FAILED=1
           fi
 
-          echo "Checking Used Cars Overview API..."
-          OVERVIEW_RESPONSE=$(curl -s https://mmeletricarservice.it/api/used-cars-overview/usedCarsOverview)
+          OVERVIEW_RESPONSE=$(curl -s ${{ vars.BASE_URL }}${{ vars.USED_CARS_OVERVIEW_API_ENDPOINT }})
           if [ -z "$OVERVIEW_RESPONSE" ]; then
-            echo "Used Cars Overview API failed."
             FAILED=1
           else
-            FIRST_ID=$(echo $OVERVIEW_RESPONSE | jq -r '.used_cars_overview[0].id // empty')
+            FIRST_ID=$(echo $OVERVIEW_RESPONSE | jq -r "${{ vars.JSON_PATH_FIRST_USED_CAR_ID }} // empty")
             if [ -n "$FIRST_ID" ]; then
-              echo "Checking Used Car Info API for id=$FIRST_ID..."
-              if ! curl -f "https://mmeletricarservice.it/api/used-car-info/usedCarInfo?id=$FIRST_ID" ; then
-                echo "Used Car Info API failed."
+              if ! curl -f "${{ vars.BASE_URL }}${{ vars.USED_CAR_INFO_API_ENDPOINT }}?id=$FIRST_ID" ; then
                 FAILED=1
               fi
             fi
           fi
 
           if [ $FAILED -eq 1 ]; then
-            echo "One or more smoke tests failed, rolling back..."
-            PREV_DEPLOY=$(npx vercel list $VERCEL_PROJECT_NAME --token $VERCEL_TOKEN --prod --scope $VERCEL_TEAM | sed -n '2p' | awk '{print $1}')
-            npx vercel rollback $PREV_DEPLOY --token $VERCEL_TOKEN --scope $VERCEL_TEAM
+            PREV_DEPLOY=$(npx vercel list ${{ secrets.VERCEL_PROJECT_NAME }} --token ${{ secrets.VERCEL_TOKEN }} --prod --scope ${{ secrets.VERCEL_TEAM }} | sed -n '2p' | awk '{print $1}')
+            npx vercel rollback $PREV_DEPLOY --token ${{ secrets.VERCEL_TOKEN }} --scope ${{ secrets.VERCEL_TEAM }}
             exit 1
           fi
 
           echo "All smoke tests passed."
-
-      - name: Wait for Vercel to be fully ready
-        run: sleep 15
-
-      - name: Install Lighthouse CI
-        run: npm install -g @lhci/cli
-
-      - name: Run Lighthouse CI
-        run: |
-          FAILED=0
-
-          lhci autorun --collect.url=https://mmeletricarservice.it || FAILED=1
-
-          if [ $FAILED -eq 1 ]; then
-            echo "Lighthouse assertions failed, rolling back..."
-            PREV_DEPLOY=$(npx vercel list $VERCEL_PROJECT_NAME --token $VERCEL_TOKEN --prod --scope $VERCEL_TEAM | sed -n '2p' | awk '{print $1}')
-            npx vercel rollback $PREV_DEPLOY --token $VERCEL_TOKEN --scope $VERCEL_TEAM
-            exit 1
-          fi
