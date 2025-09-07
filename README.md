@@ -435,7 +435,7 @@ It provides the backend infrastructure of the application, leveraging Supabase a
 
 Manage all sensitive configuration and environment settings of the application.
 
-<strong>📝 Local .env file</strong>  
+<strong>📝 Local .env File</strong>  
 _Used in development and ignored by version control._
 
 <strong>☁️ Vercel Environment Variables</strong>  
@@ -627,7 +627,7 @@ _Deploys frontend and serverless functions._
 
 ## 🖥️ SEO, Analytics & Monitoring
 
-🔍 <strong>Search engine optimization</strong>  
+🔍 <strong>Search Engine Optimization</strong>  
 <em>To improve discoverability and ranking.</em>
 
 - Clean, human-readable URLs
@@ -647,7 +647,7 @@ _Deploys frontend and serverless functions._
 ---
 
 <details>
-<summary><strong>Vercel Analytics metrics</strong></summary>
+<summary><strong>Vercel Analytics Metrics</strong></summary>
 
 <br>
 
