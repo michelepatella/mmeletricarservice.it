@@ -12,6 +12,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
       - uses: actions/checkout@v4
         with:
           fetch-depth: ${{ vars.SONAR_FETCH_DEPTH }}
@@ -24,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Lint + Prettier check
+      - name: Run Lint and Prettier
         run: npm run code:check
 
       - name: Build project
