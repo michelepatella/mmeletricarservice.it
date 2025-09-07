@@ -639,7 +639,7 @@ _Deploys frontend and serverless functions._
 <br>
 
 📈 <strong>Analytics</strong>  
-<em>To monitor user engagement and performance.</em>
+<em>To monitor user engagement and performance via Vercel Analytics.</em>
 
 - Actionable insights
 - Privacy-friendly, cookie-free solution
