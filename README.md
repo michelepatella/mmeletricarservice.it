@@ -240,7 +240,7 @@ The system is built on a Jamstack architecture:
 ### 🌐 Client-side
 
 🎯 **Role**  
-It implements the frontend of the application as a Single-Page Application (SPA).
+It implements the frontend of the application as a Single-Page Application.
 
 🛡️ **Responsibility**
 
@@ -407,7 +407,7 @@ It provides the backend infrastructure of the application, leveraging Supabase a
   - Stores and serves used car images
   - Organizes folders with deterministic naming
 - **Security**
-  - Enforces Row-Level Security (RLS) to restrict access at row level
+  - Enforces Row-Level Security to restrict access at row level
   - Defines access policies for reading and writing data
 
 ---
@@ -459,16 +459,22 @@ _Manages dependencies, libraries, and scripts._
 >
 > - `npm install`  
 >   <em>Install dependencies.</em>
+>
 > - `npm run start`  
 >   <em>Starts the local development server (only frontend, no serverless functions).</em>
+>
 > - `npm run build`  
 >   <em>Creates an optimized production build of the app.</em>
+>
 > - `npm run test`  
 >   <em>Runs all tests.</em>
+>
 > - `npm run code:check`  
 >   <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
+>
 > - `npm run code:fix`  
 >   <em>Automatically fixes linting issues and formats code with Prettier.</em>
+>
 > - `npm run audit`  
 >   <em>Performs a security audit of the installed npm packages and reports vulnerabilities.</em>
 >
@@ -634,23 +640,6 @@ _Deploys frontend and serverless functions._
 - Actionable insights
 - Privacy-friendly, cookie-free solution
 
-<br>
-
-📊 <strong>Monitoring</strong>  
-<em>To track system operations and backend activities.</em>
-
-- Serverless functions monitoring through:
-  - Vercel Logs
-  - Automatic logging of errors and failed requests for faster debugging
-- Backend / BaaS monitoring through Supabase Logs, including:
-  - API Gateway Logs
-  - Postgres Logs
-  - Storage Logs
-
-<br>
-
-<strong>All while preserving user privacy.</strong>
-
 ---
 
 <details>
@@ -672,6 +661,23 @@ _Deploys frontend and serverless functions._
 </details>
 
 <br>
+
+📊 <strong>Monitoring</strong>  
+<em>To track system operations and backend activities.</em>
+
+- Serverless functions monitoring through:
+  - Vercel Logs
+  - Automatic logging of errors and failed requests for faster debugging
+- Backend / BaaS monitoring through Supabase Logs, including:
+  - API Gateway Logs
+  - Postgres Logs
+  - Storage Logs
+
+<br>
+
+<strong>All while preserving user privacy.</strong>
+
+---
 
 <details>
 <summary><strong>Vercel Logs Details</strong></summary>
@@ -798,7 +804,7 @@ _Deploys frontend and serverless functions._
 <summary>
 <strong>⚙️ Serverless Functions Metrics</strong> 
 <br>
-<em>Average metrics collected from 200+ API invocations over a 12h period by Vercel Observability.</em>
+<em>Metrics by Vercel Observability.</em>
 </summary>
 
 <br>
@@ -829,7 +835,7 @@ _Deploys frontend and serverless functions._
 <summary>
 <strong>☁️ BaaS Metrics</strong> 
 <br>
-<em>Average metrics collected from 200+ requests over a 12h period by Supabase Reports.</em>
+<em>Metrics by Supabase Reports.</em>
 </summary>
 
 <br>
@@ -846,7 +852,7 @@ _Deploys frontend and serverless functions._
 <summary>
 <strong>🚀 Deployment & CI/CD Metrics</strong> 
 <br>
-<em>Average metrics collected over a 30 days period by Vercel Deployments and GitHub Insights.</em>
+<em>Metrics by GitHub Insights.</em>
 </summary>
 
 <br>
