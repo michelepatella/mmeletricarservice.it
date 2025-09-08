@@ -88,10 +88,12 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 | 🚀 **Deployment & CI/CD**        | **Vercel** - Hosting                                                     | 
 |                                  | **GitHub Actions** - CI/CD                                               |
 | 📈 **Analytics**                 | **Vercel Analytics** - Insights                                          |   
+|                                  | **Google Search Console** -  Search Performance and Indexing             |               
 | 📊 **Monitoring**                | **Error Logging** - Client-side and Serverless Functions                 |
 |                                  | **Vercel Logs** - Serverless Functions                                   |
 |                                  | **Supabase Logs** - Backend / BaaS                                       |
 |                                  | **GitHub Insights** - CI/CD                                              |
+|                                  | **Lighthouse** - App performaance and health                             |
 
 <br>
 
@@ -706,10 +708,8 @@ _Deploys frontend and serverless functions._
 📊 <strong>Monitoring</strong>  
 <em>To track system operations and backend activities.</em>
 
-- Frontend monitoring via error logging (try-catch and console logs)
-- Serverless functions monitoring through:
-  - Vercel Logs
-  - Automatic logging of errors and failed requests for faster debugging 
+- Client-side (including fetching and caching) monitoring via error logging (try-catch and console logs)
+- Serverless functions monitoring via Vercel Logs
 - Backend / BaaS monitoring through Supabase Logs, including:
   - API Gateway Logs
   - Postgres Logs
