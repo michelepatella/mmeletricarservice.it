@@ -61,39 +61,39 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 ## 🛠️ Tech Stack
 
-| Layer                            | Technology                                                               |                         
-| ---------------------------------| -------------------------------------------------------------------------|
-| 🏗️ **Infrastructure**            | **Jamstack**                                                             |
-| 🌐 **Client-side**               | **React.js** - JavaScript Library                                        | 
-|                                  | **Ant Design** - UI Library                                              | 
-|                                  | **CSS, Design Tokens, Framer Motion** - Styling and Animations           | 
-|                                  | **React Router (HashRouter)** - Routing                                  | 
-|                                  | **React Hooks, Custom Hooks** - State Management                         | 
-|                                  | **React Query** - Fetching and Caching                                   | 
-| ⚙️ **API / Serverless Functions**| **Vercel Functions** - Backend Logic                                     | 
-| ☁️ **Backend / BaaS**            | **Supabase** - PostgreSQL Database and Storage                           | 
-| 🔐 **Secrets & Variables**       | **.env** - Development                                                   | 
-|                                  | **GitHub Actions Secrets and Variables** - CI/CD                         | 
-|                                  | **Vercel Environment Variables** - Deployment                            | 
-| ⚒️ **Development Environment**   | **Node.js** - JavaScript Runtime                                         |
-|                                  | **npm** - Package Manager                                                | 
-|                                  | **Vercel CLI** - Local Production Environment                            | 
-| 🔀 **Version Control**           | **Git & GitHub** - Repository & Workflow                                 | 
-| ✅ **Code Quality**              | **ESLint** - Linting and Coding Standards                                | 
-|                                  | **Prettier** - Formatting                                                | 
-|                                  | **`npm audit`** - Dependency Security                                    | 
-|                                  | **SonarQube** - Quality and Issues                                       |
-| 🧪 **Testing**                   | **Jest** - Unit and Integration Tests                                    | 
-|                                  | **React Testing Library** - Component Behavior Testing                   | 
-| 🚀 **Deployment & CI/CD**        | **Vercel** - Hosting                                                     | 
-|                                  | **GitHub Actions** - CI/CD                                               |
-| 📈 **Analytics**                 | **Vercel Analytics** - Insights                                          |   
-|                                  | **Google Search Console** -  Search Performance and Indexing             |               
-| 📊 **Monitoring**                | **Error Logging** - Client-side and Serverless Functions                 |
-|                                  | **Vercel Logs** - Serverless Functions                                   |
-|                                  | **Supabase Logs** - Backend / BaaS                                       |
-|                                  | **GitHub Insights** - CI/CD                                              |
-|                                  | **Lighthouse** - App performaance and health                             |
+| Layer                             | Technology                                                     |
+| --------------------------------- | -------------------------------------------------------------- |
+| 🏗️ **Infrastructure**             | **Jamstack**                                                   |
+| 🌐 **Client-side**                | **React.js** - JavaScript Library                              |
+|                                   | **Ant Design** - UI Library                                    |
+|                                   | **CSS, Design Tokens, Framer Motion** - Styling and Animations |
+|                                   | **React Router (HashRouter)** - Routing                        |
+|                                   | **React Hooks, Custom Hooks** - State Management               |
+|                                   | **React Query** - Fetching and Caching                         |
+| ⚙️ **API / Serverless Functions** | **Vercel Functions** - Backend Logic                           |
+| ☁️ **Backend / BaaS**             | **Supabase** - PostgreSQL Database and Storage                 |
+| 🔐 **Secrets & Variables**        | **.env** - Development                                         |
+|                                   | **GitHub Actions Secrets and Variables** - CI/CD               |
+|                                   | **Vercel Environment Variables** - Deployment                  |
+| ⚒️ **Development Environment**    | **Node.js** - JavaScript Runtime                               |
+|                                   | **npm** - Package Manager                                      |
+|                                   | **Vercel CLI** - Local Production Environment                  |
+| 🔀 **Version Control**            | **Git & GitHub** - Repository & Workflow                       |
+| ✅ **Code Quality**               | **ESLint** - Linting and Coding Standards                      |
+|                                   | **Prettier** - Formatting                                      |
+|                                   | **`npm audit`** - Dependency Security                          |
+|                                   | **SonarQube** - Quality and Issues                             |
+| 🧪 **Testing**                    | **Jest** - Unit and Integration Tests                          |
+|                                   | **React Testing Library** - Component Behavior Testing         |
+| 🚀 **Deployment & CI/CD**         | **Vercel** - Hosting                                           |
+|                                   | **GitHub Actions** - CI/CD                                     |
+| 📈 **Analytics**                  | **Vercel Analytics** - Insights                                |
+|                                   | **Google Search Console** - Search Performance and Indexing    |
+| 📊 **Monitoring**                 | **Error Logging** - Client-side and Serverless Functions       |
+|                                   | **Vercel Logs** - Serverless Functions                         |
+|                                   | **Supabase Logs** - Backend / BaaS                             |
+|                                   | **GitHub Insights** - CI/CD                                    |
+|                                   | **Lighthouse** - App performaance and health                   |
 
 <br>
 
@@ -500,25 +500,18 @@ _Manages dependencies, libraries, and scripts._
 >
 > - `npm install`  
 >   <em>Install dependencies.</em>
->
 > - `npm run audit`  
 >   <em>Performs a security audit of the installed npm packages and reports vulnerabilities.</em>
->
-> - `npm run audit fix` /  `npm run audit fix --force`  
+> - `npm run audit fix` / `npm run audit fix --force`  
 >   <em>Automatically fixes vulnerabilities in dependencies.</em>
->
 > - `npm run start`  
 >   <em>Starts the local development server (only frontend, no serverless functions).</em>
->
 > - `npm run build`  
 >   <em>Creates an optimized production build of the app.</em>
->
 > - `npm run test`  
 >   <em>Runs all tests.</em>
->
 > - `npm run code:check`  
 >   <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
->
 > - `npm run code:fix`  
 >   <em>Automatically fixes linting issues and formats code with Prettier.</em>
 >
@@ -534,7 +527,7 @@ _Runs frontend and serverless functions locally via_ `vercel dev`<em>, simulatin
 
 ### 🔀 Version Control
 
-Track code and automate workflows. 
+Track code and automate workflows.
 
 🔧 **Git & GitHub**  
 <em>Manages code, workflows, and automated checks.</em>
@@ -626,25 +619,18 @@ _Deploys frontend and serverless functions._
 
 > 1. Checkout repository  
 >    <em>Retrieves the source code and prepares it for analysis.</em>
->
 > 2. Setup Node.js  
 >    <em>Ensure the pipeline runs in the same Node.js environment as local development and production.</em>
->
 > 3. Install dependencies  
 >    <em>Install all required packages.</em>
->
 > 4. Run Lint and Prettier  
 >    <em>Check coding standards and formatting consistency.</em>
->
 > 5. Build project  
 >    <em>Create an optimized build for the application.</em>
->
 > 6. Run tests  
 >    <em>Execute all test suites.</em>
->
 > 7. Run npm audit  
 >    <em>Detect high and critical security vulnerabilities in dependencies.</em>
->
 > 8. Run SonarQube analysis  
 >    <em>Perform code quality analysis, checking the Quality Gate.</em>
 
