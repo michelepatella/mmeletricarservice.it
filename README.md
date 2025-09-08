@@ -93,34 +93,32 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - Business logic abstracted via hooks and functions
-> - Reusable component library supports consistent UI patterns
-> - Centralized configuration
-
+> - React components manage the web application's state
+> - Ant Design abstracts the complexity of CSS
+> - React Query abstracts fecthing and caching logic
+> - Functions and hooks abstract business logic
+> - Frontend interacts with backend through clear API contracts
+> - Serverless functions abstract backend complexity
+> - Supabase abstracts the complexity of managing a relational database
+> ...
 </details>
 
 <details>
-<summary><strong>Change Readiness</strong></summary>
+<summary><strong>Maintainability & Change Readiness</strong></summary>
 
 <br>
 
-> - Environment variables and settings externalized for flexibility
-> - CI/CD pipeline ensure safe, repeatable updates
-
-</details>
-
-<details>
-<summary><strong>Maintainability</strong></summary>
-
-<br>
-
-> - Clean and consistent codebase
-> - ESLint and Prettier for formatting
-> - Well-documented code with meaningful names and docstrings
-> - Centralized constants and links (`const.js` and `links.js`) for easier updates
-> - Use of centralized CSS variables
-> - Tests colocated with components for better traceability
-
+> - Clean, documented code improves readability and understandability
+> - Modular Jamstack architecture keeps components independent by separating responsabilities
+> - Modular React components and business logic for easy updates
+> - Centralized constants, links, and CSS variables simplify updates
+> - Independent serverless functions allow API changes without side effects
+> - CI/CD ensures automated testing, stable deployments, and system reliability
+> - ESLint, Prettier, `npm audit`, and SonarQube ensure code quality
+> - Vercel supports preview and versioned deployments with easy rollback
+> - GitHub version control simplifies updates, rollback and tracking code history
+> - Logs supports debugging and monitoring  
+> ...
 </details>
 
 <details>
@@ -128,11 +126,13 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - Components follow the Single Responsibility Principle
-> - Clear separation between UI, business logic, and styling
-> - Logic encapsulated via custom hooks and shared utility functions
-> - Sections are structured as atomic, composable components
-
+> - Separation of responsabilities among architectural components
+> - Modular React components manage their own state and rendering
+> - React component structured as atomic, composable components
+> - Business logic incapsulated into modules
+> - Modular CI/CD pipeline composed of distinct jobs
+> - Separated secrets and environment variables management
+> ...
 </details>
 
 <details>
@@ -140,12 +140,13 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - Lazy loading
-> - Modern image format (AVIF)
-> - Optimized for Lighthouse metrics
-> - Session caching of used car data
 > - React Query for efficient data fetching and caching
-
+> - Vercel caches static contents and serverless function's responses at the edge
+> - Efficient serverless functions consume resources only when invoked
+> - Indexes on tables to improve query performance
+> - Lazy loading, AVIF images, and other optimizations boost Lighthouse scores
+> - Automated CI/CD streamlines the entire development cycle
+> ...
 </details>
 
 <details>
@@ -153,10 +154,14 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - Error handling for API and UI (try-catch, logging, and Vercel monitoring)
-> - Loading states and fallback UIs improve resilience
-> - Automated tests with Jest and React Testing Library
-> - Data integrity ensured via database constraints, foreign keys, and Row-Level Security policies
+> - Distributed services prevent full system failure
+> - Frontend error handling through React Query and try-catch blocks
+> - Fallback UIs improves resilience
+> - Serverless functions monitoring via Vercel Logs
+> - Backend monitoring via Supabase Logs
+> - Data integrity ensured by constraints, foreign keys, ENUMs, functions and triggers
+> - Rigorous CI/CD pipeline runs tests, security controls, and code analysis to prevent issues
+> ...
 
 </details>
 
@@ -165,9 +170,12 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - Common components reused across multiple pages
-> - DRY (Don't Repeat Yourself) principles followed across logic and styles
-
+> - DRY (Don't Repeat Yourself) principles followed across the whole application
+> - UI components reused throughout the application
+> - Styles defined once and reused across the application
+> - Incapsulated business logic allow easy reuse across the application
+> - Adoption of libraries and frameworks (e.g., React Query, Framer Motion) so as to not reinvent the wheel
+> ...
 </details>
   
 <details>
@@ -175,11 +183,13 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - Backend powered by Supabase (PostgreSQL), allowing seamless scaling
-> - Indexes created to optimize data retrieval
-> - Vercel's serverless functions scale automatically with demand, including a caching system
-> - Fetching and caching handled with React Query
-> - Scalable CI/CD pipeline
+> - React Query handles fetching and caching, enhancing system scalability
+> - Supabase database and storage scale automatically with increasing data and requests
+> - Database indexes improve query scalability
+> - Vercel's serverless functions scale automatically with demand
+> - Vercel's edge caching reduces latency and workload, improving scalability
+> - Scalable GitHub Actions CI/CD pipeline with modular jobs
+> ...
 
 </details>
 
@@ -188,11 +198,17 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - GDPR compliance: cookie consent, legal/privacy notes
-> - Safe handling of third-party cookies
-> - No sensitive data exposed client-side
-> - Row-Level Security policies on Supabase
-
+> - HTTPS ensures secure communications
+> - GDPR compliance
+> - Safe handling of third-party cookies via cookie banner
+> - Cookie policy, privacy policies, and legal notes provideds
+> - Sensitive data managed via Vercel Environment Variables, GitHub Actions Secrets, and .env escluded from version control
+> - Secure data management through Row-Level Security and policies
+> - Vercel provides built-in security features (e.g., firewall)
+> - Vercel Analytics as privacy-friendly, cookie-free solution to gather insights
+> - CI/CD ensures security with vulnerability checks and SonarQube analysis
+> - Monitoring and debugging while respecting user privacy
+> ...
 </details>
 
 <details>
@@ -200,13 +216,15 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - Clean, intuitive, and consistent UI aligned with branding
-> - Accessibility best practices
-> - Responsive navigation (anchor menu on desktop, drawer on mobile)
-> - Fast feedback to user actions
 > - Mobile-first design, tested on 20+ devices and viewports
+> - Clean, intuitive, and consistent UI aligned with branding
 > - Clear visual hierarchy to reduce cognitive load
-
+> - Accessibility best practices (e.g., optimized for disabled people)
+> - Responsive design and navigation (anchor menu on desktop, drawer on mobile)
+> - Fast feedback to user actions
+> - Workflow designed for quick and efficient task completion
+> - Reduced loading times and no visual shifts ensure a smooth UX
+> ...
 </details>
 
 <br>
@@ -455,7 +473,7 @@ _Executes JavaScript code in development environment._
 
 <details>
 <summary><strong>📦 npm </strong>
-  
+
 _Manages dependencies, libraries, and scripts._
 </summary>
 
