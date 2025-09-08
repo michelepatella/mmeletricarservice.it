@@ -100,7 +100,8 @@ How this project follows software engineering best practices.
 > - Frontend interacts with backend through clear API contracts
 > - Serverless functions abstract backend complexity
 > - Supabase abstracts the complexity of managing a relational database  
-> ...
+>   ...
+
 </details>
 
 <details>
@@ -118,7 +119,8 @@ How this project follows software engineering best practices.
 > - Vercel supports preview and versioned deployments with easy rollback
 > - GitHub version control simplifies updates, rollback and tracking code history
 > - Logs supports debugging and monitoring  
-> ...
+>   ...
+
 </details>
 
 <details>
@@ -132,7 +134,8 @@ How this project follows software engineering best practices.
 > - Business logic incapsulated into modules
 > - Modular CI/CD pipeline composed of distinct jobs
 > - Separated secrets and environment variables management  
-> ...
+>   ...
+
 </details>
 
 <details>
@@ -146,7 +149,8 @@ How this project follows software engineering best practices.
 > - Indexes on tables to improve query performance
 > - Lazy loading, AVIF images, and other optimizations boost Lighthouse scores
 > - Automated CI/CD streamlines the entire development cycle  
-> ...
+>   ...
+
 </details>
 
 <details>
@@ -161,7 +165,7 @@ How this project follows software engineering best practices.
 > - Backend monitoring via Supabase Logs
 > - Data integrity ensured by constraints, foreign keys, ENUMs, functions and triggers
 > - Rigorous CI/CD pipeline runs tests, security controls, and code analysis to prevent issues  
-> ...
+>   ...
 
 </details>
 
@@ -175,7 +179,8 @@ How this project follows software engineering best practices.
 > - Styles defined once and reused across the application
 > - Incapsulated business logic allow easy reuse across the application
 > - Adoption of libraries and frameworks (e.g., React Query, Framer Motion) so as to not reinvent the wheel  
-> ...
+>   ...
+
 </details>
   
 <details>
@@ -189,7 +194,7 @@ How this project follows software engineering best practices.
 > - Vercel's serverless functions scale automatically with demand
 > - Vercel's edge caching reduces latency and workload, improving scalability
 > - Scalable GitHub Actions CI/CD pipeline with modular jobs  
-> ...
+>   ...
 
 </details>
 
@@ -208,7 +213,8 @@ How this project follows software engineering best practices.
 > - Vercel Analytics as privacy-friendly, cookie-free solution to gather insights
 > - CI/CD ensures security with vulnerability checks and SonarQube analysis
 > - Monitoring and debugging while respecting user privacy  
-> ...
+>   ...
+
 </details>
 
 <details>
@@ -224,7 +230,8 @@ How this project follows software engineering best practices.
 > - Fast feedback to user actions
 > - Workflow designed for quick and efficient task completion
 > - Reduced loading times and no visual shifts ensure a smooth UX  
-> ...
+>   ...
+
 </details>
 
 <br>
@@ -475,6 +482,7 @@ _Executes JavaScript code in development environment._
 <summary><strong>📦 npm </strong>
 
 _Manages dependencies, libraries, and scripts._
+
 </summary>
 
 > npm commands used in the project:
