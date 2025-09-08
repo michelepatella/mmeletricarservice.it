@@ -99,7 +99,7 @@ How this project follows software engineering best practices.
 > - Functions and hooks abstract business logic
 > - Frontend interacts with backend through clear API contracts
 > - Serverless functions abstract backend complexity
-> - Supabase abstracts the complexity of managing a relational database
+> - Supabase abstracts the complexity of managing a relational database  
 > ...
 </details>
 
@@ -114,7 +114,7 @@ How this project follows software engineering best practices.
 > - Centralized constants, links, and CSS variables simplify updates
 > - Independent serverless functions allow API changes without side effects
 > - CI/CD ensures automated testing, stable deployments, and system reliability
-> - ESLint, Prettier, `npm audit`, and SonarQube ensure code quality
+> - ESLint, Prettier, vulnerability check, and SonarQube ensure code quality
 > - Vercel supports preview and versioned deployments with easy rollback
 > - GitHub version control simplifies updates, rollback and tracking code history
 > - Logs supports debugging and monitoring  
@@ -131,7 +131,7 @@ How this project follows software engineering best practices.
 > - React component structured as atomic, composable components
 > - Business logic incapsulated into modules
 > - Modular CI/CD pipeline composed of distinct jobs
-> - Separated secrets and environment variables management
+> - Separated secrets and environment variables management  
 > ...
 </details>
 
@@ -145,7 +145,7 @@ How this project follows software engineering best practices.
 > - Efficient serverless functions consume resources only when invoked
 > - Indexes on tables to improve query performance
 > - Lazy loading, AVIF images, and other optimizations boost Lighthouse scores
-> - Automated CI/CD streamlines the entire development cycle
+> - Automated CI/CD streamlines the entire development cycle  
 > ...
 </details>
 
@@ -160,7 +160,7 @@ How this project follows software engineering best practices.
 > - Serverless functions monitoring via Vercel Logs
 > - Backend monitoring via Supabase Logs
 > - Data integrity ensured by constraints, foreign keys, ENUMs, functions and triggers
-> - Rigorous CI/CD pipeline runs tests, security controls, and code analysis to prevent issues
+> - Rigorous CI/CD pipeline runs tests, security controls, and code analysis to prevent issues  
 > ...
 
 </details>
@@ -174,7 +174,7 @@ How this project follows software engineering best practices.
 > - UI components reused throughout the application
 > - Styles defined once and reused across the application
 > - Incapsulated business logic allow easy reuse across the application
-> - Adoption of libraries and frameworks (e.g., React Query, Framer Motion) so as to not reinvent the wheel
+> - Adoption of libraries and frameworks (e.g., React Query, Framer Motion) so as to not reinvent the wheel  
 > ...
 </details>
   
@@ -188,7 +188,7 @@ How this project follows software engineering best practices.
 > - Database indexes improve query scalability
 > - Vercel's serverless functions scale automatically with demand
 > - Vercel's edge caching reduces latency and workload, improving scalability
-> - Scalable GitHub Actions CI/CD pipeline with modular jobs
+> - Scalable GitHub Actions CI/CD pipeline with modular jobs  
 > ...
 
 </details>
@@ -207,7 +207,7 @@ How this project follows software engineering best practices.
 > - Vercel provides built-in security features (e.g., firewall)
 > - Vercel Analytics as privacy-friendly, cookie-free solution to gather insights
 > - CI/CD ensures security with vulnerability checks and SonarQube analysis
-> - Monitoring and debugging while respecting user privacy
+> - Monitoring and debugging while respecting user privacy  
 > ...
 </details>
 
@@ -223,7 +223,7 @@ How this project follows software engineering best practices.
 > - Responsive design and navigation (anchor menu on desktop, drawer on mobile)
 > - Fast feedback to user actions
 > - Workflow designed for quick and efficient task completion
-> - Reduced loading times and no visual shifts ensure a smooth UX
+> - Reduced loading times and no visual shifts ensure a smooth UX  
 > ...
 </details>
 
