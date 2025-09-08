@@ -701,26 +701,6 @@ _Deploys frontend and serverless functions._
   - Tracks queries and useful insights
   - Provides URL inspection, indexing status, and security issue reports
 
----
-
-<details>
-<summary><strong>Vercel Analytics Insights</strong></summary>
-
-<br>
-
-> - Visitors (total number of application's visitors)
-> - Page views (total number of pages viewed)
-> - Bounce rate (% of visitors who leave after viewing only one page)
-> - Pages (specific pages viewed)
-> - Routes (specific referrers viewed)
-> - Referrers (sources that referred users to the application)
-> - Countries (geographic locations of the visitors)
-> - Devices (types of devices used to access the application)
-> - Browsers (web browsers used by the visitors)
-> - Operating systems (operating system of the devices accessing the application)
-
-</details>
-
 <br>
 
 📊 <strong>Monitoring</strong>  
