@@ -22,7 +22,8 @@
   - [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
 - [💻 From Development to Deployment 🚀](#-from-development-to-deployment-)
   - [🔐 Secrets & Variables](#-secrets--variables)
-  - [💻 Development Environment & Version Control](#-development-environment--version-control)
+  - [💻 Development Environment](#-development-environment)
+  - [🔀 Version Control](#-version-control)
   - [✅ Code Quality](#-code-quality)
   - [🚀 Deployment & CI/CD](#-deployment--cicd)
 - [🖥️ SEO, Analytics & Monitoring](#%EF%B8%8F-seo-analytics--monitoring)
@@ -60,25 +61,37 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 ## 🛠️ Tech Stack
 
-| Layer                       | Technology                                                |
-| --------------------------- | --------------------------------------------------------- |
-| **Frontend**                | React.js                                                  |
-| **UI Library**              | Ant Design                                                |
-| **Styling**                 | CSS, Custom Design Tokens                                 |
-| **Animations**              | CSS, Framer Motion                                        |
-| **Routing**                 | React Router (HashRouter)                                 |
-| **State Management**        | React Hooks, Custom Hooks                                 |
-| **Fetching & Caching**      | React Query                                               |
-| **API Communication**       | Serverless API (Vercel Functions)                         |
-| **Backend-as-a-Service**    | Supabase (PostgreSQL, Storage)                            |
-| **Development Environment** | Node.js, npm, Vercel CLI                                  |
-| **Version Control**         | Git, GitHub                                               |
-| **Code Quality**            | ESLint, Prettier, SonarQube                               |
-| **Testing**                 | Jest, React Testing Library                               |
-| **Deployment & CI/CD**      | Vercel, GitHub Actions                                    |
-| **Environment Variables**   | .env, Vercel Environment Variables, GitHub Action Secrets |
-| **Monitoring**              | Vercel Logs, Supabase Logs, Error Logging                 |
-| **Analytics**               | Vercel Analytics                                          |
+| Layer                            | Technology                                                               |                         
+| ---------------------------------| -------------------------------------------------------------------------|
+| 🏗️ **Infrastructure**            | **Jamstack**                                                             |
+| 🌐 **Client-side**               | **React.js** - JavaScript Library                                        | 
+|                                  | **Ant Design** - UI Library                                              | 
+|                                  | **CSS, Design Tokens, Framer Motion** - Styling and Animations           | 
+|                                  | **React Router (HashRouter)** - Routing                                  | 
+|                                  | **React Hooks, Custom Hooks** - State Management                         | 
+|                                  | **React Query** - Fetching and Caching                                   | 
+| ⚙️ **API / Serverless Functions**| **Vercel Functions** - Backend Logic                                     | 
+| ☁️ **Backend / BaaS**            | **Supabase** - PostgreSQL Database and Storage                           | 
+| 🔐 **Secrets & Variables**       | **.env** - Development                                                   | 
+|                                  | **GitHub Actions Secrets and Variables** - CI/CD                         | 
+|                                  | **Vercel Environment Variables** - Deployment                            | 
+| ⚒️ **Development Environment**   | **Node.js** - JavaScript Runtime                                         |
+|                                  | **npm** - Package Manager                                                | 
+|                                  | **Vercel CLI** - Local Production Environment                            | 
+| 🔀 **Version Control**           | **Git & GitHub** - Repository & Workflow                                 | 
+| ✅ **Code Quality**              | **ESLint** - Linting and Coding Standards                                | 
+|                                  | **Prettier** - Formatting                                                | 
+|                                  | **`npm audit`** - Dependency Security                                    | 
+|                                  | **SonarQube** - Quality and Issues                                       |
+| 🧪 **Testing**                   | **Jest** - Unit and Integration Tests                                    | 
+|                                  | **React Testing Library** - Component Behavior Testing                   | 
+| 🚀 **Deployment & CI/CD**        | **Vercel** - Hosting                                                     | 
+|                                  | **GitHub Actions** - CI/CD                                               |
+| 📈 **Analytics**                 | **Vercel Analytics** - Insights                                          |   
+| 📊 **Monitoring**                | **Error Logging** - Client-side and Serverless Functions                 |
+|                                  | **Vercel Logs** - Serverless Functions                                   |
+|                                  | **Supabase Logs** - Backend / BaaS                                       |
+|                                  | **GitHub Insights** - CI/CD                                              |
 
 <br>
 
@@ -97,7 +110,6 @@ How this project follows software engineering best practices.
 > - Ant Design abstracts the complexity of CSS
 > - React Query abstracts fecthing and caching logic
 > - Functions and hooks abstract business logic
-> - Frontend interacts with backend through clear API contracts
 > - Serverless functions abstract backend complexity
 > - Supabase abstracts the complexity of managing a relational database  
 >   ...
@@ -110,13 +122,10 @@ How this project follows software engineering best practices.
 <br>
 
 > - Clean, documented code improves readability and understandability
-> - Modular Jamstack architecture keeps components independent by separating responsabilities
 > - Modular React components and business logic for easy updates
 > - Centralized constants, links, and CSS variables simplify updates
-> - Independent serverless functions allow API changes without side effects
-> - CI/CD ensures automated testing, stable deployments, and system reliability
 > - ESLint, Prettier, vulnerability check, and SonarQube ensure code quality
-> - Vercel supports preview and versioned deployments with easy rollback
+> - Vercel provides preview deployments and versioned releases for safer updates
 > - GitHub version control simplifies updates, rollback and tracking code history
 > - Logs supports debugging and monitoring  
 >   ...
@@ -130,10 +139,10 @@ How this project follows software engineering best practices.
 
 > - Separation of responsabilities among architectural components
 > - Modular React components manage their own state and rendering
-> - React component structured as atomic, composable components
-> - Business logic incapsulated into modules
-> - Modular CI/CD pipeline composed of distinct jobs
-> - Separated secrets and environment variables management  
+> - React component structured as atomic, composable units
+> - Business logic encapsulated into modules
+> - Modular CI/CD pipeline with distinct jobs
+> - Secrets and environment variables managed separately  
 >   ...
 
 </details>
@@ -176,7 +185,7 @@ How this project follows software engineering best practices.
 
 > - DRY (Don't Repeat Yourself) principles followed across the whole application
 > - UI components reused throughout the application
-> - Styles defined once and reused across the application
+> - Styles and CSS variables defined once and reused across the application
 > - Incapsulated business logic allow easy reuse across the application
 > - Adoption of libraries and frameworks (e.g., React Query, Framer Motion) so as to not reinvent the wheel  
 >   ...
@@ -206,7 +215,7 @@ How this project follows software engineering best practices.
 > - HTTPS ensures secure communications
 > - GDPR compliance
 > - Safe handling of third-party cookies via cookie banner
-> - Cookie policy, privacy policies, and legal notes provideds
+> - Cookie policy, privacy policies, and legal notes provided
 > - Sensitive data managed via Vercel Environment Variables, GitHub Actions Secrets, and .env escluded from version control
 > - Secure data management through Row-Level Security and policies
 > - Vercel provides built-in security features (e.g., firewall)
@@ -314,7 +323,7 @@ They implement API endpoints with modular, scalable, stateless backend logic.
 <br>
    
 > - **Description**: Returns an array of available used cars with key specs and a presentation image.
-> - **URL**: `/api/usedCarsOverview`
+> - **URL**: `/api/used-cars-overview/usedCarsOverview`
 > - **Method**: `GET`
 > - **Query Params**: `None`
 > - **Response**: `JSON`
@@ -362,7 +371,7 @@ They implement API endpoints with modular, scalable, stateless backend logic.
 <br>
   
 > - **Description**: Returns full details and images of a specific used car.
-> - **URL**: `/api/usedCarInfo`
+> - **URL**: `/api/used-car-info/usedCarInfo`
 > - **Method**: `GET`
 > - **Query Params**: `id` (ID of the requested used car)
 > - **Response**: `JSON`
@@ -458,7 +467,7 @@ It provides the backend infrastructure of the application, leveraging Supabase a
 
 ### 🔐 Secrets & Variables
 
-Manage all sensitive configuration and environment settings of the application.
+Manage all sensitive configuration and environment settings of the application safely.
 
 <strong>📝 Local .env File</strong>  
 _Used in development and ignored by version control._
@@ -471,15 +480,15 @@ _Used in CI/CD pipeline._
 
 <br>
    
-### 💻 Development Environment & Version Control
+### 💻 Development Environment
 
-Ensure a consistent development setup and reliabe version tracking.
+Ensure a consistent development setup.
 
 🌳 **Node.js**  
 _Executes JavaScript code in development environment._
 
 <details>
-<summary><strong>📦 npm </strong>
+<summary><strong>📦 npm</strong>
 
 _Manages dependencies, libraries, and scripts._
 
@@ -489,28 +498,41 @@ _Manages dependencies, libraries, and scripts._
 >
 > - `npm install`  
 >   <em>Install dependencies.</em>
-> - `npm run start`  
->   <em>Starts the local development server (only frontend, no serverless functions).</em>
-> - `npm run build`  
->   <em>Creates an optimized production build of the app.</em>
-> - `npm run test`  
->   <em>Runs all tests.</em>
-> - `npm run code:check`  
->   <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
-> - `npm run code:fix`  
->   <em>Automatically fixes linting issues and formats code with Prettier.</em>
+>
 > - `npm run audit`  
 >   <em>Performs a security audit of the installed npm packages and reports vulnerabilities.</em>
 >
+> - `npm run audit fix` /  `npm run audit fix --force`  
+>   <em>Automatically fixes vulnerabilities in dependencies.</em>
+>
+> - `npm run start`  
+>   <em>Starts the local development server (only frontend, no serverless functions).</em>
+>
+> - `npm run build`  
+>   <em>Creates an optimized production build of the app.</em>
+>
+> - `npm run test`  
+>   <em>Runs all tests.</em>
+>
+> - `npm run code:check`  
+>   <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
+>
+> - `npm run code:fix`  
+>   <em>Automatically fixes linting issues and formats code with Prettier.</em>
+>
 > Others:
 >
-> - `npx vercel --prod --yes --token $VERCEL_TOKEN`  
+> - `npx vercel --prod --yes --token $VERCEL_TOKEN --confirm --name $VERCEL_PROJECT_NAME --scope $VERCEL_TEAM`  
 >   <em>Deploys the app to Vercel in production.</em>
 
 </details>
 
 💻 **Vercel CLI**  
 _Runs frontend and serverless functions locally via_ `vercel dev`<em>, simulating production.</em><br><br>
+
+### 🔀 Version Control
+
+Track code and automate workflows. 
 
 🔧 **Git & GitHub**  
 <em>Manages code, workflows, and automated checks.</em>
@@ -563,8 +585,9 @@ _Checks for security vulnerabilities in project dependencies._
 <br>
 
 > 1. Run `npm run code:fix` locally to fix linting and formatting issues
-> 2. Push changes to `main`
-> 3. CI runs on `main` pushes or pull requests:
+> 2. Run `npm audit fix` (or `npm audit fix --force`) locally to fix dependency vulnerabilities
+> 3. Push changes to `main`
+> 4. CI runs on `main` pushes or pull requests:
 >    - `npm run code:check` to detect ESLint and Prettier issues
 >    - `npm run audit` to detect high and critical vulnerabilites
 >    - SonarQube analysis to verify the Quality Gate
@@ -575,7 +598,7 @@ _Checks for security vulnerabilities in project dependencies._
 
 ### 🚀 Deployment & CI/CD
 
-Manage automated delivery of the application from code to production while ensuring reliability and traceability.
+Automate code-to-production delivery with reliability and traceability.
 
 **⚡ Vercel**  
 _Deploys frontend and serverless functions._
@@ -601,18 +624,25 @@ _Deploys frontend and serverless functions._
 
 > 1. Checkout repository  
 >    <em>Retrieves the source code and prepares it for analysis.</em>
+>
 > 2. Setup Node.js  
 >    <em>Ensure the pipeline runs in the same Node.js environment as local development and production.</em>
+>
 > 3. Install dependencies  
 >    <em>Install all required packages.</em>
+>
 > 4. Run Lint and Prettier  
 >    <em>Check coding standards and formatting consistency.</em>
+>
 > 5. Build project  
 >    <em>Create an optimized build for the application.</em>
+>
 > 6. Run tests  
 >    <em>Execute all test suites.</em>
+>
 > 7. Run npm audit  
->    <em>Detect high or critical security vulnerabilities in dependencies.</em>
+>    <em>Detect high and critical security vulnerabilities in dependencies.</em>
+>
 > 8. Run SonarQube analysis  
 >    <em>Perform code quality analysis, checking the Quality Gate.</em>
 
@@ -647,27 +677,34 @@ _Deploys frontend and serverless functions._
 
 ## 🖥️ SEO, Analytics & Monitoring
 
-🔍 <strong>Search Engine Optimization</strong>  
+🔍 <strong>Search Engine Optimization (SEO)</strong>  
 <em>To improve discoverability and ranking.</em>
 
+- HTTPS for secure connections
 - Clean, human-readable URLs
 - Keyword-optimized content
-- HTTPS for secure connections
+- `meta` tags and `robots.txt` for search engine guidance
+- `alt` attributes on images for SEO
+- Optimized images with lazy loading and AVIF format
 - Embedded Google Maps for local SEO targeting
-- Favicon and consistent branding
 
 <br>
 
 📈 <strong>Analytics</strong>  
-<em>To monitor user engagement and performance via Vercel Analytics.</em>
+<em>To monitor user engagement and performance.</em>
 
-- Actionable insights
-- Privacy-friendly, cookie-free solution
+- Vercel Analytics
+  - Actionable insights on user interactions and engagement
+  - Privacy-friendly, cookie-free solution
+- Google Search Console
+  - Monitors search performance
+  - Tracks queries and useful insights
+  - Provides URL inspection, indexing status, and security issue reports
 
 ---
 
 <details>
-<summary><strong>Vercel Analytics Metrics</strong></summary>
+<summary><strong>Vercel Analytics Insights</strong></summary>
 
 <br>
 
@@ -689,13 +726,16 @@ _Deploys frontend and serverless functions._
 📊 <strong>Monitoring</strong>  
 <em>To track system operations and backend activities.</em>
 
+- Frontend monitoring via error logging (try-catch and console logs)
 - Serverless functions monitoring through:
   - Vercel Logs
-  - Automatic logging of errors and failed requests for faster debugging
+  - Automatic logging of errors and failed requests for faster debugging 
 - Backend / BaaS monitoring through Supabase Logs, including:
   - API Gateway Logs
   - Postgres Logs
   - Storage Logs
+- CI/CD and deployment monitoring via GitHub Insights and Vercel
+- Application monitoring for performance, accessibility, best practices, and SEO via Lighthouse
 
 <br>
 
@@ -891,11 +931,11 @@ The platform shows how smart design and technology can boost customer experience
 
 💻 **Operational Efficiency**
 
-> **Up to 20% of users exposed to the most relevant queries clicked through to access website, reducing support requests.**
+> **Up to 20% of users exposed to relevant brand and local queries clicked through to access website information, reducing support requests.**
 
 🏙️ **Local Business Impact**
 
-> **The website appears in 400+ searches over the last month, with an average position of #1 for relevant search queries, increasing the visibility of the business in its local area.**
+> **The website appears in 400+ search queries over the last month, with an average position of #1.5 for relevant brand and local queries, increasing the visibility of the business in its local area.**
 
 💡 **Informed Decisions**
 
@@ -903,7 +943,7 @@ The platform shows how smart design and technology can boost customer experience
 
 📊 **Data Insights**
 
-> **Insights from 200+ interactions on used car pages monthly help the business to understand customer preferences and guide strategy.**
+> **Insights from 200+ clicks on used car pages monthly help the business to understand customer preferences and guide strategy.**
 
 <br>
 
