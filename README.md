@@ -555,7 +555,7 @@ _Monitors serverless functions._
 **☁️ Supabase Logs (API Gateway, Postgres, Storage)**  
 _Monitors backend._  
 
-**🚀 GitHub Insights and Vercel**  
+**🔧 GitHub Insights**  
 _Monitors CI/CD and deployment._  
 
 **📊 Lighthouse**  
