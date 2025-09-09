@@ -6,15 +6,15 @@
 	--background_color: #141414;
 	--dark_gray_border_color: #222222;
 	--light_gray_border_color: #333333;
-	--yellow_color: #F8DE4D;
+	--yellow_color: #f8de4d;
 	--yellow_gradient_color: linear-gradient(
-			90deg,
-			#F8DE4D,
-			#E6C93F,
-			#D4B632,
-			#C2A225,
-			#B09018,
-			#9E7E0B
+		90deg,
+		#f8de4d,
+		#e6c93f,
+		#d4b632,
+		#c2a225,
+		#b09018,
+		#9e7e0b
 	);
 	--blue_color: #005fcc;
 

@@ -120,8 +120,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 ☁️ **Backend / BaaS**
 
-> ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white) > ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-> <br>
+> ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white) > ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) > <br>
 
 🔐 **Secrets & Variables**
 
