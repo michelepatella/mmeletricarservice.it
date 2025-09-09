@@ -88,39 +88,103 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 ## 🛠️ Tech Stack
 
-| Layer                             | Technology                                                     |
-| --------------------------------- | -------------------------------------------------------------- |
-| 🏗️ **Infrastructure**             | **Jamstack**                                                   |
-| 🌐 **Client-side**                | **React.js** - JavaScript Library                              |
-|                                   | **Ant Design** - UI Library                                    |
-|                                   | **CSS, Design Tokens, Framer Motion** - Styling and Animations |
-|                                   | **React Router (HashRouter)** - Routing                        |
-|                                   | **React Hooks, Custom Hooks** - State Management               |
-|                                   | **React Query** - Fetching and Caching                         |
-| ⚙️ **API / Serverless Functions** | **Vercel Functions** - Backend Logic                           |
-| ☁️ **Backend / BaaS**             | **Supabase** - PostgreSQL Database and Storage                 |
-| 🔐 **Secrets & Variables**        | **.env** - Development                                         |
-|                                   | **GitHub Actions Secrets and Variables** - CI/CD               |
-|                                   | **Vercel Environment Variables** - Deployment                  |
-| ⚒️ **Development Environment**    | **Node.js** - JavaScript Runtime                               |
-|                                   | **npm** - Package Manager                                      |
-|                                   | **Vercel CLI** - Local Production Environment                  |
-| 🔀 **Version Control**            | **Git & GitHub** - Repository & Workflow                       |
-| ✅ **Code Quality**               | **ESLint** - Linting and Coding Standards                      |
-|                                   | **Prettier** - Formatting                                      |
-|                                   | **Dependency Security Audit** - Dependency Security            |
-|                                   | **SonarQube** - Quality and Issues                             |
-| 🧪 **Testing**                    | **Jest** - Unit and Integration Tests                          |
-|                                   | **React Testing Library** - Component Behavior Testing         |
-| 🚀 **Deployment & CI/CD**         | **Vercel** - Hosting                                           |
-|                                   | **GitHub Actions** - CI/CD                                     |
-| 📈 **Analytics**                  | **Vercel Analytics** - Insights                                |
-|                                   | **Google Search Console** - Search Performance and Indexing    |
-| 📊 **Monitoring**                 | **Error Logging** - Client-side and Serverless Functions       |
-|                                   | **Vercel Logs** - Serverless Functions                         |
-|                                   | **Supabase Logs** - Backend / BaaS                             |
-|                                   | **GitHub Insights** - CI/CD                                    |
-|                                   | **Lighthouse** - App performaance and health                   |
+📝 **Language**
+
+> ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
+
+<br>
+
+🏗️ **Infrastructure**  
+
+> ![Jamstack](https://img.shields.io/badge/Jamstack-F0047F?style=for-the-badge&logo=jamstack&logoColor=white)
+
+<br>
+
+🌐 **Client-side**  
+
+> ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+> ![React Hooks](https://img.shields.io/badge/React_Hooks-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+> ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)
+> ![React Query](https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white)  
+> ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+> ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css)  
+> ![Ant Design](https://img.shields.io/badge/Ant_Design-0170FE?style=for-the-badge&logo=ant-design&logoColor=white)
+> ![Framer](https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=framer&logoColor=white)  
+
+<br>
+
+⚙️ **API / Serverless Functions**  
+
+> ![Vercel Functions](https://img.shields.io/badge/Vercel%20Functions-000000?style=for-the-badge&logo=vercel&logoColor=white)  
+
+<br>
+
+☁️ **Backend / BaaS**  
+
+> ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
+> ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+<br>
+
+🔐 **Secrets & Variables**  
+
+> ![.env](https://img.shields.io/badge/.ENV-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)  
+> ![GitHub Actions Secrets and Variables](https://img.shields.io/badge/GitHub%20Actions%20Secrets%20and%20Variables-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)  
+> ![Vercel Environment Variables](https://img.shields.io/badge/Vercel%20Environment%20Variables-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+<br>
+
+⚒️ **Development Environment**  
+
+> ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=node.js&logoColor=white)  
+> ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)  
+> ![Vercel CLI](https://img.shields.io/badge/Vercel%20CLI-000000?style=for-the-badge&logo=vercel&logoColor=white)  
+
+<br>
+
+🔀 **Version Control**  
+
+> ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+> ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)  
+
+<br>
+
+✅ **Code Quality**  
+
+> ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
+> ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)  
+> ![Dependency Security Audit](https://img.shields.io/badge/Dependency%20Security-CB3837?style=for-the-badge&logo=npm&logoColor=white)  
+> ![SonarQube](https://img.shields.io/badge/SonarQube-126ED3?style=for-the-badge&logo=sonarqubecloud&logoColor=white)
+
+<br>
+
+🧪 **Testing**  
+
+> ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)  
+> ![React Testing Library](https://img.shields.io/badge/React_Testing_Library-61DAFB?style=for-the-badge&logo=react&logoColor=black)  
+
+<br>
+
+🚀 **Deployment & CI/CD**  
+
+> ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)  
+> ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)  
+
+<br>
+  
+📈 **Analytics**  
+
+> ![Vercel Analytics](https://img.shields.io/badge/Vercel_Analytics-000000?style=for-the-badge&logo=vercel&logoColor=white)  
+> ![Google Search Console](https://img.shields.io/badge/Google%20Search%20Console-458CF5?style=for-the-badge&logo=googlesearchconsole&logoColor=white)
+
+<br>
+
+📊 **Monitoring**  
+
+> ![Error Logging](https://img.shields.io/badge/Error%20Logging-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
+> ![Vercel Logs](https://img.shields.io/badge/Vercel_Logs-000000?style=for-the-badge&logo=vercel&logoColor=white)  
+> ![Supabase Logs](https://img.shields.io/badge/Supabase_Logs-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)  
+> ![GitHub Insights](https://img.shields.io/badge/GitHub_Insights-181717?style=for-the-badge&logo=github&logoColor=white)  
+> ![Lighthouse](https://img.shields.io/badge/Lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=white)
 
 <br>
 
