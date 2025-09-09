@@ -539,7 +539,7 @@ To monitor user engagement and performance.
 _Provides privacy-friendly, cookie-free insights._  
 
 **🔬 Google Search Console**  
-_Monitors search perfromance, queries, indexing, and security._  
+_Monitors search performance, queries, indexing, and security._  
 
 <br>
 
