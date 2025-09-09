@@ -27,9 +27,10 @@
   - [🔀 Version Control](#-version-control)
   - [✅ Code Quality](#-code-quality)
   - [🚀 Deployment & CI/CD](#-deployment--cicd)
-- [🖥️ SEO, Analytics & Monitoring](#%EF%B8%8F-seo-analytics--monitoring)
+- [🖥️ Post-Deployment](#%EF%B8%8F-post-deployment)
+  - [📈 Analytics](#-analytics)
+  - [📊 Monitoring](#-monitoring)
 - [📈 Metrics](#-metrics)
-- [🌎 Impact on the Real World](#-impact-on-the-real-world)
 
 <br>
 
@@ -58,6 +59,22 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
+**What's the impact on the real world?**  
+
+**Operational Efficiency**  
+> **Up to 20% of users exposed to relevant brand and local queries clicked through to access website information, reducing support requests.**
+
+**Local Business Impact**  
+> **The website appears in 400+ search queries over the last month, with an average position of #1.5 for relevant brand and local queries, increasing the visibility of the business in its local area.**
+
+**Informed Decisions**  
+> **More than 30% of users who visited the website clicked through to see detailed information about used cars, supporting informed purchasing decisions.**
+
+**Data Insights**  
+> **Insights from 200+ clicks on used car pages monthly help the business to understand customer preferences and guide strategy.**
+
+<br>
+
 <br>
 
 ## 🛠️ Tech Stack
@@ -82,7 +99,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 | 🔀 **Version Control**            | **Git & GitHub** - Repository & Workflow                       |
 | ✅ **Code Quality**               | **ESLint** - Linting and Coding Standards                      |
 |                                   | **Prettier** - Formatting                                      |
-|                                   | **`npm audit`** - Dependency Security                          |
+|                                   | **Dependency Security Audit** - Dependency Security            |
 |                                   | **SonarQube** - Quality and Issues                             |
 | 🧪 **Testing**                    | **Jest** - Unit and Integration Tests                          |
 |                                   | **React Testing Library** - Component Behavior Testing         |
@@ -317,7 +334,7 @@ Provides backend infrastructure using Supabase, including PostgreSQL database an
 
 ### 🔐 Secrets & Variables
 
-Manage all sensitive configuration and environment settings of the application safely.
+To manage all sensitive configuration and environment settings of the application safely.
 
 <strong>📝 Local .env File</strong>  
 _Used in development and ignored by version control._
@@ -332,66 +349,36 @@ _Used in CI/CD pipeline._
    
 ### 💻 Development Environment
 
-Ensure a consistent development setup.
+To ensure a consistent development setup.
 
 🌳 **Node.js**  
 _Executes JavaScript code in development environment._
 
-<details>
-<summary><strong>📦 npm</strong>
-
+**📦 npm**  
 _Manages dependencies, libraries, and scripts._
 
-</summary>
-
-> npm commands used in the project:
->
-> - `npm install`  
->   <em>Install dependencies.</em>
-> - `npm run audit`  
->   <em>Performs a security audit of the installed npm packages and reports vulnerabilities.</em>
-> - `npm run audit fix` / `npm run audit fix --force`  
->   <em>Automatically fixes vulnerabilities in dependencies.</em>
-> - `npm run start`  
->   <em>Starts the local development server (only frontend, no serverless functions).</em>
-> - `npm run build`  
->   <em>Creates an optimized production build of the app.</em>
-> - `npm run test`  
->   <em>Runs all tests.</em>
-> - `npm run code:check`  
->   <em>Runs ESLint and Prettier to detect linting issues and code formatting violations.</em>
-> - `npm run code:fix`  
->   <em>Automatically fixes linting issues and formats code with Prettier.</em>
->
-> Others:
->
-> - `npx vercel --prod --yes --token $VERCEL_TOKEN --confirm --name $VERCEL_PROJECT_NAME --scope $VERCEL_TEAM`  
->   <em>Deploys the app to Vercel in production.</em>
-
-</details>
-
 💻 **Vercel CLI**  
-_Runs frontend and serverless functions locally via_ `vercel dev`<em>, simulating production.</em><br><br>
+_Runs frontend and serverless functions locally, simulating production._
+
+<br>
 
 ### 🔀 Version Control
 
-Track code and automate workflows.
+To track code and automate workflows.
 
 🔧 **Git & GitHub**  
 <em>Manages code, workflows, and automated checks.</em>
 
-- `main` for production, separate branches for major changes
+- Separate branches for production and major changes
 - Conventional commit standard for commit messages
 - Stable deployment points marked by Git tags
-- GitHub Actions runs CI/CD
-- GitHub Actions secrets and variables for CI/CD
-- GitHub Insights for activities and CI/CD metrics
+- CI/CD automation with GitHub Actions
 
 <br>
 
 ### ✅ Code Quality
 
-Keep code clean, safe, and maintainable throughout development.
+To keep code clean, safe, and maintainable throughout development.
 
 ⚖️ **ESLint**  
 _Enforces JavaScript coding standards._
@@ -399,161 +386,111 @@ _Enforces JavaScript coding standards._
 🧹 **Prettier**  
 _Formats code automatically for consistency._
 
-🔒 **npm audit**  
+🔒 **Dependency Security Audit**  
 _Checks for security vulnerabilities in project dependencies._
 
-<details>
-<summary>
-<strong>📊 SonarQube</strong>
-  
-<em>Monitors code quality and highlights issues and risks on</em> `main`<em> pushes.</em>
-</summary>
-
-> **SonarQube Quality Gate** conditions on new code:
->
-> - No new bugs are introduced (Reliability rating is A)
-> - No new vulnerabilities are introduced (Security rating is A)
-> - Limited technical debt (Maintainability rating is A)
-> - All new security hotspots are reviewed (Security Hotspots Reviewed is 100%)
-> - Sufficient test coverage (greater than or equal to 80.0%)
-> - Limited duplications (% of duplicated lines is less than or equal to 3.0%)
-
-</details>
-
----
-
-<details>
-<summary><strong>Code Quality Flow (on <code>main</code>)</strong></summary>
-
-<br>
-
-> 1. Run `npm run code:fix` locally to fix linting and formatting issues
-> 2. Run `npm audit fix` (or `npm audit fix --force`) locally to fix dependency vulnerabilities
-> 3. Push changes to `main`
-> 4. CI runs on `main` pushes or pull requests:
->    - `npm run code:check` to detect ESLint and Prettier issues
->    - `npm run audit` to detect high and critical vulnerabilites
->    - SonarQube analysis to verify the Quality Gate
-
-</details>
+**📊 SonarQube**  
+_Monitors code quality and enforces a Quality Gate for reliability, security, maintainability, test coverage, and low duplication._
 
 <br>
 
 ### 🚀 Deployment & CI/CD
 
-Automate code-to-production delivery with reliability and traceability.
+To automate code-to-production delivery with reliability and traceability.
 
 **⚡ Vercel**  
 _Deploys frontend and serverless functions._
 
-- Domain management
 - Preview deployments for all branches and pull requests
-- Versioned deployments with easy rollback to previous stable releases
-- Management of environment variables
-- Automatic caching of static content and serverless responses at the edge
+- Versioned deployments with easy rollback
+- Static content and serverless functions caching at the edge
 - Automatic scaling with traffic demand
-- Security features including firewall
+- Security features (firewall)
 - Logs monitoring
-- Integrated analytics
 
 <br>
 
 <details>
 <summary>
-<strong>🧪 Continuous Integration (CI)</strong>
+<strong>Continuous Integration (CI)</strong>
   
-<em>Runs on every push, and pull request to</em> `main`<em>.</em>
+<em>Runs on every push, and pull request to main.</em>
 </summary>
 
-> 1. Checkout repository  
->    <em>Retrieves the source code and prepares it for analysis.</em>
-> 2. Setup Node.js  
->    <em>Ensure the pipeline runs in the same Node.js environment as local development and production.</em>
-> 3. Install dependencies  
->    <em>Install all required packages.</em>
-> 4. Run Lint and Prettier  
->    <em>Check coding standards and formatting consistency.</em>
-> 5. Build project  
->    <em>Create an optimized build for the application.</em>
-> 6. Run tests  
->    <em>Execute all test suites.</em>
-> 7. Run npm audit  
->    <em>Detect high and critical security vulnerabilities in dependencies.</em>
-> 8. Run SonarQube analysis  
->    <em>Perform code quality analysis, checking the Quality Gate.</em>
+> Checkout repository  
+> ↓  
+> Setup Node.js  
+> ↓  
+> Install dependencies  
+> ↓  
+> Run ESLint & Prettier  
+> ↓  
+> Run tests  
+> ↓  
+> Build project      
+> ↓  
+> Check dependencies for vulnerabilities  
+> ↓  
+> Run SonarQube analysis   
 
 </details>
 
 <details>
 <summary>
-<strong>🚀 Continuous Deployment (CD)</strong>
+<strong>Continuous Deployment (CD)</strong>
   
 <em>Triggered after successful CI.</em>
 </summary>
   
-> 1. Checkout repository  
->    <em>Retrieves the source code.</em>
->
-> 2. Setup Node.js   
->    <em>Ensure the pipeline runs in the same Node.js environment as local development and production.</em>
->
-> 3. Install dependencies  
->    <em>Install all required packages.</em>
->
-> 4. Build project   
->    <em>Create an optimized build for the application.</em>
->
-> 5. Deploy to Vercel  
->    <em>Deploy the application to Vercel.</em>
+> Checkout repository  
+> ↓  
+> Setup Node.js  
+> ↓  
+> Install dependencies  
+> ↓  
+> Build project     
+> ↓  
+> Deploy to Vercel  
 </details>
 
 <br>
 
 <br>
 
-## 🖥️ SEO, Analytics & Monitoring
+## 🖥️ Post-Deployment  
 
-🔍 <strong>Search Engine Optimization (SEO)</strong>  
-<em>To improve discoverability and ranking.</em>
+### 📈 Analytics  
+To monitor user engagement and performance.
 
-- HTTPS for secure connections
-- Clean, human-readable URLs
-- Keyword-optimized content
-- `meta` tags and `robots.txt` for search engine guidance
-- `alt` attributes on images for SEO
-- Optimized images with lazy loading and AVIF format
-- Embedded Google Maps for local SEO targeting
+**⚡ Vercel Analytics**  
+_Provides privacy-friendly, cookie-free insights._  
+
+**🔬 Google Search Console**  
+_Monitors search perfromance, queries, indexing, and security._  
 
 <br>
 
-📈 <strong>Analytics</strong>  
-<em>To monitor user engagement and performance.</em>
+### 📊 Monitoring  
+To track system operations and backend activities.  
 
-- Vercel Analytics
-  - Actionable insights on user interactions and engagement
-  - Privacy-friendly, cookie-free solution
-- Google Search Console
-  - Monitors search performance
-  - Tracks queries and useful insights
-  - Provides URL inspection, indexing status, and security issue reports
+**🛑 Error Logging (try-catch and console logs)**  
+_Monitors client-side._  
 
-<br>
+**⚡ Vercel Logs**  
+_Monitors serverless functions._  
 
-📊 <strong>Monitoring</strong>  
-<em>To track system operations and backend activities.</em>
+**☁️ Supabase Logs (API Gateway, Postgres, Storage)**  
+_Monitors backend._  
 
-- Client-side (including fetching and caching) monitoring via error logging (try-catch and console logs)
-- Serverless functions monitoring via Vercel Logs
-- Backend / BaaS monitoring through Supabase Logs, including:
-  - API Gateway Logs
-  - Postgres Logs
-  - Storage Logs
-- CI/CD and deployment monitoring via GitHub Insights and Vercel
-- Application monitoring for performance, accessibility, best practices, and SEO via Lighthouse
+**🚀 GitHub Insights and Vercel**  
+_Monitors CI/CD and deployment._  
+
+**📊 Lighthouse**  
+_Monitors application for performance, accessibility, best practices, and SEO._
 
 <br>
 
-<strong>All while preserving user privacy.</strong>
+> <strong>All while preserving user privacy.</strong>
 
 <br>
 
@@ -571,9 +508,6 @@ _Deploys frontend and serverless functions._
 | _Accessibility_  | **100** 🟢 |
 | _Best Practices_ | **100** 🟢 |
 | _SEO_            | **100** 🟢 |
-
----
-
 <details>
 <summary><strong>Performance Metrics</strong></summary>
 
@@ -600,7 +534,7 @@ _Deploys frontend and serverless functions._
 
 <details>
 <summary>
-<strong>⚙️ Serverless Functions Metrics</strong> 
+<strong>Serverless Functions Metrics</strong> 
 <br>
 <em>Metrics by Vercel Observability.</em>
 </summary>
@@ -631,7 +565,7 @@ _Deploys frontend and serverless functions._
 
 <details>
 <summary>
-<strong>☁️ BaaS Metrics</strong> 
+<strong>Backend / BaaS Metrics</strong> 
 <br>
 <em>Metrics by Supabase Reports.</em>
 </summary>
@@ -648,7 +582,7 @@ _Deploys frontend and serverless functions._
 
 <details>
 <summary>
-<strong>🚀 Deployment & CI/CD Metrics</strong> 
+<strong>Deployment & CI/CD Metrics</strong> 
 <br>
 <em>Metrics by GitHub Insights.</em>
 </summary>
@@ -671,7 +605,7 @@ _Deploys frontend and serverless functions._
 
 <details>
 <summary>
-<strong>🛠️ Code Metrics</strong> 
+<strong>Code Metrics</strong> 
 <br>
 <em>Metrics by SonarQube Cloud.</em>
 </summary>
@@ -737,30 +671,6 @@ _Deploys frontend and serverless functions._
 
 <br>
 
-<br>
-
-## 🌎 Impact on the Real World
-
-The platform shows how smart design and technology can boost customer experience and business impact.
-
-💻 **Operational Efficiency**
-
-> **Up to 20% of users exposed to relevant brand and local queries clicked through to access website information, reducing support requests.**
-
-🏙️ **Local Business Impact**
-
-> **The website appears in 400+ search queries over the last month, with an average position of #1.5 for relevant brand and local queries, increasing the visibility of the business in its local area.**
-
-💡 **Informed Decisions**
-
-> **More than 30% of users who visited the website clicked through to see detailed information about used cars, supporting informed purchasing decisions.**
-
-📊 **Data Insights**
-
-> **Insights from 200+ clicks on used car pages monthly help the business to understand customer preferences and guide strategy.**
-
-<br>
-
-<br>
+---
 
 Last update: _June 24, 2025_
