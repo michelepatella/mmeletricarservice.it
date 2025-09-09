@@ -64,23 +64,27 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 ## 🌍 Real-World Impact
 
-**👁️ Visibility**  
-> **Reached 400+ search queries last month, ranking #1.5 for brand and local searches.**  
+**👁️ Visibility**
 
-**↓**  
+> **Reached 400+ search queries last month, ranking #1.5 for brand and local searches.**
 
-**⚡ Efficiency**   
-> **Up to 20% of users clicked through from relevant searches, reducing support requests.**  
+**↓**
 
-**↓**  
+**⚡ Efficiency**
 
-**🤝 Trust**    
-> **30%+ of visitors explored detailed used car information, enabling informed decisions.**  
+> **Up to 20% of users clicked through from relevant searches, reducing support requests.**
 
-**↓**  
+**↓**
 
-**🎯 Strategy**   
-> **200+ monthly clicks on used cars reveal customer preferences and guide strategy.**  
+**🤝 Trust**
+
+> **30%+ of visitors explored detailed used car information, enabling informed decisions.**
+
+**↓**
+
+**🎯 Strategy**
+
+> **200+ monthly clicks on used cars reveal customer preferences and guide strategy.**
 
 <br>
 
@@ -90,42 +94,36 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 📝 **Language**
 
-> ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
+> ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 <br>
 
-🏗️ **Infrastructure**  
+🏗️ **Infrastructure**
 
 > ![Jamstack](https://img.shields.io/badge/Jamstack-F0047F?style=for-the-badge&logo=jamstack&logoColor=white)
 
 <br>
 
-🌐 **Client-side**  
+🌐 **Client-side**
 
-> ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-> ![React Hooks](https://img.shields.io/badge/React_Hooks-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-> ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)
-> ![React Query](https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white)  
-> ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-> ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css)  
-> ![Ant Design](https://img.shields.io/badge/Ant_Design-0170FE?style=for-the-badge&logo=ant-design&logoColor=white)
-> ![Framer](https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=framer&logoColor=white)  
+> ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black) > ![React Hooks](https://img.shields.io/badge/React_Hooks-61DAFB?style=for-the-badge&logo=react&logoColor=black) > ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white) > ![React Query](https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white)  
+> ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) > ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css)  
+> ![Ant Design](https://img.shields.io/badge/Ant_Design-0170FE?style=for-the-badge&logo=ant-design&logoColor=white) > ![Framer](https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
 <br>
 
-⚙️ **API / Serverless Functions**  
+⚙️ **API / Serverless Functions**
 
-> ![Vercel Functions](https://img.shields.io/badge/Vercel%20Functions-000000?style=for-the-badge&logo=vercel&logoColor=white)  
+> ![Vercel Functions](https://img.shields.io/badge/Vercel%20Functions-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 <br>
 
-☁️ **Backend / BaaS**  
+☁️ **Backend / BaaS**
 
-> ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
-> ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-<br>
+> ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white) > ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+> <br>
 
-🔐 **Secrets & Variables**  
+🔐 **Secrets & Variables**
 
 > ![.env](https://img.shields.io/badge/.ENV-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)  
 > ![GitHub Actions Secrets and Variables](https://img.shields.io/badge/GitHub%20Actions%20Secrets%20and%20Variables-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)  
@@ -133,52 +131,50 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-⚒️ **Development Environment**  
+⚒️ **Development Environment**
 
 > ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=node.js&logoColor=white)  
 > ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)  
-> ![Vercel CLI](https://img.shields.io/badge/Vercel%20CLI-000000?style=for-the-badge&logo=vercel&logoColor=white)  
+> ![Vercel CLI](https://img.shields.io/badge/Vercel%20CLI-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 <br>
 
-🔀 **Version Control**  
+🔀 **Version Control**
 
-> ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-> ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)  
+> ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) > ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
 <br>
 
-✅ **Code Quality**  
+✅ **Code Quality**
 
-> ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
-> ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)  
+> ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white) > ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)  
 > ![Dependency Security Audit](https://img.shields.io/badge/Dependency%20Security-CB3837?style=for-the-badge&logo=npm&logoColor=white)  
 > ![SonarQube](https://img.shields.io/badge/SonarQube-126ED3?style=for-the-badge&logo=sonarqubecloud&logoColor=white)
 
 <br>
 
-🧪 **Testing**  
+🧪 **Testing**
 
 > ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)  
-> ![React Testing Library](https://img.shields.io/badge/React_Testing_Library-61DAFB?style=for-the-badge&logo=react&logoColor=black)  
+> ![React Testing Library](https://img.shields.io/badge/React_Testing_Library-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 
 <br>
 
-🚀 **Deployment & CI/CD**  
+🚀 **Deployment & CI/CD**
 
 > ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)  
-> ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)  
+> ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
 <br>
   
-📈 **Analytics**  
+📈 **Analytics**
 
 > ![Vercel Analytics](https://img.shields.io/badge/Vercel_Analytics-000000?style=for-the-badge&logo=vercel&logoColor=white)  
 > ![Google Search Console](https://img.shields.io/badge/Google%20Search%20Console-458CF5?style=for-the-badge&logo=googlesearchconsole&logoColor=white)
 
 <br>
 
-📊 **Monitoring**  
+📊 **Monitoring**
 
 > ![Error Logging](https://img.shields.io/badge/Error%20Logging-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
 > ![Vercel Logs](https://img.shields.io/badge/Vercel_Logs-000000?style=for-the-badge&logo=vercel&logoColor=white)  
@@ -267,7 +263,7 @@ How this project follows software engineering best practices.
 > - Application follows DRY (Don't Repeat Yourself) principles
 > - Application reuses UI components, styles, and CSS variables
 > - Business logic modules enable easy reuse
-> - Libraries and frameworks avoid reinventing the wheel   
+> - Libraries and frameworks avoid reinventing the wheel  
 >   ...
 
 </details>
@@ -398,7 +394,7 @@ Provides backend infrastructure using Supabase, including PostgreSQL database an
 - **Security**
   - Enforces Row-Level Security to restrict access at row level
   - Defines access policies for reading and writing data
-  
+
 <br>
 
 <br>
@@ -500,11 +496,11 @@ _Deploys frontend and serverless functions._
 > ↓  
 > Run tests  
 > ↓  
-> Build project      
+> Build project  
 > ↓  
 > Check dependencies for vulnerabilities  
 > ↓  
-> Run SonarQube analysis   
+> Run SonarQube analysis
 
 </details>
 
@@ -530,33 +526,35 @@ _Deploys frontend and serverless functions._
 
 <br>
 
-## 🖥️ Post-Deployment  
+## 🖥️ Post-Deployment
 
-### 🔎 Analytics  
+### 🔎 Analytics
+
 To monitor user engagement and performance.
 
 **⚡ Vercel Analytics**  
-_Provides privacy-friendly, cookie-free insights._  
+_Provides privacy-friendly, cookie-free insights._
 
 **🔬 Google Search Console**  
-_Monitors search performance, queries, indexing, and security._  
+_Monitors search performance, queries, indexing, and security._
 
 <br>
 
-### 📡 Monitoring  
-To track system operations and backend activities.  
+### 📡 Monitoring
+
+To track system operations and backend activities.
 
 **🛑 Error Logging (try-catch and console logs)**  
-_Monitors client-side._  
+_Monitors client-side._
 
 **⚡ Vercel Logs**  
-_Monitors serverless functions._  
+_Monitors serverless functions._
 
 **☁️ Supabase Logs (API Gateway, Postgres, Storage)**  
-_Monitors backend._  
+_Monitors backend._
 
 **🔧 GitHub Insights**  
-_Monitors CI/CD and deployment._  
+_Monitors CI/CD and deployment._
 
 **📊 Lighthouse**  
 _Monitors application for performance, accessibility, best practices, and SEO._
@@ -581,6 +579,7 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 | _Accessibility_  | **100** 🟢 |
 | _Best Practices_ | **100** 🟢 |
 | _SEO_            | **100** 🟢 |
+
 <details>
 <summary><strong>Performance Metrics</strong></summary>
 
