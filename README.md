@@ -13,6 +13,7 @@
 <h3>📚 Table of Content</h3>
 
 - [👁️ Overview](#️-overview)
+- [🌍 Real-World Impact](#-real-world-impact)
 - [🛠️ Tech Stack](#️-tech-stack)
 - [📌 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
@@ -28,9 +29,9 @@
   - [✅ Code Quality](#-code-quality)
   - [🚀 Deployment & CI/CD](#-deployment--cicd)
 - [🖥️ Post-Deployment](#%EF%B8%8F-post-deployment)
-  - [📈 Analytics](#-analytics)
-  - [📊 Monitoring](#-monitoring)
-- [📈 Metrics](#-metrics)
+  - [🔎 Analytics](#-analytics)
+  - [📡 Monitoring](#-monitoring)
+- [📊 Metrics](#-metrics)
 
 <br>
 
@@ -59,19 +60,27 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-**What's the impact on the real world?**  
+<br>
 
-**Operational Efficiency**  
-> **Up to 20% of users exposed to relevant brand and local queries clicked through to access website information, reducing support requests.**
+## 🌍 Real-World Impact
 
-**Local Business Impact**  
-> **The website appears in 400+ search queries over the last month, with an average position of #1.5 for relevant brand and local queries, increasing the visibility of the business in its local area.**
+**👁️ Visibility**  
+> **Reached 400+ search queries last month, ranking #1.5 for brand and local searches.**  
 
-**Informed Decisions**  
-> **More than 30% of users who visited the website clicked through to see detailed information about used cars, supporting informed purchasing decisions.**
+**↓**  
 
-**Data Insights**  
-> **Insights from 200+ clicks on used car pages monthly help the business to understand customer preferences and guide strategy.**
+**⚡ Efficiency**   
+> **Up to 20% of users clicked through from relevant searches, reducing support requests.**  
+
+**↓**  
+
+**🤝 Trust**    
+> **30%+ of visitors explored detailed used car information, enabling informed decisions.**  
+
+**↓**  
+
+**🎯 Strategy**   
+> **200+ monthly clicks on used cars reveal customer preferences and guide strategy.**  
 
 <br>
 
@@ -339,10 +348,10 @@ To manage all sensitive configuration and environment settings of the applicatio
 <strong>📝 Local .env File</strong>  
 _Used in development and ignored by version control._
 
-<strong>☁️ Vercel Environment Variables</strong>  
+<strong>⚡ Vercel Environment Variables</strong>  
 _Used for production deployments._
 
-🔒 <strong>GitHub Actions Secrets and Variables</strong>  
+🔧 <strong>GitHub Actions Secrets and Variables</strong>  
 _Used in CI/CD pipeline._
 
 <br>
@@ -357,7 +366,7 @@ _Executes JavaScript code in development environment._
 **📦 npm**  
 _Manages dependencies, libraries, and scripts._
 
-💻 **Vercel CLI**  
+⌨️ **Vercel CLI**  
 _Runs frontend and serverless functions locally, simulating production._
 
 <br>
@@ -389,7 +398,7 @@ _Formats code automatically for consistency._
 🔒 **Dependency Security Audit**  
 _Checks for security vulnerabilities in project dependencies._
 
-**📊 SonarQube**  
+**🔍 SonarQube**  
 _Monitors code quality and enforces a Quality Gate for reliability, security, maintainability, test coverage, and low duplication._
 
 <br>
@@ -459,7 +468,7 @@ _Deploys frontend and serverless functions._
 
 ## 🖥️ Post-Deployment  
 
-### 📈 Analytics  
+### 🔎 Analytics  
 To monitor user engagement and performance.
 
 **⚡ Vercel Analytics**  
@@ -470,7 +479,7 @@ _Monitors search perfromance, queries, indexing, and security._
 
 <br>
 
-### 📊 Monitoring  
+### 📡 Monitoring  
 To track system operations and backend activities.  
 
 **🛑 Error Logging (try-catch and console logs)**  
@@ -496,13 +505,13 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 
 <br>
 
-## 📈 Metrics
+## 📊 Metrics
 
 <br>
 
-**📊 Lighthouse Metrics**:
+**Lighthouse Metrics**:
 
-| Metrics          | Score      |
+| Metric           | Score      |
 | ---------------- | ---------- |
 | _Performance_    | **100** 🟢 |
 | _Accessibility_  | **100** 🟢 |
