@@ -13,7 +13,9 @@
 /* Home Title styles */
 .home-title {
 	margin-bottom: var(--home_title_margin_bottom);
-	color: var(--yellow_color);
+	background: var(--yellow_gradient_color);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	text-align: center;
 	opacity: 0;
 	animation: slideUpHomeTitle 1s ease forwards;
