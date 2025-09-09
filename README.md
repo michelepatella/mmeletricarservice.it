@@ -17,7 +17,7 @@
 - [📌 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
   - [🌐 Client-side](#-client-side)
-  - [⚛️ React Components](#-react-components)
+  - [⚛️ React Components](#EF%B8%8F-react-components)
   - [🔄 Data Fetching & Caching](#-data-fetching--caching)
   - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
   - [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
