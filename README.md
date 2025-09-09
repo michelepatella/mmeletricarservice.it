@@ -108,12 +108,10 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - React components manage the web application's state
-> - Ant Design abstracts the complexity of CSS
+> - React components manage application state
 > - React Query abstracts fecthing and caching logic
 > - Functions and hooks abstract business logic
-> - Serverless functions abstract backend complexity
-> - Supabase abstracts the complexity of managing a relational database  
+> - Serverless functions abstract backend complexity  
 >   ...
 
 </details>
@@ -123,13 +121,10 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - Clean, documented code improves readability and understandability
-> - Modular React components and business logic for easy updates
-> - Centralized constants, links, and CSS variables simplify updates
-> - ESLint, Prettier, vulnerability check, and SonarQube ensure code quality
-> - Vercel provides preview deployments and versioned releases for safer updates
-> - GitHub version control simplifies updates, rollback and tracking code history
-> - Logs supports debugging and monitoring  
+> - Clean, documented code improves readability
+> - Decoupled React components and business logic enable easy updates
+> - Centralized constants and variables simplify changes
+> - ESLint, Prettier, vulnerability check, and SonarQube ensure code quality  
 >   ...
 
 </details>
@@ -139,12 +134,10 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - Separation of responsabilities among architectural components
+> - Architecture separates responsabilities among components
 > - Modular React components manage their own state and rendering
-> - React component structured as atomic, composable units
-> - Business logic encapsulated into modules
-> - Modular CI/CD pipeline with distinct jobs
-> - Secrets and environment variables managed separately  
+> - React components follow atomic, composable design
+> - Modules incapsulate business logic  
 >   ...
 
 </details>
@@ -154,12 +147,10 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - React Query for efficient data fetching and caching
-> - Vercel caches static contents and serverless function's responses at the edge
-> - Efficient serverless functions consume resources only when invoked
-> - Indexes on tables to improve query performance
-> - Lazy loading, AVIF images, and other optimizations boost Lighthouse scores
-> - Automated CI/CD streamlines the entire development cycle  
+> - React Query optimizes data fetching and caching
+> - Serverless functions consume resources only when invoked
+> - Indexes on tables improve query performance
+> - Lazy loading and AVIF images boost Lighthouse scores  
 >   ...
 
 </details>
@@ -170,12 +161,9 @@ How this project follows software engineering best practices.
 <br>
 
 > - Distributed services prevent full system failure
-> - Frontend error handling through React Query and try-catch blocks
-> - Fallback UIs improves resilience
-> - Serverless functions monitoring via Vercel Logs
-> - Backend monitoring via Supabase Logs
-> - Data integrity ensured by constraints, foreign keys, ENUMs, functions and triggers
-> - Rigorous CI/CD pipeline runs tests, security controls, and code analysis to prevent issues  
+> - Error handling and fallback UIs improve resilience
+> - Constraints, foreign keys, ENUMs, functions and triggers ensure data integrity
+> - CI/CD pipeline runs tests and checks for vulnerabilities  
 >   ...
 
 </details>
@@ -185,11 +173,10 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - DRY (Don't Repeat Yourself) principles followed across the whole application
-> - UI components reused throughout the application
-> - Styles and CSS variables defined once and reused across the application
-> - Incapsulated business logic allow easy reuse across the application
-> - Adoption of libraries and frameworks (e.g., React Query, Framer Motion) so as to not reinvent the wheel  
+> - Application follows DRY (Don't Repeat Yourself) principles
+> - Application reuses UI components, styles, and CSS variables
+> - Business logic modules enable easy reuse
+> - Libraries and frameworks avoid reinventing the wheel   
 >   ...
 
 </details>
@@ -199,12 +186,10 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - React Query handles fetching and caching, enhancing system scalability
-> - Supabase database and storage scale automatically with increasing data and requests
-> - Database indexes improve query scalability
-> - Vercel's serverless functions scale automatically with demand
-> - Vercel's edge caching reduces latency and workload, improving scalability
-> - Scalable GitHub Actions CI/CD pipeline with modular jobs  
+> - React Query enhances scalability via fetching and caching
+> - Supabase scales database and storage automatically
+> - Vercel serverless functions scale automatically
+> - Vercel's edge caching reduces latency and improves scalability  
 >   ...
 
 </details>
@@ -215,15 +200,9 @@ How this project follows software engineering best practices.
 <br>
 
 > - HTTPS ensures secure communications
-> - GDPR compliance
-> - Safe handling of third-party cookies via cookie banner
-> - Cookie policy, privacy policies, and legal notes provided
-> - Sensitive data managed via Vercel Environment Variables, GitHub Actions Secrets, and .env escluded from version control
-> - Secure data management through Row-Level Security and policies
-> - Vercel provides built-in security features (e.g., firewall)
-> - Vercel Analytics as privacy-friendly, cookie-free solution to gather insights
-> - CI/CD ensures security with vulnerability checks and SonarQube analysis
-> - Monitoring and debugging while respecting user privacy  
+> - Application ensures GDPR compliance
+> - Application manages sensitive data via environment variables and secrets
+> - Row-Level Security and policies secure data management  
 >   ...
 
 </details>
@@ -233,14 +212,10 @@ How this project follows software engineering best practices.
 
 <br>
 
-> - Mobile-first design, tested on 20+ devices and viewports
-> - Clean, intuitive, and consistent UI aligned with branding
-> - Clear visual hierarchy to reduce cognitive load
-> - Accessibility best practices (e.g., optimized for disabled people)
-> - Responsive design and navigation (anchor menu on desktop, drawer on mobile)
-> - Fast feedback to user actions
-> - Workflow designed for quick and efficient task completion
-> - Reduced loading times and no visual shifts ensure a smooth UX  
+> - Mobile-first design undergoes tests on multiple devices
+> - UI aligns with branding while remaining clear and consistent
+> - Application implements accessibility best practices
+> - Application provides fast feedback and smooth UX  
 >   ...
 
 </details>
@@ -255,211 +230,83 @@ The system is built on a Jamstack architecture:
 
 <img width="510" height="724" alt="image" src="https://github.com/user-attachments/assets/1b4d45ea-a60e-4c9a-8e45-011ec04bb873" />
 
----
-
-<details>
-<summary><strong>Data Flow</strong></summary>
-
-<br>
-
-> 1. _React Components_ on the _Client-side_ request data via the _Data Fetching & Caching_ layer
-> 2. If the requested data is not cached on the client  
->    2.1. _Data Fetching & Caching_ layer sends requests to _Serverless Functions_  
->    2.2. If not cached at Vercel's edge, _Serverless Functions_ may fetch requested data from _Backend / BaaS_  
->    2.3. _Serverless Functions_ send back requested data to the _Data Fetching & Caching_ layer  
->    2.4. _Data Fetching & Caching_ layer caches received data on the client for `STALE_TIME` duration
-> 3. Otherwise  
->    3.1. _Data Fetching & Caching_ layer retrieves requested data from the cache
-> 4. _Data Fetching & Caching_ layer returns requested data to the _React Components_
-> 5. _Client-side_ renders _React Components_ based on the data received
-
-</details>
+> Data flows from client-side React components through the fetching and caching layer to serverless functions and backend, with caching at client and edge.
 
 <br>
 
 ### 🌐 Client-side
 
 🎯 **Role**  
-It implements the frontend of the application as a Single-Page Application.
+Implements the frontend of the application as a React Single-Page Application.
 
 🛡️ **Responsibility**
 
-- Rendering the UI (through _React Components_)
-- Managing user interactions
-- Fetching and caching data (via its internal _Data Fetching & Caching_ layer)
+- Renders UI via _React Components_
+- Manages navigation using React Router (HashRouter)
+- Handles user interactions
+- Fetches and caches data via internal layer
+
+<br>
+
+### ⚛️ React Components
+
+🎯 **Role**  
+Defines and manages UI building blocks of the application.
+
+🛡️ **Responsibility**
+
+- Renders UI elements
+- Manages component state via React Hooks and custom hooks
+- Handles component lifecycle and side effects
+- Delegates its business logic to external modules
 
 <br>
 
 ### 🔄 Data Fetching & Caching
 
 🎯 **Role**  
-It manages client-side data fetching and caching.
+Manages client-side data fetching and caching using React Query and hooks.
 
 🛡️ **Responsibility**
 
-- Fetching data using `useQuery`, custom logic and hooks
-- Retrieving from cache first with `STALE_TIME` to minimize network requests
-- Deduplicating queries to avoid simultaneous duplicate requests
-- Logging errors when a fetch fails
+- Fetches data
+- Retrieves data from cache first
+- Caches data to minimize network requests
+- Deduplicates queries to prevent redundancy
+- Logs errors on fetch failures
 
 <br>
 
 ### ⚙️ Serverless Functions
 
 🎯 **Role**  
-They implement API endpoints with modular, scalable, stateless backend logic.
+Implement backend logic through RESTful API endpoints.
 
 🛡️ **Responsibility**
 
-- Handling requests in a stateless manner
-- Retrieving data from backend (used cars overview, specific car details)
-- Centralizing backend access
+- Handle client-side requests in a stateless manner
+- Retrieve data from backend (used cars overview and specific car details)
+- Centralize access to backend service
 
----
-
-**🔗 APIs**
-
-<details>
-<summary><strong>Used Cars Overview</strong></summary>
- 
-<br>
-   
-> - **Description**: Returns an array of available used cars with key specs and a presentation image.
-> - **URL**: `/api/used-cars-overview/usedCarsOverview`
-> - **Method**: `GET`
-> - **Query Params**: `None`
-> - **Response**: `JSON`
-> 
-> <br>
-> 
-> | Field     | Type    | Description                                              |
-> | --------- | ------- | ---------------------------------------------------------|
-> | `id`      | Integer | Unique identifier of the used car.                       |
-> | `name`    | String  | Name or model of the used car.                           |
-> | `price`   | Float   | Price in €.                                              |
-> | `year`    | Integer | Year of registration or manufacturing.                   |
-> | `mileage` | Integer | Kilometers driven.                                       |
-> | `fuel`    | String  | Type of fuel.                                            |
-> | `status`  | String  | Overall condition.                                       |
-> | `image`   | String  | Public URL of the first (presentation) image of the car. |
-> 
-> <br>
-> 
-> Response example:
-> 
-> <pre>
->   {
->   "used_cars_overview": [
->     {
->       "id": 1,
->       "name": "Fiat Panda",
->       "price": 7199.99,
->       "year": 2015,
->       "mileage": 80000,
->       "fuel": "Diesel",
->       "status": "Excellent",
->       "image": "https://..."
->     },
->     ...
->   ]
-> }
-> </pre>
-
-</details>
-
-<details>
-<summary><strong>Used Car Information</strong></summary>
-
-<br>
-  
-> - **Description**: Returns full details and images of a specific used car.
-> - **URL**: `/api/used-car-info/usedCarInfo`
-> - **Method**: `GET`
-> - **Query Params**: `id` (ID of the requested used car)
-> - **Response**: `JSON`
-> 
-> <br>
-> 
-> | Field                 | Type             | Description                                   |
-> | --------------------- | ---------------- | ----------------------------------------------|
-> | `id`                  | Integer          | Unique identifier of the used car.            |
-> | `power`               | Integer          | Engine power in CV (horsepower).              |
-> | `engine_displacement` | Integer          | Engine displacement in cc (cubic centimeters).|
-> | `cylinders`           | Integer          | Number of engine cylinders.                   |
-> | `transmission`        | String           | Type of transmission.                         |
-> | `consumption`         | String           | Fuel consumption in L/100km (min-max).        |
-> | `emissions`           | String           | CO₂ emissions in g/km (min-max).              |
-> | `emission_class`      | String           | Emission standard.                            |
-> | `bodywork`            | String           | Body type.                                    |
-> | `doors`               | Integer          | Number of doors.                              |
-> | `external_color`      | String           | Exterior color of the car.                    |
-> | `seats`               | Integer          | Number of seats.                              |
-> | `internal_color`      | String           | Interior color scheme.                        |
-> | `internal_material`   | String           | Interior material.                            |
-> | `images`              | Array of Strings | List of public image URLs for this car.       |
-> 
-> <br>
-> 
-> Response example:
->
-> <pre>
->   {
->   "used_car_info": {
->      "id": 1,
->      "power": 69,
->      "engine_displacement": 1200,
->      "cylinders": 4,
->      "transmission": "Manual (5)",
->      "consumption": "5,5-6,0",
->      "emissions": "127-137",
->      "emission_class": "Euro 6",
->      "bodywork": "City car",
->      "doors": 5,
->      "external_color": "Red",
->      "seats": 5,
->      "internal_color": "Black",
->      "internal_material": "Fabric",
->      "images": [
->        "https://...",
->        ...
->      ]
->    }
-> }
-> </pre>
-</details>
-  
 <br>
 
 ### ☁️ Backend / BaaS
 
 🎯 **Role**  
-It provides the backend infrastructure of the application, leveraging Supabase as a Backend-as-a-Service (BaaS) platform, including a PostgreSQL database and Storage bucket.
+Provides backend infrastructure using Supabase, including PostgreSQL database and Storage bucket.
 
 🛡️ **Responsibility**
 
 - **Data**
   - Stores relational data in PostgreSQL
-  - Optimizes query performance with indexes on `id` fields
-  - Enforces data integrity with foreign keys and constraints (`NOT NULL`, `CHECK`)
-  - Uses enumerated types (ENUMs) for controlled values
-  - Validates complex data formats through functions and triggers
+  - Optimizes query performance with indexes
+  - Enforces data integrity with foreign keys and constraints
+  - Controls and validates data with enumerated types and functions/triggers
 - **Storage**
-  - Stores and serves used car images
-  - Organizes folders with deterministic naming
+  - Stores and serves images in organized folders
 - **Security**
   - Enforces Row-Level Security to restrict access at row level
   - Defines access policies for reading and writing data
-
----
-
-<details>
-<summary><strong>Database Schema</strong></summary>
-
-<br>
-
-> <img width="560" height="605" alt="image" src="https://github.com/user-attachments/assets/c778d06e-e4ff-4bef-a964-33197f9c52b3" />
-
-</details>
   
 <br>
 
