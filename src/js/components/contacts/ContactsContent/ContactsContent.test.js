@@ -92,7 +92,7 @@ describe("ContactsContent", () => {
 		jest.clearAllMocks();
 	});
 
-	// Test SectionHeader used in ContactContent
+	// Test SectionBlock used in ContactContent
 	describe("SectionHeader", () => {
 		// Test if it renders the section name correctly
 		test("renders with correct section name", () => {

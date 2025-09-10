@@ -44,16 +44,10 @@ export const SECTIONS = [
 	{
 		id: "servizi",
 		title: "Servizi",
-		children: [
-			{
-				id: "officina",
-				title: "Officina",
-			},
-			{
-				id: "auto-usate",
-				title: "Auto usate",
-			},
-		],
+	},
+	{
+		id: "auto-usate",
+		title: "Auto usate",
 	},
 	{
 		id: "dove-siamo",
@@ -73,32 +67,23 @@ export const HOME_SUBTITLE =
 	"Benvenuto nell'autofficina <br> <strong>MM Eletricar Service</strong>!";
 
 /**------------- "About us" text -------------**/
-export const ABOUT_US_TITLE = "Professionisti del settore";
-export const ABOUT_US_SUBTITLE =
-	"Un progetto che nasce dall'unione di esperienza e passione.";
+export const ABOUT_US_TITLE = "Chi siamo.";
 export const ABOUT_US_DESCRIPTION =
-	"Siamo Michele Vacca e Michele Scalese, fondatori di <strong>MM Eletricar Service</strong>, un'officina elettrauto a Gravina in Puglia (BA). " +
-	"Un progetto nato dall'incontro tra anni d'esperienza nel settore ed una passione autentica verso l'elettronica d'auto e l'innovazione. <br></br>" +
+	"Siamo Michele Vacca e Michele Scalese, fondatori di <strong>MM Eletricar Service</strong>, officina elettrauto a Gravina in Puglia (BA). " +
+	"Un progetto che unisce esperienza e passione per l’elettronica d’auto. <br></br>" +
 	"Ogni giorno ci impegniamo ad offrire competenza, trasparenza ed affidabilità a chi ama la propria auto " +
-	"e vuole affidarsi ad un elettrauto professionale a Gravina in Puglia (BA).";
+	"e vuole affidarsi ad un elettrauto di fiducia a Gravina in Puglia (BA).";
 
 /**------------- "Our values" texts -------------**/
-export const OUR_VALUES_TITLE = "I valori chiave";
-export const OUR_VALUES_SUBTITLE =
-	"Ciò che guida il nostro lavoro e ci contraddistingue.";
+export const OUR_VALUES_TITLE = "I nostri valori.";
 export const OUR_VALUES_DESCRIPTION =
 	"In <strong>MM Eletricar Service</strong> crediamo che ogni veicolo meriti attenzione e cura, " +
 	"poiché comprendiamo quanto sia importante per i nostri clienti. " +
-	"<br></br>La nostra <strong>missione</strong> è costruire relazioni di fiducia con i nostri clienti, fornendo soluzioni su misura, " +
-	"affidabili e di qualità, per garantire la completa soddisfazione di chi si affida alla " +
-	"nostra officina elettrauto per manutenzione, riparazione e diagnostica elettronica d'auto.";
+	"<br></br>La nostra <strong>missione</strong> è offrire soluzioni affidabili e su misura, costruendo fiducia"  +
+  " e garantendo la piena soddisgazione di chi si affida alla nostra officina elettrauto.";
 
 /**------------- "Services" texts -------------**/
-export const SERVICES_TITLE = "Eccellenza in ogni servizio";
-export const SERVICES_SUBTITLE =
-	"Manutenzioni, riparazioni e diagnosi elettroniche: solo il meglio per la tua auto.";
-
-/**------------- "Workshop" texts -------------**/
+export const SERVICES_TITLE = "Tutti i nostri servizi";
 const servicesData = [
 	[
 		"Manutenzione centralina",
@@ -167,9 +152,7 @@ export const ALL_SERVICES = servicesData.map(
 
 /**------------- "Used cars" texts -------------**/
 export const USED_CARS_TITLE =
-	"La tua prossima auto, pronta per te";
-export const USED_CARS_SUBTITLE =
-	"Le migliori auto usate garantite, scelte con attenzione per chi cerca qualità, affidabilità e convenienza.";
+	"Le nostre auto usate";
 export const USED_CAR_OVERVIEW = [
 	{
 		title: "Anno",
@@ -280,11 +263,9 @@ export const CTA_BUTTON_TEXT = "Verifica disponibilità";
 export const BACK_BUTTON_LABEL = "Indietro";
 
 /**------------- "Where we are" texts -------------**/
-export const WHERE_WE_ARE_TITLE = "La nostra officina";
-export const WHERE_WE_ARE_SUBTITLE =
-	"Dove realizziamo i tuoi desideri e ci prendiamo cura della tua auto.";
+export const WHERE_WE_ARE_TITLE = "Dove siamo";
 export const WHERE_WE_ARE_DESCRIPTION =
-	"📍MM Eletricar Service si trova <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>.";
+	"MM Eletricar Service si trova <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>.";
 export const WHERE_WE_ARE_INFO = [
 	{
 		title: "Orari di apertura",
@@ -299,7 +280,7 @@ export const GOOGLE_MAPS_LINK =
 
 /**------------- "Contacts" texts -------------**/
 export const CONTACTS_SECTION_NAME = "CONTATTI";
-export const CONTACTS_TITLE = "Esperti a tua disposizione";
+export const CONTACTS_TITLE = "I nostri contatti";
 export const CONTACTS_SUBTITLE =
 	"Sempre pronti a risolvere ogni esigenza della tua auto.";
 export const CONTACTS = [

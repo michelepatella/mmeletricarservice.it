@@ -30,7 +30,7 @@ export const handleSectionNameStyle = () => {
 export const handleSubtitleStyle = () => {
 	return {
 		width: "var(--section_header_subtitle_width)",
-		textAlign: "center",
+		textAlign: "initial",
 		opacity: "var(--text_low_opacity)",
 	};
 };

@@ -4,16 +4,16 @@ import {
 	USED_CARS_SUBTITLE,
 	USED_CAR_SCROLL_LABEL_TEXT,
 	USED_CARS_UNAVAILABLE_DESCRIPTION,
-} from "../../utils/const";
+} from "../utils/const";
 import {
 	handleScrollLabelStyle,
 	handleUnavailableUsedCarDescriptionStyle,
-} from "../../logic/style-handling/usedCarsStyleHandler";
-import SectionContainer from "../../components/sections/SectionContainer/SectionContainer";
-import SectionHeader from "../../components/sections/SectionHeader/SectionHeader";
-import UsedCarCard from "../../components/used-cars/UsedCarCard";
-import CustomText from "../../components/custom/CustomText/CustomText";
-import { useUsedCarsOverview } from "../../hooks/useUsedCarsOverview";
+} from "../logic/style-handling/usedCarsStyleHandler";
+import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
+import SectionBlock from "../components/sections/SectionBlock/SectionBlock";
+import UsedCarCard from "../components/used-cars/UsedCarCard";
+import CustomText from "../components/custom/CustomText/CustomText";
+import { useUsedCarsOverview } from "../hooks/useUsedCarsOverview";
 
 /**
  * This component represents the Used car section.
@@ -31,10 +31,10 @@ function UsedCars() {
 	return (
 		<SectionContainer id="auto-usate">
 			{/* Section Header */}
-			<SectionHeader
-				section="AUTO USATE"
-				title={USED_CARS_TITLE}
-				subtitle={USED_CARS_SUBTITLE}
+			<CustomText
+				type="heading"
+				text={"● " + USED_CARS_TITLE}
+				style={{ color: "white" }}
 			/>
 
 			{/* Until data is being loaded show a loading outlined */}

@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import SectionHeader from "./SectionHeader";
+import SectionBlock from "./SectionBlock";
 
 // Definition of expected results
 const sectionHeaderName = "Section Header Name";
@@ -39,7 +39,7 @@ describe("SectionHeader", () => {
 		// Test if it correctly renders
 		// the section name
 		test("renders with correct section name", () => {
-			render(<SectionHeader section={sectionHeaderName} />);
+			render(<SectionBlock section={sectionHeaderName} />);
 
 			expect(
 				screen.getByText("• " + sectionHeaderName)
@@ -48,7 +48,7 @@ describe("SectionHeader", () => {
 
 		// Test if it correctly renders the title
 		test("renders with correct title", () => {
-			render(<SectionHeader title={sectionHeaderTitle} />);
+			render(<SectionBlock title={sectionHeaderTitle} />);
 
 			expect(
 				screen.getByText(sectionHeaderTitle)
@@ -58,7 +58,7 @@ describe("SectionHeader", () => {
 		// Test if it correctly renders the subtitle
 		test("renders with correct subtitle", () => {
 			render(
-				<SectionHeader subtitle={sectionHeaderSubtitle} />
+				<SectionBlock subtitle={sectionHeaderSubtitle} />
 			);
 
 			expect(
@@ -68,7 +68,7 @@ describe("SectionHeader", () => {
 
 		// Test if it sets the correct section name type
 		test("sets the correct section name type", () => {
-			render(<SectionHeader section={sectionHeaderName} />);
+			render(<SectionBlock section={sectionHeaderName} />);
 
 			expect(
 				screen
@@ -79,7 +79,7 @@ describe("SectionHeader", () => {
 
 		// Test if it sets the correct title type
 		test("sets the correct title type", () => {
-			render(<SectionHeader title={sectionHeaderTitle} />);
+			render(<SectionBlock title={sectionHeaderTitle} />);
 
 			expect(
 				screen
@@ -91,7 +91,7 @@ describe("SectionHeader", () => {
 		// Test if it sets the correct subtitle type
 		test("sets the correct subtitle type", () => {
 			render(
-				<SectionHeader subtitle={sectionHeaderSubtitle} />
+				<SectionBlock subtitle={sectionHeaderSubtitle} />
 			);
 
 			expect(
@@ -103,7 +103,7 @@ describe("SectionHeader", () => {
 	});
 
 	test("renders children correctly", () => {
-		render(<SectionHeader children={childrenContent} />);
+		render(<SectionBlock children={childrenContent} />);
 
 		expect(
 			screen.getByText(childrenContentText)

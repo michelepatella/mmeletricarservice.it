@@ -1,13 +1,11 @@
 import {
 	CONTACTS_TITLE,
 	CONTACTS,
-	CONTACTS_SUBTITLE,
-	CONTACTS_SECTION_NAME,
 } from "../../../utils/const";
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
 import CustomButton from "../../custom/CustomButton/CustomButton";
 import SectionContainer from "../../sections/SectionContainer/SectionContainer";
-import SectionHeader from "../../sections/SectionHeader/SectionHeader";
+import CustomText from "../../custom/CustomText/CustomText";
 
 /**
  * This component represent the content
@@ -21,10 +19,10 @@ function ContactsContent() {
 	return (
 		<SectionContainer id="contatti">
 			{/* Contact section header (with title and subtitle) */}
-			<SectionHeader
-				section={CONTACTS_SECTION_NAME}
-				title={CONTACTS_TITLE}
-				subtitle={CONTACTS_SUBTITLE}
+			<CustomText
+				type="heading"
+				text={"● " + CONTACTS_TITLE}
+				style={{ color: "white", marginBottom: "3rem" }}
 			/>
 
 			{/* Contact buttons container (contains all the contact buttons) */}

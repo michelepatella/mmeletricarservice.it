@@ -1,12 +1,10 @@
 import React from "react";
 import {
 	OUR_VALUES_DESCRIPTION,
-	OUR_VALUES_SUBTITLE,
 	OUR_VALUES_TITLE,
 } from "../utils/const";
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
-import CustomText from "../components/custom/CustomText/CustomText";
-import SectionHeader from "../components/sections/SectionHeader/SectionHeader";
+import SectionBlock from "../components/sections/SectionBlock/SectionBlock";
 
 /**
  * This component represents Our values section,
@@ -17,18 +15,11 @@ import SectionHeader from "../components/sections/SectionHeader/SectionHeader";
 function OurValues() {
 	return (
 		<SectionContainer id="i-nostri-valori">
-			{/* Section header */}
-			<SectionHeader
+			{/* Section block */}
+			<SectionBlock
 				section="I NOSTRI VALORI"
 				title={OUR_VALUES_TITLE}
-				subtitle={OUR_VALUES_SUBTITLE}
-			/>
-
-			{/* Description of the company
-        objectives, mission, and values  */}
-			<CustomText
-				type="body"
-				text={OUR_VALUES_DESCRIPTION}
+				description={OUR_VALUES_DESCRIPTION}
 			/>
 		</SectionContainer>
 	);

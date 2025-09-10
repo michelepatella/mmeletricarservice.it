@@ -8,7 +8,7 @@ import { useVideoAnimation } from "../hooks/useVideoAnimation";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
-import SectionHeader from "../components/sections/SectionHeader/SectionHeader";
+import SectionBlock from "../components/sections/SectionBlock/SectionBlock";
 
 /**
  * This component represents the About us sections,
@@ -27,25 +27,10 @@ function AboutUs() {
 	return (
 		<SectionContainer id="chi-siamo">
 			{/* Section header (title, subtitle, and video animation) */}
-			<SectionHeader
-				section="CHI SIAMO"
+			<SectionBlock
 				title={ABOUT_US_TITLE}
-				subtitle={ABOUT_US_SUBTITLE}
-				children={
-					<video
-						className="video"
-						ref={videoRef}
-						src="/images/animation-logo.mp4"
-						loop={false}
-						controls={false}
-						muted
-						playsInline
-					/>
-				}
+				description={ABOUT_US_DESCRIPTION}
 			/>
-
-			{/* Presentation of the company */}
-			<CustomText type="body" text={ABOUT_US_DESCRIPTION} />
 		</SectionContainer>
 	);
 }

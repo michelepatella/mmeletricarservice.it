@@ -8,13 +8,11 @@
 	--light_gray_border_color: #333333;
 	--yellow_color: #f8de4d;
 	--yellow_gradient_color: linear-gradient(
-		90deg,
-		#f8de4d,
-		#e6c93f,
-		#d4b632,
-		#c2a225,
-		#b09018,
-		#9e7e0b
+			90deg,
+			#fff200,
+			#ffd700,
+			#ffbf00,
+			#ffa500
 	);
 	--blue_color: #005fcc;
 
@@ -157,8 +155,8 @@
 	--section_max_width: 120%;
 
 	/* -------- Section Header -------- */
-	--section_header_padding: 20px;
-	--section_header_border: 1px;
+	--section_header_padding: 30px;
+	--section_header_border: 4px;
 	--section_header_box_shadow: 0 50px 50px
 		rgba(0, 0, 0, 0.2);
 	--section_header_margin_bottom: 50px;

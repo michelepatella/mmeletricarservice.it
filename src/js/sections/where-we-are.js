@@ -13,7 +13,6 @@ import {
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
 import InfoCard from "../components/other/InfoCard/InfoCard";
-import SectionHeader from "../components/sections/SectionHeader/SectionHeader";
 
 /**
  * This component represents the Where we are section.
@@ -26,10 +25,10 @@ function WhereWeAre(props) {
 	return (
 		<SectionContainer id="dove-siamo">
 			{/* Section header */}
-			<SectionHeader
-				section="DOVE SIAMO"
-				title={WHERE_WE_ARE_TITLE}
-				subtitle={WHERE_WE_ARE_SUBTITLE}
+			<CustomText
+				type="heading"
+				text={"📍" + WHERE_WE_ARE_TITLE}
+				style={{ color: "white" }}
 			/>
 
 			{/* Description */}

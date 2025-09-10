@@ -5,6 +5,7 @@ import {
 	handleSubtitleStyle,
 } from "../../../logic/style-handling/sectionHeaderStyleHandler";
 import CustomText from "../../custom/CustomText/CustomText";
+import { OUR_VALUES_DESCRIPTION } from "../../../utils/const";
 
 /**
  * This component represents the section header.
@@ -17,7 +18,7 @@ import CustomText from "../../custom/CustomText/CustomText";
  * @returns {React.JSX.Element}
  * @constructor
  */
-function SectionHeader(props) {
+function SectionBlock(props) {
 	// Definition of a header reference, useful to generate
 	// an entry animation when the section becomes visible
 	const ref = useRef(null);
@@ -25,27 +26,21 @@ function SectionHeader(props) {
 
 	return (
 		<div ref={ref} className="section-header">
-			{/* Section name */}
-			<CustomText
-				type="body"
-				text={"• " + props.section}
-				style={handleSectionNameStyle()}
-			/>
-
 			{/* Section title */}
 			<CustomText
 				type="heading"
 				text={props.title}
 				style={{
-					textAlign: "center",
+					color: "white",
+					textAlign: "initial"
 				}}
 			/>
 
-			{/* Section subtitle */}
+			{/* Section description */}
 			<CustomText
-				type="subheading"
-				text={props.subtitle}
-				style={handleSubtitleStyle()}
+				type="body"
+				style={{ opacity: 0.85 }}
+				text={props.description}
 			/>
 
 			{/* Other contents (if any) */}
@@ -54,4 +49,4 @@ function SectionHeader(props) {
 	);
 }
 
-export default SectionHeader;
+export default SectionBlock;

@@ -10,9 +10,8 @@ import { useCookieConsent } from "./hooks/useCookieConsent";
 import Home from "./sections/home";
 import AboutUs from "./sections/about-us";
 import OurValues from "./sections/our-values";
-import Services from "./sections/services/services";
-import Workshop from "./sections/services/workshop";
-import UsedCars from "./sections/services/used-cars";
+import Services from "./sections/services";
+import UsedCars from "./sections/used-cars";
 import WhereWeAre from "./sections/where-we-are";
 import Contacts from "./sections/contacts";
 import Menu from "./components/menu/Menu/Menu";
@@ -35,7 +34,7 @@ import "../styles/components/custom/CustomIconButton.css";
 import "../styles/components/custom/CustomText.css";
 import "../styles/components/custom/CustomBackButton.css";
 import "../styles/components/sections/SectionContainer.css";
-import "../styles/components/sections/SectionHeader.css";
+import "../styles/components/sections/SectionBlock.css";
 import "../styles/components/used-cars/UsedCarOverview.css";
 import "../styles/components/used-cars/UsedCarCard.css";
 import "../styles/components/used-cars/drawer/UsedCarDrawer.css";
@@ -100,7 +99,6 @@ function App() {
 						<AboutUs />
 						<OurValues />
 						<Services />
-						<Workshop />
 						<UsedCars />
 						<WhereWeAre cookiesAccepted={cookiesAccepted} />
 						<Contacts />
