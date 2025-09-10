@@ -113,7 +113,6 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 > ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 > ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css)  
 > ![Ant Design](https://img.shields.io/badge/Ant_Design-0170FE?style=for-the-badge&logo=ant-design&logoColor=white)
-> ![Framer](https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
 <br>
 
