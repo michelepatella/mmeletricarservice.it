@@ -5,16 +5,22 @@
 		transform: translateY(20px);
 	}
 	to {
-		opacity: 1;
+		opacity: 0.9;
 		transform: translateY(0);
 	}
+}
+
+.home-content-div {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
 }
 
 /* Home Title styles */
 .home-title {
 	margin-bottom: var(--home_title_margin_bottom);
 	color: var(--yellow_color);
-	text-align: center;
+	text-align: left;
 	opacity: 0;
 	animation: slideUpHomeTitle 1s ease forwards;
 	animation-delay: var(--home_title_animation_delay);
@@ -24,7 +30,7 @@
 .home-subtitle {
 	margin-top: var(--home_subtitle_margin_top);
 	color: white;
-	text-align: center;
+	text-align: left;
 	opacity: 0;
 	animation: slideUpHomeTitle 1s ease forwards;
 	animation-delay: var(--home_subtitle_animation_delay);
@@ -38,6 +44,10 @@
 
 	.home-subtitle {
 		font-size: var(--home_subtitle_font_size_big);
+	}
+
+	.home-content {
+		margin-left: var(--section_margin_left_big);
 	}
 }
 
@@ -80,6 +90,10 @@
 	.home-subtitle {
 		font-size: var(--home_subtitle_font_size_small);
 	}
+
+	.home-content {
+		margin-left: var(--section_margin_left_small_portrait);
+	}
 }
 
 /* ------ Small screen landscape ------- */
@@ -90,5 +104,9 @@
 
 	.home-subtitle {
 		font-size: var(--home_subtitle_font_size_small);
+	}
+
+	.home-content {
+		margin-left: var(--section_margin_left_small_landscape);
 	}
 }

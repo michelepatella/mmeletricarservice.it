@@ -22,3 +22,10 @@
 .section-block.in-view {
 	opacity: 1;
 }
+
+/* ------ Big screen ------- */
+@media (min-width: 1025px) {
+	.section-block {
+		width: 90%;
+	}
+}

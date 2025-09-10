@@ -17,24 +17,24 @@
 	--blue_color: #005fcc;
 
 	/* -------- Font size -------- */
-	--home_title_font_size_big: 80px;
-	--home_title_font_size_medium: 60px;
-	--home_title_font_size_small: 35px;
+	--home_title_font_size_big: 55px;
+	--home_title_font_size_medium: 45px;
+	--home_title_font_size_small: 30px;
 
-	--home_subtitle_font_size_big: 35px;
-	--home_subtitle_font_size_medium: 25px;
-	--home_subtitle_font_size_small: 20px;
+	--home_subtitle_font_size_big: 40px;
+	--home_subtitle_font_size_medium: 20px;
+	--home_subtitle_font_size_small: 18px;
 
-	--heading_font_size_big: 45px;
-	--heading_font_size_medium: 40px;
+	--heading_font_size_big: 35px;
+	--heading_font_size_medium: 30px;
 	--heading_font_size_small: 25px;
 
-	--subheading_font_size_big: 25px;
-	--subheading_font_size_medium: 20px;
-	--subheading_font_size_small: 18px;
+	--subheading_font_size_big: 22px;
+	--subheading_font_size_medium: 17px;
+	--subheading_font_size_small: 15px;
 
-	--body_font_size_big: 20px;
-	--body_font_size_medium: 18px;
+	--body_font_size_big: 18px;
+	--body_font_size_medium: 17px;
 	--body_font_size_small: 16px;
 
 	--caption_text_font_size: clamp(12px, 2vw, 15px);
@@ -163,7 +163,7 @@
 	--section_header_subtitle_width: 85%;
 
 	/* -------- Background Container -------- */
-	--background_container_height: 130vh;
+	--background_container_height: 100vh;
 
 	/* -------- Menu -------- */
 	--menu_anchor_ink_width: 2px;
@@ -205,7 +205,7 @@
 	--home_header_padding_bottom: 5px;
 	--home_header_padding_right: 10px;
 	--home_header_gap: 20px;
-	--home_title_margin_bottom: 20px;
+	--home_title_margin_bottom: 0px;
 	--home_title_animation_delay: 0.6s;
 	--home_subtitle_margin_top: 0;
 	--home_subtitle_animation_delay: 1.2s;

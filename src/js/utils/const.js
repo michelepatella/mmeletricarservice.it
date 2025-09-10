@@ -62,9 +62,9 @@ export const MENU_ARIA_LABEL = "Menu";
 
 /**------------- "Home" texts -------------**/
 export const HOME_TITLE =
-	"Dove la tua auto <br> trova l'eccellenza";
+	"MM Eletricar Service.";
 export const HOME_SUBTITLE =
-	"Benvenuto nell'autofficina <br> <strong>MM Eletricar Service</strong>!";
+	"<strong>Competenza. Qualità. Innovazione.</strong>";
 
 /**------------- "About us" text -------------**/
 export const ABOUT_US_TITLE = "💡 Chi siamo.";
