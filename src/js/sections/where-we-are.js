@@ -3,7 +3,6 @@ import {
 	WHERE_WE_ARE_DESCRIPTION,
 	WHERE_WE_ARE_TITLE,
 	GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
-	WHERE_WE_ARE_SUBTITLE,
 	GOOGLE_MAPS_LINK,
 } from "../utils/const";
 import {
@@ -17,18 +16,17 @@ import InfoCard from "../components/other/InfoCard/InfoCard";
 /**
  * This component represents the Where we are section.
  * It contains information about where the company is located, along with
- * a Google Maps frame. Additionally, show infomation about working hours.
+ * a Google Maps frame. Additionally, show information about working hours.
  * @returns {Element}
  * @constructor
  */
 function WhereWeAre(props) {
 	return (
 		<SectionContainer id="dove-siamo">
-			{/* Section header */}
+			{/* Where we are section title */}
 			<CustomText
 				type="heading"
-				text={"📍" + WHERE_WE_ARE_TITLE}
-				style={{ color: "white" }}
+				text={WHERE_WE_ARE_TITLE}
 			/>
 
 			{/* Description */}

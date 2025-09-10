@@ -1,5 +1,4 @@
 import { ALL_SERVICES, SERVICES_TITLE } from "../utils/const";
-import { handleSectionNameStyle } from "../logic/style-handling/sectionHeaderStyleHandler";
 import InfoCard from "../components/other/InfoCard/InfoCard";
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
@@ -14,11 +13,10 @@ import CustomText from "../components/custom/CustomText/CustomText";
 function Services() {
 	return (
 		<SectionContainer id="servizi">
-			{/* Section title */}
+			{/* Services section title */}
 			<CustomText
 				type="heading"
-				style={{ color: "white" }}
-				text={"● " +  SERVICES_TITLE}
+				text={SERVICES_TITLE}
 			/>
 
 			{/* Add an informative card for each

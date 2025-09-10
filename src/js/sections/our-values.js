@@ -17,7 +17,6 @@ function OurValues() {
 		<SectionContainer id="i-nostri-valori">
 			{/* Section block */}
 			<SectionBlock
-				section="I NOSTRI VALORI"
 				title={OUR_VALUES_TITLE}
 				description={OUR_VALUES_DESCRIPTION}
 			/>

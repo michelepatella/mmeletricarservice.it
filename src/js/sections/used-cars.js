@@ -1,7 +1,6 @@
 import { LoadingOutlined } from "@ant-design/icons";
 import {
 	USED_CARS_TITLE,
-	USED_CARS_SUBTITLE,
 	USED_CAR_SCROLL_LABEL_TEXT,
 	USED_CARS_UNAVAILABLE_DESCRIPTION,
 } from "../utils/const";
@@ -10,7 +9,6 @@ import {
 	handleUnavailableUsedCarDescriptionStyle,
 } from "../logic/style-handling/usedCarsStyleHandler";
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
-import SectionBlock from "../components/sections/SectionBlock/SectionBlock";
 import UsedCarCard from "../components/used-cars/UsedCarCard";
 import CustomText from "../components/custom/CustomText/CustomText";
 import { useUsedCarsOverview } from "../hooks/useUsedCarsOverview";
@@ -30,11 +28,10 @@ function UsedCars() {
 
 	return (
 		<SectionContainer id="auto-usate">
-			{/* Section Header */}
+			{/* Used car section title */}
 			<CustomText
 				type="heading"
-				text={"● " + USED_CARS_TITLE}
-				style={{ color: "white" }}
+				text={USED_CARS_TITLE}
 			/>
 
 			{/* Until data is being loaded show a loading outlined */}

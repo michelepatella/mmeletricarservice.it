@@ -1,5 +1,5 @@
 /* Section Header styles */
-.section-header {
+.section-block {
 	width: 110%;
 	margin-bottom: var(--section_header_margin_bottom);
 	display: flex;
@@ -19,6 +19,6 @@
 		transform 1.8s ease;
 }
 
-.section-header.in-view {
+.section-block.in-view {
 	opacity: 1;
 }

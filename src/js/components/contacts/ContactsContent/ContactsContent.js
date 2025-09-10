@@ -9,20 +9,18 @@ import CustomText from "../../custom/CustomText/CustomText";
 
 /**
  * This component represent the content
- * of the Contact section. It contains a section header (with title
- * and subtitle), along with all the contact buttons for each
- * company contact available.
+ * of the Contact section. It contains all the contact
+ * buttons for each company contact available.
  * @returns {Element}
  * @constructor
  */
 function ContactsContent() {
 	return (
 		<SectionContainer id="contatti">
-			{/* Contact section header (with title and subtitle) */}
+			{/* Contact section title */}
 			<CustomText
 				type="heading"
-				text={"● " + CONTACTS_TITLE}
-				style={{ color: "white", marginBottom: "3rem" }}
+				text={CONTACTS_TITLE}
 			/>
 
 			{/* Contact buttons container (contains all the contact buttons) */}

@@ -28,7 +28,7 @@ function CustomText(props) {
 	const style = {
 		...(props.disableAnimation
 			? {
-					opacity: "1",
+					opacity: "0.9",
 				}
 			: {}),
 		...props.style,
