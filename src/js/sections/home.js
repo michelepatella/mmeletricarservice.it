@@ -19,7 +19,7 @@ function Home() {
 		<>
 			{/* Background container to contain the whole section and
        use a customized background */}
-			<BackgroundContainer image="/images/home-image.avif">
+			<BackgroundContainer image="/images/home-image.svg">
 				{/* Home Layout */}
 				<Layout className="home-layout" id="home">
 					{/* Home header */}

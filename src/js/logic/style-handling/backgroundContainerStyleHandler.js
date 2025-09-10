@@ -14,7 +14,7 @@ export const handleContainerStyle = (image) => {
 			image +
 			")",
 		backgroundPosition: "right",
-		backgroundRepeat: "no-repeat",
-		backgroundSize: "cover",
+		backgroundRepeat: "repeat",
+		backgroundSize: "auto",
 	};
 };

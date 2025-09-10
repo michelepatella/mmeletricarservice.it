@@ -3,7 +3,7 @@
 	position: relative;
 	overflow: hidden;
 	text-align: center;
-	background-color: var(--background_color);
+	background-color: transparent;
 }
 
 /* Info Card Icon styles */

@@ -16,12 +16,12 @@
 	font-weight: bold;
 	opacity: 0;
 	transition:
-		opacity 1.5s ease,
-		transform 1.5s ease;
+		opacity 2.5s ease,
+		transform 2.5s ease;
 }
 
 .custom-heading.in-view {
-	animation: fadeInOpacity 1.5s ease forwards;
+	animation: fadeInOpacity 2.5s ease forwards;
 }
 
 /* Subheading and body styles */
@@ -31,8 +31,8 @@
 	color: white;
 	text-align: left;
 	transition:
-		opacity 1.8s ease,
-		transform 1.8s ease;
+		opacity 2.5s ease,
+		transform 2.5s ease;
 }
 
 .custom-subheading.in-view,

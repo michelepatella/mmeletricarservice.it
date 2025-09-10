@@ -10,10 +10,12 @@
 	}
 }
 
-.home-content-div {
+.home-content {
+	margin-top: 20vh;
 	display: flex;
 	flex-direction: column;
 	align-items: start;
+	justify-content: space-between;
 }
 
 /* Home Title styles */
