@@ -1,5 +1,4 @@
 import { Flex } from "antd";
-import { handleTitleStyle } from "../../../logic/style-handling/infoCardStyleHandler";
 import CustomText from "../../custom/CustomText/CustomText";
 
 /**
@@ -34,7 +33,8 @@ function InfoCard(props) {
 					<CustomText
 						type="subheading"
 						text={props.title}
-						style={handleTitleStyle()}
+						style={{ fontWeight: "bold" }}
+						disableAnimation={true}
 					/>
 				</Flex>
 
@@ -44,7 +44,9 @@ function InfoCard(props) {
 					text={props.description}
 					style={{
 						marginTop: "0",
+						opacity: "0.5"
 					}}
+					disableAnimation={true}
 				/>
 			</div>
 		</>

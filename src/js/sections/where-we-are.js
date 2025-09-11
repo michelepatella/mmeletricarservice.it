@@ -24,9 +24,15 @@ function WhereWeAre(props) {
 	return (
 		<SectionContainer id="dove-siamo">
 			{/* Where we are section title */}
-			<CustomText
-				type="heading"
-				text={WHERE_WE_ARE_TITLE}
+			<h1
+				style={{
+					fontSize: "clamp(43px, 6vw, 120px)",
+					background: "var(--yellow_gradient_color)",
+					WebkitBackgroundClip: "text",
+					color: "transparent",
+					lineHeight: 1.2,
+				}}
+				dangerouslySetInnerHTML={{ __html: "Il punto d'incontro con la qualità." }}
 			/>
 
 			{/* Description */}

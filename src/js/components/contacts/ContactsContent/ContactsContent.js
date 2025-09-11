@@ -18,27 +18,42 @@ function ContactsContent() {
 	return (
 		<SectionContainer id="contatti">
 			{/* Contact section title */}
-			<CustomText
-				type="heading"
-				text={CONTACTS_TITLE}
+			<h1
+				style={{
+					fontSize: "clamp(43px, 6vw, 120px)",
+					background: "white",
+					WebkitBackgroundClip: "text",
+					color: "transparent",
+					lineHeight: 1.2,
+				}}
+				dangerouslySetInnerHTML={{ __html: "Siamo qui per te." }}
 			/>
 
-			{/* Contact buttons container (contains all the contact buttons) */}
-			<div className="contact-buttons-container">
-				{/* Add a button for each contact available */}
-				{CONTACTS?.map((contact) => (
-					<CustomButton
-						key={contact.value}
-						isContact={true}
-						isCta={false}
-						text={contact?.value}
-						icon={contact?.icon}
-						onClick={contactClickHandler[contact?.value]}
-					/>
-				))}
-			</div>
+			<blockquote
+				style={{
+					display: "inline-block",
+					borderLeft: "5px solid",
+					color: "rgba(255, 255, 255, 0.7)",
+					paddingLeft: "1rem",
+					margin: 0
+				}}>
+				{/* Contact buttons container (contains all the contact buttons) */}
+				<div className="contact-buttons-container">
+					{/* Add a button for each contact available */}
+					{CONTACTS?.map((contact) => (
+						<CustomButton
+							key={contact.value}
+							isContact={true}
+							isCta={false}
+							text={contact?.value}
+							icon={contact?.icon}
+							onClick={contactClickHandler[contact?.value]}
+						/>
+					))}
+				</div>
+			</blockquote>
 		</SectionContainer>
-	);
+);
 }
 
 export default ContactsContent;

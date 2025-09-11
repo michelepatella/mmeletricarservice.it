@@ -24,24 +24,12 @@ function BackgroundContainer({
 	};
 
 	return (
-		// Motion division for containing the background
-		// and to generate an animation
-		<motion.div
+		<div
 			data-testid="background-container-motion-section"
 			style={style}
-			initial={{
-				opacity: 0,
-			}}
-			whileInView={{
-				opacity: 1,
-			}}
-			transition={{
-				duration: 2.0,
-				ease: "easeOut",
-			}}
 		>
 			{children}
-		</motion.div>
+		</div>
 	);
 }
 

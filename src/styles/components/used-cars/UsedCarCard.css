@@ -4,9 +4,8 @@
 	width: var(--used_car_card_width);
 	padding: var(--used_car_card_padding);
 	background: transparent;
-	border-radius: var(--border_radius);
-	border: var(--used_car_card_border) solid
-		var(--dark_gray_border_color);
+	border: none;
+	border-radius: 10px;
 	box-shadow: var(--used_car_card_box_shadow);
 	flex-shrink: var(--used_car_card_flex_shrink);
 	scroll-snap-align: center;
@@ -19,9 +18,6 @@
 /* Used cars image presentation container styles */
 .used-cars-card-image-container {
 	width: var(--used_car_card_image_container_width);
-	aspect-ratio: var(
-		--used_car_card_image_container_aspect_ratio
-	);
 	display: flex;
 	justify-content: center;
 	align-items: center;

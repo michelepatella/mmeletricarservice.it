@@ -12,8 +12,11 @@ import {
 function HomeContent() {
 	return (
 		<div id="/home">
-
-			<img height="50" width="50" src="/images/logo-image.svg" alt="logo-image" />
+			<img
+				className="logo-image"
+				src="/images/logo-image.svg"
+				alt="logo-image"
+			/>
 
 			{/* Title */}
 			<h1

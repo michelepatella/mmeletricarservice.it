@@ -61,8 +61,7 @@ export const SECTIONS = [
 export const MENU_ARIA_LABEL = "Menu";
 
 /**------------- "Home" texts -------------**/
-export const HOME_TITLE =
-	"MM Eletricar Service.";
+export const HOME_TITLE = "MM Eletricar Service.";
 export const HOME_SUBTITLE =
 	"<strong>Competenza. Qualità. Innovazione.</strong>";
 
@@ -79,8 +78,8 @@ export const OUR_VALUES_TITLE = "🌱 I nostri valori.";
 export const OUR_VALUES_DESCRIPTION =
 	"In <strong>MM Eletricar Service</strong> crediamo che ogni veicolo meriti attenzione e cura, " +
 	"poiché comprendiamo quanto sia importante per i nostri clienti. " +
-	"<br></br>La nostra <strong>missione</strong> è offrire soluzioni affidabili e su misura, costruendo fiducia"  +
-  " e garantendo la piena soddisfazione di chi si affida alla nostra officina elettrauto.";
+	"<br></br>La nostra <strong>missione</strong> è offrire soluzioni affidabili e su misura, costruendo fiducia" +
+	" e garantendo la piena soddisfazione di chi si affida alla nostra officina elettrauto.";
 
 /**------------- "Services" texts -------------**/
 export const SERVICES_TITLE = "● Tutti i nostri servizi";
@@ -151,7 +150,7 @@ export const ALL_SERVICES = servicesData.map(
 );
 
 /**------------- "Used cars" texts -------------**/
-export const USED_CARS_TITLE = "● Le nostre auto usate";
+export const USED_CARS_TITLE = "● Disponibili ora";
 export const USED_CAR_OVERVIEW = [
 	{
 		title: "Anno",

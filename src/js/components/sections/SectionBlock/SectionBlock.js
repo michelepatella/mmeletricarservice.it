@@ -21,16 +21,10 @@ function SectionBlock(props) {
 	return (
 		<div ref={ref} className="section-block">
 			{/* Section title */}
-			<CustomText
-				type="heading"
-				text={props.title}
-			/>
+			<CustomText type="heading" text={props.title} />
 
 			{/* Section description */}
-			<CustomText
-				type="body"
-				text={props.description}
-			/>
+			<CustomText type="body" text={props.description} />
 		</div>
 	);
 }

@@ -5,6 +5,7 @@ import {
 } from "../utils/const";
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
 import SectionBlock from "../components/sections/SectionBlock/SectionBlock";
+import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
 
 /**
  * This component represents the About us sections,

@@ -1,5 +1,5 @@
 /* Text Animation */
-@keyframes slideUpHomeTitle {
+@keyframes slideUpHomeAnimation {
 	from {
 		opacity: 0;
 		transform: translateY(20px);
@@ -18,13 +18,21 @@
 	justify-content: space-between;
 }
 
+/* Home logo image styles */
+.logo-image {
+	height: 50px;
+	width: 50px;
+	opacity: 0;
+	animation: slideUpHomeAnimation 1s ease forwards;
+}
+
 /* Home Title styles */
 .home-title {
 	margin-bottom: var(--home_title_margin_bottom);
 	color: var(--yellow_color);
 	text-align: left;
 	opacity: 0;
-	animation: slideUpHomeTitle 1s ease forwards;
+	animation: slideUpHomeAnimation 1s ease forwards;
 	animation-delay: var(--home_title_animation_delay);
 }
 
@@ -34,7 +42,7 @@
 	color: white;
 	text-align: left;
 	opacity: 0;
-	animation: slideUpHomeTitle 1s ease forwards;
+	animation: slideUpHomeAnimation 1s ease forwards;
 	animation-delay: var(--home_subtitle_animation_delay);
 }
 

@@ -1,7 +1,8 @@
 /* Info Card styles */
 .info-card {
 	position: relative;
-	overflow: hidden;
+	height: 100%;
+	width: 250px;
 	text-align: center;
 	background-color: transparent;
 }
@@ -19,25 +20,4 @@
 	grid-template-columns: auto 1fr;
 	align-items: center;
 	gap: var(--info_card_flex_gap);
-}
-
-/* ------ Big screen ------- */
-@media (min-width: 1025px) {
-	.info-card {
-		width: var(--info_card_width_big);
-	}
-}
-
-/* ------ Medium screen (portrait and landscape) ------ */
-@media (min-width: 768px) and (max-width: 1024px) {
-	.info-card {
-		width: var(--info_card_width_medium);
-	}
-}
-
-/* ------ Small screens ------ */
-@media (max-width: 767px) {
-	.info-card {
-		width: var(--info_card_width_small_portrait);
-	}
 }
