@@ -44,7 +44,7 @@ function InfoCard(props) {
 					text={props.description}
 					style={{
 						marginTop: "0",
-						opacity: "0.5"
+						opacity: "0.5",
 					}}
 					disableAnimation={true}
 				/>

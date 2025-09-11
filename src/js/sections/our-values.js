@@ -16,11 +16,20 @@ import BackgroundContainer from "../components/sections/BackgroundContainer/Back
 function OurValues() {
 	return (
 		<SectionContainer id="i-nostri-valori">
-			{/* Section block */}
-			<SectionBlock
-				title={OUR_VALUES_TITLE}
-				description={OUR_VALUES_DESCRIPTION}
+			<h1
+				style={{
+					fontSize: "clamp(43px, 6vw, 120px)",
+					color: "white",
+					lineHeight: 1.2,
+					marginBottom: 0,
+				}}
+				dangerouslySetInnerHTML={{
+					__html: "🌱 Ciò in cui crediamo.",
+				}}
 			/>
+
+			{/* Section block */}
+			<SectionBlock description={OUR_VALUES_DESCRIPTION} />
 		</SectionContainer>
 	);
 }

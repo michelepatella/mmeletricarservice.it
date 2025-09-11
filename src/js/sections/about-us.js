@@ -16,11 +16,20 @@ import BackgroundContainer from "../components/sections/BackgroundContainer/Back
 function AboutUs() {
 	return (
 		<SectionContainer id="chi-siamo">
-			{/* Section block */}
-			<SectionBlock
-				title={ABOUT_US_TITLE}
-				description={ABOUT_US_DESCRIPTION}
+			<h1
+				style={{
+					fontSize: "clamp(43px, 6vw, 120px)",
+					color: "white",
+					lineHeight: 1.2,
+					marginBottom: 0,
+				}}
+				dangerouslySetInnerHTML={{
+					__html: "⚡️ MM Eletricar Service.",
+				}}
 			/>
+
+			{/* Section block */}
+			<SectionBlock description={ABOUT_US_DESCRIPTION} />
 		</SectionContainer>
 	);
 }

@@ -36,7 +36,7 @@
 	border-left: var(
 			--used_car_drawer_collapse_content_border_left
 		)
-		solid var(--yellow_color) !important;
+		solid white !important;
 	border-radius: var(
 		--used_car_drawer_collapse_content_border_radius
 	) !important;

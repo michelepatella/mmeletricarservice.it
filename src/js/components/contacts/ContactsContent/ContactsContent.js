@@ -1,11 +1,7 @@
-import {
-	CONTACTS_TITLE,
-	CONTACTS,
-} from "../../../utils/const";
+import { CONTACTS } from "../../../utils/const";
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
 import CustomButton from "../../custom/CustomButton/CustomButton";
 import SectionContainer from "../../sections/SectionContainer/SectionContainer";
-import CustomText from "../../custom/CustomText/CustomText";
 
 /**
  * This component represent the content
@@ -21,12 +17,12 @@ function ContactsContent() {
 			<h1
 				style={{
 					fontSize: "clamp(43px, 6vw, 120px)",
-					background: "white",
-					WebkitBackgroundClip: "text",
-					color: "transparent",
+					color: "white",
 					lineHeight: 1.2,
 				}}
-				dangerouslySetInnerHTML={{ __html: "Siamo qui per te." }}
+				dangerouslySetInnerHTML={{
+					__html: "💬 Siamo qui per te.",
+				}}
 			/>
 
 			<blockquote
@@ -35,8 +31,9 @@ function ContactsContent() {
 					borderLeft: "5px solid",
 					color: "rgba(255, 255, 255, 0.7)",
 					paddingLeft: "1rem",
-					margin: 0
-				}}>
+					margin: 0,
+				}}
+			>
 				{/* Contact buttons container (contains all the contact buttons) */}
 				<div className="contact-buttons-container">
 					{/* Add a button for each contact available */}
@@ -53,7 +50,7 @@ function ContactsContent() {
 				</div>
 			</blockquote>
 		</SectionContainer>
-);
+	);
 }
 
 export default ContactsContent;

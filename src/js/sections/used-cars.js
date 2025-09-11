@@ -23,7 +23,8 @@ import { useState, useEffect } from "react";
  * @constructor
  */
 function UsedCars() {
-	const { usedCarsOverview, isLoading } = useUsedCarsOverview();
+	const { usedCarsOverview, isLoading } =
+		useUsedCarsOverview();
 
 	const rotatingTexts = [
 		{ text: "di qualità.", color: "#FF6B6B" },
@@ -45,7 +46,10 @@ function UsedCars() {
 				setDisplayedText(fullText.slice(0, i));
 				timeout = setTimeout(() => typeWriter(i + 1), 100); // velocità scrittura
 			} else {
-				timeout = setTimeout(() => eraseWriter(fullText.length - 1), 1000); // attesa prima di cancellare
+				timeout = setTimeout(
+					() => eraseWriter(fullText.length - 1),
+					1000
+				); // attesa prima di cancellare
 			}
 		}
 
@@ -55,7 +59,9 @@ function UsedCars() {
 				timeout = setTimeout(() => eraseWriter(i - 1), 50); // velocità cancellazione
 			} else {
 				// passa al prossimo testo
-				setCurrentIndex((prev) => (prev + 1) % rotatingTexts.length);
+				setCurrentIndex(
+					(prev) => (prev + 1) % rotatingTexts.length
+				);
 			}
 		}
 
@@ -73,6 +79,7 @@ function UsedCars() {
 						fontSize: "clamp(43px, 6vw, 120px)",
 						color: "white",
 						margin: 0,
+						padding: 0,
 						lineHeight: 1.2,
 					}}
 				>
@@ -82,6 +89,8 @@ function UsedCars() {
 				{/* Testo dinamico sotto */}
 				<div
 					style={{
+						margin: 0,
+						padding: 0,
 						display: "inline-flex",
 						alignItems: "center",
 						marginTop: "0.5rem",
@@ -90,6 +99,8 @@ function UsedCars() {
 				>
 					<animated.span
 						style={{
+							margin: 0,
+							padding: 0,
 							fontSize: "clamp(43px, 6vw, 120px)",
 							fontWeight: "bold",
 							color: rotatingTexts[currentIndex].color,

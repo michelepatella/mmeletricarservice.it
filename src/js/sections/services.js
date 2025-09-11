@@ -12,19 +12,38 @@ import { useEffect, useRef, useState } from "react";
  * @constructor
  */
 function Services() {
-	const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+	const { ref, inView } = useInView({
+		triggerOnce: true,
+		threshold: 0.5,
+	});
 	const containerRef = useRef(null);
 	const [scrollDirection, setScrollDirection] = useState(1); // 1 = destra, -1 = sinistra
 
 	const words = [
-		{ text: "Prestazioni.", gradient: "linear-gradient(90deg, #FF4D4D, #FF8E53)" },
-		{ text: "Sicurezza.", gradient: "linear-gradient(90deg, #4D9EFF, #7CDFFF)" },
-		{ text: "Affidabilità.", gradient: "linear-gradient(90deg, #3AC775, #7DFFCC)" },
+		{
+			text: "Prestazioni.",
+			gradient: "linear-gradient(90deg, #FF4D4D, #FF8E53)",
+		},
+		{
+			text: "Sicurezza.",
+			gradient: "linear-gradient(90deg, #4D9EFF, #7CDFFF)",
+		},
+		{
+			text: "Affidabilità.",
+			gradient: "linear-gradient(90deg, #3AC775, #7DFFCC)",
+		},
 	];
 
-	const [displayedWords, setDisplayedWords] = useState(["", "", ""]);
-	const [scales, setScales] = useState(Array(ALL_SERVICES.length).fill(1));
-	const [userInteracted, setUserInteracted] = useState(false);
+	const [displayedWords, setDisplayedWords] = useState([
+		"",
+		"",
+		"",
+	]);
+	const [scales, setScales] = useState(
+		Array(ALL_SERVICES.length).fill(1)
+	);
+	const [userInteracted, setUserInteracted] =
+		useState(false);
 
 	useEffect(() => {
 		if (!inView) return;
@@ -42,7 +61,10 @@ function Services() {
 			} else {
 				currentIndex++;
 				if (currentIndex < words.length) {
-					setTimeout(() => typeWord(words[currentIndex].text), 200);
+					setTimeout(
+						() => typeWord(words[currentIndex].text),
+						200
+					);
 				}
 			}
 		}
@@ -62,7 +84,10 @@ function Services() {
 			const speed = 0.3; // velocità dello scroll automatico
 			container.scrollLeft += speed * scrollDirection;
 
-			if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+			if (
+				container.scrollLeft + container.clientWidth >=
+				container.scrollWidth
+			) {
 				setScrollDirection(-1);
 			} else if (container.scrollLeft <= 0) {
 				setScrollDirection(1);
@@ -74,22 +99,47 @@ function Services() {
 		animationFrameId = requestAnimationFrame(step);
 
 		// Blocca auto-scroll al primo input dell'utente
-		const handleUserInteraction = () => setUserInteracted(true);
+		const handleUserInteraction = () =>
+			setUserInteracted(true);
 
 		// desktop: click, scroll con mouse/trackpad
-		container.addEventListener("mousedown", handleUserInteraction);
-		container.addEventListener("wheel", handleUserInteraction);
+		container.addEventListener(
+			"mousedown",
+			handleUserInteraction
+		);
+		container.addEventListener(
+			"wheel",
+			handleUserInteraction
+		);
 
 		// mobile: touch o swipe
-		container.addEventListener("touchstart", handleUserInteraction);
-		container.addEventListener("touchmove", handleUserInteraction);
+		container.addEventListener(
+			"touchstart",
+			handleUserInteraction
+		);
+		container.addEventListener(
+			"touchmove",
+			handleUserInteraction
+		);
 
 		return () => {
 			cancelAnimationFrame(animationFrameId);
-			container.removeEventListener("mousedown", handleUserInteraction);
-			container.removeEventListener("wheel", handleUserInteraction);
-			container.removeEventListener("touchstart", handleUserInteraction);
-			container.removeEventListener("touchmove", handleUserInteraction);
+			container.removeEventListener(
+				"mousedown",
+				handleUserInteraction
+			);
+			container.removeEventListener(
+				"wheel",
+				handleUserInteraction
+			);
+			container.removeEventListener(
+				"touchstart",
+				handleUserInteraction
+			);
+			container.removeEventListener(
+				"touchmove",
+				handleUserInteraction
+			);
 		};
 	}, [scrollDirection, userInteracted]);
 
@@ -119,12 +169,22 @@ function Services() {
 							WebkitTextFillColor: "transparent",
 						}}
 					>
-            {displayedWords[index]}
-          </span>
+						{displayedWords[index]}
+					</span>
 				))}
 			</h1>
 
-			<div ref={containerRef} style={{ width: "130%", overflowY: "hidden", overflowX: "auto", display: "flex", flexDirection: "row", gap: "5rem" }}>
+			<div
+				ref={containerRef}
+				style={{
+					width: "130%",
+					overflowY: "hidden",
+					overflowX: "auto",
+					display: "flex",
+					flexDirection: "row",
+					gap: "5rem",
+				}}
+			>
 				{ALL_SERVICES?.map((service, index) => (
 					<div
 						key={service.title}

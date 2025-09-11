@@ -32,7 +32,9 @@ function WhereWeAre(props) {
 					color: "transparent",
 					lineHeight: 1.2,
 				}}
-				dangerouslySetInnerHTML={{ __html: "Il punto d'incontro con la qualità." }}
+				dangerouslySetInnerHTML={{
+					__html: "Il punto d'incontro con la qualità.",
+				}}
 			/>
 
 			{/* Description */}

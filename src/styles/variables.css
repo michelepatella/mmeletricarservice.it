@@ -57,7 +57,7 @@
 	/* -------- Custom Button(s) -------- */
 	--custom_button_border: 1px;
 	--custom_button_filter_perc: 1;
-	--custom_button_padding: 19px 16px 19px 16px;
+	--custom_button_padding: 23px 17px 23px 17px;
 	--contact_button_padding: 0;
 	--cta_button_margin_top: 3rem;
 	--cta_button_width_medium_landscape: 40%;
@@ -87,7 +87,7 @@
 	--used_car_card_width: 270px;
 	--used_car_card_gap: 2rem;
 	--used_car_card_border: 1px;
-	--used_car_card_box_shadow: 0 8px 20px rgba(0, 0, 0, 1.0);
+	--used_car_card_box_shadow: 0 8px 20px rgba(0, 0, 0, 1);
 	--used_car_card_box_shadow_hover: 0 50px 50px
 		rgba(0, 0, 0, 0.8);
 	--used_car_card_flex_shrink: 0;
@@ -108,7 +108,7 @@
 	--used_car_drawer_flex_horizontal_gap_small: 3rem;
 	--used_car_drawer_flex_horizontal_vertical_border: 1px;
 	--used_car_drawer_flex_horizontal_vertical_box_shadow: 0
-		50px 50px rgba(0, 0, 0, 1.0);
+		50px 50px rgba(0, 0, 0, 1);
 	--used_car_drawer_header_padding_left_big: 4rem;
 	--used_car_drawer_header_padding_top_big: 1rem;
 	--used_car_drawer_header_padding_bottom_big: 2rem;
