@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel, Image } from "antd";
+import { NO_USED_CAR_IMAGE_AVAILABLE_LINK } from "../../../utils/links";
 
 /**
  * This component represents the carousel used for
@@ -31,7 +32,7 @@ function UsedCarDrawerCarousel(props) {
 					// In case of any image available, show an image
 					// indicating the user that no image is available for that car
 					<Image
-						src="/images/empty-carousel-image.svg"
+						src={NO_USED_CAR_IMAGE_AVAILABLE_LINK}
 						dots={false}
 						preview={false}
 					/>

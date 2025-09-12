@@ -2,9 +2,9 @@ import React from "react";
 import {
 	ABOUT_US_DESCRIPTION,
 	ABOUT_US_TITLE,
+	CONTACTS_TITLE,
 } from "../utils/const";
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
-import SectionBlock from "../components/sections/SectionBlock/SectionBlock";
 import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
 
@@ -16,25 +16,13 @@ import CustomText from "../components/custom/CustomText/CustomText";
  */
 function AboutUs() {
 	return (
-		<BackgroundContainer
-			custStyle={{
-				backgroundSize: "auto",
-				backgroundRepeat: "repeat",
-				backgroundOrigin: "center center",
-			}}
-			image="/images/about-us-image.avif"
-		>
+		<BackgroundContainer image="/images/about-us-background.avif">
 			<SectionContainer id="chi-siamo">
-				<h1
-					style={{
-						fontSize: "clamp(43px, 6vw, 120px)",
-						color: "white",
-						lineHeight: 1.2,
-						marginBottom: "20px",
-					}}
-					dangerouslySetInnerHTML={{
-						__html: "Chi siamo.",
-					}}
+				{/* About us section title */}
+				<CustomText
+					type="super-heading"
+					text={ABOUT_US_TITLE}
+					disableAnimation={true}
 				/>
 
 				<CustomText

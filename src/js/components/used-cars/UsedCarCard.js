@@ -49,7 +49,7 @@ function UsedCarCard(props) {
 					{props.usedCarOverview?.image ? (
 						<img
 							src={props.usedCarOverview?.image}
-							alt="auto-image"
+							alt="used-car-image"
 							loading="lazy"
 						/>
 					) : (

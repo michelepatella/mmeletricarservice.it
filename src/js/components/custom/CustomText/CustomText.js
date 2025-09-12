@@ -9,7 +9,8 @@ import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
  * The custom text has predefined styles and customized styles
  * that may overwrite custom styles, if needed.
  * A custom text may be of type:
- * - Heading: if used as heading in the web application (e.g., titles).
+ * - Super-heading: if used as heading for sections (i.e., section titles).
+ * - Heading: if used as heading for components (e.g., component titles).
  * - Subheading: if used as subheading in the web application (e.g., subtitles).
  * - Body: if used as simple text in the web application (e.g., descriptions).
  * - Caption: if used as non-relevant text in the web application (e.g., footer text).
@@ -28,7 +29,7 @@ function CustomText(props) {
 	const style = {
 		...(props.disableAnimation
 			? {
-					opacity: "0.9",
+					opacity: 1,
 				}
 			: {}),
 		...props.style,

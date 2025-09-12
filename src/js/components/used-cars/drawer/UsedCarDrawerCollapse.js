@@ -5,6 +5,7 @@ import {
 	PlusOutlined,
 } from "@ant-design/icons";
 import { USED_CAR_ALL_INFO } from "../../../utils/const";
+import CustomText from "../../custom/CustomText/CustomText";
 
 /**
  * This component represents a collapse used into the
@@ -37,19 +38,25 @@ function UsedCarDrawerCollapse(props) {
 									className="used-car-drawer-collapse-inner-list"
 								>
 									{/* Information name */}
-									<span
-										dangerouslySetInnerHTML={{
-											__html: item?.title,
+									<CustomText
+										type="body"
+										text={item?.title}
+										style={{
+											marginBottom: 0,
 										}}
+										disableAnimation={true}
 									/>
 
 									{/* Information textual value */}
-									<div>
-										<span>
-											{props.usedCarInfo?.[item?.name] ||
-												"-"}
-										</span>
-									</div>
+									<CustomText
+										type="caption"
+										text={
+											props.usedCarInfo?.[item?.name] || "-"
+										}
+										style={{
+											marginTop: 0,
+										}}
+									/>
 								</ul>
 							))}
 						</li>

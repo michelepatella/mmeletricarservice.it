@@ -4,6 +4,7 @@ import {
 	WHERE_WE_ARE_TITLE,
 	GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
 	GOOGLE_MAPS_LINK,
+	CONTACTS_TITLE,
 } from "../utils/const";
 import {
 	handleGoogleMapsContainerStyle,
@@ -13,8 +14,8 @@ import SectionContainer from "../components/sections/SectionContainer/SectionCon
 import CustomText from "../components/custom/CustomText/CustomText";
 import InfoCard from "../components/other/InfoCard/InfoCard";
 import React from "react";
-import SectionBlock from "../components/sections/SectionBlock/SectionBlock";
 import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
+import CustomBlockQuote from "../components/custom/CustomBlockQuote";
 
 /**
  * This component represents the Where we are section.
@@ -25,43 +26,21 @@ import BackgroundContainer from "../components/sections/BackgroundContainer/Back
  */
 function WhereWeAre(props) {
 	return (
-		<BackgroundContainer
-			image="/images/dotted-background-image.avif"
-			custStyle={{
-				height: "100%",
-				backgroundSize: "auto !important",
-				backgroundRepeat: "repeat !important",
-				backgroundOrigin: "right !important",
-			}}
-		>
+		<BackgroundContainer image="/images/dotted-background.avif">
 			<SectionContainer id="dove-siamo">
 				{/* Where we are section title */}
-				<h1
-					style={{
-						fontSize: "clamp(43px, 6vw, 120px)",
-						color: "white",
-						lineHeight: 1.2,
-						marginBottom: "20px",
-					}}
-					dangerouslySetInnerHTML={{
-						__html: "Dove siamo.",
-					}}
+				<CustomText
+					type="super-heading"
+					text={WHERE_WE_ARE_TITLE}
+					disableAnimation={true}
 				/>
 
-				<blockquote
-					style={{
-						display: "inline-block",
-						borderLeft: "3px solid",
-						color: "var(--yellow_color)",
-						paddingLeft: "1rem",
-						marginLeft: "5px",
-					}}
-				>
+				<CustomBlockQuote>
 					<CustomText
 						type="body"
 						text={WHERE_WE_ARE_DESCRIPTION}
 					/>
-				</blockquote>
+				</CustomBlockQuote>
 
 				<br />
 
@@ -77,15 +56,7 @@ function WhereWeAre(props) {
 					}}
 				/>
 
-				<blockquote
-					style={{
-						display: "inline-block",
-						borderLeft: "3px solid",
-						color: "var(--yellow_color)",
-						paddingLeft: "1rem",
-						marginLeft: "5px",
-					}}
-				>
+				<CustomBlockQuote>
 					<CustomText
 						type="body"
 						text={
@@ -93,7 +64,7 @@ function WhereWeAre(props) {
 							"- <strong>Sab</strong>: 08:30-13:00"
 						}
 					/>
-				</blockquote>
+				</CustomBlockQuote>
 
 				{/* Google Maps (shown only in case of cookie accepting) */}
 				{props.cookiesAccepted ? (

@@ -1,10 +1,8 @@
-import { motion } from "framer-motion";
 import { handleContainerStyle } from "../../../logic/style-handling/backgroundContainerStyleHandler";
 
 /**
  * This component defines the background container of a section.
- * It is used for containing a background image shown in a section
- * with an entry animation.
+ * It is used for containing a background image shown in a section.
  * @param image
  * @param children
  * @param custStyle

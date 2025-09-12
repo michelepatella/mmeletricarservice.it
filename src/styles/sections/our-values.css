@@ -6,8 +6,8 @@
 .ant-steps-item-icon,
 .ant-steps-icon-dot,
 .ant-steps-item-tail::after {
-	background-color: var(--yellow_color) !important;
-	color: var(--yellow_color) !important;
+	background-color: var(--accent_color) !important;
+	color: var(--accent_color) !important;
 }
 
 .ant-steps-item-title,

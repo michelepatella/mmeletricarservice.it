@@ -111,7 +111,7 @@
 .ant-anchor-ink {
 	width: var(--menu_anchor_ink_width);
 	margin-top: var(--menu_ink_margin_top);
-	background-color: var(--yellow_color) !important;
+	background-color: var(--accent_color) !important;
 }
 
 /* ----------- Big screen ----------- */

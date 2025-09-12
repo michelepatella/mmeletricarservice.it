@@ -9,6 +9,7 @@ import {
 	LEGAL_NOTES_LINK,
 	PRIVACY_POLICY_LINK,
 } from "../../../utils/links";
+import CustomLink from "../../custom/CustomLink";
 
 /**
  * This component represents the footer
@@ -26,35 +27,22 @@ function ContactsFooter() {
 				{CONTACT_FOOTER_TEXT}
 				<br></br>
 				{/* Privacy policy link */}
-				<a
-					className="policy-link"
+				<CustomLink
 					href={PRIVACY_POLICY_LINK}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					{" "}
-					{PRIVACY_POLICY_TEXT}
-				</a>{" "}
-				|{/* Cookie policy link */}
-				<a
-					className="policy-link"
+					text={PRIVACY_POLICY_TEXT + " | "}
+				/>
+
+				{/* Cookie policy link */}
+				<CustomLink
 					href={COOKIE_POLICY_LINK}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					{" "}
-					{COOKIE_POLICY_TEXT}
-				</a>{" "}
-				|{/* Legal notes link */}
-				<a
-					className="policy-link"
+					text={COOKIE_POLICY_TEXT + " | "}
+				/>
+
+				{/* Legal notes link */}
+				<CustomLink
 					href={LEGAL_NOTES_LINK}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					{" "}
-					{LEGAL_NOTES_TEXT}
-				</a>
+					text={LEGAL_NOTES_TEXT}
+				/>
 			</p>
 		</div>
 	);

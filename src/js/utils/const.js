@@ -66,7 +66,7 @@ export const HOME_SUBTITLE =
 	"<strong>Competenza. Qualità. Innovazione.</strong>";
 
 /**------------- "About us" text -------------**/
-export const ABOUT_US_TITLE = "💡 Chi siamo.";
+export const ABOUT_US_TITLE = "Chi siamo.";
 export const ABOUT_US_DESCRIPTION =
 	"Siamo Michele Vacca e Michele Scalese, fondatori di <strong>MM Eletricar Service</strong>, officina elettrauto a Gravina in Puglia (BA). " +
 	"Un progetto che unisce esperienza e passione per l’elettronica d’auto. <br></br>" +
@@ -74,7 +74,7 @@ export const ABOUT_US_DESCRIPTION =
 	"e vuole affidarsi ad un elettrauto di fiducia a Gravina in Puglia (BA).";
 
 /**------------- "Our values" texts -------------**/
-export const OUR_VALUES_TITLE = "🌱 I nostri valori.";
+export const OUR_VALUES_TITLE = "I nostri valori.";
 export const OUR_VALUES_DESCRIPTION =
 	"In <strong>MM Eletricar Service</strong> crediamo che ogni veicolo meriti attenzione e cura, " +
 	"poiché comprendiamo quanto sia importante per i nostri clienti. " +
@@ -150,7 +150,8 @@ export const ALL_SERVICES = servicesData.map(
 );
 
 /**------------- "Used cars" texts -------------**/
-export const USED_CARS_TITLE = "● Disponibili ora";
+export const USED_CARS_TITLE =
+	"Il nostro store di auto usate.";
 export const USED_CAR_OVERVIEW = [
 	{
 		title: "Anno",
@@ -261,7 +262,7 @@ export const CTA_BUTTON_TEXT = "Verifica disponibilità";
 export const BACK_BUTTON_LABEL = "Indietro";
 
 /**------------- "Where we are" texts -------------**/
-export const WHERE_WE_ARE_TITLE = "📍Dove siamo";
+export const WHERE_WE_ARE_TITLE = "Dove siamo.";
 export const WHERE_WE_ARE_DESCRIPTION =
 	"Via G. Bizet, 63 — Gravina in Puglia (BA).";
 export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION =
@@ -270,7 +271,7 @@ export const GOOGLE_MAPS_LINK =
 	"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.143408468909!2d16.4256612!3d40.8248136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13387b9989c61785%3A0xaa80de53bd394020!2sMM%20Eletricar%20Service%20di%20Vacca%20%26%20Scalese%20snc%20%E2%80%A2%20Meccatronica%20%E2%80%A2%20Elettrauto!5e0!3m2!1sit!2sit!4v1735907615314!5m2!1sit!2sit";
 
 /**------------- "Contacts" texts -------------**/
-export const CONTACTS_TITLE = "● I nostri contatti";
+export const CONTACTS_TITLE = "Siamo qui per te.";
 export const CONTACTS = [
 	{
 		value: PHONE,

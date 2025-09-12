@@ -1,6 +1,8 @@
 import { LoadingOutlined } from "@ant-design/icons";
 import {
+	ABOUT_US_TITLE,
 	USED_CAR_SCROLL_LABEL_TEXT,
+	USED_CARS_TITLE,
 	USED_CARS_UNAVAILABLE_DESCRIPTION,
 } from "../utils/const";
 import {
@@ -46,15 +48,7 @@ function UsedCars() {
 	});
 
 	return (
-		<BackgroundContainer
-			custStyle={{
-				height: "100%",
-				backgroundSize: "auto !important",
-				backgroundRepeat: "repeat !important",
-				backgroundOrigin: "right !important",
-			}}
-			image="/images/dotted-background-image.avif"
-		>
+		<BackgroundContainer image="/images/dotted-background.avif">
 			<SectionContainer
 				id="auto-usate"
 				ref={containerRef}
@@ -66,16 +60,10 @@ function UsedCars() {
 					color: "#fff",
 				}}
 			>
-				<h1
-					style={{
-						fontSize: "clamp(43px, 6vw, 120px)",
-						color: "white",
-						lineHeight: 1.2,
-						marginBottom: "50px",
-					}}
-					dangerouslySetInnerHTML={{
-						__html: "Il nostro store di auto usate.",
-					}}
+				<CustomText
+					type="super-heading"
+					text={USED_CARS_TITLE}
+					disableAnimation={true}
 				/>
 
 				{/* Loading */}
@@ -130,8 +118,8 @@ function UsedCars() {
 								style={handleUnavailableUsedCarDescriptionStyle()}
 							/>
 							<img
-								src="/images/empty-used-cars-image.avif"
-								alt="unavailable-used-cars"
+								src="/images/no-used-car-available.avif"
+								alt="unavailable-used-cars-image"
 								loading="lazy"
 							/>
 						</div>

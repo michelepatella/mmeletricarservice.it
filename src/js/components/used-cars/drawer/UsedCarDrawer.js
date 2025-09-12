@@ -1,11 +1,11 @@
 import { Drawer, Flex } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
-import { onUsedCarDrawerClose } from "../../../logic/handling/usedCarDrawerHandler";
+import { useUsedCarInfo } from "../../../hooks/useUsedCarInfo";
 import { useDrawerBackButtonHandler } from "../../../hooks/useDrawerBackButton";
+import { onUsedCarDrawerClose } from "../../../logic/handling/usedCarDrawerHandler";
 import UsedCarDrawerCarousel from "./UsedCarDrawerCarousel";
 import UsedCarDrawerInfoPanel from "./UsedCarDrawerInfoPanel";
 import CustomBackButton from "../../custom/CustomBackButton/CustomBackButton";
-import { useUsedCarInfo } from "../../../hooks/useUsedCarInfo";
 
 /**
  * This component represents the used car drawer,

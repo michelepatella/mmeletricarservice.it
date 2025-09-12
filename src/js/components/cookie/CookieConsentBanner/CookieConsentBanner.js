@@ -12,6 +12,7 @@ import {
 	COOKIE_POLICY_LINK,
 	PRIVACY_POLICY_LINK,
 } from "../../../utils/links";
+import CustomLink from "../../custom/CustomLink";
 
 /**
  * This component represents the cookie
@@ -44,24 +45,22 @@ function CookieConsentBanner(props) {
 				>
 					{/* Cookie banner description */}
 					{COOKIE_CONSENT_BANNER_DESCRIPTION}
-					{/* Links to the privacy policy and to the cookie policy */}
-					<a
+
+					{/* Link to the privacy policy */}
+					<CustomLink
 						href={PRIVACY_POLICY_LINK}
-						className="policy-link"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						{PRIVACY_POLICY_TEXT}
-					</a>{" "}
-					e{" "}
-					<a
+						text={PRIVACY_POLICY_TEXT}
+					/>
+
+					{" e "}
+
+					{/* Link to the cookie policy */}
+					<CustomLink
 						href={COOKIE_POLICY_LINK}
-						className="policy-link"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						{COOKIE_POLICY_TEXT}
-					</a>
+						text={COOKIE_POLICY_TEXT}
+					/>
+
+					{"."}
 				</CookieConsent>
 			)}
 		</>

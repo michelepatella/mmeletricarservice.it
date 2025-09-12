@@ -106,10 +106,6 @@
 	}
 
 	.used-car-drawer-flex-vertical {
-		border: var(
-				--used_car_drawer_flex_horizontal_vertical_border
-			)
-			solid var(--light_gray_border_color);
 		border-radius: var(--border_radius);
 		padding: var(--used_car_drawer_info_panel_padding);
 		background-color: transparent;

@@ -4,14 +4,23 @@
 		opacity: 0;
 	}
 	to {
-		opacity: 0.9;
+		opacity: 1;
 	}
+}
+
+/* Super-heading styles */
+.custom-super-heading {
+	margin-bottom: 0;
+	font-size: var(--super_heading_font_size_big);
+	color: var(--text_color);
+	text-align: left;
+	font-weight: bold;
 }
 
 /* Heading styles */
 .custom-heading {
 	margin-bottom: var(--custom_text_heading_margin_bottom);
-	color: white;
+	color: var(--text_color);
 	text-align: left;
 	font-weight: bold;
 	opacity: 0;
@@ -28,7 +37,7 @@
 .custom-subheading,
 .custom-body {
 	opacity: 0;
-	color: white;
+	color: var(--text_color);
 	text-align: left;
 	transition:
 		opacity 2.5s ease,
@@ -42,7 +51,7 @@
 
 /* Caption styles */
 .custom-caption {
-	color: white;
+	color: var(--text_color);
 	font-size: var(--caption_text_font_size);
 }
 

@@ -4,16 +4,16 @@
 
 	/* -------- Colors -------- */
 	--background_color: #141414;
-	--light_gray_border_color: rgba(255, 255, 255, 0.25);
-	--yellow_color: #f8de4d;
-	--yellow_gradient_color: linear-gradient(
+	--accent_color: #f8de4d;
+	--accent_color_with_gradient: linear-gradient(
 		90deg,
 		#fff200,
 		#ffd700,
 		#ffbf00,
 		#ffa500
 	);
-	--blue_color: #005fcc;
+	--accessibility_button_color: #005fcc;
+	--text_color: white;
 
 	/* -------- Font size -------- */
 	--home_title_font_size_big: 55px;
@@ -23,6 +23,8 @@
 	--home_subtitle_font_size_big: 40px;
 	--home_subtitle_font_size_medium: 20px;
 	--home_subtitle_font_size_small: 18px;
+
+	--super_heading_font_size_big: clamp(43px, 6vw, 120px);
 
 	--heading_font_size_big: 30px;
 	--heading_font_size_medium: 25px;
@@ -36,7 +38,7 @@
 	--body_font_size_medium: 17px;
 	--body_font_size_small: 15px;
 
-	--caption_text_font_size: clamp(12px, 2vw, 15px);
+	--caption_text_font_size: clamp(13.5px, 2vw, 15px);
 
 	/* -------- Components (General) -------- */
 	--low_opacity: 0.8;
@@ -65,6 +67,11 @@
 
 	/* -------- Custom Back Button -------- */
 	--custom_back_button_padding_top: 20px;
+
+	/* -------- Custom Block Quote -------- */
+	--custom_block_quote_margin_left: 3px;
+	--custom_block_quote_padding_left: 1rem;
+	--custom_block_quote_border_left: 3px;
 
 	/* -------- Cookie Consent Banner + Cookie Button -------- */
 	--cookie_consent_banner_width: 60%;

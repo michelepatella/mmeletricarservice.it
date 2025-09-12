@@ -1,6 +1,12 @@
-import { CONTACTS } from "../../../utils/const";
+import {
+	CONTACTS,
+	CONTACTS_TITLE,
+} from "../../../utils/const";
+import { DOTTED_BACKGROUND_IMAGE_LINK } from "../../../utils/links";
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
 import CustomButton from "../../custom/CustomButton/CustomButton";
+import CustomText from "../../custom/CustomText/CustomText";
+import CustomBlockQuote from "../../custom/CustomBlockQuote";
 import SectionContainer from "../../sections/SectionContainer/SectionContainer";
 import BackgroundContainer from "../../sections/BackgroundContainer/BackgroundContainer";
 
@@ -14,37 +20,18 @@ import BackgroundContainer from "../../sections/BackgroundContainer/BackgroundCo
 function ContactsContent() {
 	return (
 		<BackgroundContainer
-			custStyle={{
-				height: "100%",
-				backgroundSize: "auto !important",
-				backgroundRepeat: "repeat !important",
-				backgroundOrigin: "right !important",
-			}}
-			image="/images/dotted-background-image.avif"
+			image={DOTTED_BACKGROUND_IMAGE_LINK}
 		>
 			<SectionContainer id="contatti">
 				{/* Contact section title */}
-				<h1
-					style={{
-						fontSize: "clamp(43px, 6vw, 120px)",
-						color: "white",
-						lineHeight: 1.2,
-						marginBottom: "20px",
-					}}
-					dangerouslySetInnerHTML={{
-						__html: "Siamo qui per te.",
-					}}
+				<CustomText
+					type="super-heading"
+					text={CONTACTS_TITLE}
+					disableAnimation={true}
 				/>
 
-				<blockquote
-					style={{
-						display: "inline-block",
-						borderLeft: "3px solid",
-						color: "var(--yellow_color)",
-						paddingLeft: "1rem",
-						marginLeft: "5px",
-					}}
-				>
+				{/* Custom block quote to highlight all contact buttons */}
+				<CustomBlockQuote>
 					{/* Contact buttons container (contains all the contact buttons) */}
 					<div className="contact-buttons-container">
 						{/* Add a button for each contact available */}
@@ -61,7 +48,7 @@ function ContactsContent() {
 							/>
 						))}
 					</div>
-				</blockquote>
+				</CustomBlockQuote>
 			</SectionContainer>
 		</BackgroundContainer>
 	);

@@ -150,14 +150,7 @@ function Services() {
 	}, [scrollDirection, userInteracted]);
 
 	return (
-		<BackgroundContainer
-			custStyle={{
-				backgroundSize: "auto",
-				backgroundRepeat: "repeat",
-				backgroundOrigin: "center center",
-			}}
-			image="/images/services-image.avif"
-		>
+		<BackgroundContainer image="/images/services-background.avif">
 			<SectionContainer id="servizi">
 				<h1
 					ref={ref}

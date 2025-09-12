@@ -35,7 +35,7 @@
 	font-weight: bold;
 	font-family: var(--font_family);
 	border: 2px solid;
-	border-image: var(--yellow_gradient_color) 1;
+	border-image: var(--accent_color_with_gradient) 1;
 	-webkit-mask-image: -webkit-linear-gradient(white, white);
 	background: transparent;
 	border-radius: var(--border_radius);
@@ -47,7 +47,7 @@
 	transform: scale(var(--cta_button_scale));
 	border-radius: var(--border_radius) !important;
 	border: 2px solid !important;
-	border-image: var(--yellow_gradient_color) 1 !important;
+	border-image: var(--accent_color_with_gradient) 1 !important;
 	border-radius: var(--border_radius) !important;
 	background: transparent !important;
 }

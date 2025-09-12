@@ -1,5 +1,9 @@
 import React from "react";
-import { OUR_VALUES_DESCRIPTION } from "../utils/const";
+import {
+	ABOUT_US_TITLE,
+	OUR_VALUES_DESCRIPTION,
+	OUR_VALUES_TITLE,
+} from "../utils/const";
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
 import { Steps } from "antd";
@@ -13,25 +17,13 @@ import BackgroundContainer from "../components/sections/BackgroundContainer/Back
  */
 function OurValues() {
 	return (
-		<BackgroundContainer
-			custStyle={{
-				backgroundSize: "auto",
-				backgroundRepeat: "repeat",
-				backgroundOrigin: "center center",
-			}}
-			image="/images/dotted-background-image.avif"
-		>
+		<BackgroundContainer image="/images/dotted-background.avif">
 			<SectionContainer id="i-nostri-valori">
-				<h1
-					style={{
-						fontSize: "clamp(43px, 6vw, 120px)",
-						color: "white",
-						lineHeight: 1.2,
-						marginBottom: "50px",
-					}}
-					dangerouslySetInnerHTML={{
-						__html: "Ciò in cui crediamo.",
-					}}
+				{/* Our values section title */}
+				<CustomText
+					type="super-heading"
+					text={OUR_VALUES_TITLE}
+					disableAnimation={true}
 				/>
 
 				<Steps

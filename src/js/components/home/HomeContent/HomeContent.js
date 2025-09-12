@@ -2,20 +2,23 @@ import {
 	HOME_TITLE,
 	HOME_SUBTITLE,
 } from "../../../utils/const";
+import { COMPANY_LOGO_LINK } from "../../../utils/links";
 
 /**
  * This component represents the content
- * of the Home section. It contains just a title and subtitle.
+ * of the Home section. It contains the logo of the company
+ * as image, title and subtitle.
  * @returns {Element}
  * @constructor
  */
 function HomeContent() {
 	return (
 		<div id="/home">
+			{/* Logo of the company */}
 			<img
 				className="logo-image"
-				src="/images/logo-image.svg"
-				alt="logo-image"
+				src={COMPANY_LOGO_LINK}
+				alt="company-logo-image"
 			/>
 
 			{/* Title */}

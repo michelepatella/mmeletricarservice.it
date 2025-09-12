@@ -29,7 +29,7 @@
 /* Home Title styles */
 .home-title {
 	margin-bottom: var(--home_title_margin_bottom);
-	color: var(--yellow_color);
+	color: var(--accent_color);
 	text-align: left;
 	opacity: 0;
 	animation: slideUpHomeAnimation 1s ease forwards;

@@ -6,7 +6,9 @@ import {
 	QueryClientProvider,
 } from "@tanstack/react-query";
 import { Button } from "antd";
+import { COOKIE_BUTTON_ARIA_LABEL } from "./utils/const";
 import { useCookieConsent } from "./hooks/useCookieConsent";
+import { handleCookieButtonClick } from "./logic/handling/cookieButtonHandler";
 import Home from "./sections/home";
 import AboutUs from "./sections/about-us";
 import OurValues from "./sections/our-values";
@@ -25,17 +27,17 @@ import "../styles/sections/used-cars.css";
 import "../styles/sections/where-we-are.css";
 import "../styles/sections/contacts.css";
 import "../styles/components/home/HomeHeader.css";
-import "../styles/components/custom/CustomButton.css";
 import "../styles/components/home/HomeContent.css";
 import "../styles/components/contacts/ContactsContent.css";
 import "../styles/components/contacts/ContactsFooter.css";
 import "../styles/components/cookie/CookieButton.css";
 import "../styles/components/cookie/CookieConsentBanner.css";
+import "../styles/components/custom/CustomButton.css";
 import "../styles/components/custom/CustomIconButton.css";
 import "../styles/components/custom/CustomText.css";
 import "../styles/components/custom/CustomBackButton.css";
+import "../styles/components/custom/CustomBlockQuote.css";
 import "../styles/components/sections/SectionContainer.css";
-import "../styles/components/sections/SectionBlock.css";
 import "../styles/components/used-cars/UsedCarOverview.css";
 import "../styles/components/used-cars/UsedCarCard.css";
 import "../styles/components/used-cars/drawer/UsedCarDrawer.css";
@@ -45,15 +47,14 @@ import "../styles/components/other/Menu.css";
 import "../styles/components/other/InfoCard.css";
 import "../styles/components/other/LoadingOutlined.css";
 import "../styles/variables.css";
-import { handleCookieButtonClick } from "./logic/handling/cookieButtonHandler";
-import { COOKIE_BUTTON_ARIA_LABEL } from "./utils/const";
 
 /**
- * App
+ * The entry-point of the web application
  * @returns {Element}
  * @constructor
  */
 function App() {
+	// State to manage cookie accepting/refusing
 	const {
 		cookiesAccepted,
 		isCookiesBannerVisible,
@@ -66,11 +67,17 @@ function App() {
 
 	return (
 		<>
+			{/* Vercel Analytics (cookie-free and
+			privacy-friendly) */}
 			<Analytics />
+			{/* React Router (HashRouter for the navigation
+			across the web application) */}
 			<HashRouter>
+				{/* To fetch and cache data from backend */}
 				<QueryClientProvider client={queryClient}>
 					<>
-						{/* Cookies button */}
+						{/* Cookies button (to show only if the cookie
+						 consent banner is not visible) */}
 						{!isCookiesBannerVisible && (
 							<Button
 								className="cookie-button"
