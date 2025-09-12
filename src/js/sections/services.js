@@ -1,8 +1,14 @@
-import { ALL_SERVICES } from "../utils/const";
+import {
+	ALL_SERVICES,
+	USED_CAR_SCROLL_LABEL_TEXT,
+} from "../utils/const";
 import InfoCard from "../components/other/InfoCard/InfoCard";
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
 import { useInView } from "react-intersection-observer";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { handleScrollLabelStyle } from "../logic/style-handling/usedCarsStyleHandler";
+import CustomText from "../components/custom/CustomText/CustomText";
+import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
 
 /**
  * This section represents Services section. The
@@ -144,65 +150,80 @@ function Services() {
 	}, [scrollDirection, userInteracted]);
 
 	return (
-		<SectionContainer id="servizi">
-			<h1
-				ref={ref}
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					gap: "0.5rem",
-					minHeight: "calc(4 * clamp(43px, 6vw, 120px))",
-					marginBottom: "2rem",
-					fontSize: "clamp(43px, 6vw, 120px)",
-					lineHeight: 1.2,
-				}}
-			>
-				{words.map((word, index) => (
-					<span
-						key={index}
-						style={{
-							minHeight: "clamp(43px, 6vw, 120px)",
-							display: "flex",
-							alignItems: "center",
-							background: word.gradient,
-							WebkitBackgroundClip: "text",
-							WebkitTextFillColor: "transparent",
-						}}
-					>
-						{displayedWords[index]}
-					</span>
-				))}
-			</h1>
+		<BackgroundContainer
+			custStyle={{
+				backgroundSize: "auto",
+				backgroundRepeat: "repeat",
+				backgroundOrigin: "center center",
+			}}
+			image="/images/services-image.avif"
+		>
+			<SectionContainer id="servizi">
+				<h1
+					ref={ref}
+					style={{
+						display: "flex",
+						flexDirection: "column",
+						gap: "0.5rem",
+						minHeight: "calc(4 * clamp(43px, 6vw, 120px))",
+						marginBottom: "2rem",
+						fontSize: "clamp(43px, 6vw, 120px)",
+						lineHeight: 1.2,
+					}}
+				>
+					{words.map((word, index) => (
+						<span
+							key={index}
+							style={{
+								minHeight: "clamp(43px, 6vw, 120px)",
+								display: "flex",
+								alignItems: "center",
+								background: word.gradient,
+								WebkitBackgroundClip: "text",
+								WebkitTextFillColor: "transparent",
+							}}
+						>
+							{displayedWords[index]}
+						</span>
+					))}
+				</h1>
 
-			<div
-				ref={containerRef}
-				style={{
-					width: "130%",
-					overflowY: "hidden",
-					overflowX: "auto",
-					display: "flex",
-					flexDirection: "row",
-					gap: "5rem",
-				}}
-			>
-				{ALL_SERVICES?.map((service, index) => (
-					<div
-						key={service.title}
-						style={{
-							transform: `scale(${scales[index]})`,
-							transition: "transform 0.2s",
-							transformOrigin: "center",
-						}}
-					>
-						<InfoCard
-							title={service?.title}
-							description={service?.description}
-							icon={service?.icon}
-						/>
-					</div>
-				))}
-			</div>
-		</SectionContainer>
+				<div
+					ref={containerRef}
+					style={{
+						width: "130%",
+						overflowY: "hidden",
+						overflowX: "auto",
+						display: "flex",
+						flexDirection: "row",
+						gap: "3rem",
+						justifyContent: "space-between",
+					}}
+				>
+					{ALL_SERVICES?.map((service, index) => (
+						<div
+							key={service.title}
+							style={{
+								transform: `scale(${scales[index]})`,
+								transition: "transform 0.2s",
+								transformOrigin: "center",
+							}}
+						>
+							<InfoCard
+								title={service?.title}
+								description={service?.description}
+								icon={service?.icon}
+							/>
+						</div>
+					))}
+				</div>
+				<CustomText
+					type="body"
+					text={USED_CAR_SCROLL_LABEL_TEXT}
+					style={handleScrollLabelStyle()}
+				/>
+			</SectionContainer>
+		</BackgroundContainer>
 	);
 }
 

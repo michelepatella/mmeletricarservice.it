@@ -13,8 +13,5 @@ export const handleContainerStyle = (image) => {
 			"url(" +
 			image +
 			")",
-		backgroundPosition: "right",
-		backgroundRepeat: "repeat",
-		backgroundSize: "auto",
 	};
 };

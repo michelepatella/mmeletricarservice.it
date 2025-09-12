@@ -19,7 +19,14 @@ function Home() {
 		<>
 			{/* Background container to contain the whole section and
        use a customized background */}
-			<BackgroundContainer image="/images/home-image.avif">
+			<BackgroundContainer
+				custStyle={{
+					backgroundSize: "auto !important",
+					backgroundRepeat: "repeat !important",
+					backgroundOrigin: "right !important",
+				}}
+				image="/images/dotted-background-image.avif"
+			>
 				{/* Home Layout */}
 				<Layout className="home-layout" id="home">
 					{/* Home header */}

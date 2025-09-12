@@ -1,6 +1,7 @@
 import { Layout } from "antd";
 import ContactsFooter from "../components/contacts/ContactsFooter/ContactsFooter";
 import ContactsContent from "../components/contacts/ContactsContent/ContactsContent";
+import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
 
 // Contact Layout definition:
 // it's composed by a content and footer

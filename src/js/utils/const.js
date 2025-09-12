@@ -252,7 +252,7 @@ export const USED_CAR_ALL_INFO = [
 	},
 ];
 export const USED_CAR_SCROLL_LABEL_TEXT =
-	"< Scorri per visualizzare >";
+	"< Scorri per esplorare >";
 export const USED_CARS_UNAVAILABLE_DESCRIPTION =
 	"Auto momentaneamente esaurite. Stiamo preparando nuovi arrivi!";
 export const USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION =
@@ -263,14 +263,7 @@ export const BACK_BUTTON_LABEL = "Indietro";
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "📍Dove siamo";
 export const WHERE_WE_ARE_DESCRIPTION =
-	"MM Eletricar Service si trova <strong>Gravina in Puglia (BA)</strong>, in <strong>Via G. Bizet, 63</strong>.";
-export const WHERE_WE_ARE_INFO = [
-	{
-		title: "Orari di apertura",
-		description:
-			"- <strong>Lunedì - Venerdì</strong>: 08:30-13:00/15:00-19:00 <br>- <strong>Sabato</strong>: 08:30-13:00",
-	},
-];
+	"Via G. Bizet, 63 — Gravina in Puglia (BA).";
 export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION =
 	"Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa.";
 export const GOOGLE_MAPS_LINK =

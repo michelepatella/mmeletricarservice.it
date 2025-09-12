@@ -20,6 +20,7 @@ import "../index.css";
 import "../styles/App.css";
 import "../styles/sections/home.css";
 import "../styles/sections/about-us.css";
+import "../styles/sections/our-values.css";
 import "../styles/sections/used-cars.css";
 import "../styles/sections/where-we-are.css";
 import "../styles/sections/contacts.css";

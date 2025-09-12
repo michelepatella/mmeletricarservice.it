@@ -92,7 +92,6 @@
 		rgba(0, 0, 0, 0.8);
 	--used_car_card_flex_shrink: 0;
 	--used_car_card_image_container_width: 100%;
-	--used_car_card_image_container_aspect_ratio: 4 / 3;
 	--used_car_card_image_max_width: 100%;
 	--used_car_card_image_height: 100%;
 	--used_car_card_overview_flex_gap: 0;

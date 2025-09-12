@@ -4,6 +4,7 @@
 	"private": true,
 	"dependencies": {
 		"@ant-design/icons": "^5.5.2",
+		"@chakra-ui/react": "^3.26.0",
 		"@motionone/utils": "^10.18.0",
 		"@react-spring/web": "^10.0.2",
 		"@supabase/supabase-js": "^2.49.4",
