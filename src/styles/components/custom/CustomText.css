@@ -10,11 +10,13 @@
 
 /* Super-heading styles */
 .custom-super-heading {
-	margin-bottom: 0;
+	margin-bottom: var(
+		--custom_text_super_heading_margin_bottom
+	);
 	font-size: var(--super_heading_font_size);
+	font-weight: bold;
 	color: var(--text_color);
 	text-align: left;
-	font-weight: bold;
 }
 
 /* Heading styles */
@@ -49,17 +51,18 @@
 }
 
 .custom-subheading.in-view {
-	opacity: 1;
+	opacity: 1 !important;
 }
 
 .custom-body.in-view {
-	opacity: 0.8;
+	opacity: var(--low_opacity) !important;
 }
 
 /* Caption styles */
 .custom-caption {
 	color: var(--text_color);
 	font-size: var(--caption_text_font_size);
+	opacity: var(--low_opacity) !important;
 }
 
 /* ------ Big screen ------- */

@@ -1,16 +1,14 @@
 /* Info Card styles */
 .info-card {
-	position: relative;
-	height: 100%;
-	width: 250px;
-	text-align: center;
+	height: var(--info_card_height);
+	width: var(--info_card_width);
 	background-color: transparent;
 }
 
 /* Info Card Icon styles */
 .info-card-icon {
-	width: var(--info_card_icon_dimension);
 	height: var(--info_card_icon_dimension);
+	width: var(--info_card_icon_dimension);
 }
 
 /* Info Card Flex container styles */

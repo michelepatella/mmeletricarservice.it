@@ -2,7 +2,7 @@
 .custom-back-button {
 	display: flex;
 	flex-direction: row;
-	color: white !important;
+	color: var(--text_color) !important;
 	font-size: var(--caption_text_font_size);
 	font-family: var(--font_family);
 	gap: var(--gap_button_label);

@@ -14,7 +14,7 @@
 
 /* Collapse Header and its text styles */
 .ant-collapse-header-text {
-	color: white !important;
+	color: var(--text_color) !important;
 	font-weight: bold;
 	font-family: var(--font_family);
 }
@@ -30,13 +30,13 @@
 /* Collapse content styles */
 .ant-collapse-content-box,
 .ant-collapse-content {
-	color: white;
+	color: var(--text_color);
 	font-family: var(--font_family);
 	border: none !important;
 	border-left: var(
 			--used_car_drawer_collapse_content_border_left
 		)
-		solid white !important;
+		solid var(--collapse_color) !important;
 	border-radius: var(
 		--used_car_drawer_collapse_content_border_radius
 	) !important;
@@ -45,7 +45,7 @@
 
 /* Collapse expand icon styles */
 .ant-collapse-expand-icon {
-	color: white;
+	color: var(--collapse_color);
 }
 
 /* Collapse lists styles */

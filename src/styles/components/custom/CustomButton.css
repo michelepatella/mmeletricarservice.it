@@ -1,8 +1,7 @@
 /* Custom Button styles */
 .custom-button {
-	color: white;
+	color: var(--text_color);
 	font-family: var(--font_family);
-	border: var(--custom_button_border) solid white;
 	border-radius: var(--border_radius);
 	padding: var(--custom_button_padding);
 	background-color: var(--background_color) !important;
@@ -11,16 +10,14 @@
 
 .custom-button:hover {
 	font-family: var(--font_family) !important;
-	border: var(--custom_button_border) solid white !important;
 	border-radius: var(--border_radius) !important;
 	padding: var(--custom_button_padding) !important;
-	filter: invert(var(--custom_button_filter_perc));
 	transition: all 0.3s ease !important;
 }
 
 /* Contact button styles */
 .contact-button {
-	color: white;
+	color: var(--text_color);
 	font-family: var(--font_family);
 	padding: var(--contact_button_padding);
 	box-shadow: none;
@@ -30,11 +27,11 @@
 /* CTA button styles */
 .cta-button {
 	margin-top: var(--cta_button_margin_top);
-	color: white;
+	color: var(--text_color);
 	font-size: var(--caption_text_font_size);
 	font-weight: bold;
 	font-family: var(--font_family);
-	border: 2px solid;
+	border: var(--cta_button_border) solid;
 	border-image: var(--accent_color_with_gradient) 1;
 	-webkit-mask-image: -webkit-linear-gradient(white, white);
 	background: transparent;
@@ -46,7 +43,7 @@
 .cta-button:hover {
 	transform: scale(var(--cta_button_scale));
 	border-radius: var(--border_radius) !important;
-	border: 2px solid !important;
+	border: var(--cta_button_border) solid !important;
 	border-image: var(--accent_color_with_gradient) 1 !important;
 	border-radius: var(--border_radius) !important;
 	background: transparent !important;

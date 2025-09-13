@@ -5,23 +5,22 @@
 		transform: translateY(20px);
 	}
 	to {
-		opacity: 0.9;
+		opacity: 1;
 		transform: translateY(0);
 	}
 }
 
+/* Home Content styles */
 .home-content {
-	margin-top: 20vh;
+	margin-top: var(--home_title_margin_top);
 	display: flex;
 	flex-direction: column;
-	align-items: start;
-	justify-content: space-between;
 }
 
 /* Home logo image styles */
 .logo-image {
-	height: 50px;
-	width: 50px;
+	height: var(--home_logo_dimension);
+	width: var(--home_logo_dimension);
 	opacity: 0;
 	animation: slideUpHomeAnimation 1s ease forwards;
 }
@@ -30,7 +29,6 @@
 .home-title {
 	margin-bottom: var(--home_title_margin_bottom);
 	color: var(--accent_color);
-	text-align: left;
 	opacity: 0;
 	animation: slideUpHomeAnimation 1s ease forwards;
 	animation-delay: var(--home_title_animation_delay);
@@ -39,8 +37,7 @@
 /* Home Subtitle styles */
 .home-subtitle {
 	margin-top: var(--home_subtitle_margin_top);
-	color: white;
-	text-align: left;
+	color: var(--text_color);
 	opacity: 0;
 	animation: slideUpHomeAnimation 1s ease forwards;
 	animation-delay: var(--home_subtitle_animation_delay);

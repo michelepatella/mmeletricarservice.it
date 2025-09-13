@@ -5,7 +5,7 @@
 	padding: var(--used_car_card_padding);
 	background: var(--background_color);
 	border: none;
-	border-radius: 10px;
+	border-radius: var(--border_radius);
 	box-shadow: var(--used_car_card_box_shadow);
 	flex-shrink: var(--used_car_card_flex_shrink);
 	scroll-snap-align: center;

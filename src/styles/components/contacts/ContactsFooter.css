@@ -1,18 +1,14 @@
 /* Contacts Footer styles */
 .contacts-footer {
 	width: var(--contacts_footer_width);
-	margin-top: auto;
-	display: flex;
-	flex-direction: column;
 	padding: var(--contacts_footer_padding);
-	color: white;
+	color: var(--text_color);
 	background-color: var(--background_color);
 }
 
 /* Contacts Footer text styles */
 .contact-footer-text {
 	font-size: var(--caption_text_font_size);
-	text-align: left;
 }
 
 /* ------ Big screen ------- */

@@ -1,8 +1,8 @@
 /* CustomBlockQuote styles */
 .custom-block-quote {
+	display: inline-block;
 	margin-left: var(--custom_block_quote_margin_left);
 	padding-left: var(--custom_block_quote_padding_left);
-	display: inline-block;
-	color: var(--accent_color);
 	border-left: var(--custom_block_quote_border_left) solid;
+	color: var(--accent_color);
 }

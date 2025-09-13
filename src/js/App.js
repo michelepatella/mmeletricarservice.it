@@ -21,7 +21,6 @@ import CookieConsentBanner from "./components/cookie/CookieConsentBanner/CookieC
 import "../index.css";
 import "../styles/App.css";
 import "../styles/sections/home.css";
-import "../styles/sections/about-us.css";
 import "../styles/sections/our-values.css";
 import "../styles/sections/services.css";
 import "../styles/sections/used-cars.css";

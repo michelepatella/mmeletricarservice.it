@@ -17,7 +17,6 @@
 
 .ant-drawer-content-wrapper .ant-drawer-header {
 	background-color: var(--background_color);
-	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 1);
 	padding: 0;
 }
 
@@ -26,7 +25,7 @@
 		--used_car_drawer_content_wrapper_width
 	) !important;
 	position: fixed;
-	animation: slideDrawerRight 0.4s ease-out;
+	animation: slideDrawerRight 0.5s ease-out;
 }
 
 /* Hide menus  */

@@ -118,15 +118,15 @@ export const OUR_VALUES_STEPS = [
 export const SERVICES_TITLE = [
 	{
 		text: "Prestazioni.",
-		gradient: "var(--red_gradient_color)",
+		gradient: "var(--red_color_with_gradient)",
 	},
 	{
 		text: "Sicurezza.",
-		gradient: "var(--blue_gradient_color)",
+		gradient: "var(--blue_color_with_gradient)",
 	},
 	{
 		text: "Affidabilità.",
-		gradient: "var(--green_gradient_color)",
+		gradient: "var(--green_color_with_gradient)",
 	},
 ];
 const ALL_SERVICES_DATA = [

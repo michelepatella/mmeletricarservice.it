@@ -1,3 +1,4 @@
+/* Our values steps styles */
 .our-values-steps {
 	font-family: var(--font_family);
 	padding: 0 !important;
@@ -10,16 +11,37 @@
 	color: var(--accent_color) !important;
 }
 
-.ant-steps-item-title,
-.ant-steps-item-title.in-view {
-	padding: 0 !important;
-	margin-top: calc(
-		var(--subheading_font_size_big) * -1.5
-	) !important;
-}
-
 .ant-steps-item-description,
 .ant-steps-item-description.in-view {
-	padding: 0 !important;
-	margin-bottom: 80px;
+	margin-bottom: var(--our_values_steps_margin_bottom);
+}
+
+/* ------- Big screen ------- */
+@media (min-width: 1025px) {
+	.ant-steps-item-title,
+	.ant-steps-item-title.in-view {
+		margin-top: calc(
+			var(--subheading_font_size_big) * -1.5
+		) !important;
+	}
+}
+
+/* ------- Medium screens (portrait and landscape) ------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.ant-steps-item-title,
+	.ant-steps-item-title.in-view {
+		margin-top: calc(
+			var(--subheading_font_size_medium) * -1.5
+		) !important;
+	}
+}
+
+/* ------- Small screen (portrait and landscape) ------- */
+@media (max-width: 767px) {
+	.ant-steps-item-title,
+	.ant-steps-item-title.in-view {
+		margin-top: calc(
+			var(--subheading_font_size_small) * -1.2
+		) !important;
+	}
 }

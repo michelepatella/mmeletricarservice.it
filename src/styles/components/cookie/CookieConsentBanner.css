@@ -12,7 +12,7 @@
 .CookieConsent {
 	font-size: var(--caption_text_font_size) !important;
 	font-family: var(--font_family) !important;
-	color: white !important;
+	color: var(--text_color) !important;
 	z-index: var(--cookie_consent_banner_z_index) !important;
 	background: var(--background_color) !important;
 	animation: slideUp 0.3s ease-out forwards;
@@ -45,7 +45,7 @@
 
 /* Policy links styles */
 .policy-link {
-	color: white;
+	color: var(--text_color) !important;
 	text-decoration: underline;
 	font-weight: bold;
 }

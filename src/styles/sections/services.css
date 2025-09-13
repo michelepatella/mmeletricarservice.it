@@ -1,9 +1,9 @@
 /* Services container styles */
 .services-container {
+	width: var(--section_max_width);
 	display: flex;
 	flex-direction: row;
-	gap: 3rem;
+	gap: var(--services_container_gap);
 	overflow-x: auto;
 	overflow-y: hidden;
-	width: 130%;
 }

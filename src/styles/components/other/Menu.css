@@ -19,7 +19,7 @@
 	align-items: center !important;
 	top: var(--float_button_margins);
 	right: var(--float_button_margins);
-	color: white !important;
+	color: var(--hamburger_button_color) !important;
 	background-color: transparent !important;
 	border: none !important;
 	box-shadow: var(--hamburger_button_box_shadow);
@@ -31,12 +31,12 @@
 
 /* Menu containers styles */
 .menu-container-big {
-	height: 100vh;
-	width: 170px;
+	height: var(--menu_container_big_height);
+	width: var(--menu_container_big_width);
 	display: block;
 	position: fixed;
 	background-color: var(--background_color);
-	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 1);
+	box-shadow: var(--menu_container_big_box_shadow);
 	top: var(--menu_container_big_top);
 	left: var(--menu_container_big_left);
 	z-index: var(--menu_container_big_z_index);
@@ -66,10 +66,12 @@
 
 .ant-menu-item {
 	margin-bottom: var(--menu_items_gap) !important;
-	color: white !important;
+	color: var(--text_color) !important;
 	font-family: var(--font_family);
 	opacity: 0;
-	transform: translateY(-20px);
+	transform: translateY(
+		var(--menu_container_big_y_translation)
+	);
 	animation: fadeMenuUp 0.5s forwards;
 	transition:
 		transform 0.3s ease,
@@ -89,7 +91,7 @@
 
 /* Close outline small menu styles */
 .close-outline {
-	color: white;
+	color: var(--close_outline_color);
 	position: absolute;
 	padding: var(--float_button_margins) 0 0;
 	right: calc(var(--float_button_margins) * 2);
@@ -97,7 +99,7 @@
 
 /* Big menu items styles */
 .ant-anchor-link-title {
-	color: white !important;
+	color: var(--text_color) !important;
 	font-family: var(--font_family) !important;
 	padding-top: var(--menu_items_gap);
 	transition: color 0.3s ease;
@@ -105,6 +107,7 @@
 
 .ant-anchor-link-active > .ant-anchor-link-title {
 	font-weight: bold;
+	color: var(--text_color) !important;
 }
 
 /* Big menu ink styles */
