@@ -1,33 +1,35 @@
+import React from "react";
 import {
-	WHERE_WE_ARE_INFO,
-	WHERE_WE_ARE_DESCRIPTION,
 	WHERE_WE_ARE_TITLE,
-	GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
-	GOOGLE_MAPS_LINK,
-	CONTACTS_TITLE,
 	SITE,
+	WORKING_HOURS_TITLE,
+	WORKING_HOURS_DESCRIPTION,
+	GOOGLE_MAPS_LINK,
+	GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
 } from "../utils/const";
+import { DOTTED_BACKGROUND_IMAGE_LINK } from "../utils/internal_links";
 import {
 	handleGoogleMapsContainerStyle,
 	handleGoogleMapsUnavailableDescriptionStyle,
 } from "../logic/style-handling/whereWeAreStyleHandler";
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
-import CustomText from "../components/custom/CustomText/CustomText";
-import InfoCard from "../components/other/InfoCard/InfoCard";
-import React from "react";
 import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
+import CustomText from "../components/custom/CustomText/CustomText";
 import CustomBlockQuote from "../components/custom/CustomBlockQuote";
 
 /**
  * This component represents the Where we are section.
- * It contains information about where the company is located, along with
- * a Google Maps frame. Additionally, show information about working hours.
+ * It contains information about where the company is located,
+ * along with a Google Maps frame. Additionally, show information
+ * about working hours.
  * @returns {Element}
  * @constructor
  */
 function WhereWeAre(props) {
 	return (
-		<BackgroundContainer image="/images/dotted-background.avif">
+		<BackgroundContainer
+			image={DOTTED_BACKGROUND_IMAGE_LINK}
+		>
 			<SectionContainer id="dove-siamo">
 				{/* Where we are section title */}
 				<CustomText
@@ -36,31 +38,24 @@ function WhereWeAre(props) {
 					disableAnimation={true}
 				/>
 
+				{/* Location of the company highlighted by a
+				block quote */}
 				<CustomBlockQuote>
 					<CustomText type="body" text={SITE} />
 				</CustomBlockQuote>
 
-				<br />
-
-				<h1
-					style={{
-						fontSize: "clamp(30px, 3vw, 120px)",
-						color: "white",
-						lineHeight: 1.2,
-						marginBottom: "20px",
-					}}
-					dangerouslySetInnerHTML={{
-						__html: "Orari d'apertura.",
-					}}
+				{/* Working hours of the company title */}
+				<CustomText
+					type="heading"
+					text={WORKING_HOURS_TITLE}
 				/>
 
+				{/* Working hours of the company highlighted by a
+				block quote */}
 				<CustomBlockQuote>
 					<CustomText
 						type="body"
-						text={
-							"- <strong>Lun-Ven</strong>: 08:30-13:00 / 15:00-19:00 <br>" +
-							"- <strong>Sab</strong>: 08:30-13:00"
-						}
+						text={WORKING_HOURS_DESCRIPTION}
 					/>
 				</CustomBlockQuote>
 

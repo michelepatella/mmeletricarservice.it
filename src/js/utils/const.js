@@ -103,7 +103,7 @@ export const OUR_VALUES_STEPS = [
 export const SERVICES_TITLE = [
 	{
 		text: "Prestazioni.",
-		gradient: "--red_gradient_color",
+		gradient: "var(--red_gradient_color)",
 	},
 	{
 		text: "Sicurezza.",
@@ -111,7 +111,7 @@ export const SERVICES_TITLE = [
 	},
 	{
 		text: "Affidabilità.",
-		gradient: "--green_gradient_color",
+		gradient: "var(--green_gradient_color)",
 	},
 ];
 const servicesData = [
@@ -293,7 +293,11 @@ export const CTA_BUTTON_TEXT = "Verifica disponibilità";
 export const BACK_BUTTON_LABEL = "Indietro";
 
 /**------------- "Where we are" texts -------------**/
-export const WHERE_WE_ARE_TITLE = "Dove siamo.";
+export const WHERE_WE_ARE_TITLE = "Dove trovarci.";
+export const WORKING_HOURS_TITLE = "Orari d'apertura";
+export const WORKING_HOURS_DESCRIPTION =
+	"- <strong>Lun-Ven</strong>: 08:30-13:00 / 15:00-19:00 <br>" +
+	"- <strong>Sab</strong>: 08:30-13:00";
 export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION =
 	"Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa.";
 export const GOOGLE_MAPS_LINK =
