@@ -3,6 +3,7 @@
 	height: auto;
 	display: flex;
 	flex-direction: column;
+	gap: var(--contacts_layout_gap);
 	position: relative;
 	font-family: var(--font_family);
 	background-color: var(--background_color);

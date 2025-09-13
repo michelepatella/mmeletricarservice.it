@@ -21,7 +21,7 @@ function AboutUs() {
 		>
 			<SectionContainer
 				id="chi-siamo"
-				custStyle={{ height: "70vh" }}
+				custStyle={{ height: "var(--about_us_height)" }}
 			>
 				{/* About us section title */}
 				<CustomText

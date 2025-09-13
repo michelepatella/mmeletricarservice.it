@@ -241,6 +241,9 @@
 	--home_subtitle_margin_top: 0px;
 	--home_subtitle_animation_delay: 1.2s;
 
+	/* -------- About us section -------- */
+	--about_us_height: 70vh;
+
 	/* -------- Our values section -------- */
 	--our_values_steps_margin_bottom: 50px;
 
@@ -254,6 +257,7 @@
 	--unavailable_used_cars_image_dimension: 250px;
 
 	/* -------- Contacts section -------- */
+	--contacts_layout_gap: 10rem;
 	--contact_buttons_gap: 30px;
 	--contacts_footer_width: 90%;
 	--contacts_footer_padding: 0;

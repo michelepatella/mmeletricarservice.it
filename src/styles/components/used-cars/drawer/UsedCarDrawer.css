@@ -92,6 +92,9 @@
 		padding-top: var(
 			--used_car_drawer_header_padding_top_small_portrait_medium_portrait
 		) !important;
+		box-shadow: var(
+			--used_car_drawer_flex_horizontal_vertical_box_shadow
+		);
 	}
 }
 
@@ -123,6 +126,9 @@
 		padding-top: var(
 			--used_car_drawer_header_padding_top_small_landscape_medium_landscape
 		) !important;
+		box-shadow: var(
+			--used_car_drawer_flex_horizontal_vertical_box_shadow
+		);
 	}
 }
 
@@ -144,6 +150,9 @@
 		padding-top: var(
 			--used_car_drawer_header_padding_top_small_portrait_medium_portrait
 		) !important;
+		box-shadow: var(
+			--used_car_drawer_flex_horizontal_vertical_box_shadow
+		);
 	}
 }
 
@@ -165,5 +174,8 @@
 		padding-top: var(
 			--used_car_drawer_header_padding_top_small_landscape_medium_landscape
 		) !important;
+		box-shadow: var(
+			--used_car_drawer_flex_horizontal_vertical_box_shadow
+		);
 	}
 }

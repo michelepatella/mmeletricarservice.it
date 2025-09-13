@@ -53,6 +53,7 @@
 	font-size: var(--heading_font_size_small) !important;
 	border: none !important;
 	background-color: var(--background_color) !important;
+	padding-top: 20px;
 }
 
 /* Small menu items styles */

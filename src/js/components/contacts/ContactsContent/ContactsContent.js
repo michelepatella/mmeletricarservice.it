@@ -22,10 +22,7 @@ function ContactsContent() {
 		<BackgroundContainer
 			image={DOTTED_BACKGROUND_IMAGE_LINK}
 		>
-			<SectionContainer
-				id="contatti"
-				custStyle={{ height: "70vh" }}
-			>
+			<SectionContainer id="contatti">
 				{/* Contact section title */}
 				<CustomText
 					type="super-heading"
