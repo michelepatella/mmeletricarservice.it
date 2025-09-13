@@ -16,6 +16,7 @@ import Services from "./sections/services";
 import UsedCars from "./sections/used-cars";
 import WhereWeAre from "./sections/where-we-are";
 import Contacts from "./sections/contacts";
+import SectionsWrapper from "./components/other/SectionsWrapper";
 import Menu from "./components/menu/Menu/Menu";
 import CookieConsentBanner from "./components/cookie/CookieConsentBanner/CookieConsentBanner";
 import "../index.css";
@@ -37,7 +38,6 @@ import "../styles/components/custom/CustomIconButton.css";
 import "../styles/components/custom/CustomText.css";
 import "../styles/components/custom/CustomBackButton.css";
 import "../styles/components/custom/CustomBlockQuote.css";
-import "../styles/components/sections/SectionContainer.css";
 import "../styles/components/used-cars/UsedCarOverview.css";
 import "../styles/components/used-cars/UsedCarCard.css";
 import "../styles/components/used-cars/drawer/UsedCarDrawer.css";
@@ -46,6 +46,8 @@ import "../styles/components/used-cars/drawer/UsedCarDrawerCollapse.css";
 import "../styles/components/other/Menu.css";
 import "../styles/components/other/InfoCard.css";
 import "../styles/components/other/LoadingOutlined.css";
+import "../styles/components/other/SectionContainer.css";
+import "../styles/components/other/SectionsWrapper.css";
 import "../styles/variables.css";
 
 /**
@@ -104,12 +106,16 @@ function App() {
 
 						{/* Sections */}
 						<Home />
-						<AboutUs />
-						<OurValues />
-						<Services />
-						<UsedCars />
-						<WhereWeAre cookiesAccepted={cookiesAccepted} />
-						<Contacts />
+						<SectionsWrapper>
+							<AboutUs />
+							<OurValues />
+							<Services />
+							<UsedCars />
+							<WhereWeAre
+								cookiesAccepted={cookiesAccepted}
+							/>
+							<Contacts />
+						</SectionsWrapper>
 					</>
 				</QueryClientProvider>
 			</HashRouter>

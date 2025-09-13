@@ -1,7 +1,6 @@
 /* Section Container styles */
 .section-container {
 	width: var(--section_container_width);
-	margin-bottom: var(--section_margin_bottom);
 }
 
 /* ------ Big screen ------- */

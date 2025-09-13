@@ -4,8 +4,8 @@ import {
 	ABOUT_US_TITLE,
 } from "../utils/const";
 import { ABOUT_US_BACKGROUND_IMAGE_LINK } from "../utils/internal_links";
-import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
-import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
+import SectionContainer from "../components/other/SectionContainer/SectionContainer";
+import BackgroundContainer from "../components/other/BackgroundContainer/BackgroundContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
 
 /**
@@ -19,7 +19,10 @@ function AboutUs() {
 		<BackgroundContainer
 			image={ABOUT_US_BACKGROUND_IMAGE_LINK}
 		>
-			<SectionContainer id="chi-siamo">
+			<SectionContainer
+				id="chi-siamo"
+				custStyle={{ height: "70vh" }}
+			>
 				{/* About us section title */}
 				<CustomText
 					type="super-heading"

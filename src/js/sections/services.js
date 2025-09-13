@@ -12,8 +12,8 @@ import {
 	handleTitleStyle,
 } from "../logic/style-handling/servicesStyleHandler";
 import { handleScrollLabelStyle } from "../logic/style-handling/usedCarsStyleHandler";
-import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
-import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
+import BackgroundContainer from "../components/other/BackgroundContainer/BackgroundContainer";
+import SectionContainer from "../components/other/SectionContainer/SectionContainer";
 import InfoCard from "../components/other/InfoCard/InfoCard";
 import CustomText from "../components/custom/CustomText/CustomText";
 

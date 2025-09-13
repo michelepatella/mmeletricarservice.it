@@ -1,0 +1,6 @@
+/* Sections wrapper styles */
+.sections-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sections_wrapper_gap);
+}

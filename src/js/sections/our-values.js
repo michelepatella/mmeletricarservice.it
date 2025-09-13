@@ -5,8 +5,8 @@ import {
 	OUR_VALUES_STEPS,
 } from "../utils/const";
 import { DOTTED_BACKGROUND_IMAGE_LINK } from "../utils/internal_links";
-import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
-import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
+import BackgroundContainer from "../components/other/BackgroundContainer/BackgroundContainer";
+import SectionContainer from "../components/other/SectionContainer/SectionContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
 
 /**

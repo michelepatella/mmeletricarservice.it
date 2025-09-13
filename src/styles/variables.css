@@ -66,6 +66,9 @@
 	--float_button_dimension: 40px;
 	--float_button_margins: 10px;
 
+	/* -------- Sections Wrapper -------- */
+	--sections_wrapper_gap: 4rem;
+
 	/* -------- Custom Icon Button -------- */
 	--custom_text_super_heading_margin_bottom: 30px;
 	--custom_text_heading_margin_bottom: 0;
@@ -186,9 +189,6 @@
 	--section_header_margin_bottom: 50px;
 	--section_header_subtitle_width: 85%;
 
-	/* -------- Background Container -------- */
-	--background_container_height: 100vh;
-
 	/* -------- Menu -------- */
 	--menu_anchor_ink_width: 2px;
 	--menu_items_gap: 30px;
@@ -224,13 +224,13 @@
 	--loading_outlined_width: 100%;
 
 	/* -------- General section margins -------- */
-	--section_margin_bottom: 180px;
 	--section_margin_left_big: 250px;
 	--section_margin_left_medium: 190px;
 	--section_margin_left_small_portrait: 20px;
 	--section_margin_left_small_landscape: 15px;
 
 	/* -------- Home section -------- */
+	--home_layout_height: 100vh;
 	--home_header_padding_bottom: 5px;
 	--home_header_padding_right: 10px;
 	--home_header_gap: 20px;

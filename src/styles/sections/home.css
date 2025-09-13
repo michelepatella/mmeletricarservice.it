@@ -2,5 +2,5 @@
 .home-layout {
 	font-family: var(--font_family);
 	background: transparent;
-	height: 100vh;
+	height: var(--home_layout_height);
 }

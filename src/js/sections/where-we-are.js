@@ -12,8 +12,8 @@ import {
 	handleGoogleMapsContainerStyle,
 	handleGoogleMapsUnavailableDescriptionStyle,
 } from "../logic/style-handling/whereWeAreStyleHandler";
-import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
-import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
+import SectionContainer from "../components/other/SectionContainer/SectionContainer";
+import BackgroundContainer from "../components/other/BackgroundContainer/BackgroundContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
 import CustomBlockQuote from "../components/custom/CustomBlockQuote";
 
@@ -48,6 +48,7 @@ function WhereWeAre(props) {
 				<CustomText
 					type="heading"
 					text={WORKING_HOURS_TITLE}
+					disableAnimation={true}
 				/>
 
 				{/* Working hours of the company highlighted by a

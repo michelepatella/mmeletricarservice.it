@@ -17,8 +17,8 @@ import {
 	handleScrollLabelStyle,
 	handleUnavailableUsedCarDescriptionStyle,
 } from "../logic/style-handling/usedCarsStyleHandler";
-import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
-import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
+import SectionContainer from "../components/other/SectionContainer/SectionContainer";
+import BackgroundContainer from "../components/other/BackgroundContainer/BackgroundContainer";
 import UsedCarCard from "../components/used-cars/UsedCarCard";
 import CustomText from "../components/custom/CustomText/CustomText";
 

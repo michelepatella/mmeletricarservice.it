@@ -7,8 +7,8 @@ import { contactClickHandler } from "../../../logic/handling/contactButtonHandle
 import CustomButton from "../../custom/CustomButton/CustomButton";
 import CustomText from "../../custom/CustomText/CustomText";
 import CustomBlockQuote from "../../custom/CustomBlockQuote";
-import SectionContainer from "../../sections/SectionContainer/SectionContainer";
-import BackgroundContainer from "../../sections/BackgroundContainer/BackgroundContainer";
+import SectionContainer from "../../other/SectionContainer/SectionContainer";
+import BackgroundContainer from "../../other/BackgroundContainer/BackgroundContainer";
 
 /**
  * This component represent the content
@@ -22,7 +22,10 @@ function ContactsContent() {
 		<BackgroundContainer
 			image={DOTTED_BACKGROUND_IMAGE_LINK}
 		>
-			<SectionContainer id="contatti">
+			<SectionContainer
+				id="contatti"
+				custStyle={{ height: "70vh" }}
+			>
 				{/* Contact section title */}
 				<CustomText
 					type="super-heading"
