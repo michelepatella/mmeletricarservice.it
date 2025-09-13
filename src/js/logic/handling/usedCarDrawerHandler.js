@@ -1,4 +1,4 @@
-import { USED_CAR_DRAWER_URL } from "../../utils/links";
+import { USED_CAR_DRAWER_URL } from "../../utils/internal_links";
 
 let previousScrollY = 0;
 

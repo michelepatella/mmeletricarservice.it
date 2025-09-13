@@ -2,7 +2,7 @@ import {
 	HOME_TITLE,
 	HOME_SUBTITLE,
 } from "../../../utils/const";
-import { COMPANY_LOGO_LINK } from "../../../utils/links";
+import { COMPANY_LOGO_LINK } from "../../../utils/internal_links";
 
 /**
  * This component represents the content

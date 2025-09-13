@@ -2,7 +2,7 @@ import {
 	CONTACTS,
 	CONTACTS_TITLE,
 } from "../../../utils/const";
-import { DOTTED_BACKGROUND_IMAGE_LINK } from "../../../utils/links";
+import { DOTTED_BACKGROUND_IMAGE_LINK } from "../../../utils/internal_links";
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
 import CustomButton from "../../custom/CustomButton/CustomButton";
 import CustomText from "../../custom/CustomText/CustomText";

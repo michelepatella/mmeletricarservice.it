@@ -9,7 +9,7 @@ import {
 	EMAIL_ICON_LINK,
 	FACEBOOK_ICON_LINK,
 	PHONE_ICON_LINK,
-} from "../../utils/links";
+} from "../../utils/internal_links";
 
 /**
  * Method to call when the email button is clicked.

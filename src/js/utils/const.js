@@ -1,3 +1,9 @@
+import {
+	EMAIL_ICON_LINK,
+	FACEBOOK_ICON_LINK,
+	PHONE_ICON_LINK,
+} from "./internal_links";
+
 /**------------- Data -------------**/
 export const STALE_TIME = 1000 * 60 * 5;
 
@@ -13,10 +19,11 @@ export const P_IVA = "08650830725";
 export const RAG_SOCIALE =
 	"Mm Eletricar Service Di Vacca Michele & Scalese Michele Società N Nome Collettivo";
 export const SITE =
-	"Via G. Bizet 63, 70024 Gravina in Puglia (BA), Italia";
+	"Via G. Bizet, 63 — Gravina in Puglia (BA), 70024, Italia";
 export const REA = "640711";
 
 /**------------- Cookies -------------**/
+export const COOKIE_EXPIRATION_DATE = 30;
 export const COOKIE_NAME = "cookieConsent";
 export const COOKIE_CONSENT_BANNER_DESCRIPTION =
 	'Questo sito utilizza i cookie. Cliccando su "Accetta", acconsenti all\'uso dei cookie. Cliccando su "Rifiuta", rifiuti l\'uso dei cookie. Per maggiori informazioni consulta la nostra ';
@@ -24,7 +31,6 @@ export const COOKIE_ACCEPT_BUTTON_TEXT =
 	"Accetta cookie di terze parti";
 export const COOKIE_DECLINE_BUTTON_TEXT =
 	"Rifiuta cookie di terze parti";
-export const COOKIE_EXPIRATION_DATE = 30;
 export const COOKIE_BUTTON_ARIA_LABEL = "Gestisci cookies";
 
 /**------------- Menu -------------**/
@@ -75,14 +81,39 @@ export const ABOUT_US_DESCRIPTION =
 
 /**------------- "Our values" texts -------------**/
 export const OUR_VALUES_TITLE = "I nostri valori.";
-export const OUR_VALUES_DESCRIPTION =
-	"In <strong>MM Eletricar Service</strong> crediamo che ogni veicolo meriti attenzione e cura, " +
-	"poiché comprendiamo quanto sia importante per i nostri clienti. " +
-	"<br></br>La nostra <strong>missione</strong> è offrire soluzioni affidabili e su misura, costruendo fiducia" +
-	" e garantendo la piena soddisfazione di chi si affida alla nostra officina elettrauto.";
+export const OUR_VALUES_STEPS = [
+	{
+		title: "Cura dell'auto",
+		description:
+			"Ogni auto merita attenzione, perchè sappiamo quanto sia importante per i nostri clienti.",
+	},
+	{
+		title: "Impegno",
+		description:
+			"Ci impegniamo a soddisfare ogni esigenza e superare le aspettative.",
+	},
+	{
+		title: "Fiducia",
+		description:
+			"Agiamo con trasparenza e serietà, costruendo relazioni solide.",
+	},
+];
 
 /**------------- "Services" texts -------------**/
-export const SERVICES_TITLE = "● Tutti i nostri servizi";
+export const SERVICES_TITLE = [
+	{
+		text: "Prestazioni.",
+		gradient: "--red_gradient_color",
+	},
+	{
+		text: "Sicurezza.",
+		gradient: "var(--blue_gradient_color)",
+	},
+	{
+		text: "Affidabilità.",
+		gradient: "--green_gradient_color",
+	},
+];
 const servicesData = [
 	[
 		"Manutenzione centralina",
@@ -263,8 +294,6 @@ export const BACK_BUTTON_LABEL = "Indietro";
 
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "Dove siamo.";
-export const WHERE_WE_ARE_DESCRIPTION =
-	"Via G. Bizet, 63 — Gravina in Puglia (BA).";
 export const GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION =
 	"Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa.";
 export const GOOGLE_MAPS_LINK =
@@ -275,19 +304,19 @@ export const CONTACTS_TITLE = "Siamo qui per te.";
 export const CONTACTS = [
 	{
 		value: PHONE,
-		icon: "/icons/phone_icon.svg",
+		icon: PHONE_ICON_LINK,
 	},
 	{
 		value: EMAIL,
-		icon: "/icons/email_icon.svg",
+		icon: EMAIL_ICON_LINK,
 	},
 	{
 		value: EMAIL_PEC,
-		icon: "/icons/email_icon.svg",
+		icon: EMAIL_ICON_LINK,
 	},
 	{
 		value: FACEBOOK_PAGE_NAME,
-		icon: "/icons/facebook_icon.svg",
+		icon: FACEBOOK_ICON_LINK,
 	},
 ];
 export const CONTACT_FOOTER_TEXT =

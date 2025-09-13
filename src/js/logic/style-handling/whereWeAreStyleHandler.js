@@ -1,4 +1,4 @@
-import { MAP_ICON_LINK } from "../../utils/links";
+import { MAP_ICON_LINK } from "../../utils/internal_links";
 
 /**
  * Method to handle the Google Maps container

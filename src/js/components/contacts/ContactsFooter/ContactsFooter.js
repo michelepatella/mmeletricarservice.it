@@ -8,7 +8,7 @@ import {
 	COOKIE_POLICY_LINK,
 	LEGAL_NOTES_LINK,
 	PRIVACY_POLICY_LINK,
-} from "../../../utils/links";
+} from "../../../utils/internal_links";
 import CustomLink from "../../custom/CustomLink";
 
 /**

@@ -5,6 +5,7 @@ import {
 	GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
 	GOOGLE_MAPS_LINK,
 	CONTACTS_TITLE,
+	SITE,
 } from "../utils/const";
 import {
 	handleGoogleMapsContainerStyle,
@@ -36,10 +37,7 @@ function WhereWeAre(props) {
 				/>
 
 				<CustomBlockQuote>
-					<CustomText
-						type="body"
-						text={WHERE_WE_ARE_DESCRIPTION}
-					/>
+					<CustomText type="body" text={SITE} />
 				</CustomBlockQuote>
 
 				<br />

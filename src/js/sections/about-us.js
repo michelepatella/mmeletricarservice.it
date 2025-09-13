@@ -2,8 +2,8 @@ import React from "react";
 import {
 	ABOUT_US_DESCRIPTION,
 	ABOUT_US_TITLE,
-	CONTACTS_TITLE,
 } from "../utils/const";
+import { ABOUT_US_BACKGROUND_IMAGE_LINK } from "../utils/internal_links";
 import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
 import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
 import CustomText from "../components/custom/CustomText/CustomText";
@@ -16,7 +16,9 @@ import CustomText from "../components/custom/CustomText/CustomText";
  */
 function AboutUs() {
 	return (
-		<BackgroundContainer image="/images/about-us-background.avif">
+		<BackgroundContainer
+			image={ABOUT_US_BACKGROUND_IMAGE_LINK}
+		>
 			<SectionContainer id="chi-siamo">
 				{/* About us section title */}
 				<CustomText
@@ -25,6 +27,7 @@ function AboutUs() {
 					disableAnimation={true}
 				/>
 
+				{/* About us section description */}
 				<CustomText
 					type="body"
 					text={ABOUT_US_DESCRIPTION}

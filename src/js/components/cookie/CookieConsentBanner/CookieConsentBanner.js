@@ -11,7 +11,7 @@ import {
 import {
 	COOKIE_POLICY_LINK,
 	PRIVACY_POLICY_LINK,
-} from "../../../utils/links";
+} from "../../../utils/internal_links";
 import CustomLink from "../../custom/CustomLink";
 
 /**

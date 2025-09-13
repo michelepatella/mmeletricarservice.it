@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel, Image } from "antd";
-import { NO_USED_CAR_IMAGE_AVAILABLE_LINK } from "../../../utils/links";
+import { NO_USED_CAR_IMAGE_AVAILABLE_LINK } from "../../../utils/internal_links";
 
 /**
  * This component represents the carousel used for

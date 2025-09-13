@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { STALE_TIME } from "../utils/const";
-import { USED_CARS_OVERVIEW_ENDPOINT } from "../utils/links";
+import { USED_CARS_OVERVIEW_ENDPOINT } from "../utils/internal_links";
 import { fetchUsedCarData } from "../utils/fetcher";
 
 /**

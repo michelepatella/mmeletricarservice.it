@@ -72,7 +72,7 @@ jest.mock("../../../utils/const", () => ({
 }));
 
 // Mock links
-jest.mock("../../../utils/links", () => ({
+jest.mock("../../../utils/internal_links", () => ({
 	COOKIE_POLICY_LINK: cookiePolicyHref,
 	PRIVACY_POLICY_LINK: privacyPolicyHref,
 }));

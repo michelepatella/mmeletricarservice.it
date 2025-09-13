@@ -11,6 +11,10 @@ export const DOTTED_BACKGROUND_IMAGE_LINK =
 	"/images/dotted-background.avif";
 export const NO_USED_CAR_IMAGE_AVAILABLE_LINK =
 	"/images/no-used-car-image-available.avif";
+export const ABOUT_US_BACKGROUND_IMAGE_LINK =
+	"/images/about-us-background.avif";
+export const SERVICES_BACKGROUND_IMAGE_LINK =
+	"/images/services-background.avif";
 
 /**------------- Document links -------------**/
 export const PRIVACY_POLICY_LINK =
