@@ -1,3 +1,5 @@
+import { MAP_ICON_LINK } from "../../utils/links";
+
 /**
  * Method to handle the Google Maps container
  * style-handling (when not available) dynamically.
@@ -9,12 +11,12 @@
 export const handleGoogleMapsContainerStyle = () => {
 	return {
 		height: "calc(var(--google_maps_height)/2)",
-		background: "url(/icons/map_icon.svg)",
+		background: "url(" + MAP_ICON_LINK + ")",
 		backgroundRepeat: "no-repeat",
 		backgroundPosition: "center top",
 		backgroundSize:
 			"var(--google_maps_unavailable_background_size)",
-		opacity: "var(--text_low_opacity)",
+		opacity: "var(--low_opacity)",
 	};
 };
 

@@ -34,6 +34,10 @@
 }
 
 /* Subheading and body styles */
+.custom-subheading {
+	font-weight: bold;
+}
+
 .custom-subheading,
 .custom-body {
 	opacity: 0;
@@ -44,9 +48,12 @@
 		transform 2.5s ease;
 }
 
-.custom-subheading.in-view,
+.custom-subheading.in-view {
+	opacity: 1;
+}
+
 .custom-body.in-view {
-	opacity: 0.9;
+	opacity: 0.8;
 }
 
 /* Caption styles */

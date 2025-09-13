@@ -1,5 +1,5 @@
 /**
- * Method to handle the style-handling of the parent items of the small menu.
+ * Method to handle the style of the parent items of the small menu.
  * @param section
  * @param menuItem
  * @returns {{textDecoration: (string), fontWeight: (string)}}
@@ -14,7 +14,7 @@ export const handleParentStyle = (section, menuItem) => {
 };
 
 /**
- * Method to handle the style-handling of the parent items of the small menu.
+ * Method to handle the style of the parent items of the small menu.
  * @param section
  * @param child
  * @returns {{
@@ -29,7 +29,7 @@ export const handleChildrenStyle = (section, child) => {
 			section === child?.href.replace("#", "")
 				? "bold"
 				: "normal",
-		paddingLeft: "var(--menu_childrens_padding_left)",
+		paddingLeft: "var(--menu_children_padding_left)",
 	};
 };
 

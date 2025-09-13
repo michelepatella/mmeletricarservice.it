@@ -5,7 +5,6 @@ import {
 	PHONE,
 } from "../../../utils/const";
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
-import { handleNamePriceStyle } from "../../../logic/style-handling/usedCarsStyleHandler";
 import CustomText from "../../custom/CustomText/CustomText";
 import UsedCarOverview from "../UsedCarOverview";
 import CustomButton from "../../custom/CustomButton/CustomButton";
@@ -29,7 +28,6 @@ function UsedCarDrawerInfoPanel(props) {
 				disableAnimation={true}
 				style={{
 					marginTop: 0,
-					...handleNamePriceStyle(),
 				}}
 			/>
 
@@ -45,10 +43,6 @@ function UsedCarDrawerInfoPanel(props) {
 					) || "-"
 				}
 				disableAnimation={true}
-				style={{
-					marginTop: 0,
-					...handleNamePriceStyle(),
-				}}
 			/>
 
 			{/* Car's overview information */}

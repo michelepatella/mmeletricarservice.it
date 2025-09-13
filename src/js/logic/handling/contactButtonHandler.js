@@ -2,8 +2,14 @@ import {
 	EMAIL,
 	EMAIL_PEC,
 	FACEBOOK_LINK,
+	FACEBOOK_PAGE_NAME,
 	PHONE,
 } from "../../utils/const";
+import {
+	EMAIL_ICON_LINK,
+	FACEBOOK_ICON_LINK,
+	PHONE_ICON_LINK,
+} from "../../utils/links";
 
 /**
  * Method to call when the email button is clicked.
@@ -44,7 +50,7 @@ export const contactClickHandler = {
 	[PHONE]: onPhoneButtonClick,
 	[EMAIL]: onEmailButtonClick,
 	[EMAIL_PEC]: onPecButtonClick,
-	"MM Eletricar Service": onFacebookButtonClick,
+	[FACEBOOK_PAGE_NAME]: onFacebookButtonClick,
 };
 
 /**
@@ -57,15 +63,15 @@ export const contactClickHandler = {
  */
 export const homeHeaderContactButtons = [
 	{
-		src: "/icons/email_icon.svg",
+		src: EMAIL_ICON_LINK,
 		onClick: onEmailButtonClick,
 	},
 	{
-		src: "/icons/facebook_icon.svg",
+		src: FACEBOOK_ICON_LINK,
 		onClick: onFacebookButtonClick,
 	},
 	{
-		src: "/icons/phone_icon.svg",
+		src: PHONE_ICON_LINK,
 		onClick: onPhoneButtonClick,
 	},
 ];

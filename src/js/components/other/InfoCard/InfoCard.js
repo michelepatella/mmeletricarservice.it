@@ -1,4 +1,5 @@
 import { Flex } from "antd";
+import { handleDescriptionStyle } from "../../../logic/style-handling/infoCardStyleHandler";
 import CustomText from "../../custom/CustomText/CustomText";
 
 /**
@@ -15,11 +16,7 @@ function InfoCard(props) {
 			{/* Info Card global container */}
 			<div className="info-card">
 				{/* Flex container */}
-				<Flex
-					className="info-card-flex"
-					gap="small"
-					align="start"
-				>
+				<Flex className="info-card-flex">
 					{/* Informative icon */}
 					{props.icon && (
 						<img
@@ -33,7 +30,6 @@ function InfoCard(props) {
 					<CustomText
 						type="subheading"
 						text={props.title}
-						style={{ fontWeight: "bold" }}
 						disableAnimation={true}
 					/>
 				</Flex>
@@ -42,10 +38,7 @@ function InfoCard(props) {
 				<CustomText
 					type="body"
 					text={props.description}
-					style={{
-						marginTop: "0",
-						opacity: "0.5",
-					}}
+					style={handleDescriptionStyle()}
 					disableAnimation={true}
 				/>
 			</div>

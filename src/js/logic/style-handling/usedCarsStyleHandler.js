@@ -1,19 +1,4 @@
 /**
- * Method to handle the style-handling of the name and the price
- * of the used cars card dynamically.
- * @returns {{
- * opacity: number,
- * fontWeight: string
- * }}
- */
-export const handleNamePriceStyle = () => {
-	return {
-		fontWeight: "bold",
-		alignSelf: "right",
-	};
-};
-
-/**
  * Method to handle the style-handling of the info card text overview
  * style-handling dynamically.
  * @returns {{
@@ -29,7 +14,7 @@ export const handleTextOverviewStyle = (isTitleVisible) => {
 			"var(--used_car_overview_text_margin_top)",
 		fontFamily: "Poppins",
 		fontWeight: isTitleVisible ? "bold" : "normal",
-		opacity: "var(--text_low_opacity)",
+		opacity: "var(--low_opacity)",
 	};
 };
 
@@ -46,7 +31,7 @@ export const handleScrollLabelStyle = () => {
 	return {
 		marginLeft: "var(--used_cars_scroll_label_margin_left)",
 		textAlign: "center",
-		opacity: "var(--text_low_opacity)",
+		opacity: "var(--low_opacity)",
 	};
 };
 

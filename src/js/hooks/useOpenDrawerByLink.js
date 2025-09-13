@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { USED_CAR_DRAWER_URL } from "../utils/links";
 import { onUsedCarDrawerOpen } from "../logic/handling/usedCarDrawerHandler";
 
 /**
@@ -21,7 +22,9 @@ export const useOpenDrawerByLink = (
 		const path = window.location.pathname;
 
 		// Extrapolate the used car's ID specified by the path
-		const regex = /^\/used-cars(\d+)$/;
+		const regex = new RegExp(
+			"^/" + USED_CAR_DRAWER_URL + "(\\d+)$"
+		);
 		const carIdMatch = regex.exec(path);
 
 		// If an ID has been found in the path

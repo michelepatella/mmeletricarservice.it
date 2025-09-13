@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Flex } from "antd";
 import { USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION } from "../../utils/const";
 import { onUsedCarDrawerOpen } from "../../logic/handling/usedCarDrawerHandler";
-import { handleNamePriceStyle } from "../../logic/style-handling/usedCarsStyleHandler";
 import { useOpenDrawerByLink } from "../../hooks/useOpenDrawerByLink";
 import UsedCarDrawer from "./drawer/UsedCarDrawer";
 import CustomText from "../custom/CustomText/CustomText";
@@ -74,7 +73,6 @@ function UsedCarCard(props) {
 						type="subheading"
 						text={props.usedCarOverview?.name}
 						disableAnimation={true}
-						style={handleNamePriceStyle()}
 					/>
 
 					{/* Car's overview information */}
@@ -96,7 +94,6 @@ function UsedCarCard(props) {
 								) || "-"
 							}
 							disableAnimation={true}
-							style={handleNamePriceStyle()}
 						/>
 					</div>
 				</Flex>

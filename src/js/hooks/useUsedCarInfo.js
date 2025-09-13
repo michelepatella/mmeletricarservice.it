@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchUsedCarData } from "../utils/fetcher";
 import { STALE_TIME } from "../utils/const";
+import { USED_CAR_INFO_ENDPOINT } from "../utils/links";
+import { fetchUsedCarData } from "../utils/fetcher";
 
 /**
  * Custom hook to orchestrate used car info fetching, by
@@ -16,7 +17,7 @@ export const useUsedCarInfo = ({ usedCarId }) => {
 		queryKey: ["usedCarInfo", usedCarId],
 		queryFn: () =>
 			fetchUsedCarData(
-				"used-car-info/usedCarInfo?id=" + usedCarId
+				USED_CAR_INFO_ENDPOINT + "?id=" + usedCarId
 			),
 		enabled: !!usedCarId,
 		staleTime: STALE_TIME,

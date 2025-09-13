@@ -1,3 +1,5 @@
+import { USED_CAR_DRAWER_URL } from "../../utils/links";
+
 let previousScrollY = 0;
 
 /**
@@ -28,7 +30,7 @@ export const onUsedCarDrawerOpen = (
 	window.history.pushState(
 		{ id: id },
 		"",
-		"used-cars" + id
+		USED_CAR_DRAWER_URL + id
 	);
 };
 
