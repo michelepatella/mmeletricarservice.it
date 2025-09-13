@@ -1,0 +1,9 @@
+/* Services container styles */
+.services-container {
+	display: flex;
+	flex-direction: row;
+	gap: 3rem;
+	overflow-x: auto;
+	overflow-y: hidden;
+	width: 130%;
+}

@@ -1,11 +1,22 @@
 import {
+	AIR_ICON_LINK,
+	ANTI_THEFT_ICON_LINK,
 	CALENDAR_ICON_LINK,
 	CAR_ICON_LINK,
+	CONTROL_PANEL_ICON_LINK,
+	CPU_ICON_LINK,
+	DASHBOARD_ICON_LINK,
+	DIAGNOSIS_ICON_LINK,
+	ELECTRIC_ICON_LINK,
 	EMAIL_ICON_LINK,
+	ENGINE_ICON_LINK,
 	FACEBOOK_ICON_LINK,
+	FILTER_ICON_LINK,
 	FUEL_ICON_LINK,
+	KEY_ICON_LINK,
 	PHONE_ICON_LINK,
 	ROAD_ICON_LINK,
+	WRENCH_ICON_LINK,
 } from "./internal_links";
 
 /**------------- Data -------------**/
@@ -118,65 +129,64 @@ export const SERVICES_TITLE = [
 		gradient: "var(--green_gradient_color)",
 	},
 ];
-const servicesData = [
+const ALL_SERVICES_DATA = [
 	[
 		"Manutenzione centralina",
 		"Controllo ed aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.",
-		"/icons/cpu_icon.svg",
+		CPU_ICON_LINK,
 	],
 	[
 		"Riparazione parabrezza",
 		"Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.",
-		"/icons/wrench_icon.svg",
+		WRENCH_ICON_LINK,
 	],
 	[
 		"Pannello di controllo",
 		"Riparazione e calibrazione di strumenti digitali ed analogici del cruscotto.",
-		"/icons/control_panel_icon.svg",
+		CONTROL_PANEL_ICON_LINK,
 	],
 	[
 		"Riparazione conta km",
 		"Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.",
-		"/icons/dashboard_icon.svg",
+		DASHBOARD_ICON_LINK,
 	],
 	[
 		"Ripristino EGR e DPF",
 		"Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.",
-		"/icons/filter_icon.svg",
+		FILTER_ICON_LINK,
 	],
 	[
 		"Ricarica aria condizionata",
 		"Ripristino del gas refrigerante per garantire un climatizzatore efficiente ed aria fresca.",
-		"/icons/air_icon.svg",
+		AIR_ICON_LINK,
 	],
 	[
 		"Diagnosi iniezione",
 		"Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.",
-		"/icons/engine_icon.svg",
+		ENGINE_ICON_LINK,
 	],
 	[
 		"Duplicazione chiavi e telecomandi",
 		"Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.",
-		"/icons/key_icon.svg",
+		KEY_ICON_LINK,
 	],
 	[
 		"Diagnosi elettronica",
 		"Individuazione e risoluzione di guasti elettronici per un'analisi precisa del tuo veicolo.",
-		"/icons/diagnosis_icon.svg",
+		DIAGNOSIS_ICON_LINK,
 	],
 	[
 		"Veicoli ibridi ed elettrici",
 		"Manutenzione specializzata per veicoli ibridi ed elettrici.",
-		"/icons/electric_icon.svg",
+		ELECTRIC_ICON_LINK,
 	],
 	[
 		"Installazione antifurti",
 		"Soluzioni antifurto satellitari Igla e meccanici Defender per la protezione del tuo veicolo.",
-		"/icons/anti_theft_icon.svg",
+		ANTI_THEFT_ICON_LINK,
 	],
 ];
-
-export const ALL_SERVICES = servicesData.map(
+export const ALL_SERVICES = ALL_SERVICES_DATA.map(
 	([title, description, icon]) => ({
 		title,
 		description,

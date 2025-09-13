@@ -1,14 +1,21 @@
+import React, { useState } from "react";
+import { useInView } from "react-intersection-observer";
 import {
+	SERVICES_TITLE,
 	ALL_SERVICES,
 	USED_CAR_SCROLL_LABEL_TEXT,
 } from "../utils/const";
-import InfoCard from "../components/other/InfoCard/InfoCard";
-import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
-import { useInView } from "react-intersection-observer";
-import React, { useEffect, useRef, useState } from "react";
+import { SERVICES_BACKGROUND_IMAGE_LINK } from "../utils/internal_links";
+import { useServiceTitleAnimation } from "../hooks/useServiceTitleAnimation";
+import {
+	handleSpanTitleStyle,
+	handleTitleStyle,
+} from "../logic/style-handling/servicesStyleHandler";
 import { handleScrollLabelStyle } from "../logic/style-handling/usedCarsStyleHandler";
-import CustomText from "../components/custom/CustomText/CustomText";
 import BackgroundContainer from "../components/sections/BackgroundContainer/BackgroundContainer";
+import SectionContainer from "../components/sections/SectionContainer/SectionContainer";
+import InfoCard from "../components/other/InfoCard/InfoCard";
+import CustomText from "../components/custom/CustomText/CustomText";
 
 /**
  * This section represents Services section. The
@@ -18,190 +25,57 @@ import BackgroundContainer from "../components/sections/BackgroundContainer/Back
  * @constructor
  */
 function Services() {
+	// To keep track when the service section
+	// is in view to start title's animation
 	const { ref, inView } = useInView({
 		triggerOnce: true,
-		threshold: 0.5,
+		threshold: 0.8,
 	});
-	const containerRef = useRef(null);
-	const [scrollDirection, setScrollDirection] = useState(1); // 1 = destra, -1 = sinistra
 
-	const words = [
-		{
-			text: "Prestazioni.",
-			gradient: "linear-gradient(90deg, #FF4D4D, #FF8E53)",
-		},
-		{
-			text: "Sicurezza.",
-			gradient: "linear-gradient(90deg, #4D9EFF, #7CDFFF)",
-		},
-		{
-			text: "Affidabilità.",
-			gradient: "linear-gradient(90deg, #3AC775, #7DFFCC)",
-		},
-	];
-
-	const [displayedWords, setDisplayedWords] = useState([
-		"",
-		"",
-		"",
-	]);
-	const [scales, setScales] = useState(
-		Array(ALL_SERVICES.length).fill(1)
+	// To keep track of the words already displayed
+	const [displayedWords, setDisplayedWords] = useState(
+		SERVICES_TITLE.map(() => "")
 	);
-	const [userInteracted, setUserInteracted] =
-		useState(false);
 
-	useEffect(() => {
-		if (!inView) return;
-
-		let currentIndex = 0;
-
-		function typeWord(word, i = 0) {
-			if (i <= word.length) {
-				setDisplayedWords((prev) => {
-					const copy = [...prev];
-					copy[currentIndex] = word.slice(0, i);
-					return copy;
-				});
-				setTimeout(() => typeWord(word, i + 1), 50);
-			} else {
-				currentIndex++;
-				if (currentIndex < words.length) {
-					setTimeout(
-						() => typeWord(words[currentIndex].text),
-						200
-					);
-				}
-			}
-		}
-
-		typeWord(words[currentIndex].text);
-	}, [inView]);
-
-	useEffect(() => {
-		const container = containerRef.current;
-		if (!container || userInteracted) return;
-
-		let animationFrameId;
-
-		const step = () => {
-			if (!container || userInteracted) return;
-
-			const speed = 0.3; // velocità dello scroll automatico
-			container.scrollLeft += speed * scrollDirection;
-
-			if (
-				container.scrollLeft + container.clientWidth >=
-				container.scrollWidth
-			) {
-				setScrollDirection(-1);
-			} else if (container.scrollLeft <= 0) {
-				setScrollDirection(1);
-			}
-
-			animationFrameId = requestAnimationFrame(step);
-		};
-
-		animationFrameId = requestAnimationFrame(step);
-
-		// Blocca auto-scroll al primo input dell'utente
-		const handleUserInteraction = () =>
-			setUserInteracted(true);
-
-		// desktop: click, scroll con mouse/trackpad
-		container.addEventListener(
-			"mousedown",
-			handleUserInteraction
-		);
-		container.addEventListener(
-			"wheel",
-			handleUserInteraction
-		);
-
-		// mobile: touch o swipe
-		container.addEventListener(
-			"touchstart",
-			handleUserInteraction
-		);
-		container.addEventListener(
-			"touchmove",
-			handleUserInteraction
-		);
-
-		return () => {
-			cancelAnimationFrame(animationFrameId);
-			container.removeEventListener(
-				"mousedown",
-				handleUserInteraction
-			);
-			container.removeEventListener(
-				"wheel",
-				handleUserInteraction
-			);
-			container.removeEventListener(
-				"touchstart",
-				handleUserInteraction
-			);
-			container.removeEventListener(
-				"touchmove",
-				handleUserInteraction
-			);
-		};
-	}, [scrollDirection, userInteracted]);
+	// To animate title
+	useServiceTitleAnimation(inView, setDisplayedWords);
 
 	return (
-		<BackgroundContainer image="/images/services-background.avif">
+		<BackgroundContainer
+			image={SERVICES_BACKGROUND_IMAGE_LINK}
+		>
 			<SectionContainer id="servizi">
-				<h1
-					ref={ref}
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						gap: "0.5rem",
-						minHeight: "calc(4 * clamp(43px, 6vw, 120px))",
-						marginBottom: "2rem",
-						fontSize: "clamp(43px, 6vw, 120px)",
-						lineHeight: 1.2,
-					}}
-				>
-					{words.map((word, index) => (
-						<span
-							key={index}
-							style={{
-								minHeight: "clamp(43px, 6vw, 120px)",
-								display: "flex",
-								alignItems: "center",
-								background: word.gradient,
-								WebkitBackgroundClip: "text",
-								WebkitTextFillColor: "transparent",
-							}}
-						>
-							{displayedWords[index]}
-						</span>
-					))}
-				</h1>
+				{/* Services section title(s) */}
+				<div ref={ref}>
+					<CustomText
+						type="super-heading"
+						text={
+							// Show each word composing the section title
+							// by using an individual span
+							SERVICES_TITLE.map(function (title, index) {
+								return (
+									'<span style="' +
+									handleSpanTitleStyle(title) +
+									'">' +
+									displayedWords[index] +
+									"</span>"
+								);
+							}).join("")
+						}
+						style={handleTitleStyle()}
+					/>
+				</div>
 
-				<div
-					ref={containerRef}
-					style={{
-						width: "130%",
-						overflowY: "hidden",
-						overflowX: "auto",
-						display: "flex",
-						flexDirection: "row",
-						gap: "3rem",
-						justifyContent: "space-between",
-					}}
-				>
-					{ALL_SERVICES?.map((service, index) => (
-						<div
-							key={service.title}
-							style={{
-								transform: `scale(${scales[index]})`,
-								transition: "transform 0.2s",
-								transformOrigin: "center",
-							}}
-						>
+				{/* Global container for all the informative
+				cards displayed for the services */}
+				<div className="services-container">
+					{/* Show all the services via informative cards
+					 which can be explored by scrolling the container
+					 horizontally */}
+					{ALL_SERVICES?.map((service) => (
+						<div>
+							{/* Each service shown through informative
+							card having icon, title, and description */}
 							<InfoCard
 								title={service?.title}
 								description={service?.description}
@@ -210,6 +84,9 @@ function Services() {
 						</div>
 					))}
 				</div>
+
+				{/* Label indicating the user to scroll the
+				 services horizontally in order to explore them */}
 				<CustomText
 					type="body"
 					text={USED_CAR_SCROLL_LABEL_TEXT}

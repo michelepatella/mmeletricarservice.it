@@ -39,7 +39,7 @@
 	--home_subtitle_font_size_medium: 20px;
 	--home_subtitle_font_size_small: 18px;
 
-	--super_heading_font_size_big: clamp(43px, 6vw, 120px);
+	--super_heading_font_size: clamp(43px, 6vw, 120px);
 
 	--heading_font_size_big: 30px;
 	--heading_font_size_medium: 25px;

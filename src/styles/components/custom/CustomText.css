@@ -11,7 +11,7 @@
 /* Super-heading styles */
 .custom-super-heading {
 	margin-bottom: 0;
-	font-size: var(--super_heading_font_size_big);
+	font-size: var(--super_heading_font_size);
 	color: var(--text_color);
 	text-align: left;
 	font-weight: bold;

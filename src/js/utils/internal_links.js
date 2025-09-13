@@ -10,6 +10,22 @@ export const CALENDAR_ICON_LINK =
 export const ROAD_ICON_LINK = "/icons/road_icon.svg";
 export const FUEL_ICON_LINK = "/icons/fuel_icon.svg";
 export const CAR_ICON_LINK = "/icons/car_icon.svg";
+export const CPU_ICON_LINK = "/icons/cpu_icon.svg";
+export const WRENCH_ICON_LINK = "/icons/wrench_icon.svg";
+export const CONTROL_PANEL_ICON_LINK =
+	"/icons/control_panel_icon.svg";
+export const DASHBOARD_ICON_LINK =
+	"/icons/dashboard_icon.svg";
+export const FILTER_ICON_LINK = "/icons/filter_icon.svg";
+export const AIR_ICON_LINK = "/icons/air_icon.svg";
+export const ENGINE_ICON_LINK = "/icons/engine_icon.svg";
+export const KEY_ICON_LINK = "/icons/key_icon.svg";
+export const DIAGNOSIS_ICON_LINK =
+	"/icons/diagnosis_icon.svg";
+export const ELECTRIC_ICON_LINK =
+	"/icons/electric_icon.svg";
+export const ANTI_THEFT_ICON_LINK =
+	"/icons/anti_theft_icon.svg";
 
 /**------------- Image links -------------**/
 export const DOTTED_BACKGROUND_IMAGE_LINK =
