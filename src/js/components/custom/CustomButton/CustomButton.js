@@ -8,15 +8,15 @@ import { Button } from "antd";
  * - Contact button: a button to contact the company.
  * - CTA button: a CTA button, which is more emphasized than a simple contact button.
  * Any button has predefined styles combined with customized styles (if any). Any button
- * may overwrite predefined style-handling with its customized ones, if needed.
+ * may overwrite predefined style with its customized ones, if needed.
  * The button may contain an icon (is specified).
  * @returns {JSX.Element}
  * @constructor
  * @param props
  */
 function CustomButton(props) {
-	// Combine predefined and customized style-handling to get
-	// the final custom button style-handling
+	// Combine predefined and customized style to get
+	// the final custom button style
 	const style = {
 		...props.style,
 	};

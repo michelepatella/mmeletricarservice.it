@@ -10,7 +10,7 @@
  */
 function SectionContainer({ children, id, custStyle }) {
 	// Use only the customized styles
-	// to get the final section container style-handling
+	// to get the final section container style
 	const style = {
 		...custStyle,
 	};

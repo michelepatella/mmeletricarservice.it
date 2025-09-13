@@ -34,7 +34,7 @@ export const handleChildrenStyle = (section, child) => {
 };
 
 /**
- * Method to handle the hamburger button's style-handling dynamically.
+ * Method to handle the hamburger button's style dynamically.
  * @param visible
  * @returns {{display: (string)}}
  */

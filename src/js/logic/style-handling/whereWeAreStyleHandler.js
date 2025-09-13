@@ -2,7 +2,7 @@ import { MAP_ICON_LINK } from "../../utils/internal_links";
 
 /**
  * Method to handle the Google Maps container
- * style-handling (when not available) dynamically.
+ * style (when not available) dynamically.
  * @returns {{
  * background: string,
  * opacity: string

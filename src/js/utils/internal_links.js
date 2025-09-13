@@ -5,10 +5,17 @@ export const FACEBOOK_ICON_LINK =
 	"/icons/facebook_icon.svg";
 export const PHONE_ICON_LINK = "/icons/phone_icon.svg";
 export const MAP_ICON_LINK = "/icons/map_icon.svg";
+export const CALENDAR_ICON_LINK =
+	"/icons/calendar_icon.svg";
+export const ROAD_ICON_LINK = "/icons/road_icon.svg";
+export const FUEL_ICON_LINK = "/icons/fuel_icon.svg";
+export const CAR_ICON_LINK = "/icons/car_icon.svg";
 
 /**------------- Image links -------------**/
 export const DOTTED_BACKGROUND_IMAGE_LINK =
 	"/images/dotted-background.avif";
+export const NO_USED_CAR_AVAILABLE_IMAGE_LINK =
+	"/images/no-used-car-available.avif";
 export const NO_USED_CAR_IMAGE_AVAILABLE_LINK =
 	"/images/no-used-car-image-available.avif";
 export const ABOUT_US_BACKGROUND_IMAGE_LINK =

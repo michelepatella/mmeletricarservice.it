@@ -1,6 +1,6 @@
 /**
- * Method to handle the style-handling of the info card text overview
- * style-handling dynamically.
+ * Method to handle the style of the info card text overview
+ * style dynamically.
  * @returns {{
  * marginBottom: string,
  * opacity: number,
@@ -19,7 +19,7 @@ export const handleTextOverviewStyle = (isTitleVisible) => {
 };
 
 /**
- * Method to handle the style-handling of the scroll label of the user cars
+ * Method to handle the style of the scroll label of the user cars
  * section dynamically.
  * @returns {{
  * textAlign: string,
@@ -36,7 +36,7 @@ export const handleScrollLabelStyle = () => {
 };
 
 /**
- * Method to handle the style-handling of the unavailable
+ * Method to handle the style of the unavailable
  * used car's description dynamically.
  * @returns {{
  * textAlign: string,
@@ -50,3 +50,20 @@ export const handleUnavailableUsedCarDescriptionStyle =
 			opacity: "var(--low_opacity)",
 		};
 	};
+
+/**
+ * Method to handle the style of the animated division
+ * containing the used cars dynamically.
+ * @param containerStyles
+ * @returns {{transform: *, opacity: *}}
+ */
+export const handleAnimatedDivStyle = (containerStyles) => {
+	return {
+		opacity: containerStyles.y.to(
+			(y) => 1 - parseInt(y) / 100
+		),
+		transform: containerStyles.y.to(
+			(y) => "translateY(" + y + ")"
+		),
+	};
+};

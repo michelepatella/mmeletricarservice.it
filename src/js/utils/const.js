@@ -1,7 +1,11 @@
 import {
+	CALENDAR_ICON_LINK,
+	CAR_ICON_LINK,
 	EMAIL_ICON_LINK,
 	FACEBOOK_ICON_LINK,
+	FUEL_ICON_LINK,
 	PHONE_ICON_LINK,
+	ROAD_ICON_LINK,
 } from "./internal_links";
 
 /**------------- Data -------------**/
@@ -187,22 +191,22 @@ export const USED_CAR_OVERVIEW = [
 	{
 		title: "Anno",
 		name: "year",
-		icon: "/icons/calendar_icon.svg",
+		icon: CALENDAR_ICON_LINK,
 	},
 	{
 		title: "Chilometraggio (km)",
 		name: "mileage",
-		icon: "/icons/road_icon.svg",
+		icon: ROAD_ICON_LINK,
 	},
 	{
 		title: "Carburante",
 		name: "fuel",
-		icon: "/icons/fuel_icon.svg",
+		icon: FUEL_ICON_LINK,
 	},
 	{
 		title: "Stato",
 		name: "status",
-		icon: "/icons/car_icon.svg",
+		icon: CAR_ICON_LINK,
 	},
 ];
 export const USED_CAR_ALL_INFO = [

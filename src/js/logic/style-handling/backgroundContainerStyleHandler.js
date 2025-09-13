@@ -1,5 +1,5 @@
 /**
- * Method to handle the background container style-handling dynamically.
+ * Method to handle the background container style dynamically.
  * @param image
  * @returns {{background: string}}
  */

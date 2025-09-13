@@ -15,7 +15,7 @@ function BackgroundContainer({
 	custStyle,
 }) {
 	// Combine predefined and customized styles
-	// to get the final background container style-handling
+	// to get the final background container style
 	const style = {
 		...handleContainerStyle(image),
 		...custStyle,

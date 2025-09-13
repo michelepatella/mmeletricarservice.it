@@ -1,4 +1,4 @@
-/* Definition of the font-face (normal style-handling) */
+/* Definition of the font-face (normal style) */
 @font-face {
 	font-family: "Poppins";
 	src: url("../public/font/Poppins-Regular.ttf")
@@ -7,7 +7,7 @@
 	font-style: normal;
 }
 
-/* Definition of the font-face (bold style-handling) */
+/* Definition of the font-face (bold style) */
 @font-face {
 	font-family: "Poppins";
 	src: url("../public/font/Poppins-Bold.ttf")
