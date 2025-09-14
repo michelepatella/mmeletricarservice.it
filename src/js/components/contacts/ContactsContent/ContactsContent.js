@@ -1,5 +1,9 @@
 import {
 	CONTACTS,
+	CONTACTS_BUTTONS_CONTAINER_CLASS_NAME, CONTACTS_BUTTONS_IS_CONTACT, CONTACTS_BUTTONS_IS_CTA,
+	CONTACTS_SECTION_ID,
+	CONTACTS_SECTION_TITLE_DISABLE_ANIMATION,
+	CONTACTS_SECTION_TITLE_TYPE,
 	CONTACTS_TITLE,
 } from "../../../utils/const";
 import { DOTTED_BACKGROUND_IMAGE_LINK } from "../../../utils/internal_links";
@@ -22,24 +26,24 @@ function ContactsContent() {
 		<BackgroundContainer
 			image={DOTTED_BACKGROUND_IMAGE_LINK}
 		>
-			<SectionContainer id="contatti">
-				{/* Contact section title */}
+			<SectionContainer id={CONTACTS_SECTION_ID}>
+				{/* Contacts section title */}
 				<CustomText
-					type="super-heading"
+					type={CONTACTS_SECTION_TITLE_TYPE}
 					text={CONTACTS_TITLE}
-					disableAnimation={true}
+					disableAnimation={CONTACTS_SECTION_TITLE_DISABLE_ANIMATION}
 				/>
 
 				{/* Custom block quote to highlight all contact buttons */}
 				<CustomBlockQuote>
 					{/* Contact buttons container (contains all the contact buttons) */}
-					<div className="contact-buttons-container">
+					<div className={CONTACTS_BUTTONS_CONTAINER_CLASS_NAME}>
 						{/* Add a button for each contact available */}
 						{CONTACTS?.map((contact) => (
 							<CustomButton
 								key={contact.value}
-								isContact={true}
-								isCta={false}
+								isContact={CONTACTS_BUTTONS_IS_CONTACT}
+								isCta={CONTACTS_BUTTONS_IS_CTA}
 								text={contact?.value}
 								icon={contact?.icon}
 								onClick={

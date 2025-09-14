@@ -2,6 +2,9 @@ import CookieConsent from "react-cookie-consent";
 import {
 	COOKIE_ACCEPT_BUTTON_TEXT,
 	COOKIE_CONSENT_BANNER_DESCRIPTION,
+	COOKIE_CONSENT_BANNER_ENABLE_DECLINE_BUTTON,
+	COOKIE_CONSENT_BANNER_LOCATION,
+	COOKIE_CONSENT_BANNER_VISIBLE,
 	COOKIE_DECLINE_BUTTON_TEXT,
 	COOKIE_EXPIRATION_DATE,
 	COOKIE_NAME,
@@ -35,11 +38,11 @@ function CookieConsentBanner(props) {
 				<CookieConsent
 					cookieName={COOKIE_NAME}
 					expires={COOKIE_EXPIRATION_DATE}
-					visible={true}
-					location="bottom"
+					visible={COOKIE_CONSENT_BANNER_VISIBLE}
+					location={COOKIE_CONSENT_BANNER_LOCATION}
 					buttonText={COOKIE_ACCEPT_BUTTON_TEXT}
 					declineButtonText={COOKIE_DECLINE_BUTTON_TEXT}
-					enableDeclineButton={true}
+					enableDeclineButton={COOKIE_CONSENT_BANNER_ENABLE_DECLINE_BUTTON}
 					onAccept={props.handleAcceptCookies}
 					onDecline={props.handleDeclineCookies}
 				>

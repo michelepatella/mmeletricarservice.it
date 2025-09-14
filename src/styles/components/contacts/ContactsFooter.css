@@ -7,41 +7,41 @@
 }
 
 /* Contacts Footer text styles */
-.contact-footer-text {
+.contacts-footer-text {
 	font-size: var(--caption_text_font_size);
 }
 
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
-	.contact-footer-text {
+	.contacts-footer-text {
 		margin-left: var(--section_margin_left_big);
 	}
 }
 
 /* ------ Medium screen landscape ------- */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
-	.contact-footer-text {
+	.contacts-footer-text {
 		margin-left: var(--section_margin_left_medium);
 	}
 }
 
 /* ------ Medium screen portrait ------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-	.contact-footer-text {
+	.contacts-footer-text {
 		margin-left: var(--section_margin_left_medium);
 	}
 }
 
 /* ------ Small screen portrait ------- */
 @media (max-width: 767px) and (orientation: portrait) {
-	.contact-footer-text {
+	.contacts-footer-text {
 		margin-left: var(--section_margin_left_small_portrait);
 	}
 }
 
 /* ------ Small screen landscape ------- */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
-	.contact-footer-text {
+	.contacts-footer-text {
 		margin-left: var(--section_margin_left_small_landscape);
 	}
 }

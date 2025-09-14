@@ -40,6 +40,9 @@ export const REA = "640711";
 /**------------- Cookies -------------**/
 export const COOKIE_EXPIRATION_DATE = 30;
 export const COOKIE_NAME = "cookieConsent";
+export const COOKIE_CONSENT_BANNER_VISIBLE = true;
+export const COOKIE_CONSENT_BANNER_LOCATION = "bottom";
+export const COOKIE_CONSENT_BANNER_ENABLE_DECLINE_BUTTON = true;
 export const COOKIE_CONSENT_BANNER_DESCRIPTION =
 	'Questo sito utilizza i cookie. Cliccando su "Accetta", acconsenti all\'uso dei cookie. Cliccando su "Rifiuta", rifiuti l\'uso dei cookie. Per maggiori informazioni consulta la nostra ';
 export const COOKIE_ACCEPT_BUTTON_TEXT =
@@ -317,6 +320,14 @@ export const GOOGLE_MAPS_LINK =
 	"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.143408468909!2d16.4256612!3d40.8248136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13387b9989c61785%3A0xaa80de53bd394020!2sMM%20Eletricar%20Service%20di%20Vacca%20%26%20Scalese%20snc%20%E2%80%A2%20Meccatronica%20%E2%80%A2%20Elettrauto!5e0!3m2!1sit!2sit!4v1735907615314!5m2!1sit!2sit";
 
 /**------------- "Contacts" texts -------------**/
+export const CONTACTS_SECTION_ID = "contatti";
+export const CONTACTS_SECTION_TITLE_TYPE = "super-heading";
+export const CONTACTS_SECTION_TITLE_DISABLE_ANIMATION = true;
+export const CONTACTS_BUTTONS_CONTAINER_CLASS_NAME = "contact-buttons-container";
+export const CONTACTS_BUTTONS_IS_CONTACT = true;
+export const CONTACTS_BUTTONS_IS_CTA	= false;
+export const CONTACTS_FOOTER_CLASS_NAME = "contacts-footer";
+export const CONTACTS_FOOTER_TEXT_CLASS_NAME = "contacts-footer-text";
 export const CONTACTS_TITLE = "Siamo qui per te.";
 export const CONTACTS = [
 	{

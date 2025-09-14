@@ -1,5 +1,5 @@
 import {
-	CONTACT_FOOTER_TEXT,
+	CONTACT_FOOTER_TEXT, CONTACTS_FOOTER_CLASS_NAME, CONTACTS_FOOTER_TEXT_CLASS_NAME,
 	COOKIE_POLICY_TEXT,
 	LEGAL_NOTES_TEXT,
 	PRIVACY_POLICY_TEXT,
@@ -21,9 +21,9 @@ import CustomLink from "../../custom/CustomLink";
  */
 function ContactsFooter() {
 	return (
-		<div className="contacts-footer">
+		<div className={CONTACTS_FOOTER_CLASS_NAME}>
 			{/* Footer text */}
-			<p className="contact-footer-text">
+			<p className={CONTACTS_FOOTER_TEXT_CLASS_NAME}>
 				{CONTACT_FOOTER_TEXT}
 				<br></br>
 				{/* Privacy policy link */}
