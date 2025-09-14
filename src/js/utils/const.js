@@ -84,33 +84,32 @@ export const MENU_ARIA_LABEL = "Menu";
 /**------------- "Home" texts -------------**/
 export const HOME_TITLE = "MM Eletricar Service.";
 export const HOME_SUBTITLE =
-	"<strong>Competenza. Qualità. Innovazione.</strong>";
+	"Passione. Competenza. Qualità.";
 
 /**------------- "About us" text -------------**/
 export const ABOUT_US_TITLE = "Chi siamo.";
 export const ABOUT_US_DESCRIPTION =
-	"Siamo Michele Vacca e Michele Scalese, fondatori di <strong>MM Eletricar Service</strong>, officina elettrauto a Gravina in Puglia (BA). " +
-	"Un progetto che unisce esperienza e passione per l’elettronica d’auto. <br></br>" +
-	"Ogni giorno ci impegniamo ad offrire competenza, trasparenza ed affidabilità a chi ama la propria auto " +
-	"e vuole affidarsi ad un elettrauto di fiducia a Gravina in Puglia (BA).";
+	"Siamo Michele Vacca e Michele Scalese, fondatori di <strong>MM Eletricar Service</strong>, officina elettrauto a Gravina in Puglia (BA)." +
+	" Un progetto nato dalla passione per l’elettronica d’auto e dall’esperienza nel settore. <br></br>" +
+	"Ogni giorno ci dedichiamo ad offrire servizi professionali, trasparenti ed affidabili a chi ama la propria auto e cerca un elettrauto di fiducia a Gravina in Puglia (BA).";
 
 /**------------- "Our values" texts -------------**/
-export const OUR_VALUES_TITLE = "I nostri valori.";
+export const OUR_VALUES_TITLE = "Ciò in cui crediamo.";
 export const OUR_VALUES_STEPS = [
-	{
-		title: "Cura dell'auto",
-		description:
-			"Ogni auto merita attenzione, perchè sappiamo quanto sia importante per i nostri clienti.",
-	},
 	{
 		title: "Impegno",
 		description:
-			"Ci impegniamo a soddisfare ogni esigenza e superare le aspettative.",
+			"Ci dedichiamo a soddisfare ogni esigenza, andando oltre le aspettative.",
+	},
+	{
+		title: "Eccellenza",
+		description:
+			"Garantiamo risultati di alta qualità in ogni intervento, con passione e competenza.",
 	},
 	{
 		title: "Fiducia",
 		description:
-			"Agiamo con trasparenza e serietà, costruendo relazioni solide.",
+			"Agiamo con trasparenza e serietà, costruendo relazioni solide e durature.",
 	},
 ];
 
@@ -131,59 +130,59 @@ export const SERVICES_TITLE = [
 ];
 const ALL_SERVICES_DATA = [
 	[
-		"Manutenzione centralina",
-		"Controllo ed aggiornamento della centralina elettronica per un funzionamento ottimale del veicolo.",
+		"Manutenzione Centralina",
+		"Controllo ed aggiornamento della centralina elettronica per garantire il corretto funzionamento del veicolo.",
 		CPU_ICON_LINK,
 	],
 	[
-		"Riparazione parabrezza",
-		"Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.",
-		WRENCH_ICON_LINK,
+		"Diagnosi Elettronica",
+		"Individuazione e risoluzione di guasti elettronici per un’analisi precisa del veicolo.",
+		DIAGNOSIS_ICON_LINK,
 	],
 	[
-		"Pannello di controllo",
-		"Riparazione e calibrazione di strumenti digitali ed analogici del cruscotto.",
-		CONTROL_PANEL_ICON_LINK,
-	],
-	[
-		"Riparazione conta km",
-		"Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.",
-		DASHBOARD_ICON_LINK,
-	],
-	[
-		"Ripristino EGR e DPF",
-		"Pulizia o sostituzione di valvola EGR e filtro antiparticolato per ridurre emissioni e consumi.",
-		FILTER_ICON_LINK,
-	],
-	[
-		"Ricarica aria condizionata",
-		"Ripristino del gas refrigerante per garantire un climatizzatore efficiente ed aria fresca.",
-		AIR_ICON_LINK,
-	],
-	[
-		"Diagnosi iniezione",
+		"Diagnosi Iniezione",
 		"Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.",
 		ENGINE_ICON_LINK,
 	],
 	[
-		"Duplicazione chiavi e telecomandi",
-		"Realizzazione di copie di chiavi e telecomandi per ogni tipo di veicolo.",
+		"Ripristino EGR e DPF",
+		"Pulizia o sostituzione della valvola EGR e del filtro antiparticolato per ridurre emissioni e consumi.",
+		FILTER_ICON_LINK,
+	],
+	[
+		"Riparazione Contachilometri",
+		"Sistemazione di contachilometri difettosi o malfunzionanti per un corretto monitoraggio del veicolo.",
+		DASHBOARD_ICON_LINK,
+	],
+	[
+		"Pannello di Controllo",
+		"Riparazione e calibrazione degli strumenti digitali e analogici del cruscotto.",
+		CONTROL_PANEL_ICON_LINK,
+	],
+	[
+		"Ricarica Aria Condizionata",
+		"Ripristino del gas refrigerante per garantire un climatizzatore efficiente ed aria fresca.",
+		AIR_ICON_LINK,
+	],
+	[
+		"Riparazione Parabrezza",
+		"Sistemazione di crepe o scheggiature per una visibilità sicura e conforme alle norme.",
+		WRENCH_ICON_LINK,
+	],
+	[
+		"Duplicazione Chiavi e Telecomandi",
+		"Realizzazione di copie di chiavi e telecomandi per tutti i tipi di veicolo.",
 		KEY_ICON_LINK,
 	],
 	[
-		"Diagnosi elettronica",
-		"Individuazione e risoluzione di guasti elettronici per un'analisi precisa del tuo veicolo.",
-		DIAGNOSIS_ICON_LINK,
-	],
-	[
-		"Veicoli ibridi ed elettrici",
-		"Manutenzione specializzata per veicoli ibridi ed elettrici.",
-		ELECTRIC_ICON_LINK,
-	],
-	[
-		"Installazione antifurti",
-		"Soluzioni antifurto satellitari Igla e meccanici Defender per la protezione del tuo veicolo.",
+		"Installazione Antifurti",
+		"Soluzioni antifurto satellitari Igla e meccanici Defender per proteggere il veicolo.",
 		ANTI_THEFT_ICON_LINK,
+	],
+	[
+		"Manutenzione Veicoli Ibridi ed Elettrici",
+		"Servizi specializzati per la manutenzione di veicoli ibridi ed elettrici.",
+		ELECTRIC_ICON_LINK,
 	],
 ];
 export const ALL_SERVICES = ALL_SERVICES_DATA.map(
@@ -308,7 +307,7 @@ export const BACK_BUTTON_LABEL = "Indietro";
 
 /**------------- "Where we are" texts -------------**/
 export const WHERE_WE_ARE_TITLE = "Dove trovarci.";
-export const WORKING_HOURS_TITLE = "Orari d'apertura";
+export const WORKING_HOURS_TITLE = "Orari d'apertura.";
 export const WORKING_HOURS_DESCRIPTION =
 	"- <strong>Lun-Ven</strong>: 08:30-13:00 / 15:00-19:00 <br>" +
 	"- <strong>Sab</strong>: 08:30-13:00";

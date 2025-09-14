@@ -69,6 +69,9 @@
 		padding-bottom: var(
 			--used_car_drawer_header_padding_bottom_big
 		) !important;
+		box-shadow: var(
+			--used_car_drawer_flex_horizontal_vertical_box_shadow
+		);
 	}
 }
 

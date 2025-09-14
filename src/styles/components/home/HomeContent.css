@@ -36,6 +36,7 @@
 
 /* Home Subtitle styles */
 .home-subtitle {
+	font-family: "Dancing Script";
 	margin-top: var(--home_subtitle_margin_top);
 	color: var(--text_color);
 	opacity: 0;
@@ -50,7 +51,9 @@
 	}
 
 	.home-subtitle {
-		font-size: var(--home_subtitle_font_size_big);
+		font-size: calc(
+			var(--home_subtitle_font_size_big) * 1.5
+		);
 	}
 
 	.home-content {
@@ -65,7 +68,9 @@
 	}
 
 	.home-subtitle {
-		font-size: var(--home_subtitle_font_size_medium);
+		font-size: calc(
+			var(--home_subtitle_font_size_medium) * 2.4
+		);
 	}
 
 	.home-content {
@@ -80,7 +85,9 @@
 	}
 
 	.home-subtitle {
-		font-size: var(--home_subtitle_font_size_medium);
+		font-size: calc(
+			var(--home_subtitle_font_size_medium) * 2.4
+		);
 	}
 
 	.home-content {
@@ -95,7 +102,9 @@
 	}
 
 	.home-subtitle {
-		font-size: var(--home_subtitle_font_size_small);
+		font-size: calc(
+			var(--home_subtitle_font_size_small) * 1.5
+		);
 	}
 
 	.home-content {
@@ -110,7 +119,9 @@
 	}
 
 	.home-subtitle {
-		font-size: var(--home_subtitle_font_size_small);
+		font-size: calc(
+			var(--home_subtitle_font_size_small) * 1.8
+		);
 	}
 
 	.home-content {
