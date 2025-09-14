@@ -4,6 +4,12 @@ import {
 	CloseOutlined,
 	MenuOutlined,
 } from "@ant-design/icons";
+import { useMenu } from "../../../hooks/useMenu";
+import {
+	handleParentStyle,
+	handleChildrenStyle,
+	handleHamburgerButtonStyle,
+} from "../../../styleLogic/menuStyleHandler";
 import {
 	HAMBURGER_BUTTON_CLASS_NAME,
 	HAMBURGER_BUTTON_SHAPE,
@@ -12,13 +18,7 @@ import {
 	MENU_SMALL_CLOSE_OUTLINE_CLASS_NAME,
 	MENU_SMALL_CONTAINER_CLASS_NAME,
 	MENU_SMALL_DRAWER_PLACEMENT,
-} from "../../../utils/const";
-import { useMenu } from "../../../hooks/useMenu";
-import {
-	handleParentStyle,
-	handleChildrenStyle,
-	handleHamburgerButtonStyle,
-} from "../../../styleLogic/menuStyleHandler";
+} from "../../../utils/const/components/menuConst";
 
 /**
  * This component represents the Menu for small screens (e.g., smartphone).

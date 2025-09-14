@@ -1,13 +1,13 @@
 import { Flex } from "antd";
+import { handleDescriptionStyle } from "../../styleLogic/infoCardStyleHandler";
+import CustomText from "../CustomText/CustomText";
+import { CUSTOM_TEXT_TYPES } from "../../utils/const/components/customTextConst";
 import {
-	CUSTOM_TEXT_TYPES,
 	INFO_CARD_CLASS_NAME,
 	INFO_CARD_FLEX_CLASS_NAME,
 	INFO_CARD_ICON_ALT,
 	INFO_CARD_ICON_CLASS_NAME,
-} from "../../utils/const";
-import { handleDescriptionStyle } from "../../styleLogic/infoCardStyleHandler";
-import CustomText from "../CustomText/CustomText";
+} from "../../utils/const/components/infoCardConst";
 
 /**
  * This component represents an info card. It is composed by

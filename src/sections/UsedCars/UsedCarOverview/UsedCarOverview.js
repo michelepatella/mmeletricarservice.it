@@ -1,13 +1,13 @@
 import { Flex } from "antd";
+import { handleTextOverviewStyle } from "../../../styleLogic/usedCarsStyleHandler";
+import CustomText from "../../../components/CustomText/CustomText";
+import { CUSTOM_TEXT_TYPES } from "../../../utils/const/components/customTextConst";
 import {
-	CUSTOM_TEXT_TYPES,
-	USED_CAR_OVERVIEW,
+	ALL_USED_CAR_OVERVIEW,
 	USED_CARS_OVERVIEW_CONTAINER_CLASS_NAME,
 	USED_CARS_OVERVIEW_CONTAINER_GAP,
 	USED_CARS_OVERVIEW_ICON_ALT,
-} from "../../../utils/const";
-import { handleTextOverviewStyle } from "../../../styleLogic/usedCarsStyleHandler";
-import CustomText from "../../../components/CustomText/CustomText";
+} from "../../../utils/const/sections/usedCarsConst";
 
 /**
  * This component includes all used car overview information:
@@ -22,7 +22,7 @@ import CustomText from "../../../components/CustomText/CustomText";
 function UsedCarOverview(props) {
 	return (
 		<>
-			{USED_CAR_OVERVIEW?.map((info, index) => (
+			{ALL_USED_CAR_OVERVIEW?.map((info, index) => (
 				// Add each used car overview information
 				<div
 					key={info.name + "-" + index}

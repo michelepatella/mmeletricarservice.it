@@ -1,4 +1,4 @@
-import { SECTIONS_WRAPPER_CLASS_NAME } from "../../utils/const";
+import { SECTIONS_WRAPPER_CLASS_NAME } from "../../utils/const/components/sectionsWrapperConst";
 
 /**
  * This component represents the wrapper for all the

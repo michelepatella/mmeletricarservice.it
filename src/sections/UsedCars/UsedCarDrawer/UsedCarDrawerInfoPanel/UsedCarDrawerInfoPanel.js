@@ -1,18 +1,18 @@
 import React from "react";
-import {
-	CONTACTS,
-	CTA_BUTTON_TEXT,
-	CUSTOM_TEXT_TYPES,
-	PHONE,
-	PRICE_CURRENCY,
-	PRICE_LOCALES,
-	PRICE_STYLE,
-} from "../../../../utils/const";
 import { contactClickHandler } from "../../../../logic/contactButtonHandler";
 import CustomText from "../../../../components/CustomText/CustomText";
 import UsedCarOverview from "../../UsedCarOverview/UsedCarOverview";
 import CustomButton from "../../../../components/CustomButton/CustomButton";
 import UsedCarDrawerCollapse from "../UsedCarDrawerCollapse/UsedCarDrawerCollapse";
+import { CUSTOM_TEXT_TYPES } from "../../../../utils/const/components/customTextConst";
+import {
+	PRICE_CURRENCY,
+	PRICE_LOCALES,
+	PRICE_STYLE,
+	USED_CARS_DRAWER_CTA_BUTTON_TEXT,
+} from "../../../../utils/const/sections/usedCarsConst";
+import { ALL_CONTACTS } from "../../../../utils/const/sections/contactsConst";
+import { PHONE } from "../../../../utils/const/other/companyConst";
 
 /**
  * This component represents the info panel shown in the
@@ -59,15 +59,15 @@ function UsedCarDrawerInfoPanel(props) {
 			<CustomButton
 				isContact
 				isCta
-				text={CTA_BUTTON_TEXT}
+				text={USED_CARS_DRAWER_CTA_BUTTON_TEXT}
 				icon={
-					CONTACTS.find(
+					ALL_CONTACTS.find(
 						(contact) => contact?.value === PHONE
 					)?.icon
 				}
 				onClick={
 					contactClickHandler[
-						CONTACTS.find(
+						ALL_CONTACTS.find(
 							(contact) => contact?.value === PHONE
 						)?.value
 					]

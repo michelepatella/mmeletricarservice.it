@@ -1,7 +1,7 @@
 import {
 	CUSTOM_ICON_BUTTON_ALT,
 	CUSTOM_ICON_BUTTON_CLASS_NAME,
-} from "../../utils/const";
+} from "../../utils/const/components/customIconButtonConst";
 
 /**
  * This component defines a custom icon button, which

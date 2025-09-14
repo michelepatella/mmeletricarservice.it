@@ -1,11 +1,9 @@
 import React from "react";
 import { LeftOutlined } from "@ant-design/icons";
-import {
-	BACK_BUTTON_LABEL,
-	CUSTOM_BACK_BUTTON_CLASS_NAME,
-	CUSTOM_TEXT_TYPES,
-} from "../../utils/const";
 import CustomText from "../CustomText/CustomText";
+import { CUSTOM_BACK_BUTTON_CLASS_NAME } from "../../utils/const/components/customBackButtonConst";
+import { CUSTOM_TEXT_TYPES } from "../../utils/const/components/customTextConst";
+import { USED_CARS_DRAWER_BACK_BUTTON_LABEL } from "../../utils/const/sections/usedCarsConst";
 
 /**
  * This component defines a custom back
@@ -24,7 +22,7 @@ function CustomBackButton() {
 			<CustomText
 				type={CUSTOM_TEXT_TYPES.BODY}
 				disableAnimation
-				text={BACK_BUTTON_LABEL}
+				text={USED_CARS_DRAWER_BACK_BUTTON_LABEL}
 			/>
 		</span>
 	);

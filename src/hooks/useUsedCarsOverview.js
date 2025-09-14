@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import {
-	STALE_TIME,
-	USED_CARS_OVERVIEW_KEY,
-} from "../utils/const";
 import { USED_CARS_OVERVIEW_ENDPOINT } from "../utils/internalLinks";
 import { fetchUsedCarData } from "../utils/dataFetcher";
+import {
+	DATA_STALE_TIME,
+	USED_CARS_OVERVIEW_API_KEY,
+} from "../utils/const/other/dataFetchingCachingConst";
 
 /**
  * Custom hook to fetch the overview list of used cars, by
@@ -20,10 +20,10 @@ export const useUsedCarsOverview = () => {
 	// useQuery to fetch all used
 	// car overview information
 	const { data, isLoading, isError } = useQuery({
-		queryKey: [USED_CARS_OVERVIEW_KEY],
+		queryKey: [USED_CARS_OVERVIEW_API_KEY],
 		queryFn: () =>
 			fetchUsedCarData(USED_CARS_OVERVIEW_ENDPOINT),
-		staleTime: STALE_TIME,
+		staleTime: DATA_STALE_TIME,
 	});
 
 	// Check if any error

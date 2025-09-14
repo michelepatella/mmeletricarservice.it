@@ -1,14 +1,14 @@
 import React from "react";
-import {
-	ABOUT_US_DESCRIPTION,
-	ABOUT_US_SECTION_ID,
-	ABOUT_US_TITLE,
-	CUSTOM_TEXT_TYPES,
-} from "../../utils/const";
 import { ABOUT_US_BACKGROUND_IMAGE_LINK } from "../../utils/internalLinks";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import BackgroundContainer from "../../components/BackgroundContainer/BackgroundContainer";
 import CustomText from "../../components/CustomText/CustomText";
+import { CUSTOM_TEXT_TYPES } from "../../utils/const/components/customTextConst";
+import {
+	ABOUT_US_DESCRIPTION,
+	ABOUT_US_SECTION_ID,
+	ABOUT_US_TITLE,
+} from "../../utils/const/sections/aboutUsConst";
 
 /**
  * This component represents the About us sections,

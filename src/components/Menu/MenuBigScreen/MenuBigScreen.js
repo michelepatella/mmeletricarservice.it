@@ -1,13 +1,13 @@
 import { Anchor } from "antd";
 import { motion } from "framer-motion";
+import { useMenu } from "../../../hooks/useMenu";
 import {
 	MENU_ARIA_LABEL,
 	MENU_BIG_CONTAINER_CLASS_NAME,
 	MENU_BIG_INITIAL_OPACITY,
 	MENU_BIG_INITIAL_X_POSITION,
 	MENU_BIG_MOTION_SECTION_CLASS_NAME,
-} from "../../../utils/const";
-import { useMenu } from "../../../hooks/useMenu";
+} from "../../../utils/const/components/menuConst";
 
 /**
  * This component represents the anchor Menu

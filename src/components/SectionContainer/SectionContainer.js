@@ -1,4 +1,4 @@
-import { SECTION_CONTAINER_CLASS_NAME } from "../../utils/const";
+import { SECTION_CONTAINER_CLASS_NAME } from "../../utils/const/components/sectionContainerConst";
 
 /**
  * This component represents the section container.

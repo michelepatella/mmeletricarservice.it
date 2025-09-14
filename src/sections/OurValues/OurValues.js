@@ -1,17 +1,17 @@
 import React from "react";
 import { Steps } from "antd";
-import {
-	OUR_VALUES_TITLE,
-	OUR_VALUES_STEPS,
-	OUR_VALUES_SECTION_ID,
-	CUSTOM_TEXT_TYPES,
-	OUR_VALUES_STEPS_CLASS_NAME,
-	OUR_VALUES_STEPS_DIRECTION,
-} from "../../utils/const";
 import { DOTTED_BACKGROUND_IMAGE_LINK } from "../../utils/internalLinks";
 import BackgroundContainer from "../../components/BackgroundContainer/BackgroundContainer";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import CustomText from "../../components/CustomText/CustomText";
+import { CUSTOM_TEXT_TYPES } from "../../utils/const/components/customTextConst";
+import {
+	OUR_VALUES_SECTION_ID,
+	OUR_VALUES_ALL_STEPS,
+	OUR_VALUES_STEPS_CLASS_NAME,
+	OUR_VALUES_STEPS_DIRECTION,
+	OUR_VALUES_TITLE,
+} from "../../utils/const/sections/ourValuesConst";
 
 /**
  * This component represents Our values section,
@@ -37,8 +37,8 @@ function OurValues() {
 					className={OUR_VALUES_STEPS_CLASS_NAME}
 					direction={OUR_VALUES_STEPS_DIRECTION}
 					progressDot
-					current={OUR_VALUES_STEPS.length}
-					items={OUR_VALUES_STEPS?.map((step) => ({
+					current={OUR_VALUES_ALL_STEPS.length}
+					items={OUR_VALUES_ALL_STEPS?.map((step) => ({
 						// Title of current step
 						// (that's a company value's title)
 						title: (

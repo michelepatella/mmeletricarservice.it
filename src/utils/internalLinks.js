@@ -53,5 +53,5 @@ export const USED_CARS_OVERVIEW_ENDPOINT =
 export const USED_CAR_INFO_ENDPOINT =
 	"used-car-info/usedCarInfo";
 
-/**------------- Internal links -------------**/
+/**------------- Internal Routes -------------**/
 export const USED_CAR_DRAWER_URL = "used-cars";

@@ -1,17 +1,17 @@
 import {
-	CONTACT_FOOTER_TEXT,
-	CONTACTS_FOOTER_CLASS_NAME,
-	CONTACTS_FOOTER_TEXT_CLASS_NAME,
-	COOKIE_POLICY_TEXT,
-	LEGAL_NOTES_TEXT,
-	PRIVACY_POLICY_TEXT,
-} from "../../../utils/const";
-import {
 	COOKIE_POLICY_LINK,
 	LEGAL_NOTES_LINK,
 	PRIVACY_POLICY_LINK,
 } from "../../../utils/internalLinks";
 import CustomLink from "../../../components/CustomLink/CustomLink";
+import {
+	CONTACTS_FOOTER_TEXT,
+	CONTACTS_FOOTER_CLASS_NAME,
+	CONTACTS_FOOTER_TEXT_CLASS_NAME,
+	COOKIE_POLICY_TEXT,
+	LEGAL_NOTES_TEXT,
+	PRIVACY_POLICY_TEXT,
+} from "../../../utils/const/sections/contactsConst";
 
 /**
  * This component represents the footer
@@ -26,7 +26,7 @@ function ContactsFooter() {
 		<div className={CONTACTS_FOOTER_CLASS_NAME}>
 			{/* Footer text */}
 			<p className={CONTACTS_FOOTER_TEXT_CLASS_NAME}>
-				{CONTACT_FOOTER_TEXT}
+				{CONTACTS_FOOTER_TEXT}
 				<br></br>
 				{/* Privacy policy link */}
 				<CustomLink

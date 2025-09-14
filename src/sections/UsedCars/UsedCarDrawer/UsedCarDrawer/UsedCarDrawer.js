@@ -1,13 +1,5 @@
 import { Drawer, Flex } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
-import {
-	LOADING_OUTLINED_CLASS_NAME,
-	USED_CARS_DRAWER_CLASS_NAME,
-	USED_CARS_DRAWER_HORIZONTAL_FLEX_CLASS_NAME,
-	USED_CARS_DRAWER_HORIZONTAL_FLEX_WIDTH,
-	USED_CARS_DRAWER_VERTICAL_FLEX_CLASS_NAME,
-	USED_CARS_DRAWER_VERTICAL_FLEX_WIDTH,
-} from "../../../../utils/const";
 import { useUsedCarInfo } from "../../../../hooks/useUsedCarInfo";
 import { useDrawerBackButtonHandler } from "../../../../hooks/useDrawerBackButton";
 import { onUsedCarDrawerClose } from "../../../../logic/usedCarDrawerHandler";
@@ -15,6 +7,14 @@ import { handleLoadingOutlinedStyle } from "../../../../styleLogic/loadingOutlin
 import UsedCarDrawerCarousel from "../UsedCarDrawerCarousel/UsedCarDrawerCarousel";
 import UsedCarDrawerInfoPanel from "../UsedCarDrawerInfoPanel/UsedCarDrawerInfoPanel";
 import CustomBackButton from "../../../../components/CustomBackButton/CustomBackButton";
+import {
+	USED_CARS_DRAWER_CLASS_NAME,
+	USED_CARS_DRAWER_HORIZONTAL_FLEX_CLASS_NAME,
+	USED_CARS_DRAWER_HORIZONTAL_FLEX_WIDTH,
+	USED_CARS_DRAWER_VERTICAL_FLEX_CLASS_NAME,
+	USED_CARS_DRAWER_VERTICAL_FLEX_WIDTH,
+} from "../../../../utils/const/sections/usedCarsConst";
+import { LOADING_OUTLINED_CLASS_NAME } from "../../../../utils/const/components/loadingOutlinedConst";
 
 /**
  * This component represents the used car drawer,

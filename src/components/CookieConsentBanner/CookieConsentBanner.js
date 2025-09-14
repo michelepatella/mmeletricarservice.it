@@ -1,19 +1,21 @@
 import CookieConsent from "react-cookie-consent";
 import {
-	COOKIE_ACCEPT_BUTTON_TEXT,
-	COOKIE_CONSENT_BANNER_DESCRIPTION,
-	COOKIE_CONSENT_BANNER_LOCATION,
-	COOKIE_DECLINE_BUTTON_TEXT,
-	COOKIE_EXPIRATION_DATE,
-	COOKIE_NAME,
-	COOKIE_POLICY_TEXT,
-	PRIVACY_POLICY_TEXT,
-} from "../../utils/const";
-import {
 	COOKIE_POLICY_LINK,
 	PRIVACY_POLICY_LINK,
 } from "../../utils/internalLinks";
 import CustomLink from "../CustomLink/CustomLink";
+import {
+	COOKIE_CONSENT_BANNER_ACCEPT_BUTTON_TEXT,
+	COOKIE_CONSENT_BANNER_DESCRIPTION,
+	COOKIE_CONSENT_BANNER_LOCATION,
+	COOKIE_CONSENT_BANNER_DECLINE_BUTTON_TEXT,
+	COOKIE_EXPIRATION_DATE,
+	COOKIE_NAME,
+} from "../../utils/const/components/cookieConst";
+import {
+	COOKIE_POLICY_TEXT,
+	PRIVACY_POLICY_TEXT,
+} from "../../utils/const/sections/contactsConst";
 
 /**
  * This component represents the cookie
@@ -38,8 +40,12 @@ function CookieConsentBanner(props) {
 					expires={COOKIE_EXPIRATION_DATE}
 					visible
 					location={COOKIE_CONSENT_BANNER_LOCATION}
-					buttonText={COOKIE_ACCEPT_BUTTON_TEXT}
-					declineButtonText={COOKIE_DECLINE_BUTTON_TEXT}
+					buttonText={
+						COOKIE_CONSENT_BANNER_ACCEPT_BUTTON_TEXT
+					}
+					declineButtonText={
+						COOKIE_CONSENT_BANNER_DECLINE_BUTTON_TEXT
+					}
 					enableDeclineButton
 					onAccept={props.handleAcceptCookies}
 					onDecline={props.handleDeclineCookies}

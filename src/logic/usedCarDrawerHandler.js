@@ -2,7 +2,7 @@ import { USED_CAR_DRAWER_URL } from "../utils/internalLinks";
 import {
 	USED_CARS_DRAWER_OPEN_CLASS_NAME,
 	USED_CARS_DRAWER_WIDTH,
-} from "../utils/const";
+} from "../utils/const/sections/usedCarsConst";
 
 let previousScrollY = 0;
 

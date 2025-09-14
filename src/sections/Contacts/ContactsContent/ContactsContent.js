@@ -1,10 +1,3 @@
-import {
-	CONTACTS,
-	CONTACTS_BUTTONS_CONTAINER_CLASS_NAME,
-	CONTACTS_SECTION_ID,
-	CONTACTS_TITLE,
-	CUSTOM_TEXT_TYPES,
-} from "../../../utils/const";
 import { DOTTED_BACKGROUND_IMAGE_LINK } from "../../../utils/internalLinks";
 import { contactClickHandler } from "../../../logic/contactButtonHandler";
 import CustomButton from "../../../components/CustomButton/CustomButton";
@@ -12,6 +5,13 @@ import CustomText from "../../../components/CustomText/CustomText";
 import CustomBlockQuote from "../../../components/CustomBlockQuote/CustomBlockQuote";
 import SectionContainer from "../../../components/SectionContainer/SectionContainer";
 import BackgroundContainer from "../../../components/BackgroundContainer/BackgroundContainer";
+import { CUSTOM_TEXT_TYPES } from "../../../utils/const/components/customTextConst";
+import {
+	ALL_CONTACTS,
+	CONTACTS_BUTTONS_CONTAINER_CLASS_NAME,
+	CONTACTS_SECTION_ID,
+	CONTACTS_TITLE,
+} from "../../../utils/const/sections/contactsConst";
 
 /**
  * This component represent the content
@@ -42,7 +42,7 @@ function ContactsContent() {
 						}
 					>
 						{/* Add a button for each contact available */}
-						{CONTACTS?.map((contact) => (
+						{ALL_CONTACTS?.map((contact) => (
 							<CustomButton
 								key={contact.value}
 								isContact

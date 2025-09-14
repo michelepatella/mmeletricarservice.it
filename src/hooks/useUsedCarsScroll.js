@@ -3,7 +3,7 @@ import {
 	USED_CARS_ANIMATION_SCROLL_THRESHOLD,
 	USED_CARS_ANIMATION_Y_FINAL_POSITION,
 	USED_CARS_ANIMATION_Y_START_POSITION,
-} from "../utils/const";
+} from "../utils/const/sections/usedCarsConst";
 
 /**
  * Custom hook to generate used car cards animation

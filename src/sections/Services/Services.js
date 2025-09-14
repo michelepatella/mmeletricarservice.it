@@ -1,15 +1,5 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
-import {
-	SERVICES_TITLE,
-	ALL_SERVICES,
-	HORIZONTAL_SCROLL_LABEL,
-	SERVICES_TITLE_ANIMATION_TRIGGER_ONCE,
-	SERVICES_TITLE_ANIMATION_THRESHOLD,
-	SERVICES_SECTION_ID,
-	CUSTOM_TEXT_TYPES,
-	SERVICES_CONTAINER_CLASS_NAME,
-} from "../../utils/const";
 import { SERVICES_BACKGROUND_IMAGE_LINK } from "../../utils/internalLinks";
 import { useServiceTitleAnimation } from "../../hooks/useServiceTitleAnimation";
 import {
@@ -21,6 +11,16 @@ import BackgroundContainer from "../../components/BackgroundContainer/Background
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import InfoCard from "../../components/InfoCard/InfoCard";
 import CustomText from "../../components/CustomText/CustomText";
+import { CUSTOM_TEXT_TYPES } from "../../utils/const/components/customTextConst";
+import {
+	ALL_SERVICES,
+	SERVICES_CONTAINER_CLASS_NAME,
+	SERVICES_SECTION_ID,
+	SERVICES_TITLE,
+	SERVICES_TITLE_ANIMATION_THRESHOLD,
+	SERVICES_TITLE_ANIMATION_TRIGGER_ONCE,
+} from "../../utils/const/sections/servicesConst";
+import { HORIZONTAL_SCROLL_LABEL } from "../../utils/const/sections/generalSectionConst";
 
 /**
  * This section represents Services section. The

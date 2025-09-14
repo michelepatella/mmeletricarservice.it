@@ -4,8 +4,8 @@ import {
 	MENU_BIG_ANIMATION_DURATION,
 	MENU_BIG_FINAL_OPACITY,
 	MENU_BIG_FINAL_X_POSITION,
-	SECTIONS,
-} from "../utils/const";
+} from "../utils/const/components/menuConst";
+import { ALL_SECTIONS } from "../utils/const/sections/generalSectionConst";
 
 /**
  * Helper method to check element visibility
@@ -54,7 +54,7 @@ const getCurrentSection = () => {
 
 	// Loop through each section to
 	// determine which is in view
-	SECTIONS?.forEach((sec) => {
+	ALL_SECTIONS?.forEach((sec) => {
 		// Check for sections
 		const result = checkAndUpdateSection(
 			sec?.id,
@@ -136,7 +136,9 @@ export const useMenu = () => {
 
 	// State to track the current active section
 	// (the first one by default)
-	const [section, setSection] = useState(SECTIONS[0].id);
+	const [section, setSection] = useState(
+		ALL_SECTIONS[0].id
+	);
 
 	/**
 	 * Method to toggle the Menu visibility
@@ -184,7 +186,7 @@ export const useMenu = () => {
 	 * Method to generate Menu items dynamically.
 	 * @type {unknown[] | undefined}
 	 */
-	const menuItems = SECTIONS?.map((section, index) => ({
+	const menuItems = ALL_SECTIONS?.map((section, index) => ({
 		key: index + 1,
 		href: "#" + section?.id,
 		title: section?.title,

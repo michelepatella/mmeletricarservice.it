@@ -1,15 +1,15 @@
 import {
+	EMAIL_ICON_LINK,
+	FACEBOOK_ICON_LINK,
+	PHONE_ICON_LINK,
+} from "../utils/internalLinks";
+import {
 	EMAIL,
 	EMAIL_PEC,
 	FACEBOOK_LINK,
 	FACEBOOK_PAGE_NAME,
 	PHONE,
-} from "../utils/const";
-import {
-	EMAIL_ICON_LINK,
-	FACEBOOK_ICON_LINK,
-	PHONE_ICON_LINK,
-} from "../utils/internalLinks";
+} from "../utils/const/other/companyConst";
 
 /**
  * Method to call when the email button is clicked.

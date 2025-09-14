@@ -1,17 +1,4 @@
 import React from "react";
-import {
-	WHERE_WE_ARE_TITLE,
-	SITE,
-	WORKING_HOURS_TITLE,
-	WORKING_HOURS_DESCRIPTION,
-	GOOGLE_MAPS_LINK,
-	GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
-	WHERE_WE_ARE_SECTION_ID,
-	CUSTOM_TEXT_TYPES,
-	GOOGLE_MAPS_CONTAINER_CLASS_NAME,
-	GOOGLE_MAPS_IFRAME_CLASS_NAME,
-	GOOGLE_MAPS_IFRAME_TITLE,
-} from "../../utils/const";
 import { DOTTED_BACKGROUND_IMAGE_LINK } from "../../utils/internalLinks";
 import {
 	handleGoogleMapsContainerStyle,
@@ -21,6 +8,19 @@ import SectionContainer from "../../components/SectionContainer/SectionContainer
 import BackgroundContainer from "../../components/BackgroundContainer/BackgroundContainer";
 import CustomText from "../../components/CustomText/CustomText";
 import CustomBlockQuote from "../../components/CustomBlockQuote/CustomBlockQuote";
+import { CUSTOM_TEXT_TYPES } from "../../utils/const/components/customTextConst";
+import {
+	GOOGLE_MAPS_CONTAINER_CLASS_NAME,
+	GOOGLE_MAPS_IFRAME_CLASS_NAME,
+	GOOGLE_MAPS_IFRAME_TITLE,
+	GOOGLE_MAPS_LINK,
+	GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
+	WHERE_WE_ARE_SECTION_ID,
+	WHERE_WE_ARE_TITLE,
+	WORKING_HOURS_DESCRIPTION,
+	WORKING_HOURS_TITLE,
+} from "../../utils/const/sections/whereWeAreConst";
+import { SITE } from "../../utils/const/other/companyConst";
 
 /**
  * This component represents the Where we are section.

@@ -1,12 +1,12 @@
 import { Layout } from "antd";
+import ContactsContent from "../ContactsContent/ContactsContent";
+import ContactsFooter from "../ContactsFooter/ContactsFooter";
 import {
 	CONTACTS_CONTENT_CLASS_NAME,
 	CONTACTS_FOOTER_CLASS_NAME,
 	CONTACTS_LAYOUT_CLASS_NAME,
 	CONTACTS_SECTION_ID,
-} from "../../../utils/const";
-import ContactsContent from "../ContactsContent/ContactsContent";
-import ContactsFooter from "../ContactsFooter/ContactsFooter";
+} from "../../../utils/const/sections/contactsConst";
 
 // Contact Layout definition:
 // it's composed by a content and footer

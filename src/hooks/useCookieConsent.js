@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
-import { COOKIE_NAME } from "../utils/const";
+
+import { COOKIE_NAME } from "../utils/const/components/cookieConst";
 
 /**
  * Custom hook to manage cookie consent.

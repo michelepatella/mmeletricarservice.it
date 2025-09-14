@@ -4,14 +4,14 @@ import {
 	MinusOutlined,
 	PlusOutlined,
 } from "@ant-design/icons";
-import {
-	CUSTOM_TEXT_TYPES,
-	USED_CAR_ALL_INFO,
-	USED_CARS_COLLAPSE_CLASS_NAME,
-	USED_CARS_COLLAPSE_INNER_LIST_CLASS_NAME,
-	USED_CARS_COLLAPSE_OUTER_LIST_CLASS_NAME,
-} from "../../../../utils/const";
 import CustomText from "../../../../components/CustomText/CustomText";
+import { CUSTOM_TEXT_TYPES } from "../../../../utils/const/components/customTextConst";
+import {
+	ALL_USED_CAR_INFO,
+	USED_CARS_DRAWER_COLLAPSE_CLASS_NAME,
+	USED_CARS_DRAWER_COLLAPSE_INNER_LIST_CLASS_NAME,
+	USED_CARS_DRAWER_COLLAPSE_OUTER_LIST_CLASS_NAME,
+} from "../../../../utils/const/sections/usedCarsConst";
 
 /**
  * This component represents a collapse used into the
@@ -24,13 +24,13 @@ import CustomText from "../../../../components/CustomText/CustomText";
 function UsedCarDrawerCollapse(props) {
 	return (
 		<Collapse
-			className={USED_CARS_COLLAPSE_CLASS_NAME}
+			className={USED_CARS_DRAWER_COLLAPSE_CLASS_NAME}
 			accordion
 			expandIcon={({ isActive }) =>
 				isActive ? <MinusOutlined /> : <PlusOutlined />
 			}
 			// Add all the items to the collapse
-			items={USED_CAR_ALL_INFO?.map(
+			items={ALL_USED_CAR_INFO?.map(
 				({ key, label, children }) => ({
 					key,
 					label,
@@ -39,14 +39,14 @@ function UsedCarDrawerCollapse(props) {
 						// to a specific category via list
 						<li
 							className={
-								USED_CARS_COLLAPSE_OUTER_LIST_CLASS_NAME
+								USED_CARS_DRAWER_COLLAPSE_OUTER_LIST_CLASS_NAME
 							}
 						>
 							{children?.map((item) => (
 								<ul
 									key={item?.name}
 									className={
-										USED_CARS_COLLAPSE_INNER_LIST_CLASS_NAME
+										USED_CARS_DRAWER_COLLAPSE_INNER_LIST_CLASS_NAME
 									}
 								>
 									{/* Information name */}
