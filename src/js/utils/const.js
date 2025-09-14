@@ -224,19 +224,19 @@ export const USED_CAR_ALL_INFO = [
 		label: "Motore e prestazioni",
 		children: [
 			{
-				title: "<strong>Potenza (CV)</strong>",
+				title: "Potenza (CV)",
 				name: "power",
 			},
 			{
-				title: "<strong>Cilindrata (cc)</strong>",
+				title: "Cilindrata (cc)",
 				name: "engine_displacement",
 			},
 			{
-				title: "<strong>Cilindri</strong>",
+				title: "Cilindri",
 				name: "cylinders",
 			},
 			{
-				title: "<strong>Cambio</strong>",
+				title: "Cambio",
 				name: "transmission",
 			},
 		],
@@ -246,15 +246,15 @@ export const USED_CAR_ALL_INFO = [
 		label: "Emissioni e consumo",
 		children: [
 			{
-				title: "<strong>Consumo (L/100 km)</strong>",
+				title: "Consumo (L/100 km)",
 				name: "consumption",
 			},
 			{
-				title: "<strong>Emissioni (g/km)</strong>",
+				title: "Emissioni (g/km)",
 				name: "emissions",
 			},
 			{
-				title: "<strong>Classe emissioni</strong>",
+				title: "Classe emissioni",
 				name: "emission_class",
 			},
 		],
@@ -264,15 +264,15 @@ export const USED_CAR_ALL_INFO = [
 		label: "Esterno",
 		children: [
 			{
-				title: "<strong>Porte</strong>",
+				title: "Porte",
 				name: "doors",
 			},
 			{
-				title: "<strong>Colore esterno</strong>",
+				title: "Colore esterno",
 				name: "external_color",
 			},
 			{
-				title: "<strong>Carrozzeria</strong>",
+				title: "Carrozzeria",
 				name: "bodywork",
 			},
 		],
@@ -282,15 +282,15 @@ export const USED_CAR_ALL_INFO = [
 		label: "Interno e comfort",
 		children: [
 			{
-				title: "<strong>Posti</strong>",
+				title: "Posti",
 				name: "seats",
 			},
 			{
-				title: "<strong>Colore interno</strong>",
+				title: "Colore interno",
 				name: "internal_color",
 			},
 			{
-				title: "<strong>Materiale interno</strong>",
+				title: "Materiale interno",
 				name: "internal_material",
 			},
 		],
