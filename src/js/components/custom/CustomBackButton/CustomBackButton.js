@@ -1,6 +1,10 @@
 import React from "react";
 import { LeftOutlined } from "@ant-design/icons";
-import { BACK_BUTTON_LABEL } from "../../../utils/const";
+import {
+	BACK_BUTTON_LABEL,
+	CUSTOM_BACK_BUTTON_CLASS_NAME,
+	CUSTOM_TEXT_TYPES,
+} from "../../../utils/const";
 import CustomText from "../CustomText/CustomText";
 
 /**
@@ -12,14 +16,14 @@ import CustomText from "../CustomText/CustomText";
  */
 function CustomBackButton() {
 	return (
-		<span className="custom-back-button">
+		<span className={CUSTOM_BACK_BUTTON_CLASS_NAME}>
 			{/* Close button symbol */}
 			<LeftOutlined />
 
 			{/* Label for the close button */}
 			<CustomText
-				type="body"
-				disableAnimation={true}
+				type={CUSTOM_TEXT_TYPES.BODY}
+				disableAnimation
 				text={BACK_BUTTON_LABEL}
 			/>
 		</span>

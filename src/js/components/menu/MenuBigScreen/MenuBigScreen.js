@@ -1,7 +1,13 @@
 import { Anchor } from "antd";
 import { motion } from "framer-motion";
+import {
+	MENU_ARIA_LABEL,
+	MENU_BIG_CONTAINER_CLASS_NAME,
+	MENU_BIG_INITIAL_OPACITY,
+	MENU_BIG_INITIAL_X_POSITION,
+	MENU_BIG_MOTION_SECTION_CLASS_NAME,
+} from "../../../utils/const";
 import { useMenu } from "../../../hooks/useMenu";
-import { MENU_ARIA_LABEL } from "../../../utils/const";
 
 /**
  * This component represents the anchor menu
@@ -17,20 +23,19 @@ function MenuBigScreen() {
 		useMenu();
 
 	return (
-		<div className="menu-container-big">
+		<div className={MENU_BIG_CONTAINER_CLASS_NAME}>
 			{/* Motion section for the menu animation */}
 			<motion.section
-				className="motion-section"
+				className={MENU_BIG_MOTION_SECTION_CLASS_NAME}
 				aria-label={MENU_ARIA_LABEL}
 				animate={menuItemControls}
 				initial={{
-					opacity: 0,
-					x: -100,
+					opacity: MENU_BIG_INITIAL_OPACITY,
+					x: MENU_BIG_INITIAL_X_POSITION,
 				}}
 			>
 				{/* Menu */}
 				<Anchor
-					affix={false}
 					items={menuItems}
 					getCurrentAnchor={() => "#" + section}
 				/>

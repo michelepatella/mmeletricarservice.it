@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
  * @param threshold
  * @returns {boolean}
  */
-const useIntersectionObserver = (ref, threshold = 0.5) => {
+const useIntersectionObserver = (ref, threshold) => {
 	// State to track visibility of the element
 	const [isVisible, setIsVisible] = useState(false);
 
@@ -22,7 +22,6 @@ const useIntersectionObserver = (ref, threshold = 0.5) => {
 		// Options for the IntersectionObserver
 		const options = {
 			root: null,
-			rootMargin: "0px",
 			threshold,
 		};
 

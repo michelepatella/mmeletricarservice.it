@@ -3,6 +3,10 @@ import { Steps } from "antd";
 import {
 	OUR_VALUES_TITLE,
 	OUR_VALUES_STEPS,
+	OUR_VALUES_SECTION_ID,
+	CUSTOM_TEXT_TYPES,
+	OUR_VALUES_STEPS_CLASS_NAME,
+	OUR_VALUES_STEPS_DIRECTION,
 } from "../utils/const";
 import { DOTTED_BACKGROUND_IMAGE_LINK } from "../utils/internal_links";
 import BackgroundContainer from "../components/other/BackgroundContainer/BackgroundContainer";
@@ -20,18 +24,18 @@ function OurValues() {
 		<BackgroundContainer
 			image={DOTTED_BACKGROUND_IMAGE_LINK}
 		>
-			<SectionContainer id="i-nostri-valori">
+			<SectionContainer id={OUR_VALUES_SECTION_ID}>
 				{/* Our values section title */}
 				<CustomText
-					type="super-heading"
+					type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
 					text={OUR_VALUES_TITLE}
-					disableAnimation={true}
+					disableAnimation
 				/>
 
 				{/* Company values presented through several steps */}
 				<Steps
-					className="our-values-steps"
-					direction="vertical"
+					className={OUR_VALUES_STEPS_CLASS_NAME}
+					direction={OUR_VALUES_STEPS_DIRECTION}
 					progressDot
 					current={OUR_VALUES_STEPS.length}
 					items={OUR_VALUES_STEPS?.map((step) => ({
@@ -39,7 +43,7 @@ function OurValues() {
 						// (that's a company value's title)
 						title: (
 							<CustomText
-								type="heading"
+								type={CUSTOM_TEXT_TYPES.HEADING}
 								text={step.title}
 							/>
 						),
@@ -48,7 +52,7 @@ function OurValues() {
 						// (that's a company value's description)
 						description: (
 							<CustomText
-								type="body"
+								type={CUSTOM_TEXT_TYPES.BODY}
 								text={step.description}
 							/>
 						),

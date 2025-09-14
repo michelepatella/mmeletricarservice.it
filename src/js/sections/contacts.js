@@ -1,4 +1,10 @@
 import { Layout } from "antd";
+import {
+	CONTACTS_CONTENT_CLASS_NAME,
+	CONTACTS_FOOTER_CLASS_NAME,
+	CONTACTS_LAYOUT_CLASS_NAME,
+	CONTACTS_SECTION_ID,
+} from "../utils/const";
 import ContactsContent from "../components/contacts/ContactsContent/ContactsContent";
 import ContactsFooter from "../components/contacts/ContactsFooter/ContactsFooter";
 
@@ -18,14 +24,17 @@ function Contacts() {
 	return (
 		<>
 			{/* Contacts Layout */}
-			<Layout className="contacts-layout" id="contacts">
+			<Layout
+				className={CONTACTS_LAYOUT_CLASS_NAME}
+				id={CONTACTS_SECTION_ID}
+			>
 				{/* Contacts content */}
-				<Content className="contacts-content">
+				<Content className={CONTACTS_CONTENT_CLASS_NAME}>
 					<ContactsContent />
 				</Content>
 
 				{/* Contacts footer */}
-				<Footer className="contacts-footer">
+				<Footer className={CONTACTS_FOOTER_CLASS_NAME}>
 					<ContactsFooter />
 				</Footer>
 			</Layout>

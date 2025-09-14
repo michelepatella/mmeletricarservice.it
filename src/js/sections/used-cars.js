@@ -3,8 +3,16 @@ import { useSpring, animated } from "@react-spring/web";
 import { LoadingOutlined } from "@ant-design/icons";
 import {
 	USED_CARS_TITLE,
-	USED_CAR_SCROLL_LABEL_TEXT,
+	HORIZONTAL_SCROLL_LABEL,
 	USED_CARS_UNAVAILABLE_DESCRIPTION,
+	USED_CARS_ANIMATION_Y_FINAL_POSITION,
+	USED_CARS_SECTION_ID,
+	CUSTOM_TEXT_TYPES,
+	LOADING_OUTLINED_CLASS_NAME,
+	USED_CARS_CONTAINER_CLASS_NAME,
+	CUSTOM_TEXT_TYPES as CUSTOMTEXT_TYPES,
+	USED_CARS_UNAVAILALE_CONTAINER_CLASS_NAME,
+	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION_ALT,
 } from "../utils/const";
 import {
 	DOTTED_BACKGROUND_IMAGE_LINK,
@@ -38,7 +46,7 @@ function UsedCars() {
 	// the user scrolls their container
 	const sectionContainerRef = useRef(null);
 	const [containerStyles, container] = useSpring(() => ({
-		y: "100%",
+		y: USED_CARS_ANIMATION_Y_FINAL_POSITION,
 	}));
 	useUsedCarsScroll(sectionContainerRef, container);
 
@@ -47,21 +55,21 @@ function UsedCars() {
 			image={DOTTED_BACKGROUND_IMAGE_LINK}
 		>
 			<SectionContainer
-				id="auto-usate"
+				id={USED_CARS_SECTION_ID}
 				ref={sectionContainerRef}
 			>
 				{/* Used Cars section title */}
 				<CustomText
-					type="super-heading"
+					type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
 					text={USED_CARS_TITLE}
-					disableAnimation={true}
+					disableAnimation
 				/>
 
 				{/* Used cars loading icon (to show while
 				data is loading) */}
 				{isLoading && (
 					<LoadingOutlined
-						className="loading-outlined"
+						className={LOADING_OUTLINED_CLASS_NAME}
 						spin
 					/>
 				)}
@@ -78,7 +86,9 @@ function UsedCars() {
 							)}
 						>
 							{/* Container of all used car cards */}
-							<div className="used-cars-container">
+							<div
+								className={USED_CARS_CONTAINER_CLASS_NAME}
+							>
 								{/* Show each used car via card */}
 								{usedCarsOverview.map((car) => (
 									<UsedCarCard
@@ -92,9 +102,9 @@ function UsedCars() {
 							 the section horizontally, in order to
 							 explore all the used cars */}
 							<CustomText
-								type="body"
-								text={USED_CAR_SCROLL_LABEL_TEXT}
-								style={handleScrollLabelStyle()}
+								type={CUSTOMTEXT_TYPES.BODY}
+								text={HORIZONTAL_SCROLL_LABEL}
+								style={handleScrollLabelStyle(true)}
 							/>
 						</animated.div>
 					</>
@@ -106,10 +116,14 @@ function UsedCars() {
 						usedCarsOverview.length === 0) && (
 						// Container to show image indicating no
 						// used car is available
-						<div className="unavailable-used-cars-container">
+						<div
+							className={
+								USED_CARS_UNAVAILALE_CONTAINER_CLASS_NAME
+							}
+						>
 							{/* Label indicating no used car is available */}
 							<CustomText
-								type="body"
+								type={CUSTOM_TEXT_TYPES.BODY}
 								text={USED_CARS_UNAVAILABLE_DESCRIPTION}
 								style={handleUnavailableUsedCarDescriptionStyle()}
 							/>
@@ -117,7 +131,9 @@ function UsedCars() {
 							{/* Empty used cars store image */}
 							<img
 								src={NO_USED_CAR_AVAILABLE_IMAGE_LINK}
-								alt="unavailable-used-cars-image"
+								alt={
+									USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION_ALT
+								}
 								loading="lazy"
 							/>
 						</div>

@@ -1,4 +1,5 @@
 import { USED_CAR_DRAWER_URL } from "../../utils/internal_links";
+import { USED_CARS_DRAWER_OPEN_CLASS_NAME } from "../../utils/const";
 
 let previousScrollY = 0;
 
@@ -19,7 +20,9 @@ export const onUsedCarDrawerOpen = (
 	previousScrollY = window.scrollY;
 
 	// Make the menu hidden and the page not scrollable
-	document.body.classList.add("drawer-open");
+	document.body.classList.add(
+		USED_CARS_DRAWER_OPEN_CLASS_NAME
+	);
 	document.documentElement.style.overflow = "hidden";
 	document.body.style.overflow = "hidden";
 	document.body.style.position = "fixed";
@@ -44,7 +47,9 @@ export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
 	setIsDrawerOpen(false);
 
 	// Make the menu visible and the page scrollable
-	document.body.classList.remove("drawer-open");
+	document.body.classList.remove(
+		USED_CARS_DRAWER_OPEN_CLASS_NAME
+	);
 	document.documentElement.style.overflow = "auto";
 	document.body.style.overflow = "auto";
 	document.body.style.position = "";

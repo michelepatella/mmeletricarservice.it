@@ -4,7 +4,13 @@ import {
 	MinusOutlined,
 	PlusOutlined,
 } from "@ant-design/icons";
-import { USED_CAR_ALL_INFO } from "../../../utils/const";
+import {
+	CUSTOM_TEXT_TYPES,
+	USED_CAR_ALL_INFO,
+	USED_CARS_COLLAPSE_CLASS_NAME,
+	USED_CARS_COLLAPSE_INNER_LIST_CLASS_NAME,
+	USED_CARS_COLLAPSE_OUTER_LIST_CLASS_NAME,
+} from "../../../utils/const";
 import CustomText from "../../custom/CustomText/CustomText";
 
 /**
@@ -18,7 +24,7 @@ import CustomText from "../../custom/CustomText/CustomText";
 function UsedCarDrawerCollapse(props) {
 	return (
 		<Collapse
-			className="used-car-drawer-collapse"
+			className={USED_CARS_COLLAPSE_CLASS_NAME}
 			accordion
 			expandIcon={({ isActive }) =>
 				isActive ? <MinusOutlined /> : <PlusOutlined />
@@ -31,25 +37,31 @@ function UsedCarDrawerCollapse(props) {
 					children: (
 						// Show all the information belonging
 						// to a specific category via list
-						<li className="used-car-drawer-collapse-outer-list">
+						<li
+							className={
+								USED_CARS_COLLAPSE_OUTER_LIST_CLASS_NAME
+							}
+						>
 							{children?.map((item) => (
 								<ul
 									key={item?.name}
-									className="used-car-drawer-collapse-inner-list"
+									className={
+										USED_CARS_COLLAPSE_INNER_LIST_CLASS_NAME
+									}
 								>
 									{/* Information name */}
 									<CustomText
-										type="body"
+										type={CUSTOM_TEXT_TYPES.BODY}
 										text={item?.title}
 										style={{
 											marginBottom: 0,
 										}}
-										disableAnimation={true}
+										disableAnimation
 									/>
 
 									{/* Information textual value */}
 									<CustomText
-										type="caption"
+										type={CUSTOM_TEXT_TYPES.CAPTION}
 										text={
 											props.usedCarInfo?.[item?.name] || "-"
 										}

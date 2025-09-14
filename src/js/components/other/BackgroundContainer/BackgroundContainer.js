@@ -1,3 +1,4 @@
+import { BACKGROUND_CONTAINER_TEST_ID } from "../../../utils/const";
 import { handleContainerStyle } from "../../../logic/style-handling/backgroundContainerStyleHandler";
 
 /**
@@ -23,7 +24,7 @@ function BackgroundContainer({
 
 	return (
 		<div
-			data-testid="background-container-motion-section"
+			data-testid={BACKGROUND_CONTAINER_TEST_ID}
 			style={style}
 		>
 			{children}

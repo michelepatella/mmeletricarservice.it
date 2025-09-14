@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
+import { COOKIE_NAME } from "../utils/const";
 
 /**
  * Custom hook to manage cookie consent.
@@ -33,7 +34,7 @@ export const useCookieConsent = () => {
 		try {
 			// Get the cookie consent variable that keeps
 			// track of the cookie acceptance status
-			const cookieConsent = Cookies.get("cookieConsent");
+			const cookieConsent = Cookies.get(COOKIE_NAME);
 
 			// Check if cookies have been accepted or not
 			if (cookieConsent === "true") {

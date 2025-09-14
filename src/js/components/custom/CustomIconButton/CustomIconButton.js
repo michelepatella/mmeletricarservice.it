@@ -1,3 +1,8 @@
+import {
+	CUSTOM_ICON_BUTTON_ALT,
+	CUSTOM_ICON_BUTTON_CLASS_NAME,
+} from "../../../utils/const";
+
 /**
  * This component defines a custom icon button, which
  * has just an icon (without any text).
@@ -8,11 +13,11 @@
 function CustomIconButton(props) {
 	return (
 		<button
-			className="custom-icon-button"
+			className={CUSTOM_ICON_BUTTON_CLASS_NAME}
 			onClick={props.onClick}
 		>
 			{/* Icon of the button */}
-			<img src={props.src} alt="button-icon" />
+			<img src={props.src} alt={CUSTOM_ICON_BUTTON_ALT} />
 		</button>
 	);
 }

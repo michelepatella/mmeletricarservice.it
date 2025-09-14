@@ -8,7 +8,6 @@ import {
 import ContactsContent from "./ContactsContent";
 
 // Definition of expected results
-const contactsSectionName = "Contacts Section Name";
 const contactsTitle = "Contacts Title";
 const contactsSubtitle = "Contacts Subtitle";
 const phone = "Phone";
@@ -28,7 +27,6 @@ jest.mock("../../../hooks/useIntersectionObserver", () => ({
 
 // Mock the company contacts and section's texts
 jest.mock("../../../utils/const", () => ({
-	CONTACTS_SECTION_NAME: contactsSectionName,
 	CONTACTS_TITLE: contactsTitle,
 	CONTACTS_SUBTITLE: contactsSubtitle,
 	CONTACTS: [
@@ -94,17 +92,6 @@ describe("ContactsContent", () => {
 
 	// Test SectionBlock used in ContactContent
 	describe("SectionHeader", () => {
-		// Test if it renders the section name correctly
-		test("renders with correct section name", () => {
-			render(<ContactsContent />);
-
-			expect(
-				screen.getByText((content) =>
-					content.includes(contactsSectionName)
-				)
-			).toBeInTheDocument();
-		});
-
 		// Test if it renders the section title correctly
 		test("renders with correct title", () => {
 			render(<ContactsContent />);

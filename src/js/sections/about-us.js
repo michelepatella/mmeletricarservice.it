@@ -1,7 +1,9 @@
 import React from "react";
 import {
 	ABOUT_US_DESCRIPTION,
+	ABOUT_US_SECTION_ID,
 	ABOUT_US_TITLE,
+	CUSTOM_TEXT_TYPES,
 } from "../utils/const";
 import { ABOUT_US_BACKGROUND_IMAGE_LINK } from "../utils/internal_links";
 import SectionContainer from "../components/other/SectionContainer/SectionContainer";
@@ -20,19 +22,19 @@ function AboutUs() {
 			image={ABOUT_US_BACKGROUND_IMAGE_LINK}
 		>
 			<SectionContainer
-				id="chi-siamo"
+				id={ABOUT_US_SECTION_ID}
 				custStyle={{ height: "var(--about_us_height)" }}
 			>
 				{/* About us section title */}
 				<CustomText
-					type="super-heading"
+					type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
 					text={ABOUT_US_TITLE}
-					disableAnimation={true}
+					disableAnimation
 				/>
 
 				{/* About us section description */}
 				<CustomText
-					type="body"
+					type={CUSTOM_TEXT_TYPES.BODY}
 					text={ABOUT_US_DESCRIPTION}
 				/>
 			</SectionContainer>

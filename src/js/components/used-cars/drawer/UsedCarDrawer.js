@@ -1,5 +1,13 @@
 import { Drawer, Flex } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
+import {
+	LOADING_OUTLINED_CLASS_NAME,
+	USED_CARS_DRAWER_CLASS_NAME,
+	USED_CARS_DRAWER_HORIZONTAL_FLEX_CLASS_NAME,
+	USED_CARS_DRAWER_HORIZONTAL_FLEX_WIDTH,
+	USED_CARS_DRAWER_VERTICAL_FLEX_CLASS_NAME,
+	USED_CARS_DRAWER_VERTICAL_FLEX_WIDTH,
+} from "../../../utils/const";
 import { useUsedCarInfo } from "../../../hooks/useUsedCarInfo";
 import { useDrawerBackButtonHandler } from "../../../hooks/useDrawerBackButton";
 import { onUsedCarDrawerClose } from "../../../logic/handling/usedCarDrawerHandler";
@@ -34,7 +42,7 @@ function UsedCarDrawer({
 		<>
 			{/* Drawer */}
 			<Drawer
-				className="used-car-drawer"
+				className={USED_CARS_DRAWER_CLASS_NAME}
 				closeIcon={<CustomBackButton />}
 				onClose={() =>
 					onUsedCarDrawerClose(setIsDrawerOpen)
@@ -44,7 +52,7 @@ function UsedCarDrawer({
 				{isLoading ? (
 					// Show the loading outlined until data is being loaded
 					<LoadingOutlined
-						className="loading-outlined"
+						className={LOADING_OUTLINED_CLASS_NAME}
 						spin
 					/>
 				) : (
@@ -52,14 +60,18 @@ function UsedCarDrawer({
 					<Flex vertical>
 						{/* Flex container (to contain Info panel + Carousel) */}
 						<Flex
-							className="used-car-drawer-flex-horizontal"
-							width="60%"
+							className={
+								USED_CARS_DRAWER_HORIZONTAL_FLEX_CLASS_NAME
+							}
+							width={USED_CARS_DRAWER_HORIZONTAL_FLEX_WIDTH}
 						>
 							{/* Flex vertical container (to contain only Info panel) */}
 							<Flex
 								vertical
-								className="used-car-drawer-flex-vertical"
-								width="40%"
+								className={
+									USED_CARS_DRAWER_VERTICAL_FLEX_CLASS_NAME
+								}
+								width={USED_CARS_DRAWER_VERTICAL_FLEX_WIDTH}
 							>
 								{/* Info Panel (Name, Price, Overview info,
                  CTA button and Collapse with details) */}

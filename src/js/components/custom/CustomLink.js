@@ -1,3 +1,5 @@
+import { CUSTOM_LINK_CLASS_NAME } from "../../utils/const";
+
 /**
  * This component represents the custom link used
  * across the whole application. It receives a link
@@ -10,7 +12,7 @@
 function CustomLink(props) {
 	return (
 		<a
-			className="policy-link"
+			className={CUSTOM_LINK_CLASS_NAME}
 			href={props.href}
 			target="_blank"
 			rel="noopener noreferrer"

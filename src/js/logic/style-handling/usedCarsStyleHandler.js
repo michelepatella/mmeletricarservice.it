@@ -21,15 +21,14 @@ export const handleTextOverviewStyle = (isTitleVisible) => {
 /**
  * Method to handle the style of the scroll label of the user cars
  * section dynamically.
- * @returns {{
- * textAlign: string,
- * opacity: number,
- * marginLeft: string
- * }}
+ * @param applyMarginLeft
+ * @returns {{textAlign: string, opacity: string, marginLeft: (string|number)}}
  */
-export const handleScrollLabelStyle = () => {
+export const handleScrollLabelStyle = (applyMarginLeft) => {
 	return {
-		marginLeft: "var(--used_cars_scroll_label_margin_left)",
+		marginLeft: applyMarginLeft
+			? "var(--used_cars_scroll_label_margin_left)"
+			: 0,
 		textAlign: "center",
 		opacity: "var(--low_opacity)",
 	};

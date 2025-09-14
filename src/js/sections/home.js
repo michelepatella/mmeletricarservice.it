@@ -1,4 +1,11 @@
 import { Layout } from "antd";
+import {
+	HOME_CONTENT_CLASS_NAME,
+	HOME_HEADER_CLASS_NAME,
+	HOME_LAYOUT_CLASS_NAME,
+	HOME_SECTION_ID,
+} from "../utils/const";
+import { DOTTED_BACKGROUND_IMAGE_LINK } from "../utils/internal_links";
 import HomeHeader from "../components/home/HomeHeader/HomeHeader";
 import HomeContent from "../components/home/HomeContent/HomeContent";
 import BackgroundContainer from "../components/other/BackgroundContainer/BackgroundContainer";
@@ -19,16 +26,21 @@ function Home() {
 		<>
 			{/* Background container to contain the whole section and
        use a customized background */}
-			<BackgroundContainer image="/images/dotted-background.avif">
+			<BackgroundContainer
+				image={DOTTED_BACKGROUND_IMAGE_LINK}
+			>
 				{/* Home Layout */}
-				<Layout className="home-layout" id="home">
+				<Layout
+					className={HOME_LAYOUT_CLASS_NAME}
+					id={HOME_SECTION_ID}
+				>
 					{/* Home header */}
-					<Header className="home-header">
+					<Header className={HOME_HEADER_CLASS_NAME}>
 						<HomeHeader />
 					</Header>
 
 					{/* Home content */}
-					<Content className="home-content">
+					<Content className={HOME_CONTENT_CLASS_NAME}>
 						<HomeContent />
 					</Content>
 				</Layout>

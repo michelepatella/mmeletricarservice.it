@@ -38,6 +38,7 @@ import "../styles/components/custom/CustomIconButton.css";
 import "../styles/components/custom/CustomText.css";
 import "../styles/components/custom/CustomBackButton.css";
 import "../styles/components/custom/CustomBlockQuote.css";
+import "../styles/components/custom/CustomLink.css";
 import "../styles/components/used-cars/UsedCarOverview.css";
 import "../styles/components/used-cars/UsedCarCard.css";
 import "../styles/components/used-cars/drawer/UsedCarDrawer.css";

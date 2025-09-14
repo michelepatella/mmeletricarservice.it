@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
-import { SECTIONS } from "../utils/const";
-import { scrollToSection } from "../utils/scrollToSection";
 import { useAnimation } from "framer-motion";
+import {
+	MENU_BIG_ANIMATION_DURATION,
+	MENU_BIG_FINAL_OPACITY,
+	MENU_BIG_FINAL_X_POSITION,
+	SECTIONS,
+} from "../utils/const";
+import { scrollToSection } from "../utils/scrollToSection";
 
 /**
  * Helper method to check element visibility
@@ -82,11 +87,7 @@ const getCurrentSection = () => {
  */
 const mapChildren = (children, parentIndex, setVisible) =>
 	children?.map((child, childIndex) => ({
-		key:
-			"section-" +
-			(parentIndex + 1) +
-			"-child-" +
-			(childIndex + 1),
+		key: parentIndex + 1 + "-" + (childIndex + 1),
 		href: "#" + child?.id,
 		title: child?.title,
 		onClick: () => scrollToSection(child?.id, setVisible),
@@ -113,7 +114,7 @@ export const useMenu = () => {
 	const [visible, setVisible] = useState(false);
 
 	// State to track the current active section
-	const [section, setSection] = useState("home");
+	const [section, setSection] = useState(SECTIONS[0].id);
 
 	/**
 	 * Method to toggle the menu visibility
@@ -133,10 +134,10 @@ export const useMenu = () => {
 	useEffect(() => {
 		// Menu animation
 		menuItemControls.start({
-			opacity: 1,
-			x: 0,
+			opacity: MENU_BIG_FINAL_OPACITY,
+			x: MENU_BIG_FINAL_X_POSITION,
 			transition: {
-				duration: 0.8,
+				duration: MENU_BIG_ANIMATION_DURATION,
 			},
 		});
 
@@ -162,7 +163,7 @@ export const useMenu = () => {
 	 * @type {unknown[] | undefined}
 	 */
 	const menuItems = SECTIONS?.map((section, index) => ({
-		key: "section-" + (index + 1),
+		key: index + 1,
 		href: "#" + section?.id,
 		title: section?.title,
 		onClick: () => scrollToSection(section?.id, setVisible),

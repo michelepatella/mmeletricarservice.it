@@ -1,3 +1,5 @@
+import { API_FOLDER_PATH } from "./const";
+
 /**
  * Method to fetch data by making a request to a specified
  * endpoint API and extracting the JSON response (containing used car data).
@@ -7,7 +9,7 @@
 export const fetchUsedCarData = async (endpoint) => {
 	try {
 		// Make the request to get car's data
-		const res = await fetch("/api/" + endpoint);
+		const res = await fetch(API_FOLDER_PATH + endpoint);
 
 		// Check the response status
 		if (!res?.ok) {

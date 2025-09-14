@@ -6,6 +6,11 @@ import {
 	WORKING_HOURS_DESCRIPTION,
 	GOOGLE_MAPS_LINK,
 	GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
+	WHERE_WE_ARE_SECTION_ID,
+	CUSTOM_TEXT_TYPES,
+	GOOGLE_MAPS_CONTAINER_CLASS_NAME,
+	GOOGLE_MAPS_IFRAME_CLASS_NAME,
+	GOOGLE_MAPS_IFRAME_TITLE,
 } from "../utils/const";
 import { DOTTED_BACKGROUND_IMAGE_LINK } from "../utils/internal_links";
 import {
@@ -30,43 +35,46 @@ function WhereWeAre(props) {
 		<BackgroundContainer
 			image={DOTTED_BACKGROUND_IMAGE_LINK}
 		>
-			<SectionContainer id="dove-siamo">
+			<SectionContainer id={WHERE_WE_ARE_SECTION_ID}>
 				{/* Where we are section title */}
 				<CustomText
-					type="super-heading"
+					type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
 					text={WHERE_WE_ARE_TITLE}
-					disableAnimation={true}
+					disableAnimation
 				/>
 
 				{/* Location of the company highlighted by a
 				block quote */}
 				<CustomBlockQuote>
-					<CustomText type="body" text={SITE} />
+					<CustomText
+						type={CUSTOM_TEXT_TYPES.BODY}
+						text={SITE}
+					/>
 				</CustomBlockQuote>
 
 				{/* Working hours of the company title */}
 				<CustomText
-					type="heading"
+					type={CUSTOM_TEXT_TYPES.HEADING}
 					text={WORKING_HOURS_TITLE}
-					disableAnimation={true}
+					disableAnimation
 				/>
 
 				{/* Working hours of the company highlighted by a
 				block quote */}
 				<CustomBlockQuote>
 					<CustomText
-						type="body"
+						type={CUSTOM_TEXT_TYPES.BODY}
 						text={WORKING_HOURS_DESCRIPTION}
 					/>
 				</CustomBlockQuote>
 
 				{/* Google Maps (shown only in case of cookie accepting) */}
 				{props.cookiesAccepted ? (
-					<div className="google-maps-container">
+					<div className={GOOGLE_MAPS_CONTAINER_CLASS_NAME}>
 						<iframe
 							src={GOOGLE_MAPS_LINK}
-							className="google-maps-iframe"
-							title="google-maps"
+							className={GOOGLE_MAPS_IFRAME_CLASS_NAME}
+							title={GOOGLE_MAPS_IFRAME_TITLE}
 							allowFullScreen=""
 							loading="lazy"
 							referrerPolicy="no-referrer-when-downgrade"
@@ -76,12 +84,12 @@ function WhereWeAre(props) {
 					// In case cookies have not been accepted,
 					// Google Maps frame cannot be shown
 					<div
-						className="google-maps-container"
+						className={GOOGLE_MAPS_CONTAINER_CLASS_NAME}
 						style={handleGoogleMapsContainerStyle()}
 					>
 						{/* Google Maps unavailable description */}
 						<CustomText
-							type="caption"
+							type={CUSTOM_TEXT_TYPES.CAPTION}
 							text={GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION}
 							style={handleGoogleMapsUnavailableDescriptionStyle()}
 						/>

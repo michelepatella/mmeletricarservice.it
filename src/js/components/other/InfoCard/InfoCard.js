@@ -1,4 +1,11 @@
 import { Flex } from "antd";
+import {
+	CUSTOM_TEXT_TYPES,
+	INFO_CARD_CLASS_NAME,
+	INFO_CARD_FLEX_CLASS_NAME,
+	INFO_CARD_ICON_ALT,
+	INFO_CARD_ICON_CLASS_NAME,
+} from "../../../utils/const";
 import { handleDescriptionStyle } from "../../../logic/style-handling/infoCardStyleHandler";
 import CustomText from "../../custom/CustomText/CustomText";
 
@@ -14,32 +21,32 @@ function InfoCard(props) {
 	return (
 		<>
 			{/* Info Card global container */}
-			<div className="info-card">
+			<div className={INFO_CARD_CLASS_NAME}>
 				{/* Flex container */}
-				<Flex className="info-card-flex">
+				<Flex className={INFO_CARD_FLEX_CLASS_NAME}>
 					{/* Informative icon */}
 					{props.icon && (
 						<img
-							className="info-card-icon"
+							className={INFO_CARD_ICON_CLASS_NAME}
 							src={props.icon}
-							alt="info-card-icon"
+							alt={INFO_CARD_ICON_ALT}
 						/>
 					)}
 
 					{/* Informative title */}
 					<CustomText
-						type="subheading"
+						type={CUSTOM_TEXT_TYPES.SUBHEADING}
 						text={props.title}
-						disableAnimation={true}
+						disableAnimation
 					/>
 				</Flex>
 
 				{/* Informative description */}
 				<CustomText
-					type="body"
+					type={CUSTOM_TEXT_TYPES.BODY}
 					text={props.description}
 					style={handleDescriptionStyle()}
-					disableAnimation={true}
+					disableAnimation
 				/>
 			</div>
 		</>

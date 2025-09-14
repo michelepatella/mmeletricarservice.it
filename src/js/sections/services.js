@@ -3,7 +3,12 @@ import { useInView } from "react-intersection-observer";
 import {
 	SERVICES_TITLE,
 	ALL_SERVICES,
-	USED_CAR_SCROLL_LABEL_TEXT,
+	HORIZONTAL_SCROLL_LABEL,
+	SERVICES_TITLE_ANIMATION_TRIGGER_ONCE,
+	SERVICES_TITLE_ANIMATION_THRESHOLD,
+	SERVICES_SECTION_ID,
+	CUSTOM_TEXT_TYPES,
+	SERVICES_CONTAINER_CLASS_NAME,
 } from "../utils/const";
 import { SERVICES_BACKGROUND_IMAGE_LINK } from "../utils/internal_links";
 import { useServiceTitleAnimation } from "../hooks/useServiceTitleAnimation";
@@ -28,8 +33,8 @@ function Services() {
 	// To keep track when the service section
 	// is in view to start title's animation
 	const { ref, inView } = useInView({
-		triggerOnce: true,
-		threshold: 0.8,
+		triggerOnce: SERVICES_TITLE_ANIMATION_TRIGGER_ONCE,
+		threshold: SERVICES_TITLE_ANIMATION_THRESHOLD,
 	});
 
 	// To keep track of the words already displayed
@@ -44,11 +49,11 @@ function Services() {
 		<BackgroundContainer
 			image={SERVICES_BACKGROUND_IMAGE_LINK}
 		>
-			<SectionContainer id="servizi">
+			<SectionContainer id={SERVICES_SECTION_ID}>
 				{/* Services section title(s) */}
 				<div ref={ref}>
 					<CustomText
-						type="super-heading"
+						type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
 						text={
 							// Show each word composing the section title
 							// by using an individual span
@@ -68,7 +73,7 @@ function Services() {
 
 				{/* Global container for all the informative
 				cards displayed for the services */}
-				<div className="services-container">
+				<div className={SERVICES_CONTAINER_CLASS_NAME}>
 					{/* Show all the services via informative cards
 					 which can be explored by scrolling the container
 					 horizontally */}
@@ -88,9 +93,9 @@ function Services() {
 				{/* Label indicating the user to scroll the
 				 services horizontally in order to explore them */}
 				<CustomText
-					type="body"
-					text={USED_CAR_SCROLL_LABEL_TEXT}
-					style={handleScrollLabelStyle()}
+					type={CUSTOM_TEXT_TYPES.BODY}
+					text={HORIZONTAL_SCROLL_LABEL}
+					style={handleScrollLabelStyle(true)}
 				/>
 			</SectionContainer>
 		</BackgroundContainer>

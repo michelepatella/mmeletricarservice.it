@@ -4,6 +4,15 @@ import {
 	CloseOutlined,
 	MenuOutlined,
 } from "@ant-design/icons";
+import {
+	HAMBURGER_BUTTON_CLASS_NAME,
+	HAMBURGER_BUTTON_SHAPE,
+	HAMBURGER_BUTTON_TYPE,
+	MENU_SMALL_CHILDREN_ITEM_CLASS_NAME,
+	MENU_SMALL_CLOSE_OUTLINE_CLASS_NAME,
+	MENU_SMALL_CONTAINER_CLASS_NAME,
+	MENU_SMALL_DRAWER_PLACEMENT,
+} from "../../../utils/const";
 import { useMenu } from "../../../hooks/useMenu";
 import {
 	handleParentStyle,
@@ -24,12 +33,12 @@ function MenuSmallScreen() {
 		useMenu();
 
 	return (
-		<div className="menu-container-small">
+		<div className={MENU_SMALL_CONTAINER_CLASS_NAME}>
 			{/* Hamburger button (to open the hamburger menu) */}
 			<Button
-				type="primary"
-				className="hamburger-button"
-				shape="circle"
+				type={HAMBURGER_BUTTON_TYPE}
+				className={HAMBURGER_BUTTON_CLASS_NAME}
+				shape={HAMBURGER_BUTTON_SHAPE}
 				icon={<MenuOutlined />}
 				onClick={toggleDrawer}
 				style={handleHamburgerButtonStyle(visible)}
@@ -37,16 +46,18 @@ function MenuSmallScreen() {
 
 			{/* Drawer for containing the menu */}
 			<Drawer
-				placement="right"
+				placement={MENU_SMALL_DRAWER_PLACEMENT}
 				closable
 				closeIcon={
-					<CloseOutlined className="close-outline" />
+					<CloseOutlined
+						className={MENU_SMALL_CLOSE_OUTLINE_CLASS_NAME}
+					/>
 				}
 				onClose={toggleDrawer}
 				open={visible}
 			>
 				{/* Menu */}
-				<AntMenu mode="inline">
+				<AntMenu>
 					{/* Parent and children items generation */}
 					{menuItems?.map((menuItem) => (
 						<React.Fragment key={menuItem?.key}>
@@ -63,7 +74,9 @@ function MenuSmallScreen() {
 							{menuItem?.children?.map((child) => (
 								<AntMenu.Item
 									key={child?.key}
-									className="ant-menu-item-child"
+									className={
+										MENU_SMALL_CHILDREN_ITEM_CLASS_NAME
+									}
 									onClick={child?.onClick}
 									style={handleChildrenStyle(
 										section,

@@ -1,3 +1,5 @@
+import { SECTION_CONTAINER_CLASS_NAME } from "../../../utils/const";
+
 /**
  * This component represents the section container.
  * As its name suggests, it is used as container for containing
@@ -20,7 +22,7 @@ function SectionContainer({ children, id, custStyle }) {
 		// children representing the section components
 		<div
 			id={id}
-			className="section-container"
+			className={SECTION_CONTAINER_CLASS_NAME}
 			style={style}
 		>
 			{children}

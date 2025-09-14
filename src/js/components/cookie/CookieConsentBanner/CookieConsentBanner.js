@@ -38,11 +38,11 @@ function CookieConsentBanner(props) {
 				<CookieConsent
 					cookieName={COOKIE_NAME}
 					expires={COOKIE_EXPIRATION_DATE}
-					visible={COOKIE_CONSENT_BANNER_VISIBLE}
+					visible
 					location={COOKIE_CONSENT_BANNER_LOCATION}
 					buttonText={COOKIE_ACCEPT_BUTTON_TEXT}
 					declineButtonText={COOKIE_DECLINE_BUTTON_TEXT}
-					enableDeclineButton={COOKIE_CONSENT_BANNER_ENABLE_DECLINE_BUTTON}
+					enableDeclineButton
 					onAccept={props.handleAcceptCookies}
 					onDecline={props.handleDeclineCookies}
 				>

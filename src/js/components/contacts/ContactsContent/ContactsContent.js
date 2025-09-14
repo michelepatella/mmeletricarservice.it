@@ -1,10 +1,9 @@
 import {
 	CONTACTS,
-	CONTACTS_BUTTONS_CONTAINER_CLASS_NAME, CONTACTS_BUTTONS_IS_CONTACT, CONTACTS_BUTTONS_IS_CTA,
+	CONTACTS_BUTTONS_CONTAINER_CLASS_NAME,
 	CONTACTS_SECTION_ID,
-	CONTACTS_SECTION_TITLE_DISABLE_ANIMATION,
-	CONTACTS_SECTION_TITLE_TYPE,
 	CONTACTS_TITLE,
+	CUSTOM_TEXT_TYPES,
 } from "../../../utils/const";
 import { DOTTED_BACKGROUND_IMAGE_LINK } from "../../../utils/internal_links";
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
@@ -29,21 +28,24 @@ function ContactsContent() {
 			<SectionContainer id={CONTACTS_SECTION_ID}>
 				{/* Contacts section title */}
 				<CustomText
-					type={CONTACTS_SECTION_TITLE_TYPE}
+					type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
 					text={CONTACTS_TITLE}
-					disableAnimation={CONTACTS_SECTION_TITLE_DISABLE_ANIMATION}
+					disableAnimation
 				/>
 
 				{/* Custom block quote to highlight all contact buttons */}
 				<CustomBlockQuote>
 					{/* Contact buttons container (contains all the contact buttons) */}
-					<div className={CONTACTS_BUTTONS_CONTAINER_CLASS_NAME}>
+					<div
+						className={
+							CONTACTS_BUTTONS_CONTAINER_CLASS_NAME
+						}
+					>
 						{/* Add a button for each contact available */}
 						{CONTACTS?.map((contact) => (
 							<CustomButton
 								key={contact.value}
-								isContact={CONTACTS_BUTTONS_IS_CONTACT}
-								isCta={CONTACTS_BUTTONS_IS_CTA}
+								isContact
 								text={contact?.value}
 								icon={contact?.icon}
 								onClick={

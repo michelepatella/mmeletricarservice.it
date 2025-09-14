@@ -42,10 +42,3 @@
 	background-color: transparent !important;
 	color: white !important;
 }
-
-/* Policy links styles */
-.policy-link {
-	color: var(--text_color) !important;
-	text-decoration: underline;
-	font-weight: bold;
-}

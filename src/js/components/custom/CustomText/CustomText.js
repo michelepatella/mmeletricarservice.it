@@ -1,4 +1,8 @@
 import { useRef } from "react";
+import {
+	CUSTOM_TEXT_CLASS_NAME_PREFIX,
+	CUSTOM_TEXT_DEFAULT_OPACITY,
+} from "../../../utils/const";
 import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 
 /**
@@ -29,7 +33,7 @@ function CustomText(props) {
 	const style = {
 		...(props.disableAnimation
 			? {
-					opacity: 1,
+					opacity: CUSTOM_TEXT_DEFAULT_OPACITY,
 				}
 			: {}),
 		...props.style,
@@ -38,7 +42,7 @@ function CustomText(props) {
 	return (
 		// The custom text, provided as <p> element
 		<p
-			className={"custom-" + props.type}
+			className={CUSTOM_TEXT_CLASS_NAME_PREFIX + props.type}
 			ref={props.disableAnimation ? null : textRef}
 			style={style}
 			dangerouslySetInnerHTML={{

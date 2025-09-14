@@ -1,6 +1,18 @@
 import { useState } from "react";
 import { Flex } from "antd";
-import { USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION } from "../../utils/const";
+import {
+	PRICE_CURRENCY,
+	PRICE_LOCALES,
+	PRICE_STYLE,
+	USED_CARS_CARD_CLASS_NAME,
+	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION,
+	USED_CARS_CARD_OVERVIEW_FLEX_CONTAINER_CLASS_NAME,
+	USED_CARS_CARD_PRESENTATION_IMAGE_ALT,
+	USED_CARS_CARD_PRESENTATION_IMAGE_CONTAINER_CLASS_NAME,
+	USED_CARS_CARD_TYPE,
+	USED_CARS_CARD_PRICE_CONTAINER_CLASS_NAME,
+	CUSTOM_TEXT_TYPES,
+} from "../../utils/const";
 import { onUsedCarDrawerOpen } from "../../logic/handling/usedCarDrawerHandler";
 import { useOpenDrawerByLink } from "../../hooks/useOpenDrawerByLink";
 import UsedCarDrawer from "./drawer/UsedCarDrawer";
@@ -34,8 +46,8 @@ function UsedCarCard(props) {
 	return (
 		<>
 			<button
-				className="used-cars-card"
-				type="button"
+				className={USED_CARS_CARD_CLASS_NAME}
+				type={USED_CARS_CARD_TYPE}
 				onClick={() =>
 					onUsedCarDrawerOpen(
 						setIsDrawerOpen,
@@ -44,56 +56,61 @@ function UsedCarCard(props) {
 				}
 			>
 				{/* Presentation image (if any, informative text otherwise) */}
-				<div className="used-cars-card-image-container">
+				<div
+					className={
+						USED_CARS_CARD_PRESENTATION_IMAGE_CONTAINER_CLASS_NAME
+					}
+				>
 					{props.usedCarOverview?.image ? (
 						<img
 							src={props.usedCarOverview?.image}
-							alt="used-car-image"
+							alt={USED_CARS_CARD_PRESENTATION_IMAGE_ALT}
 							loading="lazy"
 						/>
 					) : (
 						<CustomText
-							type="caption"
-							text={
-								USED_CARS_CARD_IMAGE_UNAVAILABLE_DESCRIPTION
-							}
-							disableAnimation={true}
+							type={CUSTOM_TEXT_TYPES.CAPTION}
+							text={USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION}
+							disableAnimation
 						/>
 					)}
 				</div>
 
 				{/* Flex container to show car's information */}
 				<Flex
-					className="used-car-card-overview-flex"
-					gap="small"
-					align="start"
+					className={
+						USED_CARS_CARD_OVERVIEW_FLEX_CONTAINER_CLASS_NAME
+					}
 				>
 					{/* Name of the car */}
 					<CustomText
-						type="subheading"
+						type={CUSTOM_TEXT_TYPES.SUBHEADING}
 						text={props.usedCarOverview?.name}
-						disableAnimation={true}
+						disableAnimation
 					/>
 
 					{/* Car's overview information */}
 					<UsedCarOverview
-						showTitle={false}
 						usedCarOverview={props.usedCarOverview}
 					/>
 
 					{/* Car price (in Euro) */}
-					<div className="used-cars-card-price-container">
+					<div
+						className={
+							USED_CARS_CARD_PRICE_CONTAINER_CLASS_NAME
+						}
+					>
 						<CustomText
-							type="body"
+							type={CUSTOM_TEXT_TYPES.BODY}
 							text={
-								new Intl.NumberFormat("it-IT", {
-									style: "currency",
-									currency: "EUR",
+								new Intl.NumberFormat(PRICE_LOCALES, {
+									style: PRICE_STYLE,
+									currency: PRICE_CURRENCY,
 								}).format(
 									parseFloat(props.usedCarOverview?.price)
 								) || "-"
 							}
-							disableAnimation={true}
+							disableAnimation
 						/>
 					</div>
 				</Flex>

@@ -1,4 +1,9 @@
 import { useScroll } from "react-spring";
+import {
+	USED_CARS_ANIMATION_SCROLL_THRESHOLD,
+	USED_CARS_ANIMATION_Y_FINAL_POSITION,
+	USED_CARS_ANIMATION_Y_START_POSITION,
+} from "../utils/const";
 
 /**
  * Custom hook to generate used car cards animation
@@ -17,12 +22,18 @@ export const useUsedCarsScroll = (
 	useScroll({
 		container: sectionContainerRef,
 		onChange: ({ value: { scrollYProgress } }) => {
-			if (scrollYProgress > 0.55) {
-				container.start({ y: "0" });
+			if (
+				scrollYProgress >
+				USED_CARS_ANIMATION_SCROLL_THRESHOLD
+			) {
+				container.start({
+					y: USED_CARS_ANIMATION_Y_START_POSITION,
+				});
 			} else {
-				container.start({ y: "100%" });
+				container.start({
+					y: USED_CARS_ANIMATION_Y_FINAL_POSITION,
+				});
 			}
 		},
-		default: { immediate: false },
 	});
 };

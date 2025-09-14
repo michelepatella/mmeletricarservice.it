@@ -10,9 +10,7 @@ export const scrollToSection = (sectionId, setVisible) => {
 
 	// Move to the section smoothly
 	if (section) {
-		section.scrollIntoView({
-			behavior: "smooth",
-		});
+		section.scrollIntoView();
 	}
 
 	// Make the menu not visible (if the method has been called by the menu)

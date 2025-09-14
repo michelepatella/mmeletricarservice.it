@@ -2,7 +2,11 @@ import React from "react";
 import {
 	CONTACTS,
 	CTA_BUTTON_TEXT,
+	CUSTOM_TEXT_TYPES,
 	PHONE,
+	PRICE_CURRENCY,
+	PRICE_LOCALES,
+	PRICE_STYLE,
 } from "../../../utils/const";
 import { contactClickHandler } from "../../../logic/handling/contactButtonHandler";
 import CustomText from "../../custom/CustomText/CustomText";
@@ -23,9 +27,9 @@ function UsedCarDrawerInfoPanel(props) {
 		<>
 			{/* Name of the car */}
 			<CustomText
-				type="heading"
+				type={CUSTOM_TEXT_TYPES.HEADING}
 				text={props.usedCarOverview?.name || "-"}
-				disableAnimation={true}
+				disableAnimation
 				style={{
 					marginTop: 0,
 				}}
@@ -33,28 +37,28 @@ function UsedCarDrawerInfoPanel(props) {
 
 			{/* Price of the car */}
 			<CustomText
-				type="subheading"
+				type={CUSTOM_TEXT_TYPES.SUBHEADING}
 				text={
-					new Intl.NumberFormat("it-IT", {
-						style: "currency",
-						currency: "EUR",
+					new Intl.NumberFormat(PRICE_LOCALES, {
+						style: PRICE_STYLE,
+						currency: PRICE_CURRENCY,
 					}).format(
 						parseFloat(props.usedCarOverview?.price)
 					) || "-"
 				}
-				disableAnimation={true}
+				disableAnimation
 			/>
 
 			{/* Car's overview information */}
 			<UsedCarOverview
-				showTitle={true}
+				showTitle
 				usedCarOverview={props.usedCarOverview}
 			/>
 
 			{/* Call-To-Action Button */}
 			<CustomButton
-				isContact={true}
-				isCta={true}
+				isContact
+				isCta
 				text={CTA_BUTTON_TEXT}
 				icon={
 					CONTACTS.find(

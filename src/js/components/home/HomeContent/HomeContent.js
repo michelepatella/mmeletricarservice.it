@@ -1,6 +1,11 @@
 import {
 	HOME_TITLE,
 	HOME_SUBTITLE,
+	HOME_SECTION_ID,
+	HOME_LOGO_CLASS_NAME,
+	HOME_LOGO_ALT,
+	HOME_TITLE_CLASS_NAME,
+	HOME_SUBTITLE_CLASS_NAME,
 } from "../../../utils/const";
 import { COMPANY_LOGO_LINK } from "../../../utils/internal_links";
 
@@ -13,17 +18,17 @@ import { COMPANY_LOGO_LINK } from "../../../utils/internal_links";
  */
 function HomeContent() {
 	return (
-		<div id="/home">
+		<div id={HOME_SECTION_ID}>
 			{/* Logo of the company */}
 			<img
-				className="logo-image"
+				className={HOME_LOGO_CLASS_NAME}
 				src={COMPANY_LOGO_LINK}
-				alt="company-logo-image"
+				alt={HOME_LOGO_ALT}
 			/>
 
 			{/* Title */}
 			<h1
-				className="home-title"
+				className={HOME_TITLE_CLASS_NAME}
 				dangerouslySetInnerHTML={{
 					__html: HOME_TITLE,
 				}}
@@ -31,7 +36,7 @@ function HomeContent() {
 
 			{/* Subtitle */}
 			<h3
-				className="home-subtitle"
+				className={HOME_SUBTITLE_CLASS_NAME}
 				dangerouslySetInnerHTML={{
 					__html: HOME_SUBTITLE,
 				}}

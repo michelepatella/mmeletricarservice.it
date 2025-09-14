@@ -1,5 +1,9 @@
 import { useEffect } from "react";
-import { SERVICES_TITLE } from "../utils/const";
+import {
+	SERVICES_TITLE,
+	SERVICES_TITLE_ANIMATION_LETTERS_DELAY,
+	SERVICES_TITLE_ANIMATION_WORDS_DELAY,
+} from "../utils/const";
 
 /**
  * Custom hook to animate services title.
@@ -36,7 +40,10 @@ export const useServiceTitleAnimation = (
 
 				// To add delay before typing the next
 				// letter (if any)
-				setTimeout(() => typeWord(word, i + 1), 50);
+				setTimeout(
+					() => typeWord(word, i + 1),
+					SERVICES_TITLE_ANIMATION_LETTERS_DELAY
+				);
 			} else {
 				// If the whole word has been typed
 				currentIndex++;
@@ -49,7 +56,7 @@ export const useServiceTitleAnimation = (
 					setTimeout(
 						() =>
 							typeWord(SERVICES_TITLE[currentIndex].text),
-						200
+						SERVICES_TITLE_ANIMATION_WORDS_DELAY
 					);
 				}
 			}
