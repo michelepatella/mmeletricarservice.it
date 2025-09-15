@@ -1,14 +1,14 @@
 import {
-	CIRCLE_LOADING_OUTLINED_IMAGE_LINK,
-	LOGO_LOADING_OUTLINED_IMAGE_LINK,
-} from "../../utils/internalLinks";
-import {
 	CUSTOM_LOADING_OUTLINED_CIRCLE_IMAGE_ALT,
 	CUSTOM_LOADING_OUTLINED_CIRCLE_IMAGE_CLASS_NAME,
 	CUSTOM_LOADING_OUTLINED_CLASS_NAME,
 	CUSTOM_LOADING_OUTLINED_LOGO_IMAGE_ALT,
 	CUSTOM_LOADING_OUTLINED_LOGO_IMAGE_CLASS_NAME,
 } from "../../utils/const/components/customLoadingOutlinedConst";
+import {
+	CIRCLE_LOADING_OUTLINED_IMAGE_LINK,
+	LOGO_LOADING_OUTLINED_IMAGE_LINK,
+} from "../../utils/internalLinks";
 
 /**
  * This component defines the custom loading

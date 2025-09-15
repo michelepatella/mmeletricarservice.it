@@ -1,10 +1,4 @@
 import {
-	COOKIE_POLICY_LINK,
-	LEGAL_NOTES_LINK,
-	PRIVACY_POLICY_LINK,
-} from "../../../utils/internalLinks";
-import CustomLink from "../../../components/CustomLink/CustomLink";
-import {
 	CONTACTS_FOOTER_TEXT,
 	CONTACTS_FOOTER_CLASS_NAME,
 	CONTACTS_FOOTER_TEXT_CLASS_NAME,
@@ -12,6 +6,12 @@ import {
 	LEGAL_NOTES_TEXT,
 	PRIVACY_POLICY_TEXT,
 } from "../../../utils/const/sections/contactsConst";
+import {
+	COOKIE_POLICY_LINK,
+	LEGAL_NOTES_LINK,
+	PRIVACY_POLICY_LINK,
+} from "../../../utils/internalLinks";
+import CustomLink from "../../../components/CustomLink/CustomLink";
 
 /**
  * This component represents the footer

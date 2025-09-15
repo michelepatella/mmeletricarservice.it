@@ -1,9 +1,9 @@
 import React from "react";
 import { LeftOutlined } from "@ant-design/icons";
-import CustomText from "../CustomText/CustomText";
 import { CUSTOM_BACK_BUTTON_CLASS_NAME } from "../../utils/const/components/customBackButtonConst";
 import { CUSTOM_TEXT_TYPES } from "../../utils/const/components/customTextConst";
 import { USED_CARS_DRAWER_BACK_BUTTON_LABEL } from "../../utils/const/sections/usedCarsConst";
+import CustomText from "../CustomText/CustomText";
 
 /**
  * This component defines a custom back

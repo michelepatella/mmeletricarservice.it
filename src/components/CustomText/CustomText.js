@@ -1,9 +1,9 @@
 import { useRef } from "react";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import {
 	CUSTOM_TEXT_CLASS_NAME_PREFIX,
 	CUSTOM_TEXT_DEFAULT_OPACITY,
 } from "../../utils/const/components/customTextConst";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 /**
  * This component defines the custom text (via <p>) shared

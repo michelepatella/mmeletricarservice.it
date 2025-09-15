@@ -1,6 +1,20 @@
 import React, { useRef } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import {
+	CUSTOM_TEXT_TYPES as CUSTOMTEXT_TYPES,
+	CUSTOM_TEXT_TYPES,
+} from "../../../utils/const/components/customTextConst";
+import {
+	USED_CARS_ANIMATION_Y_FINAL_POSITION,
+	USED_CARS_CONTAINER_CLASS_NAME,
+	USED_CARS_SECTION_ID,
+	USED_CARS_TITLE,
+	USED_CARS_UNAVAILABLE_DESCRIPTION,
+	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION_ALT,
+	USED_CARS_UNAVAILALE_CONTAINER_CLASS_NAME,
+} from "../../../utils/const/sections/usedCarsConst";
+import { HORIZONTAL_SCROLL_LABEL } from "../../../utils/const/sections/generalSectionConst";
+import {
 	DOTTED_BACKGROUND_IMAGE_LINK,
 	NO_USED_CAR_AVAILABLE_IMAGE_LINK,
 } from "../../../utils/internalLinks";
@@ -15,20 +29,6 @@ import SectionContainer from "../../../components/SectionContainer/SectionContai
 import BackgroundContainer from "../../../components/BackgroundContainer/BackgroundContainer";
 import UsedCarCard from "../UsedCarCard/UsedCarCard";
 import CustomText from "../../../components/CustomText/CustomText";
-import {
-	CUSTOM_TEXT_TYPES as CUSTOMTEXT_TYPES,
-	CUSTOM_TEXT_TYPES,
-} from "../../../utils/const/components/customTextConst";
-import {
-	USED_CARS_ANIMATION_Y_FINAL_POSITION,
-	USED_CARS_CONTAINER_CLASS_NAME,
-	USED_CARS_SECTION_ID,
-	USED_CARS_TITLE,
-	USED_CARS_UNAVAILABLE_DESCRIPTION,
-	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION_ALT,
-	USED_CARS_UNAVAILALE_CONTAINER_CLASS_NAME,
-} from "../../../utils/const/sections/usedCarsConst";
-import { HORIZONTAL_SCROLL_LABEL } from "../../../utils/const/sections/generalSectionConst";
 import CustomLoadingOutlined from "../../../components/CustomLoadingOutlined/CustomLoadingOutlined";
 
 /**

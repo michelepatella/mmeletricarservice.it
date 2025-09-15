@@ -1,10 +1,5 @@
 import { useState } from "react";
 import { Flex } from "antd";
-import { onUsedCarDrawerOpen } from "../../../logic/usedCarDrawerHandler";
-import { useOpenDrawerByLink } from "../../../hooks/useOpenDrawerByLink";
-import UsedCarDrawer from "../UsedCarDrawer/UsedCarDrawer/UsedCarDrawer";
-import CustomText from "../../../components/CustomText/CustomText";
-import UsedCarOverview from "../UsedCarOverview/UsedCarOverview";
 import { CUSTOM_TEXT_TYPES } from "../../../utils/const/components/customTextConst";
 import {
 	PRICE_CURRENCY,
@@ -18,6 +13,11 @@ import {
 	USED_CARS_CARD_TYPE,
 	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION,
 } from "../../../utils/const/sections/usedCarsConst";
+import { onUsedCarDrawerOpen } from "../../../logic/usedCarDrawerHandler";
+import { useOpenDrawerByLink } from "../../../hooks/useOpenDrawerByLink";
+import UsedCarDrawer from "../UsedCarDrawer/UsedCarDrawer/UsedCarDrawer";
+import CustomText from "../../../components/CustomText/CustomText";
+import UsedCarOverview from "../UsedCarOverview/UsedCarOverview";
 
 /**
  * This component represents the card used to show

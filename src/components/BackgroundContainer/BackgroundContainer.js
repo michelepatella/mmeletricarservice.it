@@ -1,5 +1,5 @@
-import { handleContainerStyle } from "../../styleLogic/backgroundContainerStyleHandler";
 import { BACKGROUND_CONTAINER_TEST_ID } from "../../utils/const/components/backgroundContainerConst";
+import { handleContainerStyle } from "../../styleLogic/backgroundContainerStyleHandler";
 
 /**
  * This component defines the background container of a section.

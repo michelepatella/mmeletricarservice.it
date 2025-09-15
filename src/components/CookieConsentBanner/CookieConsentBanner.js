@@ -1,10 +1,5 @@
 import CookieConsent from "react-cookie-consent";
 import {
-	COOKIE_POLICY_LINK,
-	PRIVACY_POLICY_LINK,
-} from "../../utils/internalLinks";
-import CustomLink from "../CustomLink/CustomLink";
-import {
 	COOKIE_CONSENT_BANNER_ACCEPT_BUTTON_TEXT,
 	COOKIE_CONSENT_BANNER_DESCRIPTION,
 	COOKIE_CONSENT_BANNER_LOCATION,
@@ -16,6 +11,11 @@ import {
 	COOKIE_POLICY_TEXT,
 	PRIVACY_POLICY_TEXT,
 } from "../../utils/const/sections/contactsConst";
+import {
+	COOKIE_POLICY_LINK,
+	PRIVACY_POLICY_LINK,
+} from "../../utils/internalLinks";
+import CustomLink from "../CustomLink/CustomLink";
 
 /**
  * This component represents the cookie

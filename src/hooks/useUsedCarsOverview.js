@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import { USED_CARS_OVERVIEW_ENDPOINT } from "../utils/internalLinks";
-import { fetchUsedCarData } from "../utils/dataFetcher";
 import {
 	DATA_STALE_TIME,
 	USED_CARS_OVERVIEW_API_KEY,
 } from "../utils/const/other/dataFetchingCachingConst";
+import { USED_CARS_OVERVIEW_ENDPOINT } from "../utils/internalLinks";
+import { fetchUsedCarData } from "../utils/dataFetcher";
 
 /**
  * Custom hook to fetch the overview list of used cars, by

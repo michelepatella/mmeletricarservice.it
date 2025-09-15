@@ -1,9 +1,4 @@
 import React from "react";
-import { contactClickHandler } from "../../../../logic/contactButtonHandler";
-import CustomText from "../../../../components/CustomText/CustomText";
-import UsedCarOverview from "../../UsedCarOverview/UsedCarOverview";
-import CustomButton from "../../../../components/CustomButton/CustomButton";
-import UsedCarDrawerCollapse from "../UsedCarDrawerCollapse/UsedCarDrawerCollapse";
 import { CUSTOM_TEXT_TYPES } from "../../../../utils/const/components/customTextConst";
 import {
 	PRICE_CURRENCY,
@@ -13,6 +8,11 @@ import {
 } from "../../../../utils/const/sections/usedCarsConst";
 import { ALL_CONTACTS } from "../../../../utils/const/sections/contactsConst";
 import { PHONE } from "../../../../utils/const/other/companyConst";
+import { contactClickHandler } from "../../../../logic/contactButtonHandler";
+import CustomText from "../../../../components/CustomText/CustomText";
+import CustomButton from "../../../../components/CustomButton/CustomButton";
+import UsedCarDrawerCollapse from "../UsedCarDrawerCollapse/UsedCarDrawerCollapse";
+import UsedCarOverview from "../../UsedCarOverview/UsedCarOverview";
 
 /**
  * This component represents the info panel shown in the

@@ -1,10 +1,10 @@
 import React from "react";
 import { Button } from "antd";
-import { handleCookieButtonClick } from "../../logic/cookieButtonHandler";
 import {
 	COOKIE_BUTTON_ARIA_LABEL,
 	COOKIE_BUTTON_CLASS_NAME,
 } from "../../utils/const/components/cookieConst";
+import { handleCookieButtonClick } from "../../logic/cookieButtonHandler";
 
 /**
  * This component defines the cookie button displayed

@@ -1,10 +1,4 @@
 import { Drawer, Flex } from "antd";
-import { useUsedCarInfo } from "../../../../hooks/useUsedCarInfo";
-import { useDrawerBackButtonHandler } from "../../../../hooks/useDrawerBackButton";
-import { onUsedCarDrawerClose } from "../../../../logic/usedCarDrawerHandler";
-import UsedCarDrawerCarousel from "../UsedCarDrawerCarousel/UsedCarDrawerCarousel";
-import UsedCarDrawerInfoPanel from "../UsedCarDrawerInfoPanel/UsedCarDrawerInfoPanel";
-import CustomBackButton from "../../../../components/CustomBackButton/CustomBackButton";
 import {
 	USED_CARS_DRAWER_CLASS_NAME,
 	USED_CARS_DRAWER_HORIZONTAL_FLEX_CLASS_NAME,
@@ -12,6 +6,12 @@ import {
 	USED_CARS_DRAWER_VERTICAL_FLEX_CLASS_NAME,
 	USED_CARS_DRAWER_VERTICAL_FLEX_WIDTH,
 } from "../../../../utils/const/sections/usedCarsConst";
+import { useUsedCarInfo } from "../../../../hooks/useUsedCarInfo";
+import { useDrawerBackButtonHandler } from "../../../../hooks/useDrawerBackButton";
+import { onUsedCarDrawerClose } from "../../../../logic/usedCarDrawerHandler";
+import UsedCarDrawerCarousel from "../UsedCarDrawerCarousel/UsedCarDrawerCarousel";
+import UsedCarDrawerInfoPanel from "../UsedCarDrawerInfoPanel/UsedCarDrawerInfoPanel";
+import CustomBackButton from "../../../../components/CustomBackButton/CustomBackButton";
 import CustomLoadingOutlined from "../../../../components/CustomLoadingOutlined/CustomLoadingOutlined";
 
 /**

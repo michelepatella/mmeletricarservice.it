@@ -1,6 +1,4 @@
 import { Flex } from "antd";
-import { handleTextOverviewStyle } from "../../../styleLogic/usedCarsStyleHandler";
-import CustomText from "../../../components/CustomText/CustomText";
 import { CUSTOM_TEXT_TYPES } from "../../../utils/const/components/customTextConst";
 import {
 	ALL_USED_CAR_OVERVIEW,
@@ -8,6 +6,8 @@ import {
 	USED_CARS_OVERVIEW_CONTAINER_GAP,
 	USED_CARS_OVERVIEW_ICON_ALT,
 } from "../../../utils/const/sections/usedCarsConst";
+import { handleTextOverviewStyle } from "../../../styleLogic/usedCarsStyleHandler";
+import CustomText from "../../../components/CustomText/CustomText";
 
 /**
  * This component includes all used car overview information:

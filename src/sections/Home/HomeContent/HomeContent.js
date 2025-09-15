@@ -1,4 +1,3 @@
-import { COMPANY_LOGO_LINK } from "../../../utils/internalLinks";
 import {
 	HOME_LOGO_ALT,
 	HOME_LOGO_CLASS_NAME,
@@ -8,6 +7,7 @@ import {
 	HOME_TITLE,
 	HOME_TITLE_CLASS_NAME,
 } from "../../../utils/const/sections/homeConst";
+import { COMPANY_LOGO_LINK } from "../../../utils/internalLinks";
 
 /**
  * This component represents the content

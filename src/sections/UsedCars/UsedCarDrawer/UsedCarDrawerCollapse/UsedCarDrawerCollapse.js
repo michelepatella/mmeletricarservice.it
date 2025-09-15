@@ -4,7 +4,6 @@ import {
 	MinusOutlined,
 	PlusOutlined,
 } from "@ant-design/icons";
-import CustomText from "../../../../components/CustomText/CustomText";
 import { CUSTOM_TEXT_TYPES } from "../../../../utils/const/components/customTextConst";
 import {
 	ALL_USED_CAR_INFO,
@@ -12,6 +11,7 @@ import {
 	USED_CARS_DRAWER_COLLAPSE_INNER_LIST_CLASS_NAME,
 	USED_CARS_DRAWER_COLLAPSE_OUTER_LIST_CLASS_NAME,
 } from "../../../../utils/const/sections/usedCarsConst";
+import CustomText from "../../../../components/CustomText/CustomText";
 
 /**
  * This component represents a collapse used into the
