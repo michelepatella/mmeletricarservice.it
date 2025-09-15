@@ -38,6 +38,10 @@ export const ABOUT_US_BACKGROUND_IMAGE_LINK =
 	"/images/about-us-background.avif";
 export const SERVICES_BACKGROUND_IMAGE_LINK =
 	"/images/services-background.avif";
+export const CIRCLE_LOADING_OUTLINED_IMAGE_LINK =
+	"/images/circle-loading-outlined.svg";
+export const LOGO_LOADING_OUTLINED_IMAGE_LINK =
+	"/images/logo-loading-outlined.svg";
 
 /**------------- Document links -------------**/
 export const PRIVACY_POLICY_LINK =

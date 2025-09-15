@@ -1,0 +1,34 @@
+/* Custom Loading Outlined Circle Rotation Animation */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Custom Loading Outlined styles */
+.custom-loading-outlined {
+	width: var(--custom_loading_outlined_dimension);
+	height: var(--custom_loading_outlined_dimension);
+	position: relative;
+	align-self: center;
+	justify-self: center;
+}
+
+/* Custom Loading Outlined Circle styles */
+.custom-loading-outlined-circle {
+	animation: spin 1.5s linear infinite;
+	transform-origin: 50% 50%;
+}
+
+/* Custom Loading Outlined Logo styles */
+.custom-loading-outlined-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: 50%;
+}

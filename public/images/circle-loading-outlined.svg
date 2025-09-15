@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 120 120">
+    <defs>
+        <linearGradient id="white-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="white" stop-opacity="1" />
+            <stop offset="50%" stop-color="white" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="white" stop-opacity="0" />
+        </linearGradient>
+    </defs>
+    <circle
+            cx="60"
+            cy="60"
+            r="50"
+            fill="none"
+            stroke="url(#white-gradient)"
+            stroke-width="1"
+    />
+</svg>

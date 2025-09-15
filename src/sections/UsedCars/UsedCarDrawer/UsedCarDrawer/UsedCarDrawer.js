@@ -1,9 +1,7 @@
 import { Drawer, Flex } from "antd";
-import { LoadingOutlined } from "@ant-design/icons";
 import { useUsedCarInfo } from "../../../../hooks/useUsedCarInfo";
 import { useDrawerBackButtonHandler } from "../../../../hooks/useDrawerBackButton";
 import { onUsedCarDrawerClose } from "../../../../logic/usedCarDrawerHandler";
-import { handleLoadingOutlinedStyle } from "../../../../styleLogic/loadingOutlinedStyleHandler";
 import UsedCarDrawerCarousel from "../UsedCarDrawerCarousel/UsedCarDrawerCarousel";
 import UsedCarDrawerInfoPanel from "../UsedCarDrawerInfoPanel/UsedCarDrawerInfoPanel";
 import CustomBackButton from "../../../../components/CustomBackButton/CustomBackButton";
@@ -14,7 +12,7 @@ import {
 	USED_CARS_DRAWER_VERTICAL_FLEX_CLASS_NAME,
 	USED_CARS_DRAWER_VERTICAL_FLEX_WIDTH,
 } from "../../../../utils/const/sections/usedCarsConst";
-import { LOADING_OUTLINED_CLASS_NAME } from "../../../../utils/const/components/loadingOutlinedConst";
+import CustomLoadingOutlined from "../../../../components/CustomLoadingOutlined/CustomLoadingOutlined";
 
 /**
  * This component represents the used car drawer,
@@ -52,10 +50,11 @@ function UsedCarDrawer({
 			>
 				{isLoading ? (
 					// Show the loading outlined until data is being loaded
-					<LoadingOutlined
-						className={LOADING_OUTLINED_CLASS_NAME}
-						spin
-						style={handleLoadingOutlinedStyle()}
+					<CustomLoadingOutlined
+						custStyle={{
+							marginTop:
+								"var(--custom_loading_outlined_margin_top)",
+						}}
 					/>
 				) : (
 					// Data loading is finished

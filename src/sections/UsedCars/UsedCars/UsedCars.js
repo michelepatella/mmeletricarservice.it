@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { useSpring, animated } from "@react-spring/web";
-import { LoadingOutlined } from "@ant-design/icons";
 import {
 	DOTTED_BACKGROUND_IMAGE_LINK,
 	NO_USED_CAR_AVAILABLE_IMAGE_LINK,
@@ -12,7 +11,6 @@ import {
 	handleScrollLabelStyle,
 	handleUnavailableUsedCarDescriptionStyle,
 } from "../../../styleLogic/usedCarsStyleHandler";
-import { handleLoadingOutlinedStyle } from "../../../styleLogic/loadingOutlinedStyleHandler";
 import SectionContainer from "../../../components/SectionContainer/SectionContainer";
 import BackgroundContainer from "../../../components/BackgroundContainer/BackgroundContainer";
 import UsedCarCard from "../UsedCarCard/UsedCarCard";
@@ -30,8 +28,8 @@ import {
 	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION_ALT,
 	USED_CARS_UNAVAILALE_CONTAINER_CLASS_NAME,
 } from "../../../utils/const/sections/usedCarsConst";
-import { LOADING_OUTLINED_CLASS_NAME } from "../../../utils/const/components/loadingOutlinedConst";
 import { HORIZONTAL_SCROLL_LABEL } from "../../../utils/const/sections/generalSectionConst";
+import CustomLoadingOutlined from "../../../components/CustomLoadingOutlined/CustomLoadingOutlined";
 
 /**
  * This component represents the Used car section.
@@ -71,10 +69,11 @@ function UsedCars() {
 				{/* Used cars loading icon (to show while
 				data is loading) */}
 				{isLoading && (
-					<LoadingOutlined
-						className={LOADING_OUTLINED_CLASS_NAME}
-						spin
-						style={handleLoadingOutlinedStyle()}
+					<CustomLoadingOutlined
+						custStyle={{
+							marginLeft:
+								"var(--custom_loading_outlined_margin_left)",
+						}}
 					/>
 				)}
 

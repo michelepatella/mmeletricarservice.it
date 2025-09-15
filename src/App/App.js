@@ -46,6 +46,7 @@ import "../components/InfoCard/InfoCard.css";
 import "../components/SectionsWrapper/SectionsWrapper.css";
 import "../components/SectionContainer/SectionContainer.css";
 import "../components/Menu/MenuWrapper/MenuWrapper.css";
+import "../components/CustomLoadingOutlined/CustomLoadingOutlined.css";
 import "../variables.css";
 
 /**

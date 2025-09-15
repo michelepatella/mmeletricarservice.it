@@ -221,7 +221,9 @@
 	--google_maps_unavailable_description_margins: 15% 5% 0 5%;
 
 	/* -------- Loading Outlined -------- */
-	--loading_outlined_width: 100%;
+	--custom_loading_outlined_dimension: 150px;
+	--custom_loading_outlined_margin_top: 30vh;
+	--custom_loading_outlined_margin_left: 15vw;
 
 	/* -------- General section margins -------- */
 	--section_margin_left_big: 250px;
