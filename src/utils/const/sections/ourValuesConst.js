@@ -18,7 +18,7 @@ export const OUR_VALUES_ALL_STEPS = [
 	{
 		title: "Qualità",
 		description:
-			"Garantiamo risultati di qualità ed innovazione in ogni intervento.",
+			"Garantiamo risultati di alto livello ed innovazione in ogni intervento.",
 	},
 	{
 		title: "Fiducia",

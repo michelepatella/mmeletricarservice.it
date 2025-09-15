@@ -49,12 +49,12 @@ const ALL_SERVICES_DATA = [
 	],
 	[
 		"Diagnosi Elettronica",
-		"Individuazione e risoluzione di guasti elettronici per un’analisi precisa del veicolo.",
+		"Individuazione e risoluzione di guasti elettronici per un'analisi precisa del veicolo.",
 		DIAGNOSIS_ICON_LINK,
 	],
 	[
 		"Diagnosi Iniezione",
-		"Analisi e riparazione dei sistemi di iniezione per ottimizzare le prestazioni del motore.",
+		"Analisi e riparazione dei sistemi d'iniezione per ottimizzare le prestazioni del motore.",
 		ENGINE_ICON_LINK,
 	],
 	[
@@ -69,7 +69,7 @@ const ALL_SERVICES_DATA = [
 	],
 	[
 		"Pannello di Controllo",
-		"Riparazione e calibrazione degli strumenti digitali e analogici del cruscotto.",
+		"Riparazione e calibrazione degli strumenti digitali ed analogici del cruscotto.",
 		CONTROL_PANEL_ICON_LINK,
 	],
 	[

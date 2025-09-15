@@ -1,11 +1,7 @@
 import React from "react";
 import { Carousel, Image } from "antd";
-import { CUSTOM_TEXT_TYPES } from "../../../../utils/const/components/customTextConst";
 import { USED_CARS_DRAWER_CAROUSEL_CONTAINER_CLASS_NAME } from "../../../../utils/const/sections/usedCarsConst";
-import { HORIZONTAL_SCROLL_LABEL } from "../../../../utils/const/sections/generalSectionConst";
 import { NO_USED_CAR_IMAGE_AVAILABLE_LINK } from "../../../../utils/internalLinks";
-import { handleScrollLabelStyle } from "../../../../styleLogic/usedCarsStyleHandler";
-import CustomText from "../../../../components/CustomText/CustomText";
 
 /**
  * This component represents the carousel used for
@@ -38,14 +34,6 @@ function UsedCarDrawerCarousel(props) {
 					<Image src={NO_USED_CAR_IMAGE_AVAILABLE_LINK} />
 				)}
 			</Carousel>
-
-			{/* Label indicating the user to scroll
-			 the pictures to explore them */}
-			<CustomText
-				type={CUSTOM_TEXT_TYPES.BODY}
-				style={handleScrollLabelStyle(false)}
-				text={HORIZONTAL_SCROLL_LABEL}
-			/>
 		</div>
 	);
 }
