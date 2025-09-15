@@ -37,13 +37,20 @@ function Services() {
 		threshold: SERVICES_TITLE_ANIMATION_THRESHOLD,
 	});
 
+	// To keep track of the current index (word)
+	const [activeIndex, setActiveIndex] = useState(0);
+
 	// To keep track of the words already displayed
 	const [displayedWords, setDisplayedWords] = useState(
 		SERVICES_TITLE.map(() => "")
 	);
 
 	// To animate title
-	useServiceTitleAnimation(inView, setDisplayedWords);
+	useServiceTitleAnimation(
+		inView,
+		setDisplayedWords,
+		setActiveIndex
+	);
 
 	return (
 		<BackgroundContainer
@@ -57,12 +64,14 @@ function Services() {
 						text={
 							// Show each word composing the section title
 							// by using an individual span
-							SERVICES_TITLE.map(function (title, index) {
+							SERVICES_TITLE.map((title, index) => {
+								const isActive = index === activeIndex;
 								return (
 									'<span style="' +
 									handleSpanTitleStyle(title) +
 									'">' +
 									displayedWords[index] +
+									(isActive ? "|" : "") +
 									"</span>"
 								);
 							}).join("")

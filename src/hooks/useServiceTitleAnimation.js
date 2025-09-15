@@ -9,10 +9,12 @@ import {
  * Custom hook to animate services title.
  * @param inView
  * @param setDisplayedWords
+ * @param setActiveIndex
  */
 export const useServiceTitleAnimation = (
 	inView,
-	setDisplayedWords
+	setDisplayedWords,
+	setActiveIndex
 ) => {
 	useEffect(() => {
 		// Animate the section title iff the
@@ -28,6 +30,9 @@ export const useServiceTitleAnimation = (
 		 * @param i
 		 */
 		function typeWord(word, i = 0) {
+			// Update the current index (active word)
+			setActiveIndex(currentIndex);
+
 			// Until there is a letter of the
 			// word to be typed
 			if (i <= word.length) {
@@ -58,6 +63,10 @@ export const useServiceTitleAnimation = (
 							typeWord(SERVICES_TITLE[currentIndex].text),
 						SERVICES_TITLE_ANIMATION_WORDS_DELAY
 					);
+				} else {
+					// Everything is finished, set the current
+					// index to an out of range value
+					setActiveIndex(-1);
 				}
 			}
 		}
