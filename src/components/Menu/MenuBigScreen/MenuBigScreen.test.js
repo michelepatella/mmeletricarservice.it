@@ -2,7 +2,7 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import MenuBigScreen from "./MenuBigScreen";
-import { useMenu } from "../../../hooks/useMenu";
+import { useMenu } from "../useMenu";
 
 // Definition of Menu items
 const menuItems = [
@@ -19,7 +19,7 @@ const menuItems = [
 ];
 
 // Mock custom hook
-jest.mock("../../../hooks/useMenu", () => ({
+jest.mock("../useMenu", () => ({
 	useMenu: jest.fn(),
 }));
 

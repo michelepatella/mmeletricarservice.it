@@ -1,4 +1,4 @@
-import { API_FOLDER_PATH } from "./const/other/dataFetchingCachingConst";
+import { API_FOLDER_PATH } from "./const";
 
 /**
  * Method to fetch data by making a request to a specified

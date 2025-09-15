@@ -5,7 +5,7 @@ import {
 } from "@tanstack/react-query";
 import { HashRouter } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
-import { useCookieConsent } from "../hooks/useCookieConsent";
+import { useCookieConsent } from "./useCookieConsent";
 import Home from "../sections/Home/Home/Home";
 import AboutUs from "../sections/AboutUs/AboutUs";
 import OurValues from "../sections/OurValues/OurValues";
@@ -48,6 +48,8 @@ import "../components/SectionContainer/SectionContainer.css";
 import "../components/Menu/MenuWrapper/MenuWrapper.css";
 import "../components/CustomLoadingOutlined/CustomLoadingOutlined.css";
 import "../variables.css";
+import "../design-tokens/colors.css";
+import "../design-tokens/typography.css";
 
 /**
  * The entry-point of the web application.

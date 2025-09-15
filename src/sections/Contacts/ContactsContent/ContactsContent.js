@@ -1,12 +1,13 @@
-import { CUSTOM_TEXT_TYPES } from "../../../utils/const/components/customTextConst";
 import {
-	ALL_CONTACTS,
-	CONTACTS_BUTTONS_CONTAINER_CLASS_NAME,
+	ALL_CONTACTS, CONTACTS_CLICK_HANDLERS,
 	CONTACTS_SECTION_ID,
+	CUSTOM_TEXT_TYPES,
+	DOTTED_BACKGROUND_IMAGE_LINK,
+} from "../../../utils/const";
+import {
+	CONTACTS_BUTTONS_CONTAINER_CLASS_NAME,
 	CONTACTS_TITLE,
-} from "../../../utils/const/sections/contactsConst";
-import { DOTTED_BACKGROUND_IMAGE_LINK } from "../../../utils/internalLinks";
-import { contactClickHandler } from "../../../logic/contactButtonHandler";
+} from "./const";
 import CustomButton from "../../../components/CustomButton/CustomButton";
 import CustomText from "../../../components/CustomText/CustomText";
 import CustomBlockQuote from "../../../components/CustomBlockQuote/CustomBlockQuote";
@@ -49,7 +50,7 @@ function ContactsContent() {
 								text={contact?.value}
 								icon={contact?.icon}
 								onClick={
-									contactClickHandler[contact?.value]
+									CONTACTS_CLICK_HANDLERS[contact?.value]
 								}
 							/>
 						))}

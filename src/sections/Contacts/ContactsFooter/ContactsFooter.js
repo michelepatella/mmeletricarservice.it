@@ -1,16 +1,9 @@
 import {
-	CONTACTS_FOOTER_TEXT,
-	CONTACTS_FOOTER_CLASS_NAME,
-	CONTACTS_FOOTER_TEXT_CLASS_NAME,
-	COOKIE_POLICY_TEXT,
+	CONTACTS_FOOTER_TEXT, CONTACTS_FOOTER_TEXT_CLASS_NAME, LEGAL_NOTES_LINK,
 	LEGAL_NOTES_TEXT,
-	PRIVACY_POLICY_TEXT,
-} from "../../../utils/const/sections/contactsConst";
-import {
-	COOKIE_POLICY_LINK,
-	LEGAL_NOTES_LINK,
-	PRIVACY_POLICY_LINK,
-} from "../../../utils/internalLinks";
+
+} from "./const";
+import { COOKIE_POLICY_LINK, COOKIE_POLICY_TEXT, PRIVACY_POLICY_LINK, PRIVACY_POLICY_TEXT } from "../../../utils/const";
 import CustomLink from "../../../components/CustomLink/CustomLink";
 
 /**
@@ -23,30 +16,28 @@ import CustomLink from "../../../components/CustomLink/CustomLink";
  */
 function ContactsFooter() {
 	return (
-		<div className={CONTACTS_FOOTER_CLASS_NAME}>
-			{/* Footer text */}
-			<p className={CONTACTS_FOOTER_TEXT_CLASS_NAME}>
-				{CONTACTS_FOOTER_TEXT}
-				<br></br>
-				{/* Privacy policy link */}
-				<CustomLink
-					href={PRIVACY_POLICY_LINK}
-					text={PRIVACY_POLICY_TEXT + " | "}
-				/>
+		// Footer text
+		<p className={CONTACTS_FOOTER_TEXT_CLASS_NAME}>
+			{CONTACTS_FOOTER_TEXT}
+			<br></br>
+			{/* Privacy policy link */}
+			<CustomLink
+				href={PRIVACY_POLICY_LINK}
+				text={PRIVACY_POLICY_TEXT + " | "}
+			/>
 
-				{/* Cookie policy link */}
-				<CustomLink
-					href={COOKIE_POLICY_LINK}
-					text={COOKIE_POLICY_TEXT + " | "}
-				/>
+			{/* Cookie policy link */}
+			<CustomLink
+				href={COOKIE_POLICY_LINK}
+				text={COOKIE_POLICY_TEXT + " | "}
+			/>
 
-				{/* Legal notes link */}
-				<CustomLink
-					href={LEGAL_NOTES_LINK}
-					text={LEGAL_NOTES_TEXT}
-				/>
-			</p>
-		</div>
+			{/* Legal notes link */}
+			<CustomLink
+				href={LEGAL_NOTES_LINK}
+				text={LEGAL_NOTES_TEXT}
+			/>
+		</p>
 	);
 }
 

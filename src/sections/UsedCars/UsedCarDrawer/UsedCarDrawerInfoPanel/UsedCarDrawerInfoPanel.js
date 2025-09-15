@@ -1,14 +1,8 @@
 import React from "react";
-import { CUSTOM_TEXT_TYPES } from "../../../../utils/const/components/customTextConst";
-import {
-	PRICE_CURRENCY,
-	PRICE_LOCALES,
-	PRICE_STYLE,
-	USED_CARS_DRAWER_CTA_BUTTON_TEXT,
-} from "../../../../utils/const/sections/usedCarsConst";
-import { ALL_CONTACTS } from "../../../../utils/const/sections/contactsConst";
-import { PHONE } from "../../../../utils/const/other/companyConst";
-import { contactClickHandler } from "../../../../logic/contactButtonHandler";
+import { ALL_CONTACTS, CONTACTS_CLICK_HANDLERS, CUSTOM_TEXT_TYPES, PHONE } from "../../../../utils/const";
+import { PRICE_CURRENCY, PRICE_LOCALES, PRICE_STYLE } from "../../const";
+import { USED_CAR_DRAWER_CTA_BUTTON_TEXT } from "./const";
+import { getUsedCarDrawerInfoPanelCarNameStyle } from "./styleHandler";
 import CustomText from "../../../../components/CustomText/CustomText";
 import CustomButton from "../../../../components/CustomButton/CustomButton";
 import UsedCarDrawerCollapse from "../UsedCarDrawerCollapse/UsedCarDrawerCollapse";
@@ -30,9 +24,7 @@ function UsedCarDrawerInfoPanel(props) {
 				type={CUSTOM_TEXT_TYPES.HEADING}
 				text={props.usedCarOverview?.name || "-"}
 				disableAnimation
-				style={{
-					marginTop: 0,
-				}}
+				style={getUsedCarDrawerInfoPanelCarNameStyle()}
 			/>
 
 			{/* Price of the car */}
@@ -59,14 +51,14 @@ function UsedCarDrawerInfoPanel(props) {
 			<CustomButton
 				isContact
 				isCta
-				text={USED_CARS_DRAWER_CTA_BUTTON_TEXT}
+				text={USED_CAR_DRAWER_CTA_BUTTON_TEXT}
 				icon={
 					ALL_CONTACTS.find(
 						(contact) => contact?.value === PHONE
 					)?.icon
 				}
 				onClick={
-					contactClickHandler[
+					CONTACTS_CLICK_HANDLERS[
 						ALL_CONTACTS.find(
 							(contact) => contact?.value === PHONE
 						)?.value

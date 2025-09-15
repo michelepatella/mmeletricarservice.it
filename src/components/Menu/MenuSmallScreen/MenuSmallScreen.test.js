@@ -6,7 +6,7 @@ import {
 	fireEvent,
 } from "@testing-library/react";
 import MenuSmallScreen from "./MenuSmallScreen";
-import { useMenu } from "../../../hooks/useMenu";
+import { useMenu } from "../useMenu";
 
 // Definition of Menu items
 const child = [
@@ -49,7 +49,7 @@ jest.mock("@ant-design/icons", () => {
 });
 
 // Mock custom hook
-jest.mock("../../../hooks/useMenu", () => ({
+jest.mock("../useMenu", () => ({
 	useMenu: jest.fn(),
 }));
 

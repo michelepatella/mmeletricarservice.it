@@ -13,16 +13,16 @@
 	margin-bottom: var(
 		--custom_text_super_heading_margin_bottom
 	);
-	font-size: var(--super_heading_font_size);
+	font-size: var(--font-size-super-heading);
 	font-weight: bold;
-	color: var(--text_color);
+	color: var(--white-color);
 	text-align: left;
 }
 
 /* Heading styles */
 .custom-heading {
 	margin-bottom: var(--custom_text_heading_margin_bottom);
-	color: var(--text_color);
+	color: var(--white-color);
 	text-align: left;
 	font-weight: bold;
 	opacity: 0;
@@ -43,7 +43,7 @@
 .custom-subheading,
 .custom-body {
 	opacity: 0;
-	color: var(--text_color);
+	color: var(--white-color);
 	text-align: left;
 	transition:
 		opacity 2.5s ease,
@@ -60,82 +60,82 @@
 
 /* Caption styles */
 .custom-caption {
-	color: var(--text_color);
-	font-size: var(--caption_text_font_size);
+	color: var(--white-color);
+	font-size: var(--font-size-caption);
 	opacity: var(--low_opacity) !important;
 }
 
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
 	.custom-heading {
-		font-size: var(--heading_font_size_big);
+		font-size: var(--font-size-heading-big);
 	}
 
 	.custom-subheading {
-		font-size: var(--subheading_font_size_big);
+		font-size: var(--font-size-subheading-big);
 	}
 
 	.custom-body {
-		font-size: var(--body_font_size_big);
+		font-size: var(--font-size-body-big);
 	}
 }
 
 /* ------ Medium screen portrait ------ */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 	.custom-heading {
-		font-size: var(--heading_font_size_medium);
+		font-size: var(--font-size-heading-medium);
 	}
 
 	.custom-subheading {
-		font-size: var(--subheading_font_size_medium);
+		font-size: var(--font-size-subheading-medium);
 	}
 
 	.custom-body {
-		font-size: var(--body_font_size_medium);
+		font-size: var(--font-size-body-medium);
 	}
 }
 
 /* ------ Medium screen landscape ------ */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 	.custom-heading {
-		font-size: var(--heading_font_size_medium);
+		font-size: var(--font-size-heading-medium);
 	}
 
 	.custom-subheading {
-		font-size: var(--subheading_font_size_medium);
+		font-size: var(--font-size-subheading-medium);
 	}
 
 	.custom-body {
-		font-size: var(--body_font_size_medium);
+		font-size: var(--font-size-body-medium);
 	}
 }
 
 /* ------ Small screen portrait ------ */
 @media (max-width: 767px) {
 	.custom-heading {
-		font-size: var(--heading_font_size_small);
+		font-size: var(--font-size-heading-small);
 	}
 
 	.custom-subheading {
-		font-size: var(--subheading_font_size_small);
+		font-size: var(--font-size-subheading-small);
 	}
 
 	.custom-body {
-		font-size: var(--body_font_size_small);
+		font-size: var(--font-size-body-small);
 	}
 }
 
 /* ------ Small screen landscape ------ */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 	.custom-heading {
-		font-size: var(--heading_font_size_small);
+		font-size: var(--font-size-heading-small);
 	}
 
 	.custom-subheading {
-		font-size: var(--subheading_font_size_small);
+		font-size: var(--font-size-subheading-small);
 	}
 
 	.custom-body {
-		font-size: var(--body_font_size_small);
+		font-size: var(--font-size-body-small);
 	}
 }

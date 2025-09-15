@@ -6,19 +6,17 @@ import {
 } from "@ant-design/icons";
 import {
 	HAMBURGER_BUTTON_CLASS_NAME,
-	HAMBURGER_BUTTON_SHAPE,
-	HAMBURGER_BUTTON_TYPE,
+	HAMBURGER_BUTTON_SHAPE, HAMBURGER_BUTTON_TYPE,
 	MENU_SMALL_CHILDREN_ITEM_CLASS_NAME,
-	MENU_SMALL_CLOSE_OUTLINE_CLASS_NAME,
-	MENU_SMALL_CONTAINER_CLASS_NAME,
+	MENU_SMALL_CLOSE_OUTLINE_CLASS_NAME, MENU_SMALL_CONTAINER_CLASS_NAME,
 	MENU_SMALL_DRAWER_PLACEMENT,
-} from "../../../utils/const/components/menuConst";
-import { useMenu } from "../../../hooks/useMenu";
+} from "./const";
+import { useMenu } from "../useMenu";
 import {
-	handleParentStyle,
-	handleChildrenStyle,
-	handleHamburgerButtonStyle,
-} from "../../../styleLogic/menuStyleHandler";
+	getMenuParentItemStyle,
+	getMenuChildrenItemStyle,
+	getHamburgerButtonStyle,
+} from "./styleHandler";
 
 /**
  * This component represents the Menu for small screens (e.g., smartphone).
@@ -41,7 +39,7 @@ function MenuSmallScreen() {
 				shape={HAMBURGER_BUTTON_SHAPE}
 				icon={<MenuOutlined />}
 				onClick={toggleDrawer}
-				style={handleHamburgerButtonStyle(visible)}
+				style={getHamburgerButtonStyle(visible)}
 			/>
 
 			{/* Drawer for containing the Menu */}
@@ -65,7 +63,7 @@ function MenuSmallScreen() {
 							<AntMenu.Item
 								key={menuItem?.key}
 								onClick={menuItem?.onClick}
-								style={handleParentStyle(section, menuItem)}
+								style={getMenuParentItemStyle(section, menuItem)}
 							>
 								{menuItem?.title}
 							</AntMenu.Item>
@@ -78,7 +76,7 @@ function MenuSmallScreen() {
 										MENU_SMALL_CHILDREN_ITEM_CLASS_NAME
 									}
 									onClick={child?.onClick}
-									style={handleChildrenStyle(
+									style={getMenuChildrenItemStyle(
 										section,
 										child
 									)}

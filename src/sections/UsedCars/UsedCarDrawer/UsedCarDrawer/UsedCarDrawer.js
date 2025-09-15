@@ -1,14 +1,15 @@
 import { Drawer, Flex } from "antd";
 import {
-	USED_CARS_DRAWER_CLASS_NAME,
-	USED_CARS_DRAWER_HORIZONTAL_FLEX_CLASS_NAME,
-	USED_CARS_DRAWER_HORIZONTAL_FLEX_WIDTH,
-	USED_CARS_DRAWER_VERTICAL_FLEX_CLASS_NAME,
-	USED_CARS_DRAWER_VERTICAL_FLEX_WIDTH,
-} from "../../../../utils/const/sections/usedCarsConst";
-import { useUsedCarInfo } from "../../../../hooks/useUsedCarInfo";
-import { useDrawerBackButtonHandler } from "../../../../hooks/useDrawerBackButton";
-import { onUsedCarDrawerClose } from "../../../../logic/usedCarDrawerHandler";
+	USED_CAR_DRAWER_CLASS_NAME,
+	USED_CAR_DRAWER_HORIZONTAL_FLEX_CLASS_NAME,
+	USED_CAR_DRAWER_HORIZONTAL_FLEX_WIDTH,
+	USED_CAR_DRAWER_VERTICAL_FLEX_CLASS_NAME,
+	USED_CAR_DRAWER_VERTICAL_FLEX_WIDTH,
+} from "./const";
+import { useUsedCarInfo } from "./hooks/useUsedCarInfo";
+import { useDrawerBackButtonHandler } from "./hooks/useDrawerBackButton";
+import { onUsedCarDrawerClose } from "../../handler";
+import { getUsedCarDrawerCustomLoadingOutlinedStyle } from "./styleHandler";
 import UsedCarDrawerCarousel from "../UsedCarDrawerCarousel/UsedCarDrawerCarousel";
 import UsedCarDrawerInfoPanel from "../UsedCarDrawerInfoPanel/UsedCarDrawerInfoPanel";
 import CustomBackButton from "../../../../components/CustomBackButton/CustomBackButton";
@@ -41,7 +42,7 @@ function UsedCarDrawer({
 		<>
 			{/* Drawer */}
 			<Drawer
-				className={USED_CARS_DRAWER_CLASS_NAME}
+				className={USED_CAR_DRAWER_CLASS_NAME}
 				closeIcon={<CustomBackButton />}
 				onClose={() =>
 					onUsedCarDrawerClose(setIsDrawerOpen)
@@ -51,10 +52,7 @@ function UsedCarDrawer({
 				{isLoading ? (
 					// Show the loading outlined until data is being loaded
 					<CustomLoadingOutlined
-						custStyle={{
-							marginTop:
-								"var(--custom_loading_outlined_margin_top)",
-						}}
+						custStyle={getUsedCarDrawerCustomLoadingOutlinedStyle()}
 					/>
 				) : (
 					// Data loading is finished
@@ -62,17 +60,17 @@ function UsedCarDrawer({
 						{/* Flex container (to contain Info panel + Carousel) */}
 						<Flex
 							className={
-								USED_CARS_DRAWER_HORIZONTAL_FLEX_CLASS_NAME
+								USED_CAR_DRAWER_HORIZONTAL_FLEX_CLASS_NAME
 							}
-							width={USED_CARS_DRAWER_HORIZONTAL_FLEX_WIDTH}
+							width={USED_CAR_DRAWER_HORIZONTAL_FLEX_WIDTH}
 						>
 							{/* Flex vertical container (to contain only Info panel) */}
 							<Flex
 								vertical
 								className={
-									USED_CARS_DRAWER_VERTICAL_FLEX_CLASS_NAME
+									USED_CAR_DRAWER_VERTICAL_FLEX_CLASS_NAME
 								}
-								width={USED_CARS_DRAWER_VERTICAL_FLEX_WIDTH}
+								width={USED_CAR_DRAWER_VERTICAL_FLEX_WIDTH}
 							>
 								{/* Info Panel (Name, Price, Overview info,
                  CTA button and Collapse with details) */}

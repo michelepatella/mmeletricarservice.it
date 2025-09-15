@@ -28,7 +28,7 @@
 /* Home Title styles */
 .home-title {
 	margin-bottom: var(--home_title_margin_bottom);
-	color: var(--accent_color);
+	color: var(--accent-color);
 	opacity: 0;
 	animation: slideUpHomeAnimation 1s ease forwards;
 	animation-delay: var(--home_title_animation_delay);
@@ -38,7 +38,7 @@
 .home-subtitle {
 	font-family: "Dancing Script";
 	margin-top: var(--home_subtitle_margin_top);
-	color: var(--text_color);
+	color: var(--white-color);
 	opacity: 0;
 	animation: slideUpHomeAnimation 1s ease forwards;
 	animation-delay: var(--home_subtitle_animation_delay);
@@ -47,12 +47,12 @@
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
 	.home-title {
-		font-size: var(--home_title_font_size_big);
+		font-size: var(--font-size-home-title-big);
 	}
 
 	.home-subtitle {
 		font-size: calc(
-			var(--home_subtitle_font_size_big) * 1.5
+			var(--font-size-home-subtitle-big) * 1.5
 		);
 	}
 
@@ -64,12 +64,12 @@
 /* ------ Medium screen landscape ------- */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 	.home-title {
-		font-size: var(--home_title_font_size_medium);
+		font-size: var(--font-size-home-title-medium);
 	}
 
 	.home-subtitle {
 		font-size: calc(
-			var(--home_subtitle_font_size_medium) * 2.4
+			var(--font-size-home-subtitle-medium) * 2.4
 		);
 	}
 
@@ -81,12 +81,12 @@
 /* ------ Medium screen portrait ------- */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 	.home-title {
-		font-size: var(--home_title_font_size_medium);
+		font-size: var(--font-size-home-title-medium);
 	}
 
 	.home-subtitle {
 		font-size: calc(
-			var(--home_subtitle_font_size_medium) * 2.4
+			var(--font-size-home-subtitle-medium) * 2.4
 		);
 	}
 
@@ -98,12 +98,12 @@
 /* ------ Small screen portrait ------- */
 @media (max-width: 767px) and (orientation: portrait) {
 	.home-title {
-		font-size: var(--home_title_font_size_small);
+		font-size: var(--font-size-home-title-small);
 	}
 
 	.home-subtitle {
 		font-size: calc(
-			var(--home_subtitle_font_size_small) * 1.5
+			var(--font-size-home-subtitle-small) * 1.5
 		);
 	}
 
@@ -115,12 +115,12 @@
 /* ------ Small screen landscape ------- */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 	.home-title {
-		font-size: var(--home_title_font_size_small);
+		font-size: var(--font-size-home-title-small);
 	}
 
 	.home-subtitle {
 		font-size: calc(
-			var(--home_subtitle_font_size_small) * 1.8
+			var(--font-size-home-subtitle-small) * 1.8
 		);
 	}
 

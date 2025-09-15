@@ -1,22 +1,19 @@
 import React from "react";
-import { CUSTOM_TEXT_TYPES } from "../../utils/const/components/customTextConst";
 import {
 	GOOGLE_MAPS_CONTAINER_CLASS_NAME,
 	GOOGLE_MAPS_IFRAME_CLASS_NAME,
 	GOOGLE_MAPS_IFRAME_TITLE,
 	GOOGLE_MAPS_LINK,
 	GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
-	WHERE_WE_ARE_SECTION_ID,
 	WHERE_WE_ARE_TITLE,
 	WORKING_HOURS_DESCRIPTION,
 	WORKING_HOURS_TITLE,
-} from "../../utils/const/sections/whereWeAreConst";
-import { SITE } from "../../utils/const/other/companyConst";
-import { DOTTED_BACKGROUND_IMAGE_LINK } from "../../utils/internalLinks";
+} from "./const";
+import { CUSTOM_TEXT_TYPES, DOTTED_BACKGROUND_IMAGE_LINK, SITE, WHERE_WE_ARE_SECTION_ID } from "../../utils/const";
 import {
-	handleGoogleMapsContainerStyle,
-	handleGoogleMapsUnavailableDescriptionStyle,
-} from "../../styleLogic/whereWeAreStyleHandler";
+	getGoogleMapsContainerStyle,
+	getGoogleMapsUnavailableDescriptionStyle,
+} from "./styleHandler";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import BackgroundContainer from "../../components/BackgroundContainer/BackgroundContainer";
 import CustomText from "../../components/CustomText/CustomText";
@@ -85,13 +82,13 @@ function WhereWeAre(props) {
 					// Google Maps frame cannot be shown
 					<div
 						className={GOOGLE_MAPS_CONTAINER_CLASS_NAME}
-						style={handleGoogleMapsContainerStyle()}
+						style={getGoogleMapsContainerStyle()}
 					>
 						{/* Google Maps unavailable description */}
 						<CustomText
 							type={CUSTOM_TEXT_TYPES.CAPTION}
 							text={GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION}
-							style={handleGoogleMapsUnavailableDescriptionStyle()}
+							style={getGoogleMapsUnavailableDescriptionStyle()}
 						/>
 					</div>
 				)}

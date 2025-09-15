@@ -2,13 +2,13 @@
 .contacts-footer {
 	width: var(--contacts_footer_width);
 	padding: var(--contacts_footer_padding);
-	color: var(--text_color);
-	background-color: var(--background_color);
+	color: var(--white-color);
+	background-color: var(--background-color);
 }
 
 /* Contacts Footer text styles */
 .contacts-footer-text {
-	font-size: var(--caption_text_font_size);
+	font-size: var(--font-size-caption);
 }
 
 /* ------ Big screen ------- */

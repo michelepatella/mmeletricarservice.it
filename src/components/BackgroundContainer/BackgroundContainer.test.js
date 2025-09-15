@@ -2,7 +2,7 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import BackgroundContainer from "./BackgroundContainer";
-import { handleContainerStyle } from "../../styleLogic/backgroundContainerStyleHandler";
+import { getBackgroundContainerStyle } from "./styleHandler";
 
 // Mock IntersectionObserver
 beforeAll(() => {
@@ -22,7 +22,7 @@ const childrenContent = <div>Children Content</div>;
 const imageUrl = "image-url";
 const custStyle = { color: "red" };
 const combinedStyle = {
-	...handleContainerStyle(imageUrl),
+	...getBackgroundContainerStyle(imageUrl),
 	...custStyle,
 };
 

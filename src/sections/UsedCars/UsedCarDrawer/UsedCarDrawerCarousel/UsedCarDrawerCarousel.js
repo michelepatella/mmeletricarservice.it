@@ -1,7 +1,9 @@
 import React from "react";
 import { Carousel, Image } from "antd";
-import { USED_CARS_DRAWER_CAROUSEL_CONTAINER_CLASS_NAME } from "../../../../utils/const/sections/usedCarsConst";
-import { NO_USED_CAR_IMAGE_AVAILABLE_LINK } from "../../../../utils/internalLinks";
+import {
+	NO_USED_CAR_IMAGE_AVAILABLE_LINK,
+	USED_CAR_DRAWER_CAROUSEL_CONTAINER_CLASS_NAME,
+} from "./const";
 
 /**
  * This component represents the carousel used for
@@ -15,7 +17,7 @@ function UsedCarDrawerCarousel(props) {
 	return (
 		<div
 			className={
-				USED_CARS_DRAWER_CAROUSEL_CONTAINER_CLASS_NAME
+				USED_CAR_DRAWER_CAROUSEL_CONTAINER_CLASS_NAME
 			}
 		>
 			{/* Carousel */}

@@ -1,4 +1,4 @@
-import { CUSTOM_LINK_CLASS_NAME } from "../../utils/const/components/customLinkConst";
+import { CUSTOM_LINK_CLASS_NAME } from "./const";
 
 /**
  * This component represents the custom link used

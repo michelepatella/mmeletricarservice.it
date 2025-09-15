@@ -14,9 +14,9 @@
 
 /* Collapse Header and its text styles */
 .ant-collapse-header-text {
-	color: var(--text_color) !important;
+	color: var(--white-color) !important;
 	font-weight: bold;
-	font-family: var(--font_family);
+	font-family: var(--font-family);
 }
 
 .ant-collapse-header {
@@ -30,8 +30,8 @@
 /* Collapse content styles */
 .ant-collapse-content-box,
 .ant-collapse-content {
-	color: var(--text_color);
-	font-family: var(--font_family);
+	color: var(--white-color);
+	font-family: var(--font-family);
 	border: none !important;
 	border-left: var(
 			--used_car_drawer_collapse_content_border_left
@@ -62,20 +62,20 @@
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
 	.ant-collapse-header-text {
-		font-size: var(--body_font_size_big);
+		font-size: var(--font-size-body-big);
 	}
 }
 
 /* ------ Medium screen (portrait and landscape) ------ */
 @media (min-width: 768px) and (max-width: 1024px) {
 	.ant-collapse-header-text {
-		font-size: var(--body_font_size_medium);
+		font-size: var(--font-size-body-medium);
 	}
 }
 
 /* ------ Small screen (portrait and landscape) ------ */
 @media (max-width: 767px) {
 	.ant-collapse-header-text {
-		font-size: var(--body_font_size_small);
+		font-size: var(--font-size-body-small);
 	}
 }

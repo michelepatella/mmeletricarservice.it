@@ -1,4 +1,4 @@
-import { CUSTOM_BLOCK_QUOTE_CLASS_NAME } from "../../utils/const/components/customBlockQuoteConst";
+import { CUSTOM_BLOCK_QUOTE_CLASS_NAME } from "./const";
 
 /**
  * This component defines the custom block quote

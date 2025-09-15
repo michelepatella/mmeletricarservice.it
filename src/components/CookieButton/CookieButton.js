@@ -3,8 +3,8 @@ import { Button } from "antd";
 import {
 	COOKIE_BUTTON_ARIA_LABEL,
 	COOKIE_BUTTON_CLASS_NAME,
-} from "../../utils/const/components/cookieConst";
-import { handleCookieButtonClick } from "../../logic/cookieButtonHandler";
+} from "./const";
+import { onCookieButtonClick } from "./handler";
 
 /**
  * This component defines the cookie button displayed
@@ -21,7 +21,7 @@ function CookieButton({ setIsCookiesBannerVisible }) {
 			className={COOKIE_BUTTON_CLASS_NAME}
 			aria-label={COOKIE_BUTTON_ARIA_LABEL}
 			onClick={() =>
-				handleCookieButtonClick(setIsCookiesBannerVisible)
+				onCookieButtonClick(setIsCookiesBannerVisible)
 			}
 		/>
 	);

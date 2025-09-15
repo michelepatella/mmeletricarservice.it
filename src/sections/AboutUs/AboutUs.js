@@ -1,11 +1,11 @@
 import React from "react";
-import { CUSTOM_TEXT_TYPES } from "../../utils/const/components/customTextConst";
 import {
+	ABOUT_US_BACKGROUND_IMAGE_LINK,
 	ABOUT_US_DESCRIPTION,
-	ABOUT_US_SECTION_ID,
 	ABOUT_US_TITLE,
-} from "../../utils/const/sections/aboutUsConst";
-import { ABOUT_US_BACKGROUND_IMAGE_LINK } from "../../utils/internalLinks";
+} from "./const";
+import { ABOUT_US_SECTION_ID, CUSTOM_TEXT_TYPES } from "../../utils/const";
+import { getAboutUsSectionContainerStyle } from "./styleHandler";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import BackgroundContainer from "../../components/BackgroundContainer/BackgroundContainer";
 import CustomText from "../../components/CustomText/CustomText";
@@ -23,7 +23,7 @@ function AboutUs() {
 		>
 			<SectionContainer
 				id={ABOUT_US_SECTION_ID}
-				custStyle={{ height: "var(--about_us_height)" }}
+				custStyle={getAboutUsSectionContainerStyle()}
 			>
 				{/* About us section title */}
 				<CustomText

@@ -1,20 +1,16 @@
 import { useState } from "react";
 import { Flex } from "antd";
-import { CUSTOM_TEXT_TYPES } from "../../../utils/const/components/customTextConst";
+import { CUSTOM_TEXT_TYPES } from "../../../utils/const";
 import {
-	PRICE_CURRENCY,
-	PRICE_LOCALES,
-	PRICE_STYLE,
-	USED_CARS_CARD_CLASS_NAME,
-	USED_CARS_CARD_OVERVIEW_FLEX_CONTAINER_CLASS_NAME,
-	USED_CARS_CARD_PRESENTATION_IMAGE_ALT,
-	USED_CARS_CARD_PRESENTATION_IMAGE_CONTAINER_CLASS_NAME,
-	USED_CARS_CARD_PRICE_CONTAINER_CLASS_NAME,
-	USED_CARS_CARD_TYPE,
-	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION,
-} from "../../../utils/const/sections/usedCarsConst";
-import { onUsedCarDrawerOpen } from "../../../logic/usedCarDrawerHandler";
-import { useOpenDrawerByLink } from "../../../hooks/useOpenDrawerByLink";
+	USED_CAR_CARD_CLASS_NAME,
+	USED_CAR_CARD_OVERVIEW_FLEX_CONTAINER_CLASS_NAME,
+	USED_CAR_CARD_PRESENTATION_IMAGE_ALT,
+	USED_CAR_CARD_PRESENTATION_IMAGE_CONTAINER_CLASS_NAME,
+	USED_CAR_CARD_PRICE_CONTAINER_CLASS_NAME, USED_CAR_CARD_TYPE, USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION,
+} from "./const";
+import { PRICE_CURRENCY, PRICE_LOCALES, PRICE_STYLE } from "../const";
+import { onUsedCarDrawerOpen } from "../handler";
+import { useOpenUsedCarDrawerFromUrl } from "./useOpenUsedCarDrawerFromUrl";
 import UsedCarDrawer from "../UsedCarDrawer/UsedCarDrawer/UsedCarDrawer";
 import CustomText from "../../../components/CustomText/CustomText";
 import UsedCarOverview from "../UsedCarOverview/UsedCarOverview";
@@ -38,7 +34,7 @@ function UsedCarCard(props) {
 
 	// To check if the current used cars has been requested
 	// externally, so that the drawer will be automatically open
-	useOpenDrawerByLink(
+	useOpenUsedCarDrawerFromUrl(
 		setIsDrawerOpen,
 		props.usedCarOverview?.id?.toString()
 	);
@@ -46,8 +42,8 @@ function UsedCarCard(props) {
 	return (
 		<>
 			<button
-				className={USED_CARS_CARD_CLASS_NAME}
-				type={USED_CARS_CARD_TYPE}
+				className={USED_CAR_CARD_CLASS_NAME}
+				type={USED_CAR_CARD_TYPE}
 				onClick={() =>
 					onUsedCarDrawerOpen(
 						setIsDrawerOpen,
@@ -58,13 +54,13 @@ function UsedCarCard(props) {
 				{/* Presentation image (if any, informative text otherwise) */}
 				<div
 					className={
-						USED_CARS_CARD_PRESENTATION_IMAGE_CONTAINER_CLASS_NAME
+						USED_CAR_CARD_PRESENTATION_IMAGE_CONTAINER_CLASS_NAME
 					}
 				>
 					{props.usedCarOverview?.image ? (
 						<img
 							src={props.usedCarOverview?.image}
-							alt={USED_CARS_CARD_PRESENTATION_IMAGE_ALT}
+							alt={USED_CAR_CARD_PRESENTATION_IMAGE_ALT}
 							loading="lazy"
 						/>
 					) : (
@@ -79,7 +75,7 @@ function UsedCarCard(props) {
 				{/* Flex container to show car's information */}
 				<Flex
 					className={
-						USED_CARS_CARD_OVERVIEW_FLEX_CONTAINER_CLASS_NAME
+						USED_CAR_CARD_OVERVIEW_FLEX_CONTAINER_CLASS_NAME
 					}
 				>
 					{/* Name of the car */}
@@ -97,7 +93,7 @@ function UsedCarCard(props) {
 					{/* Car price (in Euro) */}
 					<div
 						className={
-							USED_CARS_CARD_PRICE_CONTAINER_CLASS_NAME
+							USED_CAR_CARD_PRICE_CONTAINER_CLASS_NAME
 						}
 					>
 						<CustomText

@@ -1,26 +1,25 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { CUSTOM_TEXT_TYPES } from "../../utils/const/components/customTextConst";
 import {
-	ALL_SERVICES,
-	SERVICES_CONTAINER_CLASS_NAME,
-	SERVICES_SECTION_ID,
+	ALL_SERVICES, SERVICES_BACKGROUND_IMAGE_LINK, SERVICES_CONTAINER_CLASS_NAME,
 	SERVICES_TITLE,
 	SERVICES_TITLE_ANIMATION_THRESHOLD,
 	SERVICES_TITLE_ANIMATION_TRIGGER_ONCE,
-} from "../../utils/const/sections/servicesConst";
-import { HORIZONTAL_SCROLL_LABEL } from "../../utils/const/sections/generalSectionConst";
-import { SERVICES_BACKGROUND_IMAGE_LINK } from "../../utils/internalLinks";
-import { useServiceTitleAnimation } from "../../hooks/useServiceTitleAnimation";
+} from "./const";
 import {
-	handleSpanTitleStyle,
-	handleTitleStyle,
-} from "../../styleLogic/servicesStyleHandler";
-import { handleScrollLabelStyle } from "../../styleLogic/usedCarsStyleHandler";
+	CUSTOM_TEXT_TYPES,
+	SERVICES_SECTION_ID,
+} from "../../utils/const";
+import { useServiceTitleAnimation } from "./useServiceTitleAnimation";
+import {
+	getServicesTitleSpanStyle,
+	getServicesTitleStyle,
+} from "./styleHandler";
 import BackgroundContainer from "../../components/BackgroundContainer/BackgroundContainer";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import InfoCard from "../../components/InfoCard/InfoCard";
 import CustomText from "../../components/CustomText/CustomText";
+import HorizontalScrollLabel from "../../components/HorizontalScrollLabel/HorizontalScrollLabel";
 
 /**
  * This section represents Services section. The
@@ -68,7 +67,7 @@ function Services() {
 								const isActive = index === activeIndex;
 								return (
 									'<span style="' +
-									handleSpanTitleStyle(title) +
+									getServicesTitleSpanStyle(title) +
 									'">' +
 									displayedWords[index] +
 									(isActive ? "|" : "") +
@@ -76,7 +75,7 @@ function Services() {
 								);
 							}).join("")
 						}
-						style={handleTitleStyle()}
+						style={getServicesTitleStyle()}
 					/>
 				</div>
 
@@ -101,11 +100,7 @@ function Services() {
 
 				{/* Label indicating the user to scroll the
 				 services horizontally in order to explore them */}
-				<CustomText
-					type={CUSTOM_TEXT_TYPES.BODY}
-					text={HORIZONTAL_SCROLL_LABEL}
-					style={handleScrollLabelStyle(true)}
-				/>
+				<HorizontalScrollLabel />
 			</SectionContainer>
 		</BackgroundContainer>
 	);

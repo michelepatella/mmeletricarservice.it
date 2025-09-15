@@ -1,35 +1,31 @@
 import React, { useRef } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import {
-	CUSTOM_TEXT_TYPES as CUSTOMTEXT_TYPES,
 	CUSTOM_TEXT_TYPES,
-} from "../../../utils/const/components/customTextConst";
+	DOTTED_BACKGROUND_IMAGE_LINK,
+	USED_CARS_SECTION_ID,
+} from "../../../utils/const";
 import {
 	USED_CARS_ANIMATION_Y_FINAL_POSITION,
 	USED_CARS_CONTAINER_CLASS_NAME,
-	USED_CARS_SECTION_ID,
 	USED_CARS_TITLE,
-	USED_CARS_UNAVAILABLE_DESCRIPTION,
 	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION_ALT,
-	USED_CARS_UNAVAILALE_CONTAINER_CLASS_NAME,
-} from "../../../utils/const/sections/usedCarsConst";
-import { HORIZONTAL_SCROLL_LABEL } from "../../../utils/const/sections/generalSectionConst";
+	USED_CARS_UNAVAILABLE_DESCRIPTION,
+	USED_CARS_UNAVAILALE_CONTAINER_CLASS_NAME, NO_USED_CAR_AVAILABLE_IMAGE_LINK,
+} from "./const";
+import { useUsedCarsOverview } from "./hooks/useUsedCarsOverview";
+import { useUsedCarsScroll } from "./hooks/useUsedCarsScroll";
 import {
-	DOTTED_BACKGROUND_IMAGE_LINK,
-	NO_USED_CAR_AVAILABLE_IMAGE_LINK,
-} from "../../../utils/internalLinks";
-import { useUsedCarsOverview } from "../../../hooks/useUsedCarsOverview";
-import { useUsedCarsScroll } from "../../../hooks/useUsedCarsScroll";
-import {
-	handleAnimatedDivStyle,
-	handleScrollLabelStyle,
-	handleUnavailableUsedCarDescriptionStyle,
-} from "../../../styleLogic/usedCarsStyleHandler";
+	getUsedCarsUnavailableDescriptionStyle,
+	getUsedCarsAnimatedDivStyle,
+	getUsedCarsCustomLoadingOutlineStyle,
+} from "./styleHandler";
 import SectionContainer from "../../../components/SectionContainer/SectionContainer";
 import BackgroundContainer from "../../../components/BackgroundContainer/BackgroundContainer";
 import UsedCarCard from "../UsedCarCard/UsedCarCard";
 import CustomText from "../../../components/CustomText/CustomText";
 import CustomLoadingOutlined from "../../../components/CustomLoadingOutlined/CustomLoadingOutlined";
+import HorizontalScrollLabel from "../../../components/HorizontalScrollLabel/HorizontalScrollLabel";
 
 /**
  * This component represents the Used car section.
@@ -70,10 +66,7 @@ function UsedCars() {
 				data is loading) */}
 				{isLoading && (
 					<CustomLoadingOutlined
-						custStyle={{
-							marginLeft:
-								"var(--custom_loading_outlined_margin_left)",
-						}}
+						custStyle={getUsedCarsCustomLoadingOutlineStyle()}
 					/>
 				)}
 
@@ -84,7 +77,7 @@ function UsedCars() {
 						 cars card, used to animate them when
 						 scrolling the section */}
 						<animated.div
-							style={handleAnimatedDivStyle(
+							style={getUsedCarsAnimatedDivStyle(
 								containerStyles
 							)}
 						>
@@ -104,11 +97,7 @@ function UsedCars() {
 							{/* Label indicating the user to scroll
 							 the section horizontally, in order to
 							 explore all the used cars */}
-							<CustomText
-								type={CUSTOMTEXT_TYPES.BODY}
-								text={HORIZONTAL_SCROLL_LABEL}
-								style={handleScrollLabelStyle(true)}
-							/>
+							<HorizontalScrollLabel />
 						</animated.div>
 					</>
 				)}
@@ -128,7 +117,7 @@ function UsedCars() {
 							<CustomText
 								type={CUSTOM_TEXT_TYPES.BODY}
 								text={USED_CARS_UNAVAILABLE_DESCRIPTION}
-								style={handleUnavailableUsedCarDescriptionStyle()}
+								style={getUsedCarsUnavailableDescriptionStyle()}
 							/>
 
 							{/* Empty used cars store image */}

@@ -4,13 +4,17 @@ import {
 	MinusOutlined,
 	PlusOutlined,
 } from "@ant-design/icons";
-import { CUSTOM_TEXT_TYPES } from "../../../../utils/const/components/customTextConst";
+import { CUSTOM_TEXT_TYPES } from "../../../../utils/const";
 import {
 	ALL_USED_CAR_INFO,
-	USED_CARS_DRAWER_COLLAPSE_CLASS_NAME,
-	USED_CARS_DRAWER_COLLAPSE_INNER_LIST_CLASS_NAME,
-	USED_CARS_DRAWER_COLLAPSE_OUTER_LIST_CLASS_NAME,
-} from "../../../../utils/const/sections/usedCarsConst";
+	USED_CAR_DRAWER_COLLAPSE_CLASS_NAME,
+	USED_CAR_DRAWER_COLLAPSE_INNER_LIST_CLASS_NAME,
+	USED_CAR_DRAWER_COLLAPSE_OUTER_LIST_CLASS_NAME,
+} from "./const";
+import {
+	getUsedCarDrawerCollapseInformationNameStyle,
+	getUsedCarDrawerCollapseInformationTextStyle,
+} from "./styleHandler";
 import CustomText from "../../../../components/CustomText/CustomText";
 
 /**
@@ -24,7 +28,7 @@ import CustomText from "../../../../components/CustomText/CustomText";
 function UsedCarDrawerCollapse(props) {
 	return (
 		<Collapse
-			className={USED_CARS_DRAWER_COLLAPSE_CLASS_NAME}
+			className={USED_CAR_DRAWER_COLLAPSE_CLASS_NAME}
 			accordion
 			expandIcon={({ isActive }) =>
 				isActive ? <MinusOutlined /> : <PlusOutlined />
@@ -39,23 +43,21 @@ function UsedCarDrawerCollapse(props) {
 						// to a specific category via list
 						<li
 							className={
-								USED_CARS_DRAWER_COLLAPSE_OUTER_LIST_CLASS_NAME
+								USED_CAR_DRAWER_COLLAPSE_OUTER_LIST_CLASS_NAME
 							}
 						>
 							{children?.map((item) => (
 								<ul
 									key={item?.name}
 									className={
-										USED_CARS_DRAWER_COLLAPSE_INNER_LIST_CLASS_NAME
+										USED_CAR_DRAWER_COLLAPSE_INNER_LIST_CLASS_NAME
 									}
 								>
 									{/* Information name */}
 									<CustomText
 										type={CUSTOM_TEXT_TYPES.BODY}
 										text={item?.title}
-										style={{
-											marginBottom: 0,
-										}}
+										style={getUsedCarDrawerCollapseInformationNameStyle()}
 										disableAnimation
 									/>
 
@@ -65,9 +67,7 @@ function UsedCarDrawerCollapse(props) {
 										text={
 											props.usedCarInfo?.[item?.name] || "-"
 										}
-										style={{
-											marginTop: 0,
-										}}
+										style={getUsedCarDrawerCollapseInformationTextStyle()}
 									/>
 								</ul>
 							))}

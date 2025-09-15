@@ -2,7 +2,9 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import CustomBackButton from "./CustomBackButton";
-import { USED_CARS_DRAWER_BACK_BUTTON_LABEL } from "../../utils/const/sections/usedCarsConst";
+
+
+import { CUSTOM_BACK_BUTTON_LABEL } from "./const";
 
 // Definition of expected results
 const backButtonLabel = "Back Button Label";
@@ -59,7 +61,7 @@ describe("CustomBackButton", () => {
 			render(<CustomBackButton />);
 
 			expect(
-				screen.getByText(USED_CARS_DRAWER_BACK_BUTTON_LABEL)
+				screen.getByText(CUSTOM_BACK_BUTTON_LABEL)
 			).toBeInTheDocument();
 		});
 
@@ -69,7 +71,7 @@ describe("CustomBackButton", () => {
 
 			expect(
 				screen
-					.getByText(USED_CARS_DRAWER_BACK_BUTTON_LABEL)
+					.getByText(CUSTOM_BACK_BUTTON_LABEL)
 					.getAttribute("data-type")
 			).toBe(customTextType);
 		});
@@ -80,7 +82,7 @@ describe("CustomBackButton", () => {
 
 			expect(
 				screen
-					.getByText(USED_CARS_DRAWER_BACK_BUTTON_LABEL)
+					.getByText(CUSTOM_BACK_BUTTON_LABEL)
 					.getAttribute("data-animation")
 			).toBeTruthy();
 		});

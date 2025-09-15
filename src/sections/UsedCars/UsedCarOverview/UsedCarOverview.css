@@ -4,10 +4,10 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	opacity: var(--low_opacity);
 }
 
 /* Used cars overview info icon styles */
 .used-car-overview-container img {
-	opacity: var(--low_opacity);
 	margin-bottom: var(--used_car_overview_text_margin_top);
 }

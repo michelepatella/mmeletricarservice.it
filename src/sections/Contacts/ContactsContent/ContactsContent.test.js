@@ -54,7 +54,7 @@ const mockPhoneHandler = jest.fn();
 const mockEmailHandler = jest.fn();
 const mockEmailPecHandler = jest.fn();
 const mockFacebookHandler = jest.fn();
-jest.mock("../../../logic/contactButtonHandler", () => ({
+jest.mock("../../../utils/contactHandlers", () => ({
 	contactClickHandler: {
 		Phone: (...args) => mockPhoneHandler(...args),
 		Email: (...args) => mockEmailHandler(...args),

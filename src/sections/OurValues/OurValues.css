@@ -1,14 +1,14 @@
 /* Our values steps styles */
 .our-values-steps {
-	font-family: var(--font_family);
+	font-family: var(--font-family);
 	padding: 0 !important;
 }
 
 .ant-steps-item-icon,
 .ant-steps-icon-dot,
 .ant-steps-item-tail::after {
-	background-color: var(--accent_color) !important;
-	color: var(--accent_color) !important;
+	background-color: var(--accent-color) !important;
+	color: var(--accent-color) !important;
 }
 
 .ant-steps-item-description,
@@ -21,7 +21,7 @@
 	.ant-steps-item-title,
 	.ant-steps-item-title.in-view {
 		margin-top: calc(
-			var(--subheading_font_size_big) * -1.5
+			var(--font-size-subheading-big) * -1.5
 		) !important;
 	}
 }
@@ -31,7 +31,7 @@
 	.ant-steps-item-title,
 	.ant-steps-item-title.in-view {
 		margin-top: calc(
-			var(--subheading_font_size_medium) * -1.5
+			var(--font-size-subheading-medium) * -1.5
 		) !important;
 	}
 }
@@ -41,7 +41,7 @@
 	.ant-steps-item-title,
 	.ant-steps-item-title.in-view {
 		margin-top: calc(
-			var(--subheading_font_size_small) * -1.2
+			var(--font-size-subheading-small) * -1.2
 		) !important;
 	}
 }

@@ -6,9 +6,9 @@
 	right: var(--float_button_margins);
 	position: fixed;
 	z-index: var(--cookie_button_z_index);
-	border-radius: var(--cookie_button_border_radius);
+	border-radius: var(--border-radius-cookie-button);
 	border: none;
-	background-color: var(--blue_color);
+	background-color: var(--blue-color);
 	background-image: url("../../../public/icons/cookie_icon.svg");
 	background-repeat: no-repeat;
 	background-position: center;
@@ -20,10 +20,10 @@
 	position: fixed;
 	z-index: var(--cookie_button_z_index) !important;
 	border-radius: var(
-		--cookie_button_border_radius
+		--border-radius-cookie-button
 	) !important;
 	border: none !important;
-	background-color: var(--blue_color) !important;
+	background-color: var(--blue-color) !important;
 	background-image: url("../../../public/icons/cookie_icon.svg") !important;
 	background-repeat: no-repeat !important;
 	background-position: center !important;

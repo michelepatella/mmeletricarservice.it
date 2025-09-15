@@ -1,12 +1,12 @@
 import { Flex } from "antd";
-import { CUSTOM_TEXT_TYPES } from "../../utils/const/components/customTextConst";
 import {
 	INFO_CARD_CLASS_NAME,
 	INFO_CARD_FLEX_CLASS_NAME,
 	INFO_CARD_ICON_ALT,
 	INFO_CARD_ICON_CLASS_NAME,
-} from "../../utils/const/components/infoCardConst";
-import { handleDescriptionStyle } from "../../styleLogic/infoCardStyleHandler";
+} from "./const";
+import { CUSTOM_TEXT_TYPES } from "../../utils/const";
+import { getInfoCardDescriptionStyle } from "./styleHandler";
 import CustomText from "../CustomText/CustomText";
 
 /**
@@ -45,7 +45,7 @@ function InfoCard(props) {
 				<CustomText
 					type={CUSTOM_TEXT_TYPES.BODY}
 					text={props.description}
-					style={handleDescriptionStyle()}
+					style={getInfoCardDescriptionStyle()}
 					disableAnimation
 				/>
 			</div>

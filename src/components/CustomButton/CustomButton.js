@@ -3,7 +3,7 @@ import {
 	CUSTOM_BUTTON_ICON_ALT,
 	CUSTOM_BUTTON_TYPE,
 	CUSTOM_BUTTON_TYPES,
-} from "../../utils/const/components/customButtonConst";
+} from "./const";
 
 /**
  * This component defines a custom button

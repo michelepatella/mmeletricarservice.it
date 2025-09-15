@@ -6,7 +6,8 @@ import {
 	fireEvent,
 } from "@testing-library/react";
 import HomeHeader from "./HomeHeader";
-import { homeHeaderContactButtons } from "../../../logic/contactButtonHandler";
+
+import { HOME_HEADER_CONTACT_BUTTONS } from "./const";
 
 const customIconButtonTestId = "custom-button";
 
@@ -29,7 +30,7 @@ jest.mock(
 );
 
 // Mock contact buttons
-jest.mock("../../../logic/contactButtonHandler", () => ({
+jest.mock("../../../utils/contactHandlers", () => ({
 	homeHeaderContactButtons: [
 		{ src: "email", onClick: jest.fn() },
 		{ src: "facebook", onClick: jest.fn() },
@@ -53,7 +54,7 @@ describe("HomeHeader", () => {
 			customIconButtonTestId
 		);
 		expect(contactButtons.length).toBe(
-			homeHeaderContactButtons.length
+			HOME_HEADER_CONTACT_BUTTONS.length
 		);
 	});
 
@@ -65,7 +66,7 @@ describe("HomeHeader", () => {
 		const contactButtons = screen.getAllByTestId(
 			customIconButtonTestId
 		);
-		homeHeaderContactButtons.forEach(({ src }, index) => {
+		HOME_HEADER_CONTACT_BUTTONS.forEach(({ src }, index) => {
 			expect(contactButtons[index]).toHaveTextContent(src);
 		});
 	});
@@ -84,7 +85,7 @@ describe("HomeHeader", () => {
 		contactButtons.forEach((button) =>
 			fireEvent.click(button)
 		);
-		homeHeaderContactButtons.forEach((btn) => {
+		HOME_HEADER_CONTACT_BUTTONS.forEach((btn) => {
 			expect(btn.onClick).toHaveBeenCalled();
 		});
 	});

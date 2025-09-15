@@ -1,12 +1,12 @@
 import { Flex } from "antd";
-import { CUSTOM_TEXT_TYPES } from "../../../utils/const/components/customTextConst";
+import { CUSTOM_TEXT_TYPES } from "../../../utils/const";
 import {
-	ALL_USED_CAR_OVERVIEW,
-	USED_CARS_OVERVIEW_CONTAINER_CLASS_NAME,
-	USED_CARS_OVERVIEW_CONTAINER_GAP,
-	USED_CARS_OVERVIEW_ICON_ALT,
-} from "../../../utils/const/sections/usedCarsConst";
-import { handleTextOverviewStyle } from "../../../styleLogic/usedCarsStyleHandler";
+	ALL_USED_CAR_OVERVIEW_INFO,
+	USED_CAR_OVERVIEW_CONTAINER_CLASS_NAME,
+	USED_CAR_OVERVIEW_CONTAINER_GAP,
+	USED_CAR_OVERVIEW_ICON_ALT,
+} from "./const";
+import { getUsedCarOverviewTextStyle } from "./styleHandler";
 import CustomText from "../../../components/CustomText/CustomText";
 
 /**
@@ -22,22 +22,22 @@ import CustomText from "../../../components/CustomText/CustomText";
 function UsedCarOverview(props) {
 	return (
 		<>
-			{ALL_USED_CAR_OVERVIEW?.map((info, index) => (
+			{ALL_USED_CAR_OVERVIEW_INFO?.map((info, index) => (
 				// Add each used car overview information
 				<div
 					key={info.name + "-" + index}
 					className={
-						USED_CARS_OVERVIEW_CONTAINER_CLASS_NAME
+						USED_CAR_OVERVIEW_CONTAINER_CLASS_NAME
 					}
 				>
 					{/* Global Flex container (vertical) */}
 					<Flex vertical>
 						{/* Flex container (horizontal) */}
-						<Flex gap={USED_CARS_OVERVIEW_CONTAINER_GAP}>
+						<Flex gap={USED_CAR_OVERVIEW_CONTAINER_GAP}>
 							{/* Icon */}
 							<img
 								src={info?.icon}
-								alt={USED_CARS_OVERVIEW_ICON_ALT}
+								alt={USED_CAR_OVERVIEW_ICON_ALT}
 							/>
 
 							{/* Info title, if it needs to be shown, otherwise show the text only*/}
@@ -50,7 +50,7 @@ function UsedCarOverview(props) {
 											"-"
 								}
 								disableAnimation
-								style={handleTextOverviewStyle(
+								style={getUsedCarOverviewTextStyle(
 									props.showTitle
 								)}
 							/>
@@ -64,7 +64,7 @@ function UsedCarOverview(props) {
 									props.usedCarOverview?.[info?.name] || "-"
 								}
 								disableAnimation
-								style={handleTextOverviewStyle(false)}
+								style={getUsedCarOverviewTextStyle(false)}
 							/>
 						)}
 					</Flex>

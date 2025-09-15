@@ -1,7 +1,7 @@
 import {
-	CUSTOM_ICON_BUTTON_ALT,
+	CUSTOM_ICON_BUTTON_IMAGE_ALT,
 	CUSTOM_ICON_BUTTON_CLASS_NAME,
-} from "../../utils/const/components/customIconButtonConst";
+} from "./const";
 
 /**
  * This component defines a custom icon button, which
@@ -17,7 +17,7 @@ function CustomIconButton(props) {
 			onClick={props.onClick}
 		>
 			{/* Icon of the button */}
-			<img src={props.src} alt={CUSTOM_ICON_BUTTON_ALT} />
+			<img src={props.src} alt={CUSTOM_ICON_BUTTON_IMAGE_ALT} />
 		</button>
 	);
 }

@@ -1,12 +1,12 @@
 /* Used cars card styles */
-.used-cars-card {
-	font-family: var(--font_family);
+.used-car-card {
+	font-family: var(--font-family);
 	width: var(--used_car_card_width);
 	padding: var(--used_car_card_padding);
-	background: var(--background_color);
+	background: var(--background-color);
 	border: none;
-	border-radius: var(--border_radius);
-	box-shadow: var(--used_car_card_box_shadow);
+	border-radius: var(--border-radius);
+	box-shadow: var(--used-car-card-box-shadow);
 	flex-shrink: var(--used_car_card_flex_shrink);
 	scroll-snap-align: center;
 	cursor: pointer;
@@ -15,8 +15,8 @@
 		transform 0.3s ease;
 }
 
-/* Used cars image presentation container styles */
-.used-cars-card-image-container {
+/* Used car image presentation container styles */
+.used-car-card-image-container {
 	width: var(--used_car_card_image_container_width);
 	display: flex;
 	justify-content: center;
@@ -24,23 +24,23 @@
 	overflow: hidden;
 }
 
-/* Used cars overview flex styles */
+/* Used car overview flex styles */
 .used-car-card-overview-flex {
 	display: flex;
 	flex-direction: column;
 	gap: var(--used_car_card_overview_flex_gap);
 }
 
-/* Used cars image presentation styles */
-.used-cars-card-image-container img {
+/* Used car image presentation styles */
+.used-car-card-image-container img {
 	max-width: var(--used_car_card_image_max_width);
 	height: var(--used_car_card_image_height);
 	object-fit: cover;
-	border-radius: var(--border_radius);
+	border-radius: var(--border-radius);
 }
 
-/* Used cars price container styles */
-.used-cars-card-price-container {
+/* Used car price container styles */
+.used-car-card-price-container {
 	width: var(--used_car_card_price_container_width);
 	display: flex;
 	justify-content: end;
@@ -48,8 +48,8 @@
 
 /* ------ Big screen ------- */
 @media (min-width: 1025px) {
-	.used-cars-card:hover {
-		box-shadow: var(--used_car_card_box_shadow_hover);
+	.used-car-card:hover {
+		box-shadow: var(--used-car-card-box-shadow-hover);
 		transform: scale(var(--used_car_card_scale_perc));
 	}
 }

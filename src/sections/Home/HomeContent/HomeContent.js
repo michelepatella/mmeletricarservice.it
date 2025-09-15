@@ -1,13 +1,11 @@
 import {
-	HOME_LOGO_ALT,
-	HOME_LOGO_CLASS_NAME,
-	HOME_SECTION_ID,
+	COMPANY_LOGO_LINK,
+	HOME_LOGO_ALT, HOME_LOGO_CLASS_NAME,
 	HOME_SUBTITLE,
-	HOME_SUBTITLE_CLASS_NAME,
-	HOME_TITLE,
+	HOME_SUBTITLE_CLASS_NAME, HOME_TITLE,
 	HOME_TITLE_CLASS_NAME,
-} from "../../../utils/const/sections/homeConst";
-import { COMPANY_LOGO_LINK } from "../../../utils/internalLinks";
+} from "./const";
+import { HOME_SECTION_ID } from "../../../utils/const";
 
 /**
  * This component represents the content

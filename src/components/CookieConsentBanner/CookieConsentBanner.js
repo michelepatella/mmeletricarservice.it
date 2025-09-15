@@ -1,20 +1,16 @@
 import CookieConsent from "react-cookie-consent";
 import {
 	COOKIE_CONSENT_BANNER_ACCEPT_BUTTON_TEXT,
-	COOKIE_CONSENT_BANNER_DESCRIPTION,
-	COOKIE_CONSENT_BANNER_LOCATION,
 	COOKIE_CONSENT_BANNER_DECLINE_BUTTON_TEXT,
-	COOKIE_EXPIRATION_DATE,
+	COOKIE_CONSENT_BANNER_DESCRIPTION, COOKIE_CONSENT_BANNER_LOCATION, COOKIE_EXPIRATION_DATE,
+} from "./const";
+import {
 	COOKIE_NAME,
-} from "../../utils/const/components/cookieConst";
-import {
-	COOKIE_POLICY_TEXT,
-	PRIVACY_POLICY_TEXT,
-} from "../../utils/const/sections/contactsConst";
-import {
 	COOKIE_POLICY_LINK,
+	COOKIE_POLICY_TEXT,
 	PRIVACY_POLICY_LINK,
-} from "../../utils/internalLinks";
+	PRIVACY_POLICY_TEXT,
+} from "../../utils/const";
 import CustomLink from "../CustomLink/CustomLink";
 
 /**

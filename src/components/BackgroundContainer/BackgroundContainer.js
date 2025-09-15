@@ -1,5 +1,5 @@
-import { BACKGROUND_CONTAINER_TEST_ID } from "../../utils/const/components/backgroundContainerConst";
-import { handleContainerStyle } from "../../styleLogic/backgroundContainerStyleHandler";
+import { BACKGROUND_CONTAINER_TEST_ID } from "./const";
+import { getBackgroundContainerStyle } from "./styleHandler";
 
 /**
  * This component defines the background container of a section.
@@ -18,7 +18,7 @@ function BackgroundContainer({
 	// Combine predefined and customized styles
 	// to get the final background container style
 	const style = {
-		...handleContainerStyle(image),
+		...getBackgroundContainerStyle(image),
 		...custStyle,
 	};
 

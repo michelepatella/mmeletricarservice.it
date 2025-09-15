@@ -37,11 +37,11 @@
 	align-items: center !important;
 	flex-direction: column !important;
 	justify-content: center !important;
+	opacity: var(--low_opacity);
 }
 
 /* Unavailable used cars image styles */
 .unavailable-used-cars-container img {
 	height: var(--unavailable_used_cars_image_dimension);
 	width: var(--unavailable_used_cars_image_dimension);
-	opacity: var(--low_opacity);
 }

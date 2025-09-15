@@ -1,9 +1,9 @@
-/* Style of the entire web page */
+/* Style of the entire web app */
 html,
 body {
 	margin: 0;
-	font-family: var(--font_family);
-	background-color: var(--background_color);
+	font-family: var(--font-family);
+	background-color: var(--background-color);
 	overflow-x: hidden;
 	scroll-behavior: smooth;
 	-webkit-font-smoothing: antialiased;
