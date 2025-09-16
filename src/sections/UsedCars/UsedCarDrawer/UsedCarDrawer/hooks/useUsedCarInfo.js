@@ -1,6 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { DATA_STALE_TIME } from "../../../const";
-import { USED_CAR_INFO_API_KEY, USED_CAR_INFO_ENDPOINT } from "../const";
+import {
+	USED_CAR_INFO_API_KEY,
+	USED_CAR_INFO_ENDPOINT,
+} from "../const";
 import { fetchUsedCarData } from "../../../../../utils/dataFetcher";
 
 /**

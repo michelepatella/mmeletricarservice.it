@@ -5,7 +5,9 @@ import {
 	onPhoneButtonClick,
 } from "./contactHandlers";
 
-/**------------- Company information -------------**/
+/**------------- Shared across the app -------------**/
+
+/* — Company Information — */
 export const SITE =
 	"Via G. Bizet, 63 — Gravina in Puglia (BA), 70024, Italia";
 export const PHONE = "0803267837";
@@ -20,13 +22,13 @@ export const RAG_SOCIALE =
 export const P_IVA = "08650830725";
 export const REA = "640711";
 
-/**------------- Icons -------------**/
+/* — Icons — */
 export const EMAIL_ICON_LINK = "/icons/email_icon.svg";
 export const FACEBOOK_ICON_LINK =
 	"/icons/facebook_icon.svg";
 export const PHONE_ICON_LINK = "/icons/phone_icon.svg";
 
-/**------------- Company contacts -------------**/
+/* — Company Contacts — */
 export const ALL_CONTACTS = [
 	{
 		value: PHONE,
@@ -52,7 +54,7 @@ export const CONTACTS_CLICK_HANDLERS = {
 	[FACEBOOK_PAGE_NAME]: onFacebookButtonClick,
 };
 
-/**------------- Policies -------------**/
+/* — Policies — */
 export const PRIVACY_POLICY_TEXT = "PRIVACY POLICY";
 export const COOKIE_POLICY_TEXT = "COOKIE POLICY";
 export const PRIVACY_POLICY_LINK =
@@ -60,7 +62,7 @@ export const PRIVACY_POLICY_LINK =
 export const COOKIE_POLICY_LINK =
 	"/docs/Cookie%20Policy%20-%20MM%20Eletricar%20Service.pdf";
 
-/**------------- Sections -------------**/
+/* — Sections — */
 export const HOME_SECTION_NAME = "Home";
 export const HOME_SECTION_ID = "home";
 export const ABOUT_US_SECTION_NAME = "Chi siamo";
@@ -76,7 +78,7 @@ export const WHERE_WE_ARE_SECTION_ID = "dove-siamo";
 export const CONTACTS_SECTION_NAME = "Contatti";
 export const CONTACTS_SECTION_ID = "contatti";
 
-/**------------- Custom Text -------------**/
+/* — Text — */
 export const CUSTOM_TEXT_TYPES = {
 	SUPER_HEADING: "super-heading",
 	HEADING: "heading",
@@ -85,12 +87,12 @@ export const CUSTOM_TEXT_TYPES = {
 	CAPTION: "caption",
 };
 
-/**------------- Data -------------**/
+/* — Data — */
 export const API_FOLDER_PATH = "/api/";
 
-/**------------- Cookie -------------**/
+/* — Cookie — */
 export const COOKIE_NAME = "cookieConsent";
 
-/**------------- Images -------------**/
+/* — Images — */
 export const DOTTED_BACKGROUND_IMAGE_LINK =
 	"/images/dotted-background.avif";

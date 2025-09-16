@@ -26,9 +26,7 @@ function UsedCarOverview(props) {
 				// Add each used car overview information
 				<div
 					key={info.name + "-" + index}
-					className={
-						USED_CAR_OVERVIEW_CONTAINER_CLASS_NAME
-					}
+					className={USED_CAR_OVERVIEW_CONTAINER_CLASS_NAME}
 				>
 					{/* Global Flex container (vertical) */}
 					<Flex vertical>

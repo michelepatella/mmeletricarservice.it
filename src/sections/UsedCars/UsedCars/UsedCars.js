@@ -11,7 +11,8 @@ import {
 	USED_CARS_TITLE,
 	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION_ALT,
 	USED_CARS_UNAVAILABLE_DESCRIPTION,
-	USED_CARS_UNAVAILALE_CONTAINER_CLASS_NAME, NO_USED_CAR_AVAILABLE_IMAGE_LINK,
+	USED_CARS_UNAVAILABLE_CONTAINER_CLASS_NAME,
+	NO_USED_CAR_AVAILABLE_IMAGE_LINK,
 } from "./const";
 import { useUsedCarsOverview } from "./hooks/useUsedCarsOverview";
 import { useUsedCarsScroll } from "./hooks/useUsedCarsScroll";
@@ -110,7 +111,7 @@ function UsedCars() {
 						// used car is available
 						<div
 							className={
-								USED_CARS_UNAVAILALE_CONTAINER_CLASS_NAME
+								USED_CARS_UNAVAILABLE_CONTAINER_CLASS_NAME
 							}
 						>
 							{/* Label indicating no used car is available */}

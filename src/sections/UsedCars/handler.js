@@ -1,4 +1,8 @@
-import { USED_CAR_DRAWER_OPEN_CLASS_NAME, USED_CAR_DRAWER_URL, USED_CAR_DRAWER_WIDTH } from "./const";
+import {
+	USED_CAR_DRAWER_OPEN_CLASS_NAME,
+	USED_CAR_DRAWER_URL,
+	USED_CAR_DRAWER_WIDTH,
+} from "./const";
 
 let previousScrollY = 0;
 

@@ -17,7 +17,10 @@ function CustomIconButton(props) {
 			onClick={props.onClick}
 		>
 			{/* Icon of the button */}
-			<img src={props.src} alt={CUSTOM_ICON_BUTTON_IMAGE_ALT} />
+			<img
+				src={props.src}
+				alt={CUSTOM_ICON_BUTTON_IMAGE_ALT}
+			/>
 		</button>
 	);
 }

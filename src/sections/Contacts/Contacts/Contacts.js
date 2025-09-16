@@ -3,7 +3,6 @@ import {
 	CONTACTS_CONTENT_CLASS_NAME,
 	CONTACTS_FOOTER_CLASS_NAME,
 	CONTACTS_LAYOUT_CLASS_NAME,
-
 } from "./const";
 import { CONTACTS_SECTION_ID } from "../../../utils/const";
 import ContactsContent from "../ContactsContent/ContactsContent";

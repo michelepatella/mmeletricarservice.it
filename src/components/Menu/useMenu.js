@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { useAnimation } from "framer-motion";
-import { ALL_MENU_SECTIONS, MENU_BIG_ANIMATION_DURATION, MENU_BIG_FINAL_OPACITY, MENU_BIG_FINAL_X_POSITION } from "./const";
+import {
+	ALL_MENU_SECTIONS,
+	MENU_BIG_ANIMATION_DURATION,
+	MENU_BIG_FINAL_OPACITY,
+	MENU_BIG_FINAL_X_POSITION,
+} from "./const";
 
 /**
  * Helper method to check element visibility
@@ -181,17 +186,20 @@ export const useMenu = () => {
 	 * Method to generate Menu items dynamically.
 	 * @type {unknown[] | undefined}
 	 */
-	const menuItems = ALL_MENU_SECTIONS?.map((section, index) => ({
-		key: index + 1,
-		href: "#" + section?.id,
-		title: section?.title,
-		onClick: () => scrollToSection(section?.id, setVisible),
-		children: mapChildren(
-			section?.children,
-			index,
-			setVisible
-		),
-	}));
+	const menuItems = ALL_MENU_SECTIONS?.map(
+		(section, index) => ({
+			key: index + 1,
+			href: "#" + section?.id,
+			title: section?.title,
+			onClick: () =>
+				scrollToSection(section?.id, setVisible),
+			children: mapChildren(
+				section?.children,
+				index,
+				setVisible
+			),
+		})
+	);
 
 	return {
 		menuItems,

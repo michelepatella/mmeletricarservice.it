@@ -66,9 +66,13 @@ describe("HomeHeader", () => {
 		const contactButtons = screen.getAllByTestId(
 			customIconButtonTestId
 		);
-		HOME_HEADER_CONTACT_BUTTONS.forEach(({ src }, index) => {
-			expect(contactButtons[index]).toHaveTextContent(src);
-		});
+		HOME_HEADER_CONTACT_BUTTONS.forEach(
+			({ src }, index) => {
+				expect(contactButtons[index]).toHaveTextContent(
+					src
+				);
+			}
+		);
 	});
 
 	// Test if all the contact buttons, once clicked,

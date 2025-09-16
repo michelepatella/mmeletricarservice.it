@@ -1,10 +1,16 @@
 /**------------- Used Car Drawer Collapse constants -------------**/
+
+/* — General — */
 export const USED_CAR_DRAWER_COLLAPSE_CLASS_NAME =
 	"used-car-drawer-collapse";
+
+/* — Lists — */
 export const USED_CAR_DRAWER_COLLAPSE_OUTER_LIST_CLASS_NAME =
 	"used-car-drawer-collapse-outer-list";
 export const USED_CAR_DRAWER_COLLAPSE_INNER_LIST_CLASS_NAME =
 	"used-car-drawer-collapse-inner-list";
+
+/* — Used Car Info — */
 export const ALL_USED_CAR_INFO = [
 	{
 		key: "1",

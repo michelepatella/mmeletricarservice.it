@@ -9,7 +9,12 @@ import {
 	WORKING_HOURS_DESCRIPTION,
 	WORKING_HOURS_TITLE,
 } from "./const";
-import { CUSTOM_TEXT_TYPES, DOTTED_BACKGROUND_IMAGE_LINK, SITE, WHERE_WE_ARE_SECTION_ID } from "../../utils/const";
+import {
+	CUSTOM_TEXT_TYPES,
+	DOTTED_BACKGROUND_IMAGE_LINK,
+	SITE,
+	WHERE_WE_ARE_SECTION_ID,
+} from "../../utils/const";
 import {
 	getGoogleMapsContainerStyle,
 	getGoogleMapsUnavailableDescriptionStyle,

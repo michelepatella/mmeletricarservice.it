@@ -4,7 +4,10 @@
  * @param menuItem
  * @returns {{textDecoration: (string), fontWeight: (string)}}
  */
-export const getMenuParentItemStyle = (section, menuItem) => {
+export const getMenuParentItemStyle = (
+	section,
+	menuItem
+) => {
 	return {
 		fontWeight:
 			section === menuItem?.href.replace("#", "")
@@ -23,7 +26,10 @@ export const getMenuParentItemStyle = (section, menuItem) => {
  * fontWeight: (string)
  * }}
  */
-export const getMenuChildrenItemStyle = (section, child) => {
+export const getMenuChildrenItemStyle = (
+	section,
+	child
+) => {
 	return {
 		fontWeight:
 			section === child?.href.replace("#", "")

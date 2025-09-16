@@ -6,7 +6,9 @@
  * marginTop: number
  * }}
  */
-export const getUsedCarOverviewTextStyle = (isTitleVisible) => {
+export const getUsedCarOverviewTextStyle = (
+	isTitleVisible
+) => {
 	return {
 		marginTop: 0,
 		marginBottom:

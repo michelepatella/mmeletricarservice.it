@@ -1,5 +1,9 @@
 /**------------- Our Values constants -------------**/
+
+/* — Title — */
 export const OUR_VALUES_TITLE = "Ciò in cui crediamo.";
+
+/* — Steps — */
 export const OUR_VALUES_STEPS_CLASS_NAME =
 	"our-values-steps";
 export const OUR_VALUES_STEPS_DIRECTION = "vertical";

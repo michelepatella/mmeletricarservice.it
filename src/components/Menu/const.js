@@ -16,6 +16,8 @@ import {
 } from "../../utils/const";
 
 /**------------- Menu constants -------------**/
+
+/* — Sections — */
 export const ALL_MENU_SECTIONS = [
 	{
 		id: HOME_SECTION_ID,
@@ -46,6 +48,8 @@ export const ALL_MENU_SECTIONS = [
 		title: CONTACTS_SECTION_NAME,
 	},
 ];
+
+/* — Menu Big Animation — */
 export const MENU_BIG_FINAL_OPACITY = 1;
 export const MENU_BIG_FINAL_X_POSITION = 0;
 export const MENU_BIG_ANIMATION_DURATION = 0.8;

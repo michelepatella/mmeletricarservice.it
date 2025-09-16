@@ -1,21 +1,19 @@
 /* -------- Typography -------- */
 :root {
+	/* Font family */
+	--font-family: "Poppins", "sans-serif";
 
-    /* Font family */
-    --font-family: "Poppins", "sans-serif";
+	/* Font size — Home */
+	--font-size-home-title: clamp(30px, 6vw, 55px);
+	--font-size-home-subtitle: clamp(18px, 4vw, 40px);
 
-    /* Font size — Home */
-    --font-size-home-title: clamp(30px, 6vw, 55px);
-    --font-size-home-subtitle: clamp(18px, 4vw, 40px);
+	/* Font size — General Texts */
+	--font-size-super-heading: clamp(43px, 6vw, 120px);
+	--font-size-heading: clamp(20px, 3vw, 30px);
+	--font-size-subheading: clamp(16px, 2.5vw, 20px);
+	--font-size-body: clamp(14px, 1.5vw, 18px);
+	--font-size-caption: clamp(13.5px, 1vw, 15px);
 
-    /* Font size — General Texts */
-    --font-size-super-heading: clamp(43px, 6vw, 120px);
-    --font-size-heading: clamp(20px, 3vw, 30px);
-    --font-size-subheading: clamp(16px, 2.5vw, 20px);
-    --font-size-body: clamp(14px, 1.5vw, 18px);
-    --font-size-caption: clamp(13.5px, 1vw, 15px);
-
-    /* Font style */
-    --font-low-opacity: 0.8;
-
+	/* Font style */
+	--font-low-opacity: 0.8;
 }

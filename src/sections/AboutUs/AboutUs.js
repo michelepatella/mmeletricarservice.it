@@ -4,7 +4,10 @@ import {
 	ABOUT_US_DESCRIPTION,
 	ABOUT_US_TITLE,
 } from "./const";
-import { ABOUT_US_SECTION_ID, CUSTOM_TEXT_TYPES } from "../../utils/const";
+import {
+	ABOUT_US_SECTION_ID,
+	CUSTOM_TEXT_TYPES,
+} from "../../utils/const";
 import { getAboutUsSectionContainerStyle } from "./styleHandler";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import BackgroundContainer from "../../components/BackgroundContainer/BackgroundContainer";

@@ -24,7 +24,6 @@
 	--cta_button_margin_top: 3rem;
 	--cta_button_width_medium_landscape: 40%;
 
-
 	/* -------- Custom Back Button -------- */
 	--custom_back_button_padding_top: 20px;
 
@@ -39,7 +38,6 @@
 		22px;
 	--cookie_consent_banner_z_index: 9999999;
 	--cookie_button_z_index: 99999;
-
 
 	/* -------- Info Card -------- */
 	--info_card_icon_dimension: 30px;

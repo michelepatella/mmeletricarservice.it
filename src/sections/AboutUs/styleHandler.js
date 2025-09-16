@@ -5,6 +5,6 @@
  */
 export const getAboutUsSectionContainerStyle = () => {
 	return {
-		height: "var(--about_us_height)"
+		height: "var(--about_us_height)",
 	};
-}
+};

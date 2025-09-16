@@ -2,9 +2,12 @@ import { Layout } from "antd";
 import {
 	HOME_CONTENT_CLASS_NAME,
 	HOME_HEADER_CLASS_NAME,
-	HOME_LAYOUT_CLASS_NAME
+	HOME_LAYOUT_CLASS_NAME,
 } from "./const";
-import { DOTTED_BACKGROUND_IMAGE_LINK, HOME_SECTION_ID } from "../../../utils/const";
+import {
+	DOTTED_BACKGROUND_IMAGE_LINK,
+	HOME_SECTION_ID,
+} from "../../../utils/const";
 import HomeHeader from "../HomeHeader/HomeHeader";
 import HomeContent from "../HomeContent/HomeContent";
 import BackgroundContainer from "../../../components/BackgroundContainer/BackgroundContainer";

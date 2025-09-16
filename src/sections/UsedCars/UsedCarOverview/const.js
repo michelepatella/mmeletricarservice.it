@@ -1,14 +1,24 @@
 /**------------- Used Car Overview constants -------------**/
+
+/* — General — */
 export const USED_CAR_OVERVIEW_CONTAINER_CLASS_NAME =
 	"used-car-overview-container";
+
+/* — Style — */
 export const USED_CAR_OVERVIEW_CONTAINER_GAP = "small";
+
+/* — Icons — */
 export const USED_CAR_OVERVIEW_ICON_ALT =
 	"used-car-info-icon";
+
+/* — Links — */
 export const CALENDAR_ICON_LINK =
 	"/icons/calendar_icon.svg";
 export const ROAD_ICON_LINK = "/icons/road_icon.svg";
 export const FUEL_ICON_LINK = "/icons/fuel_icon.svg";
 export const CAR_ICON_LINK = "/icons/car_icon.svg";
+
+/* — Used Car Overview Info — */
 export const ALL_USED_CAR_OVERVIEW_INFO = [
 	{
 		title: "Anno",

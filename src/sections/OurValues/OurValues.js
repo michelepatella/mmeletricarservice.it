@@ -6,7 +6,11 @@ import {
 	OUR_VALUES_STEPS_DIRECTION,
 	OUR_VALUES_TITLE,
 } from "./const";
-import { CUSTOM_TEXT_TYPES, DOTTED_BACKGROUND_IMAGE_LINK, OUR_VALUES_SECTION_ID } from "../../utils/const";
+import {
+	CUSTOM_TEXT_TYPES,
+	DOTTED_BACKGROUND_IMAGE_LINK,
+	OUR_VALUES_SECTION_ID,
+} from "../../utils/const";
 import BackgroundContainer from "../../components/BackgroundContainer/BackgroundContainer";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import CustomText from "../../components/CustomText/CustomText";

@@ -1,4 +1,9 @@
-import { EMAIL, EMAIL_PEC, FACEBOOK_LINK, PHONE } from "./const";
+import {
+	EMAIL,
+	EMAIL_PEC,
+	FACEBOOK_LINK,
+	PHONE,
+} from "./const";
 
 /**
  * Method to call when the pec email button is clicked.

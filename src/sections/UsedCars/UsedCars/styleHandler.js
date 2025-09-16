@@ -19,13 +19,15 @@ export const getUsedCarsUnavailableDescriptionStyle =
  * @param containerStyles
  * @returns {{transform: *, opacity: *}}
  */
-export const getUsedCarsAnimatedDivStyle = (containerStyles) => {
+export const getUsedCarsAnimatedDivStyle = (
+	containerStyles
+) => {
 	return {
 		opacity: containerStyles.y.to(
-			(y) => 1 - parseInt(y) / 100,
+			(y) => 1 - parseInt(y) / 100
 		),
 		transform: containerStyles.y.to(
-			(y) => "translateY(" + y + ")",
+			(y) => "translateY(" + y + ")"
 		),
 	};
 };
@@ -38,6 +40,6 @@ export const getUsedCarsAnimatedDivStyle = (containerStyles) => {
 export const getUsedCarsCustomLoadingOutlineStyle = () => {
 	return {
 		marginLeft:
-			"var(--custom_loading_outlined_margin_left)"
-	}
-}
+			"var(--custom_loading_outlined_margin_left)",
+	};
+};

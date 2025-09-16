@@ -12,13 +12,15 @@ function HomeHeader() {
 	return (
 		<>
 			{/* Add a home header button for each button specified */}
-			{HOME_HEADER_CONTACT_BUTTONS.map(({ src, onClick }) => (
-				<CustomIconButton
-					key={src}
-					src={src}
-					onClick={onClick}
-				/>
-			))}
+			{HOME_HEADER_CONTACT_BUTTONS.map(
+				({ src, onClick }) => (
+					<CustomIconButton
+						key={src}
+						src={src}
+						onClick={onClick}
+					/>
+				)
+			)}
 		</>
 	);
 }

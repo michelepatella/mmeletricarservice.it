@@ -1,6 +1,15 @@
 import React from "react";
-import { ALL_CONTACTS, CONTACTS_CLICK_HANDLERS, CUSTOM_TEXT_TYPES, PHONE } from "../../../../utils/const";
-import { PRICE_CURRENCY, PRICE_LOCALES, PRICE_STYLE } from "../../const";
+import {
+	ALL_CONTACTS,
+	CONTACTS_CLICK_HANDLERS,
+	CUSTOM_TEXT_TYPES,
+	PHONE,
+} from "../../../../utils/const";
+import {
+	PRICE_CURRENCY,
+	PRICE_LOCALES,
+	PRICE_STYLE,
+} from "../../const";
 import { USED_CAR_DRAWER_CTA_BUTTON_TEXT } from "./const";
 import { getUsedCarDrawerInfoPanelCarNameStyle } from "./styleHandler";
 import CustomText from "../../../../components/CustomText/CustomText";

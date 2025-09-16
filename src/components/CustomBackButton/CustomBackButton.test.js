@@ -3,7 +3,6 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import CustomBackButton from "./CustomBackButton";
 
-
 import { CUSTOM_BACK_BUTTON_LABEL } from "./const";
 
 // Definition of expected results

@@ -1,9 +1,15 @@
 import {
-	CONTACTS_FOOTER_TEXT, CONTACTS_FOOTER_TEXT_CLASS_NAME, LEGAL_NOTES_LINK,
+	CONTACTS_FOOTER_TEXT,
+	CONTACTS_FOOTER_TEXT_CLASS_NAME,
+	LEGAL_NOTES_LINK,
 	LEGAL_NOTES_TEXT,
-
 } from "./const";
-import { COOKIE_POLICY_LINK, COOKIE_POLICY_TEXT, PRIVACY_POLICY_LINK, PRIVACY_POLICY_TEXT } from "../../../utils/const";
+import {
+	COOKIE_POLICY_LINK,
+	COOKIE_POLICY_TEXT,
+	PRIVACY_POLICY_LINK,
+	PRIVACY_POLICY_TEXT,
+} from "../../../utils/const";
 import CustomLink from "../../../components/CustomLink/CustomLink";
 
 /**

@@ -1,6 +1,10 @@
 /**------------- Services constants -------------**/
+
+/* — General — */
 export const SERVICES_CONTAINER_CLASS_NAME =
 	"services-container";
+
+/* — Title — */
 export const SERVICES_TITLE = [
 	{
 		text: "Prestazioni.",
@@ -19,6 +23,8 @@ export const SERVICES_TITLE_ANIMATION_LETTERS_DELAY = 50;
 export const SERVICES_TITLE_ANIMATION_WORDS_DELAY = 200;
 export const SERVICES_TITLE_ANIMATION_TRIGGER_ONCE = true;
 export const SERVICES_TITLE_ANIMATION_THRESHOLD = 0.8;
+
+/* — Links — */
 export const CPU_ICON_LINK = "/icons/cpu_icon.svg";
 export const WRENCH_ICON_LINK = "/icons/wrench_icon.svg";
 export const CONTROL_PANEL_ICON_LINK =
@@ -35,6 +41,10 @@ export const ELECTRIC_ICON_LINK =
 	"/icons/electric_icon.svg";
 export const ANTI_THEFT_ICON_LINK =
 	"/icons/anti_theft_icon.svg";
+export const SERVICES_BACKGROUND_IMAGE_LINK =
+	"/images/services-background.avif";
+
+/* — Services — */
 const ALL_SERVICES_DATA = [
 	[
 		"Manutenzione Centralina",
@@ -99,5 +109,3 @@ export const ALL_SERVICES = ALL_SERVICES_DATA.map(
 		icon,
 	})
 );
-export const SERVICES_BACKGROUND_IMAGE_LINK =
-	"/images/services-background.avif";
