@@ -1,7 +1,7 @@
 /* -------- Scales -------- */
 :root {
-	/* Scales of different size */
-	--scale-sm: 1.01;
-	--scale-md: 1.03;
-	--scale-lg: 1.1;
+	/* — Scales of Different Sizes — */
+	--scale-small: 1.01;
+	--scale-medium: 1.03;
+	--scale-large: 1.1;
 }

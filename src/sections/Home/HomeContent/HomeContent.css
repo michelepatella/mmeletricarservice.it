@@ -28,7 +28,7 @@
 /* Home Title styles */
 .home-title {
 	margin-bottom: var(--home_title_margin_bottom);
-	color: var(--accent-color);
+	color: var(--color-accent);
 	opacity: 0;
 	animation: slideUpHomeAnimation 1s ease forwards;
 	animation-delay: var(--home_title_animation_delay);
@@ -38,7 +38,7 @@
 .home-subtitle {
 	font-family: "Dancing Script";
 	margin-top: var(--home_subtitle_margin_top);
-	color: var(--white-color);
+	color: var(--color-white);
 	opacity: 0;
 	animation: slideUpHomeAnimation 1s ease forwards;
 	animation-delay: var(--home_subtitle_animation_delay);

@@ -3,7 +3,7 @@ html,
 body {
 	margin: 0;
 	font-family: var(--font-family);
-	background-color: var(--background-color);
+	background-color: var(--color-background);
 	overflow-x: hidden;
 	scroll-behavior: smooth;
 	-webkit-font-smoothing: antialiased;

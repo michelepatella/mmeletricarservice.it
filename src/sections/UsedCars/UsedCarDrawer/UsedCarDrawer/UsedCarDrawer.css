@@ -16,7 +16,7 @@
 }
 
 .ant-drawer-content-wrapper .ant-drawer-header {
-	background-color: var(--background-color);
+	background-color: var(--color-background);
 	padding: 0;
 }
 
@@ -51,7 +51,7 @@
 	}
 
 	.used-car-drawer-flex-vertical {
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-default);
 		padding: var(--used_car_drawer_info_panel_padding);
 		background-color: transparent;
 		box-shadow: var(
@@ -111,7 +111,7 @@
 	}
 
 	.used-car-drawer-flex-vertical {
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-default);
 		padding: var(--used_car_drawer_info_panel_padding);
 		background-color: transparent;
 		box-shadow: var(

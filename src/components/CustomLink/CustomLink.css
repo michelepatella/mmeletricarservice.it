@@ -1,6 +1,6 @@
 /* Custom link styles */
 .custom-link {
-	color: var(--white-color);
+	color: var(--color-white);
 	font-weight: bold;
 	text-decoration: none;
 }

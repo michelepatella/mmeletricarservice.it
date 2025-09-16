@@ -14,7 +14,7 @@
 
 /* Collapse Header and its text styles */
 .ant-collapse-header-text {
-	color: var(--white-color) !important;
+	color: var(--color-white) !important;
 	font-weight: bold;
 	font-family: var(--font-family);
 }
@@ -30,7 +30,7 @@
 /* Collapse content styles */
 .ant-collapse-content-box,
 .ant-collapse-content {
-	color: var(--white-color);
+	color: var(--color-white);
 	font-family: var(--font-family);
 	border: none !important;
 	border-left: var(

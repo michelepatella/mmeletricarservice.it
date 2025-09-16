@@ -3,7 +3,7 @@
 	max-width: var(
 		--used_car_drawer_carousel_container_max_width
 	);
-	border-radius: var(--border-radius) !important;
+	border-radius: var(--border-radius-default) !important;
 }
 
 /* Carousel image container styles */
@@ -16,7 +16,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-radius: var(--border-radius) !important;
+	border-radius: var(--border-radius-default) !important;
 }
 
 /* Carousel image styles */
@@ -27,7 +27,7 @@
 		--used_car_drawer_carousel_image_max_width
 	);
 	object-fit: cover;
-	border-radius: var(--border-radius) !important;
+	border-radius: var(--border-radius-default) !important;
 }
 
 /* Carousel image mask styles */

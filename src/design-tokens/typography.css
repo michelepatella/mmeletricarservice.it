@@ -1,6 +1,6 @@
 /* -------- Typography -------- */
 :root {
-	/* Font family */
+	/* — Font Family — */
 	--font-family: "Poppins", "sans-serif";
 
 	/* Font size — Home */
@@ -14,6 +14,6 @@
 	--font-size-body: clamp(14px, 1.5vw, 18px);
 	--font-size-caption: clamp(13.5px, 1vw, 15px);
 
-	/* Font style */
+	/* — Font Style — */
 	--font-low-opacity: 0.8;
 }

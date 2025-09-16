@@ -1,34 +1,31 @@
 /* -------- Colors -------- */
 :root {
-	/* Classical colors */
-	--blue-color: #005fcc;
-	--white-color: #ffffff;
+	/* — Base Colors — */
+	--color-blue: #005fcc;
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-background: #141414;
+	--color-accent: #f8de4d;
 
-	/* Background color */
-	--background-color: #141414;
-
-	/* Accent color */
-	--accent-color: #f8de4d;
-
-	/* Colors with gradient */
-	--accent-color-with-gradient: linear-gradient(
+	/* — Gradient Colors — */
+	--gradient-accent: linear-gradient(
 		90deg,
 		#fff200,
 		#ffd700,
 		#ffbf00,
 		#ffa500
 	);
-	--red-color-with-gradient: linear-gradient(
+	--gradient-red: linear-gradient(
 		90deg,
 		#ff3737,
 		#ff8e53
 	);
-	--blue-color-with-gradient: linear-gradient(
+	--gradient-blue: linear-gradient(
 		90deg,
 		#2a8eff,
 		#7cdfff
 	);
-	--green-color-with-gradient: linear-gradient(
+	--gradient-green: linear-gradient(
 		90deg,
 		#2ba35f,
 		#7dffcc

@@ -4,7 +4,7 @@
 	height: var(--google_maps_height);
 	margin-top: var(--google_maps_margin_top);
 	overflow: hidden;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-default);
 }
 
 /* Google Maps iframe styles */

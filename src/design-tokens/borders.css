@@ -1,12 +1,13 @@
 /* -------- Borders -------- */
 :root {
-	/* Border width */
-	--border-width-buttons: 2px;
+    /* — Border Width — */
+	--border-width-buttons-default: 1px;
 	--border-width-google-maps-iframe: 0;
 
-	/* Border radius — General */
-	--border-radius: 5px;
+    /* — Border Radius — */
+	--border-radius-default: 4px;
+	--border-radius-circle: 50%;
 
-	/* Border radius — Cookie button */
-	--border-radius-cookie-button: 50%;
+	/* — Border Style — */
+	--border-style-solid: solid;
 }

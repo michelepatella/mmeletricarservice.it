@@ -19,7 +19,7 @@
 
 	/* -------- Custom Button(s) -------- */
 	--custom_button_filter_perc: 1;
-	--custom_button_padding: 23px 17px 23px 17px;
+	--button-padding: 15px 20px 15px 20px;
 	--contact_button_padding: 0;
 	--cta_button_margin_top: 3rem;
 	--cta_button_width_medium_landscape: 40%;
@@ -31,13 +31,6 @@
 	--custom_block_quote_margin_left: 3px;
 	--custom_block_quote_padding_left: 1rem;
 	--custom_block_quote_border_left: 3px;
-
-	/* -------- Cookie Consent Banner + Cookie Button -------- */
-	--cookie_consent_banner_width: 60%;
-	--cookie_consent_banner_button_padding: 11px 20px 11px
-		22px;
-	--cookie_consent_banner_z_index: 9999999;
-	--cookie_button_z_index: 99999;
 
 	/* -------- Info Card -------- */
 	--info_card_icon_dimension: 30px;

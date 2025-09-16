@@ -6,5 +6,5 @@
 	gap: var(--contacts_layout_gap);
 	position: relative;
 	font-family: var(--font-family);
-	background-color: var(--background-color);
+	background-color: var(--color-background);
 }

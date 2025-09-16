@@ -4,5 +4,5 @@
 	margin-left: var(--custom_block_quote_margin_left);
 	padding-left: var(--custom_block_quote_padding_left);
 	border-left: var(--custom_block_quote_border_left) solid;
-	color: var(--accent-color);
+	color: var(--color-accent);
 }

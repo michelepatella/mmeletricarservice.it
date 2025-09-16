@@ -2,8 +2,8 @@
 .contacts-footer {
 	width: var(--contacts_footer_width);
 	padding: var(--contacts_footer_padding);
-	color: var(--white-color);
-	background-color: var(--background-color);
+	color: var(--color-white);
+	background-color: var(--color-background);
 }
 
 /* Contacts Footer text styles */

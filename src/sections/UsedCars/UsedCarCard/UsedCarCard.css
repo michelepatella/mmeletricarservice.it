@@ -3,9 +3,9 @@
 	font-family: var(--font-family);
 	width: var(--used_car_card_width);
 	padding: var(--used_car_card_padding);
-	background: var(--background-color);
+	background: var(--color-background);
 	border: none;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-default);
 	box-shadow: var(--used-car-card-box-shadow);
 	flex-shrink: var(--used_car_card_flex_shrink);
 	scroll-snap-align: center;
@@ -36,7 +36,7 @@
 	max-width: var(--used_car_card_image_max_width);
 	height: var(--used_car_card_image_height);
 	object-fit: cover;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-default);
 }
 
 /* Used car price container styles */

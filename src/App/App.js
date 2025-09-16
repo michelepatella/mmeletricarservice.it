@@ -50,6 +50,9 @@ import "../components/CustomLoadingOutlined/CustomLoadingOutlined.css";
 import "../variables.css";
 import "../design-tokens/colors.css";
 import "../design-tokens/typography.css";
+import "../design-tokens/scales.css";
+import "../design-tokens/shadows.css";
+import "../design-tokens/borders.css";
 
 /**
  * The entry-point of the web application.

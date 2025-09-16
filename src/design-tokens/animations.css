@@ -1,0 +1,7 @@
+/* -------- Animations -------- */
+:root {
+    /* — Animation of Different Duration Times — */
+    --animation-duration-short: 0.3s;
+    --animation-duration-medium: 0.5s;
+    --animation-duration-long: 0.8s;
+}

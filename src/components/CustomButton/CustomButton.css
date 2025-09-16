@@ -1,23 +1,23 @@
 /* Custom Button styles */
 .custom-button {
-	color: var(--white-color);
+	color: var(--color-white);
 	font-family: var(--font-family);
-	border-radius: var(--border-radius);
-	padding: var(--custom_button_padding);
-	background-color: var(--background-color) !important;
+	border-radius: var(--border-radius-default);
+	padding: var(--button-padding);
+	background-color: var(--color-background) !important;
 	transition: all 0.3s ease;
 }
 
 .custom-button:hover {
 	font-family: var(--font-family) !important;
-	border-radius: var(--border-radius) !important;
-	padding: var(--custom_button_padding) !important;
+	border-radius: var(--border-radius-default) !important;
+	padding: var(--button-padding) !important;
 	transition: all 0.3s ease !important;
 }
 
 /* Contact button styles */
 .contact-button {
-	color: var(--white-color);
+	color: var(--color-white);
 	font-family: var(--font-family);
 	padding: var(--contact_button_padding);
 	box-shadow: none;
@@ -27,25 +27,25 @@
 /* CTA button styles */
 .cta-button {
 	margin-top: var(--cta_button_margin_top);
-	color: var(--white-color);
+	color: var(--color-white);
 	font-size: var(--font-size-caption);
 	font-weight: bold;
 	font-family: var(--font-family);
 	border: var(--cta_button_border) solid;
-	border-image: var(--accent-color-with-gradient) 1;
+	border-image: var(--gradient-accent) 1;
 	-webkit-mask-image: -webkit-linear-gradient(white, white);
 	background: transparent;
-	border-radius: var(--border-radius);
-	padding: var(--custom_button_padding);
+	border-radius: var(--border-radius-default);
+	padding: var(--button-padding);
 	transition: all 0.3s ease;
 }
 
 .cta-button:hover {
 	transform: scale(var(--cta_button_scale));
-	border-radius: var(--border-radius) !important;
+	border-radius: var(--border-radius-default) !important;
 	border: var(--cta_button_border) solid !important;
-	border-image: var(--accent-color-with-gradient) 1 !important;
-	border-radius: var(--border-radius) !important;
+	border-image: var(--gradient-accent) 1 !important;
+	border-radius: var(--border-radius-default) !important;
 	background: transparent !important;
 }
 

@@ -1,30 +1,41 @@
-/* Custom Cookie Button styles */
+/* Variables */
+:root {
+	--cookie-button-position: fixed;
+	--cookie-button-z-index: 99999;
+	--cookie-button-border: none;
+	--cookie-button-background-image: url("../../../public/icons/cookie_icon.svg");
+	--cookie-button-background-repeat: no-repeat;
+	--cookie-button-background-position: center;
+}
+
+/* Cookie Button */
 .cookie-button {
 	width: var(--float_button_dimension);
 	height: var(--float_button_dimension);
 	bottom: var(--float_button_margins);
 	right: var(--float_button_margins);
-	position: fixed;
-	z-index: var(--cookie_button_z_index);
-	border-radius: var(--border-radius-cookie-button);
-	border: none;
-	background-color: var(--blue-color);
-	background-image: url("../../../public/icons/cookie_icon.svg");
-	background-repeat: no-repeat;
-	background-position: center;
+	position: var(--cookie-button-position);
+	z-index: var(--cookie-button-z-index);
+	border-radius: var(--border-radius-circle);
+	border: var(--cookie-button-border);
+	background-color: var(--color-blue);
+	background-image: var(--cookie-button-background-image);
+	background-repeat: var(--cookie-button-background-repeat);
+	background-position: var(--cookie-button-background-position);
 }
 
+/* Cookie Button — Hover */
 .cookie-button:hover {
-	scale: var(--cookie_button_scale);
+	scale: var(--scale-large);
 	bottom: var(--float_button_margins) !important;
-	position: fixed;
-	z-index: var(--cookie_button_z_index) !important;
+	position: var(--cookie-button-position) !important;
+	z-index: var(--cookie-button-z-index) !important;
 	border-radius: var(
-		--border-radius-cookie-button
+		--border-radius-circle
 	) !important;
-	border: none !important;
-	background-color: var(--blue-color) !important;
-	background-image: url("../../../public/icons/cookie_icon.svg") !important;
-	background-repeat: no-repeat !important;
-	background-position: center !important;
+	border: var(--cookie-button-border) !important;
+	background-color: var(--color-blue) !important;
+	background-image: var(--cookie-button-background-image) !important;
+	background-repeat: var(--cookie-button-background-repeat) !important;
+	background-position: var(--cookie-button-background-position) !important;
 }

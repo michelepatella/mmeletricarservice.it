@@ -1,44 +1,53 @@
-/* Cookie Consent animations */
+/* Variables */
+:root {
+	--cookie-consent-banner-animation-translate-y-from: 100%;
+	--cookie-consent-banner-animation-translate-y-to: 0;
+	--cookie-consent-banner-z-index: 9999999;
+	--cookie-consent-banner-animation-timing-function: ease-out;
+	--cookie-consent-banner-animation-fill-mode: forwards;
+	--cookie-consent-banner-button-width: 94.3%;
+}
+
+/* Cookie Consent Banner — Animation */
 @keyframes slideUp {
 	from {
-		transform: translateY(100%);
+		transform: translateY(var(--cookie-consent-banner-animation-translate-y-from));
 	}
 	to {
-		transform: translateY(0);
+		transform: translateY(var(--cookie-consent-banner-animation-translate-y-to));
 	}
 }
 
-/* Cookie Consent styles*/
+/* Cookie Consent Banner */
 .CookieConsent {
 	font-size: var(--font-size-caption) !important;
 	font-family: var(--font-family) !important;
-	color: var(--white-color) !important;
-	z-index: var(--cookie_consent_banner_z_index) !important;
-	background: var(--background-color) !important;
-	animation: slideUp 0.3s ease-out forwards;
+	color: var(--color-white) !important;
+	z-index: var(--cookie-consent-banner-z-index) !important;
+	background: var(--color-background) !important;
+	animation: slideUp var(--animation-duration-short)
+	var(--cookie-consent-banner-animation-timing-function) var(--cookie-consent-banner-animation-fill-mode);
 }
 
-/* Cookie Consent buttons styles */
+/* Cookie Consent Banner — Buttons */
 .CookieConsent #rcc-decline-button,
 #rcc-confirm-button {
-	width: var(--cookie_consent_banner_width);
+	width: var(--cookie-consent-banner-button-width);
 	font-size: var(--font-size-caption) !important;
 	font-family: var(--font-family) !important;
-	border: var(--cookie_consent_banner_border_buttons) solid
-		white !important;
-	border-radius: var(--border-radius) !important;
-	padding: var(
-		--cookie_consent_banner_button_padding
-	) !important;
-	transition: all 0.3s ease;
+	border-radius: var(--border-radius-default) !important;
+	padding: var(--button-padding) !important;
 }
 
+/* Cookie Consent Banner — Confirm Button */
 .CookieConsent #rcc-confirm-button {
-	background-color: white !important;
-	color: black !important;
+	background-color: var(--color-white) !important;
+	color: var(--color-black) !important;
 }
 
+/* Cookie Consent Banner — Decline Button */
 .CookieConsent #rcc-decline-button {
-	background-color: transparent !important;
-	color: white !important;
+	background-color: var(--color-background) !important;
+	color: var(--color-white) !important;
+	border: var(--border-width-buttons-default) var(--border-style-solid) var(--color-white) !important;
 }
