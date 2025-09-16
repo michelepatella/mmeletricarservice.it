@@ -2,9 +2,6 @@
 :root {
 	--cookie-consent-banner-animation-translate-y-from: 100%;
 	--cookie-consent-banner-animation-translate-y-to: 0;
-	--cookie-consent-banner-z-index: 9999999;
-	--cookie-consent-banner-animation-timing-function: ease-out;
-	--cookie-consent-banner-animation-fill-mode: forwards;
 	--cookie-consent-banner-button-width: 94.3%;
 }
 
@@ -23,10 +20,10 @@
 	font-size: var(--font-size-caption) !important;
 	font-family: var(--font-family) !important;
 	color: var(--color-white) !important;
-	z-index: var(--cookie-consent-banner-z-index) !important;
+	z-index: var(--z-index-high) !important;
 	background: var(--color-background) !important;
 	animation: slideUp var(--animation-duration-short)
-	var(--cookie-consent-banner-animation-timing-function) var(--cookie-consent-banner-animation-fill-mode);
+	var(--animation-timing-ease-out) var(--animation-fill-mode-forwards);
 }
 
 /* Cookie Consent Banner — Buttons */

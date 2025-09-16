@@ -1,13 +1,13 @@
 /* -------- Colors -------- */
 :root {
-	/* — Base Colors — */
+	/* — Base — */
 	--color-blue: #005fcc;
 	--color-white: #ffffff;
 	--color-black: #000000;
 	--color-background: #141414;
 	--color-accent: #f8de4d;
 
-	/* — Gradient Colors — */
+	/* — Gradient — */
 	--gradient-accent: linear-gradient(
 		90deg,
 		#fff200,

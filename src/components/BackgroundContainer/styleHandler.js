@@ -6,13 +6,13 @@
 export const getBackgroundContainerStyle = (image) => {
 	return {
 		background:
-			"linear-gradient(to top, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%), " +
-			"linear-gradient(to bottom, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%), " +
-			"linear-gradient(to left, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%), " +
+			"var(--background-gradient-top), " +
+			"var(--background-gradient-bottom), " +
+			"var(--background-gradient-left), " +
 			"url(" +
 			image +
 			")",
-		backgroundSize: "auto",
-		backgroundRepeat: "repeat",
+		backgroundSize: "var(--background-size-auto)",
+		backgroundRepeat: "var(--background-repeat)",
 	};
 };

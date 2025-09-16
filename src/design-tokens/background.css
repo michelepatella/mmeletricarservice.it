@@ -1,0 +1,17 @@
+/* -------- Background -------- */
+:root {
+    /* — Repeating — */
+    --background-no-repeat: no-repeat;
+    --background-repeat: repeat;
+
+    /* — Positioning — */
+    --background-position-center: center;
+
+    /* — Size — */
+    --background-size-auto: auto;
+
+    /* — Gradient — */
+    --background-gradient-top: linear-gradient(to top, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%);
+    --background-gradient-bottom: linear-gradient(to bottom, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%);
+    --background-gradient-left: linear-gradient(to left, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%);
+}

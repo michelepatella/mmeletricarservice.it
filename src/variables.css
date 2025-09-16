@@ -108,15 +108,12 @@
 	--menu_container_big_left: 0;
 	--menu_container_big_height: 100vh;
 	--menu_container_big_width: 170px;
-	--menu_container_big_z_index: 99999;
 
 	--menu_container_big_y_translation: -20px;
-	--menu_container_small_z_index: 99999;
 
 	/* -------- Hamburger Button -------- */
 
 	--hamburger_button_backdrop_filter_blur: 4px;
-	--hamburger_button_z_index: 1000;
 
 	/* -------- Google Maps -------- */
 	--google_maps_iframe_width: 100%;

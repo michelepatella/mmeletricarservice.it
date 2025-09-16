@@ -1,7 +1,13 @@
 /* -------- Animations -------- */
 :root {
-    /* — Animation of Different Duration Times — */
+    /* — Duration — */
     --animation-duration-short: 0.3s;
     --animation-duration-medium: 0.5s;
     --animation-duration-long: 0.8s;
+
+    /* — Timing — */
+    --animation-timing-ease-out: ease-out;
+
+    /* — Fill Mode — */
+    --animation-fill-mode-forwards: forwards;
 }

@@ -1,11 +1,6 @@
 /* Variables */
 :root {
-	--cookie-button-position: fixed;
-	--cookie-button-z-index: 99999;
-	--cookie-button-border: none;
 	--cookie-button-background-image: url("../../../public/icons/cookie_icon.svg");
-	--cookie-button-background-repeat: no-repeat;
-	--cookie-button-background-position: center;
 }
 
 /* Cookie Button */
@@ -14,28 +9,28 @@
 	height: var(--float_button_dimension);
 	bottom: var(--float_button_margins);
 	right: var(--float_button_margins);
-	position: var(--cookie-button-position);
-	z-index: var(--cookie-button-z-index);
+	position: var(--position-fixed);
+	z-index: var(--z-index-high);
 	border-radius: var(--border-radius-circle);
-	border: var(--cookie-button-border);
+	border: var(--border-none);
 	background-color: var(--color-blue);
 	background-image: var(--cookie-button-background-image);
-	background-repeat: var(--cookie-button-background-repeat);
-	background-position: var(--cookie-button-background-position);
+	background-repeat: var(--background-no-repeat);
+	background-position: var(--background-position-center);
 }
 
 /* Cookie Button — Hover */
 .cookie-button:hover {
 	scale: var(--scale-large);
 	bottom: var(--float_button_margins) !important;
-	position: var(--cookie-button-position) !important;
-	z-index: var(--cookie-button-z-index) !important;
+	position: var(--position-fixed) !important;
+	z-index: var(--z-index-high) !important;
 	border-radius: var(
 		--border-radius-circle
 	) !important;
-	border: var(--cookie-button-border) !important;
+	border: var(--border-none) !important;
 	background-color: var(--color-blue) !important;
 	background-image: var(--cookie-button-background-image) !important;
-	background-repeat: var(--cookie-button-background-repeat) !important;
-	background-position: var(--cookie-button-background-position) !important;
+	background-repeat: var(--background-no-repeat) !important;
+	background-position: var(--background-position-center) !important;
 }
