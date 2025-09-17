@@ -1,155 +1,172 @@
-/* Carousel container styles */
+/* Variables */
+:root {
+	--used-car-drawer-carousel-container-max-width: 100%;
+	--used-car-drawer-carousel-image-width: 100%;
+	--used-car-drawer-carousel-image-height: 100%;
+	--used-car-drawer-carousel-image-max-width: 100%;
+	--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape: 80vh;
+	--used-car-drawer-carousel-max-height-medium-portrait-small-portrait: 40vh;
+	--used-car-drawer-carousel-container-width-big: 75%;
+	--used-car-drawer-carousel-container-width-medium-portrait: 100%;
+	--used-car-drawer-carousel-container-width-medium-landscape: 60%;
+	--used-car-drawer-carousel-container-width-small: 100%;
+}
+
+/* Used Car Drawer Carousel */
 .carousel-container {
 	max-width: var(
-		--used_car_drawer_carousel_container_max_width
+		--used-car-drawer-carousel-container-max-width
 	);
 	border-radius: var(--border-radius-default) !important;
 }
 
-/* Carousel image container styles */
+/* Used Car Drawer Carousel — Image Container */
 .carousel-container .ant-image {
-	width: var(--used_car_drawer_carousel_image_width);
-	height: var(--used_car_drawer_carousel_image_height);
+	width: var(--used-car-drawer-carousel-image-width);
+	height: var(--used-car-drawer-carousel-image-height);
 	max-width: var(
-		--used_car_drawer_carousel_image_max_width
+		--used-car-drawer-carousel-image-max-width
 	);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: var(--display-flex);
+	justify-content: var(--justify-content-center);
+	align-items: var(--align-items-center);
 	border-radius: var(--border-radius-default) !important;
 }
 
-/* Carousel image styles */
+/* Used Car Drawer Carousel — Image */
 .carousel-container .ant-image-img {
-	width: var(--used_car_drawer_carousel_image_width);
-	height: var(--used_car_drawer_carousel_image_height);
+	width: var(--used-car-drawer-carousel-image-width);
+	height: var(--used-car-drawer-carousel-image-height);
 	max-width: var(
-		--used_car_drawer_carousel_image_max_width
+		--used-car-drawer-carousel-image-max-width
 	);
-	object-fit: cover;
+	object-fit: var(--background-object-fit-cover);
 	border-radius: var(--border-radius-default) !important;
 }
 
-/* Carousel image mask styles */
+/* Used Car Drawer Carousel — Image Mask */
 .carousel-container .ant-image-mask {
 	display: none;
 }
 
-/* ----------- Big screen ----------- */
+/* ------ Responsive Layout ------ */
+
+/* Big Screen */
 @media (min-width: 1025px) {
 	.carousel-container {
 		width: var(
-			--used_car_drawer_carousel_container_width_big
+			--used-car-drawer-carousel-container-width-big
 		);
 		max-height: var(
-			--used_car_drawer_carousel_max_height_big_medium_lanscape_small_landscape
+			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
 		);
 	}
 
 	.carousel-container .ant-image {
 		max-height: var(
-			--used_car_drawer_carousel_max_height_big_medium_lanscape_small_landscape
+			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
 		);
 	}
 
 	.carousel-container .ant-image-img {
 		max-height: var(
-			--used_car_drawer_carousel_max_height_big_medium_lanscape_small_landscape
+			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
 		);
 	}
 }
-/* ----------- Medium screen portrait ----------- */
+
+/* Medium Screen — Portrait */
 @media (min-width: 768px) and (max-width: 1024px) {
 	.carousel-container {
 		width: var(
-			--used_car_drawer_carousel_container_width_medium_portrait
+			--used-car-drawer-carousel-container-width-medium-portrait
 		);
 		max-height: var(
-			--used_car_drawer_carousel_max_height_medium_portrait_small_portrait
+			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
 		);
 	}
 
 	.carousel-container .ant-image {
 		max-height: var(
-			--used_car_drawer_carousel_max_height_medium_portrait_small_portrait
+			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
 		);
 	}
 
 	.carousel-container .ant-image-img {
 		max-height: var(
-			--used_car_drawer_carousel_max_height_medium_portrait_small_portrait
+			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
 		);
 	}
 }
 
-/* ----------- Medium screen landscape ----------- */
+/* Medium Screen — Landscape */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 	.carousel-container {
 		width: var(
-			--used_car_drawer_carousel_container_width_medium_landscape
+			--used-car-drawer-carousel-container-width-medium-landscape
 		);
 		max-height: var(
-			--used_car_drawer_carousel_max_height_big_medium_lanscape_small_landscape
+			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
 		);
 	}
 
 	.carousel-container .ant-image {
 		max-height: var(
-			--used_car_drawer_carousel_max_height_big_medium_lanscape_small_landscape
+			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
 		);
 	}
 
 	.carousel-container .ant-image-img {
 		max-height: var(
-			--used_car_drawer_carousel_max_height_big_medium_lanscape_small_landscape
+			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
 		);
 	}
 }
 
-/* ----------- Small screen portrait ----------- */
+/* Small Screen — Portrait */
 @media (max-width: 767px) {
 	.carousel-container {
 		width: var(
-			--used_car_drawer_carousel_container_width_small
+			--used-car-drawer-carousel-container-width-small
 		);
 		max-height: var(
-			--used_car_drawer_carousel_max_height_medium_portrait_small_portrait
+			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
 		);
 	}
 
 	.carousel-container .ant-image {
 		max-height: var(
-			--used_car_drawer_carousel_max_height_medium_portrait_small_portrait
+			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
 		);
 	}
 
 	.carousel-container .ant-image-img {
 		max-height: var(
-			--used_car_drawer_carousel_max_height_medium_portrait_small_portrait
+			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
 		);
 	}
 }
 
-/* ----------- Small screen landscape ----------- */
+/* Small Screen — Landscape */
 @media (max-width: 767px) and (orientation: landscape) {
 	.carousel-container {
 		width: var(
-			--used_car_drawer_carousel_container_width_small
+			--used-car-drawer-carousel-container-width-small
 		);
 		max-height: var(
-			--used_car_drawer_carousel_max_height_big_medium_lanscape_small_landscape
+			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
 		);
 	}
 
 	.carousel-container .ant-image {
 		max-height: var(
-			--used_car_drawer_carousel_max_height_big_medium_lanscape_small_landscape
+			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
 		);
 	}
 
 	.carousel-container .ant-image-img {
 		max-height: var(
-			--used_car_drawer_carousel_max_height_big_medium_lanscape_small_landscape
+			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
 		);
 	}
 }

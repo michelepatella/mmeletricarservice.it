@@ -2,7 +2,7 @@
 :root {
     /* — Duration — */
     --animation-duration-short: 0.3s;
-    --animation-duration-medium: 0.8s;
+    --animation-duration-medium: 0.5s;
     --animation-duration-long: 1.5s;
 
     /* — Time — */
