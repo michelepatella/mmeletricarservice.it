@@ -31,4 +31,9 @@
 		#2ba35f,
 		#7dffcc
 	);
+
+	/* Opacity */
+	--opacity-zero: 0;
+	--opacity-low: 0.8;
+	--opacity-high: 1;
 }

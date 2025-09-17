@@ -4,7 +4,7 @@
 }
 
 /* In Drawer Animation */
-@keyframes slideDrawerRight {
+@keyframes usedCarDrawerSlideRight {
 	from {
 		transform: translateX(100%);
 	}
@@ -30,7 +30,7 @@
 		--used_car_drawer_content_wrapper_width
 	) !important;
 	position: fixed;
-	animation: slideDrawerRight 0.5s ease-out;
+	animation: usedCarDrawerSlideRight 0.5s ease-out;
 }
 
 /* Hide menus  */

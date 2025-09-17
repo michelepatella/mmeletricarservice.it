@@ -4,9 +4,9 @@
  */
 export const getServicesTitleStyle = () => {
 	return {
-		display: "flex",
-		flexDirection: "column",
-		minHeight: "calc(4.7 * var(--super_heading_font_size))",
+		display: "var(--display-flex)",
+		flexDirection: "var(--flex-direction-column)",
+		minHeight: "calc(var(--services-title-min-height-multiplier) * var(--font-size-super-heading))",
 	};
 };
 
@@ -21,7 +21,7 @@ export const getServicesTitleSpanStyle = (title) => {
 		"background:" +
 		title.gradient +
 		";" +
-		"-webkit-background-clip: text;" +
-		"-webkit-text-fill-color: transparent"
+		"-webkit-background-clip: var(--services-title-webkit-background-clip);" +
+		"-webkit-text-fill-color: var(--color-transparent)"
 	);
 };

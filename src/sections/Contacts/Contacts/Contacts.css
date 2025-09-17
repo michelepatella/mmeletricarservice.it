@@ -1,10 +1,14 @@
-/* Contacts Layout styles */
+/* Variables */
+:root {
+	--contacts-layout-gap: 150px;
+}
+
+/* Contacts — Contacts Layout */
 .contacts-layout {
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	gap: var(--contacts_layout_gap);
-	position: relative;
+	display: var(--display-flex);
+	flex-direction: var(--flex-direction-column);
+	gap: var(--contacts-layout-gap);
+	position: var(--position-relative);
 	font-family: var(--font-family);
 	background-color: var(--color-background);
 }

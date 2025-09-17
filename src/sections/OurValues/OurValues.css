@@ -1,47 +1,56 @@
-/* Our values steps styles */
+/* Variables */
+:root {
+	--our-values-steps-description-margin-bottom: 50px;
+	--our-values-steps-title-margin-top-multiplier-big: -1.5;
+	--our-values-steps-title-margin-top-multiplier-small: -1.2;
+}
+
+/* Our Values — Steps */
 .our-values-steps {
 	font-family: var(--font-family);
-	padding: 0 !important;
 }
 
 .ant-steps-item-icon,
 .ant-steps-icon-dot,
 .ant-steps-item-tail::after {
 	background-color: var(--color-accent) !important;
-	color: var(--color-accent) !important;
 }
 
 .ant-steps-item-description,
 .ant-steps-item-description.in-view {
-	margin-bottom: var(--our_values_steps_margin_bottom);
+	margin-bottom: var(--our-values-steps-description-margin-bottom);
 }
 
-/* ------- Big screen ------- */
+/* ------ Responsive Layout ------ */
+
+/* Big Screen */
 @media (min-width: 1025px) {
 	.ant-steps-item-title,
 	.ant-steps-item-title.in-view {
 		margin-top: calc(
-			var(--font-size-subheading-big) * -1.5
+			var(--font-size-subheading) * var(--our-values-steps-title-margin-top-multiplier-big)
 		) !important;
 	}
 }
 
-/* ------- Medium screens (portrait and landscape) ------- */
+/* Medium Screen */
 @media (min-width: 768px) and (max-width: 1024px) {
+	/* Our Values — Steps (Title) */
 	.ant-steps-item-title,
 	.ant-steps-item-title.in-view {
 		margin-top: calc(
-			var(--font-size-subheading-medium) * -1.5
+			var(--font-size-subheading) * var(--our-values-steps-title-margin-top-multiplier-big)
 		) !important;
 	}
 }
 
-/* ------- Small screen (portrait and landscape) ------- */
+/* Small Screen */
 @media (max-width: 767px) {
+	/* Our Values — Steps (Title) */
 	.ant-steps-item-title,
 	.ant-steps-item-title.in-view {
 		margin-top: calc(
-			var(--font-size-subheading-small) * -1.2
+			var(--font-size-subheading) * var(--our-values-steps-title-margin-top-multiplier-small)
 		) !important;
 	}
 }

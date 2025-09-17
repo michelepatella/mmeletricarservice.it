@@ -1,9 +1,16 @@
-/* Services container styles */
+/* Variables */
+:root {
+	--services-gap: 50px;
+	--services-title-min-height-multiplier: 4.7;
+	--services-title-webkit-background-clip: text;
+}
+
+/* Services */
 .services-container {
 	width: var(--section-container-max-width);
-	display: flex;
-	flex-direction: row;
-	gap: var(--services_container_gap);
-	overflow-x: auto;
-	overflow-y: hidden;
+	display: var(--display-flex);
+	flex-direction: var(--flex-direction-row);
+	gap: var(--services-gap);
+	overflow-x: var(--overflow-auto);
+	overflow-y: var(--overflow-hidden);
 }

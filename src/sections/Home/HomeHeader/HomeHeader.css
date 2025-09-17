@@ -1,29 +1,34 @@
-/* Home Header styles */
-.home-header {
-	display: flex;
-	justify-content: right;
-	gap: var(--home_header_gap);
-	padding-right: var(--home_header_padding_right);
-	padding-bottom: var(--home_header_padding_bottom);
-	background-color: transparent;
+/* Variables */
+:root {
+	--home-header-gap: 20px;
+	--home-header-padding-right: 10px;
+	--home-header-padding-bottom: 5px;
 }
 
-/* ------ Small screen portrait ------- */
+/* Home Header */
+.home-header {
+	display: var(--display-flex);
+	justify-content: var(--justify-content-right);
+	gap: var(--home-header-gap);
+	padding-right: var(--home-header-padding-right);
+	padding-bottom: var(--home-header-padding-bottom);
+	background-color: var(--color-transparent);
+}
+
+/* ------ Responsive Layout ------ */
+
+/* Small Screen — Portrait */
 @media (max-width: 767px) and (orientation: portrait) {
 	.home-header {
-		justify-content: left;
+		justify-content: var(--justify-content-left);
 		padding-left: var(--section-container-margin-left-small-portrait);
-		padding-bottom: var(--home_header_padding_bottom);
 	}
 }
 
-/* ------ Small screen landscape ------- */
+/* Small Screen — Landscape */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 	.home-header {
-		justify-content: left;
-		padding-left: var(
-			--section-container-margin-left-small-landscape
-		);
-		padding-bottom: var(--home_header_padding_bottom);
+		justify-content: var(--justify-content-left);
+		padding-left: var(--section-container-margin-left-small-landscape);
 	}
 }

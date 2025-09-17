@@ -22,6 +22,7 @@ import "./App.css";
 import "../sections/Home/Home/Home.css";
 import "../sections/Home/HomeHeader/HomeHeader.css";
 import "../sections/Home/HomeContent/HomeContent.css";
+import "../sections/AboutUs/AboutUs.css";
 import "../sections/OurValues/OurValues.css";
 import "../sections/Services/Services.css";
 import "../sections/UsedCars/UsedCars/UsedCars.css";

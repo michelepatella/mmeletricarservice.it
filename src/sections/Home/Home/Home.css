@@ -1,6 +1,11 @@
-/* Home Layout styles */
+/* Variables */
+:root {
+	--home-layout-height: 100vh;
+}
+
+/* Home — Home Layout */
 .home-layout {
+	height: var(--home-layout-height);
 	font-family: var(--font-family);
-	background: transparent;
-	height: var(--home_layout_height);
+	background: var(--color-transparent);
 }

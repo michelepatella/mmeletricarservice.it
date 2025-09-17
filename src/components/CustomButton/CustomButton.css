@@ -7,6 +7,7 @@
 .custom-button {
 	color: var(--color-white);
 	font-family: var(--font-family);
+	font-size: var(--font-size-body);
 	border: var(--border-width-button-small) var(--border-style-solid) var(--color-white);
 	border-radius: var(--border-radius-default);
 	padding: var(--button-padding-small);
@@ -18,6 +19,7 @@
 	transform: scale(var(--scale-small));
 	color: var(--color-white);
 	font-family: var(--font-family);
+	font-size: var(--font-size-body);
 	border: var(--border-width-button-small) var(--border-style-solid) var(--color-white);
 	border-radius: var(--border-radius-default);
 	padding: var(--button-padding-small);
@@ -28,6 +30,7 @@
 .contact-button {
 	color: var(--color-white);
 	font-family: var(--font-family);
+	font-size: var(--font-size-body);
 	padding: var(--zero-padding);
 	box-shadow: var(--shadow-none);
 	background-color: var(--color-transparent) !important;
@@ -38,6 +41,7 @@
 	transform: scale(var(--scale-small));
 	color: var(--color-white);
 	font-family: var(--font-family);
+	font-size: var(--font-size-body);
 	padding: var(--zero-padding);
 	box-shadow: var(--shadow-none);
 	background-color: var(--color-transparent) !important;
@@ -47,8 +51,7 @@
 .cta-button {
 	margin-top: var(--custom-button-cta-margin-top);
 	color: var(--color-white);
-	font-size: var(--font-size-caption);
-	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-body);
 	font-family: var(--font-family);
 	border: var(--border-width-button-big) var(--border-style-solid);
 	border-image: var(--gradient-accent) 1;
@@ -62,8 +65,7 @@
 .cta-button:hover {
 	transform: scale(var(--scale-small));
 	color: var(--color-white) !important;
-	font-size: var(--font-size-caption) !important;
-	font-weight: var(--font-weight-bold) !important;
+	font-size: var(--font-size-body) !important;
 	font-family: var(--font-family) !important;
 	border: var(--border-width-button-big) var(--border-style-solid) !important;
 	border-image: var(--gradient-accent) 1 !important;

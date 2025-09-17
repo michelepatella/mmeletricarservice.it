@@ -6,7 +6,7 @@
 }
 
 /* Cookie Consent Banner — Animation */
-@keyframes slideUp {
+@keyframes cookieConsentBannerSlideUp {
 	from {
 		transform: translateY(var(--cookie-consent-banner-animation-translate-y-from));
 	}
@@ -22,7 +22,7 @@
 	color: var(--color-white) !important;
 	z-index: var(--z-index-high) !important;
 	background: var(--color-background) !important;
-	animation: slideUp var(--animation-duration-short)
+	animation: cookieConsentBannerSlideUp var(--animation-duration-short)
 	var(--animation-timing-ease-out) var(--animation-fill-mode-forwards);
 }
 

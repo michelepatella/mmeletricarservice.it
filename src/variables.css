@@ -65,36 +65,9 @@
 	--google_maps_unavailable_background_size: 10%;
 	--google_maps_unavailable_description_margins: 15% 5% 0 5%;
 
-	/* -------- Home section -------- */
-	--home_layout_height: 100vh;
-	--home_header_padding_bottom: 5px;
-	--home_header_padding_right: 10px;
-	--home_header_gap: 20px;
-	--home_logo_dimension: 50px;
-	--home_title_margin_bottom: 0px;
-	--home_title_margin_top: 20vh;
-	--home_title_animation_delay: 0.6s;
-	--home_subtitle_margin_top: 0px;
-	--home_subtitle_animation_delay: 1.2s;
-
-	/* -------- About us section -------- */
-	--about_us_height: 70vh;
-
-	/* -------- Our values section -------- */
-	--our_values_steps_margin_bottom: 50px;
-
-	/* -------- Services section -------- */
-	--services_container_gap: 3rem;
-
 	/* -------- Used cars -------- */
 	--used_cars_container_padding: 1rem;
 	--used_cars_container_linear_gradient: 10px;
 	--used_cars_scroll_label_margin_left: 22%;
 	--unavailable_used_cars_image_dimension: 250px;
-
-	/* -------- Contacts section -------- */
-	--contacts_layout_gap: 10rem;
-	--contact_buttons_gap: 30px;
-	--contacts_footer_width: 90%;
-	--contacts_footer_padding: 0;
 }

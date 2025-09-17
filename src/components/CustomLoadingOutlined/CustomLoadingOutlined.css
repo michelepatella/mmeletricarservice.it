@@ -10,7 +10,7 @@
 }
 
 /* Custom Loading Outlined — Animation */
-@keyframes spin {
+@keyframes customLoadingOutlinedSpin {
 	0% {
 		transform: rotate(var(--custom-loading-outlined-animation-transform-rotate-from));
 	}
@@ -29,7 +29,7 @@
 
 /* Custom Loading Outlined — Circle */
 .custom-loading-outlined-circle {
-	animation: spin var(--animation-duration-long) var(--animation-timing-linear) var(--animation-iteration-infinite);
+	animation: customLoadingOutlinedSpin var(--animation-duration-long) var(--animation-timing-linear) var(--animation-iteration-infinite);
 	transform-origin: var(--custom-loading-outlined-circle-transform-origin);
 }
 
