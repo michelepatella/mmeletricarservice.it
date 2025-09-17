@@ -51,7 +51,6 @@ import "../components/Menu/MenuBigScreen/MenuBigScreen.css";
 import "../components/Menu/MenuSmallScreen/MenuSmallScreen.css";
 import "../components/CustomLoadingOutlined/CustomLoadingOutlined.css";
 import "../components/HorizontalScrollLabel/HorizontalScrollLabel.css";
-import "../variables.css";
 import "../design-tokens/colors.css";
 import "../design-tokens/typography.css";
 import "../design-tokens/elevations.css";

@@ -14,6 +14,7 @@ body {
 	background-color: var(--color-background);
 	overflow-x: var(--overflow-hidden);
 	scroll-behavior: var(--html-body-scroll-behavior);
+	scrollbar-width: var(--scrollbar-width-default);
 	-webkit-font-smoothing: var(--html-body-webkit-font-smoothing);
 	-moz-osx-font-smoothing: var(--hmtl-body-moz-osx-font-smoothing);
 }

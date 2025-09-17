@@ -9,8 +9,8 @@
 export const getUsedCarsUnavailableDescriptionStyle =
 	() => {
 		return {
-			textAlign: "center",
-			opacity: "var(--low_opacity)",
+			textAlign: "var(--font-alignment-center)",
+			opacity: "var(--opacity-low)",
 		};
 	};
 /**
@@ -40,6 +40,6 @@ export const getUsedCarsAnimatedDivStyle = (
 export const getUsedCarsCustomLoadingOutlineStyle = () => {
 	return {
 		marginLeft:
-			"var(--custom-loading-outlined-margin-left)",
+			"var(--used-cars-custom-loading-outlined-margin-left)",
 	};
 };
