@@ -10,11 +10,10 @@ export const getUsedCarOverviewTextStyle = (
 	isTitleVisible
 ) => {
 	return {
-		marginTop: 0,
-		marginBottom:
-			"var(--used_car_overview_text_margin_top)",
-		fontFamily: "Poppins",
-		fontWeight: isTitleVisible ? "bold" : "normal",
-		opacity: "var(--low_opacity)",
+		marginTop: "var(--used-car-overview-text-margin-top)",
+		marginBottom: "var(--used-car-overview-text-margin-bottom)",
+		fontFamily: "var(--font-family)",
+		fontWeight: isTitleVisible ? "var(--font-weight-bold)" : "var(--font-weight-normal)",
+		opacity: "var(--opacity-low)",
 	};
 };
