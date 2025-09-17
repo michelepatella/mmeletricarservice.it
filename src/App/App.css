@@ -18,3 +18,6 @@ body {
 	-webkit-font-smoothing: var(--html-body-webkit-font-smoothing);
 	-moz-osx-font-smoothing: var(--hmtl-body-moz-osx-font-smoothing);
 }
+* {
+	box-sizing: border-box;
+}

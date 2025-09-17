@@ -1,8 +1,8 @@
 /* Variables */
 :root {
-	--used-cars-container-padding: 20px;
+	--used-cars-container-padding: 30px;
+	--used-cars-container-gap: 20px;
 	--used-cars-custom-loading-outlined-margin-left: 15vw;
-	--used-cars-card-gap: 20px;
 	--used-cars-container-webkit-overflow-scrolling: touch;
 	--used-cars-container-scroll-snap-type: x mandatory;
 	--used-cars-unavailable-image-dimension: 250px;
@@ -10,11 +10,11 @@
 
 /* Used Cars Container */
 .used-cars-container {
-	width: 100%;
+	width: var(--section-container-max-width);
 	display: var(--display-flex);
 	flex-direction: var(--flex-direction-row);
+	gap: var(--used-cars-container-gap);
 	padding: var(--used-cars-container-padding);
-	gap: var(--used-cars-card-gap);
 	overflow-x: var(--overflow-auto);
 	scrollbar-width: var(--scrollbar-width-default);
 	-webkit-overflow-scrolling: var(--used-cars-container-webkit-overflow-scrolling);
