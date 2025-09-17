@@ -38,6 +38,7 @@
     --justify-content-center: center;
     --justify-content-right: right;
     --justify-content-left: left;
+    --justify-content-end: end;
 
     /* Align */
     --align-items-center: center;

@@ -10,4 +10,7 @@
 
     /* — Size — */
     --background-size-auto: auto;
+
+    /* — Object Fit — */
+    --background-object-fit-cover: cover;
 }

@@ -1,17 +1,5 @@
 :root {
 
-	/* -------- Used Cars Card -------- */
-	--used_car_card_padding: 15px 15px 0 15px;
-	--used_car_card_width: 270px;
-	--used_car_card_gap: 2rem;
-
-	--used_car_card_flex_shrink: 0;
-	--used_car_card_image_container_width: 100%;
-	--used_car_card_image_max_width: 100%;
-	--used_car_card_image_height: 100%;
-	--used_car_card_overview_flex_gap: 0;
-	--used_car_card_price_container_width: 100%;
-
 	/* -------- Used Car Overview -------- */
 	--used_car_overview_text_margin_top: 4px;
 	--used_car_overview_container_margin_top: 0.5rem;
@@ -56,6 +44,7 @@
 	--used_car_drawer_collapse_lists_margin_block_start: 0;
 
 	/* -------- Used cars -------- */
+	--used_car_card_gap: 2rem;
 	--used_cars_container_padding: 1rem;
 	--used_cars_container_linear_gradient: 10px;
 	--used_cars_scroll_label_margin_left: 22%;

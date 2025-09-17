@@ -1,55 +1,67 @@
-/* Used cars card styles */
+/* Variables */
+:root {
+	--used-car-card-width: 270px;
+	--used-car-card-padding: 15px 15px 0 15px;
+	--used-car-card-flex-shrink: 0;
+	--used-car-card-scroll-snap-align: center;
+	--used-car-card-image-container-width: 100%;
+	--used-car-card-image-max-width: 100%;
+	--used-car-card-image-height: 100%;
+	--used-car-card-overview-flex-gap: 0;
+	--used-car-card-price-container-width: 100%;
+}
+
+/* Used Cars Card */
 .used-car-card {
 	font-family: var(--font-family);
-	width: var(--used_car_card_width);
-	padding: var(--used_car_card_padding);
+	width: var(--used-car-card-width);
+	padding: var(--used-car-card-padding);
 	background: var(--color-background);
-	border: none;
+	border: var(--border-none);
 	border-radius: var(--border-radius-default);
-	box-shadow: var(--used-car-card-box-shadow);
-	flex-shrink: var(--used_car_card_flex_shrink);
-	scroll-snap-align: center;
-	cursor: pointer;
-	transition:
-		box-shadow 0.3s ease,
-		transform 0.3s ease;
+	box-shadow: var(--shadow-xl);
+	flex-shrink: var(--used-car-card-flex-shrink);
+	scroll-snap-align: var(--used-car-card-scroll-snap-align);
+	cursor: var(--cursor-pointer);
 }
 
-/* Used car image presentation container styles */
+/* Used Cars Card — Image Container */
 .used-car-card-image-container {
-	width: var(--used_car_card_image_container_width);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
+	width: var(--used-car-card-image-container-width);
+	display: var(--display-flex);
+	justify-content: var(--justify-content-center);
+	align-items: var(--align-items-center);
+	overflow: var(--overflow-hidden);
 }
 
-/* Used car overview flex styles */
-.used-car-card-overview-flex {
-	display: flex;
-	flex-direction: column;
-	gap: var(--used_car_card_overview_flex_gap);
-}
-
-/* Used car image presentation styles */
+/* Used Cars Card — Image */
 .used-car-card-image-container img {
-	max-width: var(--used_car_card_image_max_width);
-	height: var(--used_car_card_image_height);
-	object-fit: cover;
+	max-width: var(--used-car-card-image-max-width);
+	height: var(--used-car-card-image-height);
+	object-fit: var(--background-object-fit-cover);
 	border-radius: var(--border-radius-default);
 }
 
-/* Used car price container styles */
-.used-car-card-price-container {
-	width: var(--used_car_card_price_container_width);
-	display: flex;
-	justify-content: end;
+/* Used Cars Card — Overview (Flex) */
+.used-car-card-overview-flex {
+	display: var(--display-flex);
+	flex-direction: var(--flex-direction-column);
+	gap: var(--used-car-card-overview-flex-gap);
 }
 
-/* ------ Big screen ------- */
+/* Used Cars Card — Price Container */
+.used-car-card-price-container {
+	width: var(--used-car-card-price-container-width);
+	display: var(--display-flex);
+	justify-content: var(--justify-content-end);
+}
+
+/* ------ Responsive Layout ------ */
+
+/* Big screen */
 @media (min-width: 1025px) {
 	.used-car-card:hover {
-		box-shadow: var(--used-car-card-box-shadow-hover);
-		transform: scale(var(--used_car_card_scale_perc));
+		box-shadow: var(--shadow-xxl);
+		transform: scale(var(--scale-small));
 	}
 }
