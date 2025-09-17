@@ -1,17 +1,30 @@
-/* Google Maps container styles */
+/* Variables */
+:root {
+	--where-we-are-google-maps-height: 60vh;
+	--where-we-are-google-maps-margin-top: 50px;
+	--where-we-are-google-maps-iframe-dimension: 100%;
+	--where-we-are-google-maps-iframe-border-width: 0;
+	--where-we-are-google-maps-iframe-filter-perc: 95%;
+	--where-we-are-google-maps-iframe-filter-rotation: 180deg;
+	--where-we-are-google-maps-unavailable-background-size: 10%;
+	--where-we-are-google-maps-unavailable-container-height: calc(var(--where-we-are-google-maps-height) / 2);
+	--where-we-are-google-maps-unavailable-description-margin: 15% 5% 0 5%;
+}
+
+/* Where We Are — Google Maps */
 .google-maps-container {
 	width: var(--section-container-max-width);
-	height: var(--google_maps_height);
-	margin-top: var(--google_maps_margin_top);
-	overflow: hidden;
+	height: var(--where-we-are-google-maps-height);
+	margin-top: var(--where-we-are-google-maps-margin-top);
+	overflow: var(--overflow-hidden);
 	border-radius: var(--border-radius-default);
 }
 
-/* Google Maps iframe styles */
+/* Where We Are — Google Maps (iframe) */
 .google-maps-iframe {
-	width: var(--google_maps_iframe_width);
-	height: var(--google_maps_iframe_height);
-	border: var(--border-width-google-maps-iframe);
-	filter: invert(var(--google_maps_iframe_filter_perc))
-		hue-rotate(var(--google_maps_iframe_filter_rotation));
+	width: var(--where-we-are-google-maps-iframe-dimension);
+	height: var(--where-we-are-google-maps-iframe-dimension);
+	border: var(--where-we-are-google-maps-iframe-border-width);
+	filter: invert(var(--where-we-are-google-maps-iframe-filter-perc))
+		hue-rotate(var(--where-we-are-google-maps-iframe-filter-rotation));
 }

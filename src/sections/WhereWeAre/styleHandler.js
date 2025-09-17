@@ -10,13 +10,13 @@ import { MAP_ICON_LINK } from "./const";
  */
 export const getGoogleMapsContainerStyle = () => {
 	return {
-		height: "calc(var(--google_maps_height)/2)",
+		height: "var(--where-we-are-google-maps-unavailable-container-height)",
 		background: "url(" + MAP_ICON_LINK + ")",
-		backgroundRepeat: "no-repeat",
-		backgroundPosition: "center top",
+		backgroundRepeat: "var(--background-no-repeat)",
+		backgroundPosition: "var(--background-position-center-top)",
 		backgroundSize:
-			"var(--google_maps_unavailable_background_size)",
-		opacity: "var(--low_opacity)",
+			"var(--where-we-are-google-maps-unavailable-background-size)",
+		opacity: "var(--opacity-low)",
 	};
 };
 
@@ -33,8 +33,8 @@ export const getGoogleMapsContainerStyle = () => {
 export const getGoogleMapsUnavailableDescriptionStyle =
 	() => {
 		return {
-			textAlign: "center",
+			textAlign: "var(--font-alignment-center)",
 			margin:
-				"var(--google_maps_unavailable_description_margins)",
+				"var(--where-we-are-google-maps-unavailable-description-margin)",
 		};
 	};

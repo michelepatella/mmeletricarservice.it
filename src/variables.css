@@ -55,16 +55,6 @@
 	--used_car_drawer_collapse_lists_padding_inline_start: 0;
 	--used_car_drawer_collapse_lists_margin_block_start: 0;
 
-	/* -------- Google Maps -------- */
-	--google_maps_iframe_width: 100%;
-	--google_maps_iframe_height: 100%;
-	--google_maps_iframe_filter_perc: 95%;
-	--google_maps_iframe_filter_rotation: 180deg;
-	--google_maps_margin_top: 50px;
-	--google_maps_height: 60vh;
-	--google_maps_unavailable_background_size: 10%;
-	--google_maps_unavailable_description_margins: 15% 5% 0 5%;
-
 	/* -------- Used cars -------- */
 	--used_cars_container_padding: 1rem;
 	--used_cars_container_linear_gradient: 10px;

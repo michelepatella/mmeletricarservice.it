@@ -6,6 +6,7 @@
 
     /* — Position — */
     --background-position-center: center;
+    --background-position-center-top: center top;
 
     /* — Size — */
     --background-size-auto: auto;
