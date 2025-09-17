@@ -1,6 +1,6 @@
 /* Services container styles */
 .services-container {
-	width: var(--section_max_width);
+	width: var(--section-container-max-width);
 	display: flex;
 	flex-direction: row;
 	gap: var(--services_container_gap);

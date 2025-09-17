@@ -2,7 +2,7 @@
 :root {
 	--cookie-consent-banner-animation-translate-y-from: 100%;
 	--cookie-consent-banner-animation-translate-y-to: 0;
-	--cookie-consent-banner-button-width: 94.3%;
+	--cookie-consent-banner-button-width: 92%;
 }
 
 /* Cookie Consent Banner — Animation */
@@ -33,7 +33,7 @@
 	font-size: var(--font-size-caption) !important;
 	font-family: var(--font-family) !important;
 	border-radius: var(--border-radius-default) !important;
-	padding: var(--button-padding) !important;
+	padding: var(--button-padding-small) !important;
 }
 
 /* Cookie Consent Banner — Confirm Button */
@@ -46,5 +46,5 @@
 .CookieConsent #rcc-decline-button {
 	background-color: var(--color-background) !important;
 	color: var(--color-white) !important;
-	border: var(--border-width-buttons-default) var(--border-style-solid) var(--color-white) !important;
+	border: var(--border-width-button-small) var(--border-style-solid) var(--color-white) !important;
 }

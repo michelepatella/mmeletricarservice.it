@@ -1,7 +1,6 @@
 import React from "react";
 import { CUSTOM_TEXT_TYPES } from "../../utils/const";
-import { HORIZONTAL_SCROLL_LABEL_TEXT } from "./const";
-import { getHorizontalScrollLabelStyle } from "./styleHandler";
+import { HORIZONTAL_SCROLL_LABEL_CLASS_NAME, HORIZONTAL_SCROLL_LABEL_TEXT } from "./const";
 import CustomText from "../CustomText/CustomText";
 
 /**
@@ -13,11 +12,13 @@ import CustomText from "../CustomText/CustomText";
  */
 function HorizontalScrollLabel() {
 	return (
-		<CustomText
-			type={CUSTOM_TEXT_TYPES.BODY}
-			text={HORIZONTAL_SCROLL_LABEL_TEXT}
-			style={getHorizontalScrollLabelStyle(true)}
-		/>
+		<div className={HORIZONTAL_SCROLL_LABEL_CLASS_NAME}>
+			<CustomText
+				type={CUSTOM_TEXT_TYPES.BODY}
+				text={HORIZONTAL_SCROLL_LABEL_TEXT}
+				disableAnimation
+			/>
+		</div>
 	);
 }
 

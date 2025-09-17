@@ -52,7 +52,7 @@ export const useCookieConsent = () => {
 			}
 		} catch (error) {
 			// Show error
-			console.error("Failed to read cookieConsent:", error);
+			console.error("Failed to read " + COOKIE_NAME + ":", error);
 
 			// Close the cookie consent banner and set cookies
 			// acceptance to false in case of error

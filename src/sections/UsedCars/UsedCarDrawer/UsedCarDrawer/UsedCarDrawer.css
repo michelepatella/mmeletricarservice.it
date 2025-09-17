@@ -1,3 +1,8 @@
+/* Variables */
+:root {
+	--custom-loading-outlined-margin-top: 30vh;
+}
+
 /* In Drawer Animation */
 @keyframes slideDrawerRight {
 	from {

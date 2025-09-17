@@ -2,12 +2,17 @@
 :root {
     /* — Duration — */
     --animation-duration-short: 0.3s;
-    --animation-duration-medium: 0.5s;
-    --animation-duration-long: 0.8s;
+    --animation-duration-medium: 0.8s;
+    --animation-duration-long: 1.5s;
 
-    /* — Timing — */
+    /* — Time — */
+    --animation-timing-ease: ease;
     --animation-timing-ease-out: ease-out;
+    --animation-timing-linear: linear;
 
     /* — Fill Mode — */
     --animation-fill-mode-forwards: forwards;
+
+    /* — Iteration — */
+    --animation-iteration-infinite: infinite;
 }

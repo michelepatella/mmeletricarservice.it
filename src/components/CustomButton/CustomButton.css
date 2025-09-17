@@ -1,82 +1,74 @@
-/* Custom Button styles */
+/* Variables */
+:root {
+	--custom-button-cta-margin-top: 50px;
+}
+
+/* Custom Button (General) */
 .custom-button {
 	color: var(--color-white);
 	font-family: var(--font-family);
+	border: var(--border-width-button-small) var(--border-style-solid) var(--color-white);
 	border-radius: var(--border-radius-default);
-	padding: var(--button-padding);
+	padding: var(--button-padding-small);
 	background-color: var(--color-background) !important;
-	transition: all 0.3s ease;
 }
 
+/* Custom Button (General) — Hover */
 .custom-button:hover {
-	font-family: var(--font-family) !important;
-	border-radius: var(--border-radius-default) !important;
-	padding: var(--button-padding) !important;
-	transition: all 0.3s ease !important;
+	transform: scale(var(--scale-small));
+	color: var(--color-white);
+	font-family: var(--font-family);
+	border: var(--border-width-button-small) var(--border-style-solid) var(--color-white);
+	border-radius: var(--border-radius-default);
+	padding: var(--button-padding-small);
+	background-color: var(--color-background) !important;
 }
 
-/* Contact button styles */
+/* Custom Button (Contact) */
 .contact-button {
 	color: var(--color-white);
 	font-family: var(--font-family);
-	padding: var(--contact_button_padding);
-	box-shadow: none;
-	background-color: transparent !important;
+	padding: var(--zero-padding);
+	box-shadow: var(--shadow-none);
+	background-color: var(--color-transparent) !important;
 }
 
-/* CTA button styles */
+/* Custom Button (Contact) — Hover */
+.contact-button:hover {
+	transform: scale(var(--scale-small));
+	color: var(--color-white);
+	font-family: var(--font-family);
+	padding: var(--zero-padding);
+	box-shadow: var(--shadow-none);
+	background-color: var(--color-transparent) !important;
+}
+
+/* Custom Button (CTA) */
 .cta-button {
-	margin-top: var(--cta_button_margin_top);
+	margin-top: var(--custom-button-cta-margin-top);
 	color: var(--color-white);
 	font-size: var(--font-size-caption);
-	font-weight: bold;
+	font-weight: var(--font-weight-bold);
 	font-family: var(--font-family);
-	border: var(--cta_button_border) solid;
+	border: var(--border-width-button-big) var(--border-style-solid);
 	border-image: var(--gradient-accent) 1;
-	-webkit-mask-image: -webkit-linear-gradient(white, white);
-	background: transparent;
+	-webkit-mask-image: -webkit-linear-gradient(var(--color-white), var(--color-white));
+	background: var(--color-transparent);
 	border-radius: var(--border-radius-default);
-	padding: var(--button-padding);
-	transition: all 0.3s ease;
+	padding: var(--button-padding-big);
 }
 
+/* Custom Button (CTA) — Hover */
 .cta-button:hover {
-	transform: scale(var(--cta_button_scale));
-	border-radius: var(--border-radius-default) !important;
-	border: var(--cta_button_border) solid !important;
+	transform: scale(var(--scale-small));
+	color: var(--color-white) !important;
+	font-size: var(--font-size-caption) !important;
+	font-weight: var(--font-weight-bold) !important;
+	font-family: var(--font-family) !important;
+	border: var(--border-width-button-big) var(--border-style-solid) !important;
 	border-image: var(--gradient-accent) 1 !important;
+	-webkit-mask-image: -webkit-linear-gradient(var(--color-white), var(--color-white)) !important;
+	background: var(--color-transparent) !important;
 	border-radius: var(--border-radius-default) !important;
-	background: transparent !important;
-}
-
-/* ------- Big screen ------- */
-@media (min-width: 1025px) {
-	.custom-button {
-		font-size: var(--font-size-body-big);
-	}
-
-	.contact-button {
-		font-size: var(--font-size-body-big);
-	}
-}
-
-/* ------- Medium screens (portrait and landscape) ------- */
-@media (min-width: 768px) and (max-width: 1024px) {
-	.custom-button {
-		font-size: var(--font-size-body-medium);
-	}
-}
-
-/* ------- Medium screen portrait ------- */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-	.cta-button {
-		width: var(--cta_button_width_medium_landscape);
-	}
-}
-
-/* ------- Small screen (portrait and landscape) ------- */
-@media (max-width: 767px) {
-	.custom-button {
-		font-size: var(--font-size-body-small);
-	}
+	padding: var(--button-padding-big) !important;
 }

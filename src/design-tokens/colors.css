@@ -6,6 +6,7 @@
 	--color-black: #000000;
 	--color-background: #141414;
 	--color-accent: #f8de4d;
+	--color-transparent: transparent;
 
 	/* — Gradient — */
 	--gradient-accent: linear-gradient(

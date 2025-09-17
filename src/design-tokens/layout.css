@@ -1,5 +1,56 @@
 /* -------- Layout -------- */
 :root {
-    /* — Positioning — */
+    /* — Float Buttons — */
+    --float-button-dimension: 40px;
+    --float-button-margin: 10px;
+
+    /* — Sections — */
+    --section-spacing: 60px;
+    --section-container-width: 60%;
+    --section-container-width-small-portrait: 75%;
+    --section-container-max-width: 120%;
+    --section-container-margin-left-big: 250px;
+    --section-container-margin-left-medium: 190px;
+    --section-container-margin-left-small-portrait: 20px;
+    --section-container-margin-left-small-landscape: 15px;
+
+    /* — Position — */
     --position-fixed: fixed;
+    --position-absolute: absolute;
+    --position-relative: relative;
+
+    /* — Display — */
+    --display-block: block;
+    --display-inline: inline;
+    --display-inline-block: inline-block;
+    --display-flex: flex;
+    --display-grid: grid;
+    --display-none: none;
+
+    /* — Flex Direction — */
+    --flex-direction-row: row;
+    --flex-direction-column: column;
+    --flex-direction-row-reverse: row-reverse;
+    --flex-direction-column-reverse: column-reverse;
+
+    /* — Justify — */
+    --justify-self-center: center;
+    --justify-content-center: center;
+
+    /* Align */
+    --align-items-center: center;
+
+    /* — Padding — */
+    --zero-padding: 0;
+    --button-padding-small: 15px 20px 15px 20px;
+    --button-padding-big: 20px 25px 20px 25px;
+
+    /* Overflow */
+    --overflow-visible: visible;
+    --overflow-hidden: hidden;
+    --overflow-scroll: scroll;
+    --overflow-auto: auto;
+
+    /* — Cursor — */
+    --cursor-pointer: pointer;
 }

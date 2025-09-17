@@ -45,8 +45,11 @@ import "../components/CustomLink/CustomLink.css";
 import "../components/InfoCard/InfoCard.css";
 import "../components/SectionsWrapper/SectionsWrapper.css";
 import "../components/SectionContainer/SectionContainer.css";
-import "../components/Menu/MenuWrapper/MenuWrapper.css";
+import "../components/BackgroundContainer/BackgroundContainer.css";
+import "../components/Menu/MenuBigScreen/MenuBigScreen.css";
+import "../components/Menu/MenuSmallScreen/MenuSmallScreen.css";
 import "../components/CustomLoadingOutlined/CustomLoadingOutlined.css";
+import "../components/HorizontalScrollLabel/HorizontalScrollLabel.css";
 import "../variables.css";
 import "../design-tokens/colors.css";
 import "../design-tokens/typography.css";
@@ -54,6 +57,7 @@ import "../design-tokens/elevations.css";
 import "../design-tokens/borders.css";
 import "../design-tokens/layout.css";
 import "../design-tokens/background.css";
+import "../design-tokens/animations.css";
 
 /**
  * The entry-point of the web application.

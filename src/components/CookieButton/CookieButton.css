@@ -5,10 +5,10 @@
 
 /* Cookie Button */
 .cookie-button {
-	width: var(--float_button_dimension);
-	height: var(--float_button_dimension);
-	bottom: var(--float_button_margins);
-	right: var(--float_button_margins);
+	width: var(--float-button-dimension);
+	height: var(--float-button-dimension);
+	bottom: var(--float-button-margin);
+	right: var(--float-button-margin);
 	position: var(--position-fixed);
 	z-index: var(--z-index-high);
 	border-radius: var(--border-radius-circle);
@@ -21,8 +21,8 @@
 
 /* Cookie Button — Hover */
 .cookie-button:hover {
-	scale: var(--scale-large);
-	bottom: var(--float_button_margins) !important;
+	transform: scale(var(--scale-large));
+	bottom: var(--float-button-margin) !important;
 	position: var(--position-fixed) !important;
 	z-index: var(--z-index-high) !important;
 	border-radius: var(

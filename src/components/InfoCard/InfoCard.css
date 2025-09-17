@@ -1,21 +1,32 @@
-/* Info Card styles */
+/* Variables */
+:root {
+	--info-card-height: 100%;
+	--info-card-width: 250px;
+	--info-card-icon-dimension: 30px;
+	--info-card-flex-margin-top: 50px;
+	--info-card-flex-grid-template-columns: auto 1fr;
+	--info-card-flex-gap: 15px;
+	--info-card-description-margin-top: 0;
+}
+
+/* Info Card */
 .info-card {
-	height: var(--info_card_height);
-	width: var(--info_card_width);
-	background-color: transparent;
+	height: var(--info-card-height);
+	width: var(--info-card-width);
+	background-color: var(--color-transparent);
 }
 
-/* Info Card Icon styles */
+/* Info Card — Icon */
 .info-card-icon {
-	height: var(--info_card_icon_dimension);
-	width: var(--info_card_icon_dimension);
+	height: var(--info-card-icon-dimension);
+	width: var(--info-card-icon-dimension);
 }
 
-/* Info Card Flex container styles */
+/* Info Card — Flex Container */
 .info-card-flex {
-	margin-top: var(--info_card_flex_margin_top);
-	display: grid;
-	grid-template-columns: auto 1fr;
-	align-items: center;
-	gap: var(--info_card_flex_gap);
+	margin-top: var(--info-card-flex-margin-top);
+	display: var(--display-grid);
+	grid-template-columns: var(--info-card-flex-grid-template-columns);
+	align-items: var(--align-items-center);
+	gap: var(--info-card-flex-gap);
 }

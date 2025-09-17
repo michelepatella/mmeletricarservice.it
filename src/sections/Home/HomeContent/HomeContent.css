@@ -57,7 +57,7 @@
 	}
 
 	.home-content {
-		margin-left: var(--section_margin_left_big);
+		margin-left: var(--section-container-margin-left-big);
 	}
 }
 
@@ -74,7 +74,7 @@
 	}
 
 	.home-content {
-		margin-left: var(--section_margin_left_medium);
+		margin-left: var(--section-container-margin-left-medium);
 	}
 }
 
@@ -91,7 +91,7 @@
 	}
 
 	.home-content {
-		margin-left: var(--section_margin_left_medium);
+		margin-left: var(--section-container-margin-left-medium);
 	}
 }
 
@@ -108,7 +108,7 @@
 	}
 
 	.home-content {
-		margin-left: var(--section_margin_left_small_portrait);
+		margin-left: var(--section-container-margin-left-small-portrait);
 	}
 }
 
@@ -125,6 +125,6 @@
 	}
 
 	.home-content {
-		margin-left: var(--section_margin_left_small_landscape);
+		margin-left: var(--section-container-margin-left-small-landscape);
 	}
 }

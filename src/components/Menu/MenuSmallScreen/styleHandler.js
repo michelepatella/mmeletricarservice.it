@@ -11,8 +11,8 @@ export const getMenuParentItemStyle = (
 	return {
 		fontWeight:
 			section === menuItem?.href.replace("#", "")
-				? "bold"
-				: "normal",
+				? "var(--font-weight-bold)"
+				: "var(--font-weight-normal)",
 	};
 };
 
@@ -33,9 +33,9 @@ export const getMenuChildrenItemStyle = (
 	return {
 		fontWeight:
 			section === child?.href.replace("#", "")
-				? "bold"
-				: "normal",
-		paddingLeft: "var(--menu_children_padding_left)",
+				? "var(--font-weight-bold)"
+				: "var(--font-weight-normal)",
+		paddingLeft: "var(--menu-small-screen-children-padding-left)",
 	};
 };
 
@@ -46,6 +46,6 @@ export const getMenuChildrenItemStyle = (
  */
 export const getHamburgerButtonStyle = (visible) => {
 	return {
-		display: visible ? "none" : "flex",
+		display: visible ? "var(--display-none)" : "var(--display-flex)",
 	};
 };

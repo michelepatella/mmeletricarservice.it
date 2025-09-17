@@ -1,43 +1,4 @@
 :root {
-	/* -------- Components (General) -------- */
-	--gap_button_label: 0.5rem;
-	--float_button_dimension: 40px;
-	--float_button_margins: 10px;
-
-	/* -------- Sections Wrapper -------- */
-	--sections_wrapper_gap: 4rem;
-
-	/* -------- Custom Icon Button -------- */
-	--custom_text_super_heading_margin_bottom: 30px;
-	--custom_text_heading_margin_bottom: 0;
-
-	/* -------- Custom Icon Button -------- */
-	--custom_icon_button_margins: clamp(5px, 2vw, 10px);
-	--custom_icon_button_dimension: clamp(18px, 5vw, 20px);
-
-	--custom_icon_button_padding: 0;
-
-	/* -------- Custom Button(s) -------- */
-	--custom_button_filter_perc: 1;
-	--button-padding: 15px 20px 15px 20px;
-	--contact_button_padding: 0;
-	--cta_button_margin_top: 3rem;
-	--cta_button_width_medium_landscape: 40%;
-
-	/* -------- Custom Back Button -------- */
-	--custom_back_button_padding_top: 20px;
-
-	/* -------- Custom Block Quote -------- */
-	--custom_block_quote_margin_left: 3px;
-	--custom_block_quote_padding_left: 1rem;
-	--custom_block_quote_border_left: 3px;
-
-	/* -------- Info Card -------- */
-	--info_card_icon_dimension: 30px;
-	--info_card_flex_margin_top: 50px;
-	--info_card_flex_gap: 20px;
-	--info_card_height: 100%;
-	--info_card_width: 250px;
 
 	/* -------- Used Cars Card -------- */
 	--used_car_card_padding: 15px 15px 0 15px;
@@ -94,27 +55,6 @@
 	--used_car_drawer_collapse_lists_padding_inline_start: 0;
 	--used_car_drawer_collapse_lists_margin_block_start: 0;
 
-	/* -------- Section Container -------- */
-	--section_container_width: 60%;
-	--section_container_width_small_portrait: 75%;
-	--section_max_width: 120%;
-
-	/* -------- Menu -------- */
-	--menu_anchor_ink_width: 2px;
-	--menu_items_gap: 30px;
-	--menu_children_padding_left: 60px;
-	--menu_ink_margin_top: 10px;
-	--menu_container_big_top: 0;
-	--menu_container_big_left: 0;
-	--menu_container_big_height: 100vh;
-	--menu_container_big_width: 170px;
-
-	--menu_container_big_y_translation: -20px;
-
-	/* -------- Hamburger Button -------- */
-
-	--hamburger_button_backdrop_filter_blur: 4px;
-
 	/* -------- Google Maps -------- */
 	--google_maps_iframe_width: 100%;
 	--google_maps_iframe_height: 100%;
@@ -124,17 +64,6 @@
 	--google_maps_height: 60vh;
 	--google_maps_unavailable_background_size: 10%;
 	--google_maps_unavailable_description_margins: 15% 5% 0 5%;
-
-	/* -------- Loading Outlined -------- */
-	--custom_loading_outlined_dimension: 120px;
-	--custom_loading_outlined_margin_top: 30vh;
-	--custom_loading_outlined_margin_left: 15vw;
-
-	/* -------- General section margins -------- */
-	--section_margin_left_big: 250px;
-	--section_margin_left_medium: 190px;
-	--section_margin_left_small_portrait: 20px;
-	--section_margin_left_small_landscape: 15px;
 
 	/* -------- Home section -------- */
 	--home_layout_height: 100vh;

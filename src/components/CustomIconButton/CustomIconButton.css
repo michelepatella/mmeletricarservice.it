@@ -1,20 +1,23 @@
-/* Custom Icon Button styles */
+/* Variables */
+:root {
+	--custom-icon-button-margin: clamp(5px, 2vw, 10px);
+	--custom-icon-button-dimension: clamp(18px, 5vw, 20px);
+}
+
+/* Custom Icon Button */
 .custom-icon-button {
-	margin-top: var(--custom_icon_button_margins);
-	margin-right: var(--custom_icon_button_margins);
-	padding: var(--custom_icon_button_padding);
-	border: none;
-	cursor: pointer;
-	background: none;
-	transition: transform 0.3s ease;
+	border: var(--border-none);
+	background: var(--color-transparent);
+	cursor: var(--cursor-pointer);
 }
 
+/* Custom Icon Button — Hover */
 .custom-icon-button:hover {
-	transform: scale(var(--custom_icon_button_scale));
+	transform: scale(var(--scale-medium));
 }
 
-/* Custom Icon Button img styles */
+/* Custom Icon Button — Icon */
 .custom-icon-button img {
-	width: var(--custom_icon_button_dimension);
-	height: var(--custom_icon_button_dimension);
+	width: var(--custom-icon-button-dimension);
+	height: var(--custom-icon-button-dimension);
 }

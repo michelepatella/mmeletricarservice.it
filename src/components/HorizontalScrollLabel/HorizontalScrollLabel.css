@@ -1,0 +1,35 @@
+/* Horizontal Scroll Label */
+.horizontal-scroll-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: var(--font-low-opacity);
+}
+
+/* ------ Big screen ------- */
+@media (min-width: 1025px) {
+    .horizontal-scroll-label {
+        width: calc(95vw - var(--section-container-margin-left-big));
+    }
+}
+
+/* ------ Medium screen landscape ------- */
+@media (min-height: 768px) and (max-width: 1024px) {
+    .horizontal-scroll-label {
+        width: calc(var(--section-container-max-width) - var(--section-container-margin-left-medium));
+    }
+}
+
+/* ------ Small screen portrait ------- */
+@media (max-width: 767px) and (orientation: portrait) {
+    .horizontal-scroll-label {
+        width: calc(100vw - var(--section-container-margin-left-small-portrait)*2);
+    }
+}
+
+/* ------ Small screen landscape ------- */
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
+    .horizontal-scroll-label {
+        width: calc(100vw - var(--section-container-margin-left-small-portrait)*4);
+    }
+}

@@ -1,34 +1,44 @@
-/* Custom Loading Outlined Circle Rotation Animation */
+/* Variables */
+:root {
+	--custom-loading-outlined-animation-transform-rotate-from: 0deg;
+	--custom-loading-outlined-animation-transform-rotate-to: 360deg;
+	--custom-loading-outlined-dimension: 120px;
+	--custom-loading-outlined-circle-transform-origin: 50% 50%;
+	--custom-loading-outlined-logo-position: 50%;
+	--custom-loading-outlined-logo-transform-translate: -50%;
+	--custom-loading-outlined-logo-dimension: 50%;
+}
+
+/* Custom Loading Outlined — Animation */
 @keyframes spin {
 	0% {
-		transform: rotate(0deg);
+		transform: rotate(var(--custom-loading-outlined-animation-transform-rotate-from));
 	}
 	100% {
-		transform: rotate(360deg);
+		transform: rotate(var(--custom-loading-outlined-animation-transform-rotate-to));
 	}
 }
 
-/* Custom Loading Outlined styles */
+/* Custom Loading Outlined */
 .custom-loading-outlined {
-	width: var(--custom_loading_outlined_dimension);
-	height: var(--custom_loading_outlined_dimension);
-	position: relative;
-	align-self: center;
-	justify-self: center;
+	width: var(--custom-loading-outlined-dimension);
+	height: var(--custom-loading-outlined-dimension);
+	position: var(--position-relative);
+	justify-self: var(--justify-self-center);
 }
 
-/* Custom Loading Outlined Circle styles */
+/* Custom Loading Outlined — Circle */
 .custom-loading-outlined-circle {
-	animation: spin 1.5s linear infinite;
-	transform-origin: 50% 50%;
+	animation: spin var(--animation-duration-long) var(--animation-timing-linear) var(--animation-iteration-infinite);
+	transform-origin: var(--custom-loading-outlined-circle-transform-origin);
 }
 
-/* Custom Loading Outlined Logo styles */
+/* Custom Loading Outlined — Logo */
 .custom-loading-outlined-logo {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 50%;
-	height: 50%;
+	position: var(--position-absolute);
+	top: var(--custom-loading-outlined-logo-position);
+	left: var(--custom-loading-outlined-logo-position);
+	transform: translate(var(--custom-loading-outlined-logo-transform-translate), var(--custom-loading-outlined-logo-transform-translate));
+	width: var(--custom-loading-outlined-logo-dimension);
+	height: var(--custom-loading-outlined-logo-dimension);
 }

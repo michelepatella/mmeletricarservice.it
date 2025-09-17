@@ -5,7 +5,7 @@
  */
 export const getInfoCardDescriptionStyle = () => {
 	return {
-		marginTop: "0",
-		opacity: "var(--low_opacity)",
+		marginTop: "var(--info-card-description-margin-top)",
+		opacity: "var(--font-low-opacity)",
 	};
 };

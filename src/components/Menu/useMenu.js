@@ -100,7 +100,7 @@ const scrollToSection = (sectionId, setVisible) => {
 	// and make the page scrollable again
 	if (setVisible != null) {
 		setVisible(false);
-		document.documentElement.style.overflowY = "auto";
+		document.documentElement.style.overflowY = "var(--overflow-auto)";
 	}
 };
 /**
@@ -147,9 +147,9 @@ export const useMenu = () => {
 		// Enable/disable the scroll of the rest of the page
 		// depending on if the Menu is open/closed
 		if (visible)
-			document.documentElement.style.overflowY = "auto";
+			document.documentElement.style.overflowY = "var(--overflow-auto)";
 		else
-			document.documentElement.style.overflowY = "hidden";
+			document.documentElement.style.overflowY = "var(--overflow-hidden)";
 
 		// Change Menu visibility
 		setVisible(!visible);

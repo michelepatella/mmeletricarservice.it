@@ -1,14 +1,19 @@
-/* Style of the entire web app */
+/* Variables */
+:root {
+	--html-body-margin: 0;
+	--html-body-scroll-behavior: smooth;
+	--html-body-webkit-font-smoothing: antialiased;
+	--hmtl-body-moz-osx-font-smoothing: grayscale;
+}
+
+/* HTML and Body */
 html,
 body {
-	margin: 0;
+	margin: var(--html-body-margin);
 	font-family: var(--font-family);
 	background-color: var(--color-background);
-	overflow-x: hidden;
-	scroll-behavior: smooth;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-* {
-	box-sizing: border-box;
+	overflow-x: var(--overflow-hidden);
+	scroll-behavior: var(--html-body-scroll-behavior);
+	-webkit-font-smoothing: var(--html-body-webkit-font-smoothing);
+	-moz-osx-font-smoothing: var(--hmtl-body-moz-osx-font-smoothing);
 }

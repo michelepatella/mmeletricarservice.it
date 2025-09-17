@@ -1,6 +1,11 @@
+/* Variables */
+:root {
+	--custom_loading_outlined-margin-left: 15vw;
+}
+
 /* Used cars container styles */
 .used-cars-container {
-	width: var(--section_max_width);
+	width: var(--section-container-max-width);
 	display: flex;
 	flex-direction: row;
 	padding: var(--used_cars_container_padding);
@@ -32,7 +37,7 @@
 
 /* Unavailable used cars container styles */
 .unavailable-used-cars-container {
-	width: var(--section_max_width);
+	width: var(--section-container-max-width);
 	display: flex !important;
 	align-items: center !important;
 	flex-direction: column !important;

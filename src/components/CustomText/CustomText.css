@@ -1,141 +1,77 @@
-/* Text Animation */
+/* Variables */
+:root {
+	--custom-text-super-heading-margin-bottom: 30px;
+	--custom-text-heading-margin-bottom: 0;
+}
+
+/* Custom Text — Animation */
 @keyframes fadeInOpacity {
 	from {
-		opacity: 0;
+		opacity: var(--font-zero-opacity);
 	}
 	to {
-		opacity: 1;
+		opacity: var(--font-high-opacity);
 	}
 }
 
-/* Super-heading styles */
+/* Custom Text — Super-heading */
 .custom-super-heading {
 	margin-bottom: var(
-		--custom_text_super_heading_margin_bottom
+		--custom-text-super-heading-margin-bottom
 	);
 	font-size: var(--font-size-super-heading);
-	font-weight: bold;
+	text-align: var(--font-alignment-left);
+	font-weight: var(--font-weight-bold);
 	color: var(--color-white);
-	text-align: left;
 }
 
-/* Heading styles */
+/* Custom Text — Heading */
 .custom-heading {
-	margin-bottom: var(--custom_text_heading_margin_bottom);
+	margin-bottom: var(--custom-text-heading-margin-bottom);
 	color: var(--color-white);
-	text-align: left;
-	font-weight: bold;
-	opacity: 0;
+	text-align: var(--font-alignment-left);
+	font-weight: var(--font-weight-bold);
+	opacity: var(--font-zero-opacity);
 	transition:
-		opacity 2.5s ease,
-		transform 2.5s ease;
+			opacity var(--animation-duration-long) var(--animation-timing-ease),
+			transform var(--animation-duration-long) var(--animation-timing-ease);
 }
 
+/* Custom Text — Heading (In View) */
 .custom-heading.in-view {
-	animation: fadeInOpacity 2.5s ease forwards;
+	animation: fadeInOpacity var(--animation-duration-long) var(--animation-timing-ease) var(--animation-fill-mode-forwards);
 }
 
-/* Subheading and body styles */
+/* Custom Text — Subheading */
 .custom-subheading {
-	font-weight: bold;
+	font-weight: var(--font-weight-bold);
 }
 
+/* Custom Text — Subheading and Body */
 .custom-subheading,
 .custom-body {
-	opacity: 0;
+	opacity: var(--font-zero-opacity);
 	color: var(--color-white);
-	text-align: left;
+	text-align: var(--font-alignment-left);
 	transition:
-		opacity 2.5s ease,
-		transform 2.5s ease;
+			opacity var(--animation-duration-long) var(--animation-timing-ease),
+			transform var(--animation-duration-long) var(--animation-timing-ease);
 }
 
+/* Custom Text — Subheading (In View) */
 .custom-subheading.in-view {
-	opacity: 1 !important;
+	opacity: var(--font-high-opacity) !important;
 }
 
+/* Custom Text — Body (In View) */
 .custom-body.in-view {
-	opacity: var(--low_opacity) !important;
+	opacity: var(--font-low-opacity) !important;
 }
 
-/* Caption styles */
+/* Custom Text — Caption */
 .custom-caption {
 	color: var(--color-white);
 	font-size: var(--font-size-caption);
-	opacity: var(--low_opacity) !important;
-}
-
-/* ------ Big screen ------- */
-@media (min-width: 1025px) {
-	.custom-heading {
-		font-size: var(--font-size-heading-big);
-	}
-
-	.custom-subheading {
-		font-size: var(--font-size-subheading-big);
-	}
-
-	.custom-body {
-		font-size: var(--font-size-body-big);
-	}
-}
-
-/* ------ Medium screen portrait ------ */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-	.custom-heading {
-		font-size: var(--font-size-heading-medium);
-	}
-
-	.custom-subheading {
-		font-size: var(--font-size-subheading-medium);
-	}
-
-	.custom-body {
-		font-size: var(--font-size-body-medium);
-	}
-}
-
-/* ------ Medium screen landscape ------ */
-@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
-	.custom-heading {
-		font-size: var(--font-size-heading-medium);
-	}
-
-	.custom-subheading {
-		font-size: var(--font-size-subheading-medium);
-	}
-
-	.custom-body {
-		font-size: var(--font-size-body-medium);
-	}
-}
-
-/* ------ Small screen portrait ------ */
-@media (max-width: 767px) {
-	.custom-heading {
-		font-size: var(--font-size-heading-small);
-	}
-
-	.custom-subheading {
-		font-size: var(--font-size-subheading-small);
-	}
-
-	.custom-body {
-		font-size: var(--font-size-body-small);
-	}
-}
-
-/* ------ Small screen landscape ------ */
-@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
-	.custom-heading {
-		font-size: var(--font-size-heading-small);
-	}
-
-	.custom-subheading {
-		font-size: var(--font-size-subheading-small);
-	}
-
-	.custom-body {
-		font-size: var(--font-size-body-small);
-	}
+	text-align: var(--font-alignment-left);
+	opacity: var(--font-low-opacity) !important;
 }

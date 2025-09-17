@@ -1,40 +1,35 @@
-/* Section Container styles */
+/* Section Container */
 .section-container {
-	width: var(--section_container_width);
+	width: var(--section-container-width);
 }
 
-/* ------ Big screen ------- */
+/* ------ Responsive Layout ------ */
+
+/* Big Screen */
 @media (min-width: 1025px) {
 	.section-container {
-		margin-left: var(--section_margin_left_big);
+		margin-left: var(--section-container-margin-left-big);
 	}
 }
 
-/* ------ Medium screen landscape ------- */
-@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+/* Medium Screen */
+@media (min-height: 768px) and (max-width: 1024px) {
 	.section-container {
-		margin-left: var(--section_margin_left_medium);
+		margin-left: var(--section-container-margin-left-medium);
 	}
 }
 
-/* ------ Medium screen portrait ------- */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-	.section-container {
-		margin-left: var(--section_margin_left_medium);
-	}
-}
-
-/* ------ Small screen portrait ------- */
+/* Small Screen — Portrait */
 @media (max-width: 767px) and (orientation: portrait) {
 	.section-container {
-		width: var(--section_container_width_small_portrait);
-		margin-left: var(--section_margin_left_small_portrait);
+		width: var(--section-container-width-small-portrait);
+		margin-left: var(--section-container-margin-left-small-portrait);
 	}
 }
 
-/* ------ Small screen landscape ------- */
+/* Small Screen — Landscape */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 	.section-container {
-		margin-left: var(--section_margin_left_small_landscape);
+		margin-left: var(--section-container-margin-left-small-landscape);
 	}
 }

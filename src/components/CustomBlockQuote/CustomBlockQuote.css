@@ -1,8 +1,15 @@
-/* CustomBlockQuote styles */
+/* Variables */
+:root {
+	--custom-block-quote-margin-left: 0;
+	--custom-block-quote-padding-left: 15px;
+	--custom-block-quote-border-width: 3px;
+}
+
+/* Custom Block Quote */
 .custom-block-quote {
-	display: inline-block;
-	margin-left: var(--custom_block_quote_margin_left);
-	padding-left: var(--custom_block_quote_padding_left);
-	border-left: var(--custom_block_quote_border_left) solid;
+	display: var(--display-inline-block);
+	margin-left: var(--custom-block-quote-margin-left);
+	padding-left: var(--custom-block-quote-padding-left);
+	border-left: var(--custom-block-quote-border-width) var(--border-style-solid);
 	color: var(--color-accent);
 }

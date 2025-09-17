@@ -2,10 +2,11 @@
 :root {
 	/* — Scale — */
 	--scale-small: 1.01;
-	--scale-medium: 1.03;
+	--scale-medium: 1.07;
 	--scale-large: 1.1;
 
 	/* — Shadow — */
+	--shadow-none: none;
 	--shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
 	--shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.15);
 	--shadow-large: 0 8px 20px rgba(0, 0, 0, 0.2);

@@ -1,10 +1,16 @@
-/* Custom back button styles */
+/* Variables */
+:root {
+	--custom-back-button-padding-top: 20px;
+	--custom-back-button-gap: 5px;
+}
+
+/* Custom Back Button */
 .custom-back-button {
-	display: flex;
-	flex-direction: row;
+	display: var(--display-flex);
+	flex-direction: var(--flex-direction-row);
 	color: var(--color-white) !important;
 	font-size: var(--font-size-caption);
 	font-family: var(--font-family);
-	gap: var(--gap_button_label);
-	padding-top: var(--custom_back_button_padding_top);
+	gap: var(--custom-back-button-gap);
+	padding-top: var(--custom-back-button-padding-top);
 }

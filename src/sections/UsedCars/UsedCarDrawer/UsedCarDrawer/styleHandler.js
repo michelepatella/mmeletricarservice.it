@@ -7,6 +7,6 @@ export const getUsedCarDrawerCustomLoadingOutlinedStyle =
 	() => {
 		return {
 			marginTop:
-				"var(--custom_loading_outlined_margin_top)",
+				"var(--custom-loading-outlined-margin-top)",
 		};
 	};

@@ -40,6 +40,6 @@ export const getUsedCarsAnimatedDivStyle = (
 export const getUsedCarsCustomLoadingOutlineStyle = () => {
 	return {
 		marginLeft:
-			"var(--custom_loading_outlined_margin_left)",
+			"var(--custom-loading-outlined-margin-left)",
 	};
 };
