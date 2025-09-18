@@ -26,7 +26,8 @@ export const onUsedCarDrawerOpen = (
 	document.body.classList.add(
 		USED_CAR_DRAWER_OPEN_CLASS_NAME
 	);
-	document.documentElement.style.overflow = "var(--overflow-hidden)";
+	document.documentElement.style.overflow =
+		"var(--overflow-hidden)";
 	document.body.style.overflow = "var(--overflow-hidden)";
 	document.body.style.position = "var(--position-fixed)";
 	document.body.style.top = "-" + previousScrollY + "px";
@@ -53,7 +54,8 @@ export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
 	document.body.classList.remove(
 		USED_CAR_DRAWER_OPEN_CLASS_NAME
 	);
-	document.documentElement.style.overflow = "var(--overflow-auto)";
+	document.documentElement.style.overflow =
+		"var(--overflow-auto)";
 	document.body.style.overflow = "var(--overflow-auto)";
 	document.body.style.position = "";
 	document.body.style.top = "";

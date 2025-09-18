@@ -3,11 +3,11 @@
 	/* — General — */
 	--border-none: none;
 
-    /* — Width — */
+	/* — Width — */
 	--border-width-button-small: 1px;
 	--border-width-button-big: 2px;
 
-    /* — Radius — */
+	/* — Radius — */
 	--border-radius-default: 4px;
 	--border-radius-circle: 50%;
 

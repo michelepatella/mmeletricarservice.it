@@ -35,7 +35,8 @@ export const getMenuChildrenItemStyle = (
 			section === child?.href.replace("#", "")
 				? "var(--font-weight-bold)"
 				: "var(--font-weight-normal)",
-		paddingLeft: "var(--menu-small-screen-children-padding-left)",
+		paddingLeft:
+			"var(--menu-small-screen-children-padding-left)",
 	};
 };
 
@@ -46,6 +47,8 @@ export const getMenuChildrenItemStyle = (
  */
 export const getHamburgerButtonStyle = (visible) => {
 	return {
-		display: visible ? "var(--display-none)" : "var(--display-flex)",
+		display: visible
+			? "var(--display-none)"
+			: "var(--display-flex)",
 	};
 };

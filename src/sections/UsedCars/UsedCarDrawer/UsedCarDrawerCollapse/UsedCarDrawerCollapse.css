@@ -27,7 +27,7 @@
 	margin: var(--used-car-drawer-collapse-header-margin);
 	border: var(--border-none) !important;
 	padding-left: var(
-			--used-car-drawer-collapse-header-padding-left
+		--used-car-drawer-collapse-header-padding-left
 	) !important;
 }
 
@@ -49,9 +49,7 @@
 			--used-car-drawer-collapse-content-border-left
 		)
 		var(--border-style-solid) var(--color-white) !important;
-	border-radius: var(
-		--border-none
-	) !important;
+	border-radius: var(--border-none) !important;
 	background-color: var(--color-transparent) !important;
 }
 

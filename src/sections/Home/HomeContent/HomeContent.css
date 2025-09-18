@@ -15,11 +15,17 @@
 @keyframes homeTitleSubtitleSlideUp {
 	from {
 		opacity: var(--opacity-zero);
-		transform: translateY(var(--home-content-animation-transform-translate-y-from));
+		transform: translateY(
+			var(
+				--home-content-animation-transform-translate-y-from
+			)
+		);
 	}
 	to {
 		opacity: var(--opacity-high);
-		transform: translateY(var(--home-content-animation-transform-translate-y-to));
+		transform: translateY(
+			var(--home-content-animation-transform-translate-y-to)
+		);
 	}
 }
 
@@ -36,7 +42,10 @@
 	width: var(--home-content-logo-dimension);
 	opacity: var(--opacity-zero);
 	box-shadow: var(--shadow-medium);
-	animation: homeTitleSubtitleSlideUp var(--animation-duration-medium) var(--animation-timing-ease) var(--animation-fill-mode-forwards);
+	animation: homeTitleSubtitleSlideUp
+		var(--animation-duration-medium)
+		var(--animation-timing-ease)
+		var(--animation-fill-mode-forwards);
 }
 
 /* Home Content — Title */
@@ -45,8 +54,13 @@
 	font-size: var(--font-size-home-title);
 	color: var(--color-accent);
 	opacity: var(--opacity-zero);
-	animation: homeTitleSubtitleSlideUp var(--animation-duration-medium) var(--animation-timing-ease) var(--animation-fill-mode-forwards);
-	animation-delay: var(--home-content-title-animation-delay);
+	animation: homeTitleSubtitleSlideUp
+		var(--animation-duration-medium)
+		var(--animation-timing-ease)
+		var(--animation-fill-mode-forwards);
+	animation-delay: var(
+		--home-content-title-animation-delay
+	);
 }
 
 /* Home Subtitle styles */
@@ -56,8 +70,13 @@
 	font-size: var(--font-size-home-subtitle);
 	color: var(--color-white);
 	opacity: var(--opacity-zero);
-	animation: homeTitleSubtitleSlideUp var(--animation-duration-medium) var(--animation-timing-ease) var(--animation-fill-mode-forwards);
-	animation-delay: var(--home-content-subtitle-animation-delay);
+	animation: homeTitleSubtitleSlideUp
+		var(--animation-duration-medium)
+		var(--animation-timing-ease)
+		var(--animation-fill-mode-forwards);
+	animation-delay: var(
+		--home-content-subtitle-animation-delay
+	);
 }
 
 /* ------ Responsive Layout ------ */
@@ -72,20 +91,26 @@
 /* Medium Screen */
 @media (min-height: 768px) and (max-width: 1024px) {
 	.home-content {
-		margin-left: var(--section-container-margin-left-medium);
+		margin-left: var(
+			--section-container-margin-left-medium
+		);
 	}
 }
 
 /* Small Screen — Portrait */
 @media (max-width: 767px) and (orientation: portrait) {
 	.home-content {
-		margin-left: var(--section-container-margin-left-small-portrait);
+		margin-left: var(
+			--section-container-margin-left-small-portrait
+		);
 	}
 }
 
 /* Small Screen — Landscape */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 	.home-content {
-		margin-left: var(--section-container-margin-left-small-landscape);
+		margin-left: var(
+			--section-container-margin-left-small-landscape
+		);
 	}
 }

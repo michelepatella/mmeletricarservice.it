@@ -24,7 +24,9 @@
 /* Info Card — Flex Container */
 .info-card-flex {
 	display: var(--display-grid);
-	grid-template-columns: var(--info-card-flex-grid-template-columns);
+	grid-template-columns: var(
+		--info-card-flex-grid-template-columns
+	);
 	align-items: var(--align-items-center);
 	gap: var(--info-card-flex-gap);
 }

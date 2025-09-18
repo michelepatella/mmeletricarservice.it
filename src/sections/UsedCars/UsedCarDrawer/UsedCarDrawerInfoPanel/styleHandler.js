@@ -5,6 +5,7 @@
  */
 export const getUsedCarDrawerInfoPanelCarNameStyle = () => {
 	return {
-		marginTop: "var(--used-car-drawer-info-panel-car-name-margin-top)",
+		marginTop:
+			"var(--used-car-drawer-info-panel-car-name-margin-top)",
 	};
 };

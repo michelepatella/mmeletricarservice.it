@@ -18,7 +18,9 @@
 
 .ant-steps-item-description,
 .ant-steps-item-description.in-view {
-	margin-bottom: var(--our-values-steps-description-margin-bottom);
+	margin-bottom: var(
+		--our-values-steps-description-margin-bottom
+	);
 }
 
 /* ------ Responsive Layout ------ */
@@ -28,7 +30,10 @@
 	.ant-steps-item-title,
 	.ant-steps-item-title.in-view {
 		margin-top: calc(
-			var(--font-size-subheading) * var(--our-values-steps-title-margin-top-multiplier-big)
+			var(--font-size-subheading) *
+				var(
+					--our-values-steps-title-margin-top-multiplier-big
+				)
 		) !important;
 	}
 }
@@ -39,7 +44,10 @@
 	.ant-steps-item-title,
 	.ant-steps-item-title.in-view {
 		margin-top: calc(
-			var(--font-size-subheading) * var(--our-values-steps-title-margin-top-multiplier-big)
+			var(--font-size-subheading) *
+				var(
+					--our-values-steps-title-margin-top-multiplier-big
+				)
 		) !important;
 	}
 }
@@ -50,7 +58,10 @@
 	.ant-steps-item-title,
 	.ant-steps-item-title.in-view {
 		margin-top: calc(
-			var(--font-size-subheading) * var(--our-values-steps-title-margin-top-multiplier-small)
+			var(--font-size-subheading) *
+				var(
+					--our-values-steps-title-margin-top-multiplier-small
+				)
 		) !important;
 	}
 }

@@ -1,54 +1,54 @@
 /* Variables */
 :root {
-    --menu-big-screen-height: 100vh;
-    --menu-big-screen-width: 170px;
-    --menu-big-screen-top: 0;
-    --menu-big-screen-left: 0;
-    --menu-big-screen-item-padding-top: 30px;
-    --menu-big-screen-ink-width: 2px;
-    --menu-big-screen-ink-margin-top: 10px;
+	--menu-big-screen-height: 100vh;
+	--menu-big-screen-width: 170px;
+	--menu-big-screen-top: 0;
+	--menu-big-screen-left: 0;
+	--menu-big-screen-item-padding-top: 30px;
+	--menu-big-screen-ink-width: 2px;
+	--menu-big-screen-ink-margin-top: 10px;
 }
 
 /* ------ Responsive Layout ------ */
 
 /* Big screen and Medium Screen */
-@media (min-width: 1025px), (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 1025px),
+	(min-width: 768px) and (max-width: 1024px) {
+	/* Menu Small Screen (Hide) */
+	.menu-container-small {
+		display: var(--display-none);
+	}
 
-    /* Menu Small Screen (Hide) */
-    .menu-container-small {
-        display: var(--display-none);
-    }
+	/* Menu Big Screen */
+	.menu-container-big {
+		height: var(--menu-big-screen-height);
+		width: var(--menu-big-screen-width);
+		display: var(--display-block);
+		position: var(--position-fixed);
+		background-color: var(--color-background);
+		box-shadow: var(--shadow-xl);
+		top: var(--menu-big-screen-top);
+		left: var(--menu-big-screen-left);
+		z-index: var(--z-index-medium);
+	}
 
-    /* Menu Big Screen */
-    .menu-container-big {
-        height: var(--menu-big-screen-height);
-        width: var(--menu-big-screen-width);
-        display: var(--display-block);
-        position: var(--position-fixed);
-        background-color: var(--color-background);
-        box-shadow: var(--shadow-xl);
-        top: var(--menu-big-screen-top);
-        left: var(--menu-big-screen-left);
-        z-index: var(--z-index-medium);
-    }
+	/* Menu Big Screen — Items */
+	.ant-anchor-link-title {
+		color: var(--color-white) !important;
+		font-family: var(--font-family) !important;
+		font-size: var(--font-size-body) !important;
+		padding-top: var(--menu-big-screen-item-padding-top);
+	}
 
-    /* Menu Big Screen — Items */
-    .ant-anchor-link-title {
-        color: var(--color-white) !important;
-        font-family: var(--font-family) !important;
-        font-size: var(--font-size-body) !important;
-        padding-top: var(--menu-big-screen-item-padding-top);
-    }
+	.ant-anchor-link-active > .ant-anchor-link-title {
+		font-weight: var(--font-weight-bold);
+		color: var(--color-white) !important;
+	}
 
-    .ant-anchor-link-active > .ant-anchor-link-title {
-        font-weight: var(--font-weight-bold);
-        color: var(--color-white) !important;
-    }
-
-    /* Menu Big Screen — Ink */
-    .ant-anchor-ink {
-        width: var(--menu-big-screen-ink-width);
-        margin-top: var(--menu-big-screen-ink-margin-top);
-        background-color: var(--color-accent) !important;
-    }
+	/* Menu Big Screen — Ink */
+	.ant-anchor-ink {
+		width: var(--menu-big-screen-ink-width);
+		margin-top: var(--menu-big-screen-ink-margin-top);
+		background-color: var(--color-accent) !important;
+	}
 }

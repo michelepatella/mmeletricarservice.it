@@ -1,16 +1,16 @@
 /* -------- Background -------- */
 :root {
-    /* — Repeat — */
-    --background-no-repeat: no-repeat;
-    --background-repeat: repeat;
+	/* — Repeat — */
+	--background-no-repeat: no-repeat;
+	--background-repeat: repeat;
 
-    /* — Position — */
-    --background-position-center: center;
-    --background-position-center-top: center top;
+	/* — Position — */
+	--background-position-center: center;
+	--background-position-center-top: center top;
 
-    /* — Size — */
-    --background-size-auto: auto;
+	/* — Size — */
+	--background-size-auto: auto;
 
-    /* — Object Fit — */
-    --background-object-fit-cover: cover;
+	/* — Object Fit — */
+	--background-object-fit-cover: cover;
 }

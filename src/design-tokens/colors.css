@@ -16,16 +16,8 @@
 		#ffbf00,
 		#ffa500
 	);
-	--gradient-red: linear-gradient(
-		90deg,
-		#ff3737,
-		#ff8e53
-	);
-	--gradient-blue: linear-gradient(
-		90deg,
-		#2a8eff,
-		#7cdfff
-	);
+	--gradient-red: linear-gradient(90deg, #ff3737, #ff8e53);
+	--gradient-blue: linear-gradient(90deg, #2a8eff, #7cdfff);
 	--gradient-green: linear-gradient(
 		90deg,
 		#2ba35f,

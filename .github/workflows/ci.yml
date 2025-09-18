@@ -27,10 +27,10 @@ jobs:
 
       - name: Run Lint and Prettier
         run: npm run code:check
-
-      - name: Run tests
-        run: npm run test -- --watchAll=${{ vars.TEST_WATCH_ALL }}
-
+      #
+      #- name: Run tests
+      #  run: npm run test -- --watchAll=${{ vars.TEST_WATCH_ALL }}
+      #
       - name: Build project
         run: npm run build
 

@@ -21,7 +21,9 @@
 @media (max-width: 767px) and (orientation: portrait) {
 	.home-header {
 		justify-content: var(--justify-content-left);
-		padding-left: var(--section-container-margin-left-small-portrait);
+		padding-left: var(
+			--section-container-margin-left-small-portrait
+		);
 	}
 }
 
@@ -29,6 +31,8 @@
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 	.home-header {
 		justify-content: var(--justify-content-left);
-		padding-left: var(--section-container-margin-left-small-landscape);
+		padding-left: var(
+			--section-container-margin-left-small-landscape
+		);
 	}
 }

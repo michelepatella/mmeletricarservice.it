@@ -36,8 +36,10 @@
 	font-weight: var(--font-weight-bold);
 	opacity: var(--opacity-zero);
 	transition:
-			opacity var(--animation-duration-long) var(--animation-timing-ease),
-			transform var(--animation-duration-long) var(--animation-timing-ease);
+		opacity var(--animation-duration-long)
+			var(--animation-timing-ease),
+		transform var(--animation-duration-long)
+			var(--animation-timing-ease);
 }
 
 /* Custom Text — Heading (In View) */
@@ -47,7 +49,9 @@
 	text-align: var(--font-alignment-left);
 	font-size: var(--font-size-heading);
 	font-weight: var(--font-weight-bold);
-	animation: customTextFadeIn var(--animation-duration-long) var(--animation-timing-ease) var(--animation-fill-mode-forwards);
+	animation: customTextFadeIn var(--animation-duration-long)
+		var(--animation-timing-ease)
+		var(--animation-fill-mode-forwards);
 }
 
 /* Custom Text — Subheading */
@@ -68,8 +72,10 @@
 	color: var(--color-white);
 	text-align: var(--font-alignment-left);
 	transition:
-			opacity var(--animation-duration-long) var(--animation-timing-ease),
-			transform var(--animation-duration-long) var(--animation-timing-ease);
+		opacity var(--animation-duration-long)
+			var(--animation-timing-ease),
+		transform var(--animation-duration-long)
+			var(--animation-timing-ease);
 }
 
 /* Custom Text — Subheading (In View) */

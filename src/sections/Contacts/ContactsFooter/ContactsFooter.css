@@ -29,27 +29,35 @@
 /* Medium Screen Landscape  */
 @media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
 	.contacts-footer-text {
-		margin-left: var(--section-container-margin-left-medium);
+		margin-left: var(
+			--section-container-margin-left-medium
+		);
 	}
 }
 
 /* Medium Screen Portrait */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 	.contacts-footer-text {
-		margin-left: var(--section-container-margin-left-medium);
+		margin-left: var(
+			--section-container-margin-left-medium
+		);
 	}
 }
 
 /* Small Screen Portrait */
 @media (max-width: 767px) and (orientation: portrait) {
 	.contacts-footer-text {
-		margin-left: var(--section-container-margin-left-small-portrait);
+		margin-left: var(
+			--section-container-margin-left-small-portrait
+		);
 	}
 }
 
 /* Small Screen Landscape */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 	.contacts-footer-text {
-		margin-left: var(--section-container-margin-left-small-landscape);
+		margin-left: var(
+			--section-container-margin-left-small-landscape
+		);
 	}
 }

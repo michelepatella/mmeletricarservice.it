@@ -11,9 +11,12 @@ export const getUsedCarOverviewTextStyle = (
 ) => {
 	return {
 		marginTop: "var(--used-car-overview-text-margin-top)",
-		marginBottom: "var(--used-car-overview-text-margin-bottom)",
+		marginBottom:
+			"var(--used-car-overview-text-margin-bottom)",
 		fontFamily: "var(--font-family)",
 		fontWeight: "var(--font-weight-normal)",
-		opacity: isTitleVisible ? "var(--opacity-high)" : "var(--opacity-low)",
+		opacity: isTitleVisible
+			? "var(--opacity-high)"
+			: "var(--opacity-low)",
 	};
 };

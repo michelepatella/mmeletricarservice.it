@@ -6,7 +6,8 @@ export const getServicesTitleStyle = () => {
 	return {
 		display: "var(--display-flex)",
 		flexDirection: "var(--flex-direction-column)",
-		minHeight: "calc(var(--services-title-min-height-multiplier) * var(--font-size-super-heading))",
+		minHeight:
+			"calc(var(--services-title-min-height-multiplier) * var(--font-size-super-heading))",
 	};
 };
 

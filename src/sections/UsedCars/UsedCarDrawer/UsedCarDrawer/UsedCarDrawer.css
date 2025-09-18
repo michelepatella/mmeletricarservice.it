@@ -22,10 +22,18 @@
 /* Used Car Drawer — Animation */
 @keyframes usedCarDrawerSlideRight {
 	from {
-		transform: translateX(var(--used-car-drawer-animation-transform-translate-x-from));
+		transform: translateX(
+			var(
+				--used-car-drawer-animation-transform-translate-x-from
+			)
+		);
 	}
 	to {
-		transform: translateX(var(--used-car-drawer-animation-transform-translate-x-to));
+		transform: translateX(
+			var(
+				--used-car-drawer-animation-transform-translate-x-to
+			)
+		);
 	}
 }
 
@@ -43,7 +51,9 @@
 .ant-drawer-content-wrapper {
 	width: var(--used-car-drawer-width) !important;
 	position: var(--position-fixed);
-	animation: usedCarDrawerSlideRight var(--animation-duration-medium) var(--animation-timing-ease-out);
+	animation: usedCarDrawerSlideRight
+		var(--animation-duration-medium)
+		var(--animation-timing-ease-out);
 }
 
 /* Hide Menus  */
@@ -54,7 +64,9 @@
 
 /* Used Car Drawer — Flex Horizontal */
 .used-car-drawer-flex-horizontal {
-	height: var(--used-car-drawer-flex-horizontal-height) !important;
+	height: var(
+		--used-car-drawer-flex-horizontal-height
+	) !important;
 }
 
 /* ------ Responsive Layout ------ */
@@ -63,7 +75,9 @@
 @media (min-width: 1025px) {
 	.used-car-drawer-flex-horizontal {
 		flex-direction: var(--flex-direction-row);
-		gap: var(--used-car-drawer-flex-horizontal-gap-big-medium);
+		gap: var(
+			--used-car-drawer-flex-horizontal-gap-big-medium
+		);
 	}
 
 	.used-car-drawer-flex-vertical {
@@ -88,7 +102,7 @@
 }
 
 /* Medium Screen — Portrait */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 	.used-car-drawer-flex-horizontal {
 		flex-direction: var(--flex-direction-column-reverse);
 		justify-content: var(--justify-content-start);
@@ -115,7 +129,9 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 	.used-car-drawer-flex-horizontal {
 		flex-direction: var(--flex-direction-row);
-		gap: var(--used-car-drawer-flex-horizontal-gap-big-medium);
+		gap: var(
+			--used-car-drawer-flex-horizontal-gap-big-medium
+		);
 	}
 
 	.used-car-drawer-flex-vertical {

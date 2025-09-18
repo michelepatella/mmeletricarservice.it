@@ -1,6 +1,18 @@
 /* Variables */
 :root {
-    --background-container-gradient-top: linear-gradient(to top, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%);
-    --background-container-gradient-bottom: linear-gradient(to bottom, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%);
-    --background-container-gradient-left: linear-gradient(to left, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%);
+	--background-container-gradient-top: linear-gradient(
+		to top,
+		rgba(20, 20, 20, 0) 50%,
+		rgba(20, 20, 20, 1) 100%
+	);
+	--background-container-gradient-bottom: linear-gradient(
+		to bottom,
+		rgba(20, 20, 20, 0) 50%,
+		rgba(20, 20, 20, 1) 100%
+	);
+	--background-container-gradient-left: linear-gradient(
+		to left,
+		rgba(20, 20, 20, 0) 50%,
+		rgba(20, 20, 20, 1) 100%
+	);
 }

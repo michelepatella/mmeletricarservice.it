@@ -10,6 +10,7 @@
 	display: var(--display-inline-block);
 	margin-left: var(--custom-block-quote-margin-left);
 	padding-left: var(--custom-block-quote-padding-left);
-	border-left: var(--custom-block-quote-border-width) var(--border-style-solid);
+	border-left: var(--custom-block-quote-border-width)
+		var(--border-style-solid);
 	color: var(--color-accent);
 }

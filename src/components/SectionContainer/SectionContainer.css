@@ -15,7 +15,9 @@
 /* Medium Screen */
 @media (min-height: 768px) and (max-width: 1024px) {
 	.section-container {
-		margin-left: var(--section-container-margin-left-medium);
+		margin-left: var(
+			--section-container-margin-left-medium
+		);
 	}
 }
 
@@ -23,13 +25,17 @@
 @media (max-width: 767px) and (orientation: portrait) {
 	.section-container {
 		width: var(--section-container-width-small-portrait);
-		margin-left: var(--section-container-margin-left-small-portrait);
+		margin-left: var(
+			--section-container-margin-left-small-portrait
+		);
 	}
 }
 
 /* Small Screen — Landscape */
 @media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
 	.section-container {
-		margin-left: var(--section-container-margin-left-small-landscape);
+		margin-left: var(
+			--section-container-margin-left-small-landscape
+		);
 	}
 }

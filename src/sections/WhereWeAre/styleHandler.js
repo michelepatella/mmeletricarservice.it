@@ -10,10 +10,12 @@ import { MAP_ICON_LINK } from "./const";
  */
 export const getGoogleMapsContainerStyle = () => {
 	return {
-		height: "var(--where-we-are-google-maps-unavailable-container-height)",
+		height:
+			"var(--where-we-are-google-maps-unavailable-container-height)",
 		background: "url(" + MAP_ICON_LINK + ")",
 		backgroundRepeat: "var(--background-no-repeat)",
-		backgroundPosition: "var(--background-position-center-top)",
+		backgroundPosition:
+			"var(--background-position-center-top)",
 		backgroundSize:
 			"var(--where-we-are-google-maps-unavailable-background-size)",
 		opacity: "var(--opacity-low)",

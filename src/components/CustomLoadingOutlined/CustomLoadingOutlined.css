@@ -12,10 +12,18 @@
 /* Custom Loading Outlined — Animation */
 @keyframes customLoadingOutlinedSpin {
 	0% {
-		transform: rotate(var(--custom-loading-outlined-animation-transform-rotate-from));
+		transform: rotate(
+			var(
+				--custom-loading-outlined-animation-transform-rotate-from
+			)
+		);
 	}
 	100% {
-		transform: rotate(var(--custom-loading-outlined-animation-transform-rotate-to));
+		transform: rotate(
+			var(
+				--custom-loading-outlined-animation-transform-rotate-to
+			)
+		);
 	}
 }
 
@@ -29,8 +37,13 @@
 
 /* Custom Loading Outlined — Circle */
 .custom-loading-outlined-circle {
-	animation: customLoadingOutlinedSpin var(--animation-duration-long) var(--animation-timing-linear) var(--animation-iteration-infinite);
-	transform-origin: var(--custom-loading-outlined-circle-transform-origin);
+	animation: customLoadingOutlinedSpin
+		var(--animation-duration-long)
+		var(--animation-timing-linear)
+		var(--animation-iteration-infinite);
+	transform-origin: var(
+		--custom-loading-outlined-circle-transform-origin
+	);
 }
 
 /* Custom Loading Outlined — Logo */
@@ -38,7 +51,10 @@
 	position: var(--position-absolute);
 	top: var(--custom-loading-outlined-logo-position);
 	left: var(--custom-loading-outlined-logo-position);
-	transform: translate(var(--custom-loading-outlined-logo-transform-translate), var(--custom-loading-outlined-logo-transform-translate));
+	transform: translate(
+		var(--custom-loading-outlined-logo-transform-translate),
+		var(--custom-loading-outlined-logo-transform-translate)
+	);
 	width: var(--custom-loading-outlined-logo-dimension);
 	height: var(--custom-loading-outlined-logo-dimension);
 }

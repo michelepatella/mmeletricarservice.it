@@ -6,7 +6,8 @@
 export const getUsedCarDrawerCollapseInformationNameStyle =
 	() => {
 		return {
-			marginBottom: "var(--used-car-drawer-collapse-information-name-margin-bottom)",
+			marginBottom:
+				"var(--used-car-drawer-collapse-information-name-margin-bottom)",
 		};
 	};
 
@@ -18,6 +19,7 @@ export const getUsedCarDrawerCollapseInformationNameStyle =
 export const getUsedCarDrawerCollapseInformationTextStyle =
 	() => {
 		return {
-			marginTop: "var(--used-car-drawer-collapse-information-text-margin-top)",
+			marginTop:
+				"var(--used-car-drawer-collapse-information-text-margin-top)",
 		};
 	};

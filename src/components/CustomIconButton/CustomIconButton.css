@@ -9,7 +9,8 @@
 	border: var(--border-none);
 	background: var(--color-transparent);
 	cursor: var(--cursor-pointer);
-	transition: var(--animation-duration-short) var(--animation-timing-ease-out);
+	transition: var(--animation-duration-short)
+		var(--animation-timing-ease-out);
 }
 
 /* Custom Icon Button — Hover */

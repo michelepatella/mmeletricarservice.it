@@ -17,13 +17,19 @@
 	padding: var(--used-cars-container-padding);
 	overflow-x: var(--overflow-auto);
 	scrollbar-width: var(--scrollbar-width-default);
-	-webkit-overflow-scrolling: var(--used-cars-container-webkit-overflow-scrolling);
-	scroll-snap-type: var(--used-cars-container-scroll-snap-type);
+	-webkit-overflow-scrolling: var(
+		--used-cars-container-webkit-overflow-scrolling
+	);
+	scroll-snap-type: var(
+		--used-cars-container-scroll-snap-type
+	);
 }
 
 /* Hide Scroll Bar */
 .used-cars-container::-webkit-scrollbar {
-	-webkit-overflow-scrolling: var(--used-cars-container-webkit-overflow-scrolling);
+	-webkit-overflow-scrolling: var(
+		--used-cars-container-webkit-overflow-scrolling
+	);
 }
 ::-webkit-scrollbar {
 	display: var(--display-none);

@@ -1,18 +1,18 @@
 /* -------- Animations -------- */
 :root {
-    /* — Duration — */
-    --animation-duration-short: 0.3s;
-    --animation-duration-medium: 0.5s;
-    --animation-duration-long: 1.5s;
+	/* — Duration — */
+	--animation-duration-short: 0.3s;
+	--animation-duration-medium: 0.5s;
+	--animation-duration-long: 1.5s;
 
-    /* — Time — */
-    --animation-timing-ease: ease;
-    --animation-timing-ease-out: ease-out;
-    --animation-timing-linear: linear;
+	/* — Time — */
+	--animation-timing-ease: ease;
+	--animation-timing-ease-out: ease-out;
+	--animation-timing-linear: linear;
 
-    /* — Fill Mode — */
-    --animation-fill-mode-forwards: forwards;
+	/* — Fill Mode — */
+	--animation-fill-mode-forwards: forwards;
 
-    /* — Iteration — */
-    --animation-iteration-infinite: infinite;
+	/* — Iteration — */
+	--animation-iteration-infinite: infinite;
 }
