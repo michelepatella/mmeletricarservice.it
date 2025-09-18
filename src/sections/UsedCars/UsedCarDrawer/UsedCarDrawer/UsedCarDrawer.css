@@ -88,7 +88,7 @@
 }
 
 /* Medium Screen — Portrait */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
 	.used-car-drawer-flex-horizontal {
 		flex-direction: var(--flex-direction-column-reverse);
 		justify-content: var(--justify-content-start);

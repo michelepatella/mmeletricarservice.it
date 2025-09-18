@@ -26,7 +26,6 @@ import BackgroundContainer from "../../../components/BackgroundContainer/Backgro
 import UsedCarCard from "../UsedCarCard/UsedCarCard";
 import CustomText from "../../../components/CustomText/CustomText";
 import CustomLoadingOutlined from "../../../components/CustomLoadingOutlined/CustomLoadingOutlined";
-import HorizontalScrollLabel from "../../../components/HorizontalScrollLabel/HorizontalScrollLabel";
 
 /**
  * This component represents the Used car section.
@@ -94,11 +93,6 @@ function UsedCars() {
 									/>
 								))}
 							</div>
-
-							{/* Label indicating the user to scroll
-							 the section horizontally, in order to
-							 explore all the used cars */}
-							<HorizontalScrollLabel />
 						</animated.div>
 					</>
 				)}

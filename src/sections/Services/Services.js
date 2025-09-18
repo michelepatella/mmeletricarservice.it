@@ -21,7 +21,6 @@ import BackgroundContainer from "../../components/BackgroundContainer/Background
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import InfoCard from "../../components/InfoCard/InfoCard";
 import CustomText from "../../components/CustomText/CustomText";
-import HorizontalScrollLabel from "../../components/HorizontalScrollLabel/HorizontalScrollLabel";
 
 /**
  * This section represents Services section. The
@@ -99,10 +98,6 @@ function Services() {
 						</div>
 					))}
 				</div>
-
-				{/* Label indicating the user to scroll the
-				 services horizontally in order to explore them */}
-				<HorizontalScrollLabel />
 			</SectionContainer>
 		</BackgroundContainer>
 	);
