@@ -35,6 +35,7 @@
 	height: var(--home-content-logo-dimension);
 	width: var(--home-content-logo-dimension);
 	opacity: var(--opacity-zero);
+	box-shadow: var(--shadow-medium);
 	animation: homeTitleSubtitleSlideUp var(--animation-duration-medium) var(--animation-timing-ease) var(--animation-fill-mode-forwards);
 }
 

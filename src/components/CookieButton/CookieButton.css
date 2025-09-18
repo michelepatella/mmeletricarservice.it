@@ -17,11 +17,12 @@
 	background-image: var(--cookie-button-background-image);
 	background-repeat: var(--background-no-repeat);
 	background-position: var(--background-position-center);
+	box-shadow: var(--shadow-large);
 }
 
 /* Cookie Button — Hover */
 .cookie-button:hover {
-	transform: scale(var(--scale-large));
+	transform: scale(var(--scale-medium));
 	bottom: var(--float-button-margin) !important;
 	position: var(--position-fixed) !important;
 	z-index: var(--z-index-high) !important;
@@ -33,4 +34,5 @@
 	background-image: var(--cookie-button-background-image) !important;
 	background-repeat: var(--background-no-repeat) !important;
 	background-position: var(--background-position-center) !important;
+	box-shadow: var(--shadow-xxl);
 }

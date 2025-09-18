@@ -11,5 +11,4 @@
 	display: var(--display-flex);
 	flex-direction: var(--flex-direction-row);
 	align-items: var(--align-items-center);
-	opacity: var(--opacity-low);
 }

@@ -18,6 +18,7 @@
 	margin-top: var(--where-we-are-google-maps-margin-top);
 	overflow: var(--overflow-hidden);
 	border-radius: var(--border-radius-default);
+	box-shadow: var(--shadow-medium);
 }
 
 /* Where We Are — Google Maps (iframe) */
@@ -28,3 +29,12 @@
 	filter: invert(var(--where-we-are-google-maps-iframe-filter-perc))
 		hue-rotate(var(--where-we-are-google-maps-iframe-filter-rotation));
 }
+
+.google-maps-iframe:hover {
+	width: var(--where-we-are-google-maps-iframe-dimension);
+	height: var(--where-we-are-google-maps-iframe-dimension);
+	border: var(--where-we-are-google-maps-iframe-border-width);
+	filter: invert(var(--where-we-are-google-maps-iframe-filter-perc))
+	hue-rotate(var(--where-we-are-google-maps-iframe-filter-rotation));
+}
+

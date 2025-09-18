@@ -83,7 +83,7 @@
 		padding-bottom: var(
 			--used-car-drawer-header-padding-bottom-big
 		) !important;
-		box-shadow: var(--shadow-xl);
+		box-shadow: var(--shadow-large);
 	}
 }
 
@@ -107,7 +107,7 @@
 		padding-top: var(
 			--used-car-drawer-header-padding-top-small-portrait-medium-portrait
 		) !important;
-		box-shadow: var(--shadow-xl);
+		box-shadow: var(--shadow-large);
 	}
 }
 
@@ -135,7 +135,7 @@
 		padding-top: var(
 			--used-car-drawer-header-padding-top-small-landscape-medium-landscape
 		) !important;
-		box-shadow: var(--shadow-xl);
+		box-shadow: var(--shadow-large);
 	}
 }
 
@@ -157,7 +157,7 @@
 		padding-top: var(
 			--used-car-drawer-header-padding-top-small-portrait-medium-portrait
 		) !important;
-		box-shadow: var(--shadow-xl);
+		box-shadow: var(--shadow-large);
 	}
 }
 
@@ -179,6 +179,6 @@
 		padding-top: var(
 			--used-car-drawer-header-padding-top-small-landscape-medium-landscape
 		) !important;
-		box-shadow: var(--shadow-xl);
+		box-shadow: var(--shadow-large);
 	}
 }

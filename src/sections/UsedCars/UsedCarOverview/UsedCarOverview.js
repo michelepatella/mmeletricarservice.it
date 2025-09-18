@@ -57,7 +57,7 @@ function UsedCarOverview(props) {
 						{/* Text (in case the title is visible and the text is now below it) */}
 						{props.showTitle && (
 							<CustomText
-								type={CUSTOM_TEXT_TYPES.BODY}
+								type={CUSTOM_TEXT_TYPES.CAPTION}
 								text={
 									props.usedCarOverview?.[info?.name] || "-"
 								}

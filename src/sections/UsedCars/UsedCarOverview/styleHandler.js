@@ -13,7 +13,7 @@ export const getUsedCarOverviewTextStyle = (
 		marginTop: "var(--used-car-overview-text-margin-top)",
 		marginBottom: "var(--used-car-overview-text-margin-bottom)",
 		fontFamily: "var(--font-family)",
-		fontWeight: isTitleVisible ? "var(--font-weight-bold)" : "var(--font-weight-normal)",
-		opacity: "var(--opacity-low)",
+		fontWeight: "var(--font-weight-normal)",
+		opacity: isTitleVisible ? "var(--opacity-high)" : "var(--opacity-low)",
 	};
 };

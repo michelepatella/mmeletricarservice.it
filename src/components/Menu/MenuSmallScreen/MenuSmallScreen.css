@@ -29,7 +29,7 @@
         color: var(--color-white) !important;
         background-color: var(--color-transparent) !important;
         border: var(--border-none) !important;
-        box-shadow: var(--shadow-xl);
+        box-shadow: var(--shadow-small);
         backdrop-filter: blur(
                 var(--menu-small-screen-hamburger-button-backdrop-filter-blur)
         );

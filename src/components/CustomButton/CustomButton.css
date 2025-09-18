@@ -12,6 +12,7 @@
 	border-radius: var(--border-radius-default);
 	padding: var(--button-padding-small);
 	background-color: var(--color-background) !important;
+	box-shadow: var(--shadow-large);
 }
 
 /* Custom Button (General) — Hover */
@@ -24,6 +25,7 @@
 	border-radius: var(--border-radius-default);
 	padding: var(--button-padding-small);
 	background-color: var(--color-background) !important;
+	box-shadow: var(--shadow-large);
 }
 
 /* Custom Button (Contact) */
@@ -51,21 +53,22 @@
 .cta-button {
 	margin-top: var(--custom-button-cta-margin-top);
 	color: var(--color-white);
-	font-size: var(--font-size-body);
+	font-size: var(--font-size-caption);
 	font-family: var(--font-family);
+	padding: var(--button-padding-big);
 	border: var(--border-width-button-big) var(--border-style-solid);
 	border-image: var(--gradient-accent) 1;
 	-webkit-mask-image: -webkit-linear-gradient(var(--color-white), var(--color-white));
 	background: var(--color-transparent);
 	border-radius: var(--border-radius-default);
-	padding: var(--button-padding-big);
+	box-shadow: var(--shadow-xxl);
 }
 
 /* Custom Button (CTA) — Hover */
 .cta-button:hover {
 	transform: scale(var(--scale-small));
 	color: var(--color-white) !important;
-	font-size: var(--font-size-body) !important;
+	font-size: var(--font-size-caption) !important;
 	font-family: var(--font-family) !important;
 	border: var(--border-width-button-big) var(--border-style-solid) !important;
 	border-image: var(--gradient-accent) 1 !important;
@@ -73,4 +76,5 @@
 	background: var(--color-transparent) !important;
 	border-radius: var(--border-radius-default) !important;
 	padding: var(--button-padding-big) !important;
+	box-shadow: var(--shadow-xxl);
 }
