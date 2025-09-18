@@ -2,7 +2,7 @@
 :root {
 	--used-cars-container-padding: 30px;
 	--used-cars-container-gap: 20px;
-	--used-cars-custom-loading-outlined-margin-left: 15vw;
+	--used-cars-custom-loading-outlined-margin-top: 7vw;
 	--used-cars-container-webkit-overflow-scrolling: touch;
 	--used-cars-container-scroll-snap-type: x mandatory;
 	--used-cars-unavailable-image-dimension: 250px;

@@ -46,5 +46,4 @@ jobs:
             -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
             -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
             -Dsonar.sources=${{ vars.SONAR_SOURCES }}
-            -Dsonar.exclusions=${{ vars.SONAR_EXCLUSION }}
             -Dsonar.qualitygate.wait=${{ vars.SONAR_QUALITY_GATE_WAIT }}
