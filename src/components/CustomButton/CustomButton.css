@@ -13,6 +13,7 @@
 	padding: var(--button-padding-small);
 	background-color: var(--color-background) !important;
 	box-shadow: var(--shadow-large);
+	transition: var(--animation-duration-short) var(--animation-timing-ease-out);
 }
 
 /* Custom Button (General) — Hover */
@@ -36,6 +37,7 @@
 	padding: var(--zero-padding);
 	box-shadow: var(--shadow-none);
 	background-color: var(--color-transparent) !important;
+	transition: var(--animation-duration-short) var(--animation-timing-ease-out);
 }
 
 /* Custom Button (Contact) — Hover */
@@ -62,6 +64,7 @@
 	background: var(--color-transparent);
 	border-radius: var(--border-radius-default);
 	box-shadow: var(--shadow-xxl);
+	transition: var(--animation-duration-short) var(--animation-timing-ease-out);
 }
 
 /* Custom Button (CTA) — Hover */

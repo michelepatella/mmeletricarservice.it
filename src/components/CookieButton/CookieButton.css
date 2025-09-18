@@ -18,6 +18,7 @@
 	background-repeat: var(--background-no-repeat);
 	background-position: var(--background-position-center);
 	box-shadow: var(--shadow-large);
+	transition: var(--animation-duration-short) var(--animation-timing-ease-out);
 }
 
 /* Cookie Button — Hover */

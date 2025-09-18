@@ -23,6 +23,7 @@
 	flex-shrink: var(--used-car-card-flex-shrink);
 	scroll-snap-align: var(--used-car-card-scroll-snap-align);
 	cursor: var(--cursor-pointer);
+	transition: var(--animation-duration-short) var(--animation-timing-ease-out);
 }
 
 /* Used Cars Card — Image Container */
