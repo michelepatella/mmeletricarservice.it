@@ -74,5 +74,5 @@ export const useServiceTitleAnimation = (
 		// Call the function to type
 		// the current word
 		typeWord(SERVICES_TITLE[currentIndex].text);
-	}, [inView]);
+	}, [inView, setActiveIndex, setDisplayedWords]);
 };
