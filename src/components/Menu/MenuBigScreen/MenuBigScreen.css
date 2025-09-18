@@ -26,10 +26,10 @@
 		display: var(--display-block);
 		position: var(--position-fixed);
 		background-color: var(--color-background);
-		box-shadow: var(--shadow-xl);
+		box-shadow: var(--shadow-xlarge);
 		top: var(--menu-big-screen-top);
 		left: var(--menu-big-screen-left);
-		z-index: var(--z-index-medium);
+		z-index: var(--z-index-low);
 	}
 
 	/* Menu Big Screen — Items */

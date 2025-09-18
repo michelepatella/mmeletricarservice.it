@@ -4,8 +4,6 @@
 export const HOME_LOGO_CLASS_NAME = "logo-image";
 export const HOME_LOGO_ALT = "company-logo-image";
 export const HOME_LOGO_FETCH_PRIORITY = "high";
-export const HOME_LOGO_DECODING = "async";
-export const HOME_LOGO_LOADING = "eager";
 
 /* — Title — */
 export const HOME_TITLE = "MM Eletricar Service.";

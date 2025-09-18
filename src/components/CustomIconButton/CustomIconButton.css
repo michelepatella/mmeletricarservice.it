@@ -15,7 +15,7 @@
 
 /* Custom Icon Button — Hover */
 .custom-icon-button:hover {
-	transform: scale(var(--scale-medium));
+	transform: scale(var(--scale-large));
 }
 
 /* Custom Icon Button — Icon */

@@ -27,9 +27,7 @@ function HomeContent() {
 				className={HOME_LOGO_CLASS_NAME}
 				src={COMPANY_LOGO_LINK}
 				alt={HOME_LOGO_ALT}
-				fetchpriority={HOME_LOGO_FETCH_PRIORITY}
-				decoding={HOME_LOGO_DECODING}
-				loading={HOME_LOGO_LOADING}
+				fetchPriority={HOME_LOGO_FETCH_PRIORITY}
 			/>
 
 			{/* Title */}

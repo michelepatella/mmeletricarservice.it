@@ -4,12 +4,12 @@
 	--border-none: none;
 
 	/* — Width — */
-	--border-width-button-small: 1px;
-	--border-width-button-big: 2px;
+	--border-width-small: 1px;
+	--border-width-big: 2px;
 
 	/* — Radius — */
 	--border-radius-default: 4px;
-	--border-radius-circle: 50%;
+	--border-radius-full: 50%;
 
 	/* — Style — */
 	--border-style-solid: solid;

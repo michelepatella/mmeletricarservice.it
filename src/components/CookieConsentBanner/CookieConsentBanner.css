@@ -54,6 +54,6 @@
 .CookieConsent #rcc-decline-button {
 	background-color: var(--color-background) !important;
 	color: var(--color-white) !important;
-	border: var(--border-width-button-small)
+	border: var(--border-width-small)
 		var(--border-style-solid) var(--color-white) !important;
 }

@@ -1,0 +1,5 @@
+/* -------- Media -------- */
+:root {
+	/* — Object Fit — */
+	--object-fit-cover: cover;
+}

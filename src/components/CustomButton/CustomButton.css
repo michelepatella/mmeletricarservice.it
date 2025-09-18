@@ -8,7 +8,7 @@
 	color: var(--color-white);
 	font-family: var(--font-family);
 	font-size: var(--font-size-body);
-	border: var(--border-width-button-small)
+	border: var(--border-width-small)
 		var(--border-style-solid) var(--color-white);
 	border-radius: var(--border-radius-default);
 	padding: var(--button-padding-small);
@@ -24,7 +24,7 @@
 	color: var(--color-white);
 	font-family: var(--font-family);
 	font-size: var(--font-size-body);
-	border: var(--border-width-button-small)
+	border: var(--border-width-small)
 		var(--border-style-solid) var(--color-white);
 	border-radius: var(--border-radius-default);
 	padding: var(--button-padding-small);
@@ -62,8 +62,7 @@
 	font-size: var(--font-size-caption);
 	font-family: var(--font-family);
 	padding: var(--button-padding-big);
-	border: var(--border-width-button-big)
-		var(--border-style-solid);
+	border: var(--border-width-big) var(--border-style-solid);
 	border-image: var(--gradient-accent) 1;
 	-webkit-mask-image: -webkit-linear-gradient(
 		var(--color-white),
@@ -71,7 +70,7 @@
 	);
 	background: var(--color-transparent);
 	border-radius: var(--border-radius-default);
-	box-shadow: var(--shadow-xxl);
+	box-shadow: var(--shadow-xxlarge);
 	transition: var(--animation-duration-short)
 		var(--animation-timing-ease-out);
 }
@@ -82,8 +81,7 @@
 	color: var(--color-white) !important;
 	font-size: var(--font-size-caption) !important;
 	font-family: var(--font-family) !important;
-	border: var(--border-width-button-big)
-		var(--border-style-solid) !important;
+	border: var(--border-width-big) var(--border-style-solid) !important;
 	border-image: var(--gradient-accent) 1 !important;
 	-webkit-mask-image: -webkit-linear-gradient(
 		var(--color-white),
@@ -92,5 +90,5 @@
 	background: var(--color-transparent) !important;
 	border-radius: var(--border-radius-default) !important;
 	padding: var(--button-padding-big) !important;
-	box-shadow: var(--shadow-xxl);
+	box-shadow: var(--shadow-xxlarge);
 }

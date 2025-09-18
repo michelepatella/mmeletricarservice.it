@@ -19,7 +19,7 @@
 	background: var(--color-background);
 	border: var(--border-none);
 	border-radius: var(--border-radius-default);
-	box-shadow: var(--shadow-xl);
+	box-shadow: var(--shadow-xlarge);
 	flex-shrink: var(--used-car-card-flex-shrink);
 	scroll-snap-align: var(--used-car-card-scroll-snap-align);
 	cursor: var(--cursor-pointer);
@@ -40,7 +40,7 @@
 .used-car-card-image-container img {
 	max-width: var(--used-car-card-image-max-width);
 	height: var(--used-car-card-image-height);
-	object-fit: var(--background-object-fit-cover);
+	object-fit: var(--object-fit-cover);
 	border-radius: var(--border-radius-default);
 }
 
@@ -63,7 +63,7 @@
 /* Big screen */
 @media (min-width: 1025px) {
 	.used-car-card:hover {
-		box-shadow: var(--shadow-xxl);
+		box-shadow: var(--shadow-xxlarge);
 		transform: scale(var(--scale-small));
 	}
 }

@@ -20,6 +20,7 @@ function CustomIconButton(props) {
 			<img
 				src={props.src}
 				alt={CUSTOM_ICON_BUTTON_IMAGE_ALT}
+				fetchPriority={props?.fetchPriority}
 			/>
 		</button>
 	);

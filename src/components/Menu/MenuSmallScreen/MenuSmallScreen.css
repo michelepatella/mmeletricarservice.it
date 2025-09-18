@@ -37,7 +37,7 @@
 				--menu-small-screen-hamburger-button-backdrop-filter-blur
 			)
 		);
-		z-index: var(--z-index-medium) !important;
+		z-index: var(--z-index-low) !important;
 	}
 
 	/* Menu Small Screen */
