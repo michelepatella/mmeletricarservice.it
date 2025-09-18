@@ -18,7 +18,6 @@
 		--used-car-drawer-carousel-container-max-width
 	);
 	border-radius: var(--border-radius-default) !important;
-	box-shadow: var(--shadow-xlarge);
 }
 
 /* Used Car Drawer Carousel — Image Container */
@@ -47,7 +46,7 @@
 
 /* Used Car Drawer Carousel — Image Mask */
 .carousel-container .ant-image-mask {
-	display: none;
+	display: var(--display-none);
 }
 
 /* ------ Responsive Layout ------ */

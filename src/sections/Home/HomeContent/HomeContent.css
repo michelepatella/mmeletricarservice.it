@@ -1,5 +1,8 @@
 /* Variables */
 :root {
+	--home-title-font-size: clamp(30px, 6vw, 55px);
+	--home-subtitle-font-size: clamp(25px, 4vw, 45px);
+	--home-content-subtitle-font-family: "Dancing Script";
 	--home-content-animation-transform-translate-y-from: 20px;
 	--home-content-animation-transform-translate-y-to: 0;
 	--home-content-margin-top: 20vh;
@@ -7,7 +10,6 @@
 	--home-content-title-margin-bottom: 0;
 	--home-content-title-animation-delay: 0.6s;
 	--home-content-subtitle-margin-top: 0;
-	--home-content-subtitle-font-family: "Dancing Script";
 	--home-content-subtitle-animation-delay: 1.2s;
 }
 
@@ -51,7 +53,7 @@
 /* Home Content — Title */
 .home-title {
 	margin-bottom: var(--home-content-title-margin-bottom);
-	font-size: var(--font-size-home-title);
+	font-size: var(--home-title-font-size);
 	color: var(--color-accent);
 	opacity: var(--opacity-zero);
 	animation: homeTitleSubtitleSlideUp
@@ -67,7 +69,7 @@
 .home-subtitle {
 	margin-top: var(--home-content-subtitle-margin-top);
 	font-family: var(--home-content-subtitle-font-family);
-	font-size: var(--font-size-home-subtitle);
+	font-size: var(--home-subtitle-font-size);
 	color: var(--color-white);
 	opacity: var(--opacity-zero);
 	animation: homeTitleSubtitleSlideUp

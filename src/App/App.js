@@ -57,6 +57,7 @@ import "../design-tokens/borders.css";
 import "../design-tokens/layout.css";
 import "../design-tokens/background.css";
 import "../design-tokens/animations.css";
+import "../design-tokens/media.css";
 
 /**
  * The entry-point of the web application.

@@ -1,18 +1,15 @@
 /* -------- Layout -------- */
 :root {
-	/* — Float Buttons — */
-	--float-button-dimension: 40px;
-	--float-button-margin: 10px;
-
 	/* — Sections — */
-	--section-spacing: 80px;
-	--section-container-width: 60%;
-	--section-container-width-small-portrait: 75%;
 	--section-container-max-width: 120%;
 	--section-container-margin-left-big: 250px;
 	--section-container-margin-left-medium: 190px;
 	--section-container-margin-left-small-portrait: 20px;
 	--section-container-margin-left-small-landscape: 15px;
+
+	/* — Float Buttons — */
+	--float-button-dimension: 40px;
+	--float-button-margin: 10px;
 
 	/* — Position — */
 	--position-fixed: fixed;
@@ -30,11 +27,9 @@
 	/* — Flex Direction — */
 	--flex-direction-row: row;
 	--flex-direction-column: column;
-	--flex-direction-row-reverse: row-reverse;
 	--flex-direction-column-reverse: column-reverse;
 
 	/* — Justify — */
-	--justify-self-center: center;
 	--justify-content-center: center;
 	--justify-content-right: right;
 	--justify-content-left: left;
@@ -47,16 +42,14 @@
 
 	/* — Padding — */
 	--zero-padding: 0;
-	--button-padding-small: 15px 20px 15px 20px;
-	--button-padding-big: 20px 20px 20px 20px;
+	--padding-button: 20px 20px 20px 20px;
 
 	/* Overflow */
-	--overflow-visible: visible;
 	--overflow-hidden: hidden;
 	--overflow-auto: auto;
 
 	/* Scrollbar */
-	--scrollbar-width-default: none;
+	--scrollbar-width-none: none;
 
 	/* — Cursor — */
 	--cursor-pointer: pointer;

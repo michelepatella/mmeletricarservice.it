@@ -1,3 +1,9 @@
+/* Variables */
+:root {
+	--section-container-width: 60%;
+	--section-container-width-small-portrait: 75%;
+}
+
 /* Section Container */
 .section-container {
 	width: var(--section-container-width);

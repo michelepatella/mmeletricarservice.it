@@ -16,7 +16,7 @@
 	gap: var(--used-cars-container-gap);
 	padding: var(--used-cars-container-padding);
 	overflow-x: var(--overflow-auto);
-	scrollbar-width: var(--scrollbar-width-default);
+	scrollbar-width: var(--scrollbar-width-none);
 	-webkit-overflow-scrolling: var(
 		--used-cars-container-webkit-overflow-scrolling
 	);

@@ -41,7 +41,7 @@
 	font-size: var(--font-size-caption) !important;
 	font-family: var(--font-family) !important;
 	border-radius: var(--border-radius-default) !important;
-	padding: var(--button-padding-small) !important;
+	padding: var(--padding-button) !important;
 }
 
 /* Cookie Consent Banner — Confirm Button */

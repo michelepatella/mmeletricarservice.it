@@ -11,7 +11,7 @@
 	border: var(--border-width-small)
 		var(--border-style-solid) var(--color-white);
 	border-radius: var(--border-radius-default);
-	padding: var(--button-padding-small);
+	padding: var(--padding-button);
 	background-color: var(--color-background) !important;
 	box-shadow: var(--shadow-large);
 	transition: var(--animation-duration-short)
@@ -27,7 +27,7 @@
 	border: var(--border-width-small)
 		var(--border-style-solid) var(--color-white);
 	border-radius: var(--border-radius-default);
-	padding: var(--button-padding-small);
+	padding: var(--padding-button);
 	background-color: var(--color-background) !important;
 	box-shadow: var(--shadow-large);
 }
@@ -61,7 +61,7 @@
 	color: var(--color-white);
 	font-size: var(--font-size-caption);
 	font-family: var(--font-family);
-	padding: var(--button-padding-big);
+	padding: var(--padding-button);
 	border: var(--border-width-big) var(--border-style-solid);
 	border-image: var(--gradient-accent) 1;
 	-webkit-mask-image: -webkit-linear-gradient(
@@ -89,6 +89,6 @@
 	) !important;
 	background: var(--color-transparent) !important;
 	border-radius: var(--border-radius-default) !important;
-	padding: var(--button-padding-big) !important;
+	padding: var(--padding-button) !important;
 	box-shadow: var(--shadow-xxlarge);
 }

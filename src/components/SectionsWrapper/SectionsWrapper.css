@@ -1,6 +1,11 @@
+/* Variables */
+:root {
+	--section-wrapper-gap: 80px;
+}
+
 /* Sections Wrapper */
 .sections-wrapper {
 	display: var(--display-flex);
 	flex-direction: var(--flex-direction-column);
-	gap: var(--section-spacing);
+	gap: var(--section-wrapper-gap);
 }
