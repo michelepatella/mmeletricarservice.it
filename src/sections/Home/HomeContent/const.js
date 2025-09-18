@@ -17,4 +17,4 @@ export const HOME_SUBTITLE =
 export const HOME_SUBTITLE_CLASS_NAME = "home-subtitle";
 
 /* — Links — */
-export const COMPANY_LOGO_LINK = "/images/logo-image.svg";
+export const COMPANY_LOGO_LINK = "/images/logo-image.avif";
