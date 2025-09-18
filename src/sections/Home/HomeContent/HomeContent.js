@@ -2,6 +2,9 @@ import {
 	COMPANY_LOGO_LINK,
 	HOME_LOGO_ALT,
 	HOME_LOGO_CLASS_NAME,
+	HOME_LOGO_DECODING,
+	HOME_LOGO_FETCH_PRIORITY,
+	HOME_LOGO_LOADING,
 	HOME_SUBTITLE,
 	HOME_SUBTITLE_CLASS_NAME,
 	HOME_TITLE,
@@ -24,6 +27,9 @@ function HomeContent() {
 				className={HOME_LOGO_CLASS_NAME}
 				src={COMPANY_LOGO_LINK}
 				alt={HOME_LOGO_ALT}
+				fetchpriority={HOME_LOGO_FETCH_PRIORITY}
+				decoding={HOME_LOGO_DECODING}
+				loading={HOME_LOGO_LOADING}
 			/>
 
 			{/* Title */}

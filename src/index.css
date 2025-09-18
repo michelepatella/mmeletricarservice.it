@@ -5,6 +5,7 @@
 		format("truetype");
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: "Poppins";
@@ -12,6 +13,7 @@
 		format("truetype");
 	font-weight: bold;
 	font-style: normal;
+	font-display: swap;
 }
 
 /* Dancing Script */
@@ -20,4 +22,5 @@
 	src: url("../public/fonts/DancingScript-Regular.ttf");
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
