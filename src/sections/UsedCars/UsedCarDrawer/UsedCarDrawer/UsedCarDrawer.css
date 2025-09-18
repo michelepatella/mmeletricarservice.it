@@ -1,38 +1,18 @@
 /* Variables */
 :root {
 	--custom-loading-outlined-margin-top: 30vh;
-	--used-car-drawer-animation-transform-translate-x-from: 100%;
-	--used-car-drawer-animation-transform-translate-x-to: 0;
-	--used-car-drawer-width: 100vw;
-	--used-car-drawer-flex-horizontal-height: 100%;
-	--used-car-drawer-flex-horizontal-gap-big-medium: 20px;
-	--used-car-drawer-flex-horizontal-gap-small: 48px;
-	--used-car-drawer-info-panel-padding: 24px;
-	--used-car-drawer-header-padding-left-big: 64px;
-	--used-car-drawer-header-padding-top-big: 16px;
-	--used-car-drawer-header-padding-bottom-big: 32px;
-	--used-car-drawer-header-padding-left-small-portrait-medium-portrait: 50px;
-	--used-car-drawer-header-padding-bottom-small-portrait-medium-portrait: 24px;
-	--used-car-drawer-header-padding-top-small-portrait-medium-portrait: 5px;
-	--used-car-drawer-header-padding-left-small-landscape-medium-landscape: 50px;
-	--used-car-drawer-header-padding-top-small-landscape-medium-landscape: 5px;
-	--used-car-drawer-header-padding-bottom-small-landscape-medium-landscape: 24px;
 }
 
 /* Used Car Drawer — Animation */
 @keyframes usedCarDrawerSlideRight {
 	from {
 		transform: translateX(
-			var(
-				--used-car-drawer-animation-transform-translate-x-from
-			)
+			var(--animation-translate-hidden)
 		);
 	}
 	to {
 		transform: translateX(
-			var(
-				--used-car-drawer-animation-transform-translate-x-to
-			)
+			var(--animation-translate-visible)
 		);
 	}
 }
@@ -49,7 +29,7 @@
 }
 
 .ant-drawer-content-wrapper {
-	width: var(--used-car-drawer-width) !important;
+	width: var(--vw-full) !important;
 	position: var(--position-fixed);
 	animation: usedCarDrawerSlideRight
 		var(--animation-duration-medium)
@@ -64,9 +44,7 @@
 
 /* Used Car Drawer — Flex Horizontal */
 .used-car-drawer-flex-horizontal {
-	height: var(
-		--used-car-drawer-flex-horizontal-height
-	) !important;
+	height: var(--size-full) !important;
 }
 
 /* ------ Responsive Layout ------ */
@@ -75,28 +53,20 @@
 @media (min-width: 1025px) {
 	.used-car-drawer-flex-horizontal {
 		flex-direction: var(--flex-direction-row);
-		gap: var(
-			--used-car-drawer-flex-horizontal-gap-big-medium
-		);
+		gap: var(--gap-small);
 	}
 
 	.used-car-drawer-flex-vertical {
 		border-radius: var(--border-radius-default);
-		padding: var(--used-car-drawer-info-panel-padding);
+		padding: var(--padding-medium);
 		background-color: var(--color-transparent);
 		box-shadow: var(--shadow-xlarge);
 	}
 
 	.ant-drawer-header {
-		padding-left: var(
-			--used-car-drawer-header-padding-left-big
-		) !important;
-		padding-top: var(
-			--used-car-drawer-header-padding-top-big
-		) !important;
-		padding-bottom: var(
-			--used-car-drawer-header-padding-bottom-big
-		) !important;
+		padding-left: var(--padding-xxlarge) !important;
+		padding-top: var(--padding-medium) !important;
+		padding-bottom: var(--padding-large) !important;
 		box-shadow: var(--shadow-large);
 	}
 }
@@ -106,21 +76,13 @@
 	.used-car-drawer-flex-horizontal {
 		flex-direction: var(--flex-direction-column-reverse);
 		justify-content: var(--justify-content-start);
-		gap: var(
-			--used-car-drawer-flex-horizontal-gap-big-medium
-		);
+		gap: var(--gap-small);
 	}
 
 	.ant-drawer-header {
-		padding-left: var(
-			--used-car-drawer-header-padding-left-small-portrait-medium-portrait
-		) !important;
-		padding-bottom: var(
-			--used-car-drawer-header-padding-bottom-small-portrait-medium-portrait
-		) !important;
-		padding-top: var(
-			--used-car-drawer-header-padding-top-small-portrait-medium-portrait
-		) !important;
+		padding-left: var(--padding-xlarge) !important;
+		padding-bottom: var(--padding-medium) !important;
+		padding-top: var(--padding-xsmall) !important;
 		box-shadow: var(--shadow-large);
 	}
 }
@@ -129,28 +91,20 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 	.used-car-drawer-flex-horizontal {
 		flex-direction: var(--flex-direction-row);
-		gap: var(
-			--used-car-drawer-flex-horizontal-gap-big-medium
-		);
+		gap: var(--gap-small);
 	}
 
 	.used-car-drawer-flex-vertical {
 		border-radius: var(--border-radius-default);
-		padding: var(--used-car-drawer-info-panel-padding);
+		padding: var(--padding-medium);
 		background-color: var(--color-transparent);
 		box-shadow: var(--shadow-xlarge);
 	}
 
 	.ant-drawer-header {
-		padding-left: var(
-			--used-car-drawer-header-padding-left-small-landscape-medium-landscape
-		) !important;
-		padding-bottom: var(
-			--used-car-drawer-header-padding-bottom-small-landscape-medium-landscape
-		) !important;
-		padding-top: var(
-			--used-car-drawer-header-padding-top-small-landscape-medium-landscape
-		) !important;
+		padding-left: var(--padding-xlarge) !important;
+		padding-bottom: var(--padding-medium) !important;
+		padding-top: var(--padding-xsmall) !important;
 		box-shadow: var(--shadow-large);
 	}
 }
@@ -160,19 +114,13 @@
 	.used-car-drawer-flex-horizontal {
 		flex-direction: var(--flex-direction-column-reverse);
 		justify-content: var(--justify-content-start);
-		gap: var(--used-car-drawer-flex-horizontal-gap-small);
+		gap: var(--padding-xlarge);
 	}
 
 	.ant-drawer-header {
-		padding-left: var(
-			--used-car-drawer-header-padding-left-small-portrait-medium-portrait
-		) !important;
-		padding-bottom: var(
-			--used-car-drawer-header-padding-bottom-small-portrait-medium-portrait
-		) !important;
-		padding-top: var(
-			--used-car-drawer-header-padding-top-small-portrait-medium-portrait
-		) !important;
+		padding-left: var(--padding-xlarge) !important;
+		padding-bottom: var(--padding-medium) !important;
+		padding-top: var(--padding-xsmall) !important;
 		box-shadow: var(--shadow-large);
 	}
 }
@@ -182,19 +130,13 @@
 	.used-car-drawer-flex-horizontal {
 		flex-direction: var(--flex-direction-column-reverse);
 		justify-content: var(--justify-content-start);
-		gap: var(--used-car-drawer-flex-horizontal-gap-small);
+		gap: var(--gap-large);
 	}
 
 	.ant-drawer-header {
-		padding-left: var(
-			--used-car-drawer-header-padding-left-small-landscape-medium-landscape
-		) !important;
-		padding-bottom: var(
-			--used-car-drawer-header-padding-bottom-small-landscape-medium-landscape
-		) !important;
-		padding-top: var(
-			--used-car-drawer-header-padding-top-small-landscape-medium-landscape
-		) !important;
+		padding-left: var(--padding-xlarge) !important;
+		padding-bottom: var(--padding-medium) !important;
+		padding-top: var(--padding-xsmall) !important;
 		box-shadow: var(--shadow-large);
 	}
 }

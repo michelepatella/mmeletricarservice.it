@@ -23,6 +23,21 @@
 		#2ba35f,
 		#7dffcc
 	);
+	--gradient-dark-top: linear-gradient(
+		to top,
+		rgba(20, 20, 20, 0) 50%,
+		rgba(20, 20, 20, 1) 100%
+	);
+	--gradient-dark-bottom: linear-gradient(
+		to bottom,
+		rgba(20, 20, 20, 0) 50%,
+		rgba(20, 20, 20, 1) 100%
+	);
+	--gradient-dark-left: linear-gradient(
+		to left,
+		rgba(20, 20, 20, 0) 50%,
+		rgba(20, 20, 20, 1) 100%
+	);
 
 	/* Opacity */
 	--opacity-zero: 0;

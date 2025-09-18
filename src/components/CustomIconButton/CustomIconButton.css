@@ -1,9 +1,3 @@
-/* Variables */
-:root {
-	--custom-icon-button-margin: clamp(5px, 2vw, 10px);
-	--custom-icon-button-dimension: clamp(18px, 5vw, 20px);
-}
-
 /* Custom Icon Button */
 .custom-icon-button {
 	border: var(--border-none);
@@ -16,10 +10,4 @@
 /* Custom Icon Button — Hover */
 .custom-icon-button:hover {
 	transform: scale(var(--scale-large));
-}
-
-/* Custom Icon Button — Icon */
-.custom-icon-button img {
-	width: var(--custom-icon-button-dimension);
-	height: var(--custom-icon-button-dimension);
 }

@@ -1,10 +1,3 @@
-/* Variables */
-:root {
-	--custom-text-super-heading-margin-bottom: 30px;
-	--custom-text-super-heading-line-height: 1.2;
-	--custom-text-heading-margin-bottom: 0;
-}
-
 /* Custom Text — Animation */
 @keyframes customTextFadeIn {
 	from {
@@ -17,19 +10,17 @@
 
 /* Custom Text — Super-heading */
 .custom-super-heading {
-	margin-bottom: var(
-		--custom-text-super-heading-margin-bottom
-	);
+	margin-bottom: var(--margin-medium);
 	font-size: var(--font-size-super-heading);
 	text-align: var(--font-alignment-left);
 	font-weight: var(--font-weight-bold);
-	line-height: var(--custom-text-super-heading-line-height);
+	line-height: var(--font-super-heading-line-height);
 	color: var(--color-white);
 }
 
 /* Custom Text — Heading */
 .custom-heading {
-	margin-bottom: var(--custom-text-heading-margin-bottom);
+	margin-bottom: var(--zero-margin);
 	color: var(--color-white);
 	text-align: var(--font-alignment-left);
 	font-size: var(--font-size-heading);
@@ -44,7 +35,7 @@
 
 /* Custom Text — Heading (In View) */
 .custom-heading.in-view {
-	margin-bottom: var(--custom-text-heading-margin-bottom);
+	margin-bottom: var(--zero-margin);
 	color: var(--color-white);
 	text-align: var(--font-alignment-left);
 	font-size: var(--font-size-heading);

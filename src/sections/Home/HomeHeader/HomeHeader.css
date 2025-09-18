@@ -1,17 +1,9 @@
-/* Variables */
-:root {
-	--home-header-gap: 20px;
-	--home-header-padding-right: 10px;
-	--home-header-padding-bottom: 5px;
-}
-
 /* Home Header */
 .home-header {
 	display: var(--display-flex);
 	justify-content: var(--justify-content-right);
-	gap: var(--home-header-gap);
-	padding-right: var(--home-header-padding-right);
-	padding-bottom: var(--home-header-padding-bottom);
+	gap: var(--gap-small);
+	padding-right: var(--padding-small);
 	background-color: var(--color-transparent);
 }
 

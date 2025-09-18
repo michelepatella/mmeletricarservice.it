@@ -7,7 +7,6 @@ import {
 import {
 	HAMBURGER_BUTTON_CLASS_NAME,
 	HAMBURGER_BUTTON_SHAPE,
-	HAMBURGER_BUTTON_TYPE,
 	MENU_SMALL_CHILDREN_ITEM_CLASS_NAME,
 	MENU_SMALL_CLOSE_OUTLINE_CLASS_NAME,
 	MENU_SMALL_CONTAINER_CLASS_NAME,
@@ -36,7 +35,6 @@ function MenuSmallScreen() {
 		<div className={MENU_SMALL_CONTAINER_CLASS_NAME}>
 			{/* Hamburger button (to open the hamburger Menu) */}
 			<Button
-				type={HAMBURGER_BUTTON_TYPE}
 				className={HAMBURGER_BUTTON_CLASS_NAME}
 				shape={HAMBURGER_BUTTON_SHAPE}
 				icon={<MenuOutlined />}

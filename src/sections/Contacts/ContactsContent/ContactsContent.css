@@ -1,12 +1,7 @@
-/* Variables */
-:root {
-	--contacts-content-buttons-gap: 30px;
-}
-
 /* Contacts Content — Contact Buttons */
 .contact-buttons-container {
 	display: var(--display-flex);
 	flex-direction: var(--flex-direction-column);
 	align-items: var(--align-items-flex-start);
-	gap: var(--contacts-content-buttons-gap);
+	gap: var(--gap-medium);
 }

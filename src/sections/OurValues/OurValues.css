@@ -1,6 +1,5 @@
 /* Variables */
 :root {
-	--our-values-steps-description-margin-bottom: 50px;
 	--our-values-steps-title-margin-top-multiplier-big: -1.5;
 	--our-values-steps-title-margin-top-multiplier-small: -1.2;
 }
@@ -18,9 +17,7 @@
 
 .ant-steps-item-description,
 .ant-steps-item-description.in-view {
-	margin-bottom: var(
-		--our-values-steps-description-margin-bottom
-	);
+	margin-bottom: var(--margin-large);
 }
 
 /* ------ Responsive Layout ------ */

@@ -6,9 +6,9 @@
 export const getBackgroundContainerStyle = (image) => {
 	return {
 		background:
-			"var(--background-container-gradient-top), " +
-			"var(--background-container-gradient-bottom), " +
-			"var(--background-container-gradient-left), " +
+			"var(--gradient-dark-top), " +
+			"var(--gradient-dark-bottom), " +
+			"var(--gradient-dark-left), " +
 			"url(" +
 			image +
 			")",

@@ -1,6 +1,5 @@
 /* Variables */
 :root {
-	--services-gap: 50px;
 	--services-title-min-height-multiplier: 4.7;
 	--services-title-webkit-background-clip: text;
 }
@@ -10,7 +9,7 @@
 	width: var(--section-container-max-width);
 	display: var(--display-flex);
 	flex-direction: var(--flex-direction-row);
-	gap: var(--services-gap);
+	gap: var(--gap-large);
 	overflow-x: var(--overflow-auto);
 	overflow-y: var(--overflow-hidden);
 }

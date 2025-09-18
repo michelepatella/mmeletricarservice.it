@@ -46,7 +46,6 @@ import "../components/CustomLink/CustomLink.css";
 import "../components/InfoCard/InfoCard.css";
 import "../components/SectionsWrapper/SectionsWrapper.css";
 import "../components/SectionContainer/SectionContainer.css";
-import "../components/BackgroundContainer/BackgroundContainer.css";
 import "../components/Menu/MenuBigScreen/MenuBigScreen.css";
 import "../components/Menu/MenuSmallScreen/MenuSmallScreen.css";
 import "../components/CustomLoadingOutlined/CustomLoadingOutlined.css";

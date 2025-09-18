@@ -1,7 +1,6 @@
 /* Variables */
 :root {
-	--cookie-consent-banner-animation-translate-y-from: 100%;
-	--cookie-consent-banner-animation-translate-y-to: 0;
+	/* — Button — */
 	--cookie-consent-banner-button-width: 92%;
 }
 
@@ -9,14 +8,12 @@
 @keyframes cookieConsentBannerSlideUp {
 	from {
 		transform: translateY(
-			var(
-				--cookie-consent-banner-animation-translate-y-from
-			)
+			var(--animation-translate-hidden)
 		);
 	}
 	to {
 		transform: translateY(
-			var(--cookie-consent-banner-animation-translate-y-to)
+			var(--animation-translate-visible)
 		);
 	}
 }
@@ -41,7 +38,7 @@
 	font-size: var(--font-size-caption) !important;
 	font-family: var(--font-family) !important;
 	border-radius: var(--border-radius-default) !important;
-	padding: var(--padding-button) !important;
+	padding: var(--button-padding) !important;
 }
 
 /* Cookie Consent Banner — Confirm Button */

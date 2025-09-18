@@ -94,5 +94,6 @@ export const API_FOLDER_PATH = "/api/";
 export const COOKIE_NAME = "cookieConsent";
 
 /* — Images — */
+export const IMAGE_FETCH_PRIORITY_HIGH = "high";
 export const DOTTED_BACKGROUND_IMAGE_LINK =
 	"/images/dotted-background.avif";

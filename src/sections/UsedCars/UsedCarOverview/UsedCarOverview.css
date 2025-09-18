@@ -1,13 +1,6 @@
-/* Variables */
-:root {
-	--used-car-overview-container-margin-top: 10px;
-	--used-car-overview-text-margin-top: 0;
-	--used-car-overview-text-margin-bottom: 0;
-}
-
 /* Used Car Overview */
 .used-car-overview-container {
-	margin-top: var(--used-car-overview-container-margin-top);
+	margin-top: var(--margin-small);
 	display: var(--display-flex);
 	flex-direction: var(--flex-direction-row);
 	align-items: var(--align-items-center);

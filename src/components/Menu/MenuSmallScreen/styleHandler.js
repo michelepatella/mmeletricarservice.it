@@ -35,8 +35,7 @@ export const getMenuChildrenItemStyle = (
 			section === child?.href.replace("#", "")
 				? "var(--font-weight-bold)"
 				: "var(--font-weight-normal)",
-		paddingLeft:
-			"var(--menu-small-screen-children-padding-left)",
+		paddingLeft: "var(--padding-xlarge)",
 	};
 };
 

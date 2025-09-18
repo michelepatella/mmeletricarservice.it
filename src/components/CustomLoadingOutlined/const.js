@@ -16,7 +16,7 @@ export const CUSTOM_LOADING_OUTLINED_LOGO_IMAGE_CLASS_NAME =
 export const CUSTOM_LOADING_OUTLINED_LOGO_IMAGE_ALT =
 	"logo-loading-outlined";
 
-/* — Links to Images — */
+/* — Links — */
 export const CIRCLE_LOADING_OUTLINED_IMAGE_LINK =
 	"/images/circle-loading-outlined.svg";
 export const LOGO_LOADING_OUTLINED_IMAGE_LINK =

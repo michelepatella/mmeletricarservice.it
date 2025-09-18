@@ -1,13 +1,13 @@
 import React from "react";
 import {
-	GOOGLE_MAPS_CONTAINER_CLASS_NAME,
-	GOOGLE_MAPS_IFRAME_CLASS_NAME,
-	GOOGLE_MAPS_IFRAME_TITLE,
-	GOOGLE_MAPS_LINK,
-	GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
+	WHERE_WE_ARE_GOOGLE_MAPS_CONTAINER_CLASS_NAME,
+	WHERE_WE_ARE_GOOGLE_MAPS_IFRAME_CLASS_NAME,
+	WHERE_WE_ARE_GOOGLE_MAPS_IFRAME_TITLE,
+	WHERE_WE_ARE_GOOGLE_MAPS_LINK,
+	WHERE_WE_ARE_GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION,
 	WHERE_WE_ARE_TITLE,
-	WORKING_HOURS_DESCRIPTION,
-	WORKING_HOURS_TITLE,
+	WHERE_WE_ARE_WORKING_HOURS_DESCRIPTION,
+	WHERE_WE_ARE_WORKING_HOURS_TITLE,
 } from "./const";
 import {
 	CUSTOM_TEXT_TYPES,
@@ -57,7 +57,7 @@ function WhereWeAre(props) {
 				{/* Working hours of the company title */}
 				<CustomText
 					type={CUSTOM_TEXT_TYPES.HEADING}
-					text={WORKING_HOURS_TITLE}
+					text={WHERE_WE_ARE_WORKING_HOURS_TITLE}
 					disableAnimation
 				/>
 
@@ -66,17 +66,23 @@ function WhereWeAre(props) {
 				<CustomBlockQuote>
 					<CustomText
 						type={CUSTOM_TEXT_TYPES.BODY}
-						text={WORKING_HOURS_DESCRIPTION}
+						text={WHERE_WE_ARE_WORKING_HOURS_DESCRIPTION}
 					/>
 				</CustomBlockQuote>
 
 				{/* Google Maps (shown only in case of cookie accepting) */}
 				{props.cookiesAccepted ? (
-					<div className={GOOGLE_MAPS_CONTAINER_CLASS_NAME}>
+					<div
+						className={
+							WHERE_WE_ARE_GOOGLE_MAPS_CONTAINER_CLASS_NAME
+						}
+					>
 						<iframe
-							src={GOOGLE_MAPS_LINK}
-							className={GOOGLE_MAPS_IFRAME_CLASS_NAME}
-							title={GOOGLE_MAPS_IFRAME_TITLE}
+							src={WHERE_WE_ARE_GOOGLE_MAPS_LINK}
+							className={
+								WHERE_WE_ARE_GOOGLE_MAPS_IFRAME_CLASS_NAME
+							}
+							title={WHERE_WE_ARE_GOOGLE_MAPS_IFRAME_TITLE}
 							allowFullScreen=""
 							loading="lazy"
 							referrerPolicy="no-referrer-when-downgrade"
@@ -86,13 +92,17 @@ function WhereWeAre(props) {
 					// In case cookies have not been accepted,
 					// Google Maps frame cannot be shown
 					<div
-						className={GOOGLE_MAPS_CONTAINER_CLASS_NAME}
+						className={
+							WHERE_WE_ARE_GOOGLE_MAPS_CONTAINER_CLASS_NAME
+						}
 						style={getGoogleMapsContainerStyle()}
 					>
 						{/* Google Maps unavailable description */}
 						<CustomText
 							type={CUSTOM_TEXT_TYPES.CAPTION}
-							text={GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION}
+							text={
+								WHERE_WE_ARE_GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION
+							}
 							style={getGoogleMapsUnavailableDescriptionStyle()}
 						/>
 					</div>

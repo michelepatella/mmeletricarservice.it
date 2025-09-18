@@ -2,13 +2,15 @@ import {
 	COMPANY_LOGO_LINK,
 	HOME_LOGO_ALT,
 	HOME_LOGO_CLASS_NAME,
-	HOME_LOGO_FETCH_PRIORITY,
 	HOME_SUBTITLE,
 	HOME_SUBTITLE_CLASS_NAME,
 	HOME_TITLE,
 	HOME_TITLE_CLASS_NAME,
 } from "./const";
-import { HOME_SECTION_ID } from "../../../utils/const";
+import {
+	HOME_SECTION_ID,
+	IMAGE_FETCH_PRIORITY_HIGH,
+} from "../../../utils/const";
 
 /**
  * This component represents the content
@@ -25,7 +27,7 @@ function HomeContent() {
 				className={HOME_LOGO_CLASS_NAME}
 				src={COMPANY_LOGO_LINK}
 				alt={HOME_LOGO_ALT}
-				fetchPriority={HOME_LOGO_FETCH_PRIORITY}
+				fetchPriority={IMAGE_FETCH_PRIORITY_HIGH}
 			/>
 
 			{/* Title */}

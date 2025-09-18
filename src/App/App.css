@@ -1,15 +1,23 @@
 /* Variables */
 :root {
-	--html-body-margin: 0;
+	/* — App — */
+	--app-box-sizing: border-box;
+
+	/* — HTML and Body — */
 	--html-body-scroll-behavior: smooth;
 	--html-body-webkit-font-smoothing: antialiased;
 	--hmtl-body-moz-osx-font-smoothing: grayscale;
 }
 
+/* App */
+* {
+	box-sizing: var(--app-box-sizing);
+}
+
 /* HTML and Body */
 html,
 body {
-	margin: var(--html-body-margin);
+	margin: var(--zero-margin);
 	font-family: var(--font-family);
 	background-color: var(--color-background);
 	overflow-x: var(--overflow-hidden);
@@ -21,7 +29,4 @@ body {
 	-moz-osx-font-smoothing: var(
 		--hmtl-body-moz-osx-font-smoothing
 	);
-}
-* {
-	box-sizing: border-box;
 }

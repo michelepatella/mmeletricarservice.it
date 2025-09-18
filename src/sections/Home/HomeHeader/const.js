@@ -9,10 +9,6 @@ import {
 	onPhoneButtonClick,
 } from "../../../utils/contactHandlers";
 
-/* — Button Images — */
-export const HOME_HEADER_CONTACT_BUTTON_IMAGE_FETCH_PRIORITY =
-	"high";
-
 /* — Buttons — */
 export const HOME_HEADER_CONTACT_BUTTONS = [
 	{

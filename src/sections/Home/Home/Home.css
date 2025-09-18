@@ -1,11 +1,6 @@
-/* Variables */
-:root {
-	--home-layout-height: 100vh;
-}
-
 /* Home — Home Layout */
 .home-layout {
-	height: var(--home-layout-height);
+	height: var(--vh-full);
 	font-family: var(--font-family);
 	background: var(--color-transparent);
 }

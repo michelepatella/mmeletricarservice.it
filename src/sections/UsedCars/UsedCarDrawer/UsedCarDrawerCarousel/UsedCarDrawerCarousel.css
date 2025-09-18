@@ -1,32 +1,20 @@
 /* Variables */
 :root {
-	--used-car-drawer-carousel-container-max-width: 100%;
-	--used-car-drawer-carousel-image-width: 100%;
-	--used-car-drawer-carousel-image-height: 100%;
-	--used-car-drawer-carousel-image-max-width: 100%;
 	--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape: 80vh;
 	--used-car-drawer-carousel-max-height-medium-portrait-small-portrait: 40vh;
-	--used-car-drawer-carousel-container-width-big: 75%;
-	--used-car-drawer-carousel-container-width-medium-portrait: 100%;
-	--used-car-drawer-carousel-container-width-medium-landscape: 60%;
-	--used-car-drawer-carousel-container-width-small: 100%;
 }
 
 /* Used Car Drawer Carousel */
 .carousel-container {
-	max-width: var(
-		--used-car-drawer-carousel-container-max-width
-	);
+	max-width: var(--size-full);
 	border-radius: var(--border-radius-default) !important;
 }
 
 /* Used Car Drawer Carousel — Image Container */
 .carousel-container .ant-image {
-	width: var(--used-car-drawer-carousel-image-width);
-	height: var(--used-car-drawer-carousel-image-height);
-	max-width: var(
-		--used-car-drawer-carousel-image-max-width
-	);
+	width: var(--size-full);
+	height: var(--size-full);
+	max-width: var(--size-full);
 	display: var(--display-flex);
 	justify-content: var(--justify-content-center);
 	align-items: var(--align-items-center);
@@ -35,11 +23,9 @@
 
 /* Used Car Drawer Carousel — Image */
 .carousel-container .ant-image-img {
-	width: var(--used-car-drawer-carousel-image-width);
-	height: var(--used-car-drawer-carousel-image-height);
-	max-width: var(
-		--used-car-drawer-carousel-image-max-width
-	);
+	width: var(--size-full);
+	height: var(--size-full);
+	max-width: var(--size-full);
 	object-fit: var(--object-fit-cover);
 	border-radius: var(--border-radius-default) !important;
 }
@@ -54,9 +40,7 @@
 /* Big Screen */
 @media (min-width: 1025px) {
 	.carousel-container {
-		width: var(
-			--used-car-drawer-carousel-container-width-big
-		);
+		width: var(--container-width-large);
 		max-height: var(
 			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
 		);
@@ -78,9 +62,7 @@
 /* Medium Screen — Portrait */
 @media (min-width: 768px) and (max-width: 1024px) {
 	.carousel-container {
-		width: var(
-			--used-car-drawer-carousel-container-width-medium-portrait
-		);
+		width: var(--size-full);
 		max-height: var(
 			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
 		);
@@ -102,9 +84,7 @@
 /* Medium Screen — Landscape */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 	.carousel-container {
-		width: var(
-			--used-car-drawer-carousel-container-width-medium-landscape
-		);
+		width: var(--container-width-medium);
 		max-height: var(
 			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
 		);
@@ -126,9 +106,7 @@
 /* Small Screen — Portrait */
 @media (max-width: 767px) {
 	.carousel-container {
-		width: var(
-			--used-car-drawer-carousel-container-width-small
-		);
+		width: var(--size-full);
 		max-height: var(
 			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
 		);
@@ -150,9 +128,7 @@
 /* Small Screen — Landscape */
 @media (max-width: 767px) and (orientation: landscape) {
 	.carousel-container {
-		width: var(
-			--used-car-drawer-carousel-container-width-small
-		);
+		width: var(--size-full);
 		max-height: var(
 			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
 		);

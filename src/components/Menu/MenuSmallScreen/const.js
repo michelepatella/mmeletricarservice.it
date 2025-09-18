@@ -12,7 +12,6 @@ export const MENU_SMALL_CHILDREN_ITEM_CLASS_NAME =
 export const MENU_SMALL_DRAWER_PLACEMENT = "right";
 
 /* — Hamburger Button — */
-export const HAMBURGER_BUTTON_TYPE = "primary";
 export const HAMBURGER_BUTTON_CLASS_NAME =
 	"hamburger-button";
 export const HAMBURGER_BUTTON_SHAPE = "circle";

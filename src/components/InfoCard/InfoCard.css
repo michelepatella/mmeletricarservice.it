@@ -1,24 +1,20 @@
 /* Variables */
 :root {
-	--info-card-height: 100%;
-	--info-card-width: 250px;
-	--info-card-icon-dimension: 30px;
+	/* — Layout — */
 	--info-card-flex-grid-template-columns: auto 1fr;
-	--info-card-flex-gap: 15px;
-	--info-card-description-margin-top: 0;
 }
 
 /* Info Card */
 .info-card {
-	height: var(--info-card-height);
-	width: var(--info-card-width);
+	height: var(--size-full);
+	width: var(--card-width);
 	background-color: var(--color-transparent);
 }
 
 /* Info Card — Icon */
 .info-card-icon {
-	height: var(--info-card-icon-dimension);
-	width: var(--info-card-icon-dimension);
+	height: var(--icon-small);
+	width: var(--icon-small);
 }
 
 /* Info Card — Flex Container */
@@ -28,5 +24,5 @@
 		--info-card-flex-grid-template-columns
 	);
 	align-items: var(--align-items-center);
-	gap: var(--info-card-flex-gap);
+	gap: var(--gap-small);
 }

@@ -20,4 +20,7 @@
 
 	/* — Decoration — */
 	--font-decoration-none: none;
+
+	/* — Line Height — */
+	--font-super-heading-line-height: 1.2;
 }

@@ -15,4 +15,12 @@
 
 	/* — Iteration — */
 	--animation-iteration-infinite: infinite;
+
+	/* — Translate — */
+	--animation-translate-hidden: 100%;
+	--animation-translate-visible: 0;
+
+	/* — Rotate — */
+	--animation-rotate-start: 0deg;
+	--animation-rotate-full: 360deg;
 }

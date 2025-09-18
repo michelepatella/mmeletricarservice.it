@@ -1,13 +1,7 @@
-/* Variables */
-:root {
-	--contacts-footer-width: 80%;
-	--contacts-footer-padding: 0;
-}
-
 /* Contacts Footer */
 .contacts-footer {
-	width: var(--contacts-footer-width);
-	padding: var(--contacts-footer-padding);
+	width: var(--container-width-large);
+	padding: var(--zero-padding);
 	color: var(--color-white);
 	background-color: var(--color-background);
 }

@@ -1,7 +1,5 @@
 /* Variables */
 :root {
-	--used-cars-container-padding: 30px;
-	--used-cars-container-gap: 20px;
 	--used-cars-custom-loading-outlined-margin-top: 7vw;
 	--used-cars-container-webkit-overflow-scrolling: touch;
 	--used-cars-container-scroll-snap-type: x mandatory;
@@ -13,8 +11,8 @@
 	width: var(--section-container-max-width);
 	display: var(--display-flex);
 	flex-direction: var(--flex-direction-row);
-	gap: var(--used-cars-container-gap);
-	padding: var(--used-cars-container-padding);
+	gap: var(--gap-small);
+	padding: var(--padding-large);
 	overflow-x: var(--overflow-auto);
 	scrollbar-width: var(--scrollbar-width-none);
 	-webkit-overflow-scrolling: var(

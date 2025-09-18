@@ -1,4 +1,6 @@
 /**------------- Cookie Consent Banner constants -------------**/
+
+/* — General — */
 export const COOKIE_EXPIRATION_DATE = 30;
 
 /* — Banner — */

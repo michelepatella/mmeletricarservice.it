@@ -1,8 +1,3 @@
-/* Variables */
-:root {
-	--custom-button-cta-margin-top: 50px;
-}
-
 /* Custom Button (General) */
 .custom-button {
 	color: var(--color-white);
@@ -11,7 +6,7 @@
 	border: var(--border-width-small)
 		var(--border-style-solid) var(--color-white);
 	border-radius: var(--border-radius-default);
-	padding: var(--padding-button);
+	padding: var(--button-padding);
 	background-color: var(--color-background) !important;
 	box-shadow: var(--shadow-large);
 	transition: var(--animation-duration-short)
@@ -27,7 +22,7 @@
 	border: var(--border-width-small)
 		var(--border-style-solid) var(--color-white);
 	border-radius: var(--border-radius-default);
-	padding: var(--padding-button);
+	padding: var(--button-padding);
 	background-color: var(--color-background) !important;
 	box-shadow: var(--shadow-large);
 }
@@ -57,11 +52,11 @@
 
 /* Custom Button (CTA) */
 .cta-button {
-	margin-top: var(--custom-button-cta-margin-top);
+	margin-top: var(--margin-large);
 	color: var(--color-white);
 	font-size: var(--font-size-caption);
 	font-family: var(--font-family);
-	padding: var(--padding-button);
+	padding: var(--button-padding);
 	border: var(--border-width-big) var(--border-style-solid);
 	border-image: var(--gradient-accent) 1;
 	-webkit-mask-image: -webkit-linear-gradient(
@@ -89,6 +84,6 @@
 	) !important;
 	background: var(--color-transparent) !important;
 	border-radius: var(--border-radius-default) !important;
-	padding: var(--padding-button) !important;
+	padding: var(--button-padding) !important;
 	box-shadow: var(--shadow-xxlarge);
 }

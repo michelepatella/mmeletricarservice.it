@@ -1,7 +1,5 @@
-import {
-	HOME_HEADER_CONTACT_BUTTONS,
-	HOME_HEADER_CONTACT_BUTTON_IMAGE_FETCH_PRIORITY,
-} from "./const";
+import { HOME_HEADER_CONTACT_BUTTONS } from "./const";
+import { IMAGE_FETCH_PRIORITY_HIGH } from "../../../utils/const";
 import CustomIconButton from "../../../components/CustomIconButton/CustomIconButton";
 
 /**
@@ -21,9 +19,7 @@ function HomeHeader() {
 						key={src}
 						src={src}
 						onClick={onClick}
-						fetchPriority={
-							HOME_HEADER_CONTACT_BUTTON_IMAGE_FETCH_PRIORITY
-						}
+						fetchPriority={IMAGE_FETCH_PRIORITY_HIGH}
 					/>
 				)
 			)}

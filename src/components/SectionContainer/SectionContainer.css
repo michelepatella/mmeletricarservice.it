@@ -1,12 +1,6 @@
-/* Variables */
-:root {
-	--section-container-width: 60%;
-	--section-container-width-small-portrait: 75%;
-}
-
 /* Section Container */
 .section-container {
-	width: var(--section-container-width);
+	width: var(--container-width-medium);
 }
 
 /* ------ Responsive Layout ------ */
@@ -30,7 +24,7 @@
 /* Small Screen — Portrait */
 @media (max-width: 767px) and (orientation: portrait) {
 	.section-container {
-		width: var(--section-container-width-small-portrait);
+		width: var(--container-width-large);
 		margin-left: var(
 			--section-container-margin-left-small-portrait
 		);

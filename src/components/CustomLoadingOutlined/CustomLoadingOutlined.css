@@ -1,41 +1,22 @@
-/* Variables */
-:root {
-	--custom-loading-outlined-animation-transform-rotate-from: 0deg;
-	--custom-loading-outlined-animation-transform-rotate-to: 360deg;
-	--custom-loading-outlined-dimension: 120px;
-	--custom-loading-outlined-circle-transform-origin: 50% 50%;
-	--custom-loading-outlined-position: 50%;
-	--custom-loading-outlined-transform-translate: -50%;
-	--custom-loading-outlined-logo-dimension: 50%;
-}
-
 /* Custom Loading Outlined — Animation */
 @keyframes customLoadingOutlinedSpin {
 	0% {
-		transform: rotate(
-			var(
-				--custom-loading-outlined-animation-transform-rotate-from
-			)
-		);
+		transform: rotate(var(--animation-rotate-start));
 	}
 	100% {
-		transform: rotate(
-			var(
-				--custom-loading-outlined-animation-transform-rotate-to
-			)
-		);
+		transform: rotate(var(--animation-rotate-full));
 	}
 }
 
 /* Custom Loading Outlined */
 .custom-loading-outlined {
-	width: var(--custom-loading-outlined-dimension);
-	height: var(--custom-loading-outlined-dimension);
+	width: var(--icon-medium);
+	height: var(--icon-medium);
 	position: var(--position-absolute);
-	left: var(--custom-loading-outlined-position);
+	left: var(--position-center);
 	transform: translate(
-		var(--custom-loading-outlined-transform-translate),
-		var(--custom-loading-outlined-transform-translate)
+		var(--position-center-translate),
+		var(--position-center-translate)
 	);
 }
 
@@ -45,20 +26,15 @@
 		var(--animation-duration-long)
 		var(--animation-timing-linear)
 		var(--animation-iteration-infinite);
-	transform-origin: var(
-		--custom-loading-outlined-circle-transform-origin
-	);
 }
 
 /* Custom Loading Outlined — Logo */
 .custom-loading-outlined-logo {
 	position: var(--position-absolute);
-	top: var(--custom-loading-outlined-position);
-	left: var(--custom-loading-outlined-position);
+	top: var(--position-center);
+	left: var(--position-center);
 	transform: translate(
-		var(--custom-loading-outlined-transform-translate),
-		var(--custom-loading-outlined-transform-translate)
+		var(--position-center-translate),
+		var(--position-center-translate)
 	);
-	width: var(--custom-loading-outlined-logo-dimension);
-	height: var(--custom-loading-outlined-logo-dimension);
 }

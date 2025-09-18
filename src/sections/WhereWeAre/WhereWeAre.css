@@ -1,9 +1,6 @@
 /* Variables */
 :root {
 	--where-we-are-google-maps-height: 60vh;
-	--where-we-are-google-maps-margin-top: 50px;
-	--where-we-are-google-maps-iframe-dimension: 100%;
-	--where-we-are-google-maps-iframe-border-width: 0;
 	--where-we-are-google-maps-iframe-filter-perc: 95%;
 	--where-we-are-google-maps-iframe-filter-rotation: 180deg;
 	--where-we-are-google-maps-unavailable-background-size: 10%;
@@ -18,7 +15,7 @@
 .google-maps-container {
 	width: var(--section-container-max-width);
 	height: var(--where-we-are-google-maps-height);
-	margin-top: var(--where-we-are-google-maps-margin-top);
+	margin-top: var(--margin-large);
 	overflow: var(--overflow-hidden);
 	border-radius: var(--border-radius-default);
 	box-shadow: var(--shadow-medium);
@@ -26,11 +23,9 @@
 
 /* Where We Are — Google Maps (iframe) */
 .google-maps-iframe {
-	width: var(--where-we-are-google-maps-iframe-dimension);
-	height: var(--where-we-are-google-maps-iframe-dimension);
-	border: var(
-		--where-we-are-google-maps-iframe-border-width
-	);
+	width: var(--size-full);
+	height: var(--size-full);
+	border: var(--border-none);
 	filter: invert(
 			var(--where-we-are-google-maps-iframe-filter-perc)
 		)
@@ -40,11 +35,9 @@
 }
 
 .google-maps-iframe:hover {
-	width: var(--where-we-are-google-maps-iframe-dimension);
-	height: var(--where-we-are-google-maps-iframe-dimension);
-	border: var(
-		--where-we-are-google-maps-iframe-border-width
-	);
+	width: var(--margin-large);
+	height: var(--margin-large);
+	border: var(--border-none);
 	filter: invert(
 			var(--where-we-are-google-maps-iframe-filter-perc)
 		)

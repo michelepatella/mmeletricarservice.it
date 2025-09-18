@@ -1,18 +1,11 @@
 /* Variables */
 :root {
-	--used-car-drawer-collapse-margin-top: 80px;
 	--used-car-drawer-collapse-header-margin: 10px 0 10px 0;
-	--used-car-drawer-collapse-header-padding-left: 0;
-	--used-car-drawer-collapse-content-border-left: 1px;
-	--used-car-drawer-collapse-list-padding-inline-start: 0;
-	--used-car-drawer-collapse-list-margin-block-start: 0;
-	--used-car-drawer-collapse-information-name-margin-bottom: 0;
-	--used-car-drawer-collapse-information-text-margin-top: 0;
 }
 
 /* Used Car Drawer Collapse */
 .used-car-drawer-collapse {
-	margin-top: var(--used-car-drawer-collapse-margin-top);
+	margin-top: var(--margin-xlarge);
 	border: var(--border-none);
 	border-radius: var(--border-radius-default);
 }
@@ -26,9 +19,7 @@
 .ant-collapse-header {
 	margin: var(--used-car-drawer-collapse-header-margin);
 	border: var(--border-none) !important;
-	padding-left: var(
-		--used-car-drawer-collapse-header-padding-left
-	) !important;
+	padding-left: var(--zero-padding) !important;
 }
 
 /* Used Car Drawer Collapse — Header Text */
@@ -45,9 +36,7 @@
 	color: var(--color-white);
 	font-family: var(--font-family);
 	border: var(--border-none) !important;
-	border-left: var(
-			--used-car-drawer-collapse-content-border-left
-		)
+	border-left: var(--border-width-small)
 		var(--border-style-solid) var(--color-white) !important;
 	border-radius: var(--border-none) !important;
 	background-color: var(--color-transparent) !important;
@@ -61,10 +50,6 @@
 /* Used Car Drawer Collapse — Lists */
 .used-car-drawer-collapse-inner-list,
 .used-car-drawer-collapse-outer-list {
-	padding-inline-start: var(
-		--used-car-drawer-collapse-list-padding-inline-start
-	) !important;
-	margin-block-start: var(
-		--used-car-drawer-collapse-list-margin-block-start
-	) !important;
+	padding-inline-start: var(--zero-padding) !important;
+	margin-block-start: var(--zero-margin) !important;
 }

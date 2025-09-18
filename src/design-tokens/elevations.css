@@ -15,4 +15,7 @@
 	/* — Z-Index — */
 	--z-index-low: 1000;
 	--z-index-high: 9999;
+
+	/* — Blur — */
+	--blur-default: 4px;
 }

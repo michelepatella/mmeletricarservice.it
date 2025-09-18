@@ -1,12 +1,7 @@
 /* Variables */
 :root {
-	--menu-big-screen-height: 100vh;
+	/* — Layout — */
 	--menu-big-screen-width: 170px;
-	--menu-big-screen-top: 0;
-	--menu-big-screen-left: 0;
-	--menu-big-screen-item-padding-top: 30px;
-	--menu-big-screen-ink-width: 2px;
-	--menu-big-screen-ink-margin-top: 10px;
 }
 
 /* ------ Responsive Layout ------ */
@@ -21,14 +16,14 @@
 
 	/* Menu Big Screen */
 	.menu-container-big {
-		height: var(--menu-big-screen-height);
+		height: var(--vh-full);
 		width: var(--menu-big-screen-width);
 		display: var(--display-block);
 		position: var(--position-fixed);
 		background-color: var(--color-background);
 		box-shadow: var(--shadow-xlarge);
-		top: var(--menu-big-screen-top);
-		left: var(--menu-big-screen-left);
+		top: var(--zero-position);
+		left: var(--zero-position);
 		z-index: var(--z-index-low);
 	}
 
@@ -37,7 +32,7 @@
 		color: var(--color-white) !important;
 		font-family: var(--font-family) !important;
 		font-size: var(--font-size-body) !important;
-		padding-top: var(--menu-big-screen-item-padding-top);
+		padding-top: var(--padding-large);
 	}
 
 	.ant-anchor-link-active > .ant-anchor-link-title {
@@ -47,8 +42,8 @@
 
 	/* Menu Big Screen — Ink */
 	.ant-anchor-ink {
-		width: var(--menu-big-screen-ink-width);
-		margin-top: var(--menu-big-screen-ink-margin-top);
+		width: var(--border-width-big);
+		margin-top: var(--margin-small);
 		background-color: var(--color-accent) !important;
 	}
 }
