@@ -1,4 +1,36 @@
-/* Variables */
-:root {
-    --about-us-height: 70vh;
+/* ------ Responsive Variables ------ */
+
+/* Big Screen */
+@media (min-width: 1025px) {
+    :root {
+        --about-us-height: 60vh;
+    }
+}
+
+/* Medium Screen Landscape  */
+@media (min-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    :root {
+        --about-us-height: 60vh;
+    }
+}
+
+/* Medium Screen Portrait */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    :root {
+        --about-us-height: 45vh;
+    }
+}
+
+/* Small Screen Portrait */
+@media (max-width: 767px) and (orientation: portrait) {
+    :root {
+        --about-us-height: 65vh;
+    }
+}
+
+/* Small Screen Landscape */
+@media (max-height: 767px) and (orientation: landscape) and (max-width: 1024px) {
+    :root {
+        --about-us-height: 100vh;
+    }
 }
