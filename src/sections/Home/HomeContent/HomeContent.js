@@ -35,7 +35,7 @@ function HomeContent() {
 			/>
 
 			{/* Subtitle */}
-			<h3
+			<h2
 				className={HOME_SUBTITLE_CLASS_NAME}
 				dangerouslySetInnerHTML={{
 					__html: HOME_SUBTITLE,
