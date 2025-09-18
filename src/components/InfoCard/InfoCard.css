@@ -3,7 +3,6 @@
 	--info-card-height: 100%;
 	--info-card-width: 250px;
 	--info-card-icon-dimension: 30px;
-	--info-card-flex-margin-top: 50px;
 	--info-card-flex-grid-template-columns: auto 1fr;
 	--info-card-flex-gap: 15px;
 	--info-card-description-margin-top: 0;
@@ -24,7 +23,6 @@
 
 /* Info Card — Flex Container */
 .info-card-flex {
-	margin-top: var(--info-card-flex-margin-top);
 	display: var(--display-grid);
 	grid-template-columns: var(--info-card-flex-grid-template-columns);
 	align-items: var(--align-items-center);
