@@ -31,17 +31,29 @@ export default async function middleware(request) {
 			return;
 		}
 
+		// Check whether the request came from a bot
+		const ua = request.headers.get("user-agent") || "";
+		const isBot =
+			/(facebook|twitter|linkedin|pinterest|whatsapp|telegram|slack|googlebot)/i.test(
+				ua
+			);
+
+		// Fallback
+		if (!isBot) {
+			return;
+		}
+
 		// Create custom HTML with Open Graph meta tags
 		const html = `
 			<!DOCTYPE html>
 			<html lang="it">
 			<head>
 				<meta charset="UTF-8" />
-				<title>${usedCar.name} — MM Eletricar Service</title>
+				<title>${usedCar.name} | MM Eletricar Service</title>
 				<meta property="og:title" content="${usedCar.name}" />
 				<meta 
   				property="og:description" 
-  				content="${usedCar.name} del ${usedCar.year} con ${usedCar.mileage.toLocaleString()} km, carburante ${usedCar.fuel}, in ${usedCar.status.toLowerCase()} stato, disponibile a €${usedCar.price}" 
+  				content="${usedCar.name} del ${usedCar.year} con ${usedCar.mileage.toLocaleString()} km, carburante ${usedCar.fuel}, in ${usedCar.status.toLowerCase()} stato, disponibile a €${usedCar.price}." 
 				/>
 				<meta property="og:image" content="${usedCar.image}" />
 				<meta property="og:url" content="${url.href}" />
