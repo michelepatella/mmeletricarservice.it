@@ -37,22 +37,21 @@ export default async function middleware(request) {
 			<html lang="it">
 			<head>
 				<meta charset="UTF-8" />
-				<title>${usedCar.name}</title>
+				<title>${usedCar.name} — MM Eletricar Service</title>
 				<meta property="og:title" content="${usedCar.name}" />
-				<meta property="og:description" content="Prezzo: €${usedCar.price} - Anno: ${usedCar.year} - Km: ${usedCar.mileage} - Carburante: ${usedCar.fuel} - Stato: ${usedCar.status}" />
+				<meta 
+  				property="og:description" 
+  				content="${usedCar.name} del ${usedCar.year} con ${usedCar.mileage.toLocaleString()} km, carburante ${usedCar.fuel}, in ${usedCar.status.toLowerCase()} stato, disponibile a €${usedCar.price}" 
+				/>
 				<meta property="og:image" content="${usedCar.image}" />
 				<meta property="og:url" content="${url.href}" />
 				<meta property="og:type" content="product" />
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:title" content="${usedCar.name}" />
-				<meta name="twitter:description" content="Prezzo: €${usedCar.price} - Anno: ${usedCar.year} - Km: ${usedCar.mileage} - Carburante: ${usedCar.fuel} - Stato: ${usedCar.status}" />
+				<meta name="twitter:description" content="Prezzo: €${usedCar.price} | Anno: ${usedCar.year} | Km: ${usedCar.mileage} | Carburante: ${usedCar.fuel} | Stato: ${usedCar.status}" />
 				<meta name="twitter:image" content="${usedCar.image}" />
 			</head>
-			<body>
-				<script>
-					window.location.replace("${url.pathname}");
-				</script>
-			</body>
+			<body></body>
 			</html>
 		`;
 
