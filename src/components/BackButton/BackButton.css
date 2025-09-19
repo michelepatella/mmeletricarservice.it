@@ -1,10 +1,10 @@
-/* Custom Back Button */
-.custom-back-button {
+/* Back Button */
+.back-button {
 	display: var(--display-flex);
 	flex-direction: var(--flex-direction-row);
 	color: var(--color-white) !important;
 	font-size: var(--font-size-caption);
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 	gap: var(--gap-xsmall);
 	padding-top: var(--padding-medium);
 }

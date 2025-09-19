@@ -1,9 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import CustomBackButton from "./CustomBackButton";
+import BackButton from "./BackButton";
 
-import { CUSTOM_BACK_BUTTON_LABEL } from "./const";
+import { BACK_BUTTON_LABEL } from "./const";
 
 // Definition of expected results
 const backButtonLabel = "Back Button Label";
@@ -46,7 +46,7 @@ describe("CustomBackButton", () => {
 	describe("LeftOutlined", () => {
 		// Test if it renders the LeftOutlined icon correctly
 		test("renders icon correctly", () => {
-			render(<CustomBackButton />);
+			render(<BackButton />);
 
 			expect(
 				screen.getByTestId(leftOutlinedTestId)
@@ -57,31 +57,31 @@ describe("CustomBackButton", () => {
 	describe("CustomText", () => {
 		// Test if it renders the label correctly
 		test("renders with correct text", () => {
-			render(<CustomBackButton />);
+			render(<BackButton />);
 
 			expect(
-				screen.getByText(CUSTOM_BACK_BUTTON_LABEL)
+				screen.getByText(BACK_BUTTON_LABEL)
 			).toBeInTheDocument();
 		});
 
 		// Test if it sets the correct text type
 		test("sets the correct text type", () => {
-			render(<CustomBackButton />);
+			render(<BackButton />);
 
 			expect(
 				screen
-					.getByText(CUSTOM_BACK_BUTTON_LABEL)
+					.getByText(BACK_BUTTON_LABEL)
 					.getAttribute("data-type")
 			).toBe(customTextType);
 		});
 
 		// Test if it sets the correct disableAnimation prop
 		test("sets the correct animation setting", () => {
-			render(<CustomBackButton />);
+			render(<BackButton />);
 
 			expect(
 				screen
-					.getByText(CUSTOM_BACK_BUTTON_LABEL)
+					.getByText(BACK_BUTTON_LABEL)
 					.getAttribute("data-animation")
 			).toBeTruthy();
 		});

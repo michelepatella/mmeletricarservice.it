@@ -1,9 +1,9 @@
-/* Custom Block Quote */
-.custom-block-quote {
+/* Block Quote */
+.block-quote {
 	display: var(--display-inline-block);
 	margin-left: var(--zero-margin);
 	padding-left: var(--padding-medium);
-	border-left: var(--border-width-big)
+	border-left: var(--border-width-large)
 		var(--border-style-solid);
 	color: var(--color-accent);
 }

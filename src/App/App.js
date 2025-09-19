@@ -38,25 +38,29 @@ import "../sections/Contacts/ContactsFooter/ContactsFooter.css";
 import "../components/CookieButton/CookieButton.css";
 import "../components/CookieConsentBanner/CookieConsentBanner.css";
 import "../components/CustomButton/CustomButton.css";
-import "../components/CustomIconButton/CustomIconButton.css";
+import "../components/IconButton/IconButton.css";
 import "../components/CustomText/CustomText.css";
-import "../components/CustomBackButton/CustomBackButton.css";
-import "../components/CustomBlockQuote/CustomBlockQuote.css";
-import "../components/CustomLink/CustomLink.css";
+import "../components/BackButton/BackButton.css";
+import "../components/BlockQuote/BlockQuote.css";
+import "../components/Link/Link.css";
 import "../components/InfoCard/InfoCard.css";
 import "../components/SectionsWrapper/SectionsWrapper.css";
 import "../components/SectionContainer/SectionContainer.css";
 import "../components/Menu/MenuBigScreen/MenuBigScreen.css";
 import "../components/Menu/MenuSmallScreen/MenuSmallScreen.css";
-import "../components/CustomLoadingOutlined/CustomLoadingOutlined.css";
+import "../components/LoadingOutlined/LoadingOutlined.css";
 import "../design-tokens/colors.css";
 import "../design-tokens/typography.css";
 import "../design-tokens/elevations.css";
 import "../design-tokens/borders.css";
-import "../design-tokens/layout.css";
 import "../design-tokens/background.css";
 import "../design-tokens/animations.css";
-import "../design-tokens/media.css";
+import "../design-tokens/layout/images.css";
+import "../design-tokens/layout/size.css";
+import "../design-tokens/layout/position.css";
+import "../design-tokens/layout/spacing.css";
+import "../design-tokens/layout/scroll.css";
+import "../design-tokens/layout/other.css";
 
 /**
  * The entry-point of the web application.

@@ -1,32 +1,21 @@
-/* Variables */
-:root {
-	/* — App — */
-	--app-box-sizing: border-box;
-
-	/* — HTML and Body — */
-	--html-body-scroll-behavior: smooth;
-	--html-body-webkit-font-smoothing: antialiased;
-	--hmtl-body-moz-osx-font-smoothing: grayscale;
-}
-
 /* App */
 * {
-	box-sizing: var(--app-box-sizing);
+	box-sizing: var(--box-sizing-default);
 }
 
 /* HTML and Body */
 html,
 body {
 	margin: var(--zero-margin);
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 	background-color: var(--color-background);
 	overflow-x: var(--overflow-hidden);
-	scroll-behavior: var(--html-body-scroll-behavior);
-	scrollbar-width: var(--scrollbar-width-none);
+	scroll-behavior: var(--scroll-behavior-default);
+	scrollbar-width: var(--scrollbar-width-default);
 	-webkit-font-smoothing: var(
-		--html-body-webkit-font-smoothing
+		--font-smoothing-webkit-default
 	);
 	-moz-osx-font-smoothing: var(
-		--hmtl-body-moz-osx-font-smoothing
+		--font-smoothing-moz-osx-default
 	);
 }

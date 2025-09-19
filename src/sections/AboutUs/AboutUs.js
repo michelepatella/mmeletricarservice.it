@@ -10,7 +10,7 @@ import {
 } from "../../utils/const";
 import { getAboutUsSectionContainerStyle } from "./styleHandler";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
-import BackgroundContainer from "../../components/BackgroundContainer/BackgroundContainer";
+import SectionBackground from "../../components/SectionBackground/SectionBackground";
 import CustomText from "../../components/CustomText/CustomText";
 
 /**
@@ -21,7 +21,7 @@ import CustomText from "../../components/CustomText/CustomText";
  */
 function AboutUs() {
 	return (
-		<BackgroundContainer
+		<SectionBackground
 			image={ABOUT_US_BACKGROUND_IMAGE_LINK}
 		>
 			<SectionContainer
@@ -41,7 +41,7 @@ function AboutUs() {
 					text={ABOUT_US_DESCRIPTION}
 				/>
 			</SectionContainer>
-		</BackgroundContainer>
+		</SectionBackground>
 	);
 }
 

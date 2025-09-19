@@ -1,22 +1,22 @@
 import React from "react";
 import { LeftOutlined } from "@ant-design/icons";
 import {
-	CUSTOM_BACK_BUTTON_LABEL,
-	CUSTOM_BACK_BUTTON_CLASS_NAME,
+	BACK_BUTTON_LABEL,
+	BACK_BUTTON_CLASS_NAME,
 } from "./const";
 import { CUSTOM_TEXT_TYPES } from "../../utils/const";
 import CustomText from "../CustomText/CustomText";
 
 /**
- * This component defines a custom back
+ * This component defines a back
  * button used in the entire web application. It is
  * characterized by a symbol '<' and a label for clarity.
  * @returns {React.JSX.Element}
  * @constructor
  */
-function CustomBackButton() {
+function BackButton() {
 	return (
-		<span className={CUSTOM_BACK_BUTTON_CLASS_NAME}>
+		<span className={BACK_BUTTON_CLASS_NAME}>
 			{/* Close button symbol */}
 			<LeftOutlined />
 
@@ -24,10 +24,10 @@ function CustomBackButton() {
 			<CustomText
 				type={CUSTOM_TEXT_TYPES.BODY}
 				disableAnimation
-				text={CUSTOM_BACK_BUTTON_LABEL}
+				text={BACK_BUTTON_LABEL}
 			/>
 		</span>
 	);
 }
 
-export default CustomBackButton;
+export default BackButton;
