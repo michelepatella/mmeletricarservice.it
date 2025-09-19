@@ -49,8 +49,8 @@ export default async function middleware(request) {
 			<html lang="it">
 			<head>
 				<meta charset="UTF-8" />
-				<title>${usedCar.name} | MM Eletricar Service</title>
-				<meta property="og:title" content="${usedCar.name}" />
+				<title>${usedCar.name} — MM Eletricar Service</title>
+				<meta property="og:title" content="${usedCar.name} a €${usedCar.price} — MM Eletricar Service" />
 				<meta 
   				property="og:description" 
   				content="${usedCar.name} del ${usedCar.year} con ${usedCar.mileage.toLocaleString()} km, carburante ${usedCar.fuel}, in ${usedCar.status.toLowerCase()} stato, disponibile a €${usedCar.price}." 
@@ -59,8 +59,8 @@ export default async function middleware(request) {
 				<meta property="og:url" content="${url.href}" />
 				<meta property="og:type" content="product" />
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content="${usedCar.name}" />
-				<meta name="twitter:description" content="Prezzo: €${usedCar.price} | Anno: ${usedCar.year} | Km: ${usedCar.mileage} | Carburante: ${usedCar.fuel} | Stato: ${usedCar.status}" />
+				<meta name="twitter:title" content="${usedCar.name} a €${usedCar.price} — MM Eletricar Service" />
+				<meta name="twitter:description" content="${usedCar.name} del ${usedCar.year} con ${usedCar.mileage.toLocaleString()} km, carburante ${usedCar.fuel}, in ${usedCar.status.toLowerCase()} stato, disponibile a €${usedCar.price}." />
 				<meta name="twitter:image" content="${usedCar.image}" />
 			</head>
 			<body></body>
