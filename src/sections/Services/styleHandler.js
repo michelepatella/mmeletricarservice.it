@@ -18,14 +18,12 @@ export const getServicesTitleStyle = (numTitles) => {
  * Method to get the style of the spans used
  * for displaying section title.
  * @param title
- * @returns {{WebkitTextFillColor: string, WebkitBackgroundClip, background: (string|*)}}
+ * @returns {string}
  */
 export const getServicesTitleSpanStyle = (title) => {
 	return (
-		"background:" +
+		"background: " +
 		title.gradient +
-		";" +
-		"-webkit-background-clip: var(--services-title-webkit-background-clip);" +
-		"-webkit-text-fill-color: var(--color-transparent)"
+		"; -webkit-background-clip: var(--services-title-webkit-background-clip); -webkit-text-fill-color: var(--color-transparent);"
 	);
 };

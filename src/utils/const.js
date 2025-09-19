@@ -48,10 +48,11 @@ export const ALL_CONTACTS = [
 	},
 ];
 export const CONTACTS_CLICK_HANDLERS = {
-	[PHONE]: onPhoneButtonClick,
-	[EMAIL]: onEmailButtonClick,
-	[EMAIL_PEC]: onPecButtonClick,
-	[FACEBOOK_PAGE_NAME]: onFacebookButtonClick,
+	[PHONE]: () => onPhoneButtonClick(PHONE),
+	[EMAIL]: () => onEmailButtonClick(EMAIL),
+	[EMAIL_PEC]: () => onPecButtonClick(EMAIL_PEC),
+	[FACEBOOK_PAGE_NAME]: () =>
+		onFacebookButtonClick(FACEBOOK_LINK),
 };
 
 /* — Policies — */

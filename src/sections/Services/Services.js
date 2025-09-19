@@ -66,11 +66,14 @@ function Services() {
 							// by using an individual span
 							SERVICES_TITLE.map((title, index) => {
 								const isActive = index === activeIndex;
+								const style =
+									getServicesTitleSpanStyle(title);
+								const word = displayedWords[index] || "";
 								return (
 									'<span style="' +
-									getServicesTitleSpanStyle(title) +
+									style +
 									'">' +
-									displayedWords[index] +
+									word +
 									(isActive ? "|" : "") +
 									"</span>"
 								);
