@@ -1,5 +1,5 @@
-/* Custom Icon Button */
-.custom-icon-button {
+/* Icon Button */
+.icon-button {
 	border: var(--border-none);
 	background: var(--color-transparent);
 	cursor: var(--cursor-pointer);
@@ -7,7 +7,7 @@
 		var(--animation-timing-ease-out);
 }
 
-/* Custom Icon Button — Hover */
-.custom-icon-button:hover {
+/* Icon Button — Hover */
+.icon-button:hover {
 	transform: scale(var(--scale-large));
 }

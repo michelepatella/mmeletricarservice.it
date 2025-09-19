@@ -10,7 +10,7 @@ import {
 } from "../../../utils/const";
 import HomeHeader from "../HomeHeader/HomeHeader";
 import HomeContent from "../HomeContent/HomeContent";
-import BackgroundContainer from "../../../components/BackgroundContainer/BackgroundContainer";
+import SectionBackground from "../../../components/SectionBackground/SectionBackground";
 
 // Home Layout definition:
 // it's composed by a header and a content
@@ -28,7 +28,7 @@ function Home() {
 		<>
 			{/* Background container to contain the whole section and
        use a customized background */}
-			<BackgroundContainer
+			<SectionBackground
 				image={DOTTED_BACKGROUND_IMAGE_LINK}
 			>
 				{/* Home Layout */}
@@ -46,7 +46,7 @@ function Home() {
 						<HomeContent />
 					</Content>
 				</Layout>
-			</BackgroundContainer>
+			</SectionBackground>
 		</>
 	);
 }

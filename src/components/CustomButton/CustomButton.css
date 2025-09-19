@@ -1,14 +1,14 @@
 /* Custom Button (General) */
 .custom-button {
 	color: var(--color-white);
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 	font-size: var(--font-size-body);
 	border: var(--border-width-small)
 		var(--border-style-solid) var(--color-white);
 	border-radius: var(--border-radius-default);
-	padding: var(--button-padding);
+	padding: var(--padding-medium);
 	background-color: var(--color-background) !important;
-	box-shadow: var(--shadow-large);
+	box-shadow: var(--shadow-medium);
 	transition: var(--animation-duration-short)
 		var(--animation-timing-ease-out);
 }
@@ -17,20 +17,20 @@
 .custom-button:hover {
 	transform: scale(var(--scale-small));
 	color: var(--color-white);
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 	font-size: var(--font-size-body);
 	border: var(--border-width-small)
 		var(--border-style-solid) var(--color-white);
 	border-radius: var(--border-radius-default);
-	padding: var(--button-padding);
+	padding: var(--padding-medium);
 	background-color: var(--color-background) !important;
-	box-shadow: var(--shadow-large);
+	box-shadow: var(--shadow-medium);
 }
 
 /* Custom Button (Contact) */
 .contact-button {
 	color: var(--color-white);
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 	font-size: var(--font-size-body);
 	padding: var(--zero-padding);
 	box-shadow: var(--shadow-none);
@@ -43,7 +43,7 @@
 .contact-button:hover {
 	transform: scale(var(--scale-small));
 	color: var(--color-white);
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 	font-size: var(--font-size-body);
 	padding: var(--zero-padding);
 	box-shadow: var(--shadow-none);
@@ -55,17 +55,18 @@
 	margin-top: var(--margin-large);
 	color: var(--color-white);
 	font-size: var(--font-size-caption);
-	font-family: var(--font-family);
-	padding: var(--button-padding);
-	border: var(--border-width-big) var(--border-style-solid);
-	border-image: var(--gradient-accent) 1;
+	font-family: var(--font-family-default);
+	padding: var(--padding-medium);
+	border: var(--border-width-large)
+		var(--border-style-solid);
+	border-image: var(--color-accent-gradient) 1;
 	-webkit-mask-image: -webkit-linear-gradient(
 		var(--color-white),
 		var(--color-white)
 	);
 	background: var(--color-transparent);
 	border-radius: var(--border-radius-default);
-	box-shadow: var(--shadow-xxlarge);
+	box-shadow: var(--shadow-xlarge);
 	transition: var(--animation-duration-short)
 		var(--animation-timing-ease-out);
 }
@@ -75,15 +76,16 @@
 	transform: scale(var(--scale-small));
 	color: var(--color-white) !important;
 	font-size: var(--font-size-caption) !important;
-	font-family: var(--font-family) !important;
-	border: var(--border-width-big) var(--border-style-solid) !important;
-	border-image: var(--gradient-accent) 1 !important;
+	font-family: var(--font-family-default) !important;
+	border: var(--border-width-large)
+		var(--border-style-solid) !important;
+	border-image: var(--color-accent-gradient) 1 !important;
 	-webkit-mask-image: -webkit-linear-gradient(
 		var(--color-white),
 		var(--color-white)
 	) !important;
 	background: var(--color-transparent) !important;
 	border-radius: var(--border-radius-default) !important;
-	padding: var(--button-padding) !important;
-	box-shadow: var(--shadow-xxlarge);
+	padding: var(--padding-medium) !important;
+	box-shadow: var(--shadow-xlarge);
 }

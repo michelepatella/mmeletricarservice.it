@@ -1,28 +1,18 @@
-/* Variables */
-:root {
-	/* — Layout — */
-	--info-card-flex-grid-template-columns: auto 1fr;
-}
-
 /* Info Card */
 .info-card {
-	height: var(--size-full);
+	height: var(--full-size);
 	width: var(--card-width);
 	background-color: var(--color-transparent);
 }
 
 /* Info Card — Icon */
 .info-card-icon {
-	height: var(--icon-small);
-	width: var(--icon-small);
+	height: var(--image-size-small);
+	width: var(--image-size-small);
 }
 
 /* Info Card — Flex Container */
 .info-card-flex {
 	display: var(--display-grid);
-	grid-template-columns: var(
-		--info-card-flex-grid-template-columns
-	);
 	align-items: var(--align-items-center);
-	gap: var(--gap-small);
 }

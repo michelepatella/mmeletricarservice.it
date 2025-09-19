@@ -1,7 +1,7 @@
-import { CUSTOM_LINK_CLASS_NAME } from "./const";
+import { LINK_CLASS_NAME } from "./const";
 
 /**
- * This component represents the custom link used
+ * This component represents the link used
  * across the whole application. It receives a link
  * (href attribute), as well as a text to be displayed
  * within <a> tag.
@@ -9,10 +9,10 @@ import { CUSTOM_LINK_CLASS_NAME } from "./const";
  * @returns {JSX.Element}
  * @constructor
  */
-function CustomLink(props) {
+function Link(props) {
 	return (
 		<a
-			className={CUSTOM_LINK_CLASS_NAME}
+			className={LINK_CLASS_NAME}
 			href={props.href}
 			target="_blank"
 			rel="noopener noreferrer"
@@ -22,4 +22,4 @@ function CustomLink(props) {
 	);
 }
 
-export default CustomLink;
+export default Link;

@@ -1,6 +1,6 @@
 import { HOME_HEADER_CONTACT_BUTTONS } from "./const";
 import { IMAGE_FETCH_PRIORITY_HIGH } from "../../../utils/const";
-import CustomIconButton from "../../../components/CustomIconButton/CustomIconButton";
+import IconButton from "../../../components/IconButton/IconButton";
 
 /**
  * This component represents the header
@@ -15,7 +15,7 @@ function HomeHeader() {
 			{/* Add a home header button for each button specified */}
 			{HOME_HEADER_CONTACT_BUTTONS.map(
 				({ src, onClick }) => (
-					<CustomIconButton
+					<IconButton
 						key={src}
 						src={src}
 						onClick={onClick}

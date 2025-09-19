@@ -5,7 +5,7 @@ import {
 	screen,
 	fireEvent,
 } from "@testing-library/react";
-import CustomIconButton from "./CustomIconButton";
+import IconButton from "./IconButton";
 
 // Definition of expected results
 const customIconButtonImg = "custom-button-icon";
@@ -23,7 +23,7 @@ describe("CustomIconButton", () => {
 
 	// Test if it correctly renders the icon
 	test("renders with correct icon", () => {
-		render(<CustomIconButton src={customIconButtonImg} />);
+		render(<IconButton src={customIconButtonImg} />);
 
 		const icon = screen.getByAltText(
 			customIconButtonImgAltAttr
@@ -40,7 +40,7 @@ describe("CustomIconButton", () => {
 	// when clicked
 	test("calls onClick handler when clicked", () => {
 		render(
-			<CustomIconButton
+			<IconButton
 				src={customIconButtonImg}
 				onClick={customIconButtonClickHandler}
 			/>

@@ -1,6 +1,6 @@
 /* Home — Home Layout */
 .home-layout {
 	height: var(--vh-full);
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 	background: var(--color-transparent);
 }

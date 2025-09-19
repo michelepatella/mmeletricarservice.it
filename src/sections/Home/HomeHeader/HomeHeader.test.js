@@ -13,7 +13,7 @@ const customIconButtonTestId = "custom-button";
 
 // Mock CustomIconButton
 jest.mock(
-	"../../../components/CustomIconButton/CustomIconButton",
+	"../../../components/IconButton/IconButton",
 	() => {
 		return {
 			__esModule: true,

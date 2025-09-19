@@ -6,11 +6,11 @@
 
 	/* — Shadow — */
 	--shadow-none: none;
-	--shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
-	--shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.15);
-	--shadow-large: 0 8px 20px rgba(0, 0, 0, 0.2);
-	--shadow-xlarge: 10px 15px 30px rgba(0, 0, 0, 0.4);
-	--shadow-xxlarge: 10px 50px 50px rgba(0, 0, 0, 0.8);
+	--shadow-xsmall: 0 2px 4px rgba(0, 0, 0, 0.1);
+	--shadow-small: 0 4px 10px rgba(0, 0, 0, 0.15);
+	--shadow-medium: 0 8px 20px rgba(0, 0, 0, 0.2);
+	--shadow-large: 10px 15px 30px rgba(0, 0, 0, 0.4);
+	--shadow-xlarge: 10px 50px 50px rgba(0, 0, 0, 0.8);
 
 	/* — Z-Index — */
 	--z-index-low: 1000;

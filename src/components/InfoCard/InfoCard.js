@@ -6,7 +6,10 @@ import {
 	INFO_CARD_ICON_CLASS_NAME,
 } from "./const";
 import { CUSTOM_TEXT_TYPES } from "../../utils/const";
-import { getInfoCardDescriptionStyle } from "./styleHandler";
+import {
+	getInfoCardDescriptionStyle,
+	getInfoCardTitleStyle,
+} from "./styleHandler";
 import CustomText from "../CustomText/CustomText";
 
 /**
@@ -37,6 +40,7 @@ function InfoCard(props) {
 					<CustomText
 						type={CUSTOM_TEXT_TYPES.SUBHEADING}
 						text={props.title}
+						style={getInfoCardTitleStyle()}
 						disableAnimation
 					/>
 				</Flex>

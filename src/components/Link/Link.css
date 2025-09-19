@@ -1,5 +1,5 @@
-/* Custom Link */
-.custom-link {
+/* Link */
+.link {
 	color: var(--color-white);
 	font-weight: var(--font-weight-bold);
 	text-decoration: var(--font-decoration-none);
