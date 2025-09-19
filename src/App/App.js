@@ -55,7 +55,7 @@ import "../design-tokens/elevations.css";
 import "../design-tokens/borders.css";
 import "../design-tokens/background.css";
 import "../design-tokens/animations.css";
-import "../design-tokens/layout/images.css";
+import "../design-tokens/images.css";
 import "../design-tokens/layout/size.css";
 import "../design-tokens/layout/position.css";
 import "../design-tokens/layout/spacing.css";
