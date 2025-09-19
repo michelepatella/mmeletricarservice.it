@@ -67,3 +67,7 @@ export default async function middleware(request) {
 		return;
 	}
 }
+
+export const config = {
+	matcher: ["/used-cars:id(\\d+)"],
+};
