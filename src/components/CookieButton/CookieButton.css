@@ -6,8 +6,8 @@
 
 /* Cookie Button */
 .cookie-button {
-	width: var(--float-button-dimension);
-	height: var(--float-button-dimension);
+	width: var(--float-button-size);
+	height: var(--float-button-size);
 	bottom: var(--float-button-margin);
 	right: var(--float-button-margin);
 	position: var(--position-fixed);
@@ -18,7 +18,7 @@
 	background-image: var(--cookie-button-background-image);
 	background-repeat: var(--background-no-repeat);
 	background-position: var(--background-position-center);
-	box-shadow: var(--shadow-large);
+	box-shadow: var(--shadow-medium);
 	transition: var(--animation-duration-short)
 		var(--animation-timing-ease-out);
 }
@@ -39,5 +39,5 @@
 	background-position: var(
 		--background-position-center
 	) !important;
-	box-shadow: var(--shadow-xxlarge);
+	box-shadow: var(--shadow-xlarge);
 }

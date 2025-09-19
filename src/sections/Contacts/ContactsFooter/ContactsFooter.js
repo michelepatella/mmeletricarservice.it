@@ -10,7 +10,7 @@ import {
 	PRIVACY_POLICY_LINK,
 	PRIVACY_POLICY_TEXT,
 } from "../../../utils/const";
-import CustomLink from "../../../components/CustomLink/CustomLink";
+import Link from "../../../components/Link/Link";
 
 /**
  * This component represents the footer
@@ -27,19 +27,19 @@ function ContactsFooter() {
 			{CONTACTS_FOOTER_TEXT}
 			<br></br>
 			{/* Privacy policy link */}
-			<CustomLink
+			<Link
 				href={PRIVACY_POLICY_LINK}
 				text={PRIVACY_POLICY_TEXT + " | "}
 			/>
 
 			{/* Cookie policy link */}
-			<CustomLink
+			<Link
 				href={COOKIE_POLICY_LINK}
 				text={COOKIE_POLICY_TEXT + " | "}
 			/>
 
 			{/* Legal notes link */}
-			<CustomLink
+			<Link
 				href={LEGAL_NOTES_LINK}
 				text={LEGAL_NOTES_TEXT}
 			/>

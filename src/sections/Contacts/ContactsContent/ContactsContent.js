@@ -11,9 +11,9 @@ import {
 } from "./const";
 import CustomButton from "../../../components/CustomButton/CustomButton";
 import CustomText from "../../../components/CustomText/CustomText";
-import CustomBlockQuote from "../../../components/CustomBlockQuote/CustomBlockQuote";
+import BlockQuote from "../../../components/BlockQuote/BlockQuote";
 import SectionContainer from "../../../components/SectionContainer/SectionContainer";
-import BackgroundContainer from "../../../components/BackgroundContainer/BackgroundContainer";
+import SectionBackground from "../../../components/SectionBackground/SectionBackground";
 
 /**
  * This component represent the content
@@ -24,9 +24,7 @@ import BackgroundContainer from "../../../components/BackgroundContainer/Backgro
  */
 function ContactsContent() {
 	return (
-		<BackgroundContainer
-			image={DOTTED_BACKGROUND_IMAGE_LINK}
-		>
+		<SectionBackground image={DOTTED_BACKGROUND_IMAGE_LINK}>
 			<SectionContainer id={CONTACTS_SECTION_ID}>
 				{/* Contacts section title */}
 				<CustomText
@@ -35,8 +33,8 @@ function ContactsContent() {
 					disableAnimation
 				/>
 
-				{/* Custom block quote to highlight all contact buttons */}
-				<CustomBlockQuote>
+				{/* Block quote to highlight all contact buttons */}
+				<BlockQuote>
 					{/* Contact buttons container (contains all the contact buttons) */}
 					<div
 						className={
@@ -56,9 +54,9 @@ function ContactsContent() {
 							/>
 						))}
 					</div>
-				</CustomBlockQuote>
+				</BlockQuote>
 			</SectionContainer>
-		</BackgroundContainer>
+		</SectionBackground>
 	);
 }
 

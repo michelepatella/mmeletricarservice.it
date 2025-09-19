@@ -8,15 +8,15 @@ export const SERVICES_CONTAINER_CLASS_NAME =
 export const SERVICES_TITLE = [
 	{
 		text: "Prestazioni.",
-		gradient: "var(--gradient-red)",
+		gradient: "var(--color-red-gradient)",
 	},
 	{
 		text: "Sicurezza.",
-		gradient: "var(--gradient-blue)",
+		gradient: "var(--color-blue-gradient)",
 	},
 	{
 		text: "Affidabilità.",
-		gradient: "var(--gradient-green)",
+		gradient: "var(--color-green-gradient)",
 	},
 ];
 export const SERVICES_TITLE_ANIMATION_LETTERS_DELAY = 50;

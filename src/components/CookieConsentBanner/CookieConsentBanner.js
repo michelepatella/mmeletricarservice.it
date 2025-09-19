@@ -13,7 +13,7 @@ import {
 	PRIVACY_POLICY_LINK,
 	PRIVACY_POLICY_TEXT,
 } from "../../utils/const";
-import CustomLink from "../CustomLink/CustomLink";
+import Link from "../Link/Link";
 
 /**
  * This component represents the cookie
@@ -52,7 +52,7 @@ function CookieConsentBanner(props) {
 					{COOKIE_CONSENT_BANNER_DESCRIPTION}
 
 					{/* Link to the privacy policy */}
-					<CustomLink
+					<Link
 						href={PRIVACY_POLICY_LINK}
 						text={PRIVACY_POLICY_TEXT}
 					/>
@@ -60,7 +60,7 @@ function CookieConsentBanner(props) {
 					{" e "}
 
 					{/* Link to the cookie policy */}
-					<CustomLink
+					<Link
 						href={COOKIE_POLICY_LINK}
 						text={COOKIE_POLICY_TEXT}
 					/>

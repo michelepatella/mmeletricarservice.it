@@ -9,31 +9,39 @@
 	--color-transparent: transparent;
 
 	/* — Gradient — */
-	--gradient-accent: linear-gradient(
+	--color-accent-gradient: linear-gradient(
 		90deg,
 		#fff200,
 		#ffd700,
 		#ffbf00,
 		#ffa500
 	);
-	--gradient-red: linear-gradient(90deg, #ff3737, #ff8e53);
-	--gradient-blue: linear-gradient(90deg, #2a8eff, #7cdfff);
-	--gradient-green: linear-gradient(
+	--color-red-gradient: linear-gradient(
+		90deg,
+		#ff3737,
+		#ff8e53
+	);
+	--color-blue-gradient: linear-gradient(
+		90deg,
+		#2a8eff,
+		#7cdfff
+	);
+	--color-green-gradient: linear-gradient(
 		90deg,
 		#2ba35f,
 		#7dffcc
 	);
-	--gradient-dark-top: linear-gradient(
+	--color-dark-gradient-top: linear-gradient(
 		to top,
 		rgba(20, 20, 20, 0) 50%,
 		rgba(20, 20, 20, 1) 100%
 	);
-	--gradient-dark-bottom: linear-gradient(
+	--color-dark-gradient-bottom: linear-gradient(
 		to bottom,
 		rgba(20, 20, 20, 0) 50%,
 		rgba(20, 20, 20, 1) 100%
 	);
-	--gradient-dark-left: linear-gradient(
+	--color-dark-gradient-left: linear-gradient(
 		to left,
 		rgba(20, 20, 20, 0) 50%,
 		rgba(20, 20, 20, 1) 100%

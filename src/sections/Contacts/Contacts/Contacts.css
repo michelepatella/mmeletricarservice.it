@@ -4,6 +4,6 @@
 	flex-direction: var(--flex-direction-column);
 	gap: var(--gap-xxlarge);
 	position: var(--position-relative);
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 	background-color: var(--color-background);
 }
