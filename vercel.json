@@ -27,5 +27,8 @@
 				}
 			]
 		}
-	]
+	],
+	"middleware": {
+		"matcher": ["/used-cars:id(\\d+)"]
+	}
 }
