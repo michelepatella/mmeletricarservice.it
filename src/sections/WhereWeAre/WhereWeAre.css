@@ -33,15 +33,3 @@
 			var(--where-we-are-google-maps-iframe-filter-rotation)
 		);
 }
-
-.google-maps-iframe:hover {
-	width: var(--margin-large);
-	height: var(--margin-large);
-	border: var(--border-none);
-	filter: invert(
-			var(--where-we-are-google-maps-iframe-filter-perc)
-		)
-		hue-rotate(
-			var(--where-we-are-google-maps-iframe-filter-rotation)
-		);
-}
