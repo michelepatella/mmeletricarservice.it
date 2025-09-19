@@ -22,10 +22,10 @@ import {
 	getUsedCarsCustomLoadingOutlineStyle,
 } from "./styleHandler";
 import SectionContainer from "../../../components/SectionContainer/SectionContainer";
-import BackgroundContainer from "../../../components/BackgroundContainer/BackgroundContainer";
+import SectionBackground from "../../../components/SectionBackground/SectionBackground";
 import UsedCarCard from "../UsedCarCard/UsedCarCard";
 import CustomText from "../../../components/CustomText/CustomText";
-import CustomLoadingOutlined from "../../../components/CustomLoadingOutlined/CustomLoadingOutlined";
+import LoadingOutlined from "../../../components/LoadingOutlined/LoadingOutlined";
 
 /**
  * This component represents the Used car section.
@@ -48,9 +48,7 @@ function UsedCars() {
 	useUsedCarsScroll(sectionContainerRef, container);
 
 	return (
-		<BackgroundContainer
-			image={DOTTED_BACKGROUND_IMAGE_LINK}
-		>
+		<SectionBackground image={DOTTED_BACKGROUND_IMAGE_LINK}>
 			<SectionContainer
 				id={USED_CARS_SECTION_ID}
 				ref={sectionContainerRef}
@@ -65,9 +63,16 @@ function UsedCars() {
 				{/* Used cars loading icon (to show while
 				data is loading) */}
 				{isLoading && (
-					<CustomLoadingOutlined
-						custStyle={getUsedCarsCustomLoadingOutlineStyle()}
-					/>
+					<>
+						<LoadingOutlined
+							custStyle={getUsedCarsCustomLoadingOutlineStyle()}
+						/>
+						<br></br>
+						<br></br>
+						<br></br>
+						<br></br>
+						<br></br>
+					</>
 				)}
 
 				{/* Used cars available */}
@@ -126,7 +131,7 @@ function UsedCars() {
 						</div>
 					)}
 			</SectionContainer>
-		</BackgroundContainer>
+		</SectionBackground>
 	);
 }
 

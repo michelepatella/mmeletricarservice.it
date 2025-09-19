@@ -11,7 +11,7 @@ import {
 	DOTTED_BACKGROUND_IMAGE_LINK,
 	OUR_VALUES_SECTION_ID,
 } from "../../utils/const";
-import BackgroundContainer from "../../components/BackgroundContainer/BackgroundContainer";
+import SectionBackground from "../../components/SectionBackground/SectionBackground";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import CustomText from "../../components/CustomText/CustomText";
 
@@ -23,9 +23,7 @@ import CustomText from "../../components/CustomText/CustomText";
  */
 function OurValues() {
 	return (
-		<BackgroundContainer
-			image={DOTTED_BACKGROUND_IMAGE_LINK}
-		>
+		<SectionBackground image={DOTTED_BACKGROUND_IMAGE_LINK}>
 			<SectionContainer id={OUR_VALUES_SECTION_ID}>
 				{/* Our values section title */}
 				<CustomText
@@ -61,7 +59,7 @@ function OurValues() {
 					}))}
 				/>
 			</SectionContainer>
-		</BackgroundContainer>
+		</SectionBackground>
 	);
 }
 

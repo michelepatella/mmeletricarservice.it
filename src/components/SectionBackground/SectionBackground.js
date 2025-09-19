@@ -1,5 +1,5 @@
-import { BACKGROUND_CONTAINER_TEST_ID } from "./const";
-import { getBackgroundContainerStyle } from "./styleHandler";
+import { SECTION_BACKGROUND_TEST_ID } from "./const";
+import { getSectionBackgroundStyle } from "./styleHandler";
 
 /**
  * This component defines the background container of a section.
@@ -10,21 +10,17 @@ import { getBackgroundContainerStyle } from "./styleHandler";
  * @returns {JSX.Element}
  * @constructor
  */
-function BackgroundContainer({
-	image,
-	children,
-	custStyle,
-}) {
+function SectionBackground({ image, children, custStyle }) {
 	// Combine predefined and customized styles
 	// to get the final background container style
 	const style = {
-		...getBackgroundContainerStyle(image),
+		...getSectionBackgroundStyle(image),
 		...custStyle,
 	};
 
 	return (
 		<div
-			data-testid={BACKGROUND_CONTAINER_TEST_ID}
+			data-testid={SECTION_BACKGROUND_TEST_ID}
 			style={style}
 		>
 			{children}
@@ -32,4 +28,4 @@ function BackgroundContainer({
 	);
 }
 
-export default BackgroundContainer;
+export default SectionBackground;

@@ -10,8 +10,8 @@
 
 	/* Menu Small Screen — Hamburger Button */
 	.hamburger-button {
-		height: var(--float-button-dimension) !important;
-		width: var(--float-button-dimension) !important;
+		height: var(--float-button-size) !important;
+		width: var(--float-button-size) !important;
 		position: var(--position-fixed);
 		justify-content: var(
 			--justify-content-center
@@ -22,7 +22,7 @@
 		color: var(--color-white) !important;
 		background-color: var(--color-transparent) !important;
 		border: var(--border-none) !important;
-		box-shadow: var(--shadow-small);
+		box-shadow: var(--shadow-xsmall);
 		backdrop-filter: blur(var(--blur-default));
 		z-index: var(--z-index-low) !important;
 	}
@@ -63,7 +63,7 @@
 
 	.ant-menu-item {
 		margin-bottom: var(--margin-medium) !important;
-		font-family: var(--font-family);
+		font-family: var(--font-family-default);
 		color: var(--color-white) !important;
 		opacity: var(--opacity-high);
 	}

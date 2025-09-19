@@ -20,9 +20,9 @@ import {
 	getGoogleMapsUnavailableDescriptionStyle,
 } from "./styleHandler";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
-import BackgroundContainer from "../../components/BackgroundContainer/BackgroundContainer";
+import SectionBackground from "../../components/SectionBackground/SectionBackground";
 import CustomText from "../../components/CustomText/CustomText";
-import CustomBlockQuote from "../../components/CustomBlockQuote/CustomBlockQuote";
+import BlockQuote from "../../components/BlockQuote/BlockQuote";
 
 /**
  * This component represents the Where we are section.
@@ -34,9 +34,7 @@ import CustomBlockQuote from "../../components/CustomBlockQuote/CustomBlockQuote
  */
 function WhereWeAre(props) {
 	return (
-		<BackgroundContainer
-			image={DOTTED_BACKGROUND_IMAGE_LINK}
-		>
+		<SectionBackground image={DOTTED_BACKGROUND_IMAGE_LINK}>
 			<SectionContainer id={WHERE_WE_ARE_SECTION_ID}>
 				{/* Where we are section title */}
 				<CustomText
@@ -47,12 +45,12 @@ function WhereWeAre(props) {
 
 				{/* Location of the company highlighted by a
 				block quote */}
-				<CustomBlockQuote>
+				<BlockQuote>
 					<CustomText
 						type={CUSTOM_TEXT_TYPES.BODY}
 						text={SITE}
 					/>
-				</CustomBlockQuote>
+				</BlockQuote>
 
 				{/* Working hours of the company title */}
 				<CustomText
@@ -63,12 +61,12 @@ function WhereWeAre(props) {
 
 				{/* Working hours of the company highlighted by a
 				block quote */}
-				<CustomBlockQuote>
+				<BlockQuote>
 					<CustomText
 						type={CUSTOM_TEXT_TYPES.BODY}
 						text={WHERE_WE_ARE_WORKING_HOURS_DESCRIPTION}
 					/>
-				</CustomBlockQuote>
+				</BlockQuote>
 
 				{/* Google Maps (shown only in case of cookie accepting) */}
 				{props.cookiesAccepted ? (
@@ -108,7 +106,7 @@ function WhereWeAre(props) {
 					</div>
 				)}
 			</SectionContainer>
-		</BackgroundContainer>
+		</SectionBackground>
 	);
 }
 

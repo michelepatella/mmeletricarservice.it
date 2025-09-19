@@ -1,8 +1,3 @@
-/* Variables */
-:root {
-	--custom-loading-outlined-margin-top: 30vh;
-}
-
 /* Used Car Drawer — Animation */
 @keyframes usedCarDrawerSlideRight {
 	from {
@@ -20,7 +15,7 @@
 /* Used Car Drawer */
 .used-car-drawer,
 .ant-drawer-header {
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 	background: var(--color-background) !important;
 }
 
@@ -44,7 +39,7 @@
 
 /* Used Car Drawer — Flex Horizontal */
 .used-car-drawer-flex-horizontal {
-	height: var(--size-full) !important;
+	height: var(--full-size) !important;
 }
 
 /* ------ Responsive Layout ------ */
@@ -60,14 +55,14 @@
 		border-radius: var(--border-radius-default);
 		padding: var(--padding-medium);
 		background-color: var(--color-transparent);
-		box-shadow: var(--shadow-xlarge);
+		box-shadow: var(--shadow-large);
 	}
 
 	.ant-drawer-header {
 		padding-left: var(--padding-xxlarge) !important;
 		padding-top: var(--padding-medium) !important;
 		padding-bottom: var(--padding-large) !important;
-		box-shadow: var(--shadow-large);
+		box-shadow: var(--shadow-medium);
 	}
 }
 
@@ -83,7 +78,7 @@
 		padding-left: var(--padding-xlarge) !important;
 		padding-bottom: var(--padding-medium) !important;
 		padding-top: var(--padding-xsmall) !important;
-		box-shadow: var(--shadow-large);
+		box-shadow: var(--shadow-medium);
 	}
 }
 
@@ -98,14 +93,14 @@
 		border-radius: var(--border-radius-default);
 		padding: var(--padding-medium);
 		background-color: var(--color-transparent);
-		box-shadow: var(--shadow-xlarge);
+		box-shadow: var(--shadow-large);
 	}
 
 	.ant-drawer-header {
 		padding-left: var(--padding-xlarge) !important;
 		padding-bottom: var(--padding-medium) !important;
 		padding-top: var(--padding-xsmall) !important;
-		box-shadow: var(--shadow-large);
+		box-shadow: var(--shadow-medium);
 	}
 }
 
@@ -121,7 +116,7 @@
 		padding-left: var(--padding-xlarge) !important;
 		padding-bottom: var(--padding-medium) !important;
 		padding-top: var(--padding-xsmall) !important;
-		box-shadow: var(--shadow-large);
+		box-shadow: var(--shadow-medium);
 	}
 }
 
@@ -137,6 +132,6 @@
 		padding-left: var(--padding-xlarge) !important;
 		padding-bottom: var(--padding-medium) !important;
 		padding-top: var(--padding-xsmall) !important;
-		box-shadow: var(--shadow-large);
+		box-shadow: var(--shadow-medium);
 	}
 }

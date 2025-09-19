@@ -12,8 +12,8 @@ import { onUsedCarDrawerClose } from "../../handler";
 import { getUsedCarDrawerCustomLoadingOutlinedStyle } from "./styleHandler";
 import UsedCarDrawerCarousel from "../UsedCarDrawerCarousel/UsedCarDrawerCarousel";
 import UsedCarDrawerInfoPanel from "../UsedCarDrawerInfoPanel/UsedCarDrawerInfoPanel";
-import CustomBackButton from "../../../../components/CustomBackButton/CustomBackButton";
-import CustomLoadingOutlined from "../../../../components/CustomLoadingOutlined/CustomLoadingOutlined";
+import BackButton from "../../../../components/BackButton/BackButton";
+import LoadingOutlined from "../../../../components/LoadingOutlined/LoadingOutlined";
 
 /**
  * This component represents the used car drawer,
@@ -43,7 +43,7 @@ function UsedCarDrawer({
 			{/* Drawer */}
 			<Drawer
 				className={USED_CAR_DRAWER_CLASS_NAME}
-				closeIcon={<CustomBackButton />}
+				closeIcon={<BackButton />}
 				onClose={() =>
 					onUsedCarDrawerClose(setIsDrawerOpen)
 				}
@@ -51,7 +51,7 @@ function UsedCarDrawer({
 			>
 				{isLoading ? (
 					// Show the loading outlined until data is being loaded
-					<CustomLoadingOutlined
+					<LoadingOutlined
 						custStyle={getUsedCarDrawerCustomLoadingOutlinedStyle()}
 					/>
 				) : (

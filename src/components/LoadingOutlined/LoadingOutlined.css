@@ -1,5 +1,5 @@
-/* Custom Loading Outlined — Animation */
-@keyframes customLoadingOutlinedSpin {
+/* Loading Outlined — Animation */
+@keyframes loadingOutlinedSpin {
 	0% {
 		transform: rotate(var(--animation-rotate-start));
 	}
@@ -8,10 +8,10 @@
 	}
 }
 
-/* Custom Loading Outlined */
-.custom-loading-outlined {
-	width: var(--icon-medium);
-	height: var(--icon-medium);
+/* Loading Outlined */
+.loading-outlined {
+	width: var(--image-size-large);
+	height: var(--image-size-large);
 	position: var(--position-absolute);
 	left: var(--position-center);
 	transform: translate(
@@ -20,16 +20,16 @@
 	);
 }
 
-/* Custom Loading Outlined — Circle */
-.custom-loading-outlined-circle {
-	animation: customLoadingOutlinedSpin
+/* Loading Outlined — Circle */
+.loading-outlined-circle {
+	animation: loadingOutlinedSpin
 		var(--animation-duration-long)
 		var(--animation-timing-linear)
 		var(--animation-iteration-infinite);
 }
 
-/* Custom Loading Outlined — Logo */
-.custom-loading-outlined-logo {
+/* Loading Outlined — Logo */
+.loading-outlined-logo {
 	position: var(--position-absolute);
 	top: var(--position-center);
 	left: var(--position-center);

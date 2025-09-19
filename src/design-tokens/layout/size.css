@@ -1,0 +1,26 @@
+/* -------- Size -------- */
+:root {
+	/* — Size — */
+	--zero-size: 0%;
+	--size-small: 5%;
+	--size-medium: 15%;
+	--size-large: 92%;
+	--full-size: 100%;
+
+	/* — Height — */
+	--vh-xxsmall: 10vh;
+	--vh-xsmall: 20vh;
+	--vh-small: 30vh;
+	--vh-medium: 50vh;
+	--vh-large: 60vh;
+	--vh-xlarge: 80vh;
+	--vh-full: 100vh;
+
+	/* — Width — */
+	--vw-small: 8vw;
+	--vw-full: 100vw;
+	--card-width: 250px;
+
+	/* — Shrink — */
+	--zero-shrink: 0;
+}

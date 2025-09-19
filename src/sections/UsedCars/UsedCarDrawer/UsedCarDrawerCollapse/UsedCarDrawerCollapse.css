@@ -1,8 +1,3 @@
-/* Variables */
-:root {
-	--used-car-drawer-collapse-header-margin: 10px 0 10px 0;
-}
-
 /* Used Car Drawer Collapse */
 .used-car-drawer-collapse {
 	margin-top: var(--margin-xlarge);
@@ -17,14 +12,15 @@
 
 /* Used Car Drawer Collapse — Header */
 .ant-collapse-header {
-	margin: var(--used-car-drawer-collapse-header-margin);
+	margin: var(--margin-small) var(--zero-margin)
+		var(--margin-small) var(--zero-margin);
 	border: var(--border-none) !important;
 	padding-left: var(--zero-padding) !important;
 }
 
 /* Used Car Drawer Collapse — Header Text */
 .ant-collapse-header-text {
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 	font-size: var(--font-size-body);
 	font-weight: var(--font-weight-bold);
 	color: var(--color-white) !important;
@@ -34,7 +30,7 @@
 .ant-collapse-content-box,
 .ant-collapse-content {
 	color: var(--color-white);
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 	border: var(--border-none) !important;
 	border-left: var(--border-width-small)
 		var(--border-style-solid) var(--color-white) !important;

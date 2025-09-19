@@ -1,0 +1,27 @@
+/* -------- Spacing -------- */
+:root {
+	/* — Padding — */
+	--zero-padding: 0;
+	--padding-xsmall: 5px;
+	--padding-small: 10px;
+	--padding-medium: 20px;
+	--padding-large: 30px;
+	--padding-xlarge: 50px;
+	--padding-xxlarge: 60px;
+
+	/* — Gap — */
+	--zero-gap: 0;
+	--gap-xsmall: 5px;
+	--gap-small: 15px;
+	--gap-medium: 30px;
+	--gap-large: 50px;
+	--gap-xlarge: 80px;
+	--gap-xxlarge: 200px;
+
+	/* — Margin — */
+	--zero-margin: 0;
+	--margin-small: 10px;
+	--margin-medium: 30px;
+	--margin-large: 50px;
+	--margin-xlarge: 80px;
+}

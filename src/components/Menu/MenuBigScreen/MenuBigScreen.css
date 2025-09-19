@@ -1,10 +1,24 @@
-/* Variables */
-:root {
-	/* — Layout — */
-	--menu-big-screen-width: 170px;
+/* ------ Responsive Layout ------ */
+
+/* Big screen */
+@media (min-width: 1025px) {
+	.menu-container-big {
+		width: calc(
+			var(--section-container-margin-left-big) -
+				var(--padding-xlarge)
+		);
+	}
 }
 
-/* ------ Responsive Layout ------ */
+/* Medium Screen */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.menu-container-big {
+		width: calc(
+			var(--section-container-margin-left-medium) -
+				var(--padding-large)
+		);
+	}
+}
 
 /* Big screen and Medium Screen */
 @media (min-width: 1025px),
@@ -17,11 +31,10 @@
 	/* Menu Big Screen */
 	.menu-container-big {
 		height: var(--vh-full);
-		width: var(--menu-big-screen-width);
 		display: var(--display-block);
 		position: var(--position-fixed);
 		background-color: var(--color-background);
-		box-shadow: var(--shadow-xlarge);
+		box-shadow: var(--shadow-large);
 		top: var(--zero-position);
 		left: var(--zero-position);
 		z-index: var(--z-index-low);
@@ -30,7 +43,7 @@
 	/* Menu Big Screen — Items */
 	.ant-anchor-link-title {
 		color: var(--color-white) !important;
-		font-family: var(--font-family) !important;
+		font-family: var(--font-family-default) !important;
 		font-size: var(--font-size-body) !important;
 		padding-top: var(--padding-large);
 	}
@@ -42,7 +55,7 @@
 
 	/* Menu Big Screen — Ink */
 	.ant-anchor-ink {
-		width: var(--border-width-big);
+		width: var(--border-width-large);
 		margin-top: var(--margin-small);
 		background-color: var(--color-accent) !important;
 	}

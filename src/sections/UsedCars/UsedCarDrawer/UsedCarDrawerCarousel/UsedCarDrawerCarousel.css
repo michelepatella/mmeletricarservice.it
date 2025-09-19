@@ -1,20 +1,14 @@
-/* Variables */
-:root {
-	--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape: 80vh;
-	--used-car-drawer-carousel-max-height-medium-portrait-small-portrait: 40vh;
-}
-
 /* Used Car Drawer Carousel */
 .carousel-container {
-	max-width: var(--size-full);
+	max-width: var(--full-size);
 	border-radius: var(--border-radius-default) !important;
 }
 
 /* Used Car Drawer Carousel — Image Container */
 .carousel-container .ant-image {
-	width: var(--size-full);
-	height: var(--size-full);
-	max-width: var(--size-full);
+	width: var(--full-size);
+	height: var(--full-size);
+	max-width: var(--full-size);
 	display: var(--display-flex);
 	justify-content: var(--justify-content-center);
 	align-items: var(--align-items-center);
@@ -23,10 +17,10 @@
 
 /* Used Car Drawer Carousel — Image */
 .carousel-container .ant-image-img {
-	width: var(--size-full);
-	height: var(--size-full);
-	max-width: var(--size-full);
-	object-fit: var(--object-fit-cover);
+	width: var(--full-size);
+	height: var(--full-size);
+	max-width: var(--full-size);
+	object-fit: var(--image-object-fit-cover);
 	border-radius: var(--border-radius-default) !important;
 }
 
@@ -41,43 +35,31 @@
 @media (min-width: 1025px) {
 	.carousel-container {
 		width: var(--container-width-large);
-		max-height: var(
-			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
-		);
+		max-height: var(--vh-xlarge);
 	}
 
 	.carousel-container .ant-image {
-		max-height: var(
-			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
-		);
+		max-height: var(--vh-xlarge);
 	}
 
 	.carousel-container .ant-image-img {
-		max-height: var(
-			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
-		);
+		max-height: var(--vh-xlarge);
 	}
 }
 
 /* Medium Screen — Portrait */
 @media (min-width: 768px) and (max-width: 1024px) {
 	.carousel-container {
-		width: var(--size-full);
-		max-height: var(
-			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
-		);
+		width: var(--full-size);
+		max-height: var(--vh-medium);
 	}
 
 	.carousel-container .ant-image {
-		max-height: var(
-			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
-		);
+		max-height: var(--vh-medium);
 	}
 
 	.carousel-container .ant-image-img {
-		max-height: var(
-			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
-		);
+		max-height: var(--vh-medium);
 	}
 }
 
@@ -85,64 +67,46 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 	.carousel-container {
 		width: var(--container-width-medium);
-		max-height: var(
-			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
-		);
+		max-height: var(--vh-xlarge);
 	}
 
 	.carousel-container .ant-image {
-		max-height: var(
-			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
-		);
+		max-height: var(--vh-xlarge);
 	}
 
 	.carousel-container .ant-image-img {
-		max-height: var(
-			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
-		);
+		max-height: var(--vh-xlarge);
 	}
 }
 
 /* Small Screen — Portrait */
 @media (max-width: 767px) {
 	.carousel-container {
-		width: var(--size-full);
-		max-height: var(
-			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
-		);
+		width: var(--full-size);
+		max-height: var(--vh-medium);
 	}
 
 	.carousel-container .ant-image {
-		max-height: var(
-			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
-		);
+		max-height: var(--vh-medium);
 	}
 
 	.carousel-container .ant-image-img {
-		max-height: var(
-			--used-car-drawer-carousel-max-height-medium-portrait-small-portrait
-		);
+		max-height: var(--vh-medium);
 	}
 }
 
 /* Small Screen — Landscape */
 @media (max-width: 767px) and (orientation: landscape) {
 	.carousel-container {
-		width: var(--size-full);
-		max-height: var(
-			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
-		);
+		width: var(--full-size);
+		max-height: var(--vh-xlarge);
 	}
 
 	.carousel-container .ant-image {
-		max-height: var(
-			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
-		);
+		max-height: var(--vh-xlarge);
 	}
 
 	.carousel-container .ant-image-img {
-		max-height: var(
-			--used-car-drawer-carousel-max-height-big-medium-landscape-small-landscape
-		);
+		max-height: var(--vh-xlarge);
 	}
 }

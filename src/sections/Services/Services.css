@@ -1,12 +1,12 @@
 /* Variables */
 :root {
-	--services-title-min-height-multiplier: 4.7;
 	--services-title-webkit-background-clip: text;
 }
 
 /* Services */
 .services-container {
 	width: var(--section-container-max-width);
+	margin-top: var(--margin-large);
 	display: var(--display-flex);
 	flex-direction: var(--flex-direction-row);
 	gap: var(--gap-large);

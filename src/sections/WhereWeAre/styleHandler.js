@@ -10,14 +10,13 @@ import { MAP_ICON_LINK } from "./const";
  */
 export const getGoogleMapsContainerStyle = () => {
 	return {
-		height:
-			"var(--where-we-are-google-maps-unavailable-container-height)",
+		height: "var(--full-size)",
 		background: "url(" + MAP_ICON_LINK + ")",
 		backgroundRepeat: "var(--background-no-repeat)",
 		backgroundPosition:
 			"var(--background-position-center-top)",
-		backgroundSize:
-			"var(--where-we-are-google-maps-unavailable-background-size)",
+		backgroundSize: "var(--vw-small)",
+		boxShadow: "var(--shadow-none)",
 		opacity: "var(--opacity-low)",
 	};
 };
@@ -37,6 +36,6 @@ export const getGoogleMapsUnavailableDescriptionStyle =
 		return {
 			textAlign: "var(--font-alignment-center)",
 			margin:
-				"var(--where-we-are-google-maps-unavailable-description-margin)",
+				"var(--size-medium) var(--size-small) var(--zero-size) var(--size-small)",
 		};
 	};

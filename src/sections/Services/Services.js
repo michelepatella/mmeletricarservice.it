@@ -17,7 +17,7 @@ import {
 	getServicesTitleSpanStyle,
 	getServicesTitleStyle,
 } from "./styleHandler";
-import BackgroundContainer from "../../components/BackgroundContainer/BackgroundContainer";
+import SectionBackground from "../../components/SectionBackground/SectionBackground";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import InfoCard from "../../components/InfoCard/InfoCard";
 import CustomText from "../../components/CustomText/CustomText";
@@ -53,7 +53,7 @@ function Services() {
 	);
 
 	return (
-		<BackgroundContainer
+		<SectionBackground
 			image={SERVICES_BACKGROUND_IMAGE_LINK}
 		>
 			<SectionContainer id={SERVICES_SECTION_ID}>
@@ -76,7 +76,9 @@ function Services() {
 								);
 							}).join("")
 						}
-						style={getServicesTitleStyle()}
+						style={getServicesTitleStyle(
+							SERVICES_TITLE.length
+						)}
 					/>
 				</div>
 
@@ -99,7 +101,7 @@ function Services() {
 					))}
 				</div>
 			</SectionContainer>
-		</BackgroundContainer>
+		</SectionBackground>
 	);
 }
 

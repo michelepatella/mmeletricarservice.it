@@ -1,13 +1,16 @@
 /**
  * Method to get the style of services section title.
+ * @param numTitles
  * @returns {{minHeight: string, flexDirection: string, display: string}}
  */
-export const getServicesTitleStyle = () => {
+export const getServicesTitleStyle = (numTitles) => {
 	return {
 		display: "var(--display-flex)",
 		flexDirection: "var(--flex-direction-column)",
 		minHeight:
-			"calc(var(--services-title-min-height-multiplier) * var(--font-size-super-heading))",
+			"calc(var(--font-super-heading-line-height) * " +
+			numTitles +
+			" * var(--font-size-super-heading))",
 	};
 };
 

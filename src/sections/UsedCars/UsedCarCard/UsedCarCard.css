@@ -1,20 +1,15 @@
-/* Variables */
-:root {
-	--used-car-card-padding: 15px 15px 0 15px;
-	--used-car-card-scroll-snap-align: center;
-}
-
 /* Used Cars Card */
 .used-car-card {
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 	width: var(--card-width);
-	padding: var(--used-car-card-padding);
+	padding: var(--padding-small) var(--padding-small)
+		var(--padding-xsmall) var(--padding-small);
 	background: var(--color-background);
 	border: var(--border-none);
 	border-radius: var(--border-radius-default);
-	box-shadow: var(--shadow-xlarge);
+	box-shadow: var(--shadow-large);
 	flex-shrink: var(--zero-shrink);
-	scroll-snap-align: var(--used-car-card-scroll-snap-align);
+	scroll-snap-align: var(--scroll-snap-align-default);
 	cursor: var(--cursor-pointer);
 	transition: var(--animation-duration-short)
 		var(--animation-timing-ease-out);
@@ -22,7 +17,7 @@
 
 /* Used Cars Card — Image Container */
 .used-car-card-image-container {
-	width: var(--size-full);
+	width: var(--full-size);
 	display: var(--display-flex);
 	justify-content: var(--justify-content-center);
 	align-items: var(--align-items-center);
@@ -31,9 +26,9 @@
 
 /* Used Cars Card — Image */
 .used-car-card-image-container img {
-	max-width: var(--size-full);
-	height: var(--size-full);
-	object-fit: var(--object-fit-cover);
+	max-width: var(--full-size);
+	height: var(--full-size);
+	object-fit: var(--image-object-fit-cover);
 	border-radius: var(--border-radius-default);
 }
 
@@ -46,7 +41,7 @@
 
 /* Used Cars Card — Price Container */
 .used-car-card-price-container {
-	width: var(--size-full);
+	width: var(--full-size);
 	display: var(--display-flex);
 	justify-content: var(--justify-content-end);
 }
@@ -56,7 +51,7 @@
 /* Big screen */
 @media (min-width: 1025px) {
 	.used-car-card:hover {
-		box-shadow: var(--shadow-xxlarge);
+		box-shadow: var(--shadow-xlarge);
 		transform: scale(var(--scale-small));
 	}
 }

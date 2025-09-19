@@ -1,12 +1,6 @@
-/* Variables */
-:root {
-	--our-values-steps-title-margin-top-multiplier-big: -1.5;
-	--our-values-steps-title-margin-top-multiplier-small: -1.2;
-}
-
 /* Our Values — Steps */
 .our-values-steps {
-	font-family: var(--font-family);
+	font-family: var(--font-family-default);
 }
 
 .ant-steps-item-icon,
@@ -15,50 +9,11 @@
 	background-color: var(--color-accent) !important;
 }
 
+.custom-heading.in-view {
+	margin: var(--zero-margin) !important;
+}
+
 .ant-steps-item-description,
 .ant-steps-item-description.in-view {
 	margin-bottom: var(--margin-large);
-}
-
-/* ------ Responsive Layout ------ */
-
-/* Big Screen */
-@media (min-width: 1025px) {
-	.ant-steps-item-title,
-	.ant-steps-item-title.in-view {
-		margin-top: calc(
-			var(--font-size-subheading) *
-				var(
-					--our-values-steps-title-margin-top-multiplier-big
-				)
-		) !important;
-	}
-}
-
-/* Medium Screen */
-@media (min-width: 768px) and (max-width: 1024px) {
-	/* Our Values — Steps (Title) */
-	.ant-steps-item-title,
-	.ant-steps-item-title.in-view {
-		margin-top: calc(
-			var(--font-size-subheading) *
-				var(
-					--our-values-steps-title-margin-top-multiplier-big
-				)
-		) !important;
-	}
-}
-
-/* Small Screen */
-@media (max-width: 767px) {
-	/* Our Values — Steps (Title) */
-	.ant-steps-item-title,
-	.ant-steps-item-title.in-view {
-		margin-top: calc(
-			var(--font-size-subheading) *
-				var(
-					--our-values-steps-title-margin-top-multiplier-small
-				)
-		) !important;
-	}
 }

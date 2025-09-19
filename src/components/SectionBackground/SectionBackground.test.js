@@ -1,8 +1,8 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import BackgroundContainer from "./BackgroundContainer";
-import { getBackgroundContainerStyle } from "./styleHandler";
+import SectionBackground from "./SectionBackground";
+import { getSectionBackgroundStyle } from "./styleHandler";
 
 // Mock IntersectionObserver
 beforeAll(() => {
@@ -22,7 +22,7 @@ const childrenContent = <div>Children Content</div>;
 const imageUrl = "image-url";
 const custStyle = { color: "red" };
 const combinedStyle = {
-	...getBackgroundContainerStyle(imageUrl),
+	...getSectionBackgroundStyle(imageUrl),
 	...custStyle,
 };
 
@@ -41,7 +41,7 @@ describe("BackgroundContainer", () => {
 	// the children
 	test("renders children correctly", () => {
 		render(
-			<BackgroundContainer children={childrenContent} />
+			<SectionBackground children={childrenContent} />
 		);
 
 		expect(
@@ -52,7 +52,7 @@ describe("BackgroundContainer", () => {
 	// Test if it correctly applies combined style
 	test("applies combined style correctly", () => {
 		render(
-			<BackgroundContainer
+			<SectionBackground
 				image={imageUrl}
 				custStyle={custStyle}
 			/>

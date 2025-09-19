@@ -1,0 +1,16 @@
+/* -------- Scroll -------- */
+:root {
+	/* — Overflow — */
+	--overflow-hidden: hidden;
+	--overflow-auto: auto;
+
+	/* — Scrollbar — */
+	--scrollbar-width-default: none;
+
+	/* — Behavior — */
+	--scroll-behavior-default: smooth;
+
+	/* — Scroll Snap — */
+	--scroll-snap-align-default: center;
+	--scroll-snap-type-default: x mandatory;
+}
