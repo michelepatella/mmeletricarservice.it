@@ -2,7 +2,10 @@
  * Middleware defined to catch bot requests to used car
  * pages and return a custom HTML containing overview information
  * about that car, instead of index.html.
- * @param request
+ * @param request — The request caught.
+ * @returns {Response|void} — Returns a Response containing
+ * HTML if the request comes from a bot; otherwise, returns
+ * nothing to allow the normal request flow.
  */
 export default async function middleware(request) {
 	// Get the URL
