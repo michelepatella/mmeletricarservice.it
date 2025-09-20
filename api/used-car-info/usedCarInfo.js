@@ -1,8 +1,11 @@
-import { getEnginePerformanceData } from "./getters/getEnginePerformanceData.js";
-import { getEmissionsConsumptionData } from "./getters/getEmissionsConsumptionsData.js";
-import { getExteriorData } from "./getters/getExteriorData.js";
-import { getComfortInteriorData } from "./getters/getComfortInteriorData.js";
-import { getCarImages } from "./getters/getCarImages.js";
+import {
+	COMFORT_AND_INTERIOR_TABLE,
+	EMISSIONS_AND_CONSUMPTION_TABLE,
+	ENGINE_AND_PERFORMANCE_TABlE,
+	EXTERIOR_TABLE,
+} from "./const.js";
+import { getUsedCarImages } from "../utils/usedCarImagesGetter.js";
+import { getUsedCarData } from "../utils/usedCarsDataGetter.js";
 
 /**
  * The following API retrieves all the information and images
@@ -25,22 +28,31 @@ export default async function handler(req, res) {
 		const { id } = req.query;
 
 		// Retrieve engine and performance data
-		const enginePerformance =
-			await getEnginePerformanceData(id);
+		const enginePerformance = await getUsedCarData(
+			ENGINE_AND_PERFORMANCE_TABlE,
+			id
+		);
 
 		// Retrieve emissions and consumptions data
-		const emissionsConsumption =
-			await getEmissionsConsumptionData(id);
+		const emissionsConsumption = await getUsedCarData(
+			EMISSIONS_AND_CONSUMPTION_TABLE,
+			id
+		);
 
 		// Retrieve exterior data
-		const exterior = await getExteriorData(id);
+		const exterior = await getUsedCarData(
+			EXTERIOR_TABLE,
+			id
+		);
 
 		// Retrieve comfort and interior data
-		const comfortInterior =
-			await getComfortInteriorData(id);
+		const comfortInterior = await getUsedCarData(
+			COMFORT_AND_INTERIOR_TABLE,
+			id
+		);
 
-		// Retrieve all the images of the car
-		const imageUrls = await getCarImages(id);
+		// Retrieve all the images of the used car
+		const imageUrls = await getUsedCarImages(id);
 
 		// Collect all the retrieved data together
 		const usedCarInfo = {
@@ -51,7 +63,7 @@ export default async function handler(req, res) {
 			images: imageUrls,
 		};
 
-		// Return all the data about the used car
+		// Return all the used car data
 		res.status(200).json({
 			used_car_info: usedCarInfo,
 		});

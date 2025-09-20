@@ -1,5 +1,10 @@
-import { getUsedCarsOverviewData } from "./getters/getUsedCarsOverviewData.js";
-import { getPresentationUsedCarImage } from "./getters/getPresentationUsedCarImage.js";
+import {
+	NO_USED_CAR_AVAILABLE_MESSAGE,
+	USED_CAR_OVERVIEW_IMAGE_LIMIT,
+	USED_CAR_OVERVIEW_TABLE,
+} from "./const.js";
+import { getUsedCarImages } from "../utils/usedCarImagesGetter.js";
+import { getUsedCarData } from "../utils/usedCarsDataGetter.js";
 
 /**
  * The following API retrieves salient information
@@ -20,13 +25,14 @@ import { getPresentationUsedCarImage } from "./getters/getPresentationUsedCarIma
 export default async function handler(req, res) {
 	try {
 		// Retrieve used cars overview information
-		const usedCarsOverviewInfo =
-			await getUsedCarsOverviewData();
+		const usedCarsOverviewInfo = await getUsedCarData(
+			USED_CAR_OVERVIEW_TABLE
+		);
 
 		// Check if there is at least one car
 		if (!usedCarsOverviewInfo) {
 			return res.status(400).json({
-				error: "No used car available.",
+				error: NO_USED_CAR_AVAILABLE_MESSAGE,
 			});
 		}
 
@@ -35,8 +41,9 @@ export default async function handler(req, res) {
 		const usedCarsOverviewInfoWithImages =
 			await Promise.all(
 				usedCarsOverviewInfo.map(async (car) => {
-					const image = await getPresentationUsedCarImage(
-						car.id
+					const image = await getUsedCarImages(
+						car.id,
+						USED_CAR_OVERVIEW_IMAGE_LIMIT
 					);
 					return {
 						...car,

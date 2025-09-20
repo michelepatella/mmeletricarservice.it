@@ -1,3 +1,9 @@
+/**
+ * Middleware defined to catch bot requests to used car
+ * pages and return a custom HTML containing overview information
+ * about that car, instead of index.html.
+ * @param request
+ */
 export default async function middleware(request) {
 	// Get the URL
 	const url = new URL(request.url);
