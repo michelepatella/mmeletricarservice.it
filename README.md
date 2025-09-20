@@ -479,6 +479,7 @@ To automate code-to-production delivery with reliability and traceability.
 **⚡ Vercel**  
 _Deploys frontend and serverless functions._
 
+- Edge middleware for bot requests and dynamic SEO previews
 - Preview deployments for all branches and pull requests
 - Versioned deployments with easy rollback
 - Static content and serverless functions caching at the edge
