@@ -23,8 +23,7 @@ import {
  * This component represents the Menu for small screens (e.g., smartphone).
  * It leverages a hamburger Menu shown whenever the hamburger button is clicked.
  * The Menu appears to the right
- * @returns {React.JSX.Element}
- * @constructor
+ * @returns {React.JSX.Element} — The menu component for small screen.
  */
 function MenuSmallScreen() {
 	// Prepare hamburger Menu elements

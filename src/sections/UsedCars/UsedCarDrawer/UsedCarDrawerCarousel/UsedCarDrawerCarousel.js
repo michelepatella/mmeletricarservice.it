@@ -11,7 +11,10 @@ import {
  * If no used car image is available, the carousel is filled with
  * an image indicating the user that there is no image available
  * for that car.
- * @constructor
+ * @param props — Object containing:
+ *   - usedCarInfo: { images: string[] } | null — The used
+ *   car data including images to display in the carousel.
+ * @returns {Element} — The used car drawer carousel component.
  */
 function UsedCarDrawerCarousel(props) {
 	return (

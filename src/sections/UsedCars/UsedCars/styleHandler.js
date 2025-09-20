@@ -3,8 +3,8 @@
  * used car's description.
  * @returns {{
  * textAlign: string,
- * opacity: string
- * }}
+ * opacity: number
+ * }} — CSS style.
  */
 export const getUsedCarsUnavailableDescriptionStyle =
 	() => {
@@ -13,11 +13,12 @@ export const getUsedCarsUnavailableDescriptionStyle =
 			opacity: "var(--opacity-low)",
 		};
 	};
+
 /**
  * Method to get the style of the animated division
  * containing the used cars.
- * @param containerStyles
- * @returns {{transform: *, opacity: *}}
+ * @param containerStyles — The style of the container.
+ * @returns {{opacity: *, transform: *}} — CSS style.
  */
 export const getUsedCarsAnimatedDivStyle = (
 	containerStyles
@@ -35,7 +36,7 @@ export const getUsedCarsAnimatedDivStyle = (
 /**
  * Method to get the style of the custom loading
  * outlined displayed into the used cars section.
- * @returns {{marginLeft: string}}
+ * @returns {{marginTop: string}} — CSS style.
  */
 export const getUsedCarsCustomLoadingOutlineStyle = () => {
 	return {

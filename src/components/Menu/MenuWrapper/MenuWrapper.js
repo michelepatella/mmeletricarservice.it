@@ -9,8 +9,7 @@ import MenuBigScreen from "../MenuBigScreen/MenuBigScreen";
  *   in case of big screens (e.g., desktop).
  * - Menu small screen: it is a hamburger Menu, shown
  *   in case of small screens (e.g., smartphone).
- * @returns {JSX.Element}
- * @constructor
+ * @returns {JSX.Element} — The menu wrapper component.
  */
 function MenuWrapper() {
 	return (

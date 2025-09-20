@@ -6,9 +6,10 @@ import {
 /**
  * This component defines an icon button, which
  * has just an icon (without any text).
- * @param props
- * @returns {Element}
- * @constructor
+ * @param props Object containing:
+ *   - src: string — The URL of the icon image.
+ *   - onClick: function — Callback function when the button is clicked.
+ * @returns {Element} — The icon button component.
  */
 function IconButton(props) {
 	return (
@@ -17,11 +18,7 @@ function IconButton(props) {
 			onClick={props.onClick}
 		>
 			{/* Icon of the button */}
-			<img
-				src={props.src}
-				alt={ICON_BUTTON_IMAGE_ALT}
-				fetchPriority={props?.fetchPriority}
-			/>
+			<img src={props.src} alt={ICON_BUTTON_IMAGE_ALT} />
 		</button>
 	);
 }

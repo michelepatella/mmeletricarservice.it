@@ -1,7 +1,7 @@
 /**
  * Method to get the style of the section container
  * of about us section.
- * @returns {{height: string}}
+ * @returns {{height: string}} — CSS style.
  */
 export const getAboutUsSectionContainerStyle = () => {
 	return {

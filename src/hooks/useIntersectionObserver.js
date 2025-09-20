@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 /**
  * Custom hook to track if an element of the web application
  * is visible or not in the browser.
- * @param ref
- * @param threshold
- * @returns {boolean}
+ * @param ref — The reference to the element to be observed.
+ * @param threshold — Value indicating how much of the
+ * element must be in view port to be considered visible.
+ * @returns {boolean} — True if the element is visible, false
+ * otherwise.
  */
 const useIntersectionObserver = (ref, threshold) => {
 	// State to track visibility of the element

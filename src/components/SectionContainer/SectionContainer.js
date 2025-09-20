@@ -4,11 +4,11 @@ import { SECTION_CONTAINER_CLASS_NAME } from "./const";
  * This component represents the section container.
  * As its name suggests, it is used as container for containing
  * all the components which compose a section.
- * @param children
- * @param id
- * @param custStyle
- * @returns {JSX.Element}
- * @constructor
+ * @param children — The children to be displayed into
+ * the section container.
+ * @param id — ID of the section.
+ * @param custStyle — Custom CSS style.
+ * @returns {JSX.Element} — The section container component.
  */
 function SectionContainer({ children, id, custStyle }) {
 	// Use only the customized styles

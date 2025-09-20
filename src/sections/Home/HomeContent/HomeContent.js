@@ -7,17 +7,13 @@ import {
 	HOME_TITLE,
 	HOME_TITLE_CLASS_NAME,
 } from "./const";
-import {
-	HOME_SECTION_ID,
-	IMAGE_FETCH_PRIORITY_HIGH,
-} from "../../../utils/const";
+import { HOME_SECTION_ID } from "../../../utils/const";
 
 /**
  * This component represents the content
  * of the Home section. It contains the logo of the company
  * as image, title and subtitle.
- * @returns {Element}
- * @constructor
+ * @returns {Element} — The home content section.
  */
 function HomeContent() {
 	return (
@@ -27,7 +23,6 @@ function HomeContent() {
 				className={HOME_LOGO_CLASS_NAME}
 				src={COMPANY_LOGO_LINK}
 				alt={HOME_LOGO_ALT}
-				fetchPriority={IMAGE_FETCH_PRIORITY_HIGH}
 			/>
 
 			{/* Title */}

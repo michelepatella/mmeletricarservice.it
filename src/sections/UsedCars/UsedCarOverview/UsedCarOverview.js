@@ -15,9 +15,12 @@ import CustomText from "../../../components/CustomText/CustomText";
  * through an icon (for summarizing what does represent each information) and
  * the corresponding textual value. The title of what each information represents
  * can be also shown, is explicitly specified.
- * @param props
- * @returns {React.JSX.Element}
- * @constructor
+ * @param props — Object containing:
+ *   - usedCarOverview: Record<string, string | number | null> — Overview
+ *     info of the used car (year, mileage, fuel, status, etc.).
+ *   - showTitle: boolean — Whether to show the title of each
+ *     overview information above the text.
+ * @returns {React.JSX.Element} — The used car overview component.
  */
 function UsedCarOverview(props) {
 	return (

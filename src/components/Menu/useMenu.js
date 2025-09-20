@@ -10,6 +10,13 @@ import {
 /**
  * Helper method to check element visibility
  * and update current section
+ * @param id — ID of the HTML element.
+ * @param closestDistanceRef — The smallest distance from
+ * the top of the viewport among all sections checked so far.
+ * @returns {{closestDistance: number, currentSection}|{closestDistance, currentSection: null}}
+ * — An object containing the smallest distance from the viewport
+ * top and the ID of the section currently in view.
+ * If no section is in view, currentSection is null.
  */
 const checkAndUpdateSection = (id, closestDistanceRef) => {
 	// Read the element
@@ -47,6 +54,7 @@ const checkAndUpdateSection = (id, closestDistanceRef) => {
 
 /**
  * Helper method to get the current section in view
+ * @returns {string} — The current section.
  */
 const getCurrentSection = () => {
 	let currentSection = "";
@@ -84,8 +92,8 @@ const getCurrentSection = () => {
 /**
  * Method to make animate the transition from a
  * section to another one.
- * @param sectionId
- * @param setVisible
+ * @param sectionId — ID of the section to move to.
+ * @param setVisible — Menu visibility state.
  */
 const scrollToSection = (sectionId, setVisible) => {
 	// Get the section ID
@@ -104,8 +112,15 @@ const scrollToSection = (sectionId, setVisible) => {
 			"var(--overflow-auto)";
 	}
 };
+
 /**
  * Helper method to map children Menu items
+ * @param children — Children menu items.
+ * @param parentIndex — The index of the parent menu
+ * items of the children menu items.
+ * @param setVisible — Menu visibility state.
+ * @returns {*} — Array of child menu items objects,
+ * each with a key, href, title, and onClick handler.
  */
 const mapChildren = (children, parentIndex, setVisible) =>
 	children?.map((child, childIndex) => ({
@@ -118,14 +133,14 @@ const mapChildren = (children, parentIndex, setVisible) =>
 /**
  * Custom hook to manage (anchor and hamburger) Menu behavior.
  * @returns {{
- * visible: boolean,
- * menuItems: {
+ * visible: boolean, // State tracking menu visibility
+ * menuItems: { // All menu items
  * onClick: function(): void,
  * children: *|undefined,
  * href: string,
  * title: *, key: string}[],
- * section: string,
- * toggleDrawer: toggleDrawer
+ * section: string, // Current section
+ * toggleDrawer: toggleDrawer // Function to toggle menu visibility
  * }}
  */
 export const useMenu = () => {
@@ -187,7 +202,6 @@ export const useMenu = () => {
 
 	/**
 	 * Method to generate Menu items dynamically.
-	 * @type {unknown[] | undefined}
 	 */
 	const menuItems = ALL_MENU_SECTIONS?.map(
 		(section, index) => ({

@@ -11,9 +11,9 @@ import { onCookieButtonClick } from "./handler";
  * in the application. Clicking through the user can manage
  * its cookie preferences via cookie consent banner open
  * as soon as cookie button is clicked.
- * @param setIsCookiesBannerVisible
- * @returns {Element}
- * @constructor
+ * @param setIsCookiesBannerVisible — Setter for cookie consent
+ * banner visibility.
+ * @returns {Element} — The cookie button component.
  */
 function CookieButton({ setIsCookiesBannerVisible }) {
 	return (

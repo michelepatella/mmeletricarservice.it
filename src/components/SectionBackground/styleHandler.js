@@ -1,7 +1,11 @@
 /**
  * Method to get the section background style.
- * @param image
- * @returns {{background: string}}
+ * @param image — The image to be set as background.
+ * @returns {{
+ * 	background: string,
+ * 	backgroundSize: string,
+ * 	backgroundRepeat: string
+ * }} — CSS style.
  */
 export const getSectionBackgroundStyle = (image) => {
 	return {

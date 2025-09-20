@@ -11,9 +11,8 @@ import { fetchUsedCarData } from "../../../../utils/dataFetcher";
  * leveraging useQuery to fetch data and extracting data
  * to pass to the component that has sent the request.
  * @returns {{
- *   usedCarsOverview: Array,
- *   isLoading: boolean,
- *   isError: boolean
+ *   usedCarsOverview: Array, // Used cars overview data retrieved
+ *   isLoading: boolean, // True if data is loading, false otherwise
  * }}
  */
 export const useUsedCarsOverview = () => {

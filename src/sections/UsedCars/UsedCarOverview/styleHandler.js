@@ -1,10 +1,12 @@
 /**
  * Method to get the style of the used car overview text.
  * @returns {{
- * marginBottom: string,
- * opacity: number,
  * marginTop: number
- * }}
+ * marginBottom: number,
+ * fontFamily: string,
+ * fontWeight: string,
+ * opacity: number
+ * }} — CSS style.
  */
 export const getUsedCarOverviewTextStyle = (
 	isTitleVisible

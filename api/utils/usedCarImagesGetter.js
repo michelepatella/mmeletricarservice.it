@@ -1,4 +1,5 @@
 import {
+	DEFAULT_NO_LIMIT,
 	USED_CAR_IMAGES_PATH,
 	USED_CAR_IMAGES_STORAGE,
 } from "./const.js";
@@ -11,11 +12,14 @@ import { supabase } from "./setup.js";
  * the first x used car images available. If no limit is
  * specified, the method will retrieve all the used car
  * images by default.
- * @param id
- * @param limit
- * @returns {Promise<string[]>}
+ * @param id — ID of the used car for which to retrieve image(s).
+ * @param limit — Limit of images to be retrieved.
+ * @returns {Promise<string[]>} — The response data or null on error.
  */
-export async function getUsedCarImages(id, limit = null) {
+export async function getUsedCarImages(
+	id,
+	limit = DEFAULT_NO_LIMIT
+) {
 	let query;
 
 	// Build query dynamically

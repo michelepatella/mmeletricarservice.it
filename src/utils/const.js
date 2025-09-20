@@ -23,10 +23,10 @@ export const P_IVA = "08650830725";
 export const REA = "640711";
 
 /* — Icons — */
-export const EMAIL_ICON_LINK = "/icons/email_icon.svg";
+export const EMAIL_ICON_LINK = "/icons/email-icon.svg";
 export const FACEBOOK_ICON_LINK =
-	"/icons/facebook_icon.svg";
-export const PHONE_ICON_LINK = "/icons/phone_icon.svg";
+	"/icons/facebook-icon.svg";
+export const PHONE_ICON_LINK = "/icons/phone-icon.svg";
 
 /* — Company Contacts — */
 export const ALL_CONTACTS = [
@@ -95,6 +95,5 @@ export const API_FOLDER_PATH = "/api/";
 export const COOKIE_NAME = "cookieConsent";
 
 /* — Images — */
-export const IMAGE_FETCH_PRIORITY_HIGH = "high";
 export const DOTTED_BACKGROUND_IMAGE_LINK =
 	"/images/dotted-background.avif";

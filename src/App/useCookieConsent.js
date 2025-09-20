@@ -5,11 +5,11 @@ import { COOKIE_NAME } from "../utils/const";
 /**
  * Custom hook to manage cookie consent.
  * @returns {{
- * handleDeclineCookies: handleDeclineCookies,
- * handleAcceptCookies: handleAcceptCookies,
- * cookiesAccepted: boolean | null,
- * isCookiesBannerVisible: boolean,
- * setIsCookiesBannerVisible: (
+ * handleDeclineCookies: handleDeclineCookies, // Call to decline cookies
+ * handleAcceptCookies: handleAcceptCookies, // Call to accept cookies
+ * cookiesAccepted: boolean | null, // Current consent state
+ * isCookiesBannerVisible: boolean, // Current visibility banner state
+ * setIsCookiesBannerVisible: ( // Setter for banner visibility
  * value: (((prevState: boolean) => boolean
  * ) | boolean)) => void
  * }}

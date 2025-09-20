@@ -29,9 +29,14 @@ import UsedCarOverview from "../UsedCarOverview/UsedCarOverview";
  * - The name of the car
  * - Car's overview information
  * - The price (in Euro)
- * @param props
- * @returns {React.JSX.Element}
- * @constructor
+ * @param props — Object containing:
+ *   - usedCarOverview: An object representing the used
+ *   	 car data to display in the card, including:
+ *   		- id: The unique identifier of the car.
+ *   		- name: The name of the car.
+ *   		- image: URL of the presentation image (if available).
+ *   		- price: The car's price.
+ * @returns {React.JSX.Element} — The used car card component.
  */
 function UsedCarCard(props) {
 	// State to manage when the drawer, showing used car

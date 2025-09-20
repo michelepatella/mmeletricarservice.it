@@ -8,8 +8,8 @@ import {
 /**
  * Custom hook to generate used car cards animation
  * when the used cars section is scrolled horizontally.
- * @param sectionContainerRef
- * @param container
+ * @param sectionContainerRef — The reference to the section container.
+ * @param container — The container element.
  */
 export const useUsedCarsScroll = (
 	sectionContainerRef,

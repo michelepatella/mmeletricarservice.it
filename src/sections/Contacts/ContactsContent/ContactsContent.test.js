@@ -20,13 +20,10 @@ const emailPecIcon = "email-pec-icon";
 const facebookIcon = "facebook-icon";
 
 // Mock IntersectionObserver hook
-jest.mock(
-	"../../../components/CustomText/useIntersectionObserver",
-	() => ({
-		__esModule: true,
-		default: jest.fn(),
-	})
-);
+jest.mock("../../../hooks/useIntersectionObserver", () => ({
+	__esModule: true,
+	default: jest.fn(),
+}));
 
 // Mock the company contacts and section's texts
 jest.mock("../../../utils/const", () => ({

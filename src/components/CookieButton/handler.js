@@ -1,7 +1,8 @@
 /**
  * To manage the cookie button clicking, through which
  * the user can open the cookie consent banner.
- * @param setIsCookiesBannerVisible
+ * @param setIsCookiesBannerVisible — Setter for cookie
+ * consent banner visibility.
  */
 export const onCookieButtonClick = (
 	setIsCookiesBannerVisible

@@ -14,8 +14,7 @@ import { useMenu } from "../useMenu";
  * used when the web application is visualized by big screens (e.g., desktop).
  * The anchor Menu is characterized by an entry motion animation.
  * Each Menu element is described by # followed by its id.
- * @returns {React.JSX.Element}
- * @constructor
+ * @returns {React.JSX.Element} — The menu component for big screen.
  */
 function MenuBigScreen() {
 	// Prepare anchor Menu elements

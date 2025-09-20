@@ -5,9 +5,10 @@ import { LINK_CLASS_NAME } from "./const";
  * across the whole application. It receives a link
  * (href attribute), as well as a text to be displayed
  * within <a> tag.
- * @param props
- * @returns {JSX.Element}
- * @constructor
+ * @param props — Object containing:
+ *   - href: string — The URL the link points to.
+ *   - text: string — The text to display inside the <a> element.
+ * @returns {JSX.Element} — The link component.
  */
 function Link(props) {
 	return (

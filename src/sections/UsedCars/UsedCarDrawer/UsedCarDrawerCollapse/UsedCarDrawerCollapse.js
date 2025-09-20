@@ -22,8 +22,10 @@ import CustomText from "../../../../components/CustomText/CustomText";
  * used car drawer to contain all the information of a specific
  * category. The user can expand the collapse corresponding to a
  * category (e.g., 'Engine and Performance') to show all the information contained.
- * @returns {React.JSX.Element}
- * @constructor
+ * @param props — Object containing:
+ *   - usedCarInfo: Record<string, string | number | null> — The used car data
+ *   with keys matching information items to display inside the collapse.
+ * @returns {React.JSX.Element} — The used car drawer collapse component.
  */
 function UsedCarDrawerCollapse(props) {
 	return (

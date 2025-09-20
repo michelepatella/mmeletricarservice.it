@@ -16,9 +16,11 @@ import CustomText from "../CustomText/CustomText";
  * This component represents an info card. It is composed by
  * an icon characterizing the information graphically (if any),
  * an informative title, and a description.
- * @returns {Element}
- * @constructor
- * @param props
+ * @param props Object containing:
+ *   - icon: string — Optional URL of the icon image to display.
+ *   - title: string — The title text of the info card.
+ *   - description: string — The descriptive text of the info card.
+ * @returns {Element} — The info card component.
  */
 function InfoCard(props) {
 	return (

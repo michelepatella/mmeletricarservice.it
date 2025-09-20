@@ -31,8 +31,7 @@ import LoadingOutlined from "../../../components/LoadingOutlined/LoadingOutlined
  * This component represents the Used car section.
  * This section shows all the used cars available via cards.
  * All the used car overview information is loaded from the backend.
- * @returns {JSX.Element}
- * @constructor
+ * @returns {JSX.Element} — The used cars section.
  */
 function UsedCars() {
 	// Load used cars overview from backend

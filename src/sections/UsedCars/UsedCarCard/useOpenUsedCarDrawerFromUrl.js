@@ -6,8 +6,9 @@ import { USED_CAR_DRAWER_URL } from "../const";
  * Custom hook to check if the URL
  * corresponds to a used car's drawer that must be open.
  * In this way, a used car drawer can be also open externally.
- * @param setIsDrawerOpen
- * @param id
+ * @param setIsDrawerOpen — State setter to keep track
+ * whether the used car drawer is open or not.
+ * @param id — ID of the used car which drawer is open.
  */
 export const useOpenUsedCarDrawerFromUrl = (
 	setIsDrawerOpen,

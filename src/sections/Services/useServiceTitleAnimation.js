@@ -7,9 +7,12 @@ import {
 
 /**
  * Custom hook to animate services title.
- * @param inView
- * @param setDisplayedWords
- * @param setActiveIndex
+ * @param inView — State keeping track whether
+ * services section is in view or not.
+ * @param setDisplayedWords — State setter to keep track of
+ * words displayed so far.
+ * @param setActiveIndex — State setter to keep track of
+ * current letter (index) that is going to be displayed.
  */
 export const useServiceTitleAnimation = (
 	inView,

@@ -20,10 +20,11 @@ import LoadingOutlined from "../../../../components/LoadingOutlined/LoadingOutli
  * which aims to show all the details about a used car.
  * The component fetches all the details of the used car, shown via
  * info panel, along with all the car images, shown via carousel.
- * @param usedCarOverview
- * @param setIsDrawerOpen
- * @returns {JSX.Element}
- * @constructor
+ * @param usedCarOverview — Overview information of used car
+ * of the current drawer.
+ * @param setIsDrawerOpen — State setter keeping track of
+ * used car drawer visibility.
+ * @returns {JSX.Element} — The used car drawer component.
  */
 function UsedCarDrawer({
 	usedCarOverview,

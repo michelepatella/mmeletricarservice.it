@@ -29,8 +29,11 @@ import BlockQuote from "../../components/BlockQuote/BlockQuote";
  * It contains information about where the company is located,
  * along with a Google Maps frame. Additionally, show information
  * about working hours.
- * @returns {Element}
- * @constructor
+ * @param props — Object containing:
+ *   - cookiesAccepted: boolean | null — Indicates if the user
+ *   has accepted cookies. If true, Google Maps iframe is
+ *   displayed; otherwise, a placeholder description is shown.
+ * @returns {Element} — The where we are section.
  */
 function WhereWeAre(props) {
 	return (

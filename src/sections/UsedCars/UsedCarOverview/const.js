@@ -13,10 +13,10 @@ export const USED_CAR_OVERVIEW_ICON_ALT =
 
 /* — Links — */
 export const CALENDAR_ICON_LINK =
-	"/icons/calendar_icon.svg";
-export const ROAD_ICON_LINK = "/icons/road_icon.svg";
-export const FUEL_ICON_LINK = "/icons/fuel_icon.svg";
-export const CAR_ICON_LINK = "/icons/car_icon.svg";
+	"/icons/calendar-icon.svg";
+export const ROAD_ICON_LINK = "/icons/road-icon.svg";
+export const FUEL_ICON_LINK = "/icons/fuel-icon.svg";
+export const CAR_ICON_LINK = "/icons/car-icon.svg";
 
 /* — Used Car Overview Info — */
 export const ALL_USED_CAR_OVERVIEW_INFO = [

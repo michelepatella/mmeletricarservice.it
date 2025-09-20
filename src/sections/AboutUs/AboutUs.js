@@ -16,8 +16,7 @@ import CustomText from "../../components/CustomText/CustomText";
 /**
  * This component represents the About us sections,
  * which aims at presenting the company.
- * @returns {Element}
- * @constructor
+ * @returns {Element} — About us section.
  */
 function AboutUs() {
 	return (

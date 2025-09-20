@@ -18,9 +18,9 @@ import { getUsedCarData } from "../utils/usedCarsDataGetter.js";
  * - Status
  * Additionally, the API retrieves the first available image of the used
  * car, used as presentation image.
- * @param req
- * @param res
- * @returns {Promise<*>}
+ * @param req — The request from the client.
+ * @param res — The response to return to the client.
+ * @returns {Promise<*>} — The response data or null on error.
  */
 export default async function handler(req, res) {
 	try {

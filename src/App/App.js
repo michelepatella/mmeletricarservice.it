@@ -64,8 +64,7 @@ import "../design-tokens/layout/other.css";
 
 /**
  * The entry-point of the web application.
- * @returns {Element}
- * @constructor
+ * @returns {Element} — The main React element of the app.
  */
 function App() {
 	// State to manage cookie accepting/refusing

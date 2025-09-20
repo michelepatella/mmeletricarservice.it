@@ -17,9 +17,9 @@ import { getUsedCarData } from "../utils/usedCarsDataGetter.js";
  * While all the information is retrieved by running a query
  * over the corresponding column, the images are retrieved from the
  * storage bucket.
- * @param req
- * @param res
- * @returns {Promise<*>}
+ * @param req — The request from the client.
+ * @param res — The response to return to the client.
+ * @returns {Promise<*>} — The response data or null on error.
  */
 export default async function handler(req, res) {
 	try {

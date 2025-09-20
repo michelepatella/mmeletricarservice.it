@@ -24,9 +24,11 @@ import Link from "../Link/Link";
  * as well as a brief description to guide the user during the decision process and the
  * links to cookie and privacy policies to learn more.
  * of cookies.
- * @param props
- * @returns {Element}
- * @constructor
+ * @param props — Object containing:
+ * 	 - isCookiesBannerVisible: boolean — whether to show the banner.
+ * 	 - handleAcceptCookies: function — called when the user accepts cookies.
+ * 	 - handleDeclineCookies: function — called when the user declines cookies.
+ * @returns {Element} — The cookie consent banner component.
  */
 function CookieConsentBanner(props) {
 	return (

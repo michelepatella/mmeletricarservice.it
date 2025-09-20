@@ -1,6 +1,6 @@
 /**
  * Method to call when the pec email button is clicked.
- * @param emailPec
+ * @param emailPec — PEC address to which the email will be sent
  */
 export function onPecButtonClick(emailPec) {
 	window.location.href = "mailto:" + emailPec;
@@ -8,7 +8,7 @@ export function onPecButtonClick(emailPec) {
 
 /**
  * Method to call when the facebook button is clicked.
- * @param facebookLink
+ * @param facebookLink — Facebook link to be open
  */
 export function onFacebookButtonClick(facebookLink) {
 	window.open(facebookLink, "_blank");
@@ -16,7 +16,7 @@ export function onFacebookButtonClick(facebookLink) {
 
 /**
  * Method to call when the phone button is clicked.
- * @param phone
+ * @param phone — Phone number to be called
  */
 export function onPhoneButtonClick(phone) {
 	window.location.href = "tel:" + phone;
@@ -24,7 +24,7 @@ export function onPhoneButtonClick(phone) {
 
 /**
  * Method to call when the email button is clicked.
- * @param email
+ * @param email — Email address to which the email will be sent
  */
 export function onEmailButtonClick(email) {
 	window.location.href = "mailto:" + email;

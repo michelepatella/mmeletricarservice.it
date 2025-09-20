@@ -26,8 +26,7 @@ import CustomText from "../../components/CustomText/CustomText";
  * This section represents Services section. The
  * section shows all the specialized services that the company
  * offers via informative cards (characterized by icon, title, and description).
- * @returns {Element}
- * @constructor
+ * @returns {Element} — The services section.
  */
 function Services() {
 	// To keep track when the service section

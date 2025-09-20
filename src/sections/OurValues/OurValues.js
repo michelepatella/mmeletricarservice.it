@@ -18,8 +18,7 @@ import CustomText from "../../components/CustomText/CustomText";
 /**
  * This component represents Our values section,
  * which aims to describe values of the company.
- * @returns {Element}
- * @constructor
+ * @returns {Element} — Our values section.
  */
 function OurValues() {
 	return (

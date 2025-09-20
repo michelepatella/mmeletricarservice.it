@@ -25,22 +25,22 @@ export const SERVICES_TITLE_ANIMATION_TRIGGER_ONCE = true;
 export const SERVICES_TITLE_ANIMATION_THRESHOLD = 0.8;
 
 /* — Links — */
-export const CPU_ICON_LINK = "/icons/cpu_icon.svg";
-export const WRENCH_ICON_LINK = "/icons/wrench_icon.svg";
+export const CPU_ICON_LINK = "/icons/cpu-icon.svg";
+export const WRENCH_ICON_LINK = "/icons/wrench-icon.svg";
 export const CONTROL_PANEL_ICON_LINK =
-	"/icons/control_panel_icon.svg";
+	"/icons/control-panel-icon.svg";
 export const DASHBOARD_ICON_LINK =
-	"/icons/dashboard_icon.svg";
-export const FILTER_ICON_LINK = "/icons/filter_icon.svg";
-export const AIR_ICON_LINK = "/icons/air_icon.svg";
-export const ENGINE_ICON_LINK = "/icons/engine_icon.svg";
-export const KEY_ICON_LINK = "/icons/key_icon.svg";
+	"/icons/dashboard-icon.svg";
+export const FILTER_ICON_LINK = "/icons/filter-icon.svg";
+export const AIR_ICON_LINK = "/icons/air-icon.svg";
+export const ENGINE_ICON_LINK = "/icons/engine-icon.svg";
+export const KEY_ICON_LINK = "/icons/key-icon.svg";
 export const DIAGNOSIS_ICON_LINK =
-	"/icons/diagnosis_icon.svg";
+	"/icons/diagnosis-icon.svg";
 export const ELECTRIC_ICON_LINK =
-	"/icons/electric_icon.svg";
+	"/icons/electric-icon.svg";
 export const ANTI_THEFT_ICON_LINK =
-	"/icons/anti_theft_icon.svg";
+	"/icons/anti-theft-icon.svg";
 export const SERVICES_BACKGROUND_IMAGE_LINK =
 	"/images/services-background.avif";
 

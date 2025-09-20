@@ -4,9 +4,14 @@ import { MAP_ICON_LINK } from "./const";
  * Method to get the Google Maps container
  * style (when not available).
  * @returns {{
+ * height: number,
  * background: string,
- * opacity: string
- * }}
+ * backgroundRepeat: string,
+ * backgroundPosition: string,
+ * backgroundSize: string,
+ * boxShadow: string,
+ * opacity: number
+ * }} — CSS style.
  */
 export const getGoogleMapsContainerStyle = () => {
 	return {
@@ -25,11 +30,9 @@ export const getGoogleMapsContainerStyle = () => {
  * Method to get the style of the description displayed
  * when Google Maps is not available.
  * @returns {{
- * marginRight: string,
  * textAlign: string,
- * marginTop: string,
- * marginLeft: string
- * }}
+ * margin: string,
+ * }} — CSS style.
  */
 export const getGoogleMapsUnavailableDescriptionStyle =
 	() => {

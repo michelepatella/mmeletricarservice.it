@@ -10,8 +10,11 @@ import { fetchUsedCarData } from "../../../../../utils/dataFetcher";
  * Custom hook to orchestrate used car info fetching, by
  * leveraging useQuery to fetch data and extracting data
  * to pass to the component that has sent the request.
- * @param usedCarId
- * @returns {{isLoading: boolean, usedCarInfo: ({images: string[]}|null)}}
+ * @param usedCarId — Used car ID for which data must be retrieved.
+ * @returns {{
+ * isLoading: boolean, // True if data is loading, false otherwise
+ * usedCarInfo: ({images: string[]}|null) // All the used car data retrieved
+ * }}
  */
 export const useUsedCarInfo = ({ usedCarId }) => {
 	// useQuery to fetch used car info for a

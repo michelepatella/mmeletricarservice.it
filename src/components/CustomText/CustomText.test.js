@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import CustomText from "./CustomText";
 
 // Mock intersection observer hook
-jest.mock("./useIntersectionObserver", () => ({
+jest.mock("../../hooks/useIntersectionObserver", () => ({
 	__esModule: true,
 	default: jest.fn(),
 }));

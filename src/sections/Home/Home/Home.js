@@ -20,8 +20,7 @@ const { Header, Content } = Layout;
  * This component represents the Home section. It is divided into two parts:
  * - Header: contains contact buttons to rapidly contact the company
  * - Content: contains title and description
- * @returns {JSX.Element}
- * @constructor
+ * @returns {JSX.Element} — Home section.
  */
 function Home() {
 	return (

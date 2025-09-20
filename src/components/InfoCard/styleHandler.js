@@ -1,6 +1,6 @@
 /**
  * Method to get the style of the info card title.
- * @returns {{marginTop: string}}
+ * @returns {{marginTop: number}} — CSS style.
  */
 export const getInfoCardTitleStyle = () => {
 	return {
@@ -11,7 +11,7 @@ export const getInfoCardTitleStyle = () => {
 /**
  * Method to get the style of the info card
  * description.
- * @returns {{opacity: string, marginTop: string}}
+ * @returns {{marginTop: number, opacity: number}} — CSS style.
  */
 export const getInfoCardDescriptionStyle = () => {
 	return {

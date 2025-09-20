@@ -15,9 +15,14 @@ import {
  * Any button has predefined styles combined with customized styles (if any). Any button
  * may overwrite predefined style with its customized ones, if needed.
  * The button may contain an icon (is specified).
- * @returns {JSX.Element}
- * @constructor
- * @param props
+ * @param props — Object containing:
+ * 	 - text: string — The button label.
+ *   - onClick: function — Callback when the button is clicked.
+ *   - style: object — Custom CSS styles to override default button styles.
+ *   - icon: string — Optional icon URL to display in the button.
+ *   - isContact: boolean — Whether the button is a contact button.
+ *   - isCta: boolean — Whether the button is a CTA button.
+ * @returns {JSX.Element} — The custom button component.
  */
 function CustomButton(props) {
 	// Combine predefined and customized style to get

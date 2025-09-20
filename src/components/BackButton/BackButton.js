@@ -11,8 +11,7 @@ import CustomText from "../CustomText/CustomText";
  * This component defines a back
  * button used in the entire web application. It is
  * characterized by a symbol '<' and a label for clarity.
- * @returns {React.JSX.Element}
- * @constructor
+ * @returns {React.JSX.Element} — The back button component.
  */
 function BackButton() {
 	return (

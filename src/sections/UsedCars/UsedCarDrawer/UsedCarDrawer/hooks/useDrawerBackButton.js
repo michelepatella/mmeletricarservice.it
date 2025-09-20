@@ -4,7 +4,8 @@ import { onUsedCarDrawerClose } from "../../../handler";
 /**
  * Custom hook to manage clicking of back button
  * of the used car drawer.
- * @param setIsDrawerOpen
+ * @param setIsDrawerOpen — State setter to keep track
+ * whether the used car drawer is open or not.
  */
 export const useDrawerBackButtonHandler = (
 	setIsDrawerOpen

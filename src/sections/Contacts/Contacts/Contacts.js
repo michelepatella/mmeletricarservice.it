@@ -17,8 +17,7 @@ const { Content, Footer } = Layout;
  * - Content: contains all the company contacts shown via buttons
  * - Footer: contains legal information about the company (Name, Registered Office, etc.),
  *   along with links to privacy, cookie, and legal documents.
- * @returns {JSX.Element}
- * @constructor
+ * @returns {JSX.Element} — Contacts section.
  */
 function Contacts() {
 	return (

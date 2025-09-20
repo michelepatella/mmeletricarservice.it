@@ -9,8 +9,9 @@ let previousScrollY = 0;
 /**
  * Method to call when the user car drawer
  * is going to be open.
- * @param setIsDrawerOpen
- * @param id
+ * @param setIsDrawerOpen — State setter keeping track
+ * whether the used car drawer is open or not.
+ * @param id — ID of the used car which drawer is open.
  */
 export const onUsedCarDrawerOpen = (
 	setIsDrawerOpen,

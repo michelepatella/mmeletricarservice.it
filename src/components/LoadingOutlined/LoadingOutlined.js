@@ -12,8 +12,8 @@ import {
  * This component defines the loading
  * outlined of the whole web application. It is composed
  * of a circle rotating around company logo image.
- * @returns {JSX.Element}
- * @constructor
+ * @param custStyle — Custom CSS style object to override the default style.
+ * @returns {JSX.Element} — The loading outlined component.
  */
 function LoadingOutlined({ custStyle }) {
 	// Get the final custom loading outlined

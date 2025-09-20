@@ -9,10 +9,11 @@ import { supabase } from "./setup.js";
  * Method to retrieve all the used car data for a specific
  * car from a given table. Only the specified fields are
  * retrieved, or all fields if none are specified.
- * @param id
- * @param table
- * @param fields
- * @returns {Promise<({error: true} & "Received a generic string")|null>}
+ * @param table — Name of the table from which to retrieve data.
+ * @param id — ID of the used car for which to retrieve data.
+ * @param fields — Fields of the table to be retrieved.
+ * @returns {Promise<Object|Object[]|null>} — Resolves with
+ * record(s) or null on error.
  */
 export async function getUsedCarData(
 	table,

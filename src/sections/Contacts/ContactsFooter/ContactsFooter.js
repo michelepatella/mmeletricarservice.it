@@ -17,8 +17,7 @@ import Link from "../../../components/Link/Link";
  * of the Contact section. It contains a footer text including
  * all company information, along with link to privacy, cookie, and legal
  * notes documents.
- * @returns {Element}
- * @constructor
+ * @returns {Element} — The contacts footer component.
  */
 function ContactsFooter() {
 	return (

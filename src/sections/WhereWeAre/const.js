@@ -25,4 +25,4 @@ export const WHERE_WE_ARE_GOOGLE_MAPS_UNAVAILABLE_DESCRIPTION =
 	"Accetta i cookie di terze parti per visualizzare la nostra posizione sulla mappa.";
 
 /* — Links — */
-export const MAP_ICON_LINK = "/icons/map_icon.svg";
+export const MAP_ICON_LINK = "/icons/map-icon.svg";

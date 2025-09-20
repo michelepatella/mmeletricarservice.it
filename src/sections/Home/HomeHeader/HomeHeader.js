@@ -1,13 +1,11 @@
 import { HOME_HEADER_CONTACT_BUTTONS } from "./const";
-import { IMAGE_FETCH_PRIORITY_HIGH } from "../../../utils/const";
 import IconButton from "../../../components/IconButton/IconButton";
 
 /**
  * This component represents the header
  * of the Home section. It contains the company
  * contact buttons, making them rapidly accessible.
- * @returns {Element}
- * @constructor
+ * @returns {Element} — The home header section.
  */
 function HomeHeader() {
 	return (
@@ -19,7 +17,6 @@ function HomeHeader() {
 						key={src}
 						src={src}
 						onClick={onClick}
-						fetchPriority={IMAGE_FETCH_PRIORITY_HIGH}
 					/>
 				)
 			)}

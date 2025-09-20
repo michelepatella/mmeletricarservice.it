@@ -21,9 +21,13 @@ import UsedCarOverview from "../../UsedCarOverview/UsedCarOverview";
  * This component represents the info panel shown in the
  * used car drawer, It contains all the information of a used
  * car, including overview information and details.
- * @param props
- * @returns {React.JSX.Element}
- * @constructor
+ * @param props — Object containing:
+ *   - usedCarOverview: Object — Overview information of
+ *   	 the used car (name, price, etc.).
+ *   - usedCarInfo: Record<string, string | number | null> — Detailed
+ *     information of the used car to populate the collapse.
+ * @returns {React.JSX.Element} — The used car drawer
+ * info panel component.
  */
 function UsedCarDrawerInfoPanel(props) {
 	return (

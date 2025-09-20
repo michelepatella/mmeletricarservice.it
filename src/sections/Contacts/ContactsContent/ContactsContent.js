@@ -19,8 +19,7 @@ import SectionBackground from "../../../components/SectionBackground/SectionBack
  * This component represent the content
  * of the Contact section. It contains all the contact
  * buttons for each company contact available.
- * @returns {Element}
- * @constructor
+ * @returns {Element} — The contacts content component.
  */
 function ContactsContent() {
 	return (

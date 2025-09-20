@@ -1,7 +1,7 @@
 /**
  * Method to get the style of the information name
  * displayed in the used car drawer collapse.
- * @returns {{}}
+ * @returns {{ marginBottom: number }} — CSS style.
  */
 export const getUsedCarDrawerCollapseInformationNameStyle =
 	() => {
@@ -13,7 +13,7 @@ export const getUsedCarDrawerCollapseInformationNameStyle =
 /**
  * Method to get the style of the information textual value
  * displayed into the used car drawer collapse.
- * @returns {{marginTop: number}}
+ * @returns {{marginTop: number}} — CSS style.
  */
 export const getUsedCarDrawerCollapseInformationTextStyle =
 	() => {

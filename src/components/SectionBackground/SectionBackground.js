@@ -4,11 +4,11 @@ import { getSectionBackgroundStyle } from "./styleHandler";
 /**
  * This component defines the background container of a section.
  * It is used for containing a background image shown in a section.
- * @param image
- * @param children
- * @param custStyle
- * @returns {JSX.Element}
- * @constructor
+ * @param image — The image to be displayed as background.
+ * @param children — Children to be displayed over the
+ * section background.
+ * @param custStyle — Custom CSS style.
+ * @returns {JSX.Element} — The section background component.
  */
 function SectionBackground({ image, children, custStyle }) {
 	// Combine predefined and customized styles
