@@ -114,7 +114,9 @@ function UsedCarCard(props) {
 									style: PRICE_STYLE,
 									currency: PRICE_CURRENCY,
 								}).format(
-									parseFloat(props.usedCarOverview?.price)
+									Number.parseFloat(
+										props.usedCarOverview?.price
+									)
 								) || "-"
 							}
 							disableAnimation

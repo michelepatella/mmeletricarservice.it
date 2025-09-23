@@ -23,7 +23,7 @@ export async function getUsedCarImages(
 	let query;
 
 	// Build query dynamically
-	if (limit !== null) {
+	if (limit !== DEFAULT_NO_LIMIT) {
 		// Retrieve only requested used car images
 		// (based on the specified limit)
 		query = supabase.storage

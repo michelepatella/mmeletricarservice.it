@@ -25,7 +25,7 @@ export const getUsedCarsAnimatedDivStyle = (
 ) => {
 	return {
 		opacity: containerStyles.y.to(
-			(y) => 1 - parseInt(y) / 100
+			(y) => 1 - Number.parseInt(y) / 100
 		),
 		transform: containerStyles.y.to(
 			(y) => "translateY(" + y + ")"

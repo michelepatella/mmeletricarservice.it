@@ -30,7 +30,7 @@ const useIntersectionObserver = (ref, threshold) => {
 		// Create an IntersectionObserver instance
 		const observer = new IntersectionObserver(
 			(entries, observer) => {
-				entries?.forEach((entry) => {
+				for (const entry of entries ?? []) {
 					if (entry?.isIntersecting) {
 						// If the element is in view, update state and add CSS class
 						setIsVisible(true);
@@ -42,7 +42,7 @@ const useIntersectionObserver = (ref, threshold) => {
 						// If element is out of view, update state
 						setIsVisible(false);
 					}
-				});
+				}
 			},
 			options
 		);

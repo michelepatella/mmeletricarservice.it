@@ -62,7 +62,7 @@ const getCurrentSection = () => {
 
 	// Loop through each section to
 	// determine which is in view
-	ALL_MENU_SECTIONS?.forEach((sec) => {
+	for (const sec of ALL_MENU_SECTIONS ?? []) {
 		// Check for sections
 		const result = checkAndUpdateSection(
 			sec?.id,
@@ -74,7 +74,7 @@ const getCurrentSection = () => {
 		}
 
 		// Check for child sections
-		sec?.children?.forEach((child) => {
+		for (const child of sec?.children ?? []) {
 			const childResult = checkAndUpdateSection(
 				child?.id,
 				closestDistance
@@ -83,8 +83,8 @@ const getCurrentSection = () => {
 				closestDistance = childResult.closestDistance;
 				currentSection = childResult.currentSection;
 			}
-		});
-	});
+		}
+	}
 
 	return currentSection;
 };

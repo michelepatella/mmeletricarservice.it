@@ -24,7 +24,7 @@ export const useOpenUsedCarDrawerFromUrl = (
 
 		// Extrapolate the used car's ID specified by the path
 		const regex = new RegExp(
-			"^/" + USED_CAR_DRAWER_URL + "(\\d+)$"
+			String.raw`^/${USED_CAR_DRAWER_URL}(\d+)$`
 		);
 		const carIdMatch = regex.exec(path);
 

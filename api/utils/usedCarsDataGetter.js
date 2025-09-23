@@ -23,7 +23,7 @@ export async function getUsedCarData(
 	let query;
 
 	// Build query dynamically
-	if (id !== null) {
+	if (id !== DEFAULT_NO_ID) {
 		// Retrieve used car data for a specific
 		// car from a given table, reading only the
 		// specified fields
@@ -47,7 +47,7 @@ export async function getUsedCarData(
 		return null;
 	}
 
-	return id !== null
+	return id !== DEFAULT_NO_ID
 		? usedCarData?.[0] || null
 		: usedCarData;
 }
