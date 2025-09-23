@@ -23,7 +23,12 @@ export async function getUsedCarData(
 	let query;
 
 	// Build query dynamically
-	if (id !== DEFAULT_NO_ID) {
+	if (id === DEFAULT_NO_ID) {
+		// Retrieve used car data for all the existing
+		// cars from a given table, reading only the
+		// specified fields
+		query = supabase.from(table).select(fields);
+	} else {
 		// Retrieve used car data for a specific
 		// car from a given table, reading only the
 		// specified fields
@@ -31,11 +36,6 @@ export async function getUsedCarData(
 			.from(table)
 			.select(fields)
 			.eq(DEFAULT_ID_FIELD, id);
-	} else {
-		// Retrieve used car data for all the existing
-		// cars from a given table, reading only the
-		// specified fields
-		query = supabase.from(table).select(fields);
 	}
 
 	// Run query
@@ -47,7 +47,7 @@ export async function getUsedCarData(
 		return null;
 	}
 
-	return id !== DEFAULT_NO_ID
-		? usedCarData?.[0] || null
-		: usedCarData;
+	return id === DEFAULT_NO_ID
+		? usedCarData
+		: usedCarData?.[0] || null;
 }

@@ -23,7 +23,13 @@ export async function getUsedCarImages(
 	let query;
 
 	// Build query dynamically
-	if (limit !== DEFAULT_NO_LIMIT) {
+	if (limit === DEFAULT_NO_LIMIT) {
+		// Retrieve all the used car images
+		// (no limit specified)
+		query = supabase.storage
+			.from(USED_CAR_IMAGES_STORAGE)
+			.list(id);
+	} else {
 		// Retrieve only requested used car images
 		// (based on the specified limit)
 		query = supabase.storage
@@ -31,12 +37,6 @@ export async function getUsedCarImages(
 			.list(id, {
 				limit: limit,
 			});
-	} else {
-		// Retrieve all the used car images
-		// (no limit specified)
-		query = supabase.storage
-			.from(USED_CAR_IMAGES_STORAGE)
-			.list(id);
 	}
 
 	// Run query

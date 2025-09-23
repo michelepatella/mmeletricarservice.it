@@ -12,7 +12,7 @@ export default async function middleware(request) {
 	const url = new URL(request.url);
 
 	// Check whether the URL matches a used car URL
-	const regex = new RegExp(String.raw`^/used-cars/(\d+)$`);
+	const regex = /^\/used-cars\/(\d+)$/;
 	const match = regex.exec(url.pathname);
 
 	// Fallback
