@@ -60,7 +60,7 @@ export default async function handler(req, res) {
 			...emissionsConsumption,
 			...exterior,
 			...comfortInterior,
-			images: imageUrls,
+			images: imageUrls?.slice(1),
 		};
 
 		// Return all the used car data
