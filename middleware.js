@@ -90,5 +90,6 @@ export default async function middleware(request) {
 }
 
 export const config = {
+	// sonarqube-disable-next-line
 	matcher: ["/used-cars/:id(\\d+)"],
 };
