@@ -20,7 +20,8 @@ export const useOpenUsedCarDrawerFromUrl = (
 		if (!id) return;
 
 		// Get the path of the URL
-		const path = window.location.pathname;
+		/* eslint-disable-next-line no-undef */
+		const path = globalThis.location.pathname;
 
 		// Extrapolate the used car's ID specified by the path
 		const regex = new RegExp(

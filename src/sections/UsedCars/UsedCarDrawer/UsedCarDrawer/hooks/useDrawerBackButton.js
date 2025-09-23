@@ -20,11 +20,16 @@ export const useDrawerBackButtonHandler = (
 		};
 
 		// Add a listener for popstate
-		window.addEventListener("popstate", handleBackButton);
+		/* eslint-disable-next-line no-undef */
+		globalThis.addEventListener(
+			"popstate",
+			handleBackButton
+		);
 
 		// Clear the listener
 		return () => {
-			window.removeEventListener(
+			/* eslint-disable-next-line no-undef */
+			globalThis.removeEventListener(
 				"popstate",
 				handleBackButton
 			);

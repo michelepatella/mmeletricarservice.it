@@ -96,7 +96,8 @@ export const useCookieConsent = () => {
 
 		// Refresh the page, if needed
 		if (isRefreshNeeded) {
-			window.location.reload();
+			/* eslint-disable-next-line no-undef */
+			globalThis.location.reload();
 		}
 	};
 

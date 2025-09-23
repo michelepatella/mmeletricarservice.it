@@ -35,7 +35,8 @@ export const onUsedCarDrawerOpen = (
 	document.body.style.width = USED_CAR_DRAWER_WIDTH;
 
 	// Change the link dynamically
-	window.history.pushState(
+	/* eslint-disable-next-line no-undef */
+	globalThis.history.pushState(
 		{ id: id },
 		"",
 		USED_CAR_DRAWER_URL + id
@@ -70,5 +71,6 @@ export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
 	});
 
 	// Redirect the user to the used cars page
-	window.history.replaceState({}, "", "/");
+	/* eslint-disable-next-line no-undef */
+	globalThis.history.replaceState({}, "", "/");
 };

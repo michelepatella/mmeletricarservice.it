@@ -3,7 +3,8 @@
  * @param emailPec — PEC address to which the email will be sent
  */
 export function onPecButtonClick(emailPec) {
-	window.location.href = "mailto:" + emailPec;
+	/* eslint-disable-next-line no-undef */
+	globalThis.location.href = "mailto:" + emailPec;
 }
 
 /**
@@ -19,7 +20,8 @@ export function onFacebookButtonClick(facebookLink) {
  * @param phone — Phone number to be called
  */
 export function onPhoneButtonClick(phone) {
-	window.location.href = "tel:" + phone;
+	/* eslint-disable-next-line no-undef */
+	globalThis.location.href = "tel:" + phone;
 }
 
 /**
@@ -27,5 +29,6 @@ export function onPhoneButtonClick(phone) {
  * @param email — Email address to which the email will be sent
  */
 export function onEmailButtonClick(email) {
-	window.location.href = "mailto:" + email;
+	/* eslint-disable-next-line no-undef */
+	globalThis.location.href = "mailto:" + email;
 }
