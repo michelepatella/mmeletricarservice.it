@@ -90,5 +90,5 @@ export default async function middleware(request) {
 }
 
 export const config = {
-	matcher: [String.raw`/used-cars:id(\d+)`],
+	matcher: ["/used-cars/:id(\\d+)"],
 };
