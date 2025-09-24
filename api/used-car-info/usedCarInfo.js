@@ -1,4 +1,3 @@
-import * as Sentry from "@sentry/node";
 import {
 	COMFORT_AND_INTERIOR_TABLE,
 	EMISSIONS_AND_CONSUMPTION_TABLE,
@@ -11,6 +10,7 @@ import {
 } from "../../src/utils/const";
 import { getUsedCarImages } from "../utils/usedCarImagesGetter.js";
 import { getUsedCarData } from "../utils/usedCarsDataGetter.js";
+import { Sentry } from "../utils/setup";
 
 /**
  * The following API retrieves all the information and images
@@ -75,7 +75,7 @@ export default async function handler(req, res) {
 		if (!enginePerformance) {
 			Sentry.captureEvent({
 				message: "No engine and performance data found",
-				level: "warning",
+				level: "warn",
 				extra: {
 					id: id,
 					table: ENGINE_AND_PERFORMANCE_TABLE,
@@ -111,7 +111,7 @@ export default async function handler(req, res) {
 		if (!emissionsConsumption) {
 			Sentry.captureEvent({
 				message: "No emissions and consumption data found",
-				level: "warning",
+				level: "warn",
 				extra: {
 					id: id,
 					table: EMISSIONS_AND_CONSUMPTION_TABLE,
@@ -145,7 +145,7 @@ export default async function handler(req, res) {
 		if (!exterior) {
 			Sentry.captureEvent({
 				message: "No exterior data found",
-				level: "warning",
+				level: "warn",
 				extra: {
 					id: id,
 					table: EXTERIOR_TABLE,
@@ -180,7 +180,7 @@ export default async function handler(req, res) {
 		if (!comfortInterior) {
 			Sentry.captureEvent({
 				message: "No comfort and interior data found",
-				level: "warning",
+				level: "warn",
 				extra: {
 					id: id,
 					table: COMFORT_AND_INTERIOR_TABLE,
@@ -207,7 +207,7 @@ export default async function handler(req, res) {
 		if (!imageUrls) {
 			Sentry.captureEvent({
 				message: "No images found",
-				level: "warning",
+				level: "warn",
 				extra: {
 					id: id,
 				},

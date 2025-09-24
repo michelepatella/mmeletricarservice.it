@@ -43,7 +43,16 @@ export async function getUsedCarData(
 
 	// Check if any error occurred
 	if (error) {
-		console.error(error);
+		console.error(
+			"Error fetching fields: " +
+				fields +
+				", from: " +
+				table +
+				", for used car id = " +
+				id +
+				": " +
+				error
+		);
 		return null;
 	}
 

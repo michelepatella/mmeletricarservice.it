@@ -10,6 +10,9 @@ Sentry.init({
 	integrations: [
 		Sentry.browserTracingIntegration(),
 		Sentry.replayIntegration(),
+		Sentry.consoleLoggingIntegration({
+			levels: ["log", "warn", "error"],
+		}),
 	],
 	tracesSampleRate: 1,
 	tracePropagationTargets: [

@@ -1,4 +1,3 @@
-import * as Sentry from "@sentry/node";
 import {
 	NO_USED_CAR_AVAILABLE_MESSAGE,
 	USED_CAR_OVERVIEW_IMAGE_LIMIT,
@@ -10,6 +9,7 @@ import {
 } from "../../src/utils/const";
 import { getUsedCarImages } from "../utils/usedCarImagesGetter.js";
 import { getUsedCarData } from "../utils/usedCarsDataGetter.js";
+import { Sentry } from "../utils/setup";
 
 /**
  * The following API retrieves salient information
@@ -58,7 +58,7 @@ export default async function handler(req, res) {
 		) {
 			Sentry.captureEvent({
 				message: "No used car overview information found",
-				level: "warning",
+				level: "warn",
 				extra: {
 					table: USED_CAR_OVERVIEW_TABLE,
 					durationMs,
@@ -95,9 +95,7 @@ export default async function handler(req, res) {
 							car.id +
 							")",
 						level:
-							images && images.length > 0
-								? "info"
-								: "warning",
+							images && images.length > 0 ? "info" : "warn",
 						extra: {
 							id: car.id,
 							imageCount: images?.length || 0,

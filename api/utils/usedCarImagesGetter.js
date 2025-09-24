@@ -43,12 +43,20 @@ export async function getUsedCarImages(
 	const { data: usedCarImages, error } = await query;
 
 	// Check if any error occurred
-	if (
-		error ||
-		!usedCarImages ||
-		usedCarImages.length === 0
-	) {
-		console.error(error);
+	if (error) {
+		console.error(
+			"Error fetching images for used car id = " +
+				id +
+				": " +
+				error
+		);
+		return null;
+	}
+
+	if (!usedCarImages || usedCarImages.length === 0) {
+		console.error(
+			"No images found for used car id = " + id
+		);
 		return null;
 	}
 
