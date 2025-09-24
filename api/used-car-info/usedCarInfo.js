@@ -230,10 +230,9 @@ export default async function handler(req, res) {
 			level: "info",
 			extra: {
 				id: id,
-				fieldsCount: Object.keys(usedCarInfo).length,
-				filledFieldsCount: Object.values(
-					usedCarInfo
-				).filter((v) => v !== null && v !== "").length,
+				fieldsCount: Object.values(usedCarInfo).filter(
+					(v) => v != null && String(v) !== ""
+				).length,
 				imagesCount: usedCarInfo.images?.length || 0,
 				durationMs: durationMs,
 			},

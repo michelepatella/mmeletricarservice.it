@@ -11,13 +11,13 @@ Sentry.init({
 		Sentry.browserTracingIntegration(),
 		Sentry.replayIntegration(),
 	],
-	tracesSampleRate: 1.0,
+	tracesSampleRate: 1,
 	tracePropagationTargets: [
 		"localhost",
 		/^https:\/\/mmeletricarservice\.it\/api/,
 	],
 	replaysSessionSampleRate: 0.1,
-	replaysOnErrorSampleRate: 1.0,
+	replaysOnErrorSampleRate: 1,
 	enableLogs: true,
 });
 
