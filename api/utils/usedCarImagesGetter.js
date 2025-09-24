@@ -3,7 +3,7 @@ import {
 	USED_CAR_IMAGES_PATH,
 	USED_CAR_IMAGES_STORAGE,
 } from "./const.js";
-import { supabase } from "./setup.js";
+import { Sentry, supabase } from "./setup.js";
 
 /**
  * Method to retrieve used car images from Supabase
@@ -20,53 +20,64 @@ export async function getUsedCarImages(
 	id,
 	limit = DEFAULT_NO_LIMIT
 ) {
-	let query;
+	try {
+		let query;
 
-	// Build query dynamically
-	if (limit === DEFAULT_NO_LIMIT) {
-		// Retrieve all the used car images
-		// (no limit specified)
-		query = supabase.storage
-			.from(USED_CAR_IMAGES_STORAGE)
-			.list(id);
-	} else {
-		// Retrieve only requested used car images
-		// (based on the specified limit)
-		query = supabase.storage
-			.from(USED_CAR_IMAGES_STORAGE)
-			.list(id, {
-				limit: limit,
-			});
-	}
-
-	// Run query
-	const { data: usedCarImages, error } = await query;
-
-	// Check if any error occurred
-	if (error) {
-		console.error(
-			"Error fetching images for used car id = " +
-				id +
-				": " +
-				error
-		);
-		return null;
-	}
-
-	if (!usedCarImages || usedCarImages.length === 0) {
-		console.error(
-			"No images found for used car id = " + id
-		);
-		return null;
-	}
-
-	// Extract and return used car image URL(s)
-	return usedCarImages.map(
-		(usedCarImage) =>
-			supabase.storage
+		// Build query dynamically
+		if (limit === DEFAULT_NO_LIMIT) {
+			// Retrieve all the used car images
+			// (no limit specified)
+			query = supabase.storage
 				.from(USED_CAR_IMAGES_STORAGE)
-				.getPublicUrl(
-					USED_CAR_IMAGES_PATH(id, usedCarImage.name)
-				).data.publicUrl
-	);
+				.list(id);
+		} else {
+			// Retrieve only requested used car images
+			// (based on the specified limit)
+			query = supabase.storage
+				.from(USED_CAR_IMAGES_STORAGE)
+				.list(id, {
+					limit: limit,
+				});
+		}
+
+		// Run query
+		const { data: usedCarImages, error } = await query;
+
+		// Check if any error occurred
+		if (error) {
+			Sentry.logger.error(error, {
+				id: id,
+				limit: limit,
+				storage: USED_CAR_IMAGES_STORAGE,
+			});
+			return null;
+		}
+
+		if (!usedCarImages || usedCarImages.length === 0) {
+			Sentry.logger.warn("No images found", {
+				id: id,
+				limit: limit,
+				storage: USED_CAR_IMAGES_STORAGE,
+			});
+			return null;
+		}
+
+		// Extract and return used car image URL(s)
+		return usedCarImages.map(
+			(usedCarImage) =>
+				supabase.storage
+					.from(USED_CAR_IMAGES_STORAGE)
+					.getPublicUrl(
+						USED_CAR_IMAGES_PATH(id, usedCarImage.name)
+					).data.publicUrl
+		);
+	} catch (error) {
+		// Handle errors
+		Sentry.logger.error(error, {
+			id: id,
+			limit: limit,
+			storage: USED_CAR_IMAGES_STORAGE,
+		});
+		return null;
+	}
 }

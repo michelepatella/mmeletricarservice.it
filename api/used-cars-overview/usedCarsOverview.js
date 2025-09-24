@@ -39,13 +39,10 @@ export default async function handler(req, res) {
 			query: req.query,
 			body: req.body,
 		});
-		Sentry.captureMessage(
-			"Retrieving used cars overview information",
-			"info"
-		);
 
 		const globalStartTime = Date.now();
 		let startTime = Date.now();
+
 		// Retrieve used cars overview information
 		const usedCarsOverviewInfo = await getUsedCarData(
 			USED_CAR_OVERVIEW_TABLE
@@ -56,29 +53,27 @@ export default async function handler(req, res) {
 			!usedCarsOverviewInfo ||
 			usedCarsOverviewInfo.length === 0
 		) {
-			Sentry.captureEvent({
-				message: "No used car overview information found",
-				level: "warn",
-				extra: {
+			Sentry.logger.warn(
+				"No used car overview information found",
+				{
 					table: USED_CAR_OVERVIEW_TABLE,
 					durationMs,
-				},
-			});
+				}
+			);
 
 			return res.status(400).json({
 				error: NO_USED_CAR_AVAILABLE_MESSAGE,
 			});
 		}
 
-		Sentry.captureEvent({
-			message: "Used car overview information retrieved",
-			level: "info",
-			extra: {
+		Sentry.logger.info(
+			"Used car overview information retrieved",
+			{
 				table: USED_CAR_OVERVIEW_TABLE,
 				carsCount: usedCarsOverviewInfo.length,
 				durationMs,
-			},
-		});
+			}
+		);
 
 		// Combine overview information with presentation images
 		startTime = Date.now();
@@ -89,18 +84,20 @@ export default async function handler(req, res) {
 						car.id,
 						USED_CAR_OVERVIEW_IMAGE_LIMIT
 					);
-					Sentry.captureEvent({
-						message:
-							"Used car image retrieved (id = " +
-							car.id +
-							")",
-						level:
-							images && images.length > 0 ? "info" : "warn",
-						extra: {
+					// Show an info message if there is
+					// at least one car, show a warning
+					// message otherwise
+					if (images && images.length > 0) {
+						Sentry.logger.info("Used car image retrieved", {
 							id: car.id,
-							imageCount: images?.length || 0,
-						},
-					});
+							imageCount: images.length,
+						});
+					} else {
+						Sentry.logger.warn("No used car image found", {
+							id: car.id,
+							imageCount: 0,
+						});
+					}
 					return {
 						...car,
 						image: images?.[0] || null,
@@ -113,39 +110,33 @@ export default async function handler(req, res) {
 			);
 		durationMs = Date.now() - startTime;
 
-		Sentry.captureEvent({
-			message: "All used car images retrieved",
-			level: "info",
-			extra: {
-				carsCount: usedCarsOverviewInfoWithImages.length,
-				durationMs,
-			},
+		Sentry.logger.info("All used car images retrieved", {
+			carsCount: usedCarsOverviewInfoWithImages.length,
+			durationMs: durationMs,
+			endpoint:
+				API_FOLDER_PATH + USED_CARS_OVERVIEW_ENDPOINT,
 		});
 
 		const globalDurationMs = Date.now() - globalStartTime;
 
-		Sentry.captureEvent({
-			message:
-				"All used cars overview information retrieved",
-			level: "info",
-			extra: {
+		Sentry.logger.info(
+			"All used cars overview information retrieved",
+			{
 				carsCount: usedCarsOverviewInfoWithImages.length,
-				globalDurationMs,
-			},
-		});
+				globalDurationMs: globalDurationMs,
+			}
+		);
 
 		// Return combined data
 		res.status(200).json({
 			used_cars_overview: usedCarsOverviewInfoWithImages,
 		});
 	} catch (error) {
-		Sentry.captureException(error, {
-			extra: {
-				requestQuery: req.query,
-				requestBody: req.body,
-				endpoint:
-					API_FOLDER_PATH + USED_CARS_OVERVIEW_ENDPOINT,
-			},
+		Sentry.logger.error(error, {
+			requestQuery: req.query,
+			requestBody: req.body,
+			endpoint:
+				API_FOLDER_PATH + USED_CARS_OVERVIEW_ENDPOINT,
 		});
 		return res.status(400).json({
 			error: error.message,

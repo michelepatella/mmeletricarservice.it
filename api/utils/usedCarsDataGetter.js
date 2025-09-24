@@ -3,7 +3,7 @@ import {
 	DEFAULT_ID_FIELD,
 	DEFAULT_NO_ID,
 } from "./const.js";
-import { supabase } from "./setup.js";
+import { Sentry, supabase } from "./setup.js";
 
 /**
  * Method to retrieve all the used car data for a specific
@@ -20,43 +20,56 @@ export async function getUsedCarData(
 	id = DEFAULT_NO_ID,
 	fields = DEFAULT_FIELDS
 ) {
-	let query;
+	try {
+		let query;
 
-	// Build query dynamically
-	if (id === DEFAULT_NO_ID) {
-		// Retrieve used car data for all the existing
-		// cars from a given table, reading only the
-		// specified fields
-		query = supabase.from(table).select(fields);
-	} else {
-		// Retrieve used car data for a specific
-		// car from a given table, reading only the
-		// specified fields
-		query = supabase
-			.from(table)
-			.select(fields)
-			.eq(DEFAULT_ID_FIELD, id);
-	}
+		// Build query dynamically
+		if (id === DEFAULT_NO_ID) {
+			// Retrieve used car data for all the existing
+			// cars from a given table, reading only the
+			// specified fields
+			query = supabase.from(table).select(fields);
+		} else {
+			// Retrieve used car data for a specific
+			// car from a given table, reading only the
+			// specified fields
+			query = supabase
+				.from(table)
+				.select(fields)
+				.eq(DEFAULT_ID_FIELD, id);
+		}
 
-	// Run query
-	const { data: usedCarData, error } = await query;
+		// Run query
+		const { data: usedCarData, error } = await query;
 
-	// Check if any error occurred
-	if (error) {
-		console.error(
-			"Error fetching fields: " +
-				fields +
-				", from: " +
-				table +
-				", for used car id = " +
-				id +
-				": " +
-				error
-		);
+		// Check if any error occurred
+		if (error) {
+			Sentry.logger.error(error, {
+				id: id,
+				table: table,
+				fields: fields,
+			});
+			return null;
+		}
+
+		// Check whether retrieved data is empty
+		if (!usedCarData || usedCarData.length === 0) {
+			Sentry.logger.warn("No used car data found", {
+				id: id,
+				table: table,
+				fields: fields,
+			});
+		}
+
+		return id === DEFAULT_NO_ID
+			? usedCarData
+			: usedCarData?.[0] || null;
+	} catch (error) {
+		Sentry.logger.error(error, {
+			id: id,
+			table: table,
+			fields: fields,
+		});
 		return null;
 	}
-
-	return id === DEFAULT_NO_ID
-		? usedCarData
-		: usedCarData?.[0] || null;
 }

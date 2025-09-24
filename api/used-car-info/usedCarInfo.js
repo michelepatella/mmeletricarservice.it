@@ -42,13 +42,10 @@ export default async function handler(req, res) {
 			query: req.query,
 			body: req.body,
 		});
-		Sentry.captureMessage(
-			"Retrieving used car information (id = " + id + ")",
-			"info"
-		);
 
 		const globalStartTime = Date.now();
 		let startTime = Date.now();
+
 		// Retrieve engine and performance data
 		const enginePerformance = await getUsedCarData(
 			ENGINE_AND_PERFORMANCE_TABLE,
@@ -56,11 +53,9 @@ export default async function handler(req, res) {
 		);
 		let durationMs = Date.now() - startTime;
 
-		Sentry.captureEvent({
-			message:
-				"Used car engine and performance data retrieved",
-			level: "info",
-			extra: {
+		Sentry.logger.info(
+			"Used car engine and performance data retrieved",
+			{
 				id: id,
 				table: ENGINE_AND_PERFORMANCE_TABLE,
 				fieldsCount: Object.keys(enginePerformance).length,
@@ -68,19 +63,18 @@ export default async function handler(req, res) {
 					enginePerformance
 				).filter((v) => v !== null && v !== "").length,
 				durationMs: durationMs,
-			},
-		});
+			}
+		);
 
 		// Check whether no data has been found
 		if (!enginePerformance) {
-			Sentry.captureEvent({
-				message: "No engine and performance data found",
-				level: "warn",
-				extra: {
+			Sentry.logger.warn(
+				"No engine and performance data found",
+				{
 					id: id,
 					table: ENGINE_AND_PERFORMANCE_TABLE,
-				},
-			});
+				}
+			);
 		}
 
 		startTime = Date.now();
@@ -91,11 +85,9 @@ export default async function handler(req, res) {
 		);
 		durationMs = Date.now() - startTime;
 
-		Sentry.captureEvent({
-			message:
-				"Used car emissions and consumption data retrieved",
-			level: "info",
-			extra: {
+		Sentry.logger.info(
+			"Used car emissions and consumption data retrieved",
+			{
 				id: id,
 				table: EMISSIONS_AND_CONSUMPTION_TABLE,
 				fieldsCount: Object.keys(emissionsConsumption)
@@ -104,19 +96,18 @@ export default async function handler(req, res) {
 					emissionsConsumption
 				).filter((v) => v !== null && v !== "").length,
 				durationMs: durationMs,
-			},
-		});
+			}
+		);
 
 		// Check whether no data has been found
 		if (!emissionsConsumption) {
-			Sentry.captureEvent({
-				message: "No emissions and consumption data found",
-				level: "warn",
-				extra: {
+			Sentry.logger.warn(
+				"No emissions and consumption data found",
+				{
 					id: id,
 					table: EMISSIONS_AND_CONSUMPTION_TABLE,
-				},
-			});
+				}
+			);
 		}
 
 		startTime = Date.now();
@@ -127,29 +118,21 @@ export default async function handler(req, res) {
 		);
 		durationMs = Date.now() - startTime;
 
-		Sentry.captureEvent({
-			message: "Used car exterior data retrieved",
-			level: "info",
-			extra: {
-				id: id,
-				table: EXTERIOR_TABLE,
-				fieldsCount: Object.keys(exterior).length,
-				filledFieldsCount: Object.values(exterior).filter(
-					(v) => v !== null && v !== ""
-				).length,
-				durationMs: durationMs,
-			},
+		Sentry.logger.info("Used car exterior data retrieved", {
+			id: id,
+			table: EXTERIOR_TABLE,
+			fieldsCount: Object.keys(exterior).length,
+			filledFieldsCount: Object.values(exterior).filter(
+				(v) => v !== null && v !== ""
+			).length,
+			durationMs: durationMs,
 		});
 
 		// Check whether no data has been found
 		if (!exterior) {
-			Sentry.captureEvent({
-				message: "No exterior data found",
-				level: "warn",
-				extra: {
-					id: id,
-					table: EXTERIOR_TABLE,
-				},
+			Sentry.logger.warn("No exterior data found", {
+				id: id,
+				table: EXTERIOR_TABLE,
 			});
 		}
 
@@ -161,11 +144,9 @@ export default async function handler(req, res) {
 		);
 		durationMs = Date.now() - startTime;
 
-		Sentry.captureEvent({
-			message:
-				"Used car comfort and interior data retrieved",
-			level: "info",
-			extra: {
+		Sentry.logger.info(
+			"Used car comfort and interior data retrieved",
+			{
 				id: id,
 				table: COMFORT_AND_INTERIOR_TABLE,
 				fieldsCount: Object.keys(comfortInterior).length,
@@ -173,19 +154,18 @@ export default async function handler(req, res) {
 					comfortInterior
 				).filter((v) => v !== null && v !== "").length,
 				durationMs: durationMs,
-			},
-		});
+			}
+		);
 
 		// Check whether no data has been found
 		if (!comfortInterior) {
-			Sentry.captureEvent({
-				message: "No comfort and interior data found",
-				level: "warn",
-				extra: {
+			Sentry.logger.warn(
+				"No comfort and interior data found",
+				{
 					id: id,
 					table: COMFORT_AND_INTERIOR_TABLE,
-				},
-			});
+				}
+			);
 		}
 
 		startTime = Date.now();
@@ -193,24 +173,16 @@ export default async function handler(req, res) {
 		const imageUrls = await getUsedCarImages(id);
 		durationMs = Date.now() - startTime;
 
-		Sentry.captureEvent({
-			message: "Used car images retrieved",
-			level: "info",
-			extra: {
-				id: id,
-				imageCount: imageUrls?.length || 0,
-				durationMs: durationMs,
-			},
+		Sentry.logger.info("Used car images retrieved", {
+			id: id,
+			imageCount: imageUrls?.length || 0,
+			durationMs: durationMs,
 		});
 
 		// Check whether no data has been found
 		if (!imageUrls) {
-			Sentry.captureEvent({
-				message: "No images found",
-				level: "warn",
-				extra: {
-					id: id,
-				},
+			Sentry.logger.warn("No images found", {
+				id: id,
 			});
 		}
 
@@ -225,17 +197,13 @@ export default async function handler(req, res) {
 
 		durationMs = Date.now() - globalStartTime;
 
-		Sentry.captureEvent({
-			message: "All used car data retrieved",
-			level: "info",
-			extra: {
-				id: id,
-				fieldsCount: Object.values(usedCarInfo).filter(
-					(v) => v != null && String(v) !== ""
-				).length,
-				imagesCount: usedCarInfo.images?.length || 0,
-				durationMs: durationMs,
-			},
+		Sentry.logger.info("All used car data retrieved", {
+			id: id,
+			fieldsCount: Object.values(usedCarInfo).filter(
+				(v) => v != null && String(v) !== ""
+			).length,
+			imagesCount: usedCarInfo.images?.length || 0,
+			durationMs: durationMs,
 		});
 
 		// Return all the used car data
@@ -244,12 +212,10 @@ export default async function handler(req, res) {
 		});
 	} catch (error) {
 		// Handle errors
-		Sentry.captureException(error, {
-			extra: {
-				requestQuery: req.query,
-				requestBody: req.body,
-				endpoint: API_FOLDER_PATH + USED_CAR_INFO_ENDPOINT,
-			},
+		Sentry.logger.error(error, {
+			requestQuery: req.query,
+			requestBody: req.body,
+			endpoint: API_FOLDER_PATH + USED_CAR_INFO_ENDPOINT,
 		});
 		return res.status(400).json({
 			error: error.message,
