@@ -1,5 +1,3 @@
-import { Sentry } from "./src";
-
 /**
  * Middleware defined to catch bot requests to used car
  * pages and return a custom HTML containing overview information
@@ -83,12 +81,9 @@ export default async function middleware(request) {
 		return new Response(html, {
 			headers: { "content-type": "text/html" },
 		});
-	} catch (error) {
+	} catch (err) {
 		// Capture middleware errors
-		Sentry.logger.error(error, {
-			context: "Middleware",
-			request: request,
-		});
+		console.error("Middleware error:", err);
 		// Fallback
 		return;
 	}
