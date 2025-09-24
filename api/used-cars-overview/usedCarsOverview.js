@@ -89,12 +89,12 @@ export default async function handler(req, res) {
 					// message otherwise
 					if (images && images.length > 0) {
 						Sentry.logger.info("Used car image retrieved", {
-							id: car.id,
+							carId: car.id,
 							imageCount: images.length,
 						});
 					} else {
 						Sentry.logger.warn("No used car image found", {
-							id: car.id,
+							carId: car.id,
 							imageCount: 0,
 						});
 					}

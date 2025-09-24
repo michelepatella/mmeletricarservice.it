@@ -24,6 +24,8 @@ Sentry.init({
 	enableLogs: true,
 });
 
+export { Sentry };
+
 const root = ReactDOM.createRoot(
 	document.getElementById("root")
 );

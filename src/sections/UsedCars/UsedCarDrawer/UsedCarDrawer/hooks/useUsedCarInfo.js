@@ -3,6 +3,7 @@ import { DATA_STALE_TIME } from "../../../const";
 import { USED_CAR_INFO_API_KEY } from "../const";
 import { fetchUsedCarData } from "../../../../../utils/dataFetcher";
 import { USED_CAR_INFO_ENDPOINT } from "../../../../../utils/const";
+import { Sentry } from "../../../../../index";
 
 /**
  * Custom hook to orchestrate used car info fetching, by
@@ -17,19 +18,47 @@ import { USED_CAR_INFO_ENDPOINT } from "../../../../../utils/const";
 export const useUsedCarInfo = ({ usedCarId }) => {
 	// useQuery to fetch used car info for a
 	// specific used car
-	const { data, isLoading, isError } = useQuery({
-		queryKey: [USED_CAR_INFO_API_KEY, usedCarId],
-		queryFn: () =>
-			fetchUsedCarData(
-				USED_CAR_INFO_ENDPOINT + "?id=" + usedCarId
-			),
-		enabled: !!usedCarId,
-		staleTime: DATA_STALE_TIME,
-	});
+	const { data, isLoading, isError, isFetching } = useQuery(
+		{
+			queryKey: [USED_CAR_INFO_API_KEY, usedCarId],
+			queryFn: () =>
+				fetchUsedCarData(
+					USED_CAR_INFO_ENDPOINT + "?id=" + usedCarId
+				),
+			enabled: !!usedCarId,
+			staleTime: DATA_STALE_TIME,
+		}
+	);
+
+	// Keep track of fetching status
+	if (isFetching && !isLoading) {
+		Sentry.logger.info("Fetching used car info started", {
+			carId: usedCarId,
+		});
+	}
 
 	// Check if any error
 	if (isError)
-		console.error("Error while fetching used car data.");
+		Sentry.logger.error(
+			"Error while fetching used car data",
+			{
+				carId: usedCarId,
+			}
+		);
+
+	// Check whether the data retrieved is empty
+	if (data?.used_car_info) {
+		Sentry.logger.info("Used car info fetched", {
+			carId: usedCarId,
+			fieldsRetrieved: Object.keys(data.used_car_info)
+				.length,
+			imagesCount: data.used_car_info.images?.length || 0,
+		});
+	} else {
+		Sentry.logger.warn("Used car info fetched but empty", {
+			carId: usedCarId,
+		});
+	}
 
 	return {
 		usedCarInfo: data?.used_car_info || null,

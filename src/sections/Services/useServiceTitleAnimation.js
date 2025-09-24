@@ -24,6 +24,10 @@ export const useServiceTitleAnimation = (
 		// section is visible
 		if (!inView) return;
 
+		// Check whether services title is not valid
+		if (!SERVICES_TITLE || SERVICES_TITLE.length === 0)
+			return;
+
 		let currentIndex = 0;
 
 		/**

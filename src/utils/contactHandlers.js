@@ -1,10 +1,19 @@
+import { Sentry } from "../index";
+
 /**
  * Method to call when the pec email button is clicked.
  * @param emailPec — PEC address to which the email will be sent
  */
 export function onPecButtonClick(emailPec) {
-	/* eslint-disable-next-line no-undef */
-	globalThis.location.href = "mailto:" + emailPec;
+	try {
+		/* eslint-disable-next-line no-undef */
+		globalThis.location.href = "mailto:" + emailPec;
+	} catch (error) {
+		Sentry.logger.error(error, {
+			context: "PEC button click",
+			pec: emailPec,
+		});
+	}
 }
 
 /**
@@ -12,7 +21,14 @@ export function onPecButtonClick(emailPec) {
  * @param facebookLink — Facebook link to be open
  */
 export function onFacebookButtonClick(facebookLink) {
-	window.open(facebookLink, "_blank");
+	try {
+		window.open(facebookLink, "_blank");
+	} catch (error) {
+		Sentry.logger.error(error, {
+			context: "Facebook button click",
+			facebookLink: facebookLink,
+		});
+	}
 }
 
 /**
@@ -20,8 +36,15 @@ export function onFacebookButtonClick(facebookLink) {
  * @param phone — Phone number to be called
  */
 export function onPhoneButtonClick(phone) {
-	/* eslint-disable-next-line no-undef */
-	globalThis.location.href = "tel:" + phone;
+	try {
+		/* eslint-disable-next-line no-undef */
+		globalThis.location.href = "tel:" + phone;
+	} catch (error) {
+		Sentry.logger.error(error, {
+			context: "Phone button click",
+			phone: phone,
+		});
+	}
 }
 
 /**
@@ -29,6 +52,13 @@ export function onPhoneButtonClick(phone) {
  * @param email — Email address to which the email will be sent
  */
 export function onEmailButtonClick(email) {
-	/* eslint-disable-next-line no-undef */
-	globalThis.location.href = "mailto:" + email;
+	try {
+		/* eslint-disable-next-line no-undef */
+		globalThis.location.href = "mailto:" + email;
+	} catch (error) {
+		Sentry.logger.error(error, {
+			context: "Email button click",
+			email: email,
+		});
+	}
 }

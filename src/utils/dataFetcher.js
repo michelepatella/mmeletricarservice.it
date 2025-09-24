@@ -1,4 +1,5 @@
 import { API_FOLDER_PATH } from "./const";
+import { Sentry } from "../index";
 
 /**
  * Method to fetch data by making a request to a specified
@@ -16,10 +17,10 @@ export const fetchUsedCarData = async (endpoint) => {
 		if (!res?.ok) {
 			// If any error
 			const errorData = await res?.json();
-			console.error(
-				"Error fetching data:",
-				errorData?.error
-			);
+			Sentry.logger.error(new Error(errorData?.error), {
+				context: "Data fetching",
+				endpoint: endpoint,
+			});
 			throw new Error(errorData?.error);
 		}
 
@@ -27,7 +28,10 @@ export const fetchUsedCarData = async (endpoint) => {
 		return await res.json();
 	} catch (error) {
 		// Handle errors while acquiring data
-		console.error("Error while fetching data:", error);
+		Sentry.logger.error(error, {
+			context: "Data fetching",
+			endpoint: endpoint,
+		});
 		throw error;
 	}
 };

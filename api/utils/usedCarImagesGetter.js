@@ -46,7 +46,7 @@ export async function getUsedCarImages(
 		// Check if any error occurred
 		if (error) {
 			Sentry.logger.error(error, {
-				id: id,
+				carId: id,
 				limit: limit,
 				storage: USED_CAR_IMAGES_STORAGE,
 			});
@@ -55,11 +55,25 @@ export async function getUsedCarImages(
 
 		if (!usedCarImages || usedCarImages.length === 0) {
 			Sentry.logger.warn("No images found", {
-				id: id,
+				carId: id,
 				limit: limit,
 				storage: USED_CAR_IMAGES_STORAGE,
 			});
 			return null;
+		}
+
+		// Show a warning message whether image limit
+		// is greater than used car images available
+		if (usedCarImages.length < limit) {
+			Sentry.logger.warn(
+				"Requested image limit exceeds available images",
+				{
+					carId: id,
+					requestedLimit: limit,
+					availableImages: usedCarImages.length,
+					storage: USED_CAR_IMAGES_STORAGE,
+				}
+			);
 		}
 
 		// Extract and return used car image URL(s)
@@ -74,7 +88,7 @@ export async function getUsedCarImages(
 	} catch (error) {
 		// Handle errors
 		Sentry.logger.error(error, {
-			id: id,
+			carId: id,
 			limit: limit,
 			storage: USED_CAR_IMAGES_STORAGE,
 		});

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { COOKIE_NAME } from "../utils/const";
+import { Sentry } from "../index";
 
 /**
  * Custom hook to manage cookie consent.
@@ -40,22 +41,29 @@ export const useCookieConsent = () => {
 			if (cookieConsent === "true") {
 				// Cookies have been accepted
 				setCookiesAccepted(true);
+				Sentry.logger.info("Cookies previously accepted", {
+					cookieName: COOKIE_NAME,
+				});
 			} else if (cookieConsent === "false") {
 				// Cookies have been refused
 				setCookiesAccepted(false);
+				Sentry.logger.info("Cookies previously declined", {
+					cookieName: COOKIE_NAME,
+				});
 			} else {
 				// No explicit choice: show the cookie banner
 				// to ask the user a choice and set cookies to refused
 				// by default
 				setIsCookiesBannerVisible(true);
 				setCookiesAccepted(false);
+				Sentry.logger.warn("No cookie consent found", {
+					cookieName: COOKIE_NAME,
+				});
 			}
 		} catch (error) {
-			// Show error
-			console.error(
-				"Failed to read " + COOKIE_NAME + ":",
-				error
-			);
+			Sentry.logger.error(error, {
+				cookieName: COOKIE_NAME,
+			});
 
 			// Close the cookie consent banner and set cookies
 			// acceptance to false in case of error
@@ -72,6 +80,9 @@ export const useCookieConsent = () => {
 		// cookie consent banner
 		setCookiesAccepted(true);
 		setIsCookiesBannerVisible(false);
+		Sentry.logger.info("User accepted cookies", {
+			cookieName: COOKIE_NAME,
+		});
 	};
 
 	/**
@@ -87,6 +98,10 @@ export const useCookieConsent = () => {
 		// cookies completely from the session
 		if (cookiesAccepted) {
 			isRefreshNeeded = true;
+			Sentry.logger.warn(
+				"User changed cookie consent from accepted to declined",
+				{ cookieName: COOKIE_NAME }
+			);
 		}
 
 		// Set cookies as refused and close the cookie
@@ -94,10 +109,21 @@ export const useCookieConsent = () => {
 		setCookiesAccepted(false);
 		setIsCookiesBannerVisible(false);
 
+		Sentry.logger.info("User declined cookies", {
+			cookieName: COOKIE_NAME,
+		});
+
 		// Refresh the page, if needed
 		if (isRefreshNeeded) {
-			/* eslint-disable-next-line no-undef */
-			globalThis.location.reload();
+			try {
+				/* eslint-disable-next-line no-undef */
+				globalThis.location.reload();
+				Sentry.logger.info("Page has been refreshed");
+			} catch (error) {
+				Sentry.logger.error(error, {
+					context: "Page refresh after cookie decline",
+				});
+			}
 		}
 	};
 
