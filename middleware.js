@@ -90,5 +90,5 @@ export default async function middleware(request) {
 }
 
 export const config = {
-	matcher: ["/used-cars/:id(\\d+)"], // NOSONAR
+	matcher: ["/used-cars:id(\\d+)"], // NOSONAR
 };
