@@ -1,4 +1,4 @@
-import * as Sentry from "@sentry/react";
+import * as Sentry from "@sentry/node";
 import {
 	NO_USED_CAR_AVAILABLE_MESSAGE,
 	USED_CAR_OVERVIEW_IMAGE_LIMIT,

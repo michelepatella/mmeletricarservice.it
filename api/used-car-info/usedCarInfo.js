@@ -1,4 +1,4 @@
-import * as Sentry from "@sentry/react";
+import * as Sentry from "@sentry/node";
 import {
 	COMFORT_AND_INTERIOR_TABLE,
 	EMISSIONS_AND_CONSUMPTION_TABLE,
