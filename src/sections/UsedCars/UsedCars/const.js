@@ -26,8 +26,6 @@ export const USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION_ALT =
 /* — Data — */
 export const USED_CARS_OVERVIEW_API_KEY =
 	"usedCarsOverview";
-export const USED_CARS_OVERVIEW_ENDPOINT =
-	"used-cars-overview/usedCarsOverview";
 
 /* — Links — */
 export const NO_USED_CAR_AVAILABLE_IMAGE_LINK =
