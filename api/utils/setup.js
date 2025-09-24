@@ -11,7 +11,15 @@ export const supabase = createClient(
 // Initialize Sentry for server-side
 SentryNode.init({
 	dsn: process.env.SENTRY_DSN,
+	integrations: [
+		// eslint-disable-next-line no-use-before-define
+		Sentry.consoleLoggingIntegration({
+			levels: ["log", "warn", "error"],
+		}),
+	],
 	tracesSampleRate: 1,
+	enableLogs: true,
+	sendDefaultPii: true,
 });
 
 export const Sentry = SentryNode;
