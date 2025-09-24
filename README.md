@@ -30,7 +30,7 @@
   - [🚀 Deployment & CI/CD](#-deployment--cicd)
 - [🖥️ Post-Deployment](#%EF%B8%8F-post-deployment)
   - [🔎 Analytics](#-analytics)
-  - [📡 Monitoring](#-monitoring)
+  - [📡 Monitoring & Logging](#-monitoring--logging)
 - [📊 Metrics](#-metrics)
 
 <br>
@@ -183,9 +183,9 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-📊 **Monitoring**
+📊 **Monitoring & Logging**
 
-> ![Error Logging](https://img.shields.io/badge/Error%20Logging-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
+> ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=orange)  
 > ![Vercel Logs](https://img.shields.io/badge/Vercel_Logs-000000?style=for-the-badge&logo=vercel&logoColor=white)  
 > ![Supabase Logs](https://img.shields.io/badge/Supabase_Logs-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)  
 > ![GitHub Insights](https://img.shields.io/badge/GitHub_Insights-181717?style=for-the-badge&logo=github&logoColor=white)  
@@ -369,7 +369,6 @@ Manages client-side data fetching and caching using React Query and hooks.
 - Retrieves data from cache first
 - Caches data to minimize network requests
 - Deduplicates queries to prevent redundancy
-- Logs errors on fetch failures
 
 <br>
 
@@ -550,12 +549,12 @@ _Monitors search performance, queries, indexing, and security._
 
 <br>
 
-### 📡 Monitoring
+### 📡 Monitoring & Logging
 
 To track system operations and backend activities.
 
-**🛑 Error Logging (try-catch and console logs)**  
-_Monitors client-side._
+**⚠️ Sentry**  
+_Tracks errors, warnings, and informational logs across APIs and client-side._
 
 **⚡ Vercel Logs**  
 _Monitors serverless functions._
