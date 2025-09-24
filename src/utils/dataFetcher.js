@@ -12,7 +12,7 @@ export const fetchUsedCarData = async (endpoint) => {
 	try {
 		// Make the request to get car's data
 		const res = await fetch(API_FOLDER_PATH + endpoint);
-		console.log(res);
+
 		// Check the response status
 		if (!res?.ok) {
 			// If any error
