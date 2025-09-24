@@ -4,18 +4,18 @@ import {
 	CONTACTS_CLICK_HANDLERS,
 	CUSTOM_TEXT_TYPES,
 	PHONE,
-} from "../../../../utils/const";
+} from "../../../../utils/const.js";
 import {
 	PRICE_CURRENCY,
 	PRICE_LOCALES,
 	PRICE_STYLE,
-} from "../../const";
-import { USED_CAR_DRAWER_CTA_BUTTON_TEXT } from "./const";
-import { getUsedCarDrawerInfoPanelCarNameStyle } from "./styleHandler";
-import CustomText from "../../../../components/CustomText/CustomText";
-import CustomButton from "../../../../components/CustomButton/CustomButton";
-import UsedCarDrawerCollapse from "../UsedCarDrawerCollapse/UsedCarDrawerCollapse";
-import UsedCarOverview from "../../UsedCarOverview/UsedCarOverview";
+} from "../../const.js";
+import { USED_CAR_DRAWER_CTA_BUTTON_TEXT } from "./const.js";
+import { getUsedCarDrawerInfoPanelCarNameStyle } from "./styleHandler.js";
+import CustomText from "../../../../components/CustomText/CustomText.js";
+import CustomButton from "../../../../components/CustomButton/CustomButton.js";
+import UsedCarDrawerCollapse from "../UsedCarDrawerCollapse/UsedCarDrawerCollapse.js";
+import UsedCarOverview from "../../UsedCarOverview/UsedCarOverview.js";
 
 /**
  * This component represents the info panel shown in the

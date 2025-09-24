@@ -8,21 +8,21 @@ import {
 	WHERE_WE_ARE_TITLE,
 	WHERE_WE_ARE_WORKING_HOURS_DESCRIPTION,
 	WHERE_WE_ARE_WORKING_HOURS_TITLE,
-} from "./const";
+} from "./const.js";
 import {
 	CUSTOM_TEXT_TYPES,
 	DOTTED_BACKGROUND_IMAGE_LINK,
 	SITE,
 	WHERE_WE_ARE_SECTION_ID,
-} from "../../utils/const";
+} from "../../utils/const.js";
 import {
 	getGoogleMapsContainerStyle,
 	getGoogleMapsUnavailableDescriptionStyle,
-} from "./styleHandler";
-import SectionContainer from "../../components/SectionContainer/SectionContainer";
-import SectionBackground from "../../components/SectionBackground/SectionBackground";
-import CustomText from "../../components/CustomText/CustomText";
-import BlockQuote from "../../components/BlockQuote/BlockQuote";
+} from "./styleHandler.js";
+import SectionContainer from "../../components/SectionContainer/SectionContainer.js";
+import SectionBackground from "../../components/SectionBackground/SectionBackground.js";
+import CustomText from "../../components/CustomText/CustomText.js";
+import BlockQuote from "../../components/BlockQuote/BlockQuote.js";
 
 /**
  * This component represents the Where we are section.

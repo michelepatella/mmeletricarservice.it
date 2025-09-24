@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { onUsedCarDrawerClose } from "../../../handler";
-import { Sentry } from "../../../../../index";
+import { SentryReact } from "../../../../../index.js";
+import { onUsedCarDrawerClose } from "../../../handler.js";
 
 /**
  * Custom hook to manage clicking of back button
@@ -19,11 +19,11 @@ export const useDrawerBackButtonHandler = (
 		const handleBackButton = () => {
 			try {
 				onUsedCarDrawerClose(setIsDrawerOpen);
-				Sentry.logger.info(
+				SentryReact.logger.info(
 					"Used car drawer closed via back button"
 				);
 			} catch (error) {
-				Sentry.logger.error(error, {
+				SentryReact.logger.error(error, {
 					context: "Used car drawer back button",
 				});
 			}
@@ -37,7 +37,7 @@ export const useDrawerBackButtonHandler = (
 				handleBackButton
 			);
 		} catch (error) {
-			Sentry.logger.error(error, {
+			SentryReact.logger.error(error, {
 				context:
 					"Register popstate listener for drawer back button",
 			});
@@ -52,7 +52,7 @@ export const useDrawerBackButtonHandler = (
 					handleBackButton
 				);
 			} catch (error) {
-				Sentry.logger.error(error, {
+				SentryReact.logger.error(error, {
 					context:
 						"Remove popstate listener for drawer back button",
 				});

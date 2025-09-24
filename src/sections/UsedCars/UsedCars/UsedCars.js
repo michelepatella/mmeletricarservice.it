@@ -4,7 +4,7 @@ import {
 	CUSTOM_TEXT_TYPES,
 	DOTTED_BACKGROUND_IMAGE_LINK,
 	USED_CARS_SECTION_ID,
-} from "../../../utils/const";
+} from "../../../utils/const.js";
 import {
 	USED_CARS_ANIMATION_Y_FINAL_POSITION,
 	USED_CARS_CONTAINER_CLASS_NAME,
@@ -13,19 +13,19 @@ import {
 	USED_CARS_UNAVAILABLE_DESCRIPTION,
 	USED_CARS_UNAVAILABLE_CONTAINER_CLASS_NAME,
 	NO_USED_CAR_AVAILABLE_IMAGE_LINK,
-} from "./const";
-import { useUsedCarsOverview } from "./hooks/useUsedCarsOverview";
-import { useUsedCarsScroll } from "./hooks/useUsedCarsScroll";
+} from "./const.js";
+import { useUsedCarsOverview } from "./hooks/useUsedCarsOverview.js";
+import { useUsedCarsScroll } from "./hooks/useUsedCarsScroll.js";
 import {
 	getUsedCarsUnavailableDescriptionStyle,
 	getUsedCarsAnimatedDivStyle,
 	getUsedCarsCustomLoadingOutlineStyle,
-} from "./styleHandler";
-import SectionContainer from "../../../components/SectionContainer/SectionContainer";
-import SectionBackground from "../../../components/SectionBackground/SectionBackground";
-import UsedCarCard from "../UsedCarCard/UsedCarCard";
-import CustomText from "../../../components/CustomText/CustomText";
-import LoadingOutlined from "../../../components/LoadingOutlined/LoadingOutlined";
+} from "./styleHandler.js";
+import SectionContainer from "../../../components/SectionContainer/SectionContainer.js";
+import SectionBackground from "../../../components/SectionBackground/SectionBackground.js";
+import UsedCarCard from "../UsedCarCard/UsedCarCard.js";
+import CustomText from "../../../components/CustomText/CustomText.js";
+import LoadingOutlined from "../../../components/LoadingOutlined/LoadingOutlined.js";
 
 /**
  * This component represents the Used car section.

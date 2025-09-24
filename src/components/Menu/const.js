@@ -13,7 +13,7 @@ import {
 	USED_CARS_SECTION_NAME,
 	WHERE_WE_ARE_SECTION_ID,
 	WHERE_WE_ARE_SECTION_NAME,
-} from "../../utils/const";
+} from "../../utils/const.js";
 
 /**------------- Menu constants -------------**/
 

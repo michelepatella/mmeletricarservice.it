@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import InfoCard from "./InfoCard";
+import InfoCard from "./InfoCard.js";
 
 // Definition of expected results
 const infoCardTitle = "Info Card Title";

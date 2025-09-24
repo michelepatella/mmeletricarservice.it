@@ -3,7 +3,7 @@ import {
 	RAG_SOCIALE,
 	REA,
 	SITE,
-} from "../../../utils/const";
+} from "../../../utils/const.js";
 
 /**------------- Contacts Footer constants -------------**/
 

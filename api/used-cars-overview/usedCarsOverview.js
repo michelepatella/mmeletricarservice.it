@@ -1,15 +1,11 @@
+import { SentryNode } from "../utils/setup.js";
 import {
 	NO_USED_CAR_AVAILABLE_MESSAGE,
 	USED_CAR_OVERVIEW_IMAGE_LIMIT,
 	USED_CAR_OVERVIEW_TABLE,
 } from "./const.js";
-import {
-	API_FOLDER_PATH,
-	USED_CARS_OVERVIEW_ENDPOINT,
-} from "../../src/utils/const";
 import { getUsedCarImages } from "../utils/usedCarImagesGetter.js";
 import { getUsedCarData } from "../utils/usedCarsDataGetter.js";
-import { Sentry } from "../utils/setup";
 
 /**
  * The following API retrieves salient information
@@ -29,11 +25,11 @@ import { Sentry } from "../utils/setup";
  */
 export default async function handler(req, res) {
 	try {
-		Sentry.setTag(
+		SentryNode.setTag(
 			"endpoint",
-			API_FOLDER_PATH + USED_CARS_OVERVIEW_ENDPOINT
+			"/api/used-cars-overview/usedCarsOverview"
 		);
-		Sentry.setContext("request", {
+		SentryNode.setContext("request", {
 			method: req.method,
 			headers: req.headers,
 			query: req.query,
@@ -53,7 +49,7 @@ export default async function handler(req, res) {
 			!usedCarsOverviewInfo ||
 			usedCarsOverviewInfo.length === 0
 		) {
-			Sentry.logger.warn(
+			SentryNode.logger.warn(
 				"No used car overview information found",
 				{
 					table: USED_CAR_OVERVIEW_TABLE,
@@ -66,8 +62,8 @@ export default async function handler(req, res) {
 			});
 		}
 
-		Sentry.logger.info(
-			"Used car overview information retrieved",
+		SentryNode.logger.info(
+			"Used car overview data retrieved",
 			{
 				table: USED_CAR_OVERVIEW_TABLE,
 				carsCount: usedCarsOverviewInfo.length,
@@ -88,15 +84,21 @@ export default async function handler(req, res) {
 					// at least one car, show a warning
 					// message otherwise
 					if (images && images.length > 0) {
-						Sentry.logger.info("Used car image retrieved", {
-							carId: car.id,
-							imageCount: images.length,
-						});
+						SentryNode.logger.info(
+							"Used car image retrieved",
+							{
+								carId: car.id,
+								imageCount: images.length,
+							}
+						);
 					} else {
-						Sentry.logger.warn("No used car image found", {
-							carId: car.id,
-							imageCount: 0,
-						});
+						SentryNode.logger.warn(
+							"No used car image found",
+							{
+								carId: car.id,
+								imageCount: 0,
+							}
+						);
 					}
 					return {
 						...car,
@@ -110,16 +112,19 @@ export default async function handler(req, res) {
 			);
 		durationMs = Date.now() - startTime;
 
-		Sentry.logger.info("All used car images retrieved", {
-			carsCount: usedCarsOverviewInfoWithImages.length,
-			durationMs: durationMs,
-			endpoint:
-				API_FOLDER_PATH + USED_CARS_OVERVIEW_ENDPOINT,
-		});
+		SentryNode.logger.info(
+			"All used car images retrieved",
+			{
+				carsCount: usedCarsOverviewInfoWithImages.length,
+				durationMs: durationMs,
+				endpoint:
+					"/api/used-cars-overview/usedCarsOverview",
+			}
+		);
 
 		const globalDurationMs = Date.now() - globalStartTime;
 
-		Sentry.logger.info(
+		SentryNode.logger.info(
 			"All used cars overview information retrieved",
 			{
 				carsCount: usedCarsOverviewInfoWithImages.length,
@@ -132,11 +137,10 @@ export default async function handler(req, res) {
 			used_cars_overview: usedCarsOverviewInfoWithImages,
 		});
 	} catch (error) {
-		Sentry.logger.error(error, {
+		SentryNode.logger.error(error, {
 			requestQuery: req.query,
 			requestBody: req.body,
-			endpoint:
-				API_FOLDER_PATH + USED_CARS_OVERVIEW_ENDPOINT,
+			endpoint: "/api/used-cars-overview/usedCarsOverview",
 		});
 		return res.status(400).json({
 			error: error.message,

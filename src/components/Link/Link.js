@@ -1,4 +1,4 @@
-import { LINK_CLASS_NAME } from "./const";
+import { LINK_CLASS_NAME } from "./const.js";
 
 /**
  * This component represents the link used

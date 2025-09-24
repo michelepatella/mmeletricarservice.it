@@ -1,4 +1,4 @@
-import { MAP_ICON_LINK } from "./const";
+import { MAP_ICON_LINK } from "./const.js";
 
 /**
  * Method to get the Google Maps container

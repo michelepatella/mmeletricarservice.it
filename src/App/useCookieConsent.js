@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
-import { COOKIE_NAME } from "../utils/const";
-import { Sentry } from "../index";
+import { SentryReact } from "../index.js";
+import { COOKIE_NAME } from "../utils/const.js";
 
 /**
  * Custom hook to manage cookie consent.
@@ -41,27 +41,33 @@ export const useCookieConsent = () => {
 			if (cookieConsent === "true") {
 				// Cookies have been accepted
 				setCookiesAccepted(true);
-				Sentry.logger.info("Cookies previously accepted", {
-					cookieName: COOKIE_NAME,
-				});
+				SentryReact.logger.info(
+					"Cookies previously accepted",
+					{
+						cookieName: COOKIE_NAME,
+					}
+				);
 			} else if (cookieConsent === "false") {
 				// Cookies have been refused
 				setCookiesAccepted(false);
-				Sentry.logger.info("Cookies previously declined", {
-					cookieName: COOKIE_NAME,
-				});
+				SentryReact.logger.info(
+					"Cookies previously declined",
+					{
+						cookieName: COOKIE_NAME,
+					}
+				);
 			} else {
 				// No explicit choice: show the cookie banner
 				// to ask the user a choice and set cookies to refused
 				// by default
 				setIsCookiesBannerVisible(true);
 				setCookiesAccepted(false);
-				Sentry.logger.warn("No cookie consent found", {
+				SentryReact.logger.warn("No cookie consent found", {
 					cookieName: COOKIE_NAME,
 				});
 			}
 		} catch (error) {
-			Sentry.logger.error(error, {
+			SentryReact.logger.error(error, {
 				cookieName: COOKIE_NAME,
 			});
 
@@ -80,7 +86,7 @@ export const useCookieConsent = () => {
 		// cookie consent banner
 		setCookiesAccepted(true);
 		setIsCookiesBannerVisible(false);
-		Sentry.logger.info("User accepted cookies", {
+		SentryReact.logger.info("User accepted cookies", {
 			cookieName: COOKIE_NAME,
 		});
 	};
@@ -98,7 +104,7 @@ export const useCookieConsent = () => {
 		// cookies completely from the session
 		if (cookiesAccepted) {
 			isRefreshNeeded = true;
-			Sentry.logger.warn(
+			SentryReact.logger.warn(
 				"User changed cookie consent from accepted to declined",
 				{ cookieName: COOKIE_NAME }
 			);
@@ -109,7 +115,7 @@ export const useCookieConsent = () => {
 		setCookiesAccepted(false);
 		setIsCookiesBannerVisible(false);
 
-		Sentry.logger.info("User declined cookies", {
+		SentryReact.logger.info("User declined cookies", {
 			cookieName: COOKIE_NAME,
 		});
 
@@ -118,9 +124,9 @@ export const useCookieConsent = () => {
 			try {
 				/* eslint-disable-next-line no-undef */
 				globalThis.location.reload();
-				Sentry.logger.info("Page has been refreshed");
+				SentryReact.logger.info("Page has been refreshed");
 			} catch (error) {
-				Sentry.logger.error(error, {
+				SentryReact.logger.error(error, {
 					context: "Page refresh after cookie decline",
 				});
 			}

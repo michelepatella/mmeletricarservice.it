@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import MenuWrapper from "./MenuWrapper";
+import MenuWrapper from "./MenuWrapper.js";
 
 const menuBigTestId = "Menu-big";
 const menuSmallTestId = "Menu-small";

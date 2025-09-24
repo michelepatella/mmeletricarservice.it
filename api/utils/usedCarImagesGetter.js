@@ -3,7 +3,7 @@ import {
 	USED_CAR_IMAGES_PATH,
 	USED_CAR_IMAGES_STORAGE,
 } from "./const.js";
-import { Sentry, supabase } from "./setup.js";
+import { SentryNode, supabase } from "./setup.js";
 
 /**
  * Method to retrieve used car images from Supabase
@@ -45,7 +45,7 @@ export async function getUsedCarImages(
 
 		// Check if any error occurred
 		if (error) {
-			Sentry.logger.error(error, {
+			SentryNode.logger.error(error, {
 				carId: id,
 				limit: limit,
 				storage: USED_CAR_IMAGES_STORAGE,
@@ -54,7 +54,7 @@ export async function getUsedCarImages(
 		}
 
 		if (!usedCarImages || usedCarImages.length === 0) {
-			Sentry.logger.warn("No images found", {
+			SentryNode.logger.warn("No images found", {
 				carId: id,
 				limit: limit,
 				storage: USED_CAR_IMAGES_STORAGE,
@@ -65,7 +65,7 @@ export async function getUsedCarImages(
 		// Show a warning message whether image limit
 		// is greater than used car images available
 		if (usedCarImages.length < limit) {
-			Sentry.logger.warn(
+			SentryNode.logger.warn(
 				"Requested image limit exceeds available images",
 				{
 					carId: id,
@@ -87,7 +87,7 @@ export async function getUsedCarImages(
 		);
 	} catch (error) {
 		// Handle errors
-		Sentry.logger.error(error, {
+		SentryNode.logger.error(error, {
 			carId: id,
 			limit: limit,
 			storage: USED_CAR_IMAGES_STORAGE,

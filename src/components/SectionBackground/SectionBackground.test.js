@@ -1,8 +1,8 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import SectionBackground from "./SectionBackground";
-import { getSectionBackgroundStyle } from "./styleHandler";
+import SectionBackground from "./SectionBackground.js";
+import { getSectionBackgroundStyle } from "./styleHandler.js";
 
 // Mock IntersectionObserver
 beforeAll(() => {

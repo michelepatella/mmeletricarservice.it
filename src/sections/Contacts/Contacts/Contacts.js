@@ -3,10 +3,10 @@ import {
 	CONTACTS_CONTENT_CLASS_NAME,
 	CONTACTS_FOOTER_CLASS_NAME,
 	CONTACTS_LAYOUT_CLASS_NAME,
-} from "./const";
-import { CONTACTS_SECTION_ID } from "../../../utils/const";
-import ContactsContent from "../ContactsContent/ContactsContent";
-import ContactsFooter from "../ContactsFooter/ContactsFooter";
+} from "./const.js";
+import { CONTACTS_SECTION_ID } from "../../../utils/const.js";
+import ContactsContent from "../ContactsContent/ContactsContent.js";
+import ContactsFooter from "../ContactsFooter/ContactsFooter.js";
 
 // Contact Layout definition:
 // it's composed by a content and footer

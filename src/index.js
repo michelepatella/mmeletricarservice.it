@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import * as Sentry from "@sentry/react";
-import App from "./App/App";
+import * as SentryReact from "@sentry/react";
+import App from "./App/App.js";
 
 // Sentry initialization
-Sentry.init({
+SentryReact.init({
 	dsn: process.env.SENTRY_DSN,
 	sendDefaultPii: true,
 	integrations: [
-		Sentry.browserTracingIntegration(),
-		Sentry.replayIntegration(),
-		Sentry.consoleLoggingIntegration({
+		SentryReact.browserTracingIntegration(),
+		SentryReact.replayIntegration(),
+		SentryReact.consoleLoggingIntegration({
 			levels: ["info", "warn", "error"],
 		}),
 	],
@@ -24,7 +24,7 @@ Sentry.init({
 	enableLogs: true,
 });
 
-export { Sentry };
+export { SentryReact };
 
 const root = ReactDOM.createRoot(
 	document.getElementById("root")

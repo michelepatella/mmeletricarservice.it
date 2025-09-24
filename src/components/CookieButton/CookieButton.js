@@ -3,8 +3,8 @@ import { Button } from "antd";
 import {
 	COOKIE_BUTTON_ARIA_LABEL,
 	COOKIE_BUTTON_CLASS_NAME,
-} from "./const";
-import { onCookieButtonClick } from "./handler";
+} from "./const.js";
+import { onCookieButtonClick } from "./handler.js";
 
 /**
  * This component defines the cookie button displayed

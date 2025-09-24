@@ -1,7 +1,7 @@
 import {
 	ICON_BUTTON_IMAGE_ALT,
 	ICON_BUTTON_CLASS_NAME,
-} from "./const";
+} from "./const.js";
 
 /**
  * This component defines an icon button, which

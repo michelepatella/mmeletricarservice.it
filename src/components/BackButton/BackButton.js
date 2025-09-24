@@ -3,9 +3,9 @@ import { LeftOutlined } from "@ant-design/icons";
 import {
 	BACK_BUTTON_LABEL,
 	BACK_BUTTON_CLASS_NAME,
-} from "./const";
-import { CUSTOM_TEXT_TYPES } from "../../utils/const";
-import CustomText from "../CustomText/CustomText";
+} from "./const.js";
+import { CUSTOM_TEXT_TYPES } from "../../utils/const.js";
+import CustomText from "../CustomText/CustomText.js";
 
 /**
  * This component defines a back

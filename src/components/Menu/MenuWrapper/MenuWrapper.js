@@ -1,5 +1,5 @@
-import MenuSmallScreen from "../MenuSmallScreen/MenuSmallScreen";
-import MenuBigScreen from "../MenuBigScreen/MenuBigScreen";
+import MenuSmallScreen from "../MenuSmallScreen/MenuSmallScreen.js";
+import MenuBigScreen from "../MenuBigScreen/MenuBigScreen.js";
 
 /**
  * This component represent the wrapper of the

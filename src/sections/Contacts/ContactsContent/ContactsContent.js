@@ -4,16 +4,16 @@ import {
 	CONTACTS_SECTION_ID,
 	CUSTOM_TEXT_TYPES,
 	DOTTED_BACKGROUND_IMAGE_LINK,
-} from "../../../utils/const";
+} from "../../../utils/const.js";
 import {
 	CONTACTS_BUTTONS_CONTAINER_CLASS_NAME,
 	CONTACTS_TITLE,
-} from "./const";
-import CustomButton from "../../../components/CustomButton/CustomButton";
-import CustomText from "../../../components/CustomText/CustomText";
-import BlockQuote from "../../../components/BlockQuote/BlockQuote";
-import SectionContainer from "../../../components/SectionContainer/SectionContainer";
-import SectionBackground from "../../../components/SectionBackground/SectionBackground";
+} from "./const.js";
+import CustomButton from "../../../components/CustomButton/CustomButton.js";
+import CustomText from "../../../components/CustomText/CustomText.js";
+import BlockQuote from "../../../components/BlockQuote/BlockQuote.js";
+import SectionContainer from "../../../components/SectionContainer/SectionContainer.js";
+import SectionBackground from "../../../components/SectionBackground/SectionBackground.js";
 
 /**
  * This component represent the content

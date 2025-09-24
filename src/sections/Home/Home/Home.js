@@ -3,14 +3,14 @@ import {
 	HOME_CONTENT_CLASS_NAME,
 	HOME_HEADER_CLASS_NAME,
 	HOME_LAYOUT_CLASS_NAME,
-} from "./const";
+} from "./const.js";
 import {
 	DOTTED_BACKGROUND_IMAGE_LINK,
 	HOME_SECTION_ID,
-} from "../../../utils/const";
-import HomeHeader from "../HomeHeader/HomeHeader";
-import HomeContent from "../HomeContent/HomeContent";
-import SectionBackground from "../../../components/SectionBackground/SectionBackground";
+} from "../../../utils/const.js";
+import HomeHeader from "../HomeHeader/HomeHeader.js";
+import HomeContent from "../HomeContent/HomeContent.js";
+import SectionBackground from "../../../components/SectionBackground/SectionBackground.js";
 
 // Home Layout definition:
 // it's composed by a header and a content

@@ -1,4 +1,4 @@
-import { BLOCK_QUOTE_CLASS_NAME } from "./const";
+import { BLOCK_QUOTE_CLASS_NAME } from "./const.js";
 
 /**
  * This component defines the block quote

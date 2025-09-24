@@ -5,7 +5,7 @@ import {
 	MENU_BIG_ANIMATION_DURATION,
 	MENU_BIG_FINAL_OPACITY,
 	MENU_BIG_FINAL_X_POSITION,
-} from "./const";
+} from "./const.js";
 
 /**
  * Helper method to check element visibility

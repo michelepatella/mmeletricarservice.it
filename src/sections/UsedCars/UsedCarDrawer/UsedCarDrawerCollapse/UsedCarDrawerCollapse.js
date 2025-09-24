@@ -4,18 +4,18 @@ import {
 	MinusOutlined,
 	PlusOutlined,
 } from "@ant-design/icons";
-import { CUSTOM_TEXT_TYPES } from "../../../../utils/const";
+import { CUSTOM_TEXT_TYPES } from "../../../../utils/const.js";
 import {
 	ALL_USED_CAR_INFO,
 	USED_CAR_DRAWER_COLLAPSE_CLASS_NAME,
 	USED_CAR_DRAWER_COLLAPSE_INNER_LIST_CLASS_NAME,
 	USED_CAR_DRAWER_COLLAPSE_OUTER_LIST_CLASS_NAME,
-} from "./const";
+} from "./const.js";
 import {
 	getUsedCarDrawerCollapseInformationNameStyle,
 	getUsedCarDrawerCollapseInformationTextStyle,
-} from "./styleHandler";
-import CustomText from "../../../../components/CustomText/CustomText";
+} from "./styleHandler.js";
+import CustomText from "../../../../components/CustomText/CustomText.js";
 
 /**
  * This component represents a collapse used into the

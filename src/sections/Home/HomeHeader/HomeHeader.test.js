@@ -5,9 +5,9 @@ import {
 	screen,
 	fireEvent,
 } from "@testing-library/react";
-import HomeHeader from "./HomeHeader";
+import HomeHeader from "./HomeHeader.js";
 
-import { HOME_HEADER_CONTACT_BUTTONS } from "./const";
+import { HOME_HEADER_CONTACT_BUTTONS } from "./const.js";
 
 const customIconButtonTestId = "custom-button";
 

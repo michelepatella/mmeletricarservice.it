@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { DATA_STALE_TIME } from "../../const";
-import { USED_CARS_OVERVIEW_API_KEY } from "../const";
-import { fetchUsedCarData } from "../../../../utils/dataFetcher";
-import { USED_CARS_OVERVIEW_ENDPOINT } from "../../../../utils/const";
-import { Sentry } from "../../../../index";
+import { SentryReact } from "../../../../index.js";
+import { DATA_STALE_TIME } from "../../const.js";
+import { USED_CARS_OVERVIEW_API_KEY } from "../const.js";
+import { USED_CARS_OVERVIEW_ENDPOINT } from "../../../../utils/const.js";
+import { fetchUsedCarData } from "../../../../utils/dataFetcher.js";
 
 /**
  * Custom hook to fetch the overview list of used cars, by
@@ -28,24 +28,24 @@ export const useUsedCarsOverview = () => {
 
 	// Keep track of fetching status
 	if (isFetching && !isLoading) {
-		Sentry.logger.info(
+		SentryReact.logger.info(
 			"Fetching used cars overview started"
 		);
 	}
 
 	// Check if any error
 	if (isError)
-		Sentry.logger.error(
+		SentryReact.logger.error(
 			"Error while fetching used cars overview"
 		);
 
 	// Check whether the data retrieved is empty
 	if (data?.used_cars_overview) {
-		Sentry.logger.info("Used cars overview fetched", {
+		SentryReact.logger.info("Used cars overview fetched", {
 			count: data.used_cars_overview.length,
 		});
 	} else {
-		Sentry.logger.warn(
+		SentryReact.logger.warn(
 			"Used cars overview fetched but empty"
 		);
 	}

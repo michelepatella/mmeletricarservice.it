@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { DATA_STALE_TIME } from "../../../const";
-import { USED_CAR_INFO_API_KEY } from "../const";
-import { fetchUsedCarData } from "../../../../../utils/dataFetcher";
-import { USED_CAR_INFO_ENDPOINT } from "../../../../../utils/const";
-import { Sentry } from "../../../../../index";
+import { SentryReact } from "../../../../../index.js";
+import { DATA_STALE_TIME } from "../../../const.js";
+import { USED_CAR_INFO_API_KEY } from "../const.js";
+import { USED_CAR_INFO_ENDPOINT } from "../../../../../utils/const.js";
+import { fetchUsedCarData } from "../../../../../utils/dataFetcher.js";
 
 /**
  * Custom hook to orchestrate used car info fetching, by
@@ -32,14 +32,17 @@ export const useUsedCarInfo = ({ usedCarId }) => {
 
 	// Keep track of fetching status
 	if (isFetching && !isLoading) {
-		Sentry.logger.info("Fetching used car info started", {
-			carId: usedCarId,
-		});
+		SentryReact.logger.info(
+			"Fetching used car info started",
+			{
+				carId: usedCarId,
+			}
+		);
 	}
 
 	// Check if any error
 	if (isError)
-		Sentry.logger.error(
+		SentryReact.logger.error(
 			"Error while fetching used car data",
 			{
 				carId: usedCarId,
@@ -48,16 +51,19 @@ export const useUsedCarInfo = ({ usedCarId }) => {
 
 	// Check whether the data retrieved is empty
 	if (data?.used_car_info) {
-		Sentry.logger.info("Used car info fetched", {
+		SentryReact.logger.info("Used car info fetched", {
 			carId: usedCarId,
 			fieldsRetrieved: Object.keys(data.used_car_info)
 				.length,
 			imagesCount: data.used_car_info.images?.length || 0,
 		});
 	} else {
-		Sentry.logger.warn("Used car info fetched but empty", {
-			carId: usedCarId,
-		});
+		SentryReact.logger.warn(
+			"Used car info fetched but empty",
+			{
+				carId: usedCarId,
+			}
+		);
 	}
 
 	return {

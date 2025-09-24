@@ -3,7 +3,7 @@ import { Carousel, Image } from "antd";
 import {
 	NO_USED_CAR_IMAGE_AVAILABLE_LINK,
 	USED_CAR_DRAWER_CAROUSEL_CONTAINER_CLASS_NAME,
-} from "./const";
+} from "./const.js";
 
 /**
  * This component represents the carousel used for

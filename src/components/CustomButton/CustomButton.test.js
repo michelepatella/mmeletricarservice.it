@@ -5,7 +5,7 @@ import {
 	screen,
 	fireEvent,
 } from "@testing-library/react";
-import CustomButton from "./CustomButton";
+import CustomButton from "./CustomButton.js";
 
 // Definition of expected results
 const customButtonText = "Custom Button Text";

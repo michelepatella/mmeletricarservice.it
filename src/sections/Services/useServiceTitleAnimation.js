@@ -3,7 +3,7 @@ import {
 	SERVICES_TITLE,
 	SERVICES_TITLE_ANIMATION_LETTERS_DELAY,
 	SERVICES_TITLE_ANIMATION_WORDS_DELAY,
-} from "./const";
+} from "./const.js";
 
 /**
  * Custom hook to animate services title.

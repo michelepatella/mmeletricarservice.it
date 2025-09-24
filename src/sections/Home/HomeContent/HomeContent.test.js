@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import HomeContent from "./HomeContent";
+import HomeContent from "./HomeContent.js";
 
 // Definition of expected results
 const homeTitle = "Home Title";

@@ -5,15 +5,15 @@ import {
 	OUR_VALUES_STEPS_CLASS_NAME,
 	OUR_VALUES_STEPS_DIRECTION,
 	OUR_VALUES_TITLE,
-} from "./const";
+} from "./const.js";
 import {
 	CUSTOM_TEXT_TYPES,
 	DOTTED_BACKGROUND_IMAGE_LINK,
 	OUR_VALUES_SECTION_ID,
-} from "../../utils/const";
-import SectionBackground from "../../components/SectionBackground/SectionBackground";
-import SectionContainer from "../../components/SectionContainer/SectionContainer";
-import CustomText from "../../components/CustomText/CustomText";
+} from "../../utils/const.js";
+import SectionBackground from "../../components/SectionBackground/SectionBackground.js";
+import SectionContainer from "../../components/SectionContainer/SectionContainer.js";
+import CustomText from "../../components/CustomText/CustomText.js";
 
 /**
  * This component represents Our values section,

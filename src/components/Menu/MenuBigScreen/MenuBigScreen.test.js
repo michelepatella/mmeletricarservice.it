@@ -1,8 +1,8 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import MenuBigScreen from "./MenuBigScreen";
-import { useMenu } from "../useMenu";
+import MenuBigScreen from "./MenuBigScreen.js";
+import { useMenu } from "../useMenu.js";
 
 // Definition of Menu items
 const menuItems = [

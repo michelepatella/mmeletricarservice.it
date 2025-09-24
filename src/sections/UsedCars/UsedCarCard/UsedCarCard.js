@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Flex } from "antd";
-import { CUSTOM_TEXT_TYPES } from "../../../utils/const";
+import { CUSTOM_TEXT_TYPES } from "../../../utils/const.js";
 import {
 	USED_CAR_CARD_CLASS_NAME,
 	USED_CAR_CARD_OVERVIEW_FLEX_CONTAINER_CLASS_NAME,
@@ -9,17 +9,17 @@ import {
 	USED_CAR_CARD_PRICE_CONTAINER_CLASS_NAME,
 	USED_CAR_CARD_TYPE,
 	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION,
-} from "./const";
+} from "./const.js";
 import {
 	PRICE_CURRENCY,
 	PRICE_LOCALES,
 	PRICE_STYLE,
-} from "../const";
-import { onUsedCarDrawerOpen } from "../handler";
-import { useOpenUsedCarDrawerFromUrl } from "./useOpenUsedCarDrawerFromUrl";
-import UsedCarDrawer from "../UsedCarDrawer/UsedCarDrawer/UsedCarDrawer";
-import CustomText from "../../../components/CustomText/CustomText";
-import UsedCarOverview from "../UsedCarOverview/UsedCarOverview";
+} from "../const.js";
+import { onUsedCarDrawerOpen } from "../handler.js";
+import { useOpenUsedCarDrawerFromUrl } from "./useOpenUsedCarDrawerFromUrl.js";
+import UsedCarDrawer from "../UsedCarDrawer/UsedCarDrawer/UsedCarDrawer.js";
+import CustomText from "../../../components/CustomText/CustomText.js";
+import UsedCarOverview from "../UsedCarOverview/UsedCarOverview.js";
 
 /**
  * This component represents the card used to show

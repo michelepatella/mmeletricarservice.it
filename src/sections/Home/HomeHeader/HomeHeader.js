@@ -1,5 +1,5 @@
-import { HOME_HEADER_CONTACT_BUTTONS } from "./const";
-import IconButton from "../../../components/IconButton/IconButton";
+import { HOME_HEADER_CONTACT_BUTTONS } from "./const.js";
+import IconButton from "../../../components/IconButton/IconButton.js";
 
 /**
  * This component represents the header

@@ -7,20 +7,20 @@ import {
 	SERVICES_TITLE,
 	SERVICES_TITLE_ANIMATION_THRESHOLD,
 	SERVICES_TITLE_ANIMATION_TRIGGER_ONCE,
-} from "./const";
+} from "./const.js";
 import {
 	CUSTOM_TEXT_TYPES,
 	SERVICES_SECTION_ID,
-} from "../../utils/const";
-import { useServiceTitleAnimation } from "./useServiceTitleAnimation";
+} from "../../utils/const.js";
+import { useServiceTitleAnimation } from "./useServiceTitleAnimation.js";
 import {
 	getServicesTitleSpanStyle,
 	getServicesTitleStyle,
-} from "./styleHandler";
-import SectionBackground from "../../components/SectionBackground/SectionBackground";
-import SectionContainer from "../../components/SectionContainer/SectionContainer";
-import InfoCard from "../../components/InfoCard/InfoCard";
-import CustomText from "../../components/CustomText/CustomText";
+} from "./styleHandler.js";
+import SectionBackground from "../../components/SectionBackground/SectionBackground.js";
+import SectionContainer from "../../components/SectionContainer/SectionContainer.js";
+import InfoCard from "../../components/InfoCard/InfoCard.js";
+import CustomText from "../../components/CustomText/CustomText.js";
 
 /**
  * This section represents Services section. The

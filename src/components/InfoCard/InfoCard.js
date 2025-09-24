@@ -4,13 +4,13 @@ import {
 	INFO_CARD_FLEX_CLASS_NAME,
 	INFO_CARD_ICON_ALT,
 	INFO_CARD_ICON_CLASS_NAME,
-} from "./const";
-import { CUSTOM_TEXT_TYPES } from "../../utils/const";
+} from "./const.js";
+import { CUSTOM_TEXT_TYPES } from "../../utils/const.js";
 import {
 	getInfoCardDescriptionStyle,
 	getInfoCardTitleStyle,
-} from "./styleHandler";
-import CustomText from "../CustomText/CustomText";
+} from "./styleHandler.js";
+import CustomText from "../CustomText/CustomText.js";
 
 /**
  * This component represents an info card. It is composed by

@@ -5,15 +5,15 @@ import {
 	COOKIE_CONSENT_BANNER_DESCRIPTION,
 	COOKIE_CONSENT_BANNER_LOCATION,
 	COOKIE_EXPIRATION_DATE,
-} from "./const";
+} from "./const.js";
 import {
 	COOKIE_NAME,
 	COOKIE_POLICY_LINK,
 	COOKIE_POLICY_TEXT,
 	PRIVACY_POLICY_LINK,
 	PRIVACY_POLICY_TEXT,
-} from "../../utils/const";
-import Link from "../Link/Link";
+} from "../../utils/const.js";
+import Link from "../Link/Link.js";
 
 /**
  * This component represents the cookie

@@ -1,4 +1,4 @@
-import { SECTION_CONTAINER_CLASS_NAME } from "./const";
+import { SECTION_CONTAINER_CLASS_NAME } from "./const.js";
 
 /**
  * This component represents the section container.

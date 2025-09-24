@@ -5,15 +5,15 @@ import {
 	USED_CAR_DRAWER_HORIZONTAL_FLEX_WIDTH,
 	USED_CAR_DRAWER_VERTICAL_FLEX_CLASS_NAME,
 	USED_CAR_DRAWER_VERTICAL_FLEX_WIDTH,
-} from "./const";
-import { useUsedCarInfo } from "./hooks/useUsedCarInfo";
-import { useDrawerBackButtonHandler } from "./hooks/useDrawerBackButton";
-import { onUsedCarDrawerClose } from "../../handler";
-import { getUsedCarDrawerCustomLoadingOutlinedStyle } from "./styleHandler";
-import UsedCarDrawerCarousel from "../UsedCarDrawerCarousel/UsedCarDrawerCarousel";
-import UsedCarDrawerInfoPanel from "../UsedCarDrawerInfoPanel/UsedCarDrawerInfoPanel";
-import BackButton from "../../../../components/BackButton/BackButton";
-import LoadingOutlined from "../../../../components/LoadingOutlined/LoadingOutlined";
+} from "./const.js";
+import { useUsedCarInfo } from "./hooks/useUsedCarInfo.js";
+import { useDrawerBackButtonHandler } from "./hooks/useDrawerBackButton.js";
+import { onUsedCarDrawerClose } from "../../handler.js";
+import { getUsedCarDrawerCustomLoadingOutlinedStyle } from "./styleHandler.js";
+import UsedCarDrawerCarousel from "../UsedCarDrawerCarousel/UsedCarDrawerCarousel.js";
+import UsedCarDrawerInfoPanel from "../UsedCarDrawerInfoPanel/UsedCarDrawerInfoPanel.js";
+import BackButton from "../../../../components/BackButton/BackButton.js";
+import LoadingOutlined from "../../../../components/LoadingOutlined/LoadingOutlined.js";
 
 /**
  * This component represents the used car drawer,

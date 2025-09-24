@@ -11,13 +11,13 @@ import {
 	MENU_SMALL_CLOSE_OUTLINE_CLASS_NAME,
 	MENU_SMALL_CONTAINER_CLASS_NAME,
 	MENU_SMALL_DRAWER_PLACEMENT,
-} from "./const";
-import { useMenu } from "../useMenu";
+} from "./const.js";
+import { useMenu } from "../useMenu.js";
 import {
 	getMenuParentItemStyle,
 	getMenuChildrenItemStyle,
 	getHamburgerButtonStyle,
-} from "./styleHandler";
+} from "./styleHandler.js";
 
 /**
  * This component represents the Menu for small screens (e.g., smartphone).

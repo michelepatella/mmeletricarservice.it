@@ -16,4 +16,4 @@ SentryNode.init({
 	sendDefaultPii: true,
 });
 
-export const Sentry = SentryNode;
+export { SentryNode };

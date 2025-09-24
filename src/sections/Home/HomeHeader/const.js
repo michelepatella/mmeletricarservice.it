@@ -2,12 +2,12 @@ import {
 	EMAIL_ICON_LINK,
 	FACEBOOK_ICON_LINK,
 	PHONE_ICON_LINK,
-} from "../../../utils/const";
+} from "../../../utils/const.js";
 import {
 	onEmailButtonClick,
 	onFacebookButtonClick,
 	onPhoneButtonClick,
-} from "../../../utils/contactHandlers";
+} from "../../../utils/contactHandlers.js";
 
 /* — Buttons — */
 export const HOME_HEADER_CONTACT_BUTTONS = [

@@ -5,8 +5,8 @@ import {
 	screen,
 	fireEvent,
 } from "@testing-library/react";
-import MenuSmallScreen from "./MenuSmallScreen";
-import { useMenu } from "../useMenu";
+import MenuSmallScreen from "./MenuSmallScreen.js";
+import { useMenu } from "../useMenu.js";
 
 // Definition of Menu items
 const child = [

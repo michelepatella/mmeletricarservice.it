@@ -3,15 +3,15 @@ import {
 	ABOUT_US_BACKGROUND_IMAGE_LINK,
 	ABOUT_US_DESCRIPTION,
 	ABOUT_US_TITLE,
-} from "./const";
+} from "./const.js";
 import {
 	ABOUT_US_SECTION_ID,
 	CUSTOM_TEXT_TYPES,
-} from "../../utils/const";
-import { getAboutUsSectionContainerStyle } from "./styleHandler";
-import SectionContainer from "../../components/SectionContainer/SectionContainer";
-import SectionBackground from "../../components/SectionBackground/SectionBackground";
-import CustomText from "../../components/CustomText/CustomText";
+} from "../../utils/const.js";
+import { getAboutUsSectionContainerStyle } from "./styleHandler.js";
+import SectionContainer from "../../components/SectionContainer/SectionContainer.js";
+import SectionBackground from "../../components/SectionBackground/SectionBackground.js";
+import CustomText from "../../components/CustomText/CustomText.js";
 
 /**
  * This component represents the About us sections,

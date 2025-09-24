@@ -6,8 +6,8 @@ import {
 	HOME_SUBTITLE_CLASS_NAME,
 	HOME_TITLE,
 	HOME_TITLE_CLASS_NAME,
-} from "./const";
-import { HOME_SECTION_ID } from "../../../utils/const";
+} from "./const.js";
+import { HOME_SECTION_ID } from "../../../utils/const.js";
 
 /**
  * This component represents the content

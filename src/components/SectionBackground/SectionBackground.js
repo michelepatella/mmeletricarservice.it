@@ -1,5 +1,5 @@
-import { SECTION_BACKGROUND_TEST_ID } from "./const";
-import { getSectionBackgroundStyle } from "./styleHandler";
+import { SECTION_BACKGROUND_TEST_ID } from "./const.js";
+import { getSectionBackgroundStyle } from "./styleHandler.js";
 
 /**
  * This component defines the background container of a section.

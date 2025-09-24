@@ -6,7 +6,7 @@ import {
 	LOADING_OUTLINED_LOGO_IMAGE_ALT,
 	LOADING_OUTLINED_LOGO_IMAGE_CLASS_NAME,
 	LOGO_LOADING_OUTLINED_IMAGE_LINK,
-} from "./const";
+} from "./const.js";
 
 /**
  * This component defines the loading

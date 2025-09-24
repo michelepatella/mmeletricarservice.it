@@ -1,9 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import BackButton from "./BackButton";
+import BackButton from "./BackButton.js";
 
-import { BACK_BUTTON_LABEL } from "./const";
+import { BACK_BUTTON_LABEL } from "./const.js";
 
 // Definition of expected results
 const backButtonLabel = "Back Button Label";

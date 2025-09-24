@@ -1,4 +1,4 @@
-import { SECTIONS_WRAPPER_CLASS_NAME } from "./const";
+import { SECTIONS_WRAPPER_CLASS_NAME } from "./const.js";
 
 /**
  * This component represents the wrapper for all the

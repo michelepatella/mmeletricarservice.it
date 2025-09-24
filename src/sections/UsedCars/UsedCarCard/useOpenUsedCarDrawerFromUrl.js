@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { onUsedCarDrawerOpen } from "../handler";
-import { USED_CAR_DRAWER_URL } from "../const";
-import { Sentry } from "../../../index";
+import { SentryReact } from "../../../index.js";
+import { USED_CAR_DRAWER_URL } from "../const.js";
+import { onUsedCarDrawerOpen } from "../handler.js";
 
 /**
  * Custom hook to check if the URL
@@ -39,13 +39,13 @@ export const useOpenUsedCarDrawerFromUrl = (
 				// to open the corresponding drawer
 				if (id === carId)
 					onUsedCarDrawerOpen(setIsDrawerOpen, carId);
-				Sentry.logger.info(
+				SentryReact.logger.info(
 					"Used car drawer opened from URL",
 					{ carId: carId }
 				);
 			}
 		} catch (error) {
-			Sentry.logger.error(error, {
+			SentryReact.logger.error(error, {
 				context: "Open used car drawer from URL",
 				carId: id,
 			});

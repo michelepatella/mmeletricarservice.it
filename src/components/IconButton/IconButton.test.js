@@ -5,7 +5,7 @@ import {
 	screen,
 	fireEvent,
 } from "@testing-library/react";
-import IconButton from "./IconButton";
+import IconButton from "./IconButton.js";
 
 // Definition of expected results
 const customIconButtonImg = "custom-button-icon";

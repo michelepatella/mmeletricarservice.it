@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import ContactsFooter from "./ContactsFooter";
+import ContactsFooter from "./ContactsFooter.js";
 
 // Definition of expected results
 const footerText = "Contacts Footer Text";

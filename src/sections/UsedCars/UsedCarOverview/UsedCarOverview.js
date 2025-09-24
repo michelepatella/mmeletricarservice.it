@@ -1,13 +1,13 @@
 import { Flex } from "antd";
-import { CUSTOM_TEXT_TYPES } from "../../../utils/const";
+import { CUSTOM_TEXT_TYPES } from "../../../utils/const.js";
 import {
 	ALL_USED_CAR_OVERVIEW_INFO,
 	USED_CAR_OVERVIEW_CONTAINER_CLASS_NAME,
 	USED_CAR_OVERVIEW_CONTAINER_GAP,
 	USED_CAR_OVERVIEW_ICON_ALT,
-} from "./const";
-import { getUsedCarOverviewTextStyle } from "./styleHandler";
-import CustomText from "../../../components/CustomText/CustomText";
+} from "./const.js";
+import { getUsedCarOverviewTextStyle } from "./styleHandler.js";
+import CustomText from "../../../components/CustomText/CustomText.js";
 
 /**
  * This component includes all used car overview information:

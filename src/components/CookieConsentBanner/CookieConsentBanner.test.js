@@ -5,7 +5,7 @@ import {
 	render,
 	screen,
 } from "@testing-library/react";
-import CookieConsentBanner from "./CookieConsentBanner";
+import CookieConsentBanner from "./CookieConsentBanner.js";
 
 // Definition of expected results
 const cookieExpirationDate = 365;

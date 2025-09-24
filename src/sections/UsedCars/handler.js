@@ -1,9 +1,9 @@
+import { SentryReact } from "../../index.js";
 import {
 	USED_CAR_DRAWER_OPEN_CLASS_NAME,
 	USED_CAR_DRAWER_URL,
 	USED_CAR_DRAWER_WIDTH,
-} from "./const";
-import { Sentry } from "../../index";
+} from "./const.js";
 
 let previousScrollY = 0;
 
@@ -43,11 +43,11 @@ export const onUsedCarDrawerOpen = (
 			"",
 			USED_CAR_DRAWER_URL + id
 		);
-		Sentry.logger.info("Used car drawer opened", {
+		SentryReact.logger.info("Used car drawer opened", {
 			carId: id,
 		});
 	} catch (error) {
-		Sentry.logger.error(error, {
+		SentryReact.logger.error(error, {
 			context: "Open used car drawer",
 			carId: id,
 		});
@@ -85,9 +85,9 @@ export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
 		// Redirect the user to the used cars page
 		/* eslint-disable-next-line no-undef */
 		globalThis.history.replaceState({}, "", "/");
-		Sentry.logger.info("Used car drawer closed");
+		SentryReact.logger.info("Used car drawer closed");
 	} catch (error) {
-		Sentry.logger.error(error, {
+		SentryReact.logger.error(error, {
 			context: "Close used car drawer",
 		});
 	}

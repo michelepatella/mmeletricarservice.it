@@ -6,8 +6,8 @@ import {
 	MENU_BIG_INITIAL_OPACITY,
 	MENU_BIG_INITIAL_X_POSITION,
 	MENU_BIG_MOTION_SECTION_CLASS_NAME,
-} from "./const";
-import { useMenu } from "../useMenu";
+} from "./const.js";
+import { useMenu } from "../useMenu.js";
 
 /**
  * This component represents the anchor Menu

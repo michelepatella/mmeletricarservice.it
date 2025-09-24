@@ -3,7 +3,7 @@ import {
 	DEFAULT_ID_FIELD,
 	DEFAULT_NO_ID,
 } from "./const.js";
-import { Sentry, supabase } from "./setup.js";
+import { SentryNode, supabase } from "./setup.js";
 
 /**
  * Method to retrieve all the used car data for a specific
@@ -44,7 +44,7 @@ export async function getUsedCarData(
 
 		// Check if any error occurred
 		if (error) {
-			Sentry.logger.error(error, {
+			SentryNode.logger.error(error, {
 				carId: id,
 				table: table,
 				fields: fields,
@@ -54,7 +54,7 @@ export async function getUsedCarData(
 
 		// Check whether retrieved data is empty
 		if (!usedCarData || usedCarData.length === 0) {
-			Sentry.logger.warn("No used car data found", {
+			SentryNode.logger.warn("No used car data found", {
 				carId: id,
 				table: table,
 				fields: fields,
@@ -65,7 +65,7 @@ export async function getUsedCarData(
 			? usedCarData
 			: usedCarData?.[0] || null;
 	} catch (error) {
-		Sentry.logger.error(error, {
+		SentryNode.logger.error(error, {
 			carId: id,
 			table: table,
 			fields: fields,
