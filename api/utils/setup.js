@@ -14,6 +14,10 @@ SentryNode.init({
 	tracesSampleRate: 1,
 	enableLogs: true,
 	sendDefaultPii: true,
+	tracePropagationTargets: [
+		"localhost",
+		/^https:\/\/mmeletricarservice\.it\/api/,
+	],
 });
 
 export { SentryNode };

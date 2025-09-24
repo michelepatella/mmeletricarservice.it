@@ -205,6 +205,8 @@ export default async function handler(req, res) {
 			durationMs: durationMs,
 		});
 
+		await SentryNode.flush(2000);
+
 		// Return all the used car data
 		res.status(200).json({
 			used_car_info: usedCarInfo,
@@ -216,6 +218,7 @@ export default async function handler(req, res) {
 			requestBody: req.body,
 			endpoint: "/api/used-car-info/usedCarInfo",
 		});
+		await SentryNode.flush(2000);
 		return res.status(400).json({
 			error: error.message,
 		});

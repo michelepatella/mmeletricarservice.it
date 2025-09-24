@@ -81,7 +81,7 @@ export const useCookieConsent = () => {
 	/**
 	 * To manage cookie accepting
 	 */
-	const handleAcceptCookies = () => {
+	const handleAcceptCookies = async () => {
 		// Set cookies as accepted and close the
 		// cookie consent banner
 		setCookiesAccepted(true);
@@ -89,12 +89,13 @@ export const useCookieConsent = () => {
 		SentryReact.logger.info("User accepted cookies", {
 			cookieName: COOKIE_NAME,
 		});
+		await SentryReact.flush(2000);
 	};
 
 	/**
 	 * To manage cookie declining
 	 */
-	const handleDeclineCookies = () => {
+	const handleDeclineCookies = async () => {
 		// Check if the page needs to be refreshed
 		// depending on the current cookie accepting state
 		let isRefreshNeeded = false;

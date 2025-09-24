@@ -17,7 +17,7 @@ SentryReact.init({
 	tracesSampleRate: 1,
 	tracePropagationTargets: [
 		"localhost",
-		/^https:\/\/mmeletricarservice\.it\/api/,
+		/^https:\/\/mmeletricarservice\.it/,
 	],
 	replaysSessionSampleRate: 0.1,
 	replaysOnErrorSampleRate: 1,

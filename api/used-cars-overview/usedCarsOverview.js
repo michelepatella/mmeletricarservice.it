@@ -132,6 +132,8 @@ export default async function handler(req, res) {
 			}
 		);
 
+		await SentryNode.flush(2000);
+
 		// Return combined data
 		res.status(200).json({
 			used_cars_overview: usedCarsOverviewInfoWithImages,
@@ -142,6 +144,7 @@ export default async function handler(req, res) {
 			requestBody: req.body,
 			endpoint: "/api/used-cars-overview/usedCarsOverview",
 		});
+		await SentryNode.flush(2000);
 		return res.status(400).json({
 			error: error.message,
 		});

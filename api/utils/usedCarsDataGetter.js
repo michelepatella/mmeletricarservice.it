@@ -61,6 +61,8 @@ export async function getUsedCarData(
 			});
 		}
 
+		await SentryNode.flush(2000);
+
 		return id === DEFAULT_NO_ID
 			? usedCarData
 			: usedCarData?.[0] || null;
@@ -70,6 +72,7 @@ export async function getUsedCarData(
 			table: table,
 			fields: fields,
 		});
+		await SentryNode.flush(2000);
 		return null;
 	}
 }

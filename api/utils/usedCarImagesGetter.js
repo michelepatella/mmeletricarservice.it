@@ -76,6 +76,8 @@ export async function getUsedCarImages(
 			);
 		}
 
+		await SentryNode.flush(2000);
+
 		// Extract and return used car image URL(s)
 		return usedCarImages.map(
 			(usedCarImage) =>
@@ -92,6 +94,7 @@ export async function getUsedCarImages(
 			limit: limit,
 			storage: USED_CAR_IMAGES_STORAGE,
 		});
+		await SentryNode.flush(2000);
 		return null;
 	}
 }
