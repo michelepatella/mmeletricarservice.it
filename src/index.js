@@ -5,7 +5,7 @@ import App from "./App/App.js";
 
 // Sentry initialization
 SentryReact.init({
-	dsn: process.env.SENTRY_DSN,
+	dsn: process.env.REACT_APP_SENTRY_DSN,
 	sendDefaultPii: true,
 	integrations: [
 		SentryReact.browserTracingIntegration(),
@@ -21,8 +21,8 @@ SentryReact.init({
 	],
 	replaysSessionSampleRate: 0.1,
 	replaysOnErrorSampleRate: 1,
-	enableLogs: true,
 	profilesSampleRate: 1,
+	enableLogs: true,
 });
 
 export { SentryReact };
