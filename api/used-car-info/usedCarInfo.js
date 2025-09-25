@@ -224,8 +224,6 @@ export default async function handler(req, res) {
 		// Handle errors
 		SentryNode.logger.error(error, {
 			endpoint: "/api/used-car-info/usedCarInfo",
-			requestQuery: req.query,
-			requestBody: req.body,
 		});
 		await SentryNode.flush(500);
 		return res.status(400).json({
