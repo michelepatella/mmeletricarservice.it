@@ -10,7 +10,7 @@ export const supabase = createClient(
 
 // Initialize Sentry for server-side
 SentryNode.init({
-	dsn: process.env.SENTRY_DSN,
+	dsn: process.env.REACT_APP_SENTRY_DSN,
 	tracesSampleRate: 1,
 	enableLogs: true,
 	sendDefaultPii: true,
