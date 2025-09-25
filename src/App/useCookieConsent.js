@@ -42,7 +42,7 @@ export const useCookieConsent = () => {
 				// Cookies have been accepted
 				setCookiesAccepted(true);
 				SentryReact.logger.info(
-					"Cookies previously accepted",
+					"Cookie previously accepted",
 					{
 						cookieName: COOKIE_NAME,
 					}
@@ -51,7 +51,7 @@ export const useCookieConsent = () => {
 				// Cookies have been refused
 				setCookiesAccepted(false);
 				SentryReact.logger.info(
-					"Cookies previously declined",
+					"Cookie previously declined",
 					{
 						cookieName: COOKIE_NAME,
 					}
@@ -86,7 +86,7 @@ export const useCookieConsent = () => {
 		// cookie consent banner
 		setCookiesAccepted(true);
 		setIsCookiesBannerVisible(false);
-		SentryReact.logger.info("Cookies accepted", {
+		SentryReact.logger.info("Cookie accepted", {
 			cookieName: COOKIE_NAME,
 		});
 	};
@@ -128,6 +128,7 @@ export const useCookieConsent = () => {
 			} catch (error) {
 				SentryReact.logger.error(error, {
 					context: "Page refresh after cookie decline",
+					cookieName: COOKIE_NAME,
 				});
 			}
 		}

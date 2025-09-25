@@ -40,10 +40,6 @@ export const fetchUsedCarData = async (endpoint) => {
 				apiPath: API_FOLDER_PATH,
 				endpoint: endpoint,
 				status: res.status,
-				fieldsCount: Object.keys(data).length,
-				itemsCount: Array.isArray(data)
-					? data.length
-					: undefined,
 				durationMs: durationMs,
 			}
 		);
