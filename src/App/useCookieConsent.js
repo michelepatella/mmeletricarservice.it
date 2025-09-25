@@ -62,7 +62,7 @@ export const useCookieConsent = () => {
 				// by default
 				setIsCookiesBannerVisible(true);
 				setCookiesAccepted(false);
-				SentryReact.logger.warn("No cookie consent found", {
+				SentryReact.logger.info("No cookie consent found", {
 					cookieName: COOKIE_NAME,
 				});
 			}
@@ -81,21 +81,20 @@ export const useCookieConsent = () => {
 	/**
 	 * To manage cookie accepting
 	 */
-	const handleAcceptCookies = async () => {
+	const handleAcceptCookies = () => {
 		// Set cookies as accepted and close the
 		// cookie consent banner
 		setCookiesAccepted(true);
 		setIsCookiesBannerVisible(false);
-		SentryReact.logger.info("User accepted cookies", {
+		SentryReact.logger.info("Cookies accepted", {
 			cookieName: COOKIE_NAME,
 		});
-		await SentryReact.flush(2000);
 	};
 
 	/**
 	 * To manage cookie declining
 	 */
-	const handleDeclineCookies = async () => {
+	const handleDeclineCookies = () => {
 		// Check if the page needs to be refreshed
 		// depending on the current cookie accepting state
 		let isRefreshNeeded = false;
@@ -105,8 +104,8 @@ export const useCookieConsent = () => {
 		// cookies completely from the session
 		if (cookiesAccepted) {
 			isRefreshNeeded = true;
-			SentryReact.logger.warn(
-				"User changed cookie consent from accepted to declined",
+			SentryReact.logger.info(
+				"Cookie consent moved from accepted to declined",
 				{ cookieName: COOKIE_NAME }
 			);
 		}
@@ -116,7 +115,7 @@ export const useCookieConsent = () => {
 		setCookiesAccepted(false);
 		setIsCookiesBannerVisible(false);
 
-		SentryReact.logger.info("User declined cookies", {
+		SentryReact.logger.info("Cookie declined", {
 			cookieName: COOKIE_NAME,
 		});
 
@@ -125,7 +124,7 @@ export const useCookieConsent = () => {
 			try {
 				/* eslint-disable-next-line no-undef */
 				globalThis.location.reload();
-				SentryReact.logger.info("Page has been refreshed");
+				SentryReact.logger.info("Page refreshed");
 			} catch (error) {
 				SentryReact.logger.error(error, {
 					context: "Page refresh after cookie decline",

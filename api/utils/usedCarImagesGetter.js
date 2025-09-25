@@ -50,15 +50,18 @@ export async function getUsedCarImages(
 				limit: limit,
 				storage: USED_CAR_IMAGES_STORAGE,
 			});
+			await SentryNode.flush(500);
 			return null;
 		}
 
+		// Check whether no images have been found
 		if (!usedCarImages || usedCarImages.length === 0) {
 			SentryNode.logger.warn("No images found", {
 				carId: id,
 				limit: limit,
 				storage: USED_CAR_IMAGES_STORAGE,
 			});
+			await SentryNode.flush(500);
 			return null;
 		}
 
@@ -76,8 +79,6 @@ export async function getUsedCarImages(
 			);
 		}
 
-		await SentryNode.flush(2000);
-
 		// Extract and return used car image URL(s)
 		return usedCarImages.map(
 			(usedCarImage) =>
@@ -94,7 +95,7 @@ export async function getUsedCarImages(
 			limit: limit,
 			storage: USED_CAR_IMAGES_STORAGE,
 		});
-		await SentryNode.flush(2000);
+		await SentryNode.flush(500);
 		return null;
 	}
 }

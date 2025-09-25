@@ -50,7 +50,7 @@ export default async function handler(req, res) {
 		let durationMs = Date.now() - startTime;
 
 		SentryNode.logger.info(
-			"Used car engine and performance data retrieved",
+			"Engine and performance data retrieved",
 			{
 				carId: id,
 				table: ENGINE_AND_PERFORMANCE_TABLE,
@@ -82,7 +82,7 @@ export default async function handler(req, res) {
 		durationMs = Date.now() - startTime;
 
 		SentryNode.logger.info(
-			"Used car emissions and consumption data retrieved",
+			"Emissions and consumption data retrieved",
 			{
 				carId: id,
 				table: EMISSIONS_AND_CONSUMPTION_TABLE,
@@ -114,18 +114,15 @@ export default async function handler(req, res) {
 		);
 		durationMs = Date.now() - startTime;
 
-		SentryNode.logger.info(
-			"Used car exterior data retrieved",
-			{
-				carId: id,
-				table: EXTERIOR_TABLE,
-				fieldsCount: Object.keys(exterior).length,
-				filledFieldsCount: Object.values(exterior).filter(
-					(v) => v !== null && v !== ""
-				).length,
-				durationMs: durationMs,
-			}
-		);
+		SentryNode.logger.info("Exterior data retrieved", {
+			carId: id,
+			table: EXTERIOR_TABLE,
+			fieldsCount: Object.keys(exterior).length,
+			filledFieldsCount: Object.values(exterior).filter(
+				(v) => v !== null && v !== ""
+			).length,
+			durationMs: durationMs,
+		});
 
 		// Check whether no data has been found
 		if (!exterior) {
@@ -144,7 +141,7 @@ export default async function handler(req, res) {
 		durationMs = Date.now() - startTime;
 
 		SentryNode.logger.info(
-			"Used car comfort and interior data retrieved",
+			"Comfort and interior data retrieved",
 			{
 				carId: id,
 				table: COMFORT_AND_INTERIOR_TABLE,
@@ -172,7 +169,7 @@ export default async function handler(req, res) {
 		const imageUrls = await getUsedCarImages(id);
 		durationMs = Date.now() - startTime;
 
-		SentryNode.logger.info("Used car images retrieved", {
+		SentryNode.logger.info("Images retrieved", {
 			carId: id,
 			imageCount: imageUrls?.length || 0,
 			durationMs: durationMs,
@@ -196,16 +193,17 @@ export default async function handler(req, res) {
 
 		durationMs = Date.now() - globalStartTime;
 
-		SentryNode.logger.info("All used car data retrieved", {
-			carId: id,
-			fieldsCount: Object.values(usedCarInfo).filter(
-				(v) => v != null && String(v) !== ""
-			).length,
-			imagesCount: usedCarInfo.images?.length || 0,
-			durationMs: durationMs,
-		});
-
-		await SentryNode.flush(2000);
+		SentryNode.logger.info(
+			"Used car data retrieving completed",
+			{
+				carId: id,
+				fieldsCount: Object.values(usedCarInfo).filter(
+					(v) => v != null && String(v) !== ""
+				).length,
+				imagesCount: usedCarInfo.images?.length || 0,
+				durationMs: durationMs,
+			}
+		);
 
 		// Return all the used car data
 		res.status(200).json({
@@ -218,7 +216,7 @@ export default async function handler(req, res) {
 			requestBody: req.body,
 			endpoint: "/api/used-car-info/usedCarInfo",
 		});
-		await SentryNode.flush(2000);
+		await SentryNode.flush(500);
 		return res.status(400).json({
 			error: error.message,
 		});

@@ -1,3 +1,5 @@
+import { SentryReact } from "../index.js";
+
 /**
  * Method to call when the pec email button is clicked.
  * @param emailPec — PEC address to which the email will be sent
@@ -5,6 +7,9 @@
 export function onPecButtonClick(emailPec) {
 	/* eslint-disable-next-line no-undef */
 	globalThis.location.href = "mailto:" + emailPec;
+	SentryReact.logger.info("PEC button clicked", {
+		pec: emailPec,
+	});
 }
 
 /**
@@ -13,6 +18,9 @@ export function onPecButtonClick(emailPec) {
  */
 export function onFacebookButtonClick(facebookLink) {
 	window.open(facebookLink, "_blank");
+	SentryReact.logger.info("Facebook button clicked", {
+		facebookLink: facebookLink,
+	});
 }
 
 /**
@@ -22,6 +30,9 @@ export function onFacebookButtonClick(facebookLink) {
 export function onPhoneButtonClick(phone) {
 	/* eslint-disable-next-line no-undef */
 	globalThis.location.href = "tel:" + phone;
+	SentryReact.logger.info("Phone button clicked", {
+		phone: phone,
+	});
 }
 
 /**
@@ -31,4 +42,7 @@ export function onPhoneButtonClick(phone) {
 export function onEmailButtonClick(email) {
 	/* eslint-disable-next-line no-undef */
 	globalThis.location.href = "mailto:" + email;
+	SentryReact.logger.info("Email button clicked", {
+		email: email,
+	});
 }

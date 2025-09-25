@@ -49,27 +49,21 @@ export default async function handler(req, res) {
 			!usedCarsOverviewInfo ||
 			usedCarsOverviewInfo.length === 0
 		) {
-			SentryNode.logger.warn(
-				"No used car overview information found",
-				{
-					table: USED_CAR_OVERVIEW_TABLE,
-					durationMs,
-				}
-			);
-
+			SentryNode.logger.warn("No overviews found", {
+				table: USED_CAR_OVERVIEW_TABLE,
+				durationMs,
+			});
+			await SentryNode.flush(500);
 			return res.status(400).json({
 				error: NO_USED_CAR_AVAILABLE_MESSAGE,
 			});
 		}
 
-		SentryNode.logger.info(
-			"Used car overview data retrieved",
-			{
-				table: USED_CAR_OVERVIEW_TABLE,
-				carsCount: usedCarsOverviewInfo.length,
-				durationMs,
-			}
-		);
+		SentryNode.logger.info("Overview data retrieved", {
+			table: USED_CAR_OVERVIEW_TABLE,
+			carsCount: usedCarsOverviewInfo.length,
+			durationMs,
+		});
 
 		// Combine overview information with presentation images
 		startTime = Date.now();
@@ -85,7 +79,7 @@ export default async function handler(req, res) {
 					// message otherwise
 					if (images && images.length > 0) {
 						SentryNode.logger.info(
-							"Used car image retrieved",
+							"Presentation image retrieved",
 							{
 								carId: car.id,
 								imageCount: images.length,
@@ -93,7 +87,7 @@ export default async function handler(req, res) {
 						);
 					} else {
 						SentryNode.logger.warn(
-							"No used car image found",
+							"No presentation image found",
 							{
 								carId: car.id,
 								imageCount: 0,
@@ -113,7 +107,7 @@ export default async function handler(req, res) {
 		durationMs = Date.now() - startTime;
 
 		SentryNode.logger.info(
-			"All used car images retrieved",
+			"All presentation images retrieved",
 			{
 				carsCount: usedCarsOverviewInfoWithImages.length,
 				durationMs: durationMs,
@@ -125,14 +119,12 @@ export default async function handler(req, res) {
 		const globalDurationMs = Date.now() - globalStartTime;
 
 		SentryNode.logger.info(
-			"All used cars overview information retrieved",
+			"Used cars overview retrieving completed",
 			{
 				carsCount: usedCarsOverviewInfoWithImages.length,
 				globalDurationMs: globalDurationMs,
 			}
 		);
-
-		await SentryNode.flush(2000);
 
 		// Return combined data
 		res.status(200).json({
@@ -144,7 +136,7 @@ export default async function handler(req, res) {
 			requestBody: req.body,
 			endpoint: "/api/used-cars-overview/usedCarsOverview",
 		});
-		await SentryNode.flush(2000);
+		await SentryNode.flush(500);
 		return res.status(400).json({
 			error: error.message,
 		});

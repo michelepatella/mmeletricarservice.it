@@ -29,24 +29,42 @@ export const useUsedCarsOverview = () => {
 	// Keep track of fetching status
 	if (isFetching && !isLoading) {
 		SentryReact.logger.info(
-			"Fetching used cars overview started"
+			USED_CARS_OVERVIEW_API_KEY + " called",
+			{
+				endpoint: USED_CARS_OVERVIEW_ENDPOINT,
+			}
 		);
 	}
 
 	// Check if any error
 	if (isError)
 		SentryReact.logger.error(
-			"Error while fetching used cars overview"
+			"Error while fetching " +
+				USED_CARS_OVERVIEW_API_KEY +
+				" data",
+			{
+				endpoint: USED_CARS_OVERVIEW_ENDPOINT,
+			}
 		);
 
 	// Check whether the data retrieved is empty
 	if (data?.used_cars_overview) {
-		SentryReact.logger.info("Used cars overview fetched", {
-			count: data.used_cars_overview.length,
-		});
+		SentryReact.logger.info(
+			USED_CARS_OVERVIEW_API_KEY +
+				" data fetching completed",
+			{
+				count: data.used_cars_overview.length,
+				endpoint: USED_CARS_OVERVIEW_ENDPOINT,
+			}
+		);
 	} else {
 		SentryReact.logger.warn(
-			"Used cars overview fetched but empty"
+			USED_CARS_OVERVIEW_API_KEY +
+				" data fetching completed but empty",
+			{
+				count: data.used_cars_overview.length,
+				endpoint: USED_CARS_OVERVIEW_ENDPOINT,
+			}
 		);
 	}
 

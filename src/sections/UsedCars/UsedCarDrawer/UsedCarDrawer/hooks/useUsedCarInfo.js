@@ -33,9 +33,10 @@ export const useUsedCarInfo = ({ usedCarId }) => {
 	// Keep track of fetching status
 	if (isFetching && !isLoading) {
 		SentryReact.logger.info(
-			"Fetching used car info started",
+			USED_CAR_INFO_API_KEY + " called",
 			{
 				carId: usedCarId,
+				endpoint: USED_CAR_INFO_ENDPOINT,
 			}
 		);
 	}
@@ -43,25 +44,34 @@ export const useUsedCarInfo = ({ usedCarId }) => {
 	// Check if any error
 	if (isError)
 		SentryReact.logger.error(
-			"Error while fetching used car data",
+			"Error while fetching " +
+				USED_CAR_INFO_API_KEY +
+				" data",
 			{
 				carId: usedCarId,
+				endpoint: USED_CAR_INFO_ENDPOINT,
 			}
 		);
 
 	// Check whether the data retrieved is empty
 	if (data?.used_car_info) {
-		SentryReact.logger.info("Used car info fetched", {
-			carId: usedCarId,
-			fieldsRetrieved: Object.keys(data.used_car_info)
-				.length,
-			imagesCount: data.used_car_info.images?.length || 0,
-		});
-	} else {
-		SentryReact.logger.warn(
-			"Used car info fetched but empty",
+		SentryReact.logger.info(
+			USED_CAR_INFO_API_KEY + " data fetching completed",
 			{
 				carId: usedCarId,
+				endpoint: USED_CAR_INFO_ENDPOINT,
+				fieldsRetrieved: Object.keys(data.used_car_info)
+					.length,
+				imagesCount: data.used_car_info.images?.length || 0,
+			}
+		);
+	} else {
+		SentryReact.logger.warn(
+			USED_CAR_INFO_API_KEY +
+				" data fetching completed but empty",
+			{
+				carId: usedCarId,
+				endpoint: USED_CAR_INFO_ENDPOINT,
 			}
 		);
 	}
