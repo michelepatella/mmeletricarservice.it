@@ -6,10 +6,9 @@ import App from "./App/App.js";
 // Sentry initialization
 SentryReact.init({
 	dsn: process.env.REACT_APP_SENTRY_DSN,
-	sendDefaultPii: true,
+	sendDefaultPii: false,
 	integrations: [
 		SentryReact.browserTracingIntegration(),
-		SentryReact.replayIntegration(),
 		SentryReact.consoleLoggingIntegration({
 			levels: ["info", "warn", "error"],
 		}),
@@ -19,9 +18,6 @@ SentryReact.init({
 		"localhost",
 		"https://mmeletricarservice.it",
 	],
-	replaysSessionSampleRate: 0.1,
-	replaysOnErrorSampleRate: 1,
-	profilesSampleRate: 1,
 	enableLogs: true,
 });
 
