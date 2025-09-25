@@ -257,7 +257,7 @@ How this project follows software engineering best practices.
 <br>
 
 > - Distributed services prevent full system failure
-> - Error handling and fallback UIs improve resilience
+> - Logging and monitoring (Sentry, Vercel Logs, ...) track system operations, performance, and errors
 > - Constraints, foreign keys, ENUMs, functions and triggers ensure data integrity
 > - CI/CD pipeline runs tests and checks for vulnerabilities  
 >   ...
