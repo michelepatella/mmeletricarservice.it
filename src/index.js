@@ -8,15 +8,9 @@ SentryReact.init({
 	dsn: process.env.REACT_APP_SENTRY_DSN,
 	sendDefaultPii: false,
 	integrations: [
-		SentryReact.browserTracingIntegration(),
 		SentryReact.consoleLoggingIntegration({
 			levels: ["info", "warn", "error"],
 		}),
-	],
-	tracesSampleRate: 1,
-	tracePropagationTargets: [
-		"localhost",
-		"https://mmeletricarservice.it",
 	],
 	enableLogs: true,
 });

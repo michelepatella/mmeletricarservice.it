@@ -11,13 +11,8 @@ export const supabase = createClient(
 // Initialize Sentry for server-side
 SentryNode.init({
 	dsn: process.env.SENTRY_DSN,
-	tracesSampleRate: 1,
 	enableLogs: true,
 	sendDefaultPii: false,
-	tracePropagationTargets: [
-		"localhost",
-		"https://mmeletricarservice.it/api/",
-	],
 });
 
 export { SentryNode };
