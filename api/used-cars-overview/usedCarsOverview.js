@@ -50,16 +50,20 @@ export default async function handler(req, res) {
 			usedCarsOverviewInfo.length === 0
 		) {
 			SentryNode.logger.warn("No overviews found", {
+				endpoint:
+					"/api/used-cars-overview/usedCarsOverview",
 				table: USED_CAR_OVERVIEW_TABLE,
 				durationMs,
 			});
 			await SentryNode.flush(500);
 			return res.status(400).json({
 				error: NO_USED_CAR_AVAILABLE_MESSAGE,
+				table: USED_CAR_OVERVIEW_TABLE,
 			});
 		}
 
 		SentryNode.logger.info("Overview data retrieved", {
+			endpoint: "/api/used-cars-overview/usedCarsOverview",
 			table: USED_CAR_OVERVIEW_TABLE,
 			carsCount: usedCarsOverviewInfo.length,
 			durationMs,
@@ -81,16 +85,20 @@ export default async function handler(req, res) {
 						SentryNode.logger.info(
 							"Presentation image retrieved",
 							{
+								endpoint:
+									"/api/used-cars-overview/usedCarsOverview",
 								carId: car.id,
-								imageCount: images.length,
+								imagesCount: images.length,
 							}
 						);
 					} else {
 						SentryNode.logger.warn(
 							"No presentation image found",
 							{
+								endpoint:
+									"/api/used-cars-overview/usedCarsOverview",
 								carId: car.id,
-								imageCount: 0,
+								imagesCount: 0,
 							}
 						);
 					}
@@ -109,10 +117,10 @@ export default async function handler(req, res) {
 		SentryNode.logger.info(
 			"All presentation images retrieved",
 			{
-				carsCount: usedCarsOverviewInfoWithImages.length,
-				durationMs: durationMs,
 				endpoint:
 					"/api/used-cars-overview/usedCarsOverview",
+				carsCount: usedCarsOverviewInfoWithImages.length,
+				durationMs: durationMs,
 			}
 		);
 
@@ -121,6 +129,8 @@ export default async function handler(req, res) {
 		SentryNode.logger.info(
 			"Used cars overview retrieving completed",
 			{
+				endpoint:
+					"/api/used-cars-overview/usedCarsOverview",
 				carsCount: usedCarsOverviewInfoWithImages.length,
 				globalDurationMs: globalDurationMs,
 			}
@@ -132,9 +142,9 @@ export default async function handler(req, res) {
 		});
 	} catch (error) {
 		SentryNode.logger.error(error, {
+			endpoint: "/api/used-cars-overview/usedCarsOverview",
 			requestQuery: req.query,
 			requestBody: req.body,
-			endpoint: "/api/used-cars-overview/usedCarsOverview",
 		});
 		await SentryNode.flush(500);
 		return res.status(400).json({

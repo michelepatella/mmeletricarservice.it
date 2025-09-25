@@ -52,6 +52,7 @@ export default async function handler(req, res) {
 		SentryNode.logger.info(
 			"Engine and performance data retrieved",
 			{
+				endpoint: "/api/used-car-info/usedCarInfo",
 				carId: id,
 				table: ENGINE_AND_PERFORMANCE_TABLE,
 				fieldsCount: Object.keys(enginePerformance).length,
@@ -67,6 +68,7 @@ export default async function handler(req, res) {
 			SentryNode.logger.warn(
 				"No engine and performance data found",
 				{
+					endpoint: "/api/used-car-info/usedCarInfo",
 					carId: id,
 					table: ENGINE_AND_PERFORMANCE_TABLE,
 				}
@@ -84,6 +86,7 @@ export default async function handler(req, res) {
 		SentryNode.logger.info(
 			"Emissions and consumption data retrieved",
 			{
+				endpoint: "/api/used-car-info/usedCarInfo",
 				carId: id,
 				table: EMISSIONS_AND_CONSUMPTION_TABLE,
 				fieldsCount: Object.keys(emissionsConsumption)
@@ -100,6 +103,7 @@ export default async function handler(req, res) {
 			SentryNode.logger.warn(
 				"No emissions and consumption data found",
 				{
+					endpoint: "/api/used-car-info/usedCarInfo",
 					carId: id,
 					table: EMISSIONS_AND_CONSUMPTION_TABLE,
 				}
@@ -115,6 +119,7 @@ export default async function handler(req, res) {
 		durationMs = Date.now() - startTime;
 
 		SentryNode.logger.info("Exterior data retrieved", {
+			endpoint: "/api/used-car-info/usedCarInfo",
 			carId: id,
 			table: EXTERIOR_TABLE,
 			fieldsCount: Object.keys(exterior).length,
@@ -127,6 +132,7 @@ export default async function handler(req, res) {
 		// Check whether no data has been found
 		if (!exterior) {
 			SentryNode.logger.warn("No exterior data found", {
+				endpoint: "/api/used-car-info/usedCarInfo",
 				carId: id,
 				table: EXTERIOR_TABLE,
 			});
@@ -143,6 +149,7 @@ export default async function handler(req, res) {
 		SentryNode.logger.info(
 			"Comfort and interior data retrieved",
 			{
+				endpoint: "/api/used-car-info/usedCarInfo",
 				carId: id,
 				table: COMFORT_AND_INTERIOR_TABLE,
 				fieldsCount: Object.keys(comfortInterior).length,
@@ -158,6 +165,7 @@ export default async function handler(req, res) {
 			SentryNode.logger.warn(
 				"No comfort and interior data found",
 				{
+					endpoint: "/api/used-car-info/usedCarInfo",
 					carId: id,
 					table: COMFORT_AND_INTERIOR_TABLE,
 				}
@@ -170,6 +178,7 @@ export default async function handler(req, res) {
 		durationMs = Date.now() - startTime;
 
 		SentryNode.logger.info("Images retrieved", {
+			endpoint: "/api/used-car-info/usedCarInfo",
 			carId: id,
 			imageCount: imageUrls?.length || 0,
 			durationMs: durationMs,
@@ -178,6 +187,7 @@ export default async function handler(req, res) {
 		// Check whether no data has been found
 		if (!imageUrls) {
 			SentryNode.logger.warn("No images found", {
+				endpoint: "/api/used-car-info/usedCarInfo",
 				carId: id,
 			});
 		}
@@ -191,17 +201,18 @@ export default async function handler(req, res) {
 			images: imageUrls?.slice(1),
 		};
 
-		durationMs = Date.now() - globalStartTime;
+		const globalDurationMs = Date.now() - globalStartTime;
 
 		SentryNode.logger.info(
 			"Used car data retrieving completed",
 			{
+				endpoint: "/api/used-car-info/usedCarInfo",
 				carId: id,
 				fieldsCount: Object.values(usedCarInfo).filter(
 					(v) => v != null && String(v) !== ""
 				).length,
 				imagesCount: usedCarInfo.images?.length || 0,
-				durationMs: durationMs,
+				globalDurationMs: globalDurationMs,
 			}
 		);
 
@@ -212,9 +223,9 @@ export default async function handler(req, res) {
 	} catch (error) {
 		// Handle errors
 		SentryNode.logger.error(error, {
+			endpoint: "/api/used-car-info/usedCarInfo",
 			requestQuery: req.query,
 			requestBody: req.body,
-			endpoint: "/api/used-car-info/usedCarInfo",
 		});
 		await SentryNode.flush(500);
 		return res.status(400).json({
