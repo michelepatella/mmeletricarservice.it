@@ -22,6 +22,7 @@ SentryReact.init({
 	replaysSessionSampleRate: 0.1,
 	replaysOnErrorSampleRate: 1,
 	enableLogs: true,
+	profilesSampleRate: 1,
 });
 
 export { SentryReact };

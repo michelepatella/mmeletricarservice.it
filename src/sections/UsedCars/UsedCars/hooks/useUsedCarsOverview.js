@@ -53,7 +53,6 @@ export const useUsedCarsOverview = () => {
 			USED_CARS_OVERVIEW_API_KEY +
 				" data fetching completed",
 			{
-				count: data.used_cars_overview.length,
 				endpoint: USED_CARS_OVERVIEW_ENDPOINT,
 			}
 		);
@@ -62,7 +61,6 @@ export const useUsedCarsOverview = () => {
 			USED_CARS_OVERVIEW_API_KEY +
 				" data fetching completed but empty",
 			{
-				count: data.used_cars_overview.length,
 				endpoint: USED_CARS_OVERVIEW_ENDPOINT,
 			}
 		);
