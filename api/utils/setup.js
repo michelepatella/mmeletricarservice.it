@@ -17,7 +17,7 @@ SentryNode.init({
 	profilesSampleRate: 1.0,
 	tracePropagationTargets: [
 		"localhost",
-		/^https:\/\/mmeletricarservice\.it\/api/,
+		"https://mmeletricarservice.it/api/",
 	],
 });
 
