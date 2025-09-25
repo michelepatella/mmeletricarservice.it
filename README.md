@@ -30,7 +30,7 @@
   - [🚀 Deployment & CI/CD](#-deployment--cicd)
 - [🖥️ Post-Deployment](#%EF%B8%8F-post-deployment)
   - [🔎 Analytics](#-analytics)
-  - [📡 Monitoring & Logging](#-monitoring--logging)
+  - [📡 Observability](#-observability)
 - [📊 Metrics](#-metrics)
 
 <br>
@@ -549,12 +549,12 @@ _Monitors search performance, queries, indexing, and security._
 
 <br>
 
-### 📡 Monitoring & Logging
+### 📡 Observability
 
 To track system operations and backend activities.
 
 **⚠️ Sentry**  
-_Tracks errors, warnings, and informational logs across APIs and client-side._
+_Monitors the full application — backend, APIs, and frontend — tracking performance, errors, warnings, and informational logs._
 
 **⚡ Vercel Logs**  
 _Monitors serverless functions._
