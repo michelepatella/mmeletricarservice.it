@@ -183,7 +183,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-📊 **Monitoring & Logging**
+📡 **Observability**
 
 > ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=orange)  
 > ![Vercel Logs](https://img.shields.io/badge/Vercel_Logs-000000?style=for-the-badge&logo=vercel&logoColor=white)  
