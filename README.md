@@ -617,7 +617,6 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 <summary>
 <strong>Serverless Functions Metrics</strong> 
 <br>
-<em>Metrics by Vercel Observability.</em>
 </summary>
 
 <br>
@@ -648,7 +647,6 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 <summary>
 <strong>Backend / BaaS Metrics</strong> 
 <br>
-<em>Metrics by Supabase Reports.</em>
 </summary>
 
 <br>
@@ -665,7 +663,6 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 <summary>
 <strong>Deployment & CI/CD Metrics</strong> 
 <br>
-<em>Metrics by GitHub Insights.</em>
 </summary>
 
 <br>
@@ -688,7 +685,6 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 <summary>
 <strong>Code Metrics</strong> 
 <br>
-<em>Metrics by SonarQube Cloud.</em>
 </summary>
 
 <br>
