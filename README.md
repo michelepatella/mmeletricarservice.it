@@ -117,7 +117,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-⚙️ **API / Serverless Functions**
+⚙️ **APIs / Serverless Functions**
 
 > ![Vercel Functions](https://img.shields.io/badge/Vercel%20Functions-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
