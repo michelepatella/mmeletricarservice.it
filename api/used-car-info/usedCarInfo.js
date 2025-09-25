@@ -180,7 +180,7 @@ export default async function handler(req, res) {
 		SentryNode.logger.info("Images retrieved", {
 			endpoint: "/api/used-car-info/usedCarInfo",
 			carId: id,
-			imageCount: imageUrls?.length || 0,
+			imagesCount: imageUrls?.length || 0,
 			durationMs: durationMs,
 		});
 
