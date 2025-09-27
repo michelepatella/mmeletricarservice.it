@@ -582,32 +582,32 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 
 **Lighthouse Metrics**:
 
-| Metric           | Score      |
-| ---------------- | ---------- |
-| _Performance_    | **100** 🟢 |
-| _Accessibility_  | **100** 🟢 |
-| _Best Practices_ | **100** 🟢 |
-| _SEO_            | **100** 🟢 |
+| Metric           | Score (Mobile, Desktop)  |
+| ---------------- | ------------------------ |
+| _Performance_    | **90, 100** 🟢           |
+| _Accessibility_  | **100, 100** 🟢          |
+| _Best Practices_ | **100, 100** 🟢          |
+| _SEO_            | **100, 100** 🟢          |
 
 <details>
-<summary><strong>Performance Metrics</strong></summary>
+<summary><strong>Performance Metrics (Mobile, Desktop)</strong></summary>
 
 <br>
 
 > **First Contentful Paint**  
-> 0.9 s
+> 0.9 s, 0.3 s
 > <br>  
 > **Largest Contentful Paint**  
-> 2.9 s
+> 3.5 s, 0.8 s
 > <br>  
 > **Total Blocking Time**  
-> 50 ms
+> 120 ms, 0 ms
 > <br>  
 > **Cumulative Layout Shift**  
-> 0
+> 0, 0
 > <br>  
 > **Speed Index**  
-> 2.2 s
+> 1.9 s, 0.6 s
 
 </details>
 
@@ -622,24 +622,23 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 <br>
 
 > **Execution Duration**  
-> 269 ms
+> 348 ms, 733 ms
 > <br>  
 > **Error Rate**  
-> 0%
+> 0%, 0%
 > <br>  
 > **Timeout**  
-> 0%
+> 0%, 0%
 > <br>  
 > **Memory Usage**  
-> 118 MB
-> <br>  
-> **Time to First Byte**  
-> 730 ms
+> 172 MB, 169 MB
+> <br>
+> **Active CPU**  
+> 33 ms, 126 ms
 > <br>  
 > **Start Type**  
-> _Hot_: 97.2%  
-> _Cold_: 2.4%  
-> _Prewarmed_: 0–4%
+> _Hot_: 93%, 67%  
+> _Cold_: 7%, 33%  
 
 </details>
 
@@ -652,10 +651,13 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 <br>
 
 > **API Gateway Response Speed**  
-> 269 ms
-> <br>  
+> 89 ms
+> <br>
+> **PostgREST Speed**  
+> 48 ms
+> <br>   
 > **Storage Response Speed**  
-> 269 ms
+> 84 ms
 
 </details>
 
