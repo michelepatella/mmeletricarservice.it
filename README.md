@@ -322,9 +322,9 @@ How this project follows software engineering best practices.
 
 ## System Architecture
 
-The system is built on a Jamstack architecture:
+The system is built on a Jamstack architecture:  
 
-<img width="510" height="724" alt="image" src="https://github.com/user-attachments/assets/1b4d45ea-a60e-4c9a-8e45-011ec04bb873" />
+<img width="910" height="1124" alt="Frame 1" src="https://github.com/user-attachments/assets/95727674-a11f-4137-9e48-0cfbbe52a3d4" />
 
 > Data flows from client-side React components through the fetching and caching layer to serverless functions and backend, with caching at client and edge.
 
