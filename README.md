@@ -12,26 +12,21 @@
 
 <h3>Table of Content</h3>
 
-- [Overview](#️-overview)
-- [Real-World Impact](#-real-world-impact)
-- [Tech Stack](#️-tech-stack)
-- [Software Engineering Principles](#-software-engineering-principles)
-- [System Architecture](#%EF%B8%8F-system-architecture)
-  - [Client-side](#-client-side)
-  - [React Components](#%EF%B8%8F-react-components)
-  - [Data Fetching & Caching](#-data-fetching--caching)
-  - [Serverless Functions](#%EF%B8%8F-serverless-functions)
-  - [Backend / BaaS](#%EF%B8%8F-backend--baas)
-- [From Development to Deployment](#-from-development-to-deployment-)
-  - [Secrets & Variables](#-secrets--variables)
-  - [Development Environment](#-development-environment)
-  - [Version Control](#-version-control)
-  - [Code Quality](#-code-quality)
-  - [Deployment & CI/CD](#-deployment--cicd)
-- [Post-Deployment](#%EF%B8%8F-post-deployment)
-  - [Analytics](#-analytics)
-  - [Observability](#-observability)
-- [Metrics](#-metrics)
+- [Overview](#overview)
+- [Real-World Impact](#real-world-impact)
+- [Tech Stack](#tech-stack)
+- [Software Engineering Principles](#software-engineering-principles)
+- [System Architecture](#system-architecture)
+- [From Development to Deployment](#from-development-to-deployment)
+  - [Secrets & Variables](#secrets--variables)
+  - [Development Environment](#development-environment)
+  - [Version Control](#version-control)
+  - [Code Quality](#code-quality)
+  - [Deployment & CI/CD](#deployment--cicd)
+- [Post-Deployment](#post-deployment)
+  - [Analytics](#analytics)
+  - [Observability](#observability)
+- [Metrics](#metrics)
 
 <br>
 
@@ -330,78 +325,90 @@ The system is built on a Jamstack architecture:
 
 <br>
 
-### Client-side
-
-**Role**  
-Implements the frontend of the application as a React Single-Page Application.
-
-**Responsibility**
-
-- Renders UI via _React Components_
-- Manages navigation using React Router (HashRouter)
-- Handles user interactions
-- Fetches and caches data via internal layer
+<details>
+<summary><strong>Client-side</strong></summary>
 
 <br>
 
-### React Components
+> <strong>Role</strong>  
+> Implements the frontend of the application as a React Single-Page Application.
+> 
+> <strong>Responsibility</strong>
+> 
+> - Renders UI via _React Components_
+> - Manages navigation using React Router (HashRouter)
+> - Handles user interactions
+> - Fetches and caches data via internal layer
+</details>
 
-**Role**  
-Defines and manages UI building blocks of the application.
-
-**Responsibility**
-
-- Renders UI elements
-- Manages component state via React Hooks and custom hooks
-- Handles component lifecycle and side effects
-- Delegates its business logic to external modules
-
-<br>
-
-### Data Fetching & Caching
-
-**Role**  
-Manages client-side data fetching and caching using React Query and hooks.
-
-**Responsibility**
-
-- Fetches data
-- Retrieves data from cache first
-- Caches data to minimize network requests
-- Deduplicates queries to prevent redundancy
+<details>
+<summary><strong>React Components</strong></summary>
 
 <br>
 
-### Serverless Functions
+> <strong>Role</strong>  
+> Defines and manages UI building blocks of the application.  
+>
+> <strong>Responsibility</strong>
+> 
+> - Renders UI elements
+> - Manages component state via React Hooks and custom hooks
+> - Handles component lifecycle and side effects
+> - Delegates its business logic to external modules
+</details>
 
-**Role**  
-Implement backend logic through RESTful API endpoints.
+<details>
+<summary><strong>Data Fetching & Caching</strong></summary>
 
-**Responsibility**
+<br>
+  
+> <strong>Role</strong>  
+> Manages client-side data fetching and caching using React Query and hooks.
+> 
+> <strong>Responsibility</strong>
+> 
+> - Fetches data
+> - Retrieves data from cache first
+> - Caches data to minimize network requests
+> - Deduplicates queries to prevent redundancy
+</details>
 
-- Handle client-side requests in a stateless manner
-- Retrieve data from backend (used cars overview and specific car details)
-- Centralize access to backend service
+<details>
+<summary><strong>Serverless Functions</strong></summary>
 
 <br>
 
-### Backend / BaaS
+> <strong>Role</strong>  
+> Implement backend logic through RESTful API endpoints.
+> 
+> <strong>Responsibility</strong>
+> 
+> - Handle client-side requests in a stateless manner
+> - Retrieve data from backend (used cars overview and specific car details)
+> - Centralize access to backend service
+</details>
 
-**Role**  
-Provides backend infrastructure using Supabase, including PostgreSQL database and Storage bucket.
+<details>
+<summary><strong>Backend / BaaS</strong></summary>
 
-**Responsibility**
+<br>
 
-- **Data**
-  - Stores relational data in PostgreSQL
-  - Optimizes query performance with indexes
-  - Enforces data integrity with foreign keys and constraints
-  - Controls and validates data with enumerated types and functions/triggers
-- **Storage**
-  - Stores and serves images in organized folders
-- **Security**
-  - Enforces Row-Level Security to restrict access at row level
-  - Defines access policies for reading and writing data
+> <strong>Role</strong>  
+> Provides backend infrastructure using Supabase, including PostgreSQL database and Storage bucket.
+> 
+> <strong>Responsibility</strong>
+> 
+> - Data
+>   - Stores relational data in PostgreSQL
+>   - Optimizes query performance with indexes
+>   - Enforces data integrity with foreign keys and constraints
+>   - Controls and validates data with enumerated types and functions/triggers
+> - Storage
+>   - Stores and serves images in organized folders
+> - Security
+>   - Enforces Row-Level Security to restrict access at row level
+>   - Defines access policies for reading and writing data
+</details>
 
 <br>
 
