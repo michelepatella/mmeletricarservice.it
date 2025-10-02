@@ -638,7 +638,7 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 > 0%, 0%
 > <br>  
 > **Memory Usage**  
-> 172 MB, 169 MB
+> 172 MB, 169 MB  
 > <br>
 > **Active CPU**  
 > 33 ms, 126 ms
@@ -658,13 +658,13 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 <br>
 
 > **API Gateway Response Speed**  
-> 89 ms
+> 89 ms  
 > <br>
-> **PostgREST Speed**  
-> 48 ms
-> <br>   
+> **PostgREST Speed**
+> 48 ms  
+> <br>
 > **Storage Response Speed**  
-> 84 ms
+> 84 ms  
 
 </details>
 
