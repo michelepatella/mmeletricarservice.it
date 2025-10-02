@@ -10,79 +10,79 @@
 
 <br>
 
-<h3>📚 Table of Content</h3>
+<h3>Table of Content</h3>
 
-- [👁️ Overview](#️-overview)
-- [🌍 Real-World Impact](#-real-world-impact)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📌 Software Engineering Principles](#-software-engineering-principles)
-- [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
-  - [🌐 Client-side](#-client-side)
-  - [⚛️ React Components](#%EF%B8%8F-react-components)
-  - [🔄 Data Fetching & Caching](#-data-fetching--caching)
-  - [⚙️ Serverless Functions](#%EF%B8%8F-serverless-functions)
-  - [☁️ Backend / BaaS](#%EF%B8%8F-backend--baas)
-- [💻 From Development to Deployment 🚀](#-from-development-to-deployment-)
-  - [🔐 Secrets & Variables](#-secrets--variables)
-  - [💻 Development Environment](#-development-environment)
-  - [🔀 Version Control](#-version-control)
-  - [✅ Code Quality](#-code-quality)
-  - [🚀 Deployment & CI/CD](#-deployment--cicd)
-- [🖥️ Post-Deployment](#%EF%B8%8F-post-deployment)
-  - [🔎 Analytics](#-analytics)
-  - [📡 Observability](#-observability)
-- [📊 Metrics](#-metrics)
-
-<br>
+- [Overview](#️-overview)
+- [Real-World Impact](#-real-world-impact)
+- [Tech Stack](#️-tech-stack)
+- [Software Engineering Principles](#-software-engineering-principles)
+- [System Architecture](#%EF%B8%8F-system-architecture)
+  - [Client-side](#-client-side)
+  - [React Components](#%EF%B8%8F-react-components)
+  - [Data Fetching & Caching](#-data-fetching--caching)
+  - [Serverless Functions](#%EF%B8%8F-serverless-functions)
+  - [Backend / BaaS](#%EF%B8%8F-backend--baas)
+- [From Development to Deployment](#-from-development-to-deployment-)
+  - [Secrets & Variables](#-secrets--variables)
+  - [Development Environment](#-development-environment)
+  - [Version Control](#-version-control)
+  - [Code Quality](#-code-quality)
+  - [Deployment & CI/CD](#-deployment--cicd)
+- [Post-Deployment](#%EF%B8%8F-post-deployment)
+  - [Analytics](#-analytics)
+  - [Observability](#-observability)
+- [Metrics](#-metrics)
 
 <br>
 
-## 👁️ Overview
+<br>
 
-📌 **What**  
+## Overview
+
+**What**  
 A full-stack web application for MM Eletricar Service, deployed and live, serving an Italian car workshop and used car dealership.
 <br>
 <br>
-❓ **Why**  
+**Why**  
 To enhance the company's digital presence and give customers clear, accessible information for confident decision-making.
 <br>
 <br>
-👤 **Who**  
+**Who**  
 Designed for customers exploring company details, services, and used vehicles.
 <br>
 <br>
-📅 **When**  
+**When**  
 Launched in February 2025.
 <br>
 <br>
-🌎 **Where**  
+**Where**  
 The web application is available at [mmeletricarservice.it](https://mmeletricarservice.it).
 
 <br>
 
 <br>
 
-## 🌍 Real-World Impact
+## Real-World Impact
 
-**👁️ Visibility**
+**Visibility**
 
 > **Reached 400+ search queries last month, ranking #1.5 for brand and local searches.**
 
 **↓**
 
-**⚡ Efficiency**
+**Efficiency**
 
 > **Up to 20% of users clicked through from relevant searches, reducing support requests.**
 
 **↓**
 
-**🤝 Trust**
+**Trust**
 
 > **30%+ of visitors explored detailed used car information, enabling informed decisions.**
 
 **↓**
 
-**🎯 Strategy**
+**Strategy**
 
 > **200+ monthly clicks on used cars reveal customer preferences and guide strategy.**
 
@@ -90,21 +90,21 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-📝 **Language**
+**Language**
 
 > ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 <br>
 
-🏗️ **Infrastructure**
+**Infrastructure**
 
 > ![Jamstack](https://img.shields.io/badge/Jamstack-F0047F?style=for-the-badge&logo=jamstack&logoColor=white)
 
 <br>
 
-🌐 **Client-side**
+**Client-side**
 
 > ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 > ![React Hooks](https://img.shields.io/badge/React_Hooks-61DAFB?style=for-the-badge&logo=react&logoColor=black)
@@ -117,20 +117,20 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-⚙️ **APIs / Serverless Functions**
+**APIs / Serverless Functions**
 
 > ![Vercel Functions](https://img.shields.io/badge/Vercel%20Functions-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 <br>
 
-☁️ **Backend / BaaS**
+**Backend / BaaS**
 
 > ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
 > ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 
 <br>
 
-🔐 **Secrets & Variables**
+**Secrets & Variables**
 
 > ![.env](https://img.shields.io/badge/.ENV-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)  
 > ![GitHub Actions Secrets and Variables](https://img.shields.io/badge/GitHub%20Actions%20Secrets%20and%20Variables-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)  
@@ -138,7 +138,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-⚒️ **Development Environment**
+**Development Environment**
 
 > ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=node.js&logoColor=white)  
 > ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)  
@@ -146,14 +146,14 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-🔀 **Version Control**
+**Version Control**
 
 > ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 > ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
 <br>
 
-✅ **Code Quality**
+**Code Quality**
 
 > ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
 > ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)  
@@ -162,28 +162,28 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-🧪 **Testing**
+**Testing**
 
 > ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)  
 > ![React Testing Library](https://img.shields.io/badge/React_Testing_Library-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 
 <br>
 
-🚀 **Deployment & CI/CD**
+**Deployment & CI/CD**
 
 > ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)  
 > ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
 <br>
   
-📈 **Analytics**
+**Analytics**
 
 > ![Vercel Analytics](https://img.shields.io/badge/Vercel_Analytics-000000?style=for-the-badge&logo=vercel&logoColor=white)  
 > ![Google Search Console](https://img.shields.io/badge/Google%20Search%20Console-458CF5?style=for-the-badge&logo=googlesearchconsole&logoColor=white)
 
 <br>
 
-📡 **Observability**
+**Observability**
 
 > ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=orange)  
 > ![Vercel Logs](https://img.shields.io/badge/Vercel_Logs-000000?style=for-the-badge&logo=vercel&logoColor=white)  
@@ -195,7 +195,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-## 📌 Software Engineering Principles
+## Software Engineering Principles
 
 How this project follows software engineering best practices.
 
@@ -320,7 +320,7 @@ How this project follows software engineering best practices.
 
 <br>
 
-## 🏗️ System Architecture
+## System Architecture
 
 The system is built on a Jamstack architecture:
 
@@ -330,12 +330,12 @@ The system is built on a Jamstack architecture:
 
 <br>
 
-### 🌐 Client-side
+### Client-side
 
-🎯 **Role**  
+**Role**  
 Implements the frontend of the application as a React Single-Page Application.
 
-🛡️ **Responsibility**
+**Responsibility**
 
 - Renders UI via _React Components_
 - Manages navigation using React Router (HashRouter)
@@ -344,12 +344,12 @@ Implements the frontend of the application as a React Single-Page Application.
 
 <br>
 
-### ⚛️ React Components
+### React Components
 
-🎯 **Role**  
+**Role**  
 Defines and manages UI building blocks of the application.
 
-🛡️ **Responsibility**
+**Responsibility**
 
 - Renders UI elements
 - Manages component state via React Hooks and custom hooks
@@ -358,12 +358,12 @@ Defines and manages UI building blocks of the application.
 
 <br>
 
-### 🔄 Data Fetching & Caching
+### Data Fetching & Caching
 
-🎯 **Role**  
+**Role**  
 Manages client-side data fetching and caching using React Query and hooks.
 
-🛡️ **Responsibility**
+**Responsibility**
 
 - Fetches data
 - Retrieves data from cache first
@@ -372,12 +372,12 @@ Manages client-side data fetching and caching using React Query and hooks.
 
 <br>
 
-### ⚙️ Serverless Functions
+### Serverless Functions
 
-🎯 **Role**  
+**Role**  
 Implement backend logic through RESTful API endpoints.
 
-🛡️ **Responsibility**
+**Responsibility**
 
 - Handle client-side requests in a stateless manner
 - Retrieve data from backend (used cars overview and specific car details)
@@ -385,12 +385,12 @@ Implement backend logic through RESTful API endpoints.
 
 <br>
 
-### ☁️ Backend / BaaS
+### Backend / BaaS
 
-🎯 **Role**  
+**Role**  
 Provides backend infrastructure using Supabase, including PostgreSQL database and Storage bucket.
 
-🛡️ **Responsibility**
+**Responsibility**
 
 - **Data**
   - Stores relational data in PostgreSQL
@@ -407,43 +407,43 @@ Provides backend infrastructure using Supabase, including PostgreSQL database an
 
 <br>
 
-## 💻 From Development to Deployment 🚀
+## From Development to Deployment
 
-### 🔐 Secrets & Variables
+### Secrets & Variables
 
 To manage all sensitive configuration and environment settings of the application safely.
 
-<strong>📝 Local .env File</strong>  
+<strong>Local .env File</strong>  
 _Used in development and ignored by version control._
 
-<strong>⚡ Vercel Environment Variables</strong>  
+<strong>Vercel Environment Variables</strong>  
 _Used for production deployments._
 
-🔧 <strong>GitHub Actions Secrets and Variables</strong>  
+<strong>GitHub Actions Secrets and Variables</strong>  
 _Used in CI/CD pipeline._
 
 <br>
    
-### 💻 Development Environment
+### Development Environment
 
 To ensure a consistent development setup.
 
-🌳 **Node.js**  
+**Node.js**  
 _Executes JavaScript code in development environment._
 
-**📦 npm**  
+**npm**  
 _Manages dependencies, libraries, and scripts._
 
-⌨️ **Vercel CLI**  
+**Vercel CLI**  
 _Runs frontend and serverless functions locally, simulating production._
 
 <br>
 
-### 🔀 Version Control
+### Version Control
 
 To track code and automate workflows.
 
-🔧 **Git & GitHub**  
+**Git & GitHub**  
 <em>Manages code, workflows, and automated checks.</em>
 
 - Separate branches for production and major changes
@@ -453,29 +453,29 @@ To track code and automate workflows.
 
 <br>
 
-### ✅ Code Quality
+### Code Quality
 
 To keep code clean, safe, and maintainable throughout development.
 
-⚖️ **ESLint**  
+**ESLint**  
 _Enforces JavaScript coding standards._
 
-🧹 **Prettier**  
+**Prettier**  
 _Formats code automatically for consistency._
 
-🔒 **Dependency Security Audit**  
+**Dependency Security Audit**  
 _Checks for security vulnerabilities in project dependencies._
 
-**🔍 SonarQube**  
+**SonarQube**  
 _Monitors code quality and enforces a Quality Gate for reliability, security, maintainability, test coverage, and low duplication._
 
 <br>
 
-### 🚀 Deployment & CI/CD
+### Deployment & CI/CD
 
 To automate code-to-production delivery with reliability and traceability.
 
-**⚡ Vercel**  
+**Vercel**  
 _Deploys frontend and serverless functions._
 
 - Edge middleware for bot requests and dynamic SEO previews
@@ -535,37 +535,37 @@ _Deploys frontend and serverless functions._
 
 <br>
 
-## 🖥️ Post-Deployment
+## Post-Deployment
 
-### 🔎 Analytics
+### Analytics
 
 To monitor user engagement and performance.
 
-**⚡ Vercel Analytics**  
+**Vercel Analytics**  
 _Provides privacy-friendly, cookie-free insights._
 
-**🔬 Google Search Console**  
+**Google Search Console**  
 _Monitors search performance, queries, indexing, and security._
 
 <br>
 
-### 📡 Observability
+### Observability
 
 To track system operations and backend activities.
 
-**⚠️ Sentry**  
+**Sentry**  
 _Monitors the full application — backend, APIs, and frontend — tracking performance, errors, warnings, and informational logs._
 
-**⚡ Vercel Logs**  
+**Vercel Logs**  
 _Monitors serverless functions._
 
-**☁️ Supabase Logs (API Gateway, Postgres, Storage)**  
+**Supabase Logs (API Gateway, Postgres, Storage)**  
 _Monitors backend._
 
-**🔧 GitHub Insights**  
+**GitHub Insights**  
 _Monitors CI/CD and deployment._
 
-**📊 Lighthouse**  
+**Lighthouse**  
 _Monitors application for performance, accessibility, best practices, and SEO._
 
 <br>
@@ -576,7 +576,7 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 
 <br>
 
-## 📊 Metrics
+## Metrics
 
 <br>
 
@@ -584,10 +584,10 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 
 | Metric           | Score (Mobile, Desktop)  |
 | ---------------- | ------------------------ |
-| _Performance_    | **90, 100** 🟢           |
-| _Accessibility_  | **100, 100** 🟢          |
-| _Best Practices_ | **100, 100** 🟢          |
-| _SEO_            | **100, 100** 🟢          |
+| _Performance_    | **90, 100**              |
+| _Accessibility_  | **100, 100**             |
+| _Best Practices_ | **100, 100**             |
+| _SEO_            | **100, 100**             |
 
 <details>
 <summary><strong>Performance Metrics (Mobile, Desktop)</strong></summary>
