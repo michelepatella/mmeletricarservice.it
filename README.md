@@ -1,4 +1,4 @@
-s<div align="center">
+<div align="center">
 <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/3e088943-1f3d-45c6-b615-587636363109" />
   <h1>
     <a href="https://mmeletricarservice.it" target="_blank">
@@ -148,7 +148,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-**Code Quality**
+**Quality Assurance**
 
 > ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
 > ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)  
