@@ -1,5 +1,5 @@
 <div align="center">
-<img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/3e088943-1f3d-45c6-b615-587636363109" />
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/3e088943-1f3d-45c6-b615-587636363109" />
   <h1>
     <a href="https://mmeletricarservice.it" target="_blank">
       mmeletricarservice.it
@@ -21,7 +21,7 @@
   - [Secrets & Variables](#secrets--variables)
   - [Development Environment](#development-environment)
   - [Version Control](#version-control)
-  - [Code Quality](#code-quality)
+  - [Quality Assurance](#quality-assurance)
   - [Deployment & CI/CD](#deployment--cicd)
 - [Post-Deployment](#post-deployment)
   - [Analytics](#analytics)
@@ -421,13 +421,13 @@ The system is built on a Jamstack architecture:
 To manage all sensitive configuration and environment settings of the application safely.
 
 <strong>Local .env File</strong>  
-_Used in development and ignored by version control._
+Used in development and ignored by version control.
 
 <strong>Vercel Environment Variables</strong>  
-_Used for production deployments._
+Used for production deployments.
 
 <strong>GitHub Actions Secrets and Variables</strong>  
-_Used in CI/CD pipeline._
+Used in CI/CD pipeline.
 
 <br>
    
@@ -436,13 +436,13 @@ _Used in CI/CD pipeline._
 To ensure a consistent development setup.
 
 **Node.js**  
-_Executes JavaScript code in development environment._
+Executes JavaScript code in development environment.
 
 **npm**  
-_Manages dependencies, libraries, and scripts._
+Manages dependencies, libraries, and scripts.
 
 **Vercel CLI**  
-_Runs frontend and serverless functions locally, simulating production._
+Runs frontend and serverless functions locally, simulating production.
 
 <br>
 
@@ -451,7 +451,7 @@ _Runs frontend and serverless functions locally, simulating production._
 To track code and automate workflows.
 
 **Git & GitHub**  
-<em>Manages code, workflows, and automated checks.</em>
+Manages code, workflows, and automated checks.
 
 - Separate branches for production and major changes
 - Conventional commit standard for commit messages
@@ -460,21 +460,21 @@ To track code and automate workflows.
 
 <br>
 
-### Code Quality
+### Quality Assurance
 
 To keep code clean, safe, and maintainable throughout development.
 
 **ESLint**  
-_Enforces JavaScript coding standards._
+Enforces JavaScript coding standards.
 
 **Prettier**  
-_Formats code automatically for consistency._
+Formats code automatically for consistency.
 
 **Dependency Security Audit**  
-_Checks for security vulnerabilities in project dependencies._
+Checks for security vulnerabilities in project dependencies.
 
 **SonarQube**  
-_Monitors code quality and enforces a Quality Gate for reliability, security, maintainability, test coverage, and low duplication._
+Monitors code quality and enforces a Quality Gate for reliability, security, maintainability, test coverage, and low duplication.
 
 <br>
 
@@ -483,7 +483,7 @@ _Monitors code quality and enforces a Quality Gate for reliability, security, ma
 To automate code-to-production delivery with reliability and traceability.
 
 **Vercel**  
-_Deploys frontend and serverless functions._
+Deploys frontend and serverless functions.
 
 - Edge middleware for bot requests and dynamic SEO previews
 - Preview deployments for all branches and pull requests
@@ -499,7 +499,7 @@ _Deploys frontend and serverless functions._
 <summary>
 <strong>Continuous Integration (CI)</strong>
   
-<em>Runs on every push, and pull request to main.</em>
+Runs on every push, and pull request to main.
 </summary>
 
 > Checkout repository  
@@ -524,7 +524,7 @@ _Deploys frontend and serverless functions._
 <summary>
 <strong>Continuous Deployment (CD)</strong>
   
-<em>Triggered after successful CI.</em>
+Triggered after successful CI.
 </summary>
   
 > Checkout repository  
@@ -549,10 +549,10 @@ _Deploys frontend and serverless functions._
 To monitor user engagement and performance.
 
 **Vercel Analytics**  
-_Provides privacy-friendly, cookie-free insights._
+Provides privacy-friendly, cookie-free insights.
 
 **Google Search Console**  
-_Monitors search performance, queries, indexing, and security._
+Monitors search performance, queries, indexing, and security.
 
 <br>
 
@@ -561,19 +561,19 @@ _Monitors search performance, queries, indexing, and security._
 To track system operations and backend activities.
 
 **Sentry**  
-_Monitors the full application — backend, APIs, and frontend — tracking performance, errors, warnings, and informational logs._
+Monitors the full application — backend, APIs, and frontend — tracking performance, errors, warnings, and informational logs.
 
 **Vercel Logs**  
-_Monitors serverless functions._
+Monitors serverless functions.
 
 **Supabase Logs (API Gateway, Postgres, Storage)**  
-_Monitors backend._
+Monitors backend.
 
 **GitHub Insights**  
-_Monitors CI/CD and deployment._
+Monitors CI/CD and deployment.
 
 **Lighthouse**  
-_Monitors application for performance, accessibility, best practices, and SEO._
+Monitors application for performance, accessibility, best practices, and SEO.
 
 <br>
 
@@ -660,7 +660,7 @@ _Monitors application for performance, accessibility, best practices, and SEO._
 > **API Gateway Response Speed**  
 > 89 ms  
 > <br>
-> **PostgREST Speed**
+> **PostgREST Response Speed**  
 > 48 ms  
 > <br>
 > **Storage Response Speed**  
