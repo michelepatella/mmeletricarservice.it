@@ -192,7 +192,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 ## Software Engineering Principles
 
-How this project follows software engineering best practices.
+How this project follows the software engineering principles.
 
 <details>
 <summary><strong>Abstraction</strong></summary>
