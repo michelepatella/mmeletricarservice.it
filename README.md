@@ -12,27 +12,28 @@
 
 <h3>Table of Content</h3>
 
-- [Overview](#overview)
-- [Real-World Impact](#real-world-impact)
-- [Tech Stack](#tech-stack)
-- [Software Engineering Principles](#software-engineering-principles)
-- [System Architecture](#system-architecture)
-- [From Development to Deployment](#from-development-to-deployment)
-  - [Secrets & Variables](#secrets--variables)
-  - [Development Environment](#development-environment)
-  - [Version Control](#version-control)
-  - [Quality Assurance](#quality-assurance)
-  - [Deployment & CI/CD](#deployment--cicd)
-- [Post-Deployment](#post-deployment)
-  - [Analytics](#analytics)
-  - [Observability](#observability)
-- [Metrics](#metrics)
+### Table of Content
+
+- [👁️ Overview](#%EF%B8%8F-overview)
+- [🌍 Real-World Impact](#-real-world-impact)
+- [🛠️ Tech Stack](#%EF%B8%8F-tech-stack)
+- [💡 Software Engineering Principles](#-software-engineering-principles)
+- [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
+- [⚙️ DevOps](#%EF%B8%8F-devops)
+  - [🔐 Secrets Management](#-secrets-management)
+  - [💻 Development Environment](#-development-environment)
+  - [🔀 Version Control & Workflow](-version-control--workflow)
+  - [✅ Quality Assurance](#-quality-assurance)
+  - [🚀 Continuous Integration & Deployment (CI/CD)](#-continuous-integration--deployment-cicd)
+  - [📡 Monitoring, Logging & Observability](#-monitoring-logging--observability)
+  - [📊 Analytics](#-analytics)
+- [📈 Metrics](#-metrics)
 
 <br>
 
 <br>
 
-## Overview
+## 👁️ Overview
 
 **What**  
 A full-stack web application for MM Eletricar Service, deployed and live, serving an Italian car workshop and used car dealership.
@@ -57,7 +58,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-## Real-World Impact
+## 🌍 Real-World Impact
 
 **Visibility**
 
@@ -85,7 +86,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 **Language**
 
@@ -190,7 +191,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-## Software Engineering Principles
+## 💡 Software Engineering Principles
 
 How this project follows the software engineering principles.
 
@@ -315,7 +316,7 @@ How this project follows the software engineering principles.
 
 <br>
 
-## System Architecture
+## 🏗️ System Architecture
 
 The system is built on a Jamstack architecture:  
 
@@ -414,93 +415,91 @@ The system is built on a Jamstack architecture:
 
 <br>
 
-## From Development to Deployment
+## ⚙️ DevOps
 
-### Secrets & Variables
+### 🔐 Secrets Management
 
-To manage all sensitive configuration and environment settings of the application safely.
+To manage all sensitive information safely.  
 
-<strong>Local .env File</strong>  
-Used in development and ignored by version control.
+**Local .env File**  
+Used in development and ignored by version control.  
 
-<strong>Vercel Environment Variables</strong>  
-Used for production deployments.
+**Vercel Environment Variables**  
+Used for production deployments.  
 
-<strong>GitHub Actions Secrets and Variables</strong>  
-Used in CI/CD pipeline.
+**GitHub Actions Secrets and Variables**  
+Used in CI/CD pipeline.  
 
 <br>
-   
-### Development Environment
 
-To ensure a consistent development setup.
+### 💻 Development Environment
+
+To ensure a consistent and reproducible development setup.  
 
 **Node.js**  
-Executes JavaScript code in development environment.
+Executes JavaScript code locally.  
 
 **npm**  
-Manages dependencies, libraries, and scripts.
+Manages dependencies, libraries, and scripts.  
 
 **Vercel CLI**  
-Runs frontend and serverless functions locally, simulating production.
+Runs frontend and serverless functions locally, simulating production behavior.  
 
 <br>
 
-### Version Control
+### 🔀 Version Control & Workflow
 
-To track code and automate workflows.
+To track code and automate development workflows.  
 
 **Git & GitHub**  
-Manages code, workflows, and automated checks.
-
-- Separate branches for production and major changes
-- Conventional commit standard for commit messages
-- Stable deployment points marked by Git tags
-- CI/CD automation with GitHub Actions
+Manages source code and workflows with:  
+- Branches organized according to development purpose  
+- Conventional commits for structured commit messages  
+- Stable deployment points marked with Git tags  
+- CI/CD automation with GitHub Actions  
 
 <br>
 
-### Quality Assurance
+### ✅ Quality Assurance
 
-To keep code clean, safe, and maintainable throughout development.
+To maintain clean, secure, and maintainable code throughout development.  
 
 **ESLint**  
-Enforces JavaScript coding standards.
+Enforces JavaScript coding standards.  
 
 **Prettier**  
-Formats code automatically for consistency.
+Formats code automatically for consistency.  
 
 **Dependency Security Audit**  
-Checks for security vulnerabilities in project dependencies.
+Scans project dependencies for vulnerabilities.  
 
 **SonarQube**  
-Monitors code quality and enforces a Quality Gate for reliability, security, maintainability, test coverage, and low duplication.
+Monitors code quality and enforces a Quality Gate for reliability, security, maintainability, test coverage, and low duplication.  
 
 <br>
 
-### Deployment & CI/CD
+### 🚀 Continuous Integration & Deployment (CI/CD)
 
-To automate code-to-production delivery with reliability and traceability.
+To automate delivery from code to production with traceability and reliability.  
 
 **Vercel**  
-Deploys frontend and serverless functions.
-
-- Edge middleware for bot requests and dynamic SEO previews
-- Preview deployments for all branches and pull requests
-- Versioned deployments with easy rollback
-- Static content and serverless functions caching at the edge
-- Automatic scaling with traffic demand
-- Security features (firewall)
-- Logs monitoring
+Deploys frontend and serverless functions:  
+- Edge middleware for bot requests and dynamic SEO previews  
+- Preview deployments for all branches and pull requests  
+- Versioned deployments with rollback capability  
+- Static content and serverless function caching at the edge  
+- Automatic scaling with traffic demand  
+- Security features (firewall)  
+- Logs monitoring  
 
 <br>
 
 <details>
 <summary>
-<strong>Continuous Integration (CI)</strong>
-  
-Runs on every push, and pull request to main.
+<strong>Continuous Integration (CI)</strong> – Runs on every push and pull request to main
 </summary>
+
+<br>
 
 > Checkout repository  
 > ↓  
@@ -516,74 +515,67 @@ Runs on every push, and pull request to main.
 > ↓  
 > Check dependencies for vulnerabilities  
 > ↓  
-> Run SonarQube analysis
+> Run SonarQube analysis  
 
 </details>
 
 <details>
 <summary>
-<strong>Continuous Deployment (CD)</strong>
-  
-Triggered after successful CI.
+<strong>Continuous Deployment (CD)</strong> – Triggered after successful CI
 </summary>
-  
+
+<br>
+
 > Checkout repository  
 > ↓  
 > Setup Node.js  
 > ↓  
 > Install dependencies  
 > ↓  
-> Build project     
+> Build project  
 > ↓  
 > Deploy to Vercel  
+
 </details>
 
 <br>
 
-<br>
+### 📡 Monitoring, Logging & Observability
 
-## Post-Deployment
-
-### Analytics
-
-To monitor user engagement and performance.
-
-**Vercel Analytics**  
-Provides privacy-friendly, cookie-free insights.
-
-**Google Search Console**  
-Monitors search performance, queries, indexing, and security.
-
-<br>
-
-### Observability
-
-To track system operations and backend activities.
+To track system operations and backend activities.  
 
 **Sentry**  
-Monitors the full application — backend, APIs, and frontend — tracking performance, errors, warnings, and informational logs.
+Monitors the full application tracking errors, warnings, and informational logs.  
 
 **Vercel Logs**  
-Monitors serverless functions.
+Monitors serverless functions.  
 
 **Supabase Logs (API Gateway, Postgres, Storage)**  
-Monitors backend.
+Tracks backend operations.  
 
 **GitHub Insights**  
-Monitors CI/CD and deployment.
+Monitors CI/CD and deployment metrics.  
+
+<br>
+
+### 📊 Analytics
+
+To collect metrics and insights on user engagement, application usage, and performance.  
+
+**Vercel Analytics**  
+Provides privacy-friendly, cookie-free insights.  
+
+**Google Search Console**  
+Monitors search performance, queries, indexing, and security.  
 
 **Lighthouse**  
-Monitors application for performance, accessibility, best practices, and SEO.
-
-<br>
-
-> <strong>All while preserving user privacy.</strong>
+Monitors application performance, accessibility, best practices, and SEO.  
 
 <br>
 
 <br>
 
-## Metrics
+## 📈 Metrics
 
 <br>
 
