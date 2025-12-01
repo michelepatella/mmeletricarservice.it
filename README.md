@@ -20,7 +20,7 @@
 - [⚙️ DevOps](#%EF%B8%8F-devops)
   - [🔐 Secrets Management](#-secrets-management)
   - [💻 Development Environment](#-development-environment)
-  - [🔀 Version Control & Workflow](-version-control--workflow)
+  - [🔀 Version Control & Workflow](#-version-control--workflow)
   - [✅ Quality Assurance](#-quality-assurance)
   - [🚀 Continuous Integration & Deployment (CI/CD)](#-continuous-integration--deployment-cicd)
   - [📡 Monitoring, Logging & Observability](#-monitoring-logging--observability)
@@ -111,7 +111,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-**APIs / Serverless Functions**
+**Serverless Functions**
 
 > ![Vercel Functions](https://img.shields.io/badge/Vercel%20Functions-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
@@ -124,7 +124,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-**Secrets & Variables**
+**Secrets Management**
 
 > ![.env](https://img.shields.io/badge/.ENV-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)  
 > ![GitHub Actions Secrets and Variables](https://img.shields.io/badge/GitHub%20Actions%20Secrets%20and%20Variables-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)  
@@ -140,7 +140,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-**Version Control**
+**Version Control & Workflow**
 
 > ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 > ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
@@ -163,26 +163,26 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-**Deployment & CI/CD**
+**Continuous Integration & Deployment (CI/CD)**
 
 > ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)  
 > ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
 <br>
-  
-**Analytics**
 
-> ![Vercel Analytics](https://img.shields.io/badge/Vercel_Analytics-000000?style=for-the-badge&logo=vercel&logoColor=white)  
-> ![Google Search Console](https://img.shields.io/badge/Google%20Search%20Console-458CF5?style=for-the-badge&logo=googlesearchconsole&logoColor=white)
-
-<br>
-
-**Observability**
+**Monitoring, Logging & Observability**
 
 > ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=orange)  
 > ![Vercel Logs](https://img.shields.io/badge/Vercel_Logs-000000?style=for-the-badge&logo=vercel&logoColor=white)  
 > ![Supabase Logs](https://img.shields.io/badge/Supabase_Logs-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)  
 > ![GitHub Insights](https://img.shields.io/badge/GitHub_Insights-181717?style=for-the-badge&logo=github&logoColor=white)  
+
+<br>
+
+**Analytics**
+
+> ![Vercel Analytics](https://img.shields.io/badge/Vercel_Analytics-000000?style=for-the-badge&logo=vercel&logoColor=white)  
+> ![Google Search Console](https://img.shields.io/badge/Google%20Search%20Console-458CF5?style=for-the-badge&logo=googlesearchconsole&logoColor=white)
 > ![Lighthouse](https://img.shields.io/badge/Lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=white)
 
 <br>
