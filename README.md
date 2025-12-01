@@ -250,7 +250,7 @@ How this project follows the software engineering principles.
 
 <br>
 
-> - Distributed services prevent full system failure
+> - Isolated serverless functions help in preventing single points of failure
 > - Logging and monitoring (Sentry, Vercel Logs, ...) track system operations, performance, and errors
 > - Constraints, foreign keys, ENUMs, functions and triggers ensure data integrity
 > - CI/CD pipeline runs tests and checks for vulnerabilities  
