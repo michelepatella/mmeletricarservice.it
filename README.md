@@ -10,8 +10,6 @@
 
 <br>
 
-<h3>Table of Content</h3>
-
 ### Table of Content
 
 - [👁️ Overview](#%EF%B8%8F-overview)
