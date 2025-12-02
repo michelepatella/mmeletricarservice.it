@@ -99,7 +99,7 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 > ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)
 > ![React Query](https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white)  
 > ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-> ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css)  
+> ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css)
 > ![Ant Design](https://img.shields.io/badge/Ant_Design-0170FE?style=for-the-badge&logo=ant-design&logoColor=white)
 
 <br>
@@ -117,66 +117,67 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 <br>
 
-**Secrets Management**
-
-> ![.env](https://img.shields.io/badge/.ENV-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)  
-> ![GitHub Actions Secrets and Variables](https://img.shields.io/badge/GitHub%20Actions%20Secrets%20and%20Variables-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)  
-> ![Vercel Environment Variables](https://img.shields.io/badge/Vercel%20Environment%20Variables-000000?style=for-the-badge&logo=vercel&logoColor=white)
-
-<br>
-
 **Development Environment**
 
-> ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=node.js&logoColor=white)  
-> ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)  
+> ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=node.js&logoColor=white)
+> ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 > ![Vercel CLI](https://img.shields.io/badge/Vercel%20CLI-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 <br>
 
-**Version Control & Workflow**
+**Version Control**
 
 > ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 > ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
 <br>
 
+**Secrets Management**
+
+> ![.env](https://img.shields.io/badge/.ENV-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)
+> ![GitHub Actions Secrets and Variables](https://img.shields.io/badge/GitHub%20Actions%20Secrets%20and%20Variables-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+> ![Vercel Environment Variables](https://img.shields.io/badge/Vercel%20Environment%20Variables-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+<br>
+
 **Quality Assurance**
 
 > ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
-> ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)  
-> ![Dependency Security Audit](https://img.shields.io/badge/Dependency%20Security-CB3837?style=for-the-badge&logo=npm&logoColor=white)  
+> ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)
+> ![Dependency Security Audit](https://img.shields.io/badge/Dependency%20Security-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 > ![SonarQube](https://img.shields.io/badge/SonarQube-126ED3?style=for-the-badge&logo=sonarqubecloud&logoColor=white)
 
 <br>
 
 **Testing**
 
-> ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)  
+> ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
 > ![React Testing Library](https://img.shields.io/badge/React_Testing_Library-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 
 <br>
 
 **Continuous Integration & Deployment (CI/CD)**
 
-> ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)  
+> ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 > ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
 <br>
 
-**Monitoring, Logging & Observability**
+**Observability**
 
-> ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=orange)  
-> ![Vercel Logs](https://img.shields.io/badge/Vercel_Logs-000000?style=for-the-badge&logo=vercel&logoColor=white)  
-> ![Supabase Logs](https://img.shields.io/badge/Supabase_Logs-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)  
-> ![GitHub Insights](https://img.shields.io/badge/GitHub_Insights-181717?style=for-the-badge&logo=github&logoColor=white)  
+> ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=orange)
+> ![Vercel Observability](https://img.shields.io/badge/Vercel_Observability-000000?style=for-the-badge&logo=vercel&logoColor=white)
+> ![Vercel Logs](https://img.shields.io/badge/Vercel_Logs-000000?style=for-the-badge&logo=vercel&logoColor=white)
+> ![Supabase Logs](https://img.shields.io/badge/Supabase_Logs-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
+> ![GitHub Insights](https://img.shields.io/badge/GitHub_Insights-181717?style=for-the-badge&logo=github&logoColor=white)
 
 <br>
 
 **Analytics**
 
-> ![Vercel Analytics](https://img.shields.io/badge/Vercel_Analytics-000000?style=for-the-badge&logo=vercel&logoColor=white)  
-> ![Google Search Console](https://img.shields.io/badge/Google%20Search%20Console-458CF5?style=for-the-badge&logo=googlesearchconsole&logoColor=white)
+> ![Vercel Analytics](https://img.shields.io/badge/Vercel_Analytics-000000?style=for-the-badge&logo=vercel&logoColor=white)
 > ![Lighthouse](https://img.shields.io/badge/Lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=white)
+> ![Google Search Console](https://img.shields.io/badge/Google%20Search%20Console-458CF5?style=for-the-badge&logo=googlesearchconsole&logoColor=white)
 
 <br>
 
@@ -539,41 +540,22 @@ Collect data to transform it into actionable engineering tasks and priorities.
 
 **Lighthouse Metrics**:
 
-| Metric           | Score (Mobile, Desktop)  |
-| ---------------- | ------------------------ |
-| _Performance_    | **90, 100**              |
-| _Accessibility_  | **100, 100**             |
-| _Best Practices_ | **100, 100**             |
-| _SEO_            | **100, 100**             |
-
-<details>
-<summary><strong>Core Web Vitals (Mobile, Desktop)</strong></summary>
+| Metric                             | Mobile | Desktop |
+|------------------------------------|--------|---------|
+| Performance                        | 90     | 100     |
+| Accessibility                      | 100    | 100     |
+| Best Practices                     | 100    | 100     |
+| SEO                                | 100    | 100     |
 
 <br>
 
-> **First Contentful Paint (FCP)**  
-> 0.9 s, 0.3 s
-> <br>  
-> **Largest Contentful Paint (LCP)**  
-> 3.5 s, 0.8 s
-> <br>  
-> **Cumulative Layout Shift (CLS)**  
-> 0, 0
+**Core Web Vitals**:
 
-</details>
-
-<details>
-<summary><strong>Other Performance Metrics (Mobile, Desktop)</strong></summary>
-
-<br>
-
-> **Total Blocking Time (TBT)**  
-> 120 ms, 0 ms
-> <br>  
-> **Speed Index (SI)**  
-> 1.9 s, 0.6 s
-
-</details>
+| Metric                             | Mobile | Desktop |
+|------------------------------------|--------|---------|
+| First Contentful Paint (FCP)       | 0.9 s  | 0.3 s   |
+| Largest Contentful Paint (LCP)     | 3.5 s  | 0.8 s   |
+| Cumulative Layout Shift (CLS)      | 0      | 0       |
 
 <br>
 
@@ -586,23 +568,23 @@ Collect data to transform it into actionable engineering tasks and priorities.
 <br>
 
 > **Execution Duration**  
-> 348 ms, 733 ms
+> 348 ms / 733 ms
 > <br>  
 > **Error Rate**  
-> 0%, 0%
+> 0% / 0%
 > <br>  
 > **Timeout**  
-> 0%, 0%
+> 0% / 0%
 > <br>  
 > **Memory Usage**  
-> 172 MB, 169 MB  
+> 172 MB / 169 MB  
 > <br>
 > **Active CPU**  
-> 33 ms, 126 ms
+> 33 ms / 126 ms
 > <br>  
 > **Start Type**  
-> _Hot_: 93%, 67%  
-> _Cold_: 7%, 33%  
+> _Hot_: 93% / 67%  
+> _Cold_: 7% / 33%  
 
 </details>
 
