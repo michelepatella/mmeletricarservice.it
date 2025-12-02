@@ -18,13 +18,6 @@
 - [💡 Software Engineering Principles](#-software-engineering-principles)
 - [🏗️ System Architecture](#%EF%B8%8F-system-architecture)
 - [⚙️ DevOps](#%EF%B8%8F-devops)
-  - [🔐 Secrets Management](#-secrets-management)
-  - [💻 Development Environment](#-development-environment)
-  - [🔀 Source Code Management & Versioning](#-source-code-management--versioning)
-  - [✅ Quality Assurance](#-quality-assurance)
-  - [🚀 Continuous Integration & Deployment (CI/CD)](#-continuous-integration--deployment-cicd)
-  - [📡 Observability](#-observability)
-  - [📊 Analytics](#-analytics)
 - [📈 Metrics](#-metrics)
 
 <br>
@@ -305,7 +298,7 @@ How this project follows the software engineering principles.
 > - Mobile-first design undergoes tests on multiple devices
 > - UI aligns with branding while remaining clear and consistent
 > - Application implements accessibility best practices
-> - Application provides fast feedback and smooth UX  
+> - Application provides fast feedback and smooth User Experience (UX)  
 >   ...
 
 </details>
@@ -415,169 +408,126 @@ The system is built on a Jamstack architecture:
 
 ## ⚙️ DevOps
 
-### 🗂️ Version Control    
-
-Manage code changes with full traceability through *GitHub* (*Git*).  
-
-**Branching Strategy**     
-Use Gitflow to manage independent development lines.  
-
-**Conventional Commits**  
-Structured commits for clear history and easier debugging.  
-
-**Semantic Versioning**  
-Tag stable releases to mark production versions.
-
-<br>
-
-### 🔄 Continuous Integration (CI)  
-
-Continuously integrate code to detect issues early, orchestrating via *GitHub Actions*.  
-
-**Code Standardization** (*ESLint, Prettier*)  
-Enforce coding standards and style consistency.  
-
-**Automated Testing** (*Jest, React Testing Library*)  
-Run unit and integration tests to catch regressions and ensure stable behavior.
-
-**Build Integrity** (*npm*)  
-Compile the project to ensure correct syntax and deployable artifacts.
-
-**Automated Security Scanning** (*npm*)  
-Audit dependencies to detect vulnerabilities.  
-
-**Static Analysis** (*SonarQube*)  
-Check code quality for reliability, security, maintanability, coverage, and duplication.   
-
-<br>
-
 <details>
-<summary>
-<strong>Continuous Integration (CI) Workflow</strong>
+<summary><strong>Version Control</strong>
 
-Runs on every push and pull request to main
+Track code changes using Git and GitHub to ensure full traceability.
 </summary>
 
-<br>
-
-> Checkout repository  
-> ↓  
-> Setup Node.js  
-> ↓  
-> Install dependencies  
-> ↓  
-> Run ESLint & Prettier  
-> ↓  
-> Run tests  
-> ↓  
-> Build project  
-> ↓  
-> Check dependencies for vulnerabilities  
-> ↓  
-> Run SonarQube analysis  
+> **Branching Strategy** — Gitflow  
+> Manage independent development lines effectively.
+>
+> **Commit Standards** — Conventional Commits  
+> Structure commits for clear history and easier debugging.
+>
+> **Semantic Versioning** — GitHub Releases/Tags  
+> Tag stable releases to mark production versions.
 
 </details>
 
-<br>
-
-### 🚀 Continuous Deployment (CD)
-
-Automate frontend and serverless functions delivery to the *Vercel* production environment via *GitHub Actions*.    
-
-**Zero-Touch Deployment**  
-Deploy automatically without manual intervention.  
-
-**Preview Deployment**  
-Enable preview for every branch and pull request before production.  
-
-**Rollback**  
-Instant rollback to previous stable deployment if needed.   
-
-<br>
-
 <details>
-<summary>
-<strong>Continuous Deployment (CD) Workflow</strong>
-  
-Triggered after successful CI
+<summary><strong>Continuous Integration (CI)</strong>
+
+Continuously integrate code via GitHub Actions to detect issues early and maintain code quality.
 </summary>
 
-<br>
-
-> Checkout repository  
-> ↓  
-> Setup Node.js  
-> ↓  
-> Install dependencies  
-> ↓  
-> Build project  
-> ↓  
-> Deploy to Vercel  
+> **Code Standardization** — ESLint, Prettier  
+> Enforce coding standards and style consistency.
+>
+> **Automated Testing** — Jest, React Testing Library  
+> Run unit and integration tests to catch regressions.
+>
+> **Build Integrity** — npm  
+> Compile the project to ensure correct syntax and deployable artifacts.
+>
+> **Automated Security Scanning** — npm  
+> Audit dependencies to detect vulnerabilities.
+>
+> **Static Analysis** — SonarQube  
+> Assess code for reliability, security, maintainability, coverage, and duplication.
 
 </details>
 
-<br>
+<details>
+<summary><strong>Continuous Deployment (CD)</strong>
 
-### 🛡️ Security  
+Automate frontend and serverless functions deployments to Vercel via GitHub Actions to ensure fast, reliable releases.
+</summary>
 
-Ensure security is integrated across the project.  
+> **Zero-Touch Deployment** — Vercel, GitHub Actions  
+> Deploy automatically without manual intervention.
+>
+> **Preview Deployment** — Vercel  
+> Enable branch and pull request previews before production.
+>
+> **Rollback** — Vercel  
+> Instantly revert to a previous stable deployment if needed.
+>
 
-**Secrets Management** (*.env*, *GitHub Secrets*, *Vercel Environment Variables*)  
-Manage sensitive data securely across local, CI/CD, and production environments.  
+</details>
 
-**Security Checks in CI** (*npm*, *SonarQube*)    
-Detect dependency vulnerabilities, security issues, and hotspots before deployment.  
+<details>
+<summary><strong>Security</strong>
 
-**Row-Level Security & Access Policies** (*Supabase*)  
-Protect database access, restricting data visibility.  
+Integrate security practices across the project to protect code, data, and deployments.
+</summary>
 
-**Secure Communication**  
-Ensure secure communication via HTTPS.  
+> **Secrets Management** — .env, GitHub Secrets, Vercel Environment Variables  
+> Secure sensitive data across local, CI/CD, and production environments.
+>
+> **Security Checks in CI** — npm, SonarQube  
+> Detect vulnerabilities, security issues, and hotspots before deployment.
+>
+> **Row-Level Security & Access Policies** — Supabase  
+> Restrict database access and enforce data visibility.
+>
+> **Deployment Platform Defense** — Vercel  
+> Exploit built-in platform protections such as firewalls.
+>
+> **Secure Communication** — HTTPS  
+> Ensure all communication occurs via HTTPS.
+>
+> **Regulatory Compliance** — GDPR  
+> Ensure GDPR compliance in data handling and storage.
 
-**Deployment Platform Defense** (*Vercel*)  
-Leverage built-in deployment platform protections such as firewall.
+</details>
 
-**Regulatory Compliance**  
-Ensure GDPR compliance in data handling and storage.  
+<details>
+<summary><strong>Observability</strong>
 
-<br>
+Observe system operations, performance, and health to maintain visibility.
+</summary>
 
-### 📡 Observability
+> **Errors** — Sentry  
+> Track and alert on full-stack errors in real time.
+>
+> **Deployment & Serverless Functions** — Vercel Observability, Vercel Logs  
+> Track deployment environment and serverless functions execution.
+>
+> **Backend** — Supabase Logs  
+> Track database and storage operations.
+>
+> **CI/CD** — GitHub Insights  
+> Track CI/CD pipelines performance.
 
-Provide full visibility into application behavior, performance, and operational health.
+</details>
 
-**Full-Stack Error Tracking** (*Sentry*)  
-Track errors across both the frontend and serverless functions to identify and fix issues quickly.
+<details>
+<summary><strong>Feedback Loops</strong>
 
-**Deployment & Serverless Functions Observability** (*Vercel Observability*, *Vercel Logs*)  
-Observe deployment environment and serverless functions to ensure smooth operation and performance.
+Collect data to transform it into actionable engineering tasks and priorities.
+</summary>
 
-**Backend Observability** (*Supabase Logs*)  
-Observe backend operations such as PostgreSQL and storage activity to ensure data traceability.
+> **User Behavior** — Vercel Analytics  
+> Track overall user behavior and engagement.
+>
+> **Performance, UX & SEO** — Lighthouse  
+> Track application performance, accessibility, best practices, SEO, and Core Web Vitals.
+>
+> **Search & Indexing** — Google Search Console  
+> Track search performance, queries, and indexing.
 
-**CI/CD Observability** (*GitHub Insights*)  
-Observe CI/CD metrics to optimize pipeline efficiency.
-
-**Proactive Alerting** (*Sentry*)  
-Trigger real-time alerts on errors to reduce mean time to detection (MTTD).
-
-<br>
-
-### 🔄 Feedback Loops
-
-Collect actionable insights to guide product and engineering decisions.  
-
-**User Behavior Analysis** (*Vercel Analytics*)  
-Track user engagement to optimize UX and prioritize features.  
-
-**Performance Insight** (*Lighthouse*)  
-Track application performance, accessibility, best practices, SEO, and Core Web Vitals to improve application speed and UX.  
-
-**SEO & Accessibility Insight** (*Google Search Console*)  
-Track search performance, queries, and indexing to enhance visibility.  
-
-**Metrics-Driven Prioritization**  
-Use observability data to guide engineering efforts toward measurable impact.  
+</details>
 
 <br>
 
@@ -597,23 +547,30 @@ Use observability data to guide engineering efforts toward measurable impact.
 | _SEO_            | **100, 100**             |
 
 <details>
-<summary><strong>Performance Metrics (Mobile, Desktop)</strong></summary>
+<summary><strong>Core Web Vitals (Mobile, Desktop)</strong></summary>
 
 <br>
 
-> **First Contentful Paint**  
+> **First Contentful Paint (FCP)**  
 > 0.9 s, 0.3 s
 > <br>  
-> **Largest Contentful Paint**  
+> **Largest Contentful Paint (LCP)**  
 > 3.5 s, 0.8 s
 > <br>  
-> **Total Blocking Time**  
+> **Cumulative Layout Shift (CLS)**  
+> 0, 0
+
+</details>
+
+<details>
+<summary><strong>Other Performance Metrics (Mobile, Desktop)</strong></summary>
+
+<br>
+
+> **Total Blocking Time (TBT)**  
 > 120 ms, 0 ms
 > <br>  
-> **Cumulative Layout Shift**  
-> 0, 0
-> <br>  
-> **Speed Index**  
+> **Speed Index (SI)**  
 > 1.9 s, 0.6 s
 
 </details>
@@ -670,15 +627,12 @@ Use observability data to guide engineering efforts toward measurable impact.
 
 <details>
 <summary>
-<strong>Deployment & CI/CD Metrics</strong> 
+<strong>CI/CD Metrics</strong> 
 <br>
 </summary>
 
 <br>
 
-> **Deployment Success Rate**  
-> 99%
-> <br>  
 > **CI Duration**  
 > 49s
 > <br>  
