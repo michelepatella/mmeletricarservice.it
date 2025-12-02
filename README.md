@@ -20,10 +20,10 @@
 - [⚙️ DevOps](#%EF%B8%8F-devops)
   - [🔐 Secrets Management](#-secrets-management)
   - [💻 Development Environment](#-development-environment)
-  - [🔀 Version Control & Workflow](#-version-control--workflow)
+  - [🔀 Source Code Management & Versioning](#-source-code-management--versioning)
   - [✅ Quality Assurance](#-quality-assurance)
   - [🚀 Continuous Integration & Deployment (CI/CD)](#-continuous-integration--deployment-cicd)
-  - [📡 Monitoring, Logging & Observability](#-monitoring-logging--observability)
+  - [📡 Observability](#-observability)
   - [📊 Analytics](#-analytics)
 - [📈 Metrics](#-metrics)
 
@@ -251,7 +251,7 @@ How this project follows the software engineering principles.
 <br>
 
 > - Isolated serverless functions help in preventing single points of failure
-> - Logging and monitoring (Sentry, Vercel Logs, ...) track system operations, performance, and errors
+> - Observability to monitor system operations, performance, and errors
 > - Constraints, foreign keys, ENUMs, functions and triggers ensure data integrity
 > - CI/CD pipeline runs tests and checks for vulnerabilities  
 >   ...
@@ -415,86 +415,47 @@ The system is built on a Jamstack architecture:
 
 ## ⚙️ DevOps
 
-### 🔐 Secrets Management
+### 🗂️ Version Control    
 
-To manage all sensitive information safely.  
+Manage code changes with full traceability through *GitHub* (*Git*).  
 
-**Local .env File**  
-Used in development and ignored by version control.  
+**Branching Strategy**     
+Use Gitflow to manage independent development lines.  
 
-**Vercel Environment Variables**  
-Used for production deployments.  
+**Conventional Commits**  
+Structured commits for clear history and easier debugging.  
 
-**GitHub Actions Secrets and Variables**  
-Used in CI/CD pipeline.  
-
-<br>
-
-### 💻 Development Environment
-
-To ensure a consistent and reproducible development setup.  
-
-**Node.js**  
-Executes JavaScript code locally.  
-
-**npm**  
-Manages dependencies, libraries, and scripts.  
-
-**Vercel CLI**  
-Runs frontend and serverless functions locally, simulating production behavior.  
+**Semantic Versioning**  
+Tag stable releases to mark production versions.
 
 <br>
 
-### 🔀 Version Control & Workflow
+### 🔄 Continuous Integration (CI)  
 
-To track code and automate development workflows.  
+Continuously integrate code to detect issues early, orchestrating via *GitHub Actions*.  
 
-**Git & GitHub**  
-Manages source code and workflows with:  
-- Branches organized according to development purpose  
-- Conventional commits for structured commit messages  
-- Stable deployment points marked with Git tags  
-- CI/CD automation with GitHub Actions  
+**Code Standardization** (*ESLint, Prettier*)  
+Enforce coding standards and style consistency.  
 
-<br>
+**Automated Testing** (*Jest, React Testing Library*)  
+Run unit and integration tests to catch regressions and ensure stable behavior.
 
-### ✅ Quality Assurance
+**Build Integrity** (*npm*)  
+Compile the project to ensure correct syntax and deployable artifacts.
 
-To maintain clean, secure, and maintainable code throughout development.  
+**Automated Security Scanning** (*npm*)  
+Audit dependencies to detect vulnerabilities.  
 
-**ESLint**  
-Enforces JavaScript coding standards.  
-
-**Prettier**  
-Formats code automatically for consistency.  
-
-**Dependency Security Audit**  
-Scans project dependencies for vulnerabilities.  
-
-**SonarQube**  
-Monitors code quality and enforces a Quality Gate for reliability, security, maintainability, test coverage, and low duplication.  
-
-<br>
-
-### 🚀 Continuous Integration & Deployment (CI/CD)
-
-To automate delivery from code to production with traceability and reliability.  
-
-**Vercel**  
-Deploys frontend and serverless functions:  
-- Edge middleware for bot requests and dynamic SEO previews  
-- Preview deployments for all branches and pull requests  
-- Versioned deployments with rollback capability  
-- Static content and serverless function caching at the edge  
-- Automatic scaling with traffic demand  
-- Security features (firewall)  
-- Logs monitoring  
+**Static Analysis** (*SonarQube*)  
+Check code quality for reliability, security, maintanability, coverage, and duplication.   
 
 <br>
 
 <details>
 <summary>
-<strong>Continuous Integration (CI)</strong> – Runs on every push and pull request to main
+<strong>Continuous Integration (CI) Workflow</strong>
+
+Runs on every push and pull request to main
 </summary>
 
 <br>
@@ -517,9 +478,28 @@ Deploys frontend and serverless functions:
 
 </details>
 
+<br>
+
+### 🚀 Continuous Deployment (CD)
+
+Automate frontend and serverless functions delivery to the *Vercel* production environment via *GitHub Actions*.    
+
+**Zero-Touch Deployment**  
+Deploy automatically without manual intervention.  
+
+**Preview Deployment**  
+Enable preview for every branch and pull request before production.  
+
+**Rollback**  
+Instant rollback to previous stable deployment if needed.   
+
+<br>
+
 <details>
 <summary>
-<strong>Continuous Deployment (CD)</strong> – Triggered after successful CI
+<strong>Continuous Deployment (CD) Workflow</strong>
+  
+Triggered after successful CI
 </summary>
 
 <br>
@@ -538,36 +518,66 @@ Deploys frontend and serverless functions:
 
 <br>
 
-### 📡 Monitoring, Logging & Observability
+### 🛡️ Security  
 
-To track system operations and backend activities.  
+Ensure security is integrated across the project.  
 
-**Sentry**  
-Monitors the full application tracking errors, warnings, and informational logs.  
+**Secrets Management** (*.env*, *GitHub Secrets*, *Vercel Environment Variables*)
+Manage sensitive data securely across local, CI/CD, and production environments.  
 
-**Vercel Logs**  
-Monitors serverless functions.  
+**Security Checks in CI** (*npm*, *SonarQube*)    
+Detect dependency vulnerabilities, security issues, and hotspots before deployment.  
 
-**Supabase Logs (API Gateway, Postgres, Storage)**  
-Tracks backend operations.  
+**Row-Level Security & Access Policies** (*Supabase*)  
+Protect database access, restricting data visibility.  
 
-**GitHub Insights**  
-Monitors CI/CD and deployment metrics.  
+**Secure Communication**  
+Ensure secure communication via HTTPS.  
+
+**Deployment Platform Defense** (*Vercel*)  
+Leverage built-in deployment platform protections such as firewall.
+
+**Regulatory Compliance**  
+Ensure GDPR compliance in data handling and storage.  
 
 <br>
 
-### 📊 Analytics
+### 📡 Observability
 
-To collect metrics and insights on user engagement, application usage, and performance.  
+Provide full visibility into application behavior, performance, and operational health.
 
-**Vercel Analytics**  
-Provides privacy-friendly, cookie-free insights.  
+**Full-Stack Error Tracking** (*Sentry*)  
+Track errors across both the frontend and serverless functions to identify and fix issues quickly.
 
-**Google Search Console**  
-Monitors search performance, queries, indexing, and security.  
+**Deployment & Serverless Functions Observability** (*Vercel Observability*, *Vercel Logs*)  
+Observe deployment environment and serverless functions to ensure smooth operation and performance.
 
-**Lighthouse**  
-Monitors application performance, accessibility, best practices, and SEO.  
+**Backend Observability** (*Supabase Logs*)  
+Observe backend operations such as PostgreSQL and storage activity to ensure data traceability.
+
+**CI/CD Observability** (*GitHub Insights*)  
+Observe CI/CD metrics to optimize pipeline efficiency.
+
+**Proactive Alerting** (*Sentry*)  
+Trigger real-time alerts on errors to reduce mean time to detection (MTTD).
+
+<br>
+
+### 🔄 Feedback Loops
+
+Collect actionable insights to guide product and engineering decisions.  
+
+**User Behavior Analysis** (*Vercel Analytics*)  
+Track user engagement to optimize UX and prioritize features.  
+
+**Performance Insight** (*Lighthouse*)  
+Track application performance, accessibility, best practices, SEO, and Core Web Vitals to improve application speed and UX.  
+
+**SEO & Accessibility Insight** (*Google Search Console*)  
+Track search performance, queries, and indexing to enhance visibility.  
+
+**Metrics-Driven Prioritization**  
+Use observability data to guide engineering efforts toward measurable impact.  
 
 <br>
 
