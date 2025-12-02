@@ -522,7 +522,7 @@ Triggered after successful CI
 
 Ensure security is integrated across the project.  
 
-**Secrets Management** (*.env*, *GitHub Secrets*, *Vercel Environment Variables*)
+**Secrets Management** (*.env*, *GitHub Secrets*, *Vercel Environment Variables*)  
 Manage sensitive data securely across local, CI/CD, and production environments.  
 
 **Security Checks in CI** (*npm*, *SonarQube*)    
