@@ -5,14 +5,14 @@
       mmeletricarservice.it
     </a>
   </h1>
-  <h4>Full-stack web application built end-to-end by Michele Patella.</h4>
+  <h4>Production-grade, full-stack web application designed, built, and deployed for a real automotive business.</h4>
 </div>
 
 <br>
 
 ### Table of Content
 
-- [👁️ Overview](#%EF%B8%8F-overview)
+- [🧩 Engineering Summary](#-engineering-summary)
 - [🌍 Real-World Impact](#-real-world-impact)
 - [🛠️ Tech Stack](#%EF%B8%8F-tech-stack)
 - [💡 Software Engineering Principles](#-software-engineering-principles)
@@ -24,26 +24,8 @@
 
 <br>
 
-## 👁️ Overview
+## 🧩 Engineering Summary
 
-**What**  
-A full-stack web application for MM Eletricar Service, deployed and live, serving an Italian car workshop and used car dealership.
-<br>
-<br>
-**Why**  
-To enhance the company's digital presence and give customers clear, accessible information for confident decision-making.
-<br>
-<br>
-**Who**  
-Designed for customers exploring company details, services, and used vehicles.
-<br>
-<br>
-**When**  
-Launched in February 2025.
-<br>
-<br>
-**Where**  
-The web application is available at [mmeletricarservice.it](https://mmeletricarservice.it).
 
 <br>
 
@@ -79,105 +61,17 @@ The web application is available at [mmeletricarservice.it](https://mmeletricars
 
 ## 🛠️ Tech Stack
 
-**Language**
-
-> ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-<br>
-
-**Infrastructure**
-
-> ![Jamstack](https://img.shields.io/badge/Jamstack-F0047F?style=for-the-badge&logo=jamstack&logoColor=white)
-
-<br>
-
-**Client-side**
-
-> ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-> ![React Hooks](https://img.shields.io/badge/React_Hooks-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-> ![React Spring](https://img.shields.io/badge/React_Spring-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-> ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)
-> ![React Query](https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white)  
-> ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-> ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css)
-> ![Ant Design](https://img.shields.io/badge/Ant_Design-0170FE?style=for-the-badge&logo=ant-design&logoColor=white)
-
-<br>
-
-**Serverless Functions**
-
-> ![Vercel Functions](https://img.shields.io/badge/Vercel%20Functions-000000?style=for-the-badge&logo=vercel&logoColor=white)
-
-<br>
-
-**Backend / BaaS**
-
-> ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
-> ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-
-<br>
-
-**Development Environment**
-
-> ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=node.js&logoColor=white)
-> ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
-> ![Vercel CLI](https://img.shields.io/badge/Vercel%20CLI-000000?style=for-the-badge&logo=vercel&logoColor=white)
-
-<br>
-
-**Version Control**
-
-> ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-> ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-
-<br>
-
-**Secrets Management**
-
-> ![.env](https://img.shields.io/badge/.ENV-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)
-> ![GitHub Actions Secrets and Variables](https://img.shields.io/badge/GitHub%20Actions%20Secrets%20and%20Variables-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-> ![Vercel Environment Variables](https://img.shields.io/badge/Vercel%20Environment%20Variables-000000?style=for-the-badge&logo=vercel&logoColor=white)
-
-<br>
-
-**Quality Assurance**
-
-> ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
-> ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)
-> ![Dependency Security Audit](https://img.shields.io/badge/Dependency%20Security-CB3837?style=for-the-badge&logo=npm&logoColor=white)
-> ![SonarQube](https://img.shields.io/badge/SonarQube-126ED3?style=for-the-badge&logo=sonarqubecloud&logoColor=white)
-
-<br>
-
-**Testing**
-
-> ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
-> ![React Testing Library](https://img.shields.io/badge/React_Testing_Library-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-
-<br>
-
-**Continuous Integration & Deployment (CI/CD)**
-
-> ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-> ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-
-<br>
-
-**Observability**
-
-> ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=orange)
-> ![Vercel Observability](https://img.shields.io/badge/Vercel_Observability-000000?style=for-the-badge&logo=vercel&logoColor=white)
-> ![Vercel Logs](https://img.shields.io/badge/Vercel_Logs-000000?style=for-the-badge&logo=vercel&logoColor=white)
-> ![Supabase Logs](https://img.shields.io/badge/Supabase_Logs-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
-> ![GitHub Insights](https://img.shields.io/badge/GitHub_Insights-181717?style=for-the-badge&logo=github&logoColor=white)
-
-<br>
-
-**Analytics**
-
-> ![Vercel Analytics](https://img.shields.io/badge/Vercel_Analytics-000000?style=for-the-badge&logo=vercel&logoColor=white)
-> ![Lighthouse](https://img.shields.io/badge/Lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=white)
-> ![Google Search Console](https://img.shields.io/badge/Google%20Search%20Console-458CF5?style=for-the-badge&logo=googlesearchconsole&logoColor=white)
+| Area | Key Technologies |
+| :--- | :--- |
+| **Language** | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |
+| **Client-side & UI** | ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black) ![Ant Design](https://img.shields.io/badge/Ant_Design-0170FE?style=for-the-badge&logo=ant-design&logoColor=white) |
+| **API** | ![Serverless](https://img.shields.io/badge/Serverless-000000?style=for-the-badge&logo=vercel&logoColor=white) |
+| **Backend / BaaS** | ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) |
+| **Development Environment** | ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=node.js&logoColor=white) ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) |
+| **Version Control** | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) |
+| **Quality & Testing** | ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white) ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black) ![SonarQube](https://img.shields.io/badge/SonarQube-126ED3?style=for-the-badge&logo=sonarqubecloud&logoColor=white) ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white) ![React Testing Library](https://img.shields.io/badge/React_Testing_Library-61DAFB?style=for-the-badge&logo=react&logoColor=black) |
+| **CI/CD & Hosting** | ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) |
+| **Observability** | ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=orange)
 
 <br>
 
@@ -196,7 +90,6 @@ How this project follows the software engineering principles.
 > - React Query abstracts fecthing and caching logic
 > - Functions and hooks abstract business logic
 > - Serverless functions abstract backend complexity  
->   ...
 
 </details>
 
@@ -209,7 +102,6 @@ How this project follows the software engineering principles.
 > - Decoupled React components and business logic enable easy updates
 > - Centralized constants and variables simplify changes
 > - ESLint, Prettier, vulnerability check, and SonarQube ensure code quality  
->   ...
 
 </details>
 
@@ -218,11 +110,10 @@ How this project follows the software engineering principles.
 
 <br>
 
-> - Architecture separates responsabilities among components
+> - Architecture separates responsibilities among components
 > - Modular React components manage their own state and rendering
 > - React components follow atomic, composable design
-> - Modules incapsulate business logic  
->   ...
+> - Modules encapsulate business logic  
 
 </details>
 
@@ -235,7 +126,6 @@ How this project follows the software engineering principles.
 > - Serverless functions consume resources only when invoked
 > - Indexes on tables improve query performance
 > - Lazy loading and AVIF images boost Lighthouse scores  
->   ...
 
 </details>
 
@@ -248,7 +138,6 @@ How this project follows the software engineering principles.
 > - Observability to monitor system operations, performance, and errors
 > - Constraints, foreign keys, ENUMs, functions and triggers ensure data integrity
 > - CI/CD pipeline runs tests and checks for vulnerabilities  
->   ...
 
 </details>
 
@@ -261,7 +150,6 @@ How this project follows the software engineering principles.
 > - Application reuses UI components, styles, and CSS variables
 > - Business logic modules enable easy reuse
 > - Libraries and frameworks avoid reinventing the wheel  
->   ...
 
 </details>
   
@@ -274,7 +162,6 @@ How this project follows the software engineering principles.
 > - Supabase scales database and storage automatically
 > - Vercel serverless functions scale automatically
 > - Vercel's edge caching reduces latency and improves scalability  
->   ...
 
 </details>
 
@@ -287,7 +174,6 @@ How this project follows the software engineering principles.
 > - Application ensures GDPR compliance
 > - Application manages sensitive data via environment variables and secrets
 > - Row-Level Security and policies secure data management  
->   ...
 
 </details>
 
@@ -300,7 +186,6 @@ How this project follows the software engineering principles.
 > - UI aligns with branding while remaining clear and consistent
 > - Application implements accessibility best practices
 > - Application provides fast feedback and smooth User Experience (UX)  
->   ...
 
 </details>
 
@@ -377,7 +262,7 @@ The system is built on a Jamstack architecture:
 > <strong>Responsibility</strong>
 > 
 > - Handle client-side requests in a stateless manner
-> - Retrieve data from backend (used cars overview and specific car details)
+> - Retrieve data from backend
 > - Centralize access to backend service
 </details>
 
