@@ -1,43 +1,110 @@
-name: CI
+# Continuous Integration (CI): Automate linting, formatting, testing, 
+# security scans, build, and static analysis, ensuring
+# code quality and security
+name: Continuous Integration (CI)
 
+# Cancel any in-progress workflow if a new one is triggered
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Trigger workflow on pushes and pull requests to main
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
+# The workflow is organized into six jobs:
+# - Setup:
+#     Checkout the repository, set up Node.js, and install dependencies.
+# - Linting and Formatting (needs 'Setup'):
+#     Run ESLint and Prettier to ensure code style and formatting compliance.
+# - Testing (needs 'Setup'):
+#     Run automated tests to validate code.
+# - Security Scan (needs 'Setup'):
+#     Audit dependencies for vulnerabilities using npm audit.
+# - Build (needs 'Linting and Formatting', 'Testing', and 'Security Scan'):
+#     Build the project only if linting, tests, and security checks pass.
+# - Static Analysis (needs 'Build'):
+#     Run SonarQube analysis to check code quality.
 jobs:
-  ci:
+
+  # ----------------------------------------------------------------------
+  # Setup
+  # ----------------------------------------------------------------------
+  setup:
     runs-on: ubuntu-latest
     steps:
+      # Checkout the repository on the current branch
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: ${{ vars.SONAR_FETCH_DEPTH }}
 
+      # Setup Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: ${{ vars.NODE_VERSION }}
 
+      # Install dependencies
       - name: Install dependencies
         run: npm install
 
-      - name: Run Lint and Prettier
+  # ----------------------------------------------------------------------
+  # Linting and Formatting (needs 'Setup')
+  # ----------------------------------------------------------------------
+  linting_formatting:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      # Run code linting and formatting checks
+      - name: Run linting and formatting checks
         run: npm run code:check
-      #
-      #- name: Run tests
-      #  run: npm run test -- --watchAll=${{ vars.TEST_WATCH_ALL }}
-      #
+
+  # ----------------------------------------------------------------------
+  # Testing (needs 'Setup')
+  # ----------------------------------------------------------------------
+  testing:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      # Run project tests
+      - name: Run tests
+        run: npm run test -- --watchAll=${{ vars.TEST_WATCH_ALL }}
+
+  # ----------------------------------------------------------------------
+  # Security Scan (needs 'Setup')
+  # ----------------------------------------------------------------------
+  security_scan:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      # Audit npm dependencies for vulnerabilities
+      - name: Run security scan
+        run: npm audit --audit-level=${{ vars.AUDIT_LEVEL }}
+
+  # ----------------------------------------------------------------------
+  # Build (needs 'Linting and Formatting', 'Testing', and 'Security Scan')
+  # ----------------------------------------------------------------------
+  build:
+    runs-on: ubuntu-latest
+    needs: [linting_formatting, testing, security_scan]
+    steps:
+      # Build the project
       - name: Build project
         run: npm run build
 
-      - name: Run npm audit
-        run: npm audit --audit-level=${{ vars.AUDIT_LEVEL }}
-
-      - name: Run SonarQube analysis
+  # ----------------------------------------------------------------------
+  # Static Analysis (needs 'Build')
+  # ----------------------------------------------------------------------
+  static_analysis:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      # Run SonarQube analysis for code quality
+      - name: Run static analysis
         uses: SonarSource/sonarqube-scan-action@fd88b7d7ccbaefd23d8f36f73b59db7a3d246602
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
