@@ -1,7 +1,0 @@
-{
-    "conventionalCommits.scopes": [
-        "ci"
-    ],
-    "editor.fontFamily": "JetBrains Mono, monospace",
-    "editor.fontLigatures": true
-}
