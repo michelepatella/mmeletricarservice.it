@@ -42,7 +42,7 @@ export const ELECTRIC_ICON_LINK =
 export const ANTI_THEFT_ICON_LINK =
 	"/icons/anti-theft-icon.svg";
 export const SERVICES_BACKGROUND_IMAGE_LINK =
-	"/images/services-background.avif";
+	"/images/lightning.avif";
 
 /* — Services — */
 const ALL_SERVICES_DATA = [

@@ -9,4 +9,4 @@ export const ABOUT_US_DESCRIPTION =
 
 /* — Links — */
 export const ABOUT_US_BACKGROUND_IMAGE_LINK =
-	"/images/about-us-background.avif";
+	"/images/logo-gray.avif";

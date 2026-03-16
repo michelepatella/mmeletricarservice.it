@@ -20,4 +20,4 @@ export const LOADING_OUTLINED_LOGO_IMAGE_ALT =
 export const CIRCLE_LOADING_OUTLINED_IMAGE_LINK =
 	"/images/circle-loading-outlined.svg";
 export const LOGO_LOADING_OUTLINED_IMAGE_LINK =
-	"/images/logo-loading-outlined.svg";
+	"/images/logo-outline.svg";

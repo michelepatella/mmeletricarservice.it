@@ -100,4 +100,4 @@ export const COOKIE_NAME = "cookieConsent";
 
 /* — Images — */
 export const DOTTED_BACKGROUND_IMAGE_LINK =
-	"/images/dotted-background.avif";
+	"/images/dot.avif";
