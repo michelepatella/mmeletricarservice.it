@@ -1,75 +1,64 @@
 import {
 	DEFAULT_FIELDS,
-	DEFAULT_ID_FIELD,
+	ID_FIELD,
 	DEFAULT_NO_ID,
+	DEFAULT_NO_LIMIT,
 } from "./const.js";
 import { SentryNode, supabase } from "./setup.js";
 
 /**
- * Method to retrieve all the used car data for a specific
- * car from a given table. Only the specified fields are
- * retrieved, or all fields if none are specified.
+ * Method to retrieve all the data for a specific used
+ * car from a given DB table.
  * @param table — Name of the table from which to retrieve data.
  * @param id — ID of the used car for which to retrieve data.
  * @param fields — Fields of the table to be retrieved.
+ * @param limit — Maximum number of records to retrieve.
  * @returns {Promise<Object|Object[]|null>} — Resolves with
  * record(s) or null on error.
  */
 export async function getUsedCarData(
 	table,
 	id = DEFAULT_NO_ID,
-	fields = DEFAULT_FIELDS
+	fields = DEFAULT_FIELDS,
+	limit = DEFAULT_NO_LIMIT
 ) {
 	try {
+		// Retrieve used car data from a given table, 
+		// reading only the specified fields and applying
+		// the specified limit
 		let query;
-
-		// Build query dynamically
 		if (id === DEFAULT_NO_ID) {
-			// Retrieve used car data for all the existing
-			// cars from a given table, reading only the
-			// specified fields
+			// For all the used cars
 			query = supabase.from(table).select(fields);
 		} else {
-			// Retrieve used car data for a specific
-			// car from a given table, reading only the
-			// specified fields
+			// For a specific used car
 			query = supabase
 				.from(table)
 				.select(fields)
-				.eq(DEFAULT_ID_FIELD, id);
+				.eq(ID_FIELD, id);
+		}
+		
+		// Limit the number of records retrieved if a limit 
+		// is specified
+		if (limit !== DEFAULT_NO_LIMIT) {
+			query = query.limit(limit);
 		}
 
 		// Run query
 		const { data: usedCarData, error } = await query;
-
-		// Check if any error occurred
-		if (error) {
-			SentryNode.logger.error(error, {
-				carId: id,
-				table: table,
-				fields: fields,
-			});
-			await SentryNode.flush(500);
-			return null;
-		}
-
-		// Check whether retrieved data is empty
-		if (!usedCarData || usedCarData.length === 0) {
-			SentryNode.logger.warn("No used car data found", {
-				carId: id,
-				table: table,
-				fields: fields,
-			});
-		}
-
+		if (error) throw error;
+		
+		// Return data retrieved
 		return id === DEFAULT_NO_ID
 			? usedCarData
 			: usedCarData?.[0] || null;
 	} catch (error) {
+		// Log error with Sentry
 		SentryNode.logger.error(error, {
 			carId: id,
 			table: table,
 			fields: fields,
+			limit: limit,
 		});
 		await SentryNode.flush(500);
 		return null;

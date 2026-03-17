@@ -1,14 +1,14 @@
 import { createClient } from "@supabase/supabase-js";
 import * as SentryNode from "@sentry/node";
 
-// Setup for APIs: instantiate Supabase by creating a
-// client specifying DB URL and ANON key
+// Initialize Supabase client
 export const supabase = createClient(
 	process.env.DATABASE_URL,
 	process.env.SUPABASE_ANON_KEY
 );
 
-// Initialize Sentry for server-side
+// Setup Sentry for error tracking in 
+// serverless functions
 SentryNode.init({
 	dsn: process.env.SENTRY_DSN,
 	enableLogs: true,
