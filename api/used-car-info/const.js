@@ -6,3 +6,5 @@ export const EMISSIONS_AND_CONSUMPTION_TABLE =
 export const EXTERIOR_TABLE = "exterior";
 export const COMFORT_AND_INTERIOR_TABLE =
 	"comfort_and_interior";
+export const USED_CAR_INFO_ENDPOINT =
+	"used-car-info/usedCarInfo";

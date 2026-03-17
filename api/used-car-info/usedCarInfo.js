@@ -5,7 +5,8 @@ import {
 	ENGINE_AND_PERFORMANCE_TABLE,
 	EXTERIOR_TABLE,
 } from "./const.js";
-import { USED_CAR_INFO_ENDPOINT } from "../../src/utils/const.js";
+import { API_FOLDER_PATH } from "../utils/const.js";
+import { USED_CAR_INFO_ENDPOINT } from "./const.js";
 import { getUsedCarImages } from "../utils/usedCarImagesGetter.js";
 import { getUsedCarData } from "../utils/usedCarsDataGetter.js";
 
@@ -52,7 +53,7 @@ export default async function handler(req, res) {
 	} catch (error) {
 		// Log error with Sentry
 		SentryNode.logger.error(error, {
-			endpoint: "/api/" + USED_CAR_INFO_ENDPOINT,
+			endpoint: API_FOLDER_PATH + USED_CAR_INFO_ENDPOINT,
 			requestQuery: req.query,
 			requestBody: req.body,
 		});
