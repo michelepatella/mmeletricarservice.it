@@ -7,4 +7,4 @@ export const EXTERIOR_TABLE = "exterior";
 export const COMFORT_AND_INTERIOR_TABLE =
 	"comfort_and_interior";
 export const USED_CAR_INFO_ENDPOINT =
-	"used-car-info/usedCarInfo";
+	"used-car-info/used-car-info";

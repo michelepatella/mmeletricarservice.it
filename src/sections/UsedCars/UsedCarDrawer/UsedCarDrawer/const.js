@@ -14,4 +14,4 @@ export const USED_CAR_DRAWER_VERTICAL_FLEX_CLASS_NAME =
 export const USED_CAR_DRAWER_VERTICAL_FLEX_WIDTH = "40%";
 
 /*  Data  */
-export const USED_CAR_INFO_API_KEY = "usedCarInfo";
+export const USED_CAR_INFO_API_KEY = "used-car-info";

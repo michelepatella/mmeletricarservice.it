@@ -91,9 +91,9 @@ export const CUSTOM_TEXT_TYPES = {
 /*  Data  */
 export const API_FOLDER_PATH = "/api/";
 export const USED_CARS_OVERVIEW_ENDPOINT =
-	"used-cars-overview/usedCarsOverview";
+	"used-cars-overview/used-cars-overview";
 export const USED_CAR_INFO_ENDPOINT =
-	"used-car-info/usedCarInfo";
+	"used-car-info/used-car-info";
 
 /*  Cookie  */
 export const COOKIE_NAME = "cookieConsent";

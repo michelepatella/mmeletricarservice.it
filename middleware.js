@@ -26,7 +26,7 @@ export default async function middleware(request) {
 	try {
 		// Fetch used cars overview and extract json response
 		const jsonResponse = await fetch(
-			"https://mmeletricarservice.it/api/used-cars-overview/usedCarsOverview"
+			"https://mmeletricarservice.it/api/used-cars-overview/used-cars-overview"
 		);
 		const usedCars = await jsonResponse.json();
 
