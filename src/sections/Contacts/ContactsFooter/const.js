@@ -7,11 +7,11 @@ import {
 
 /**------------- Contacts Footer constants -------------**/
 
-/* — General — */
+/*  General  */
 export const CONTACTS_FOOTER_TEXT_CLASS_NAME =
 	"contacts-footer-text";
 
-/* — Footer Texts — */
+/*  Footer Texts  */
 export const CONTACTS_FOOTER_TEXT =
 	RAG_SOCIALE +
 	". " +
@@ -23,6 +23,6 @@ export const CONTACTS_FOOTER_TEXT =
 	".";
 export const LEGAL_NOTES_TEXT = "NOTE LEGALI";
 
-/* — Links — */
+/*  Links  */
 export const LEGAL_NOTES_LINK =
 	"/docs/Note%20Legali%20-%20Auto%20Usate%20-%20MM%20Eletricar%20Service.pdf";

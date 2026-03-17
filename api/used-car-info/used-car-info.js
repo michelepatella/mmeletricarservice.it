@@ -7,8 +7,8 @@ import {
 } from "./const.js";
 import { API_FOLDER_PATH } from "../utils/const.js";
 import { USED_CAR_INFO_ENDPOINT } from "./const.js";
-import { getUsedCarImages } from "../utils/usedCarImagesGetter.js";
-import { getUsedCarData } from "../utils/usedCarsDataGetter.js";
+import { getUsedCarImages } from "../utils/used-car-images-getter.js";
+import { getUsedCarData } from "../utils/used-cars-data-getter.js";
 
 /**
  * The following serverless function retrieves all the information and images
@@ -21,19 +21,33 @@ import { getUsedCarData } from "../utils/usedCarsDataGetter.js";
  * @param res — The response to return to the client.
  * @returns {Promise<*>} — The response data or null on error.
  */
-export default async function handler(req, res) {
+export default async function usedCarInfoHandler(req, res) {
 	try {
 		// Read the id of the used car for which
 		// to retrieve information
 		const { id } = req.query;
-		
+
 		// Retrieve all the used car information in parallel
-		const [enginePerformance, emissionsConsumption, exterior, comfortInterior, imageUrls] = await Promise.all([
-			getUsedCarData(ENGINE_AND_PERFORMANCE_TABLE, id).catch(() => ({})),
-			getUsedCarData(EMISSIONS_AND_CONSUMPTION_TABLE, id).catch(() => ({})),
+		const [
+			enginePerformance,
+			emissionsConsumption,
+			exterior,
+			comfortInterior,
+			imageUrls,
+		] = await Promise.all([
+			getUsedCarData(
+				ENGINE_AND_PERFORMANCE_TABLE,
+				id
+			).catch(() => ({})),
+			getUsedCarData(
+				EMISSIONS_AND_CONSUMPTION_TABLE,
+				id
+			).catch(() => ({})),
 			getUsedCarData(EXTERIOR_TABLE, id).catch(() => ({})),
-			getUsedCarData(COMFORT_AND_INTERIOR_TABLE, id).catch(() => ({})),
-			getUsedCarImages(id).catch(() => ([]))	
+			getUsedCarData(COMFORT_AND_INTERIOR_TABLE, id).catch(
+				() => ({})
+			),
+			getUsedCarImages(id).catch(() => []),
 		]);
 
 		// Collect all the retrieved data together
@@ -49,7 +63,6 @@ export default async function handler(req, res) {
 		res.status(200).json({
 			used_car_info: usedCarInfo,
 		});
-
 	} catch (error) {
 		// Log error with Sentry
 		SentryNode.logger.error(error, {

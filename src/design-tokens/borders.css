@@ -1,16 +1,16 @@
 /* -------- Borders -------- */
 :root {
-	/* — General — */
+	/*  General  */
 	--border-none: none;
 
-	/* — Width — */
+	/*  Width  */
 	--border-width-small: 1px;
 	--border-width-large: 2px;
 
-	/* — Radius — */
+	/*  Radius  */
 	--border-radius-default: 4px;
 	--border-radius-full: 50%;
 
-	/* — Style — */
+	/*  Style  */
 	--border-style-solid: solid;
 }

@@ -7,7 +7,7 @@ export const supabase = createClient(
 	process.env.SUPABASE_ANON_KEY
 );
 
-// Setup Sentry for error tracking in 
+// Setup Sentry for error tracking in
 // serverless functions
 SentryNode.init({
 	dsn: process.env.SENTRY_DSN,

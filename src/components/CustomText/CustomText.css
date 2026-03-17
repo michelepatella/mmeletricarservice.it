@@ -1,4 +1,4 @@
-/* Custom Text — Animation */
+/* Custom Text  Animation */
 @keyframes customTextFadeIn {
 	from {
 		opacity: var(--opacity-zero);
@@ -8,7 +8,7 @@
 	}
 }
 
-/* Custom Text — Super-heading */
+/* Custom Text  Super-heading */
 .custom-super-heading {
 	margin-bottom: var(--margin-medium);
 	font-size: var(--font-size-super-heading);
@@ -18,7 +18,7 @@
 	color: var(--color-white);
 }
 
-/* Custom Text — Heading */
+/* Custom Text  Heading */
 .custom-heading {
 	margin-bottom: var(--zero-margin);
 	color: var(--color-white);
@@ -33,7 +33,7 @@
 			var(--animation-timing-ease);
 }
 
-/* Custom Text — Heading (In View) */
+/* Custom Text  Heading (In View) */
 .custom-heading.in-view {
 	margin-bottom: var(--zero-margin);
 	color: var(--color-white);
@@ -45,18 +45,18 @@
 		var(--animation-fill-mode-forwards);
 }
 
-/* Custom Text — Subheading */
+/* Custom Text  Subheading */
 .custom-subheading {
 	font-size: var(--font-size-subheading);
 	font-weight: var(--font-weight-bold);
 }
 
-/* Custom Text — Body */
+/* Custom Text  Body */
 .custom-body {
 	font-size: var(--font-size-body);
 }
 
-/* Custom Text — Subheading and Body */
+/* Custom Text  Subheading and Body */
 .custom-subheading,
 .custom-body {
 	opacity: var(--opacity-zero);
@@ -69,7 +69,7 @@
 			var(--animation-timing-ease);
 }
 
-/* Custom Text — Subheading (In View) */
+/* Custom Text  Subheading (In View) */
 .custom-subheading.in-view {
 	font-size: var(--font-size-subheading);
 	font-weight: var(--font-weight-bold);
@@ -78,7 +78,7 @@
 	opacity: var(--opacity-high) !important;
 }
 
-/* Custom Text — Body (In View) */
+/* Custom Text  Body (In View) */
 .custom-body.in-view {
 	font-size: var(--font-size-body);
 	color: var(--color-white);
@@ -86,7 +86,7 @@
 	opacity: var(--opacity-low) !important;
 }
 
-/* Custom Text — Caption */
+/* Custom Text  Caption */
 .custom-caption {
 	color: var(--color-white);
 	font-size: var(--font-size-caption);

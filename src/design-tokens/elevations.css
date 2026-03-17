@@ -1,10 +1,10 @@
 /* -------- Elevations -------- */
 :root {
-	/* — Scale — */
+	/*  Scale  */
 	--scale-small: 1.01;
 	--scale-large: 1.07;
 
-	/* — Shadow — */
+	/*  Shadow  */
 	--shadow-none: none;
 	--shadow-xsmall: 0 2px 4px rgba(0, 0, 0, 0.1);
 	--shadow-small: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -12,10 +12,10 @@
 	--shadow-large: 10px 15px 30px rgba(0, 0, 0, 0.4);
 	--shadow-xlarge: 10px 50px 50px rgba(0, 0, 0, 0.8);
 
-	/* — Z-Index — */
+	/*  Z-Index  */
 	--z-index-low: 1000;
 	--z-index-high: 9999;
 
-	/* — Blur — */
+	/*  Blur  */
 	--blur-default: 4px;
 }

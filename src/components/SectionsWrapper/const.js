@@ -1,5 +1,5 @@
 /**------------- Sections Wrapper constants -------------**/
 
-/* — General — */
+/*  General  */
 export const SECTIONS_WRAPPER_CLASS_NAME =
 	"sections-wrapper";

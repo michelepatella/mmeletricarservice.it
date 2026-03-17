@@ -1,4 +1,4 @@
-/* — General API constants — */
+/*  General API constants  */
 export const USED_CAR_IMAGES_STORAGE = "car-images";
 export const USED_CAR_IMAGES_PATH = (carId, fileName) =>
 	carId + "/" + fileName;

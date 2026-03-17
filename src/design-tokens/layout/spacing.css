@@ -1,6 +1,6 @@
 /* -------- Spacing -------- */
 :root {
-	/* — Padding — */
+	/*  Padding  */
 	--zero-padding: 0;
 	--padding-xsmall: 5px;
 	--padding-small: 10px;
@@ -9,7 +9,7 @@
 	--padding-xlarge: 50px;
 	--padding-xxlarge: 60px;
 
-	/* — Gap — */
+	/*  Gap  */
 	--zero-gap: 0;
 	--gap-xsmall: 5px;
 	--gap-small: 15px;
@@ -18,7 +18,7 @@
 	--gap-xlarge: 80px;
 	--gap-xxlarge: 200px;
 
-	/* — Margin — */
+	/*  Margin  */
 	--zero-margin: 0;
 	--margin-small: 10px;
 	--margin-medium: 30px;

@@ -1,4 +1,4 @@
-/* — Used Car Info API constants — */
+/*  Used Car Info API constants  */
 export const ENGINE_AND_PERFORMANCE_TABLE =
 	"engine_and_performance";
 export const EMISSIONS_AND_CONSUMPTION_TABLE =

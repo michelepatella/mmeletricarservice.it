@@ -1,10 +1,10 @@
 /**------------- Services constants -------------**/
 
-/* — General — */
+/*  General  */
 export const SERVICES_CONTAINER_CLASS_NAME =
 	"services-container";
 
-/* — Title — */
+/*  Title  */
 export const SERVICES_TITLE = [
 	{
 		text: "Prestazioni.",
@@ -24,7 +24,7 @@ export const SERVICES_TITLE_ANIMATION_WORDS_DELAY = 200;
 export const SERVICES_TITLE_ANIMATION_TRIGGER_ONCE = true;
 export const SERVICES_TITLE_ANIMATION_THRESHOLD = 0.8;
 
-/* — Links — */
+/*  Links  */
 export const CPU_ICON_LINK = "/icons/cpu-icon.svg";
 export const WRENCH_ICON_LINK = "/icons/wrench-icon.svg";
 export const CONTROL_PANEL_ICON_LINK =
@@ -44,7 +44,7 @@ export const ANTI_THEFT_ICON_LINK =
 export const SERVICES_BACKGROUND_IMAGE_LINK =
 	"/images/lightning.avif";
 
-/* — Services — */
+/*  Services  */
 const ALL_SERVICES_DATA = [
 	[
 		"Manutenzione Centralina",

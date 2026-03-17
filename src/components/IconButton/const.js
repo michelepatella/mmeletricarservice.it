@@ -1,7 +1,7 @@
 /**------------- Icon Button constants -------------**/
 
-/* — General — */
+/*  General  */
 export const ICON_BUTTON_CLASS_NAME = "icon-button";
 
-/* — Icon — */
+/*  Icon  */
 export const ICON_BUTTON_IMAGE_ALT = "button-icon";

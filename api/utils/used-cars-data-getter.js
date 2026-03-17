@@ -23,7 +23,7 @@ export async function getUsedCarData(
 	limit = DEFAULT_NO_LIMIT
 ) {
 	try {
-		// Retrieve used car data from a given table, 
+		// Retrieve used car data from a given table,
 		// reading only the specified fields and applying
 		// the specified limit
 		let query;
@@ -37,8 +37,8 @@ export async function getUsedCarData(
 				.select(fields)
 				.eq(ID_FIELD, id);
 		}
-		
-		// Limit the number of records retrieved if a limit 
+
+		// Limit the number of records retrieved if a limit
 		// is specified
 		if (limit !== DEFAULT_NO_LIMIT) {
 			query = query.limit(limit);
@@ -47,7 +47,7 @@ export async function getUsedCarData(
 		// Run query
 		const { data: usedCarData, error } = await query;
 		if (error) throw error;
-		
+
 		// Return data retrieved
 		return id === DEFAULT_NO_ID
 			? usedCarData

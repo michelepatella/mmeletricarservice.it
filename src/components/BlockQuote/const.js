@@ -1,4 +1,4 @@
 /**------------- Block Quote constants -------------**/
 
-/* — General — */
+/*  General  */
 export const BLOCK_QUOTE_CLASS_NAME = "block-quote";

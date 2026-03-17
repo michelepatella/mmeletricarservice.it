@@ -18,12 +18,12 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver.js";
  * - Subheading: if used as subheading in the web application (e.g., subtitles).
  * - Body: if used as simple text in the web application (e.g., descriptions).
  * - Caption: if used as non-relevant text in the web application (e.g., footer text).
- * @param props — Object containing:
- *   - text: string — The text content to display (can include HTML).
- *   - type: string — The type of text (super-heading, heading, subheading, body, caption).
- *   - style: object — Optional custom CSS styles to override default text styles.
- *   - disableAnimation: boolean — If true, disables the entry animation.
- * @returns {JSX.Element} — The custom text component.
+ * @param props  Object containing:
+ *   - text: string  The text content to display (can include HTML).
+ *   - type: string  The type of text (super-heading, heading, subheading, body, caption).
+ *   - style: object  Optional custom CSS styles to override default text styles.
+ *   - disableAnimation: boolean  If true, disables the entry animation.
+ * @returns {JSX.Element}  The custom text component.
  */
 function CustomText(props) {
 	// Definition of a text reference, useful to generate

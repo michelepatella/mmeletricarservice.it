@@ -1,10 +1,10 @@
 /* -------- Typography -------- */
 :root {
-	/* — Family — */
+	/*  Family  */
 	--font-family-default: "Poppins", "sans-serif";
 	--font-family-cursive: "Dancing Script", "sans-serif";
 
-	/* — Size — */
+	/*  Size  */
 	--font-size-home-title: clamp(30px, 6vw, 55px);
 	--font-size-home-subtitle: clamp(25px, 4vw, 45px);
 	--font-size-super-heading: clamp(43px, 6vw, 120px);
@@ -13,21 +13,21 @@
 	--font-size-body: clamp(14px, 1.5vw, 18px);
 	--font-size-caption: clamp(13.5px, 1vw, 15px);
 
-	/* — Line Height — */
+	/*  Line Height  */
 	--font-super-heading-line-height: 1.2;
 
-	/* — Weight — */
+	/*  Weight  */
 	--font-weight-normal: normal;
 	--font-weight-bold: bold;
 
-	/* — Alignment — */
+	/*  Alignment  */
 	--font-alignment-left: left;
 	--font-alignment-center: center;
 
-	/* — Decoration — */
+	/*  Decoration  */
 	--font-decoration-none: none;
 
-	/* — Smoothing — */
+	/*  Smoothing  */
 	--font-smoothing-webkit-default: antialiased;
 	--font-smoothing-moz-osx-default: grayscale;
 }
