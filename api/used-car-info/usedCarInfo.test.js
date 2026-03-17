@@ -22,7 +22,7 @@ import handler from "./usedCarInfo.js";
 import { SentryNode } from "../utils/setup.js";
 
 // Mock the Supabase client
-jest.mock('@supabase/supabase-js', () => ({
+jest.mock("@supabase/supabase-js", () => ({
   createClient: jest.fn(() => ({
     from: jest.fn(() => ({
       select: jest.fn().mockResolvedValue({ data: [], error: null }),
@@ -31,10 +31,10 @@ jest.mock('@supabase/supabase-js', () => ({
 }));
 
 // Mock the data retrieval functions
-jest.mock('../utils/usedCarsDataGetter.js', () => ({
+jest.mock("../utils/usedCarsDataGetter.js", () => ({
   getUsedCarData: jest.fn(),
 }));
-jest.mock('../utils/usedCarImagesGetter.js', () => ({
+jest.mock("../utils/usedCarImagesGetter.js", () => ({
   getUsedCarImages: jest.fn(),
 }));
 
