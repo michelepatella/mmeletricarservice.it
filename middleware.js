@@ -3,7 +3,7 @@
  * pages and return a custom HTML containing overview information
  * about that car, instead of index.html.
  * @param request — The request caught.
- * @returns {Response|void} — Returns a Response containing
+ * @returns {Response|void} — Returns a response containing
  * HTML if the request comes from a bot; otherwise, returns
  * nothing to allow the normal request flow.
  */
@@ -14,11 +14,8 @@ export default async function middleware(request) {
 	// Check whether the URL matches a used car URL
 	const regex = /^\/used-cars(\d+)$/;
 	const match = regex.exec(url.pathname);
-
-	// Fallback
-	if (!match) {
+	if (!match)
 		return;
-	}
 
 	// Retrieve the used car id from URL
 	const usedCarId = match[1];
@@ -36,22 +33,15 @@ export default async function middleware(request) {
 			(c) => String(c.id) === usedCarId
 		);
 
-		// Fallback
-		if (!usedCar) {
+		// No used car found with the given id
+		if (!usedCar)
 			return;
-		}
 
 		// Check whether the request came from a bot
 		const ua = request.headers.get("user-agent") || "";
-		const isBot =
-			/(facebook|twitter|linkedin|pinterest|whatsapp|telegram|slack|googlebot)/i.test(
-				ua
-			);
-
-		// Fallback
-		if (!isBot) {
+		const isBot = /(facebook|twitter|linkedin|pinterest|whatsapp|telegram|slack|googlebot|bingbot|yandexbot|duckduckbot|baiduspider|applebot|semrushbot|ahrefsbot|slurp)/i.test(ua);
+		if (!isBot)
 			return;
-		}
 
 		// Create custom HTML with Open Graph meta tags
 		const html = `
@@ -84,7 +74,6 @@ export default async function middleware(request) {
 	} catch (err) {
 		// Capture middleware errors
 		console.error("Middleware error:", err);
-		// Fallback
 		return;
 	}
 }

@@ -9,7 +9,7 @@ SentryReact.init({
 	sendDefaultPii: false,
 	integrations: [
 		SentryReact.consoleLoggingIntegration({
-			levels: ["info", "warn", "error"],
+			levels: ["error"],
 		}),
 	],
 	enableLogs: true,
