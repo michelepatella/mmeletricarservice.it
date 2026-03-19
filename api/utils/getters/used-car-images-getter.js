@@ -2,8 +2,8 @@ import {
 	DEFAULT_NO_LIMIT,
 	USED_CAR_IMAGES_PATH,
 	USED_CAR_IMAGES_STORAGE,
-} from "./const.js";
-import { SentryNode, supabase } from "./setup.js";
+} from "../const.js";
+import { SentryNode, supabase } from "../setup.js";
 
 /**
  * Method to retrieve used car images from storage.

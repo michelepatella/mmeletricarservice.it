@@ -3,8 +3,8 @@ import {
 	ID_FIELD,
 	DEFAULT_NO_ID,
 	DEFAULT_NO_LIMIT,
-} from "./const.js";
-import { SentryNode, supabase } from "./setup.js";
+} from "../const.js";
+import { SentryNode, supabase } from "../setup.js";
 
 /**
  * Method to retrieve all the data for a specific used
