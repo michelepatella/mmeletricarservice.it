@@ -8,8 +8,8 @@ import {
 import { P_LIMIT_CONCURRENCY } from "../utils/const.js";
 import { API_FOLDER_PATH } from "../utils/const.js";
 import { USED_CARS_OVERVIEW_ENDPOINT } from "./const.js";
-import { getUsedCarImages } from "../utils/used-car-images-getter.js";
-import { getUsedCarData } from "../utils/used-cars-data-getter.js";
+import { getUsedCarImages } from "../utils/getters/used-car-images-getter.js";
+import { getUsedCarData } from "../utils/getters/used-cars-data-getter.js";
 
 /**
  * The following serverless function retrieves salient information
