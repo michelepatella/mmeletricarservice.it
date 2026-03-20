@@ -1,3 +1,4 @@
+import React from "react";
 import CookieConsent from "react-cookie-consent";
 import {
 	COOKIE_CONSENT_BANNER_ACCEPT_BUTTON_TEXT,
@@ -16,24 +17,21 @@ import {
 import Link from "../Link/Link.js";
 
 /**
- * This component represents the cookie
- * consent banner, which manages the acceptance/refusing of cookies. It
- * leverages CookieConsent object coming from the library 'react-cookie-consent'
- * to implement a banner appearing at the bottom of the web application.
- * The cookie banner includes two buttons (to accept and refuse third-party cookies),
- * as well as a brief description to guide the user during the decision process and the
- * links to cookie and privacy policies to learn more.
- * of cookies.
+ * This component represents the cookie consent banner used by the user
+ * to accept and refuse cookies. Building upon the CookieConsent object coming from 
+ * the library 'react-cookie-consent', it includes two buttons (to accept and refuse
+ * cookies) and a brief description to guide the user during the decision process. 
+ * External links to cookie and privacy policies are also included.
  * @param props — Object containing:
- * 	 - isCookiesBannerVisible: boolean — whether to show the banner.
- * 	 - handleAcceptCookies: function — called when the user accepts cookies.
- * 	 - handleDeclineCookies: function — called when the user declines cookies.
+ * 	 - isCookiesBannerVisible: boolean — Whether to show the banner.
+ * 	 - handleAcceptCookies: function — Called when the user accepts cookies.
+ * 	 - handleDeclineCookies: function — Called when the user declines cookies.
  * @returns {Element} — The cookie consent banner component.
  */
 function CookieConsentBanner(props) {
 	return (
 		<>
-			{/* Banner for consenting/declining cookies */}
+			{/* Banner for accepting/refusing cookies */}
 			{props.isCookiesBannerVisible && (
 				<CookieConsent
 					cookieName={COOKIE_NAME}
