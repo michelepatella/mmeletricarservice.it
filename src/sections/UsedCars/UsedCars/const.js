@@ -10,10 +10,6 @@ export const USED_CARS_TITLE =
 
 /*  Section's Animation  */
 export const USED_CARS_ANIMATION_SCROLL_THRESHOLD = 0.55;
-export const USED_CARS_ANIMATION_Y_START_POSITION =
-	"var(--animation-translate-visible)";
-export const USED_CARS_ANIMATION_Y_FINAL_POSITION =
-	"var(--animation-translate-hidden)";
 
 /*  Fallback  */
 export const USED_CARS_UNAVAILABLE_CONTAINER_CLASS_NAME =

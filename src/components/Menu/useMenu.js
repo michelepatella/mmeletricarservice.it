@@ -1,11 +1,5 @@
 import { useEffect, useState } from "react";
-import { useAnimation } from "framer-motion";
-import {
-	ALL_MENU_SECTIONS,
-	MENU_BIG_ANIMATION_DURATION,
-	MENU_BIG_FINAL_OPACITY,
-	MENU_BIG_FINAL_X_POSITION,
-} from "./const.js";
+import { ALL_MENU_SECTIONS } from "./const.js";
 
 /**
  * Helper method to check element visibility
@@ -144,9 +138,6 @@ const mapChildren = (children, parentIndex, setVisible) =>
  * }}
  */
 export const useMenu = () => {
-	// For the item animation
-	const menuItemControls = useAnimation();
-
 	// State to track Menu visibility
 	const [visible, setVisible] = useState(false);
 
@@ -174,15 +165,6 @@ export const useMenu = () => {
 	};
 
 	useEffect(() => {
-		// Menu animation
-		menuItemControls.start({
-			opacity: MENU_BIG_FINAL_OPACITY,
-			x: MENU_BIG_FINAL_X_POSITION,
-			transition: {
-				duration: MENU_BIG_ANIMATION_DURATION,
-			},
-		});
-
 		/**
 		 * Method to handle Menu scrolling
 		 */
@@ -198,7 +180,7 @@ export const useMenu = () => {
 			// Remove scroll event listener on cleanup
 			window.removeEventListener("scroll", handleScroll);
 		};
-	}, [menuItemControls]);
+	}, []);
 
 	/**
 	 * Method to generate Menu items dynamically.
@@ -220,7 +202,6 @@ export const useMenu = () => {
 
 	return {
 		menuItems,
-		menuItemControls,
 		section,
 		visible,
 		toggleDrawer,

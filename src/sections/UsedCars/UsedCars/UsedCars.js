@@ -1,12 +1,10 @@
-import React, { useRef } from "react";
-import { useSpring, animated } from "@react-spring/web";
+import React from "react";
 import {
 	CUSTOM_TEXT_TYPES,
 	DOTTED_BACKGROUND_IMAGE_LINK,
 	USED_CARS_SECTION_ID,
 } from "../../../utils/const.js";
 import {
-	USED_CARS_ANIMATION_Y_FINAL_POSITION,
 	USED_CARS_CONTAINER_CLASS_NAME,
 	USED_CARS_TITLE,
 	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION_ALT,
@@ -15,10 +13,8 @@ import {
 	NO_USED_CAR_AVAILABLE_IMAGE_LINK,
 } from "./const.js";
 import { useUsedCarsOverview } from "./hooks/useUsedCarsOverview.js";
-import { useUsedCarsScroll } from "./hooks/useUsedCarsScroll.js";
 import {
 	getUsedCarsUnavailableDescriptionStyle,
-	getUsedCarsAnimatedDivStyle,
 	getUsedCarsCustomLoadingOutlineStyle,
 } from "./styleHandler.js";
 import SectionContainer from "../../../components/SectionContainer/SectionContainer.js";
@@ -38,19 +34,10 @@ function UsedCars() {
 	const { usedCarsOverview, isLoading } =
 		useUsedCarsOverview();
 
-	// To generate used car cards animation as long as
-	// the user scrolls their container
-	const sectionContainerRef = useRef(null);
-	const [containerStyles, container] = useSpring(() => ({
-		y: USED_CARS_ANIMATION_Y_FINAL_POSITION,
-	}));
-	useUsedCarsScroll(sectionContainerRef, container);
-
 	return (
 		<SectionBackground image={DOTTED_BACKGROUND_IMAGE_LINK}>
 			<SectionContainer
 				id={USED_CARS_SECTION_ID}
-				ref={sectionContainerRef}
 			>
 				{/* Used Cars section title */}
 				<CustomText
@@ -77,15 +64,7 @@ function UsedCars() {
 				{/* Used cars available */}
 				{!isLoading && usedCarsOverview?.length > 0 && (
 					<>
-						{/* Animated division containing all the used
-						 cars card, used to animate them when
-						 scrolling the section */}
-						<animated.div
-							style={getUsedCarsAnimatedDivStyle(
-								containerStyles
-							)}
-						>
-							{/* Container of all used car cards */}
+						{/* Container of all used car cards */}
 							<div
 								className={USED_CARS_CONTAINER_CLASS_NAME}
 							>
@@ -97,7 +76,6 @@ function UsedCars() {
 									/>
 								))}
 							</div>
-						</animated.div>
 					</>
 				)}
 

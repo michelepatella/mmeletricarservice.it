@@ -15,25 +15,6 @@ export const getUsedCarsUnavailableDescriptionStyle =
 	};
 
 /**
- * Method to get the style of the animated division
- * containing the used cars.
- * @param containerStyles — The style of the container.
- * @returns {{opacity: *, transform: *}} — CSS style.
- */
-export const getUsedCarsAnimatedDivStyle = (
-	containerStyles
-) => {
-	return {
-		opacity: containerStyles.y.to(
-			(y) => 1 - Number.parseInt(y) / 100
-		),
-		transform: containerStyles.y.to(
-			(y) => "translateY(" + y + ")"
-		),
-	};
-};
-
-/**
  * Method to get the style of the custom loading
  * outlined displayed into the used cars section.
  * @returns {{marginTop: string}} — CSS style.

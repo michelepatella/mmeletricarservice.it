@@ -5,21 +5,18 @@
 	"type": "module",
 	"dependencies": {
 		"@ant-design/icons": "^5.5.2",
-		"@react-spring/web": "^10.0.2",
 		"@sentry/node": "^10.15.0",
 		"@sentry/react": "^10.15.0",
 		"@supabase/supabase-js": "^2.49.4",
 		"@tanstack/react-query": "^5.75.2",
 		"@vercel/analytics": "^1.5.0",
 		"antd": "^5.24.1",
-		"framer-motion": "^11.18.2",
 		"js-cookie": "^3.0.5",
 		"p-limit": "^7.3.0",
 		"react-cookie-consent": "^9.0.0",
 		"react-intersection-observer": "^9.16.0",
 		"react-router-dom": "^7.13.1",
-		"react-scripts": "^5.0.1",
-		"react-spring": "^10.0.1"
+		"react-scripts": "^5.0.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",

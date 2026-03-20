@@ -1,3 +1,12 @@
+@keyframes menuFadeIn {
+	from {
+		opacity: var(--opacity-zero);
+	}
+	to {
+		opacity: var(--opacity-high);
+	}
+}
+
 /* ------ Responsive Layout ------ */
 
 /* Big screen */
@@ -38,6 +47,10 @@
 		top: var(--zero-position);
 		left: var(--zero-position);
 		z-index: var(--z-index-low);
+		opacity: var(--opacity-zero);
+		animation: menuFadeIn var(--animation-duration-long)
+			var(--animation-timing-ease)
+			var(--animation-fill-mode-forwards);
 	}
 
 	/* Menu Big Screen — Items */
