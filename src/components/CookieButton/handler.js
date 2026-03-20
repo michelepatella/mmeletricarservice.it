@@ -1,5 +1,5 @@
 /**
- * To manage the cookie button clicking, through which
+ * To manage the cookie button clicking through which
  * the user can open the cookie consent banner.
  * @param setIsCookiesBannerVisible — Setter for cookie
  * consent banner visibility.
