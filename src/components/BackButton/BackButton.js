@@ -8,9 +8,8 @@ import { CUSTOM_TEXT_TYPES } from "../../utils/const.js";
 import CustomText from "../CustomText/CustomText.js";
 
 /**
- * This component defines a back
- * button used in the entire web application. It is
- * characterized by a symbol '<' and a label for clarity.
+ * This component defines a back button used in the entire web application.
+ * It is characterized by a symbol '<' and a label for clarity.
  * @returns {React.JSX.Element} — The back button component.
  */
 function BackButton() {

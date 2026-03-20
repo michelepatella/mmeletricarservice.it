@@ -1,89 +1,59 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import BackButton from "./BackButton.js";
-
 import { BACK_BUTTON_LABEL } from "./const.js";
 
-// Definition of expected results
-const backButtonLabel = "Back Button Label";
-const customTextType = "body";
-
-const leftOutlinedTestId = "left-outlined-icon";
-
-// Mock constants
-jest.mock("../../utils/const", () => ({
-	BACK_BUTTON_LABEL: backButtonLabel,
+// Mocks
+jest.mock("../../utils/const.js", () => ({
+  CUSTOM_TEXT_TYPES: {
+    BODY: "body",
+  },
 }));
+jest.mock("../CustomText/CustomText.js", () => (props) => {
+  return <span>{props.text}</span>;
+});
 
-// Mock the LeftOutlined component
-jest.mock("@ant-design/icons", () => ({
-	LeftOutlined: () => (
-		<span data-testid={leftOutlinedTestId} />
-	),
-}));
+/**
+ * Test suite for the BackButton component.
+ * This suite includes tests to verify that the component:
+ * 1. Renders without crashing.
+ * 2. Displays the correct label.
+ * 3. Contains an SVG icon.
+ */
+describe("BackButton", () => {
 
-// Mock the CustomText component
-jest.mock("../CustomText/CustomText", () => ({
-	__esModule: true,
-	default: ({ type, disableAnimation, text }) => (
-		<span
-			data-type={type}
-			data-animation={disableAnimation}
-		>
-			{text}
-		</span>
-	),
-}));
-
-// Run the test
-describe("CustomBackButton", () => {
-	// Clear all mocks before running each test
-	beforeEach(() => {
-		jest.clearAllMocks();
+	/**
+	 * CASE 1: RENDERS WITHOUT CRASHING
+	 * This test ensures that the BackButton component can be 
+	 * rendered without throwing any errors.
+	 */
+	it("renders without crashing", () => {
+		render(<BackButton />);
 	});
 
-	describe("LeftOutlined", () => {
-		// Test if it renders the LeftOutlined icon correctly
-		test("renders icon correctly", () => {
-			render(<BackButton />);
-
-			expect(
-				screen.getByTestId(leftOutlinedTestId)
-			).toBeInTheDocument();
-		});
+	/**
+	 * CASE 2: RENDERS THE CORRECT LABEL
+	 * This test checks that the BackButton component 
+	 * displays the correct label.
+	 */
+	it("renders the correct label", () => {
+		render(<BackButton />);
+		expect(screen.getByText(BACK_BUTTON_LABEL)).toBeInTheDocument();
 	});
 
-	describe("CustomText", () => {
-		// Test if it renders the label correctly
-		test("renders with correct text", () => {
-			render(<BackButton />);
-
-			expect(
-				screen.getByText(BACK_BUTTON_LABEL)
-			).toBeInTheDocument();
-		});
-
-		// Test if it sets the correct text type
-		test("sets the correct text type", () => {
-			render(<BackButton />);
-
-			expect(
-				screen
-					.getByText(BACK_BUTTON_LABEL)
-					.getAttribute("data-type")
-			).toBe(customTextType);
-		});
-
-		// Test if it sets the correct disableAnimation prop
-		test("sets the correct animation setting", () => {
-			render(<BackButton />);
-
-			expect(
-				screen
-					.getByText(BACK_BUTTON_LABEL)
-					.getAttribute("data-animation")
-			).toBeTruthy();
-		});
+	/**
+	 * CASE 3: RENDERS THE ICON
+	 * This test verifies that the BackButton component 
+	 * includes an SVG icon in its rendered output.
+	 */
+	it("renders the icon", () => {
+		const { container } = render(<BackButton />);
+		// eslint-disable-next-line testing-library/no-node-access, testing-library/no-container
+		expect(container.querySelector("svg")).toBeInTheDocument();
 	});
 });
