@@ -1,12 +1,11 @@
+import React from "react";
 import { SECTION_BACKGROUND_TEST_ID } from "./const.js";
-import { getSectionBackgroundStyle } from "./styleHandler.js";
+import { getSectionBackgroundStyle } from "./style-handler.js";
 
 /**
- * This component defines the background container of a section.
- * It is used for containing a background image shown in a section.
+ * This component defines the background container of the sections.
  * @param image — The image to be displayed as background.
- * @param children — Children to be displayed over the
- * section background.
+ * @param children — Children to be displayed over the background.
  * @param custStyle — Custom CSS style.
  * @returns {JSX.Element} — The section background component.
  */

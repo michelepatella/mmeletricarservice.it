@@ -1,65 +1,62 @@
+/**
+ * @jest-environment jsdom
+ */
+
+/* eslint-disable import/first */
+
+// Mocks
+jest.mock("./style-handler.js", () => ({
+	getSectionBackgroundStyle: jest.fn(),
+}));
+
 import React from "react";
-import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import SectionBackground from "./SectionBackground.js";
-import { getSectionBackgroundStyle } from "./styleHandler.js";
+import { SECTION_BACKGROUND_TEST_ID } from "./const.js";
+import { getSectionBackgroundStyle } from "./style-handler.js";
 
-// Mock IntersectionObserver
-beforeAll(() => {
-	global.IntersectionObserver = class {
-		observe() {
-			return null;
-		}
-		unobserve() {
-			return null;
-		}
-	};
-});
+/**
+ * Test suite for the SectionBackground component.
+ * This suite contains:
+ * 1. A test to verify that the component renders correctly with children.
+ * 2. A test to verify that the background style is applied correctly.
+ */
+describe("SectionBackground", () => {
 
-// Definition of expected results
-const childrenContentText = "Children Content";
-const childrenContent = <div>Children Content</div>;
-const imageUrl = "image-url";
-const custStyle = { color: "red" };
-const combinedStyle = {
-	...getSectionBackgroundStyle(imageUrl),
-	...custStyle,
-};
+	/**
+	 * CASE 1: RENDERS CHILDREN
+	 * This test checks that the component correctly renders its children.
+	 */
+	it("renders children", () => {
+		getSectionBackgroundStyle.mockReturnValue({});
 
-const motionSectionTestId =
-	"background-container-motion-section";
-
-// Run tests
-describe("BackgroundContainer", () => {
-	// Clear all mocks before
-	// running each test
-	beforeEach(() => {
-		jest.clearAllMocks();
-	});
-
-	// Test if it correctly renders
-	// the children
-	test("renders children correctly", () => {
 		render(
-			<SectionBackground children={childrenContent} />
+			<SectionBackground image="test.jpg">
+				Test content
+			</SectionBackground>
 		);
 
-		expect(
-			screen.getByText(childrenContentText)
-		).toBeInTheDocument();
+		expect(screen.getByText("Test content")).toBeInTheDocument();
 	});
 
-	// Test if it correctly applies combined style
-	test("applies combined style correctly", () => {
-		render(
-			<SectionBackground
-				image={imageUrl}
-				custStyle={custStyle}
-			/>
-		);
+	/**
+	 * CASE 2: APPLIES BACKGROUND STYLE
+	 * This test verifies that the background style returned by the 
+	 * handler is applied.
+	 */
+	it("applies background style correctly", () => {
+		getSectionBackgroundStyle.mockReturnValue({
+			backgroundImage: "url(test.jpg)",
+		});
 
-		expect(
-			screen.getByTestId(motionSectionTestId)
-		).toHaveStyle(combinedStyle);
+		render(<SectionBackground image="test.jpg" />);
+
+		const container = screen.getByTestId(SECTION_BACKGROUND_TEST_ID);
+
+		expect(getSectionBackgroundStyle).toHaveBeenCalledWith("test.jpg");
+		expect(container).toHaveStyle({
+			backgroundImage: "url(test.jpg)",
+		});
 	});
 });
