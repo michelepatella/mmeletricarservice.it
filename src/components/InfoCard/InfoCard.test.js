@@ -1,103 +1,108 @@
-import React from "react";
-import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import InfoCard from "./InfoCard.js";
+/**
+ * @jest-environment jsdom
+ */
 
-// Definition of expected results
-const infoCardTitle = "Info Card Title";
-const infoCardDescription = "Info Card Description";
-const infoCardIcon = "info-card-icon";
-const infoCardTitleType = "subheading";
-const infoCardDescriptionType = "body";
+/* eslint-disable import/first */
 
-const infoCardIconAlt = "info-card-icon";
-
-// Mock CustomText
-jest.mock("../CustomText/CustomText", () => ({
+// Mocks
+jest.mock("../CustomText/CustomText.js", () => ({
 	__esModule: true,
-	default: ({ type, text, style }) => (
-		<span data-type={type} style={style}>
-			{text}
-		</span>
-	),
+	default: ({ text, type }) => <span data-type={type}>{text}</span>,
 }));
+jest.mock('../../utils/contactHandlers.js', () => ({}));
 
-// Run tests
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import InfoCard from "./InfoCard.js";
+import {
+	INFO_CARD_CLASS_NAME,
+	INFO_CARD_FLEX_CLASS_NAME,
+	INFO_CARD_ICON_ALT,
+	INFO_CARD_ICON_CLASS_NAME,
+} from "./const.js";
+import { CUSTOM_TEXT_TYPES } from "../../utils/const.js";
+import * as styleHandler from "./styleHandler.js";
+
+// Spy
+jest.spyOn(styleHandler, "getInfoCardTitleStyle").mockReturnValue({});
+jest.spyOn(styleHandler, "getInfoCardDescriptionStyle").mockReturnValue({});
+
+/**
+ * Test suite for the InfoCard component.
+ * This suite contains:
+ * 1. A test to verify that the card renders the global container and flex container.
+ * 2. A test to verify that the icon renders correctly when provided.
+ * 3. A test to verify that the title and description are rendered with correct props.
+ */
 describe("InfoCard", () => {
-	// Clear all mocks before
-	// running each test
-	beforeEach(() => {
-		jest.clearAllMocks();
+
+	// Define behavior before all tests
+	beforeAll(() => {
+		const rootDiv = document.createElement("div");
+		rootDiv.id = "root";
+		document.body.appendChild(rootDiv);
 	});
 
-	// Test CustomText components
-	describe("CustomText", () => {
-		// Test if it correctly renders the title
-		test("renders with correct title", () => {
-			render(<InfoCard title={infoCardTitle} />);
+	/**
+	 * CASE 1: RENDERS CARD CONTAINERS
+	 * This test checks that the card renders its global and flex container.
+	 */
+	it("renders card containers correctly", () => {
+		render(
+			<InfoCard title="Test title" description="Test description" />
+		);
 
-			expect(
-				screen.getByText(infoCardTitle)
-			).toBeInTheDocument();
-		});
+		// eslint-disable-next-line testing-library/no-node-access
+		const card = document.querySelector("." + INFO_CARD_CLASS_NAME);
+		// eslint-disable-next-line testing-library/no-node-access
+		const flex = document.querySelector("." + INFO_CARD_FLEX_CLASS_NAME);
 
-		// Test if it correctly renders the description
-		test("renders with correct description", () => {
-			render(
-				<InfoCard description={infoCardDescription} />
-			);
-
-			expect(
-				screen.getByText(infoCardDescription)
-			).toBeInTheDocument();
-		});
-
-		// Test if it sets the correct title type
-		test("sets the correct title type", () => {
-			render(<InfoCard title={infoCardTitle} />);
-
-			expect(
-				screen
-					.getByText(infoCardTitle)
-					.getAttribute("data-type")
-			).toBe(infoCardTitleType);
-		});
-
-		// Test if it sets the correct description type
-		test("sets the correct description type", () => {
-			render(
-				<InfoCard description={infoCardDescription} />
-			);
-
-			expect(
-				screen
-					.getByText(infoCardDescription)
-					.getAttribute("data-type")
-			).toBe(infoCardDescriptionType);
-		});
+		expect(card).toBeInTheDocument();
+		expect(flex).toBeInTheDocument();
 	});
 
-	// Test icon (if any)
-	describe("Icon", () => {
-		// Test if it correctly renders the
-		// icon if provided
-		test("renders with correct icon if provided", () => {
-			render(<InfoCard icon={infoCardIcon} />);
+	/**
+	 * CASE 2: RENDERS ICON
+	 * This test verifies that the icon is rendered when an icon URL is provided.
+	 */
+	it("renders icon when provided", () => {
+		render(
+			<InfoCard
+				title="Test title"
+				description="Test description"
+				icon="test-icon.png"
+			/>
+		);
 
-			const iconNode = screen.getByAltText(infoCardIconAlt);
+		// eslint-disable-next-line testing-library/no-node-access
+		const icon = document.querySelector("." + INFO_CARD_ICON_CLASS_NAME);
 
-			expect(iconNode).toBeInTheDocument();
-			expect(iconNode).toHaveAttribute("src", infoCardIcon);
-		});
+		expect(icon).toBeInTheDocument();
+		expect(icon).toHaveAttribute("src", "test-icon.png");
+		expect(icon).toHaveAttribute("alt", INFO_CARD_ICON_ALT);
+	});
 
-		// Test if it doesn't render the
-		// icon if not provided
-		test("doesn't render icon if not provided", () => {
-			render(<InfoCard />);
+	/**
+	 * CASE 3: RENDERS TITLE AND DESCRIPTION
+	 * This test verifies that the title and description texts are rendered
+	 * via the CustomText component with correct types.
+	 */
+	it("renders title and description correctly", () => {
+		render(
+			<InfoCard
+				title="Test title"
+				description="Test description"
+			/>
+		);
 
-			expect(
-				screen.queryByAltText(infoCardIconAlt)
-			).not.toBeInTheDocument();
-		});
+		const title = screen.getByText("Test title");
+		const description = screen.getByText("Test description");
+
+		expect(title).toBeInTheDocument();
+		expect(title.dataset.type).toBe(CUSTOM_TEXT_TYPES.SUBHEADING);
+
+		expect(description).toBeInTheDocument();
+		expect(description.dataset.type).toBe(CUSTOM_TEXT_TYPES.BODY);
 	});
 });

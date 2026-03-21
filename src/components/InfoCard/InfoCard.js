@@ -1,3 +1,4 @@
+import React from "react";
 import { Flex } from "antd";
 import {
 	INFO_CARD_CLASS_NAME,
@@ -14,12 +15,11 @@ import CustomText from "../CustomText/CustomText.js";
 
 /**
  * This component represents an info card. It is composed by
- * an icon characterizing the information graphically (if any),
- * an informative title, and a description.
+ * an icon, a title, and a description.
  * @param props Object containing:
  *   - icon: string — Optional URL of the icon image to display.
- *   - title: string — The title text of the info card.
- *   - description: string — The descriptive text of the info card.
+ *   - title: string — The title of the info card.
+ *   - description: string — The description of the info card.
  * @returns {Element} — The info card component.
  */
 function InfoCard(props) {
