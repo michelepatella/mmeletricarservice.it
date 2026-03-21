@@ -1,52 +1,64 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import {
-	render,
-	screen,
-	fireEvent,
-} from "@testing-library/react";
 import IconButton from "./IconButton.js";
+import {
+	ICON_BUTTON_IMAGE_ALT,
+} from "./const.js";
 
-// Definition of expected results
-const customIconButtonImg = "custom-button-icon";
-const customIconButtonImgAltAttr = "button-icon";
+/**
+ * Test suite for the IconButton component.
+ * This suite contains:
+ * 1. A test to verify that the button is rendered correctly.
+ * 2. A test to verify that the image is rendered with correct src and alt.
+ * 3. A test to verify that clicking the button triggers the onClick handler.
+ */
+describe("IconButton", () => {
 
-// Mock custom icon button click handler
-const customIconButtonClickHandler = jest.fn();
+	/**
+	 * CASE 1: RENDERS BUTTON
+	 * This test checks that the button is rendered correctly.
+	 */
+	it("renders button correctly", () => {
+		render(<IconButton src="test.png" onClick={jest.fn()} />);
 
-// Run tests
-describe("CustomIconButton", () => {
-	// Clear all mocks before running each test
-	beforeEach(() => {
-		jest.clearAllMocks();
+		// eslint-disable-next-line testing-library/no-node-access
+		const button = document.querySelector("button");
+
+		expect(button).toBeInTheDocument();
 	});
 
-	// Test if it correctly renders the icon
-	test("renders with correct icon", () => {
-		render(<IconButton src={customIconButtonImg} />);
+	/**
+	 * CASE 2: RENDERS IMAGE
+	 * This test verifies that the image is rendered with correct src and alt.
+	 */
+	it("renders image with correct src and alt", () => {
+		render(<IconButton src="test.png" onClick={jest.fn()} />);
 
-		const icon = screen.getByAltText(
-			customIconButtonImgAltAttr
-		);
+		const image = screen.getByAltText(ICON_BUTTON_IMAGE_ALT);
 
-		expect(icon).toBeInTheDocument();
-		expect(icon).toHaveAttribute(
-			"src",
-			customIconButtonImg
-		);
+		expect(image).toBeInTheDocument();
+		expect(image).toHaveAttribute("src", "test.png");
 	});
 
-	// Test if it calls the passed onClick handler
-	// when clicked
-	test("calls onClick handler when clicked", () => {
-		render(
-			<IconButton
-				src={customIconButtonImg}
-				onClick={customIconButtonClickHandler}
-			/>
-		);
+	/**
+	 * CASE 3: BUTTON CLICK
+	 * This test verifies that clicking the button triggers the onClick handler.
+	 */
+	it("calls onClick when button is clicked", () => {
+		const mockClick = jest.fn();
 
-		fireEvent.click(screen.getByRole("button"));
-		expect(customIconButtonClickHandler).toHaveBeenCalled();
+		render(<IconButton src="test.png" onClick={mockClick} />);
+
+		// eslint-disable-next-line testing-library/no-node-access
+		const button = document.querySelector("button");
+
+		fireEvent.click(button);
+
+		expect(mockClick).toHaveBeenCalled();
 	});
 });

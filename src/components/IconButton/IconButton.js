@@ -1,11 +1,12 @@
+import React from "react";
 import {
 	ICON_BUTTON_IMAGE_ALT,
 	ICON_BUTTON_CLASS_NAME,
 } from "./const.js";
 
 /**
- * This component defines an icon button, which
- * has just an icon (without any text).
+ * This component defines an icon button, which has just an 
+ * icon (without any text).
  * @param props Object containing:
  *   - src: string — The URL of the icon image.
  *   - onClick: function — Callback function when the button is clicked.
