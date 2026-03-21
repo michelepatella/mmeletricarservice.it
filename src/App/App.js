@@ -5,7 +5,7 @@ import {
 } from "@tanstack/react-query";
 import { HashRouter } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
-import { useCookieConsent } from "./use-cookie-consent/useCookieConsent.js";
+import { useCookieConsent } from "./use-cookie-consent/use-cookie-consent.js";
 import Home from "../sections/Home/Home/Home.js";
 import AboutUs from "../sections/AboutUs/AboutUs.js";
 import OurValues from "../sections/OurValues/OurValues.js";

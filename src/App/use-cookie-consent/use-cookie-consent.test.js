@@ -24,7 +24,7 @@ Object.defineProperty(window, 'location', {
 import { renderHook, act } from "@testing-library/react";
 import Cookies from "js-cookie";
 import { SentryReact } from "../../index.js";
-import { useCookieConsent } from "./useCookieConsent.js";
+import { useCookieConsent } from "./use-cookie-consent.js";
 
 
 /**
