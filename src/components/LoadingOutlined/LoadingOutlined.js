@@ -1,3 +1,4 @@
+import React from "react";
 import {
 	CIRCLE_LOADING_OUTLINED_IMAGE_LINK,
 	LOADING_OUTLINED_CIRCLE_IMAGE_ALT,
@@ -9,8 +10,7 @@ import {
 } from "./const.js";
 
 /**
- * This component defines the loading
- * outlined of the whole web application. It is composed
+ * This component defines the loading outlined, composed
  * of a circle rotating around company logo image.
  * @param custStyle — Custom CSS style object to override the default style.
  * @returns {JSX.Element} — The loading outlined component.
