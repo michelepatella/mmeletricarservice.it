@@ -22,7 +22,7 @@ import {
 	INFO_CARD_ICON_CLASS_NAME,
 } from "./const.js";
 import { CUSTOM_TEXT_TYPES } from "../../utils/const.js";
-import * as styleHandler from "./styleHandler.js";
+import * as styleHandler from "./style-handler.js";
 
 // Spy
 jest.spyOn(styleHandler, "getInfoCardTitleStyle").mockReturnValue({});

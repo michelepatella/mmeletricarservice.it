@@ -10,7 +10,7 @@ import { CUSTOM_TEXT_TYPES } from "../../utils/const.js";
 import {
 	getInfoCardDescriptionStyle,
 	getInfoCardTitleStyle,
-} from "./styleHandler.js";
+} from "./style-handler.js";
 import CustomText from "../CustomText/CustomText.js";
 
 /**
