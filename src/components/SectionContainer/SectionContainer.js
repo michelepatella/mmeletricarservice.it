@@ -1,9 +1,9 @@
+import React from "react";
 import { SECTION_CONTAINER_CLASS_NAME } from "./const.js";
 
 /**
- * This component represents the section container.
- * As its name suggests, it is used as container for containing
- * all the components which compose a section.
+ * This component represents the section container for containing
+ * all the components which made up a section.
  * @param children — The children to be displayed into
  * the section container.
  * @param id — ID of the section.
