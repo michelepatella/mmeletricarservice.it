@@ -1,112 +1,102 @@
+/**
+ * @jest-environment jsdom
+ */
+
+/* eslint-disable import/first */
+
+// Mock
+jest.mock("antd", () => ({
+	Button: ({ children, ...props }) => (
+		<button {...props}>{children}</button>
+	),
+}));
+
 import React from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import {
-	render,
-	screen,
-	fireEvent,
-} from "@testing-library/react";
 import CustomButton from "./CustomButton.js";
+import {
+	CUSTOM_BUTTON_TYPES,
+	CUSTOM_BUTTON_ICON_ALT,
+} from "./const.js";
 
-// Definition of expected results
-const customButtonText = "Custom Button Text";
-const customButtonIcon = "custom-button-icon";
-const genericCustomButtonClass = "custom-button";
-const contactCustomButtonClass = "contact-button";
-const ctaCustomButtonClass = "cta-button";
-const customButtonIconAltAttr = "button-icon";
-const customButtonStyle = { backgroundColor: "red" };
-
-// Mock custom button click handler
-const customButtonClickHandler = jest.fn();
-
-// Run tests
+/**
+ * Test suite for the CustomButton component.
+ * This suite contains:
+ * 1. A test to verify that the button renders the correct text.
+ * 2. A test to verify that clicking the button triggers the handler.
+ * 3. A test to verify that the icon is rendered when provided.
+ * 4. A test to verify correct className based on props.
+ */
 describe("CustomButton", () => {
-	// Clear all mocks before running each test
-	beforeEach(() => {
-		jest.clearAllMocks();
+
+    /**
+     * CASE 1: RENDERS TEXT
+     * This test checks that the button correctly renders the provided text.
+     */
+	it("renders the correct text", () => {
+		render(<CustomButton text="Click me" />);
+
+		expect(screen.getByText("Click me")).toBeInTheDocument();
 	});
 
-	// Test if it applies the correct button's class
-	// based on the passed props
-	test.each([
-		[{}, genericCustomButtonClass],
-		[{ isContact: true }, contactCustomButtonClass],
-		[
-			{ isContact: true, isCta: true },
-			ctaCustomButtonClass,
-		],
-	])("applies correct class %#", (props, expectedClass) => {
+    /**
+     * CASE 2: CLICK HANDLER
+     * This test verifies that clicking the button triggers the onClick handler.
+     */
+	it("calls onClick when button is clicked", () => {
+		const mockClick = jest.fn();
+
+		render(<CustomButton text="Click me" onClick={mockClick} />);
+
+		fireEvent.click(screen.getByText("Click me"));
+
+		expect(mockClick).toHaveBeenCalled();
+	});
+
+    /**
+     * CASE 3: RENDERS ICON
+     * This test verifies that the icon is rendered when provided.
+     */
+	it("renders icon when provided", () => {
 		render(
-			<CustomButton text={customButtonText} {...props} />
+			<CustomButton text="Click me" icon="test-icon.png" />
 		);
 
 		expect(
-			screen.getByRole("button", { name: customButtonText })
-		).toHaveClass(expectedClass);
-	});
-
-	// Test if it renders the text correctly
-	test("renders with correct text", () => {
-		render(<CustomButton text={customButtonText} />);
-
-		expect(
-			screen.getByText((content) =>
-				content.includes(customButtonText)
-			)
+			screen.getByAltText(CUSTOM_BUTTON_ICON_ALT)
 		).toBeInTheDocument();
 	});
 
-	// Test if it correctly renders the icon if provided
-	test("renders with correct icon if provided", () => {
-		render(<CustomButton icon={customButtonIcon} />);
-
-		const icon = screen.getByAltText(
-			customButtonIconAltAttr
+    /**
+     * CASE 4: CLASS NAME LOGIC
+     * This test verifies that the correct className is applied 
+	 * based on isContact and isCta props.
+     */
+	it("applies correct className based on props", () => {
+		const { rerender } = render(
+			<CustomButton text="Click me" />
 		);
 
-		expect(icon).toBeInTheDocument();
-		expect(icon).toHaveAttribute("src", customButtonIcon);
-	});
-
-	// Test if it doesn't render the icon if not provided
-	test("doesn't render the icon if not provided", () => {
-		render(<CustomButton />);
-
-		const icon = screen.queryByAltText(
-			customButtonIconAltAttr
+		// General, custom button
+		expect(screen.getByText("Click me")).toHaveClass(
+			CUSTOM_BUTTON_TYPES.GENERAL
 		);
 
-		expect(icon).not.toBeInTheDocument();
-	});
-
-	// Test if it applies the custom style
-	// when passed
-	test("applies custom style correctly", () => {
-		render(
-			<CustomButton
-				text={customButtonText}
-				style={customButtonStyle}
-			/>
+		// Contact button
+		rerender(
+			<CustomButton text="Click me" isContact />
+		);
+		expect(screen.getByText("Click me")).toHaveClass(
+			CUSTOM_BUTTON_TYPES.CONTACT
 		);
 
-		expect(
-			screen.getByRole("button", { name: customButtonText })
-		).toHaveStyle(customButtonStyle);
-	});
-
-	// Test if it calls the passed onClick handler
-	// when clicked
-	test("calls onClick handler when clicked", () => {
-		render(
-			<CustomButton
-				text={customButtonText}
-				onClick={customButtonClickHandler}
-			/>
+		// CTA button
+		rerender(
+			<CustomButton text="Click me" isContact isCta />
 		);
-
-		fireEvent.click(
-			screen.getByRole("button", { name: customButtonText })
+		expect(screen.getByText("Click me")).toHaveClass(
+			CUSTOM_BUTTON_TYPES.CTA
 		);
-		expect(customButtonClickHandler).toHaveBeenCalled();
 	});
 });

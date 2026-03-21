@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "antd";
 import {
 	CUSTOM_BUTTON_ICON_ALT,
@@ -6,15 +7,10 @@ import {
 } from "./const.js";
 
 /**
- * This component defines a custom button
- * shared across the entire web application.
- * It may be a:
- * - Custom button: a generic custom button.
- * - Contact button: a button to contact the company.
- * - CTA button: a CTA button, which is more emphasized than a simple contact button.
- * Any button has predefined styles combined with customized styles (if any). Any button
- * may overwrite predefined style with its customized ones, if needed.
- * The button may contain an icon (is specified).
+ * This component defines a custom button, which may be:
+ * - A generic custom button.
+ * - A button to contact the company.
+ * - A CTA button, which is more emphasized than a simple contact button.
  * @param props — Object containing:
  * 	 - text: string — The button label.
  *   - onClick: function — Callback when the button is clicked.
