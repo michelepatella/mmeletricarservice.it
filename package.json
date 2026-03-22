@@ -62,13 +62,17 @@
 	},
 	"jest": {
 		"collectCoverageFrom": [
-		"src/**/*.{js,jsx}",
-		"api/**/*.{js,jsx}",
-		"!api/**/*.const.js",
-		"!api/**/const.js",
-		"!src/**/const.js",
-		"!src/**/style-handler.js",
-		"!src/index.js"
-		]
+			"src/**/*.{js,jsx}",
+			"!src/**/const.js",
+			"!src/**/style-handler.js",
+			"!src/index.js",
+			"api/**/*.{js,jsx}",
+			"!api/utils/setup.js",
+			"!api/**/*.const.js",
+			"!api/**/const.js"
+		],
+		"moduleNameMapper": {
+    		"\\.(css|less|sass|scss)$": "identity-obj-proxy"
+  		}
 	}
 }
