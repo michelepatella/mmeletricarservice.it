@@ -12,11 +12,11 @@ import {
 	CUSTOM_TEXT_TYPES,
 	SERVICES_SECTION_ID,
 } from "../../utils/const.js";
-import { useServiceTitleAnimation } from "./useServiceTitleAnimation.js";
+import { useServiceTitleAnimation } from "./use-service-title-animation.js";
 import {
 	getServicesTitleSpanStyle,
 	getServicesTitleStyle,
-} from "./styleHandler.js";
+} from "./style-handler.js";
 import SectionBackground from "../../components/SectionBackground/SectionBackground.js";
 import SectionContainer from "../../components/SectionContainer/SectionContainer.js";
 import InfoCard from "../../components/InfoCard/InfoCard.js";

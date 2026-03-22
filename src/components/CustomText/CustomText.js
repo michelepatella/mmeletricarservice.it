@@ -3,7 +3,7 @@ import {
 	CUSTOM_TEXT_CLASS_NAME_PREFIX,
 	CUSTOM_TEXT_DEFAULT_OPACITY,
 } from "./const.js";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver.js";
+import useIntersectionObserver from "../../hooks/use-intersection-observer.js";
 
 /**
  * This component defines the custom text, which may be:

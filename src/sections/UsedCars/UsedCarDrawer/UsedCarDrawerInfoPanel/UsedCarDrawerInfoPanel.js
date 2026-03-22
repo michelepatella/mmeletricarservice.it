@@ -11,7 +11,7 @@ import {
 	PRICE_STYLE,
 } from "../../const.js";
 import { USED_CAR_DRAWER_CTA_BUTTON_TEXT } from "./const.js";
-import { getUsedCarDrawerInfoPanelCarNameStyle } from "./styleHandler.js";
+import { getUsedCarDrawerInfoPanelCarNameStyle } from "./style-handler.js";
 import CustomText from "../../../../components/CustomText/CustomText.js";
 import CustomButton from "../../../../components/CustomButton/CustomButton.js";
 import UsedCarDrawerCollapse from "../UsedCarDrawerCollapse/UsedCarDrawerCollapse.js";

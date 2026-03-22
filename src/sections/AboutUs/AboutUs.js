@@ -8,7 +8,7 @@ import {
 	ABOUT_US_SECTION_ID,
 	CUSTOM_TEXT_TYPES,
 } from "../../utils/const.js";
-import { getAboutUsSectionContainerStyle } from "./styleHandler.js";
+import { getAboutUsSectionContainerStyle } from "./style-handler.js";
 import SectionContainer from "../../components/SectionContainer/SectionContainer.js";
 import SectionBackground from "../../components/SectionBackground/SectionBackground.js";
 import CustomText from "../../components/CustomText/CustomText.js";

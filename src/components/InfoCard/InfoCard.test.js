@@ -9,7 +9,7 @@ jest.mock("../CustomText/CustomText.js", () => ({
 	__esModule: true,
 	default: ({ text, type }) => <span data-type={type}>{text}</span>,
 }));
-jest.mock('../../utils/contactHandlers.js', () => ({}));
+jest.mock('../../utils/contact-handlers.js', () => ({}));
 
 import React from "react";
 import { render, screen } from "@testing-library/react";

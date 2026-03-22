@@ -6,7 +6,7 @@ import {
 	USED_CAR_OVERVIEW_CONTAINER_GAP,
 	USED_CAR_OVERVIEW_ICON_ALT,
 } from "./const.js";
-import { getUsedCarOverviewTextStyle } from "./styleHandler.js";
+import { getUsedCarOverviewTextStyle } from "./style-handler.js";
 import CustomText from "../../../components/CustomText/CustomText.js";
 
 /**

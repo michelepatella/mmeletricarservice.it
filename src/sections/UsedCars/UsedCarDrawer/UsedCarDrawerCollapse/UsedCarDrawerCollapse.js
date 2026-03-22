@@ -14,7 +14,7 @@ import {
 import {
 	getUsedCarDrawerCollapseInformationNameStyle,
 	getUsedCarDrawerCollapseInformationTextStyle,
-} from "./styleHandler.js";
+} from "./style-handler.js";
 import CustomText from "../../../../components/CustomText/CustomText.js";
 
 /**

@@ -18,7 +18,7 @@ import {
 import {
 	getGoogleMapsContainerStyle,
 	getGoogleMapsUnavailableDescriptionStyle,
-} from "./styleHandler.js";
+} from "./style-handler.js";
 import SectionContainer from "../../components/SectionContainer/SectionContainer.js";
 import SectionBackground from "../../components/SectionBackground/SectionBackground.js";
 import CustomText from "../../components/CustomText/CustomText.js";

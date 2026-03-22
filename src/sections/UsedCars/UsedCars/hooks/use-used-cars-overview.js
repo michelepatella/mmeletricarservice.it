@@ -3,7 +3,7 @@ import { SentryReact } from "../../../../index.js";
 import { DATA_STALE_TIME } from "../../const.js";
 import { USED_CARS_OVERVIEW_API_KEY } from "../const.js";
 import { USED_CARS_OVERVIEW_ENDPOINT } from "../../../../utils/const.js";
-import { fetchUsedCarData } from "../../../../utils/dataFetcher.js";
+import { fetchUsedCarData } from "../../../../utils/data-fetcher.js";
 
 /**
  * Custom hook to fetch the overview list of used cars, by

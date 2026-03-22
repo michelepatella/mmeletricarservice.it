@@ -6,10 +6,10 @@ import {
 	USED_CAR_DRAWER_VERTICAL_FLEX_CLASS_NAME,
 	USED_CAR_DRAWER_VERTICAL_FLEX_WIDTH,
 } from "./const.js";
-import { useUsedCarInfo } from "./hooks/useUsedCarInfo.js";
-import { useDrawerBackButtonHandler } from "./hooks/useDrawerBackButton.js";
+import { useUsedCarInfo } from "./hooks/use-used-car-info.js";
+import { useDrawerBackButtonHandler } from "./hooks/use-drawer-back-button.js";
 import { onUsedCarDrawerClose } from "../../handler.js";
-import { getUsedCarDrawerCustomLoadingOutlinedStyle } from "./styleHandler.js";
+import { getUsedCarDrawerCustomLoadingOutlinedStyle } from "./style-handler.js";
 import UsedCarDrawerCarousel from "../UsedCarDrawerCarousel/UsedCarDrawerCarousel.js";
 import UsedCarDrawerInfoPanel from "../UsedCarDrawerInfoPanel/UsedCarDrawerInfoPanel.js";
 import BackButton from "../../../../components/BackButton/BackButton.js";

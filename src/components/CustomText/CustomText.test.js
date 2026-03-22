@@ -5,7 +5,7 @@
 /* eslint-disable import/first */
 
 // Mock
-jest.mock("../../hooks/useIntersectionObserver.js", () => ({
+jest.mock("../../hooks/use-intersection-observer.js", () => ({
 	__esModule: true,
 	default: jest.fn(),
 }));
@@ -18,7 +18,7 @@ import {
 	CUSTOM_TEXT_CLASS_NAME_PREFIX,
 	CUSTOM_TEXT_DEFAULT_OPACITY,
 } from "./const.js";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver.js";
+import useIntersectionObserver from "../../hooks/use-intersection-observer.js";
 
 /**
  * Test suite for the CustomText component.

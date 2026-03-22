@@ -12,11 +12,11 @@ import {
 	USED_CARS_UNAVAILABLE_CONTAINER_CLASS_NAME,
 	NO_USED_CAR_AVAILABLE_IMAGE_LINK,
 } from "./const.js";
-import { useUsedCarsOverview } from "./hooks/useUsedCarsOverview.js";
+import { useUsedCarsOverview } from "./hooks/use-used-cars-overview.js";
 import {
 	getUsedCarsUnavailableDescriptionStyle,
 	getUsedCarsCustomLoadingOutlineStyle,
-} from "./styleHandler.js";
+} from "./style-handler.js";
 import SectionContainer from "../../../components/SectionContainer/SectionContainer.js";
 import SectionBackground from "../../../components/SectionBackground/SectionBackground.js";
 import UsedCarCard from "../UsedCarCard/UsedCarCard.js";
