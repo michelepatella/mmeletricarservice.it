@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 /**
- * Custom hook to track if an element of the web application
+ * Custom hook to track whether an element of the webapp
  * is visible or not in the browser.
  * @param ref — The reference to the element to be observed.
  * @param threshold — Value indicating how much of the
@@ -10,16 +10,18 @@ import { useEffect, useState } from "react";
  * otherwise.
  */
 const useIntersectionObserver = (ref, threshold) => {
-	// State to track visibility of the element
+	// State to keep track of the element's visibility
 	const [isVisible, setIsVisible] = useState(false);
 
 	/**
-	 * Keep track of the element's state (visible or not)
+	 * Keep track of the element's visibility.
 	 */
 	useEffect(() => {
-		// Get the reference
+		// Get the reference of the element
+		// to be observed
 		const node = ref?.current;
-		if (!node) return;
+		if (!node) 
+			return;
 
 		// Options for the IntersectionObserver
 		const options = {
@@ -32,11 +34,13 @@ const useIntersectionObserver = (ref, threshold) => {
 			(entries, observer) => {
 				for (const entry of entries ?? []) {
 					if (entry?.isIntersecting) {
-						// If the element is in view, update state and add CSS class
+						// If the element is in view, 
+						// update state and add CSS class
 						setIsVisible(true);
 						entry?.target?.classList?.add("in-view");
 
-						// Stop observing once the element is visible
+						// Stop observing the element as soon as 
+						// it becomes visible
 						observer?.unobserve(entry?.target);
 					} else {
 						// If element is out of view, update state
@@ -47,12 +51,16 @@ const useIntersectionObserver = (ref, threshold) => {
 			options
 		);
 
-		// Start observing the element if the ref is valid
-		if (ref && node) observer?.observe(node);
+		// Start observing the element 
+		// if the ref is valid
+		if (ref && node) 
+			observer?.observe(node);
 
-		// Cleanup function to stop observing when component unmounts
+		// Cleanup function to stop observing
+		// the element when becoming unmounted
 		return () => {
-			if (ref && node) observer?.unobserve(node);
+			if (ref && node) 
+				observer?.unobserve(node);
 		};
 	}, [ref, threshold]);
 
