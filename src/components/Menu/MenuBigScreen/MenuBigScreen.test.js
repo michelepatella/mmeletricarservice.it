@@ -17,7 +17,7 @@ jest.mock("antd", () => ({
 		</div>
 	),
 }));
-jest.mock("../use-menu.js", () => ({
+jest.mock("../use-menu/use-menu.js", () => ({
 	useMenu: jest.fn(),
 }));
 
@@ -26,7 +26,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import MenuBigScreen from "./MenuBigScreen.js";
 import { MENU_BIG_CONTAINER_CLASS_NAME } from "./const.js";
-import { useMenu } from "../use-menu.js";
+import { useMenu } from "../use-menu/use-menu.js";
 
 /**
  * Test suite for the MenuBigScreen component.

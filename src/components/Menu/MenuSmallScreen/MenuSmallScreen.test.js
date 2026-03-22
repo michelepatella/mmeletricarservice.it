@@ -5,7 +5,7 @@
 /* eslint-disable import/first */
 
 // Mocks
-jest.mock("../use-menu.js", () => ({
+jest.mock("../use-menu/use-menu.js", () => ({
 	useMenu: jest.fn(),
 }));
 jest.mock("./style-handler.js", () => ({
@@ -18,7 +18,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import MenuSmallScreen from "./MenuSmallScreen.js";
-import { useMenu } from "../use-menu.js";
+import { useMenu } from "../use-menu/use-menu.js";
 import {
 	HAMBURGER_BUTTON_CLASS_NAME,
 	MENU_SMALL_CONTAINER_CLASS_NAME,

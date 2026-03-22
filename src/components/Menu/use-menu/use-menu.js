@@ -1,21 +1,19 @@
 import { useEffect, useState } from "react";
-import { ALL_MENU_SECTIONS } from "./const.js";
+import { ALL_MENU_SECTIONS } from "../const.js";
 
 /**
- * Helper method to check element visibility
- * and update current section
+ * Helper method to check section visibility and update
+ * the current one.
  * @param id — ID of the HTML element.
  * @param closestDistanceRef — The smallest distance from
  * the top of the viewport among all sections checked so far.
  * @returns {{closestDistance: number, currentSection}|{closestDistance, currentSection: null}}
  * — An object containing the smallest distance from the viewport
  * top and the ID of the section currently in view.
- * If no section is in view, currentSection is null.
  */
 const checkAndUpdateSection = (id, closestDistanceRef) => {
-	// Read the element
+	// Check whether the section exists in the DOM
 	const element = document.getElementById(id);
-
 	if (!element)
 		return {
 			closestDistance: closestDistanceRef,
@@ -26,7 +24,7 @@ const checkAndUpdateSection = (id, closestDistanceRef) => {
 	const rect = element.getBoundingClientRect();
 	const distanceToTop = Math.abs(rect?.top);
 
-	// Check if the section is within the viewport
+	// Check whether the section is within the viewport
 	if (
 		rect?.top < window.innerHeight &&
 		rect?.bottom > 0 &&
@@ -47,17 +45,17 @@ const checkAndUpdateSection = (id, closestDistanceRef) => {
 };
 
 /**
- * Helper method to get the current section in view
+ * Helper method to get the current section in view.
  * @returns {string} — The current section.
  */
 const getCurrentSection = () => {
 	let currentSection = "";
 	let closestDistance = Infinity;
 
-	// Loop through each section to
-	// determine which is in view
+	// Loop over all the sections to determine 
+	// which is in view
 	for (const sec of ALL_MENU_SECTIONS ?? []) {
-		// Check for sections
+		// Check for parent sections
 		const result = checkAndUpdateSection(
 			sec?.id,
 			closestDistance
@@ -90,16 +88,15 @@ const getCurrentSection = () => {
  * @param setVisible — Menu visibility state.
  */
 const scrollToSection = (sectionId, setVisible) => {
-	// Get the section ID
+	// Scroll to the section
 	const section = document.getElementById(sectionId);
-
-	// Move to the section smoothly
 	if (section) {
 		section.scrollIntoView();
 	}
 
-	// Make the Menu not visible (if the method has been called by the Menu)
-	// and make the page scrollable again
+	// Make the menu not visible and make the page 
+	// scrollable again, if requested
+	// (useful for the hamburger menu)
 	if (setVisible != null) {
 		setVisible(false);
 		document.documentElement.style.overflowY =
@@ -108,7 +105,7 @@ const scrollToSection = (sectionId, setVisible) => {
 };
 
 /**
- * Helper method to map children Menu items
+ * Helper method to map children menu items to their parents.
  * @param children — Children menu items.
  * @param parentIndex — The index of the parent menu
  * items of the children menu items.
@@ -125,7 +122,7 @@ const mapChildren = (children, parentIndex, setVisible) =>
 	}));
 
 /**
- * Custom hook to manage (anchor and hamburger) Menu behavior.
+ * Custom hook to manage—anchor and hamburger—menu behavior.
  * @returns {{
  * visible: boolean, // State tracking menu visibility
  * menuItems: { // All menu items
@@ -138,7 +135,7 @@ const mapChildren = (children, parentIndex, setVisible) =>
  * }}
  */
 export const useMenu = () => {
-	// State to track Menu visibility
+	// State to track menu visibility
 	const [visible, setVisible] = useState(false);
 
 	// State to track the current active section
@@ -148,11 +145,11 @@ export const useMenu = () => {
 	);
 
 	/**
-	 * Method to toggle the Menu visibility
+	 * Method to toggle the menu visibility.
 	 */
 	const toggleDrawer = () => {
 		// Enable/disable the scroll of the rest of the page
-		// depending on if the Menu is open/closed
+		// depending on whether the menu is open/closed
 		if (visible)
 			document.documentElement.style.overflowY =
 				"var(--overflow-auto)";
@@ -160,13 +157,13 @@ export const useMenu = () => {
 			document.documentElement.style.overflowY =
 				"var(--overflow-hidden)";
 
-		// Change Menu visibility
+		// Change menu visibility
 		setVisible(!visible);
 	};
 
 	useEffect(() => {
 		/**
-		 * Method to handle Menu scrolling
+		 * Method to handle menu scrolling.
 		 */
 		const handleScroll = () => {
 			// Update the state with the current section
@@ -183,7 +180,7 @@ export const useMenu = () => {
 	}, []);
 
 	/**
-	 * Method to generate Menu items dynamically.
+	 * Method to generate menu items dynamically.
 	 */
 	const menuItems = ALL_MENU_SECTIONS?.map(
 		(section, index) => ({

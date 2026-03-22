@@ -1,7 +1,7 @@
 import React from "react";
 import { Anchor } from "antd";
 import { MENU_BIG_CONTAINER_CLASS_NAME } from "./const.js";
-import { useMenu } from "../use-menu.js";
+import { useMenu } from "../use-menu/use-menu.js";
 
 /**
  * This component represents the anchor menu for big screens.

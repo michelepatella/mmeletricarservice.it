@@ -12,7 +12,7 @@ import {
 	MENU_SMALL_CONTAINER_CLASS_NAME,
 	MENU_SMALL_DRAWER_PLACEMENT,
 } from "./const.js";
-import { useMenu } from "../use-menu.js";
+import { useMenu } from "../use-menu/use-menu.js";
 import {
 	getMenuParentItemStyle,
 	getMenuChildrenItemStyle,
