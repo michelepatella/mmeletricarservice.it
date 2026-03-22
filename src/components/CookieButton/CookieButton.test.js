@@ -6,10 +6,10 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import CookieButton from "./CookieButton.js";
-import { onCookieButtonClick } from "./handler.js";
+import { onCookieButtonClick } from "./handler/handler.js";
 
 // Mock
-jest.mock("./handler.js", () => ({
+jest.mock("./handler/handler.js", () => ({
 	onCookieButtonClick: jest.fn(),
 }));
 

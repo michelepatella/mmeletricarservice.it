@@ -4,7 +4,7 @@ import {
 	COOKIE_BUTTON_ARIA_LABEL,
 	COOKIE_BUTTON_CLASS_NAME,
 } from "./const.js";
-import { onCookieButtonClick } from "./handler.js";
+import { onCookieButtonClick } from "./handler/handler.js";
 
 /**
  * This component defines the cookie button. Clicking through it, 
