@@ -7,7 +7,7 @@ import {
 	onEmailButtonClick,
 	onFacebookButtonClick,
 	onPhoneButtonClick,
-} from "../../../utils/contact-handlers.js";
+} from "../../../utils/contact-handlers/contact-handlers.js";
 
 /*  Buttons  */
 export const HOME_HEADER_CONTACT_BUTTONS = [

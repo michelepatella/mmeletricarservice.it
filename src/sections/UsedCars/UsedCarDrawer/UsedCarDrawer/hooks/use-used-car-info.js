@@ -3,7 +3,7 @@ import { SentryReact } from "../../../../../index.js";
 import { DATA_STALE_TIME } from "../../../const.js";
 import { USED_CAR_INFO_API_KEY } from "../const.js";
 import { USED_CAR_INFO_ENDPOINT } from "../../../../../utils/const.js";
-import { fetchUsedCarData } from "../../../../../utils/data-fetcher.js";
+import { fetchData } from "../../../../../utils/data-fetcher/data-fetcher.js";
 
 /**
  * Custom hook to orchestrate used car info fetching, by
@@ -22,7 +22,7 @@ export const useUsedCarInfo = ({ usedCarId }) => {
 		{
 			queryKey: [USED_CAR_INFO_API_KEY, usedCarId],
 			queryFn: () =>
-				fetchUsedCarData(
+				fetchData(
 					USED_CAR_INFO_ENDPOINT + "?id=" + usedCarId
 				),
 			enabled: !!usedCarId,
