@@ -3,7 +3,7 @@ import {
 	onFacebookButtonClick,
 	onPecButtonClick,
 	onPhoneButtonClick,
-} from "./contact-handlers.js";
+} from "./contact-handlers/contact-handlers.js";
 
 /**------------- Shared across the app -------------**/
 
