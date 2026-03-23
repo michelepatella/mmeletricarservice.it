@@ -16,15 +16,15 @@ import SectionContainer from "../../components/SectionContainer/SectionContainer
 import CustomText from "../../components/CustomText/CustomText.js";
 
 /**
- * This component represents Our values section,
- * which aims to describe values of the company.
- * @returns {Element} — Our values section.
+ * This component represents the 'Our values' section wich
+ * which describes the values of the company.
+ * @returns {Element} — 'Our values' section.
  */
 function OurValues() {
 	return (
 		<SectionBackground image={DOTTED_BACKGROUND_IMAGE_LINK}>
 			<SectionContainer id={OUR_VALUES_SECTION_ID}>
-				{/* Our values section title */}
+				{/* Section title */}
 				<CustomText
 					type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
 					text={OUR_VALUES_TITLE}
@@ -38,8 +38,7 @@ function OurValues() {
 					progressDot
 					current={OUR_VALUES_ALL_STEPS.length}
 					items={OUR_VALUES_ALL_STEPS?.map((step) => ({
-						// Title of current step
-						// (that's a company value's title)
+						// Step title (i.e., company value's title)
 						title: (
 							<CustomText
 								type={CUSTOM_TEXT_TYPES.HEADING}
@@ -47,8 +46,7 @@ function OurValues() {
 							/>
 						),
 
-						// Description of current step
-						// (that's a company value's description)
+						// Step description (i.e., company value's description)
 						description: (
 							<CustomText
 								type={CUSTOM_TEXT_TYPES.BODY}
