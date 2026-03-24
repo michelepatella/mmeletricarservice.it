@@ -25,21 +25,20 @@ import CustomText from "../../components/CustomText/CustomText.js";
 import BlockQuote from "../../components/BlockQuote/BlockQuote.js";
 
 /**
- * This component represents the Where we are section.
- * It contains information about where the company is located,
- * along with a Google Maps frame. Additionally, show information
- * about working hours.
+ * This component represents the 'Where we are' section which
+ * contains information about the company's location, as well 
+ * as working hours.
  * @param props — Object containing:
  *   - cookiesAccepted: boolean | null — Indicates if the user
  *   has accepted cookies. If true, Google Maps iframe is
  *   displayed; otherwise, a placeholder description is shown.
- * @returns {Element} — The where we are section.
+ * @returns {Element} — 'Where we are' section.
  */
 function WhereWeAre(props) {
 	return (
 		<SectionBackground image={DOTTED_BACKGROUND_IMAGE_LINK}>
 			<SectionContainer id={WHERE_WE_ARE_SECTION_ID}>
-				{/* Where we are section title */}
+				{/* Section title */}
 				<CustomText
 					type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
 					text={WHERE_WE_ARE_TITLE}
