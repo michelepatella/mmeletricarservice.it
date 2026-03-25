@@ -1,3 +1,4 @@
+import React from "react";
 import { Layout } from "antd";
 import {
 	CONTACTS_CONTENT_CLASS_NAME,
@@ -8,31 +9,31 @@ import { CONTACTS_SECTION_ID } from "../../../utils/const.js";
 import ContactsContent from "../ContactsContent/ContactsContent.js";
 import ContactsFooter from "../ContactsFooter/ContactsFooter.js";
 
-// Contact Layout definition:
-// it's composed by a content and footer
+// Define layout (content + footer)
 const { Content, Footer } = Layout;
 
 /**
- * This component represents the Contact section. It's composed by two parts:
- * - Content: contains all the company contacts shown via buttons
- * - Footer: contains legal information about the company (Name, Registered Office, etc.),
- *   along with links to privacy, cookie, and legal documents.
- * @returns {JSX.Element} — Contacts section.
+ * This component represents the 'Contacts' section which is
+ * composed of:
+ * - Content: Contains all the company contacts shown via buttons.
+ * - Footer: Contains legal information about the company, as well as links
+ *   to privacy, cookie, and legal documents.
+ * @returns {JSX.Element} — 'Contacts' section.
  */
 function Contacts() {
 	return (
 		<>
-			{/* Contacts Layout */}
+			{/* Layout */}
 			<Layout
 				className={CONTACTS_LAYOUT_CLASS_NAME}
 				id={CONTACTS_SECTION_ID}
 			>
-				{/* Contacts content */}
+				{/* Content */}
 				<Content className={CONTACTS_CONTENT_CLASS_NAME}>
 					<ContactsContent />
 				</Content>
 
-				{/* Contacts footer */}
+				{/* Footer */}
 				<Footer className={CONTACTS_FOOTER_CLASS_NAME}>
 					<ContactsFooter />
 				</Footer>
