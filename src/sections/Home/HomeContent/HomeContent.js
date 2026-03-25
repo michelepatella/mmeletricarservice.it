@@ -1,3 +1,4 @@
+import React from "react";
 import {
 	COMPANY_LOGO_LINK,
 	HOME_LOGO_ALT,
@@ -10,10 +11,9 @@ import {
 import { HOME_SECTION_ID } from "../../../utils/const.js";
 
 /**
- * This component represents the content
- * of the Home section. It contains the logo of the company
- * as image, title and subtitle.
- * @returns {Element} — The home content section.
+ * This component represents the content of the 'Home' section which 
+ * contains the logo of the company, title and subtitle.
+ * @returns {Element} — The content of the 'Home' section.
  */
 function HomeContent() {
 	return (
