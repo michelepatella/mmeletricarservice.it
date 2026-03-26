@@ -1,7 +1,6 @@
 /**
- * Method to get the style of services section title.
- * @param numTitles — The number of titles (of services
- * section) to be displayed.
+ * Method to get the style of the section title.
+ * @param numTitles — The number of titles to be displayed.
  * @returns {{
  * 	display: string,
  * 	flexDirection: string,
@@ -21,9 +20,8 @@ export const getServicesTitleStyle = (numTitles) => {
 
 /**
  * Method to get the style of the spans used
- * for displaying section title.
- * @param title — The title (of services section)
- * to be displayed.
+ * for displaying the section title.
+ * @param title — The title to be displayed.
  * @returns {string} — CSS style.
  */
 export const getServicesTitleSpanStyle = (title) => {
