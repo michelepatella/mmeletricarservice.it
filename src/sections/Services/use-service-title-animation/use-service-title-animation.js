@@ -3,12 +3,12 @@ import {
 	SERVICES_TITLE,
 	SERVICES_TITLE_ANIMATION_LETTERS_DELAY,
 	SERVICES_TITLE_ANIMATION_WORDS_DELAY,
-} from "./const.js";
+} from "../const.js";
 
 /**
- * Custom hook to animate services title.
+ * Custom hook to animate the 'Services' section's title.
  * @param inView — State keeping track whether
- * services section is in view or not.
+ * the 'Services' section is in view or not.
  * @param setDisplayedWords — State setter to keep track of
  * words displayed so far.
  * @param setActiveIndex — State setter to keep track of
@@ -20,21 +20,21 @@ export const useServiceTitleAnimation = (
 	setActiveIndex
 ) => {
 	useEffect(() => {
-		// Animate the section title iff the
-		// section is visible
-		if (!inView) return;
+		// Animate the title if and only 
+		// if the section is visible
+		if (!inView) 
+			return;
 
-		// Check whether services title is not valid
+		// Check whether the title is not valid
 		if (!SERVICES_TITLE || SERVICES_TITLE.length === 0)
 			return;
 
 		let currentIndex = 0;
 
 		/**
-		 * Method to type each word composing
-		 * the overall title.
-		 * @param word
-		 * @param i
+		 * Method to type each word composing the overall title.
+		 * @param word — The word to be typed.
+		 * @param i — The index of the letter to be typed.
 		 */
 		function typeWord(word, i = 0) {
 			// Update the current index (active word)
@@ -50,7 +50,7 @@ export const useServiceTitleAnimation = (
 					return copy;
 				});
 
-				// To add delay before typing the next
+				// Add a delay before typing the next
 				// letter (if any)
 				setTimeout(
 					() => typeWord(word, i + 1),

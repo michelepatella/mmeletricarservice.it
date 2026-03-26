@@ -12,7 +12,7 @@ import {
 	CUSTOM_TEXT_TYPES,
 	SERVICES_SECTION_ID,
 } from "../../utils/const.js";
-import { useServiceTitleAnimation } from "./use-service-title-animation.js";
+import { useServiceTitleAnimation } from "./use-service-title-animation/use-service-title-animation.js";
 import {
 	getServicesTitleSpanStyle,
 	getServicesTitleStyle,

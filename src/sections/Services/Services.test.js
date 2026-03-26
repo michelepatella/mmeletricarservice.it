@@ -12,13 +12,13 @@ import {
 } from "./const.js";
 import { SERVICES_SECTION_ID, CUSTOM_TEXT_TYPES } from "../../utils/const.js";
 import { useInView } from "react-intersection-observer";
-import { useServiceTitleAnimation } from "./use-service-title-animation.js";
+import { useServiceTitleAnimation } from "./use-service-title-animation/use-service-title-animation.js";
 
 // Mocks
 jest.mock("react-intersection-observer", () => ({
 	useInView: jest.fn(),
 }));
-jest.mock("./use-service-title-animation.js", () => ({
+jest.mock("./use-service-title-animation/use-service-title-animation.js", () => ({
 	useServiceTitleAnimation: jest.fn(),
 }));
 jest.mock("../../components/SectionBackground/SectionBackground.js", () => ({
