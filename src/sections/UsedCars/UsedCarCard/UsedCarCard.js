@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Flex } from "antd";
 import { CUSTOM_TEXT_TYPES } from "../../../utils/const.js";
 import {
@@ -22,29 +22,28 @@ import CustomText from "../../../components/CustomText/CustomText.js";
 import UsedCarOverview from "../UsedCarOverview/UsedCarOverview.js";
 
 /**
- * This component represents the card used to show
- * each used car in the Used cars section.
- * Each card is characterized, from top to bottom, by:
- * - A presentation image (if any)
- * - The name of the car
- * - Car's overview information
- * - The price (in Euro)
+ * This component represents the card used to display used cars
+ * in the proper section. Each card is characterized by:
+ * - Presentation image (if any)
+ * - Name
+ * - Overview information
+ * - Price
  * @param props — Object containing:
  *   - usedCarOverview: An object representing the used
  *   	 car data to display in the card, including:
- *   		- id: The unique identifier of the car.
- *   		- name: The name of the car.
- *   		- image: URL of the presentation image (if available).
+ *   		- id: The car's unique identifier.
+ *   		- name: The car's name.
+ *   		- image: URL of the car's presentation image (if any).
  *   		- price: The car's price.
- * @returns {React.JSX.Element} — The used car card component.
+ * @returns {React.JSX.Element} — The card component.
  */
 function UsedCarCard(props) {
-	// State to manage when the drawer, showing used car
-	// details, is open or not
+	// State to manage the drawer's state (open or closed),
+	// used to show details about the current car
 	const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-	// To check if the current used cars has been requested
-	// externally, so that the drawer will be automatically open
+	// If the request to the current used car
+	// comes from outside, open its drawer automatically
 	useOpenUsedCarDrawerFromUrl(
 		setIsDrawerOpen,
 		props.usedCarOverview?.id?.toString()
@@ -89,7 +88,7 @@ function UsedCarCard(props) {
 						USED_CAR_CARD_OVERVIEW_FLEX_CONTAINER_CLASS_NAME
 					}
 				>
-					{/* Name of the car */}
+					{/* Car's name */}
 					<CustomText
 						type={CUSTOM_TEXT_TYPES.SUBHEADING}
 						text={props.usedCarOverview?.name}
@@ -101,7 +100,7 @@ function UsedCarCard(props) {
 						usedCarOverview={props.usedCarOverview}
 					/>
 
-					{/* Car price (in Euro) */}
+					{/* Car's price */}
 					<div
 						className={
 							USED_CAR_CARD_PRICE_CONTAINER_CLASS_NAME
@@ -125,7 +124,7 @@ function UsedCarCard(props) {
 				</Flex>
 			</button>
 
-			{/* Used Car Drawer including car's details when the card is clicked */}
+			{/* Drawer showing car's details on card click */}
 			{isDrawerOpen && (
 				<UsedCarDrawer
 					usedCarOverview={props.usedCarOverview}
