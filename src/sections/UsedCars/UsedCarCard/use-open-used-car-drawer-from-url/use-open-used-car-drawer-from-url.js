@@ -1,15 +1,14 @@
 import { useEffect } from "react";
-import { SentryReact } from "../../../index.js";
-import { USED_CAR_DRAWER_URL } from "../const.js";
-import { onUsedCarDrawerOpen } from "../handler/handler.js";
+import { SentryReact } from "../../../../index.js";
+import { USED_CAR_DRAWER_URL } from "../../const.js";
+import { onUsedCarDrawerOpen } from "../../handler/handler.js";
 
 /**
- * Custom hook to check if the URL
- * corresponds to a used car's drawer that must be open.
- * In this way, a used car drawer can be also open externally.
+ * Custom hook to check whether the URL corresponds to a 
+ * used car's drawer that must be open.
  * @param setIsDrawerOpen — State setter to keep track
  * whether the used car drawer is open or not.
- * @param id — ID of the used car which drawer is open.
+ * @param id — ID of the used car whose drawer is open.
  */
 export const useOpenUsedCarDrawerFromUrl = (
 	setIsDrawerOpen,
@@ -18,8 +17,9 @@ export const useOpenUsedCarDrawerFromUrl = (
 	useEffect(() => {
 		try {
 			// Requested rejected in case of
-			// undefined or null id
-			if (!id) return;
+			// undefined or null ID
+			if (!id) 
+				return;
 
 			// Get the path of the URL
 			/* eslint-disable-next-line no-undef */
@@ -35,16 +35,14 @@ export const useOpenUsedCarDrawerFromUrl = (
 			if (carIdMatch) {
 				const carId = carIdMatch[1];
 
-				// Check if the current used car's ID has the request ID
-				// to open the corresponding drawer
+				// Check whether the current used car's ID 
+				// equals the ID requested, opening its drawer
+				// consequently
 				if (id === carId)
 					onUsedCarDrawerOpen(setIsDrawerOpen, carId);
-				SentryReact.logger.info(
-					"Used car drawer opened from URL",
-					{ carId: carId }
-				);
 			}
 		} catch (error) {
+			// Log error with Sentry
 			SentryReact.logger.error(error, {
 				context: "Open used car drawer from URL",
 				carId: id,

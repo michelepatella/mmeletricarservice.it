@@ -14,7 +14,7 @@ import { onUsedCarDrawerOpen } from "../handler/handler.js";
 jest.mock("src/index.js", () => ({}), { virtual: true });
 jest.mock("@vercel/analytics/react", () => ({}), { virtual: true });
 jest.mock("react-router-dom", () => ({}), { virtual: true });
-jest.mock("./use-open-used-car-drawer-from-url.js", () => ({
+jest.mock("./use-open-used-car-drawer-from-url/use-open-used-car-drawer-from-url.js", () => ({
 	useOpenUsedCarDrawerFromUrl: jest.fn(),
 }));
 jest.mock("../UsedCarDrawer/UsedCarDrawer/UsedCarDrawer.js", () => ({
