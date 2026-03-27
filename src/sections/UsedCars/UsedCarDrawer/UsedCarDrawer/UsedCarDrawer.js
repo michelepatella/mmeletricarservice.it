@@ -8,7 +8,7 @@ import {
 } from "./const.js";
 import { useUsedCarInfo } from "./hooks/use-used-car-info.js";
 import { useDrawerBackButtonHandler } from "./hooks/use-drawer-back-button.js";
-import { onUsedCarDrawerClose } from "../../handler.js";
+import { onUsedCarDrawerClose } from "../../handler/handler.js";
 import { getUsedCarDrawerCustomLoadingOutlinedStyle } from "./style-handler.js";
 import UsedCarDrawerCarousel from "../UsedCarDrawerCarousel/UsedCarDrawerCarousel.js";
 import UsedCarDrawerInfoPanel from "../UsedCarDrawerInfoPanel/UsedCarDrawerInfoPanel.js";

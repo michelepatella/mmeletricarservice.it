@@ -14,4 +14,4 @@ export const USED_CAR_DRAWER_OPEN_CLASS_NAME =
 	"drawer-open";
 
 /*  Internal URLs  */
-export const USED_CAR_DRAWER_URL = "used-cars";
+export const USED_CAR_DRAWER_URL = "auto-usate/";

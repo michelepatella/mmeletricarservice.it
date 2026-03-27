@@ -1,18 +1,17 @@
-import { SentryReact } from "../../index.js";
+import { SentryReact } from "../../../index.js";
 import {
 	USED_CAR_DRAWER_OPEN_CLASS_NAME,
 	USED_CAR_DRAWER_URL,
 	USED_CAR_DRAWER_WIDTH,
-} from "./const.js";
+} from "../const.js";
 
 let previousScrollY = 0;
 
 /**
- * Method to call when the user car drawer
- * is going to be open.
- * @param setIsDrawerOpen — State setter keeping track
- * whether the used car drawer is open or not.
- * @param id — ID of the used car which drawer is open.
+ * Method to call when the used car drawer is going to be open.
+ * @param setIsDrawerOpen — State setter keeping track whether 
+ * the used car drawer is open or not.
+ * @param id — ID of the used car whose drawer is going to be open.
  */
 export const onUsedCarDrawerOpen = (
 	setIsDrawerOpen,
@@ -22,10 +21,11 @@ export const onUsedCarDrawerOpen = (
 		// Set the drawer open
 		setIsDrawerOpen(true);
 
-		// Save the current scroll position
+		// Save the current vertical position
 		previousScrollY = window.scrollY;
 
-		// Make the Menu hidden and the page not scrollable
+		// Make the menu hidden and the webapp not 
+		// scrollable anymore
 		document.body.classList.add(
 			USED_CAR_DRAWER_OPEN_CLASS_NAME
 		);
@@ -36,17 +36,15 @@ export const onUsedCarDrawerOpen = (
 		document.body.style.top = "-" + previousScrollY + "px";
 		document.body.style.width = USED_CAR_DRAWER_WIDTH;
 
-		// Change the link dynamically
+		// Change the URL dynamically
 		/* eslint-disable-next-line no-undef */
 		globalThis.history.pushState(
 			{ id: id },
 			"",
-			USED_CAR_DRAWER_URL + id
+			"/" + USED_CAR_DRAWER_URL + id
 		);
-		SentryReact.logger.info("Used car drawer opened", {
-			carId: id,
-		});
 	} catch (error) {
+		// Log error with Sentry
 		SentryReact.logger.error(error, {
 			context: "Open used car drawer",
 			carId: id,
@@ -55,16 +53,17 @@ export const onUsedCarDrawerOpen = (
 };
 
 /**
- * Method to call when the user car drawer
- * is going to be closed.
- * @param setIsDrawerOpen
+ * Method to call when the used car drawer is going to be closed.
+ * @param setIsDrawerOpen — State setter keeping track whether 
+ * the used car drawer is open or not.
  */
 export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
 	try {
 		// Set the drawer closed
 		setIsDrawerOpen(false);
 
-		// Make the Menu visible and the page scrollable
+		// Make the menu visible and the webapp 
+		// scrollable again
 		document.body.classList.remove(
 			USED_CAR_DRAWER_OPEN_CLASS_NAME
 		);
@@ -75,18 +74,18 @@ export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
 		document.body.style.top = "";
 		document.body.style.width = "";
 
-		// Restore scroll position
+		// Restore vertical position
 		window.scrollTo({
 			top: previousScrollY,
 			left: 0,
 			behavior: "instant",
 		});
 
-		// Redirect the user to the used cars page
+		// Redirect the user to the 'UsedCars' section
 		/* eslint-disable-next-line no-undef */
 		globalThis.history.replaceState({}, "", "/");
-		SentryReact.logger.info("Used car drawer closed");
 	} catch (error) {
+		// Log error with Sentry
 		SentryReact.logger.error(error, {
 			context: "Close used car drawer",
 		});

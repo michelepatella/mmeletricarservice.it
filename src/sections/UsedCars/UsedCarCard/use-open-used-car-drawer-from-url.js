@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { SentryReact } from "../../../index.js";
 import { USED_CAR_DRAWER_URL } from "../const.js";
-import { onUsedCarDrawerOpen } from "../handler.js";
+import { onUsedCarDrawerOpen } from "../handler/handler.js";
 
 /**
  * Custom hook to check if the URL

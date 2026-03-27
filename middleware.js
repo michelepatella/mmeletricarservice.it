@@ -12,7 +12,7 @@ export default async function middleware(request) {
 	const url = new URL(request.url);
 
 	// Check whether the URL matches a used car URL
-	const regex = /^\/used-cars(\d+)$/;
+	const regex = /^\/auto-usate\/(\d+)$/;
 	const match = regex.exec(url.pathname);
 	if (!match)
 		return;
@@ -79,5 +79,5 @@ export default async function middleware(request) {
 }
 
 export const config = {
-	matcher: ["/used-cars:id(\\d+)"], // NOSONAR
+	matcher: ["/auto-usate:id(\\d+)"], // NOSONAR
 };
