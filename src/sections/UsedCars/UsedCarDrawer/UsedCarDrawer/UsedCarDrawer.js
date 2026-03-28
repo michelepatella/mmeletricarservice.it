@@ -1,3 +1,4 @@
+import React from "react";
 import { Drawer, Flex } from "antd";
 import {
 	USED_CAR_DRAWER_CLASS_NAME,
@@ -6,7 +7,7 @@ import {
 	USED_CAR_DRAWER_VERTICAL_FLEX_CLASS_NAME,
 	USED_CAR_DRAWER_VERTICAL_FLEX_WIDTH,
 } from "./const.js";
-import { useUsedCarInfo } from "./hooks/use-used-car-info.js";
+import { useUsedCarInfo } from "./hooks/use-used-car-info/use-used-car-info.js";
 import { useDrawerBackButtonHandler } from "./hooks/use-drawer-back-button.js";
 import { onUsedCarDrawerClose } from "../../handler/handler.js";
 import { getUsedCarDrawerCustomLoadingOutlinedStyle } from "./style-handler.js";
@@ -16,32 +17,27 @@ import BackButton from "../../../../components/BackButton/BackButton.js";
 import LoadingOutlined from "../../../../components/LoadingOutlined/LoadingOutlined.js";
 
 /**
- * This component represents the used car drawer,
- * which aims to show all the details about a used car.
- * The component fetches all the details of the used car, shown via
- * info panel, along with all the car images, shown via carousel.
- * @param usedCarOverview — Overview information of used car
- * of the current drawer.
+ * This component represents the used car drawer which shows 
+ * all the details about a used car.
+ * @param usedCarOverview — Overview information of the used car.
  * @param setIsDrawerOpen — State setter keeping track of
- * used car drawer visibility.
+ * the used car drawer visibility.
  * @returns {JSX.Element} — The used car drawer component.
  */
 function UsedCarDrawer({
 	usedCarOverview,
 	setIsDrawerOpen,
 }) {
-	// Fetch used car details and images
+	// Fetch all the used car details and images
 	const { usedCarInfo, isLoading } = useUsedCarInfo({
 		usedCarId: usedCarOverview?.id,
 	});
 
-	// Back button handler to capture whenever the user
-	// clicks the back button
+	// Handler to capture back button clicks
 	useDrawerBackButtonHandler(setIsDrawerOpen);
 
 	return (
 		<>
-			{/* Drawer */}
 			<Drawer
 				className={USED_CAR_DRAWER_CLASS_NAME}
 				closeIcon={<BackButton />}
@@ -58,14 +54,14 @@ function UsedCarDrawer({
 				) : (
 					// Data loading is finished
 					<Flex vertical>
-						{/* Flex container (to contain Info panel + Carousel) */}
+						{/* Flex container for info panel and carousel */}
 						<Flex
 							className={
 								USED_CAR_DRAWER_HORIZONTAL_FLEX_CLASS_NAME
 							}
 							width={USED_CAR_DRAWER_HORIZONTAL_FLEX_WIDTH}
 						>
-							{/* Flex vertical container (to contain only Info panel) */}
+							{/* Flex vertical container for info panel only */}
 							<Flex
 								vertical
 								className={
@@ -73,15 +69,14 @@ function UsedCarDrawer({
 								}
 								width={USED_CAR_DRAWER_VERTICAL_FLEX_WIDTH}
 							>
-								{/* Info Panel (Name, Price, Overview info,
-                 CTA button and Collapse with details) */}
+								{/* Info Panel */}
 								<UsedCarDrawerInfoPanel
 									usedCarOverview={usedCarOverview}
 									usedCarInfo={usedCarInfo}
 								/>
 							</Flex>
 
-							{/* Carousel to contain used car images */}
+							{/* Carousel for the images */}
 							<UsedCarDrawerCarousel
 								usedCarInfo={usedCarInfo}
 							/>
