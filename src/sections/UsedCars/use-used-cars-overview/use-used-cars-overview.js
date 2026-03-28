@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { SentryReact } from "../../../../index.js";
-import { DATA_STALE_TIME } from "../../const.js";
+import { SentryReact } from "../../../index.js";
+import { DATA_STALE_TIME } from "../const.js";
 import { USED_CARS_OVERVIEW_API_KEY } from "../const.js";
-import { USED_CARS_OVERVIEW_ENDPOINT } from "../../../../utils/const.js";
-import { fetchData } from "../../../../utils/data-fetcher/data-fetcher.js";
+import { USED_CARS_OVERVIEW_ENDPOINT } from "../../../utils/const.js";
+import { fetchData } from "../../../utils/data-fetcher/data-fetcher.js";
 
 /**
  * Custom hook to fetch the overview list of used cars, by

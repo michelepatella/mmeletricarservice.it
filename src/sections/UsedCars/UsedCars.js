@@ -3,7 +3,7 @@ import {
 	CUSTOM_TEXT_TYPES,
 	DOTTED_BACKGROUND_IMAGE_LINK,
 	USED_CARS_SECTION_ID,
-} from "../../../utils/const.js";
+} from "../../utils/const.js";
 import {
 	USED_CARS_CONTAINER_CLASS_NAME,
 	USED_CARS_TITLE,
@@ -12,25 +12,24 @@ import {
 	USED_CARS_UNAVAILABLE_CONTAINER_CLASS_NAME,
 	NO_USED_CAR_AVAILABLE_IMAGE_LINK,
 } from "./const.js";
-import { useUsedCarsOverview } from "./hooks/use-used-cars-overview.js";
+import { useUsedCarsOverview } from "./use-used-cars-overview/use-used-cars-overview.js";
 import {
 	getUsedCarsUnavailableDescriptionStyle,
 	getUsedCarsCustomLoadingOutlineStyle,
 } from "./style-handler.js";
-import SectionContainer from "../../../components/SectionContainer/SectionContainer.js";
-import SectionBackground from "../../../components/SectionBackground/SectionBackground.js";
-import UsedCarCard from "../UsedCarCard/UsedCarCard.js";
-import CustomText from "../../../components/CustomText/CustomText.js";
-import LoadingOutlined from "../../../components/LoadingOutlined/LoadingOutlined.js";
+import SectionContainer from "../../components/SectionContainer/SectionContainer.js";
+import SectionBackground from "../../components/SectionBackground/SectionBackground.js";
+import UsedCarCard from "./UsedCarCard/UsedCarCard.js";
+import CustomText from "../../components/CustomText/CustomText.js";
+import LoadingOutlined from "../../components/LoadingOutlined/LoadingOutlined.js";
 
 /**
- * This component represents the Used car section.
- * This section shows all the used cars available via cards.
- * All the used car overview information is loaded from the backend.
- * @returns {JSX.Element} — The used cars section.
+ * This component represents the 'Used Cars' section which
+ * displays all the used cars available.
+ * @returns {JSX.Element} — The 'Used Cars' section.
  */
 function UsedCars() {
-	// Load used cars overview from backend
+	// Load used cars overview info from backend
 	const { usedCarsOverview, isLoading } =
 		useUsedCarsOverview();
 
@@ -39,15 +38,14 @@ function UsedCars() {
 			<SectionContainer
 				id={USED_CARS_SECTION_ID}
 			>
-				{/* Used Cars section title */}
+				{/* Section title */}
 				<CustomText
 					type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
 					text={USED_CARS_TITLE}
 					disableAnimation
 				/>
 
-				{/* Used cars loading icon (to show while
-				data is loading) */}
+				{/* Loading outlined */}
 				{isLoading && (
 					<>
 						<LoadingOutlined
@@ -64,11 +62,10 @@ function UsedCars() {
 				{/* Used cars available */}
 				{!isLoading && usedCarsOverview?.length > 0 && (
 					<>
-						{/* Container of all used car cards */}
+						{/* Container for all the used car cards */}
 							<div
 								className={USED_CARS_CONTAINER_CLASS_NAME}
 							>
-								{/* Show each used car via card */}
 								{usedCarsOverview.map((car) => (
 									<UsedCarCard
 										key={car.id}
@@ -83,21 +80,19 @@ function UsedCars() {
 				{!isLoading &&
 					(!usedCarsOverview ||
 						usedCarsOverview.length === 0) && (
-						// Container to show image indicating no
-						// used car is available
 						<div
 							className={
 								USED_CARS_UNAVAILABLE_CONTAINER_CLASS_NAME
 							}
 						>
-							{/* Label indicating no used car is available */}
+							{/* Label indicating no used cars are available */}
 							<CustomText
 								type={CUSTOM_TEXT_TYPES.BODY}
 								text={USED_CARS_UNAVAILABLE_DESCRIPTION}
 								style={getUsedCarsUnavailableDescriptionStyle()}
 							/>
 
-							{/* Empty used cars store image */}
+							{/* Image to indicate the store is empty */}
 							<img
 								src={NO_USED_CAR_AVAILABLE_IMAGE_LINK}
 								alt={

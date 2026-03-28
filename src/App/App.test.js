@@ -44,7 +44,7 @@ jest.mock("../sections/OurValues/OurValues.js", () => () => (
 jest.mock("../sections/Services/Services.js", () => () => (
 	<div data-testid="services-section" />
 ));
-jest.mock("../sections/UsedCars/UsedCars/UsedCars.js", () => () => (
+jest.mock("../sections/UsedCars/UsedCars.js", () => () => (
 	<div data-testid="used-cars-section" />
 ));
 jest.mock("../sections/WhereWeAre/WhereWeAre.js", () => () => (

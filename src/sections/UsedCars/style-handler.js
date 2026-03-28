@@ -1,6 +1,6 @@
 /**
- * Method to get the style of the unavailable
- * used car's description.
+ * Method to get the style of the description displayed
+ * when no used cars are available.
  * @returns {{
  * textAlign: string,
  * opacity: number
@@ -15,8 +15,7 @@ export const getUsedCarsUnavailableDescriptionStyle =
 	};
 
 /**
- * Method to get the style of the custom loading
- * outlined displayed into the used cars section.
+ * Method to get the custom style of the loading outlined.
  * @returns {{marginTop: string}} — CSS style.
  */
 export const getUsedCarsCustomLoadingOutlineStyle = () => {
