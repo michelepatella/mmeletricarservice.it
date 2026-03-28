@@ -35,13 +35,10 @@
 	width: var(--image-size-medium);
 	opacity: var(--opacity-zero);
 	box-shadow: var(--shadow-small);
-	animation: homeLogoSlideUp
-		var(--animation-duration-long)
+	animation: homeLogoSlideUp var(--animation-duration-long)
 		var(--animation-timing-ease)
 		var(--animation-fill-mode-forwards);
-	animation-delay: calc(
-		var(--animation-duration-medium)
-	);
+	animation-delay: calc(var(--animation-duration-medium));
 }
 
 /* Home Content — Title */
@@ -50,7 +47,8 @@
 	font-size: var(--font-size-home-title);
 	color: var(--color-accent);
 	opacity: var(--opacity-zero);
-	animation: homeTitleSubtitleFadeIn var(--animation-duration-long)
+	animation: homeTitleSubtitleFadeIn
+		var(--animation-duration-long)
 		var(--animation-timing-ease)
 		var(--animation-fill-mode-forwards);
 }
@@ -62,7 +60,8 @@
 	font-size: var(--font-size-home-subtitle);
 	color: var(--color-white);
 	opacity: var(--opacity-zero);
-	animation: homeTitleSubtitleFadeIn var(--animation-duration-long)
+	animation: homeTitleSubtitleFadeIn
+		var(--animation-duration-long)
 		var(--animation-timing-ease)
 		var(--animation-fill-mode-forwards);
 }

@@ -18,9 +18,9 @@ import Link from "../Link/Link.js";
 
 /**
  * This component represents the cookie consent banner used by the user
- * to accept and refuse cookies. Building upon the CookieConsent object coming from 
+ * to accept and refuse cookies. Building upon the CookieConsent object coming from
  * the library 'react-cookie-consent', it includes two buttons (to accept and refuse
- * cookies) and a brief description to guide the user during the decision process. 
+ * cookies) and a brief description to guide the user during the decision process.
  * External links to cookie and privacy policies are also included.
  * @param props — Object containing:
  * 	 - isCookiesBannerVisible: boolean — Whether to show the banner.

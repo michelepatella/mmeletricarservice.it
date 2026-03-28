@@ -9,8 +9,7 @@ import { useMenu } from "../use-menu/use-menu.js";
  */
 function MenuBigScreen() {
 	// Prepare anchor menu elements
-	const { menuItems, section } =
-		useMenu();
+	const { menuItems, section } = useMenu();
 
 	return (
 		<div className={MENU_BIG_CONTAINER_CLASS_NAME}>

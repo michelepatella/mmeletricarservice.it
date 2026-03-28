@@ -13,9 +13,12 @@ import { SentryReact } from "../../../index.js";
 jest.mock("@tanstack/react-query", () => ({
 	useQuery: jest.fn(),
 }));
-jest.mock("../../../utils/data-fetcher/data-fetcher.js", () => ({
-	fetchData: jest.fn(),
-}));
+jest.mock(
+	"../../../utils/data-fetcher/data-fetcher.js",
+	() => ({
+		fetchData: jest.fn(),
+	})
+);
 jest.mock("../../../index.js", () => ({
 	SentryReact: {
 		logger: {
@@ -33,7 +36,6 @@ jest.mock("../../../index.js", () => ({
  * 4. A test to verify Sentry logging on error.
  */
 describe("useUsedCarsOverview", () => {
-
 	// Define behavior before each test
 	beforeEach(() => {
 		jest.clearAllMocks();
@@ -44,13 +46,9 @@ describe("useUsedCarsOverview", () => {
 	 * Should return used cars overview data correctly mapped.
 	 */
 	it("should return mapped used cars overview data", () => {
-
 		useQuery.mockReturnValue({
 			data: {
-				used_cars_overview: [
-					{ id: 1 },
-					{ id: 2 },
-				],
+				used_cars_overview: [{ id: 1 }, { id: 2 }],
 			},
 			isLoading: false,
 			isError: false,
@@ -71,7 +69,6 @@ describe("useUsedCarsOverview", () => {
 	 * Should return empty array when data is undefined.
 	 */
 	it("should return empty array when data is undefined", () => {
-
 		useQuery.mockReturnValue({
 			data: undefined,
 			isLoading: false,
@@ -90,7 +87,6 @@ describe("useUsedCarsOverview", () => {
 	 * Should expose isLoading from react-query.
 	 */
 	it("should return loading state correctly", () => {
-
 		useQuery.mockReturnValue({
 			data: undefined,
 			isLoading: true,
@@ -109,16 +105,13 @@ describe("useUsedCarsOverview", () => {
 	 * Should log error when isError is true.
 	 */
 	it("should log error to Sentry when query fails", () => {
-
 		useQuery.mockReturnValue({
 			data: undefined,
 			isLoading: false,
 			isError: true,
 		});
 
-		renderHook(() =>
-			useUsedCarsOverview()
-		);
+		renderHook(() => useUsedCarsOverview());
 
 		expect(SentryReact.logger.error).toHaveBeenCalledWith(
 			"Error while fetching " +

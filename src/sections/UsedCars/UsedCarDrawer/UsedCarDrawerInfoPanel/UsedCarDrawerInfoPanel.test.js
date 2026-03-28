@@ -4,57 +4,77 @@
 
 import React from "react";
 import "@testing-library/jest-dom";
-import { render, screen, fireEvent } from "@testing-library/react";
+import {
+	render,
+	screen,
+	fireEvent,
+} from "@testing-library/react";
 import UsedCarDrawerInfoPanel from "./UsedCarDrawerInfoPanel";
 
 // Mocks
-jest.mock("../../../../components/CustomText/CustomText.js", () => {
-	const React = require("react");
+jest.mock(
+	"../../../../components/CustomText/CustomText.js",
+	() => {
+		const React = require("react");
 
-	return {
-		__esModule: true,
-		default: ({ text }) =>
-			React.createElement("div", { "data-testid": "custom-text" }, text),
-	};
-});
-jest.mock("../../../../components/CustomButton/CustomButton.js", () => {
-	const React = require("react");
+		return {
+			__esModule: true,
+			default: ({ text }) =>
+				React.createElement(
+					"div",
+					{ "data-testid": "custom-text" },
+					text
+				),
+		};
+	}
+);
+jest.mock(
+	"../../../../components/CustomButton/CustomButton.js",
+	() => {
+		const React = require("react");
 
-	return {
-		__esModule: true,
-		default: ({ text, onClick }) =>
-			React.createElement(
-				"button",
-				{
-					"data-testid": "custom-button",
-					onClick,
-				},
-				text
-			),
-	};
-});
-jest.mock("../UsedCarDrawerCollapse/UsedCarDrawerCollapse.js", () => {
-	const React = require("react");
+		return {
+			__esModule: true,
+			default: ({ text, onClick }) =>
+				React.createElement(
+					"button",
+					{
+						"data-testid": "custom-button",
+						onClick,
+					},
+					text
+				),
+		};
+	}
+);
+jest.mock(
+	"../UsedCarDrawerCollapse/UsedCarDrawerCollapse.js",
+	() => {
+		const React = require("react");
 
-	return {
-		__esModule: true,
-		default: () =>
-			React.createElement("div", {
-				"data-testid": "collapse",
-			}),
-	};
-});
-jest.mock("../../UsedCarOverview/UsedCarOverview.js", () => {
-	const React = require("react");
+		return {
+			__esModule: true,
+			default: () =>
+				React.createElement("div", {
+					"data-testid": "collapse",
+				}),
+		};
+	}
+);
+jest.mock(
+	"../../UsedCarOverview/UsedCarOverview.js",
+	() => {
+		const React = require("react");
 
-	return {
-		__esModule: true,
-		default: () =>
-			React.createElement("div", {
-				"data-testid": "overview",
-			}),
-	};
-});
+		return {
+			__esModule: true,
+			default: () =>
+				React.createElement("div", {
+					"data-testid": "overview",
+				}),
+		};
+	}
+);
 jest.mock("../../../../utils/const.js", () => ({
 	ALL_CONTACTS: [
 		{
@@ -132,12 +152,14 @@ describe("UsedCarDrawerInfoPanel", () => {
 					price: "25000",
 				}}
 				usedCarInfo={{
-                    cylinders: "4",
-                }}
+					cylinders: "4",
+				}}
 			/>
 		);
 
-		expect(screen.getByTestId("overview")).toBeInTheDocument();
+		expect(
+			screen.getByTestId("overview")
+		).toBeInTheDocument();
 	});
 
 	/**
@@ -145,8 +167,8 @@ describe("UsedCarDrawerInfoPanel", () => {
 	 * Should render CTA button and trigger click handler.
 	 */
 	it("should render CTA button and trigger click handler", () => {
-		const mockClick =
-			require("../../../../utils/const.js").CONTACTS_CLICK_HANDLERS.PHONE;
+		const mockClick = require("../../../../utils/const.js")
+			.CONTACTS_CLICK_HANDLERS.PHONE;
 
 		render(
 			<UsedCarDrawerInfoPanel
@@ -155,8 +177,8 @@ describe("UsedCarDrawerInfoPanel", () => {
 					price: "25000",
 				}}
 				usedCarInfo={{
-                    cylinders: "4",
-                }}
+					cylinders: "4",
+				}}
 			/>
 		);
 
@@ -185,6 +207,8 @@ describe("UsedCarDrawerInfoPanel", () => {
 			/>
 		);
 
-		expect(screen.getByTestId("collapse")).toBeInTheDocument();
+		expect(
+			screen.getByTestId("collapse")
+		).toBeInTheDocument();
 	});
 });

@@ -2,7 +2,10 @@
  * @jest-environment jsdom
  */
 
-import { onUsedCarDrawerOpen, onUsedCarDrawerClose } from "./handler.js";
+import {
+	onUsedCarDrawerOpen,
+	onUsedCarDrawerClose,
+} from "./handler.js";
 import { USED_CAR_DRAWER_OPEN_CLASS_NAME } from "../const.js";
 
 // Mock
@@ -24,10 +27,9 @@ jest.mock("../../../index.js", () => ({
  * 5. A test to verify scroll position is restored on close.
  */
 describe("'UsedCars' section handlers", () => {
-
 	let setIsDrawerOpen;
 
-    // Define behavior before each test
+	// Define behavior before each test
 	beforeEach(() => {
 		setIsDrawerOpen = jest.fn();
 
@@ -41,7 +43,7 @@ describe("'UsedCars' section handlers", () => {
 		window.scrollY = 200;
 	});
 
-    // Define behavior after each test
+	// Define behavior after each test
 	afterEach(() => {
 		jest.clearAllMocks();
 	});
@@ -64,7 +66,9 @@ describe("'UsedCars' section handlers", () => {
 		onUsedCarDrawerOpen(setIsDrawerOpen, "12");
 
 		// eslint-disable-next-line no-undef
-		expect(globalThis.history.pushState).toHaveBeenCalledWith(
+		expect(
+			globalThis.history.pushState
+		).toHaveBeenCalledWith(
 			{ id: "12" },
 			"",
 			expect.stringContaining("12")
@@ -89,11 +93,9 @@ describe("'UsedCars' section handlers", () => {
 		onUsedCarDrawerClose(setIsDrawerOpen);
 
 		// eslint-disable-next-line no-undef
-		expect(globalThis.history.replaceState).toHaveBeenCalledWith(
-			{},
-			"",
-			"/"
-		);
+		expect(
+			globalThis.history.replaceState
+		).toHaveBeenCalledWith({}, "", "/");
 	});
 
 	/**

@@ -6,7 +6,7 @@ import { USED_CAR_INFO_ENDPOINT } from "../../../../../../utils/const.js";
 import { fetchData } from "../../../../../../utils/data-fetcher/data-fetcher.js";
 
 /**
- * Custom hook to retrieve used car data, leveraging useQuery for 
+ * Custom hook to retrieve used car data, leveraging useQuery for
  * fetching it.
  * @param usedCarId — Used car ID for which data must be retrieved.
  * @returns {{
@@ -16,17 +16,15 @@ import { fetchData } from "../../../../../../utils/data-fetcher/data-fetcher.js"
  */
 export const useUsedCarInfo = ({ usedCarId }) => {
 	// useQuery to fetch used car data
-	const { data, isLoading, isError } = useQuery(
-		{
-			queryKey: [USED_CAR_INFO_API_KEY, usedCarId],
-			queryFn: () =>
-				fetchData(
-					USED_CAR_INFO_ENDPOINT + "?id=" + usedCarId
-				),
-			enabled: !!usedCarId,
-			staleTime: DATA_STALE_TIME,
-		}
-	);
+	const { data, isLoading, isError } = useQuery({
+		queryKey: [USED_CAR_INFO_API_KEY, usedCarId],
+		queryFn: () =>
+			fetchData(
+				USED_CAR_INFO_ENDPOINT + "?id=" + usedCarId
+			),
+		enabled: !!usedCarId,
+		staleTime: DATA_STALE_TIME,
+	});
 
 	// Check for errors during data fetching
 	if (isError)

@@ -23,7 +23,7 @@ import InfoCard from "../../components/InfoCard/InfoCard.js";
 import CustomText from "../../components/CustomText/CustomText.js";
 
 /**
- * This component represents the 'Services' section which 
+ * This component represents the 'Services' section which
  * shows all the specialized services offered by the company.
  * @returns {Element} — The 'Services' section.
  */

@@ -7,7 +7,7 @@ import {
 import { onCookieButtonClick } from "./handler/handler.js";
 
 /**
- * This component defines the cookie button. Clicking through it, 
+ * This component defines the cookie button. Clicking through it,
  * the user can manage his/her cookie preferences.
  * @param setIsCookiesBannerVisible — Setter for cookie consent
  * banner visibility.

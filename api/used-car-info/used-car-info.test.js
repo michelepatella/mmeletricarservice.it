@@ -33,12 +33,18 @@ jest.mock("@supabase/supabase-js", () => ({
 }));
 
 // Mock the data retrieval functions
-jest.mock("../utils/getters/used-cars-data-getter.js", () => ({
-	getUsedCarData: jest.fn(),
-}));
-jest.mock("../utils/getters/used-car-images-getter.js", () => ({
-	getUsedCarImages: jest.fn(),
-}));
+jest.mock(
+	"../utils/getters/used-cars-data-getter.js",
+	() => ({
+		getUsedCarData: jest.fn(),
+	})
+);
+jest.mock(
+	"../utils/getters/used-car-images-getter.js",
+	() => ({
+		getUsedCarImages: jest.fn(),
+	})
+);
 
 /**
  * Test suite for the handler function in used-car-info.js.

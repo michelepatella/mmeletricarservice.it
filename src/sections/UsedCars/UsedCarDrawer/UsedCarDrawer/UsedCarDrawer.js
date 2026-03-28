@@ -17,7 +17,7 @@ import BackButton from "../../../../components/BackButton/BackButton.js";
 import LoadingOutlined from "../../../../components/LoadingOutlined/LoadingOutlined.js";
 
 /**
- * This component represents the used car drawer which shows 
+ * This component represents the used car drawer which shows
  * all the details about a used car.
  * @param usedCarOverview — Overview information of the used car.
  * @param setIsDrawerOpen — State setter keeping track of

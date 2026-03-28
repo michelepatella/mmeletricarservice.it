@@ -24,7 +24,6 @@ jest.mock("../const.js", () => ({
  * 4. A test to verify that displayed words are updated during animation.
  */
 describe("useServiceTitleAnimation", () => {
-
 	// Mock state setters
 	let setDisplayedWords;
 	let setActiveIndex;
@@ -37,7 +36,7 @@ describe("useServiceTitleAnimation", () => {
 		setActiveIndex = jest.fn();
 	});
 
-    // Define behavior after each test
+	// Define behavior after each test
 	afterEach(() => {
 		jest.useRealTimers();
 		jest.clearAllMocks();
@@ -49,7 +48,11 @@ describe("useServiceTitleAnimation", () => {
 	 */
 	it("should not start animation when inView is false", () => {
 		renderHook(() =>
-			useServiceTitleAnimation(false, setDisplayedWords, setActiveIndex)
+			useServiceTitleAnimation(
+				false,
+				setDisplayedWords,
+				setActiveIndex
+			)
 		);
 
 		expect(setActiveIndex).not.toHaveBeenCalled();
@@ -62,7 +65,11 @@ describe("useServiceTitleAnimation", () => {
 	 */
 	it("should start animation when inView is true", () => {
 		renderHook(() =>
-			useServiceTitleAnimation(true, setDisplayedWords, setActiveIndex)
+			useServiceTitleAnimation(
+				true,
+				setDisplayedWords,
+				setActiveIndex
+			)
 		);
 
 		act(() => {
@@ -72,35 +79,43 @@ describe("useServiceTitleAnimation", () => {
 		expect(setActiveIndex).toHaveBeenCalled();
 	});
 
-    /**
-     * CASE 3: ANIMATION END
-     * Should set activeIndex to -1 when animation completes.
-     */
-    it("should set activeIndex to -1 when animation completes", () => {
-        renderHook(() =>
-            useServiceTitleAnimation(true, setDisplayedWords, setActiveIndex)
-        );
+	/**
+	 * CASE 3: ANIMATION END
+	 * Should set activeIndex to -1 when animation completes.
+	 */
+	it("should set activeIndex to -1 when animation completes", () => {
+		renderHook(() =>
+			useServiceTitleAnimation(
+				true,
+				setDisplayedWords,
+				setActiveIndex
+			)
+		);
 
-        act(() => {
-            jest.runAllTimers();
-        });
+		act(() => {
+			jest.runAllTimers();
+		});
 
-        expect(setActiveIndex).toHaveBeenCalledWith(-1);
-    });
+		expect(setActiveIndex).toHaveBeenCalledWith(-1);
+	});
 
-    /**
-     * CASE 4: DISPLAYED WORDS UPDATE
-     * Should update displayed words during animation.
-     */
-    it("should update displayed words during animation", () => {
-        renderHook(() =>
-            useServiceTitleAnimation(true, setDisplayedWords, setActiveIndex)
-        );
+	/**
+	 * CASE 4: DISPLAYED WORDS UPDATE
+	 * Should update displayed words during animation.
+	 */
+	it("should update displayed words during animation", () => {
+		renderHook(() =>
+			useServiceTitleAnimation(
+				true,
+				setDisplayedWords,
+				setActiveIndex
+			)
+		);
 
-        act(() => {
-            jest.runOnlyPendingTimers();
-        });
+		act(() => {
+			jest.runOnlyPendingTimers();
+		});
 
-        expect(setDisplayedWords).toHaveBeenCalled();
-    });
+		expect(setDisplayedWords).toHaveBeenCalled();
+	});
 });

@@ -14,18 +14,17 @@ import { SECTION_CONTAINER_CLASS_NAME } from "./const.js";
  * 1. A test to verify that the component renders children correctly.
  */
 describe("SectionContainer", () => {
-
 	/**
 	 * CASE 1: RENDERS CHILDREN
 	 * This test checks that the component correctly renders its children.
 	 */
 	it("renders children", () => {
 		render(
-			<SectionContainer>
-				Test content
-			</SectionContainer>
+			<SectionContainer>Test content</SectionContainer>
 		);
 
-		expect(screen.getByText("Test content")).toBeInTheDocument();
+		expect(
+			screen.getByText("Test content")
+		).toBeInTheDocument();
 	});
 });

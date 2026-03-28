@@ -1,5 +1,5 @@
 /**
- * Method to get the style of the loading outlined 
+ * Method to get the style of the loading outlined
  * used into the used car drawer.
  * @returns {{marginTop: string}} — CSS style.
  */

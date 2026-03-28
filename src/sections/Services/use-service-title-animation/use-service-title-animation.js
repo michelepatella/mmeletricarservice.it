@@ -20,10 +20,9 @@ export const useServiceTitleAnimation = (
 	setActiveIndex
 ) => {
 	useEffect(() => {
-		// Animate the title if and only 
+		// Animate the title if and only
 		// if the section is visible
-		if (!inView) 
-			return;
+		if (!inView) return;
 
 		// Check whether the title is not valid
 		if (!SERVICES_TITLE || SERVICES_TITLE.length === 0)

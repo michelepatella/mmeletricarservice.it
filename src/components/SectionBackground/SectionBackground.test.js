@@ -23,7 +23,6 @@ import { getSectionBackgroundStyle } from "./style-handler.js";
  * 2. A test to verify that the background style is applied correctly.
  */
 describe("SectionBackground", () => {
-
 	/**
 	 * CASE 1: RENDERS CHILDREN
 	 * This test checks that the component correctly renders its children.
@@ -37,12 +36,14 @@ describe("SectionBackground", () => {
 			</SectionBackground>
 		);
 
-		expect(screen.getByText("Test content")).toBeInTheDocument();
+		expect(
+			screen.getByText("Test content")
+		).toBeInTheDocument();
 	});
 
 	/**
 	 * CASE 2: APPLIES BACKGROUND STYLE
-	 * This test verifies that the background style returned by the 
+	 * This test verifies that the background style returned by the
 	 * handler is applied.
 	 */
 	it("applies background style correctly", () => {
@@ -52,9 +53,13 @@ describe("SectionBackground", () => {
 
 		render(<SectionBackground image="test.jpg" />);
 
-		const container = screen.getByTestId(SECTION_BACKGROUND_TEST_ID);
+		const container = screen.getByTestId(
+			SECTION_BACKGROUND_TEST_ID
+		);
 
-		expect(getSectionBackgroundStyle).toHaveBeenCalledWith("test.jpg");
+		expect(getSectionBackgroundStyle).toHaveBeenCalledWith(
+			"test.jpg"
+		);
 		expect(container).toHaveStyle({
 			backgroundImage: "url(test.jpg)",
 		});

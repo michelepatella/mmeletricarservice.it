@@ -27,9 +27,9 @@ global.IntersectionObserver = IntersectionObserverMock;
  * This suite contains:
  * 1. A test to check the initial state when the element is not found.
  * 2. A test to verify that the hook initializes with isVisible = false.
- * 3. A test to verify that the hook updates isVisible when the element 
+ * 3. A test to verify that the hook updates isVisible when the element
  *    enters the viewport.
- * 4. A test to verify that the hook updates isVisible when the element 
+ * 4. A test to verify that the hook updates isVisible when the element
  *    leaves the viewport.
  * 5. A test to verify that the hook calls unobserve on cleanup.
  */
@@ -93,14 +93,16 @@ describe("useIntersectionObserver", () => {
 		);
 
 		act(() => {
-    		callbackSpy(
-        		[{ isIntersecting: true, target: element }],
-        		{ unobserve: unobserveSpy }
-   			 );
+			callbackSpy(
+				[{ isIntersecting: true, target: element }],
+				{ unobserve: unobserveSpy }
+			);
 		});
 
 		expect(result.current).toBe(true);
-		expect(element.classList.contains("in-view")).toBe(true);
+		expect(element.classList.contains("in-view")).toBe(
+			true
+		);
 	});
 
 	/**
@@ -115,7 +117,10 @@ describe("useIntersectionObserver", () => {
 		);
 
 		act(() => {
-			callbackSpy([{ isIntersecting: false, target: element }], {});
+			callbackSpy(
+				[{ isIntersecting: false, target: element }],
+				{}
+			);
 		});
 
 		expect(result.current).toBe(false);

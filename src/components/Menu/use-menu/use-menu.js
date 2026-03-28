@@ -52,7 +52,7 @@ const getCurrentSection = () => {
 	let currentSection = "";
 	let closestDistance = Infinity;
 
-	// Loop over all the sections to determine 
+	// Loop over all the sections to determine
 	// which is in view
 	for (const sec of ALL_MENU_SECTIONS ?? []) {
 		// Check for parent sections
@@ -94,7 +94,7 @@ const scrollToSection = (sectionId, setVisible) => {
 		section.scrollIntoView();
 	}
 
-	// Make the menu not visible and make the page 
+	// Make the menu not visible and make the page
 	// scrollable again, if requested
 	// (useful for the hamburger menu)
 	if (setVisible != null) {

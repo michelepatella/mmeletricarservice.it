@@ -27,8 +27,7 @@ jest.mock("../../../../../../index.js", () => ({
  * 3. A test verifying the error logging on failure.
  */
 describe("useDrawerBackButtonHandler", () => {
-
-    // Define behavior before each test
+	// Define behavior before each test
 	beforeEach(() => {
 		jest.clearAllMocks();
 	});
@@ -47,9 +46,7 @@ describe("useDrawerBackButtonHandler", () => {
 		const mockHandler = jest.fn();
 		onUsedCarDrawerClose.mockReturnValue(mockHandler);
 
-		renderHook(() =>
-			useDrawerBackButtonHandler(jest.fn())
-		);
+		renderHook(() => useDrawerBackButtonHandler(jest.fn()));
 
 		expect(onUsedCarDrawerClose).toHaveBeenCalled();
 
@@ -59,13 +56,13 @@ describe("useDrawerBackButtonHandler", () => {
 		);
 	});
 
-    /**
+	/**
 	 * CASE 2: CLEANUP
 	 * Should remove popstate listener on unmount.
 	 */
 	it("should remove popstate listener on unmount", () => {
 		const removeEventListenerSpy = jest.spyOn(
-            // eslint-disable-next-line no-undef
+			// eslint-disable-next-line no-undef
 			globalThis,
 			"removeEventListener"
 		);
@@ -85,7 +82,7 @@ describe("useDrawerBackButtonHandler", () => {
 		);
 	});
 
-    /**
+	/**
 	 * CASE 3: ERROR HANDLING (ADD LISTENER)
 	 * Should log error if addEventListener throws.
 	 */
@@ -93,15 +90,13 @@ describe("useDrawerBackButtonHandler", () => {
 		const error = new Error("addEventListener failed");
 
 		jest
-            // eslint-disable-next-line no-undef
+			// eslint-disable-next-line no-undef
 			.spyOn(globalThis, "addEventListener")
 			.mockImplementation(() => {
 				throw error;
 			});
 
-		renderHook(() =>
-			useDrawerBackButtonHandler(jest.fn())
-		);
+		renderHook(() => useDrawerBackButtonHandler(jest.fn()));
 
 		expect(SentryReact.logger.error).toHaveBeenCalledWith(
 			error,
@@ -112,7 +107,7 @@ describe("useDrawerBackButtonHandler", () => {
 		);
 	});
 
-    /**
+	/**
 	 * CASE 4: ERROR HANDLING (REMOVE LISTENER)
 	 * Should log error if removeEventListener fails.
 	 */
@@ -120,7 +115,7 @@ describe("useDrawerBackButtonHandler", () => {
 		const error = new Error("removeEventListener failed");
 
 		jest
-            // eslint-disable-next-line no-undef
+			// eslint-disable-next-line no-undef
 			.spyOn(globalThis, "removeEventListener")
 			.mockImplementation(() => {
 				throw error;

@@ -15,7 +15,11 @@ jest.mock("./style-handler.js", () => ({
 }));
 
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import {
+	render,
+	screen,
+	fireEvent,
+} from "@testing-library/react";
 import "@testing-library/jest-dom";
 import MenuSmallScreen from "./MenuSmallScreen.js";
 import { useMenu } from "../use-menu/use-menu.js";
@@ -63,19 +67,22 @@ useMenu.mockReturnValue({
  * 4. A test to verify that parent and children menu items render correctly.
  */
 describe("MenuSmallScreen", () => {
-
 	/**
 	 * CASE 1: RENDERS CONTAINER AND HAMBURGER BUTTON
 	 * This test verifies that the container div and the hamburger
-     * button are correctly rendered.
+	 * button are correctly rendered.
 	 */
 	it("renders container and hamburger button", () => {
 		render(<MenuSmallScreen />);
 
 		// eslint-disable-next-line testing-library/no-node-access
-		const container = document.querySelector("." + MENU_SMALL_CONTAINER_CLASS_NAME);
-        // eslint-disable-next-line testing-library/no-node-access
-		const button = document.querySelector("." + HAMBURGER_BUTTON_CLASS_NAME);
+		const container = document.querySelector(
+			"." + MENU_SMALL_CONTAINER_CLASS_NAME
+		);
+		// eslint-disable-next-line testing-library/no-node-access
+		const button = document.querySelector(
+			"." + HAMBURGER_BUTTON_CLASS_NAME
+		);
 
 		expect(container).toBeInTheDocument();
 		expect(button).toBeInTheDocument();
@@ -88,8 +95,10 @@ describe("MenuSmallScreen", () => {
 	it("calls toggleDrawer when hamburger button is clicked", () => {
 		render(<MenuSmallScreen />);
 
-        // eslint-disable-next-line testing-library/no-node-access
-		const button = document.querySelector("." + HAMBURGER_BUTTON_CLASS_NAME);
+		// eslint-disable-next-line testing-library/no-node-access
+		const button = document.querySelector(
+			"." + HAMBURGER_BUTTON_CLASS_NAME
+		);
 		fireEvent.click(button);
 
 		expect(mockToggleDrawer).toHaveBeenCalled();
@@ -98,38 +107,48 @@ describe("MenuSmallScreen", () => {
 	/**
 	 * CASE 3: DRAWER RENDERING
 	 * This test verifies that the drawer is rendered with correct
-     * placement and closeIcon.
+	 * placement and closeIcon.
 	 */
 	it("renders drawer with correct props", () => {
 		render(<MenuSmallScreen />);
-        
-        // eslint-disable-next-line testing-library/no-node-access
-		const drawer = document.querySelector("[role='dialog']");
+
+		// eslint-disable-next-line testing-library/no-node-access
+		const drawer = document.querySelector(
+			"[role='dialog']"
+		);
 		expect(drawer).toBeInTheDocument();
 
 		// eslint-disable-next-line testing-library/no-node-access
-		const closeIcon = document.querySelector("." + MENU_SMALL_CLOSE_OUTLINE_CLASS_NAME);
+		const closeIcon = document.querySelector(
+			"." + MENU_SMALL_CLOSE_OUTLINE_CLASS_NAME
+		);
 		expect(closeIcon).toBeInTheDocument();
 	});
 
 	/**
 	 * CASE 4: MENU ITEMS RENDERING
-	 * This test verifies that parent and children menu items are 
-     * rendered correctly.
+	 * This test verifies that parent and children menu items are
+	 * rendered correctly.
 	 */
 	it("renders parent and children menu items", () => {
 		render(<MenuSmallScreen />);
 
 		// Parent items
-		expect(screen.getByText("Parent 1")).toBeInTheDocument();
-		expect(screen.getByText("Parent 2")).toBeInTheDocument();
+		expect(
+			screen.getByText("Parent 1")
+		).toBeInTheDocument();
+		expect(
+			screen.getByText("Parent 2")
+		).toBeInTheDocument();
 
 		// Children items
 		expect(screen.getByText("Child 1")).toBeInTheDocument();
 		expect(screen.getByText("Child 2")).toBeInTheDocument();
 
 		// eslint-disable-next-line testing-library/no-node-access
-		const childElements = document.querySelectorAll("." + MENU_SMALL_CHILDREN_ITEM_CLASS_NAME);
+		const childElements = document.querySelectorAll(
+			"." + MENU_SMALL_CHILDREN_ITEM_CLASS_NAME
+		);
 		expect(childElements.length).toBe(2);
 	});
 });

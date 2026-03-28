@@ -11,9 +11,7 @@ import {
 	HOME_HEADER_CLASS_NAME,
 	HOME_LAYOUT_CLASS_NAME,
 } from "./const.js";
-import {
-    DOTTED_BACKGROUND_IMAGE_LINK,
-} from "../../../utils/const.js";
+import { DOTTED_BACKGROUND_IMAGE_LINK } from "../../../utils/const.js";
 import { HOME_SECTION_ID } from "../../../utils/const.js";
 
 // Mocks
@@ -42,16 +40,24 @@ jest.mock("../HomeHeader/HomeHeader.js", () => ({
 }));
 jest.mock("../HomeContent/HomeContent.js", () => ({
 	__esModule: true,
-	default: jest.fn(() => <div data-testid="home-content" />),
-}));
-jest.mock("../../../components/SectionBackground/SectionBackground.js", () => ({
-	__esModule: true,
-	default: jest.fn(({ children, image }) => (
-		<div data-testid="section-background" data-image={image}>
-			{children}
-		</div>
+	default: jest.fn(() => (
+		<div data-testid="home-content" />
 	)),
 }));
+jest.mock(
+	"../../../components/SectionBackground/SectionBackground.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ children, image }) => (
+			<div
+				data-testid="section-background"
+				data-image={image}
+			>
+				{children}
+			</div>
+		)),
+	})
+);
 
 /**
  * Test suite for the Home component.
@@ -61,7 +67,6 @@ jest.mock("../../../components/SectionBackground/SectionBackground.js", () => ({
  * 3. A test to verify that the section background is rendered with correct image.
  */
 describe("Home", () => {
-
 	// Define behavior before each test
 	beforeEach(() => {
 		jest.clearAllMocks();
@@ -91,12 +96,16 @@ describe("Home", () => {
 		// Check header
 		const header = screen.getByTestId("layout-header");
 		expect(header.className).toBe(HOME_HEADER_CLASS_NAME);
-		expect(screen.getByTestId("home-header")).toBeInTheDocument();
+		expect(
+			screen.getByTestId("home-header")
+		).toBeInTheDocument();
 
 		// Check content
 		const content = screen.getByTestId("layout-content");
 		expect(content.className).toBe(HOME_CONTENT_CLASS_NAME);
-		expect(screen.getByTestId("home-content")).toBeInTheDocument();
+		expect(
+			screen.getByTestId("home-content")
+		).toBeInTheDocument();
 	});
 
 	/**
@@ -106,8 +115,12 @@ describe("Home", () => {
 	it("should render section background with correct image", () => {
 		render(<Home />);
 
-		const background = screen.getByTestId("section-background");
+		const background = screen.getByTestId(
+			"section-background"
+		);
 		expect(background).toBeInTheDocument();
-		expect(background.dataset.image).toBe(DOTTED_BACKGROUND_IMAGE_LINK);
+		expect(background.dataset.image).toBe(
+			DOTTED_BACKGROUND_IMAGE_LINK
+		);
 	});
 });

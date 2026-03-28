@@ -26,7 +26,6 @@ import {
  * 3. A test to verify that the logo image is rendered correctly.
  */
 describe("LoadingOutlined", () => {
-
 	/**
 	 * CASE 1: RENDERS MAIN CONTAINER
 	 * This test checks that the main container is rendered
@@ -36,7 +35,9 @@ describe("LoadingOutlined", () => {
 		render(<LoadingOutlined />);
 
 		// eslint-disable-next-line testing-library/no-node-access
-		const container = document.querySelector("." + LOADING_OUTLINED_CLASS_NAME);
+		const container = document.querySelector(
+			"." + LOADING_OUTLINED_CLASS_NAME
+		);
 
 		expect(container).toBeInTheDocument();
 	});
@@ -50,11 +51,19 @@ describe("LoadingOutlined", () => {
 		render(<LoadingOutlined />);
 
 		// eslint-disable-next-line testing-library/no-node-access
-		const circleImage = document.querySelector("." + LOADING_OUTLINED_CIRCLE_IMAGE_CLASS_NAME);
+		const circleImage = document.querySelector(
+			"." + LOADING_OUTLINED_CIRCLE_IMAGE_CLASS_NAME
+		);
 
 		expect(circleImage).toBeInTheDocument();
-		expect(circleImage).toHaveAttribute("src", CIRCLE_LOADING_OUTLINED_IMAGE_LINK);
-		expect(circleImage).toHaveAttribute("alt", LOADING_OUTLINED_CIRCLE_IMAGE_ALT);
+		expect(circleImage).toHaveAttribute(
+			"src",
+			CIRCLE_LOADING_OUTLINED_IMAGE_LINK
+		);
+		expect(circleImage).toHaveAttribute(
+			"alt",
+			LOADING_OUTLINED_CIRCLE_IMAGE_ALT
+		);
 	});
 
 	/**
@@ -66,10 +75,18 @@ describe("LoadingOutlined", () => {
 		render(<LoadingOutlined />);
 
 		// eslint-disable-next-line testing-library/no-node-access
-		const logoImage = document.querySelector("." + LOADING_OUTLINED_LOGO_IMAGE_CLASS_NAME);
+		const logoImage = document.querySelector(
+			"." + LOADING_OUTLINED_LOGO_IMAGE_CLASS_NAME
+		);
 
 		expect(logoImage).toBeInTheDocument();
-		expect(logoImage).toHaveAttribute("src", LOGO_LOADING_OUTLINED_IMAGE_LINK);
-		expect(logoImage).toHaveAttribute("alt", LOADING_OUTLINED_LOGO_IMAGE_ALT);
+		expect(logoImage).toHaveAttribute(
+			"src",
+			LOGO_LOADING_OUTLINED_IMAGE_LINK
+		);
+		expect(logoImage).toHaveAttribute(
+			"alt",
+			LOADING_OUTLINED_LOGO_IMAGE_ALT
+		);
 	});
 });

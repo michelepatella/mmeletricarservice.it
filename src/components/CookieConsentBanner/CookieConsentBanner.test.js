@@ -31,7 +31,11 @@ jest.mock("../Link/Link.js", () => ({
 }));
 
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import {
+	render,
+	screen,
+	fireEvent,
+} from "@testing-library/react";
 import "@testing-library/jest-dom";
 import CookieConsentBanner from "./CookieConsentBanner.js";
 import {
@@ -49,12 +53,11 @@ import {
  * 4. A test to verify that clicking decline calls the handler.
  */
 describe("CookieConsentBanner", () => {
-
-    /**
-     * CASE 1: DOES NOT RENDER WHEN NOT VISIBLE
-     * This test checks that the banner is not rendered when 
+	/**
+	 * CASE 1: DOES NOT RENDER WHEN NOT VISIBLE
+	 * This test checks that the banner is not rendered when
 	 * isCookiesBannerVisible is false.
-     */
+	 */
 	it("does not render when not visible", () => {
 		render(
 			<CookieConsentBanner
@@ -69,11 +72,11 @@ describe("CookieConsentBanner", () => {
 		).not.toBeInTheDocument();
 	});
 
-    /**
-     * CASE 2: RENDERS BANNER WHEN VISIBLE
-     * This test verifies that the banner is rendered with 
+	/**
+	 * CASE 2: RENDERS BANNER WHEN VISIBLE
+	 * This test verifies that the banner is rendered with
 	 * description and buttons.
-     */
+	 */
 	it("renders banner when visible", () => {
 		render(
 			<CookieConsentBanner
@@ -89,19 +92,23 @@ describe("CookieConsentBanner", () => {
 			)
 		).toBeInTheDocument();
 		expect(
-			screen.getByText(COOKIE_CONSENT_BANNER_ACCEPT_BUTTON_TEXT)
+			screen.getByText(
+				COOKIE_CONSENT_BANNER_ACCEPT_BUTTON_TEXT
+			)
 		).toBeInTheDocument();
 
 		expect(
-			screen.getByText(COOKIE_CONSENT_BANNER_DECLINE_BUTTON_TEXT)
+			screen.getByText(
+				COOKIE_CONSENT_BANNER_DECLINE_BUTTON_TEXT
+			)
 		).toBeInTheDocument();
 	});
 
-    /**
-     * CASE 3: ACCEPT BUTTON CLICK
-     * This test verifies that clicking the accept button 
+	/**
+	 * CASE 3: ACCEPT BUTTON CLICK
+	 * This test verifies that clicking the accept button
 	 * triggers the accept handler.
-     */
+	 */
 	it("calls handleAcceptCookies when accept button is clicked", () => {
 		const mockAccept = jest.fn();
 
@@ -114,17 +121,19 @@ describe("CookieConsentBanner", () => {
 		);
 
 		fireEvent.click(
-			screen.getByText(COOKIE_CONSENT_BANNER_ACCEPT_BUTTON_TEXT)
+			screen.getByText(
+				COOKIE_CONSENT_BANNER_ACCEPT_BUTTON_TEXT
+			)
 		);
 
 		expect(mockAccept).toHaveBeenCalled();
 	});
 
-    /**
-     * CASE 4: DECLINE BUTTON CLICK
-     * This test verifies that clicking the decline button 
+	/**
+	 * CASE 4: DECLINE BUTTON CLICK
+	 * This test verifies that clicking the decline button
 	 * triggers the decline handler.
-     */
+	 */
 	it("calls handleDeclineCookies when decline button is clicked", () => {
 		const mockDecline = jest.fn();
 
@@ -137,7 +146,9 @@ describe("CookieConsentBanner", () => {
 		);
 
 		fireEvent.click(
-			screen.getByText(COOKIE_CONSENT_BANNER_DECLINE_BUTTON_TEXT)
+			screen.getByText(
+				COOKIE_CONSENT_BANNER_DECLINE_BUTTON_TEXT
+			)
 		);
 
 		expect(mockDecline).toHaveBeenCalled();

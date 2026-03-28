@@ -7,11 +7,19 @@
 // Mocks
 jest.mock("../MenuSmallScreen/MenuSmallScreen.js", () => ({
 	__esModule: true,
-	default: () => <div data-testid="menu-small-screen">Mocked MenuSmallScreen</div>,
+	default: () => (
+		<div data-testid="menu-small-screen">
+			Mocked MenuSmallScreen
+		</div>
+	),
 }));
 jest.mock("../MenuBigScreen/MenuBigScreen.js", () => ({
 	__esModule: true,
-	default: () => <div data-testid="menu-big-screen">Mocked MenuBigScreen</div>,
+	default: () => (
+		<div data-testid="menu-big-screen">
+			Mocked MenuBigScreen
+		</div>
+	),
 }));
 
 import React from "react";
@@ -26,7 +34,6 @@ import MenuWrapper from "./MenuWrapper.js";
  * 2. A test to verify that the small screen menu is rendered.
  */
 describe("MenuWrapper", () => {
-
 	/**
 	 * CASE 1: RENDERS BIG SCREEN MENU
 	 * This test verifies that the MenuBigScreen component
@@ -38,7 +45,9 @@ describe("MenuWrapper", () => {
 		const bigMenu = screen.getByTestId("menu-big-screen");
 
 		expect(bigMenu).toBeInTheDocument();
-		expect(bigMenu).toHaveTextContent("Mocked MenuBigScreen");
+		expect(bigMenu).toHaveTextContent(
+			"Mocked MenuBigScreen"
+		);
 	});
 
 	/**
@@ -49,9 +58,13 @@ describe("MenuWrapper", () => {
 	it("renders the small screen menu", () => {
 		render(<MenuWrapper />);
 
-		const smallMenu = screen.getByTestId("menu-small-screen");
-        
+		const smallMenu = screen.getByTestId(
+			"menu-small-screen"
+		);
+
 		expect(smallMenu).toBeInTheDocument();
-		expect(smallMenu).toHaveTextContent("Mocked MenuSmallScreen");
+		expect(smallMenu).toHaveTextContent(
+			"Mocked MenuSmallScreen"
+		);
 	});
 });

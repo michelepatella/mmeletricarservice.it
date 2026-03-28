@@ -36,7 +36,6 @@ import { useMenu } from "../use-menu/use-menu.js";
  * 3. A test to verify that the current anchor is computed correctly.
  */
 describe("MenuBigScreen", () => {
-
 	/**
 	 * CASE 1: RENDERS CONTAINER
 	 * This test checks that the main container is rendered
@@ -51,7 +50,9 @@ describe("MenuBigScreen", () => {
 		render(<MenuBigScreen />);
 
 		// eslint-disable-next-line testing-library/no-node-access
-		const container = document.querySelector("." + MENU_BIG_CONTAINER_CLASS_NAME);
+		const container = document.querySelector(
+			"." + MENU_BIG_CONTAINER_CLASS_NAME
+		);
 
 		expect(container).toBeInTheDocument();
 	});
@@ -62,7 +63,9 @@ describe("MenuBigScreen", () => {
 	 * to the Anchor component.
 	 */
 	it("passes menu items correctly", () => {
-		const mockItems = [{ key: "1", href: "#home", title: "Home" }];
+		const mockItems = [
+			{ key: "1", href: "#home", title: "Home" },
+		];
 
 		useMenu.mockReturnValue({
 			menuItems: mockItems,
@@ -71,9 +74,9 @@ describe("MenuBigScreen", () => {
 
 		render(<MenuBigScreen />);
 
-		expect(screen.getByTestId("anchor-items")).toHaveTextContent(
-			JSON.stringify(mockItems)
-		);
+		expect(
+			screen.getByTestId("anchor-items")
+		).toHaveTextContent(JSON.stringify(mockItems));
 	});
 
 	/**
@@ -88,6 +91,8 @@ describe("MenuBigScreen", () => {
 
 		render(<MenuBigScreen />);
 
-		expect(screen.getByTestId("current-anchor")).toHaveTextContent("#about-us");
+		expect(
+			screen.getByTestId("current-anchor")
+		).toHaveTextContent("#about-us");
 	});
 });

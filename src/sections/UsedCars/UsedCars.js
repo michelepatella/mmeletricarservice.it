@@ -35,9 +35,7 @@ function UsedCars() {
 
 	return (
 		<SectionBackground image={DOTTED_BACKGROUND_IMAGE_LINK}>
-			<SectionContainer
-				id={USED_CARS_SECTION_ID}
-			>
+			<SectionContainer id={USED_CARS_SECTION_ID}>
 				{/* Section title */}
 				<CustomText
 					type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
@@ -63,16 +61,14 @@ function UsedCars() {
 				{!isLoading && usedCarsOverview?.length > 0 && (
 					<>
 						{/* Container for all the used car cards */}
-							<div
-								className={USED_CARS_CONTAINER_CLASS_NAME}
-							>
-								{usedCarsOverview.map((car) => (
-									<UsedCarCard
-										key={car.id}
-										usedCarOverview={car}
-									/>
-								))}
-							</div>
+						<div className={USED_CARS_CONTAINER_CLASS_NAME}>
+							{usedCarsOverview.map((car) => (
+								<UsedCarCard
+									key={car.id}
+									usedCarOverview={car}
+								/>
+							))}
+						</div>
 					</>
 				)}
 

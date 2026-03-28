@@ -85,8 +85,7 @@ export const useCookieConsent = () => {
 		// If cookies were accepted and have been
 		// refused now, refresh the page to remove
 		// cookies completely from the session
-		if (cookiesAccepted)
-			isRefreshNeeded = true;
+		if (cookiesAccepted) isRefreshNeeded = true;
 
 		// Set cookies as refused and close the cookie
 		// consent banner

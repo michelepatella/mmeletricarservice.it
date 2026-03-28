@@ -5,10 +5,13 @@
 /* eslint-disable import/first */
 
 // Mock
-jest.mock("../../hooks/use-intersection-observer.js", () => ({
-	__esModule: true,
-	default: jest.fn(),
-}));
+jest.mock(
+	"../../hooks/use-intersection-observer.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(),
+	})
+);
 
 import React from "react";
 import { render, screen } from "@testing-library/react";
@@ -30,33 +33,39 @@ import useIntersectionObserver from "../../hooks/use-intersection-observer.js";
  * 5. A test to verify that the intersection observer hook is called.
  */
 describe("CustomText", () => {
-
-    /**
-     * CASE 1: RENDERS TEXT
-     * This test checks that the component correctly renders the provided text.
-     */
+	/**
+	 * CASE 1: RENDERS TEXT
+	 * This test checks that the component correctly renders the provided text.
+	 */
 	it("renders text correctly", () => {
 		render(<CustomText text="Some text" type="body" />);
 
-		expect(screen.getByText("Some text")).toBeInTheDocument();
+		expect(
+			screen.getByText("Some text")
+		).toBeInTheDocument();
 	});
 
-    /**
-     * CASE 2: RENDERS HTML CONTENT
-     * This test verifies that HTML content passed as text is rendered correctly.
-     */
+	/**
+	 * CASE 2: RENDERS HTML CONTENT
+	 * This test verifies that HTML content passed as text is rendered correctly.
+	 */
 	it("renders HTML content correctly", () => {
 		render(
-			<CustomText text="<strong>Bold text</strong>" type="body" />
+			<CustomText
+				text="<strong>Bold text</strong>"
+				type="body"
+			/>
 		);
 
-		expect(screen.getByText("Bold text")).toBeInTheDocument();
+		expect(
+			screen.getByText("Bold text")
+		).toBeInTheDocument();
 	});
 
-    /**
-     * CASE 3: CLASS NAME
-     * This test verifies that the correct className is applied based on type.
-     */
+	/**
+	 * CASE 3: CLASS NAME
+	 * This test verifies that the correct className is applied based on type.
+	 */
 	it("applies correct className", () => {
 		render(<CustomText text="Some text" type="heading" />);
 
@@ -65,11 +74,11 @@ describe("CustomText", () => {
 		);
 	});
 
-    /**
-     * CASE 4: DISABLE ANIMATION
-     * This test verifies that when animation is disabled,
-     * the correct style is applied.
-     */
+	/**
+	 * CASE 4: DISABLE ANIMATION
+	 * This test verifies that when animation is disabled,
+	 * the correct style is applied.
+	 */
 	it("applies default opacity when animation is disabled", () => {
 		render(
 			<CustomText
@@ -84,10 +93,10 @@ describe("CustomText", () => {
 		});
 	});
 
-    /**
-     * CASE 5: INTERSECTION OBSERVER HOOK
-     * This test verifies that the intersection observer hook is called.
-     */
+	/**
+	 * CASE 5: INTERSECTION OBSERVER HOOK
+	 * This test verifies that the intersection observer hook is called.
+	 */
 	it("calls useIntersectionObserver", () => {
 		render(<CustomText text="Some text" type="body" />);
 

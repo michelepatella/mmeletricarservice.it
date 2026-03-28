@@ -5,7 +5,7 @@ import {
 } from "./const.js";
 
 /**
- * This component defines an icon button, which has just an 
+ * This component defines an icon button, which has just an
  * icon (without any text).
  * @param props Object containing:
  *   - src: string — The URL of the icon image.

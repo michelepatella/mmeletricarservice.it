@@ -9,7 +9,7 @@ let previousScrollY = 0;
 
 /**
  * Method to call when the used car drawer is going to be open.
- * @param setIsDrawerOpen — State setter keeping track whether 
+ * @param setIsDrawerOpen — State setter keeping track whether
  * the used car drawer is open or not.
  * @param id — ID of the used car whose drawer is going to be open.
  */
@@ -24,7 +24,7 @@ export const onUsedCarDrawerOpen = (
 		// Save the current vertical position
 		previousScrollY = window.scrollY;
 
-		// Make the menu hidden and the webapp not 
+		// Make the menu hidden and the webapp not
 		// scrollable anymore
 		document.body.classList.add(
 			USED_CAR_DRAWER_OPEN_CLASS_NAME
@@ -54,7 +54,7 @@ export const onUsedCarDrawerOpen = (
 
 /**
  * Method to call when the used car drawer is going to be closed.
- * @param setIsDrawerOpen — State setter keeping track whether 
+ * @param setIsDrawerOpen — State setter keeping track whether
  * the used car drawer is open or not.
  */
 export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
@@ -62,7 +62,7 @@ export const onUsedCarDrawerClose = (setIsDrawerOpen) => {
 		// Set the drawer closed
 		setIsDrawerOpen(false);
 
-		// Make the menu visible and the webapp 
+		// Make the menu visible and the webapp
 		// scrollable again
 		document.body.classList.remove(
 			USED_CAR_DRAWER_OPEN_CLASS_NAME

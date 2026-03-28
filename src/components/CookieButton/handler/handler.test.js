@@ -11,18 +11,21 @@ import { onCookieButtonClick } from "./handler.js";
  *    the banner visible.
  */
 describe("onCookieButtonClick", () => {
+	/**
+	 * CASE 1: SET COOKIE BANNER VISIBLE
+	 * Calling the function should call the setter
+	 * with "true".
+	 */
+	it("should set the cookie banner visible when called", () => {
+		const setIsCookiesBannerVisible = jest.fn();
 
-  /**
-   * CASE 1: SET COOKIE BANNER VISIBLE
-   * Calling the function should call the setter
-   * with "true".
-   */
-  it("should set the cookie banner visible when called", () => {
-    const setIsCookiesBannerVisible = jest.fn();
+		onCookieButtonClick(setIsCookiesBannerVisible);
 
-    onCookieButtonClick(setIsCookiesBannerVisible);
-
-    expect(setIsCookiesBannerVisible).toHaveBeenCalledTimes(1);
-    expect(setIsCookiesBannerVisible).toHaveBeenCalledWith(true);
-  });
+		expect(setIsCookiesBannerVisible).toHaveBeenCalledTimes(
+			1
+		);
+		expect(setIsCookiesBannerVisible).toHaveBeenCalledWith(
+			true
+		);
+	});
 });

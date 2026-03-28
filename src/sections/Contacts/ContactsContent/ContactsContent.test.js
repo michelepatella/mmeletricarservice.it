@@ -3,7 +3,11 @@
  */
 
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import {
+	render,
+	screen,
+	fireEvent,
+} from "@testing-library/react";
 import "@testing-library/jest-dom";
 import ContactsContent from "./ContactsContent.js";
 import CustomButton from "../../../components/CustomButton/CustomButton.js";
@@ -20,42 +24,63 @@ import {
 } from "./const.js";
 
 // Mocks
-jest.mock("../../../components/SectionBackground/SectionBackground.js", () => ({
-	__esModule: true,
-	default: jest.fn(({ children, image }) => (
-		<div data-testid="section-background" data-image={image}>
-			{children}
-		</div>
-	)),
-}));
-jest.mock("../../../components/SectionContainer/SectionContainer.js", () => ({
-	__esModule: true,
-	default: jest.fn(({ children, id }) => (
-		<div data-testid="section-container" id={id}>
-			{children}
-		</div>
-	)),
-}));
-jest.mock("../../../components/CustomText/CustomText.js", () => ({
-	__esModule: true,
-	default: jest.fn(({ type, text }) => (
-		<div data-testid={"custom-text-" + type}>{text}</div>
-	)),
-}));
-jest.mock("../../../components/BlockQuote/BlockQuote.js", () => ({
-	__esModule: true,
-	default: jest.fn(({ children }) => (
-		<div data-testid="blockquote">{children}</div>
-	)),
-}));
-jest.mock("../../../components/CustomButton/CustomButton.js", () => ({
-	__esModule: true,
-	default: jest.fn(({ text, onClick }) => (
-		<button data-testid={"contact-button-" + text} onClick={onClick}>
-			{text}
-		</button>
-	)),
-}));
+jest.mock(
+	"../../../components/SectionBackground/SectionBackground.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ children, image }) => (
+			<div
+				data-testid="section-background"
+				data-image={image}
+			>
+				{children}
+			</div>
+		)),
+	})
+);
+jest.mock(
+	"../../../components/SectionContainer/SectionContainer.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ children, id }) => (
+			<div data-testid="section-container" id={id}>
+				{children}
+			</div>
+		)),
+	})
+);
+jest.mock(
+	"../../../components/CustomText/CustomText.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ type, text }) => (
+			<div data-testid={"custom-text-" + type}>{text}</div>
+		)),
+	})
+);
+jest.mock(
+	"../../../components/BlockQuote/BlockQuote.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ children }) => (
+			<div data-testid="blockquote">{children}</div>
+		)),
+	})
+);
+jest.mock(
+	"../../../components/CustomButton/CustomButton.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ text, onClick }) => (
+			<button
+				data-testid={"contact-button-" + text}
+				onClick={onClick}
+			>
+				{text}
+			</button>
+		)),
+	})
+);
 
 /**
  * Test suite for the ContactsContent component.
@@ -65,16 +90,15 @@ jest.mock("../../../components/CustomButton/CustomButton.js", () => ({
  * 3. A test to verify that clicking a button triggers the correct handler.
  */
 describe("ContactsContent", () => {
-
 	// Define behavior before each test
 	beforeEach(() => {
-        jest.clearAllMocks();
+		jest.clearAllMocks();
 
-        // Replace all handlers with mock functions
-        Object.keys(CONTACTS_CLICK_HANDLERS).forEach((key) => {
-            CONTACTS_CLICK_HANDLERS[key] = jest.fn();
-        });
-    });
+		// Replace all handlers with mock functions
+		Object.keys(CONTACTS_CLICK_HANDLERS).forEach((key) => {
+			CONTACTS_CLICK_HANDLERS[key] = jest.fn();
+		});
+	});
 
 	/**
 	 * CASE 1: RENDERING MAIN COMPONENTS
@@ -84,11 +108,17 @@ describe("ContactsContent", () => {
 		render(<ContactsContent />);
 
 		// Check background image
-		const background = screen.getByTestId("section-background");
-		expect(background.dataset.image).toBe(DOTTED_BACKGROUND_IMAGE_LINK);
+		const background = screen.getByTestId(
+			"section-background"
+		);
+		expect(background.dataset.image).toBe(
+			DOTTED_BACKGROUND_IMAGE_LINK
+		);
 
 		// Check container id
-		const container = screen.getByTestId("section-container");
+		const container = screen.getByTestId(
+			"section-container"
+		);
 		expect(container.id).toBe(CONTACTS_SECTION_ID);
 
 		// Check title
@@ -98,7 +128,9 @@ describe("ContactsContent", () => {
 		expect(title.textContent).toBe(CONTACTS_TITLE);
 
 		// Check blockquote
-		expect(screen.getByTestId("blockquote")).toBeInTheDocument();
+		expect(
+			screen.getByTestId("blockquote")
+		).toBeInTheDocument();
 
 		// Check buttons container class
 		const buttonsContainer = screen
@@ -119,18 +151,20 @@ describe("ContactsContent", () => {
 
 		ALL_CONTACTS.forEach((contact, index) => {
 			expect(
-				screen.getByTestId("contact-button-" + contact.value)
+				screen.getByTestId(
+					"contact-button-" + contact.value
+				)
 			).toBeInTheDocument();
 
-            const call = CustomButton.mock.calls[index][0];
+			const call = CustomButton.mock.calls[index][0];
 
-            expect(call.text).toBe(contact.value);
-            expect(call.icon).toBe(contact.icon);
-            expect(call.isContact).toBe(true);
-            expect(call.onClick).toBe(
-                CONTACTS_CLICK_HANDLERS[contact.value]
-            );
-        });
+			expect(call.text).toBe(contact.value);
+			expect(call.icon).toBe(contact.icon);
+			expect(call.isContact).toBe(true);
+			expect(call.onClick).toBe(
+				CONTACTS_CLICK_HANDLERS[contact.value]
+			);
+		});
 	});
 
 	/**

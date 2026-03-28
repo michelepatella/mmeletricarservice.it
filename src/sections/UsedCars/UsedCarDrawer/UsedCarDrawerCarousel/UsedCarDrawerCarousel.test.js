@@ -10,8 +10,8 @@ import { NO_USED_CAR_IMAGE_AVAILABLE_LINK } from "./const.js";
 
 // Mock
 jest.mock("antd", () => {
-    const React = require("react");
-    
+	const React = require("react");
+
 	return {
 		Carousel: ({ children }) =>
 			React.createElement(
@@ -44,7 +44,6 @@ jest.mock("antd", () => {
  * 2. A test to verify fallback image is shown when no images exist.
  */
 describe("UsedCarDrawerCarousel", () => {
-
 	// Define behavior before each test
 	beforeEach(() => {
 		jest.clearAllMocks();
@@ -55,14 +54,10 @@ describe("UsedCarDrawerCarousel", () => {
 	 * Should render all car images inside preview groups.
 	 */
 	it("should render all images when available", () => {
-
 		render(
 			<UsedCarDrawerCarousel
 				usedCarInfo={{
-					images: [
-						"img1.jpg",
-						"img2.jpg",
-					],
+					images: ["img1.jpg", "img2.jpg"],
 				}}
 			/>
 		);
@@ -79,7 +74,6 @@ describe("UsedCarDrawerCarousel", () => {
 	 * Should render fallback image when images array is empty or missing.
 	 */
 	it("should render fallback image when no images are available", () => {
-
 		render(
 			<UsedCarDrawerCarousel
 				usedCarInfo={{

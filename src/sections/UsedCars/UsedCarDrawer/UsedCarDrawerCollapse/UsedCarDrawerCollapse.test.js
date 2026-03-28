@@ -57,7 +57,7 @@ describe("UsedCarDrawerCollapse", () => {
 				usedCarInfo={{
 					cylinders: "4",
 					internal_color: "black",
-                    external_color: "gray",
+					external_color: "gray",
 				}}
 			/>
 		);

@@ -16,16 +16,15 @@ jest.mock("../../index.js", () => ({
 	},
 }));
 const reloadMock = jest.fn();
-Object.defineProperty(window, 'location', {
-  value: { reload: reloadMock },
-  writable: true,
+Object.defineProperty(window, "location", {
+	value: { reload: reloadMock },
+	writable: true,
 });
 
 import { renderHook, act } from "@testing-library/react";
 import Cookies from "js-cookie";
 import { SentryReact } from "../../index.js";
 import { useCookieConsent } from "./use-cookie-consent.js";
-
 
 /**
  * Test suite for the custom hook useCookieConsent.
@@ -40,25 +39,25 @@ import { useCookieConsent } from "./use-cookie-consent.js";
  * 8. A test for error during page refresh after decline.
  */
 describe("useCookieConsent", () => {
-    let originalLocation;
+	let originalLocation;
 
-    // Define behavior before all tests
-    beforeAll(() => {
-        /* eslint-disable-next-line no-undef */
-        originalLocation = globalThis.location;
-    });
+	// Define behavior before all tests
+	beforeAll(() => {
+		/* eslint-disable-next-line no-undef */
+		originalLocation = globalThis.location;
+	});
 
-    // Define behavior before each test
-    beforeEach(() => {
-        reloadMock.mockClear();
-        jest.clearAllMocks();
-    });
+	// Define behavior before each test
+	beforeEach(() => {
+		reloadMock.mockClear();
+		jest.clearAllMocks();
+	});
 
-    // Define behavior after all tests
-    afterAll(() => {
-        /* eslint-disable-next-line no-undef */
-        globalThis.location = originalLocation;
-    });
+	// Define behavior after all tests
+	afterAll(() => {
+		/* eslint-disable-next-line no-undef */
+		globalThis.location = originalLocation;
+	});
 
 	/**
 	 * CASE 1: COOKIES ALREADY ACCEPTED
@@ -71,9 +70,7 @@ describe("useCookieConsent", () => {
 		Cookies.get.mockReturnValue("true");
 
 		// Render hook
-		const { result } = renderHook(() =>
-			useCookieConsent()
-		);
+		const { result } = renderHook(() => useCookieConsent());
 
 		// Assertions
 		expect(result.current.cookiesAccepted).toBe(true);
@@ -93,9 +90,7 @@ describe("useCookieConsent", () => {
 		Cookies.get.mockReturnValue("false");
 
 		// Render hook
-		const { result } = renderHook(() =>
-			useCookieConsent()
-		);
+		const { result } = renderHook(() => useCookieConsent());
 
 		// Assertions
 		expect(result.current.cookiesAccepted).toBe(false);
@@ -115,9 +110,7 @@ describe("useCookieConsent", () => {
 		Cookies.get.mockReturnValue(undefined);
 
 		// Render hook
-		const { result } = renderHook(() =>
-			useCookieConsent()
-		);
+		const { result } = renderHook(() => useCookieConsent());
 
 		// Assertions
 		expect(result.current.cookiesAccepted).toBe(false);
@@ -137,9 +130,7 @@ describe("useCookieConsent", () => {
 		Cookies.get.mockReturnValue(undefined);
 
 		// Render hook
-		const { result } = renderHook(() =>
-			useCookieConsent()
-		);
+		const { result } = renderHook(() => useCookieConsent());
 
 		// Trigger accept action
 		act(() => {
@@ -165,9 +156,7 @@ describe("useCookieConsent", () => {
 		Cookies.get.mockReturnValue("false");
 
 		// Render hook
-		const { result } = renderHook(() =>
-			useCookieConsent()
-		);
+		const { result } = renderHook(() => useCookieConsent());
 
 		// Trigger decline action
 		act(() => {
@@ -194,9 +183,7 @@ describe("useCookieConsent", () => {
 		Cookies.get.mockReturnValue("true");
 
 		// Render hook
-		const { result } = renderHook(() =>
-			useCookieConsent()
-		);
+		const { result } = renderHook(() => useCookieConsent());
 
 		// Trigger decline action
 		act(() => {
@@ -225,9 +212,7 @@ describe("useCookieConsent", () => {
 		});
 
 		// Render hook
-		const { result } = renderHook(() =>
-			useCookieConsent()
-		);
+		const { result } = renderHook(() => useCookieConsent());
 
 		// Assertions
 		expect(SentryReact.logger.error).toHaveBeenCalled();
@@ -247,13 +232,11 @@ describe("useCookieConsent", () => {
 		Cookies.get.mockReturnValue("true");
 
 		reloadMock.mockImplementation(() => {
-            throw new Error("Something went wrong");
-        });
+			throw new Error("Something went wrong");
+		});
 
 		// Render hook
-		const { result } = renderHook(() =>
-			useCookieConsent()
-		);
+		const { result } = renderHook(() => useCookieConsent());
 
 		// Trigger decline action
 		act(() => {

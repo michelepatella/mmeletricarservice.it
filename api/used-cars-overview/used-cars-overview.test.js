@@ -28,12 +28,18 @@ jest.mock("p-limit", () => {
 });
 
 // Mock data retrieval functions
-jest.mock("../utils/getters/used-cars-data-getter.js", () => ({
-	getUsedCarData: jest.fn(),
-}));
-jest.mock("../utils/getters/used-car-images-getter.js", () => ({
-	getUsedCarImages: jest.fn(),
-}));
+jest.mock(
+	"../utils/getters/used-cars-data-getter.js",
+	() => ({
+		getUsedCarData: jest.fn(),
+	})
+);
+jest.mock(
+	"../utils/getters/used-car-images-getter.js",
+	() => ({
+		getUsedCarImages: jest.fn(),
+	})
+);
 
 /**
  * Test suite for the handler function in used-cars-overview.js.

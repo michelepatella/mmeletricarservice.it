@@ -10,7 +10,10 @@ import {
 	ALL_SERVICES,
 	SERVICES_BACKGROUND_IMAGE_LINK,
 } from "./const.js";
-import { SERVICES_SECTION_ID, CUSTOM_TEXT_TYPES } from "../../utils/const.js";
+import {
+	SERVICES_SECTION_ID,
+	CUSTOM_TEXT_TYPES,
+} from "../../utils/const.js";
 import { useInView } from "react-intersection-observer";
 import { useServiceTitleAnimation } from "./use-service-title-animation/use-service-title-animation.js";
 
@@ -18,31 +21,46 @@ import { useServiceTitleAnimation } from "./use-service-title-animation/use-serv
 jest.mock("react-intersection-observer", () => ({
 	useInView: jest.fn(),
 }));
-jest.mock("./use-service-title-animation/use-service-title-animation.js", () => ({
-	useServiceTitleAnimation: jest.fn(),
-}));
-jest.mock("../../components/SectionBackground/SectionBackground.js", () => ({
-	__esModule: true,
-	default: jest.fn(({ children, image }) => (
-		<div data-testid="section-background" data-image={image}>
-			{children}
-		</div>
-	)),
-}));
-jest.mock("../../components/SectionContainer/SectionContainer.js", () => ({
-	__esModule: true,
-	default: jest.fn(({ children, id }) => (
-		<div data-testid="section-container" id={id}>
-			{children}
-		</div>
-	)),
-}));
-jest.mock("../../components/CustomText/CustomText.js", () => ({
-	__esModule: true,
-	default: jest.fn(({ type, text }) => (
-		<div data-testid={"custom-text-" + type}>{text}</div>
-	)),
-}));
+jest.mock(
+	"./use-service-title-animation/use-service-title-animation.js",
+	() => ({
+		useServiceTitleAnimation: jest.fn(),
+	})
+);
+jest.mock(
+	"../../components/SectionBackground/SectionBackground.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ children, image }) => (
+			<div
+				data-testid="section-background"
+				data-image={image}
+			>
+				{children}
+			</div>
+		)),
+	})
+);
+jest.mock(
+	"../../components/SectionContainer/SectionContainer.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ children, id }) => (
+			<div data-testid="section-container" id={id}>
+				{children}
+			</div>
+		)),
+	})
+);
+jest.mock(
+	"../../components/CustomText/CustomText.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ type, text }) => (
+			<div data-testid={"custom-text-" + type}>{text}</div>
+		)),
+	})
+);
 jest.mock("../../components/InfoCard/InfoCard.js", () => ({
 	__esModule: true,
 	default: jest.fn(({ title, description }) => (
@@ -60,7 +78,6 @@ jest.mock("../../components/InfoCard/InfoCard.js", () => ({
  * 3. A test to verify that hooks are called correctly.
  */
 describe("Services", () => {
-
 	// Define behavior before each test
 	beforeEach(() => {
 		jest.clearAllMocks();
@@ -79,16 +96,24 @@ describe("Services", () => {
 		render(<Services />);
 
 		// Check background
-		const background = screen.getByTestId("section-background");
-		expect(background.dataset.image).toBe(SERVICES_BACKGROUND_IMAGE_LINK);
+		const background = screen.getByTestId(
+			"section-background"
+		);
+		expect(background.dataset.image).toBe(
+			SERVICES_BACKGROUND_IMAGE_LINK
+		);
 
 		// Check container
-		const container = screen.getByTestId("section-container");
+		const container = screen.getByTestId(
+			"section-container"
+		);
 		expect(container.id).toBe(SERVICES_SECTION_ID);
 
 		// Check title
 		expect(
-			screen.getByTestId("custom-text-" + CUSTOM_TEXT_TYPES.SUPER_HEADING)
+			screen.getByTestId(
+				"custom-text-" + CUSTOM_TEXT_TYPES.SUPER_HEADING
+			)
 		).toBeInTheDocument();
 	});
 

@@ -28,7 +28,7 @@ export const fetchData = async (endpoint) => {
 		}
 
 		// Return response in JSON format
-		return await res.json();;
+		return await res.json();
 	} catch (error) {
 		// Log errors with Sentry
 		SentryReact.logger.error(error, {

@@ -4,7 +4,7 @@ import { USED_CAR_DRAWER_URL } from "../../const.js";
 import { onUsedCarDrawerOpen } from "../../handler/handler.js";
 
 /**
- * Custom hook to check whether the URL corresponds to a 
+ * Custom hook to check whether the URL corresponds to a
  * used car's drawer that must be open.
  * @param setIsDrawerOpen — State setter to keep track
  * whether the used car drawer is open or not.
@@ -18,8 +18,7 @@ export const useOpenUsedCarDrawerFromUrl = (
 		try {
 			// Requested rejected in case of
 			// undefined or null ID
-			if (!id) 
-				return;
+			if (!id) return;
 
 			// Get the path of the URL
 			/* eslint-disable-next-line no-undef */
@@ -35,7 +34,7 @@ export const useOpenUsedCarDrawerFromUrl = (
 			if (carIdMatch) {
 				const carId = carIdMatch[1];
 
-				// Check whether the current used car's ID 
+				// Check whether the current used car's ID
 				// equals the ID requested, opening its drawer
 				// consequently
 				if (id === carId)

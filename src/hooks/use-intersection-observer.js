@@ -20,8 +20,7 @@ const useIntersectionObserver = (ref, threshold) => {
 		// Get the reference of the element
 		// to be observed
 		const node = ref?.current;
-		if (!node) 
-			return;
+		if (!node) return;
 
 		// Options for the IntersectionObserver
 		const options = {
@@ -34,12 +33,12 @@ const useIntersectionObserver = (ref, threshold) => {
 			(entries, observer) => {
 				for (const entry of entries ?? []) {
 					if (entry?.isIntersecting) {
-						// If the element is in view, 
+						// If the element is in view,
 						// update state and add CSS class
 						setIsVisible(true);
 						entry?.target?.classList?.add("in-view");
 
-						// Stop observing the element as soon as 
+						// Stop observing the element as soon as
 						// it becomes visible
 						observer?.unobserve(entry?.target);
 					} else {
@@ -51,16 +50,14 @@ const useIntersectionObserver = (ref, threshold) => {
 			options
 		);
 
-		// Start observing the element 
+		// Start observing the element
 		// if the ref is valid
-		if (ref && node) 
-			observer?.observe(node);
+		if (ref && node) observer?.observe(node);
 
 		// Cleanup function to stop observing
 		// the element when becoming unmounted
 		return () => {
-			if (ref && node) 
-				observer?.unobserve(node);
+			if (ref && node) observer?.unobserve(node);
 		};
 	}, [ref, threshold]);
 

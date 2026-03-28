@@ -7,28 +7,35 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import UsedCars from "./UsedCars";
 import { useUsedCarsOverview } from "./use-used-cars-overview/use-used-cars-overview.js";
-import {
-	USED_CARS_UNAVAILABLE_DESCRIPTION,
-} from "./const.js";
+import { USED_CARS_UNAVAILABLE_DESCRIPTION } from "./const.js";
 
 // Mocs
-jest.mock("./use-used-cars-overview/use-used-cars-overview.js", () => ({
-	useUsedCarsOverview: jest.fn(),
-}));
-jest.mock("../../components/SectionContainer/SectionContainer.js", () => ({
-	__esModule: true,
-	default: ({ children, id }) => (
-		<div data-testid="section-container" id={id}>
-			{children}
-		</div>
-	),
-}));
-jest.mock("../../components/SectionBackground/SectionBackground.js", () => ({
-	__esModule: true,
-	default: ({ children }) => (
-		<div data-testid="section-background">{children}</div>
-	),
-}));
+jest.mock(
+	"./use-used-cars-overview/use-used-cars-overview.js",
+	() => ({
+		useUsedCarsOverview: jest.fn(),
+	})
+);
+jest.mock(
+	"../../components/SectionContainer/SectionContainer.js",
+	() => ({
+		__esModule: true,
+		default: ({ children, id }) => (
+			<div data-testid="section-container" id={id}>
+				{children}
+			</div>
+		),
+	})
+);
+jest.mock(
+	"../../components/SectionBackground/SectionBackground.js",
+	() => ({
+		__esModule: true,
+		default: ({ children }) => (
+			<div data-testid="section-background">{children}</div>
+		),
+	})
+);
 jest.mock(
 	"../../components/CustomText/CustomText.js",
 	() => ({
@@ -63,7 +70,6 @@ jest.mock("./UsedCarCard/UsedCarCard.js", () => ({
  * 4. A test verifying the empty state rendering when no data exists
  */
 describe("UsedCars", () => {
-
 	// Define behavior before each test
 	beforeEach(() => {
 		jest.clearAllMocks();
@@ -74,7 +80,6 @@ describe("UsedCars", () => {
 	 * Should render loading outline when data is loading.
 	 */
 	it("should show loading outline when data is loading", () => {
-
 		useUsedCarsOverview.mockReturnValue({
 			usedCarsOverview: [],
 			isLoading: true,
@@ -82,7 +87,9 @@ describe("UsedCars", () => {
 
 		render(<UsedCars />);
 
-		expect(screen.getByTestId("loading")).toBeInTheDocument();
+		expect(
+			screen.getByTestId("loading")
+		).toBeInTheDocument();
 	});
 
 	/**
@@ -90,7 +97,6 @@ describe("UsedCars", () => {
 	 * Should hide loading outline when data loading is finished.
 	 */
 	it("should hide loading outline when data loading is finished", () => {
-
 		useUsedCarsOverview.mockReturnValue({
 			usedCarsOverview: [],
 			isLoading: false,
@@ -98,7 +104,9 @@ describe("UsedCars", () => {
 
 		render(<UsedCars />);
 
-		expect(screen.queryByTestId("loading")).not.toBeInTheDocument();
+		expect(
+			screen.queryByTestId("loading")
+		).not.toBeInTheDocument();
 	});
 
 	/**
@@ -107,18 +115,16 @@ describe("UsedCars", () => {
 	 * Should not render empty state.
 	 */
 	it("should render used car cards when data exists", () => {
-
 		useUsedCarsOverview.mockReturnValue({
-			usedCarsOverview: [
-				{ id: 1 },
-				{ id: 2 },
-			],
+			usedCarsOverview: [{ id: 1 }, { id: 2 }],
 			isLoading: false,
 		});
 
 		render(<UsedCars />);
 
-		expect(screen.getAllByTestId("used-car-card")).toHaveLength(2);
+		expect(
+			screen.getAllByTestId("used-car-card")
+		).toHaveLength(2);
 
 		expect(
 			screen.queryByText(USED_CARS_UNAVAILABLE_DESCRIPTION)
@@ -130,7 +136,6 @@ describe("UsedCars", () => {
 	 * Should render empty state when no cars exist.
 	 */
 	it("should render empty state when no cars exist", () => {
-
 		useUsedCarsOverview.mockReturnValue({
 			usedCarsOverview: [],
 			isLoading: false,
@@ -142,6 +147,8 @@ describe("UsedCars", () => {
 			screen.getByText(USED_CARS_UNAVAILABLE_DESCRIPTION)
 		).toBeInTheDocument();
 
-		expect(screen.queryByTestId("used-car-card")).not.toBeInTheDocument();
+		expect(
+			screen.queryByTestId("used-car-card")
+		).not.toBeInTheDocument();
 	});
 });

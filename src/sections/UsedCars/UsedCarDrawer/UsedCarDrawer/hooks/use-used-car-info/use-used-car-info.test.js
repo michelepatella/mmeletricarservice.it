@@ -13,9 +13,12 @@ import { SentryReact } from "../../../../../../index.js";
 jest.mock("@tanstack/react-query", () => ({
 	useQuery: jest.fn(),
 }));
-jest.mock("../../../../../../utils/data-fetcher/data-fetcher.js", () => ({
-	fetchData: jest.fn(),
-}));
+jest.mock(
+	"../../../../../../utils/data-fetcher/data-fetcher.js",
+	() => ({
+		fetchData: jest.fn(),
+	})
+);
 jest.mock("../../../../../../index.js", () => ({
 	SentryReact: {
 		logger: {
@@ -33,8 +36,7 @@ jest.mock("../../../../../../index.js", () => ({
  * 4. A test verifying error logging to Sentry.
  */
 describe("useUsedCarInfo", () => {
-
-    // Define behavior before each test
+	// Define behavior before each test
 	beforeEach(() => {
 		jest.clearAllMocks();
 	});
@@ -63,7 +65,7 @@ describe("useUsedCarInfo", () => {
 		});
 	});
 
-    /**
+	/**
 	 * CASE 2: EMPTY FALLBACK
 	 * Should return null when data is undefined.
 	 */
@@ -81,7 +83,7 @@ describe("useUsedCarInfo", () => {
 		expect(result.current.usedCarInfo).toBeNull();
 	});
 
-    /**
+	/**
 	 * CASE 3: LOADING STATE
 	 * Should expose isLoading correctly.
 	 */
@@ -99,7 +101,7 @@ describe("useUsedCarInfo", () => {
 		expect(result.current.isLoading).toBe(true);
 	});
 
-    /**
+	/**
 	 * CASE 4: ERROR LOGGING
 	 * Should log error to Sentry when query fails.
 	 */
@@ -110,12 +112,12 @@ describe("useUsedCarInfo", () => {
 			isError: true,
 		});
 
-		renderHook(() =>
-			useUsedCarInfo({ usedCarId: "12" })
-		);
+		renderHook(() => useUsedCarInfo({ usedCarId: "12" }));
 
 		expect(SentryReact.logger.error).toHaveBeenCalledWith(
-			"Error while fetching " + USED_CAR_INFO_API_KEY + " data",
+			"Error while fetching " +
+				USED_CAR_INFO_API_KEY +
+				" data",
 			{
 				carId: "12",
 				endpoint: USED_CAR_INFO_ENDPOINT,

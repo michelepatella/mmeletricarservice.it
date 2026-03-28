@@ -16,14 +16,11 @@ import { fetchData } from "../../../utils/data-fetcher/data-fetcher.js";
 export const useUsedCarsOverview = () => {
 	// useQuery to fetch all the used
 	// car's overview information
-	const { data, isLoading, isError } = useQuery(
-		{
-			queryKey: [USED_CARS_OVERVIEW_API_KEY],
-			queryFn: () =>
-				fetchData(USED_CARS_OVERVIEW_ENDPOINT),
-			staleTime: DATA_STALE_TIME,
-		}
-	);
+	const { data, isLoading, isError } = useQuery({
+		queryKey: [USED_CARS_OVERVIEW_API_KEY],
+		queryFn: () => fetchData(USED_CARS_OVERVIEW_ENDPOINT),
+		staleTime: DATA_STALE_TIME,
+	});
 
 	// Check for errors during data fetching
 	if (isError)

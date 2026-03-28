@@ -11,7 +11,7 @@ import {
 import { HOME_SECTION_ID } from "../../../utils/const.js";
 
 /**
- * This component represents the content of the 'Home' section which 
+ * This component represents the content of the 'Home' section which
  * contains the logo of the company, title and subtitle.
  * @returns {Element} — The content of the 'Home' section.
  */

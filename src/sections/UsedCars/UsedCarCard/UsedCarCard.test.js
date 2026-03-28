@@ -3,8 +3,12 @@
  */
 
 import React from "react";
-import "@testing-library/jest-dom"
-import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import {
+	render,
+	screen,
+	fireEvent,
+} from "@testing-library/react";
 import UsedCarCard from "./UsedCarCard";
 import * as handler from "../handler/handler.js";
 import { USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION } from "./const.js";
@@ -12,17 +16,28 @@ import { onUsedCarDrawerOpen } from "../handler/handler.js";
 
 // Mocks
 jest.mock("src/index.js", () => ({}), { virtual: true });
-jest.mock("@vercel/analytics/react", () => ({}), { virtual: true });
-jest.mock("react-router-dom", () => ({}), { virtual: true });
-jest.mock("./use-open-used-car-drawer-from-url/use-open-used-car-drawer-from-url.js", () => ({
-	useOpenUsedCarDrawerFromUrl: jest.fn(),
-}));
-jest.mock("../UsedCarDrawer/UsedCarDrawer/UsedCarDrawer.js", () => ({
-	__esModule: true,
-	default: () => <div data-testid="used-car-drawer" />,
-}));
+jest.mock("@vercel/analytics/react", () => ({}), {
+	virtual: true,
+});
+jest.mock("react-router-dom", () => ({}), {
+	virtual: true,
+});
+jest.mock(
+	"./use-open-used-car-drawer-from-url/use-open-used-car-drawer-from-url.js",
+	() => ({
+		useOpenUsedCarDrawerFromUrl: jest.fn(),
+	})
+);
+jest.mock(
+	"../UsedCarDrawer/UsedCarDrawer/UsedCarDrawer.js",
+	() => ({
+		__esModule: true,
+		default: () => <div data-testid="used-car-drawer" />,
+	})
+);
 jest.mock("./const.js", () => ({
-    USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION: "unavaiable-image-description",
+	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION:
+		"unavaiable-image-description",
 }));
 
 // Spy
@@ -37,14 +52,13 @@ jest.spyOn(handler, "onUsedCarDrawerOpen");
  * 4. A test to verify fallback image text is shown when image is missing.
  */
 describe("UsedCarCard", () => {
-
 	const mockCar = {
 		id: 12,
 		name: "Car Name",
 		image: "test-image.jpg",
 	};
 
-    // Define behavior after each test
+	// Define behavior after each test
 	afterEach(() => {
 		jest.clearAllMocks();
 	});
@@ -56,7 +70,9 @@ describe("UsedCarCard", () => {
 	it("should render used car card correctly", () => {
 		render(<UsedCarCard usedCarOverview={mockCar} />);
 
-		expect(screen.getByText("Car Name")).toBeInTheDocument();
+		expect(
+			screen.getByText("Car Name")
+		).toBeInTheDocument();
 	});
 
 	/**
@@ -83,7 +99,9 @@ describe("UsedCarCard", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		expect(screen.getByTestId("used-car-drawer")).toBeInTheDocument();
+		expect(
+			screen.getByTestId("used-car-drawer")
+		).toBeInTheDocument();
 	});
 
 	/**
@@ -91,14 +109,19 @@ describe("UsedCarCard", () => {
 	 * Should render fallback text when image is missing.
 	 */
 	it("should render fallback when image is missing", () => {
-
 		const carWithoutImage = {
 			id: 13,
 			name: "Car Name",
 		};
 
-		render(<UsedCarCard usedCarOverview={carWithoutImage} />);
+		render(
+			<UsedCarCard usedCarOverview={carWithoutImage} />
+		);
 
-		expect(screen.getByText(USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION)).toBeInTheDocument();
+		expect(
+			screen.getByText(
+				USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION
+			)
+		).toBeInTheDocument();
 	});
 });

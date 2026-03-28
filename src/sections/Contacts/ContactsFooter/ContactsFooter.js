@@ -14,8 +14,8 @@ import {
 import Link from "../../../components/Link/Link.js";
 
 /**
- * This component represents the footer of the 'Contacts' section 
- * which contains all the company information, as well as links to privacy, 
+ * This component represents the footer of the 'Contacts' section
+ * which contains all the company information, as well as links to privacy,
  * cookie, and legal notes documents.
  * @returns {Element} — The footer of the 'Contacts' section.
  */

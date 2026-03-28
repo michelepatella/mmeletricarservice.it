@@ -35,11 +35,15 @@ jest.mock("antd", () => {
 });
 jest.mock("../ContactsContent/ContactsContent.js", () => ({
 	__esModule: true,
-	default: jest.fn(() => <div data-testid="contacts-content" />),
+	default: jest.fn(() => (
+		<div data-testid="contacts-content" />
+	)),
 }));
 jest.mock("../ContactsFooter/ContactsFooter.js", () => ({
 	__esModule: true,
-	default: jest.fn(() => <div data-testid="contacts-footer" />),
+	default: jest.fn(() => (
+		<div data-testid="contacts-footer" />
+	)),
 }));
 
 /**
@@ -49,7 +53,6 @@ jest.mock("../ContactsFooter/ContactsFooter.js", () => ({
  * 2. A test to verify that content and footer are rendered correctly.
  */
 describe("Contacts", () => {
-
 	// Define behavior before each test
 	beforeEach(() => {
 		jest.clearAllMocks();
@@ -64,7 +67,9 @@ describe("Contacts", () => {
 
 		const layout = screen.getByTestId("layout");
 
-		expect(layout.className).toBe(CONTACTS_LAYOUT_CLASS_NAME);
+		expect(layout.className).toBe(
+			CONTACTS_LAYOUT_CLASS_NAME
+		);
 		expect(layout.id).toBe(CONTACTS_SECTION_ID);
 	});
 
@@ -78,12 +83,20 @@ describe("Contacts", () => {
 
 		// Check content
 		const content = screen.getByTestId("layout-content");
-		expect(content.className).toBe(CONTACTS_CONTENT_CLASS_NAME);
-		expect(screen.getByTestId("contacts-content")).toBeInTheDocument();
+		expect(content.className).toBe(
+			CONTACTS_CONTENT_CLASS_NAME
+		);
+		expect(
+			screen.getByTestId("contacts-content")
+		).toBeInTheDocument();
 
 		// Check footer
 		const footer = screen.getByTestId("layout-footer");
-		expect(footer.className).toBe(CONTACTS_FOOTER_CLASS_NAME);
-		expect(screen.getByTestId("contacts-footer")).toBeInTheDocument();
+		expect(footer.className).toBe(
+			CONTACTS_FOOTER_CLASS_NAME
+		);
+		expect(
+			screen.getByTestId("contacts-footer")
+		).toBeInTheDocument();
 	});
 });

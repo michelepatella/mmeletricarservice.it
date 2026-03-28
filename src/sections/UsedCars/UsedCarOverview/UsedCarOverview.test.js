@@ -22,17 +22,25 @@ jest.mock("./const.js", () => ({
 			icon: "mileage-icon.png",
 		},
 	],
-	USED_CAR_OVERVIEW_CONTAINER_CLASS_NAME: "overview-container",
+	USED_CAR_OVERVIEW_CONTAINER_CLASS_NAME:
+		"overview-container",
 	USED_CAR_OVERVIEW_CONTAINER_GAP: 8,
 	USED_CAR_OVERVIEW_ICON_ALT: "used-car-icon",
 }));
 jest.mock("./style-handler.js", () => ({
-	getUsedCarOverviewTextStyle: jest.fn(() => ({ color: "black" })),
+	getUsedCarOverviewTextStyle: jest.fn(() => ({
+		color: "black",
+	})),
 }));
-jest.mock("../../../components/CustomText/CustomText.js", () => ({
-	__esModule: true,
-	default: ({ text }) => <div data-testid="custom-text">{text}</div>,
-}));
+jest.mock(
+	"../../../components/CustomText/CustomText.js",
+	() => ({
+		__esModule: true,
+		default: ({ text }) => (
+			<div data-testid="custom-text">{text}</div>
+		),
+	})
+);
 
 /**
  * Test suite for UsedCarOverview component.
@@ -43,7 +51,6 @@ jest.mock("../../../components/CustomText/CustomText.js", () => ({
  * 4. A test to verify fallback "-" when data is missing.
  */
 describe("UsedCarOverview", () => {
-
 	const mockOverview = {
 		year: 2020,
 		mileage: 50000,
@@ -59,7 +66,6 @@ describe("UsedCarOverview", () => {
 	 * Should render all overview items with their titles.
 	 */
 	it("should render all overview items with titles", () => {
-
 		render(
 			<UsedCarOverview
 				usedCarOverview={mockOverview}
@@ -76,7 +82,6 @@ describe("UsedCarOverview", () => {
 	 * Should render used car values when showTitle is false.
 	 */
 	it("should render values when showTitle is false", () => {
-
 		render(
 			<UsedCarOverview
 				usedCarOverview={mockOverview}
@@ -93,7 +98,6 @@ describe("UsedCarOverview", () => {
 	 * Should render "-" when value is missing.
 	 */
 	it("should render fallback when value is missing", () => {
-
 		render(
 			<UsedCarOverview
 				usedCarOverview={{}}
@@ -110,7 +114,6 @@ describe("UsedCarOverview", () => {
 	 * Should call style handler for each item.
 	 */
 	it("should call style handler for each item", () => {
-
 		render(
 			<UsedCarOverview
 				usedCarOverview={mockOverview}

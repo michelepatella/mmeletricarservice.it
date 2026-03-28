@@ -26,7 +26,7 @@ import BlockQuote from "../../components/BlockQuote/BlockQuote.js";
 
 /**
  * This component represents the 'Where we are' section which
- * contains information about the company's location, as well 
+ * contains information about the company's location, as well
  * as working hours.
  * @param props — Object containing:
  *   - cookiesAccepted: boolean | null — Indicates if the user

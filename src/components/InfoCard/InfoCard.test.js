@@ -7,9 +7,14 @@
 // Mocks
 jest.mock("../CustomText/CustomText.js", () => ({
 	__esModule: true,
-	default: ({ text, type }) => <span data-type={type}>{text}</span>,
+	default: ({ text, type }) => (
+		<span data-type={type}>{text}</span>
+	),
 }));
-jest.mock('../../utils/contact-handlers/contact-handlers.js', () => ({}));
+jest.mock(
+	"../../utils/contact-handlers/contact-handlers.js",
+	() => ({})
+);
 
 import React from "react";
 import { render, screen } from "@testing-library/react";
@@ -25,8 +30,12 @@ import { CUSTOM_TEXT_TYPES } from "../../utils/const.js";
 import * as styleHandler from "./style-handler.js";
 
 // Spy
-jest.spyOn(styleHandler, "getInfoCardTitleStyle").mockReturnValue({});
-jest.spyOn(styleHandler, "getInfoCardDescriptionStyle").mockReturnValue({});
+jest
+	.spyOn(styleHandler, "getInfoCardTitleStyle")
+	.mockReturnValue({});
+jest
+	.spyOn(styleHandler, "getInfoCardDescriptionStyle")
+	.mockReturnValue({});
 
 /**
  * Test suite for the InfoCard component.
@@ -36,7 +45,6 @@ jest.spyOn(styleHandler, "getInfoCardDescriptionStyle").mockReturnValue({});
  * 3. A test to verify that the title and description are rendered with correct props.
  */
 describe("InfoCard", () => {
-
 	// Define behavior before all tests
 	beforeAll(() => {
 		const rootDiv = document.createElement("div");
@@ -50,13 +58,20 @@ describe("InfoCard", () => {
 	 */
 	it("renders card containers correctly", () => {
 		render(
-			<InfoCard title="Test title" description="Test description" />
+			<InfoCard
+				title="Test title"
+				description="Test description"
+			/>
 		);
 
 		// eslint-disable-next-line testing-library/no-node-access
-		const card = document.querySelector("." + INFO_CARD_CLASS_NAME);
+		const card = document.querySelector(
+			"." + INFO_CARD_CLASS_NAME
+		);
 		// eslint-disable-next-line testing-library/no-node-access
-		const flex = document.querySelector("." + INFO_CARD_FLEX_CLASS_NAME);
+		const flex = document.querySelector(
+			"." + INFO_CARD_FLEX_CLASS_NAME
+		);
 
 		expect(card).toBeInTheDocument();
 		expect(flex).toBeInTheDocument();
@@ -76,7 +91,9 @@ describe("InfoCard", () => {
 		);
 
 		// eslint-disable-next-line testing-library/no-node-access
-		const icon = document.querySelector("." + INFO_CARD_ICON_CLASS_NAME);
+		const icon = document.querySelector(
+			"." + INFO_CARD_ICON_CLASS_NAME
+		);
 
 		expect(icon).toBeInTheDocument();
 		expect(icon).toHaveAttribute("src", "test-icon.png");
@@ -97,12 +114,18 @@ describe("InfoCard", () => {
 		);
 
 		const title = screen.getByText("Test title");
-		const description = screen.getByText("Test description");
+		const description = screen.getByText(
+			"Test description"
+		);
 
 		expect(title).toBeInTheDocument();
-		expect(title.dataset.type).toBe(CUSTOM_TEXT_TYPES.SUBHEADING);
+		expect(title.dataset.type).toBe(
+			CUSTOM_TEXT_TYPES.SUBHEADING
+		);
 
 		expect(description).toBeInTheDocument();
-		expect(description.dataset.type).toBe(CUSTOM_TEXT_TYPES.BODY);
+		expect(description.dataset.type).toBe(
+			CUSTOM_TEXT_TYPES.BODY
+		);
 	});
 });

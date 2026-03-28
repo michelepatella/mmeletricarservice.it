@@ -18,7 +18,7 @@ import {
 import CustomText from "../../../../components/CustomText/CustomText.js";
 
 /**
- * This component represents a collapse which collects information 
+ * This component represents a collapse which collects information
  * belonging to the same group.
  * @param props — Object containing:
  *   - usedCarInfo— The used car data.

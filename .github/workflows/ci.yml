@@ -1,4 +1,4 @@
-# Continuous Integration (CI): Automate linting, formatting, testing, 
+# Continuous Integration (CI): Automate linting, formatting, testing,
 # security scans, build, and static analysis, ensuring
 # code quality and security
 name: Continuous Integration (CI)
@@ -29,7 +29,6 @@ on:
 # - Static Analysis (needs 'Build'):
 #     Run SonarQube analysis to check code quality.
 jobs:
-
   # ----------------------------------------------------------------------
   # Setup
   # ----------------------------------------------------------------------

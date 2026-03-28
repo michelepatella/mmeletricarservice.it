@@ -53,7 +53,6 @@ function TestHookComponent({ callback }) {
  * 4. Children menu item onClick behavior.
  */
 describe("useMenu", () => {
-
 	/**
 	 * CASE 1: INITIAL STATE
 	 * The hook should initialize with:
@@ -65,7 +64,9 @@ describe("useMenu", () => {
 		let hookValues = null;
 
 		render(
-			<TestHookComponent callback={(hook) => (hookValues = hook)} />
+			<TestHookComponent
+				callback={(hook) => (hookValues = hook)}
+			/>
 		);
 
 		// Check visibility and section
@@ -81,11 +82,17 @@ describe("useMenu", () => {
 		// eslint-disable-next-line testing-library/no-node-access
 		expect(hookValues.menuItems[0].children.length).toBe(2);
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(hookValues.menuItems[0].children[0].key).toBe("1-1");
+		expect(hookValues.menuItems[0].children[0].key).toBe(
+			"1-1"
+		);
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(hookValues.menuItems[0].children[0].href).toBe("#child-1");
+		expect(hookValues.menuItems[0].children[0].href).toBe(
+			"#child-1"
+		);
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(hookValues.menuItems[0].children[0].title).toBe("Child 1");
+		expect(hookValues.menuItems[0].children[0].title).toBe(
+			"Child 1"
+		);
 	});
 
 	/**
@@ -98,26 +105,28 @@ describe("useMenu", () => {
 		let hookValues = null;
 
 		render(
-			<TestHookComponent callback={(hook) => (hookValues = hook)} />
+			<TestHookComponent
+				callback={(hook) => (hookValues = hook)}
+			/>
 		);
 
 		// Initially hidden
 		expect(hookValues.visible).toBe(false);
 
 		// Open drawer
-        act(() => {
-		    hookValues.toggleDrawer();
-        });
-        
+		act(() => {
+			hookValues.toggleDrawer();
+		});
+
 		expect(hookValues.visible).toBe(true);
 		expect(document.documentElement.style.overflowY).toBe(
 			"var(--overflow-hidden)"
 		);
 
 		// Close drawer
-        act(() => {
-		    hookValues.toggleDrawer();
-        });
+		act(() => {
+			hookValues.toggleDrawer();
+		});
 
 		expect(hookValues.visible).toBe(false);
 		expect(document.documentElement.style.overflowY).toBe(
@@ -136,7 +145,9 @@ describe("useMenu", () => {
 		let hookValues = null;
 
 		render(
-			<TestHookComponent callback={(hook) => (hookValues = hook)} />
+			<TestHookComponent
+				callback={(hook) => (hookValues = hook)}
+			/>
 		);
 
 		// Mock DOM element for scrollIntoView
@@ -146,11 +157,13 @@ describe("useMenu", () => {
 		document.body.appendChild(sectionElement);
 
 		// Click menu item
-        act(() => {
-		    hookValues.menuItems[1].onClick();
-        });
+		act(() => {
+			hookValues.menuItems[1].onClick();
+		});
 
-		expect(sectionElement.scrollIntoView).toHaveBeenCalled();
+		expect(
+			sectionElement.scrollIntoView
+		).toHaveBeenCalled();
 		expect(hookValues.visible).toBe(false);
 		expect(document.documentElement.style.overflowY).toBe(
 			"var(--overflow-auto)"
@@ -165,7 +178,9 @@ describe("useMenu", () => {
 		let hookValues = null;
 
 		render(
-			<TestHookComponent callback={(hook) => (hookValues = hook)} />
+			<TestHookComponent
+				callback={(hook) => (hookValues = hook)}
+			/>
 		);
 
 		// Mock DOM element for child scrollIntoView
@@ -175,11 +190,11 @@ describe("useMenu", () => {
 		document.body.appendChild(childElement);
 
 		// Click child menu item
-        act(() => {
-            // eslint-disable-next-line testing-library/no-node-access
-		    hookValues.menuItems[0].children[0].onClick();
-        });
-        
+		act(() => {
+			// eslint-disable-next-line testing-library/no-node-access
+			hookValues.menuItems[0].children[0].onClick();
+		});
+
 		expect(childElement.scrollIntoView).toHaveBeenCalled();
 		expect(hookValues.visible).toBe(false);
 		expect(document.documentElement.style.overflowY).toBe(

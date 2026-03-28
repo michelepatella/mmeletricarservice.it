@@ -24,10 +24,10 @@ import Link from "../../../components/Link/Link.js";
 jest.mock("../../../components/Link/Link.js", () => ({
 	__esModule: true,
 	default: jest.fn(({ href, text }) => (
-        <a data-testid={"link-" + text.trim()} href={href}>
-            {text}
-        </a>
-    )),
+		<a data-testid={"link-" + text.trim()} href={href}>
+			{text}
+		</a>
+	)),
 }));
 
 /**
@@ -37,7 +37,6 @@ jest.mock("../../../components/Link/Link.js", () => ({
  * 2. A test to verify correct rendering of all links.
  */
 describe("ContactsFooter", () => {
-
 	// Define behavior before each test
 	beforeEach(() => {
 		jest.clearAllMocks();
@@ -53,41 +52,50 @@ describe("ContactsFooter", () => {
 		const footer = screen.getByText(CONTACTS_FOOTER_TEXT);
 
 		expect(footer).toBeInTheDocument();
-		expect(footer.className).toBe(CONTACTS_FOOTER_TEXT_CLASS_NAME);
+		expect(footer.className).toBe(
+			CONTACTS_FOOTER_TEXT_CLASS_NAME
+		);
 	});
 
 	/**
-     * CASE 2: LINKS RENDERING
-     * Should render all links with correct href and text.
-     */
-    it("should render all links correctly", () => {
-        render(<ContactsFooter />);
+	 * CASE 2: LINKS RENDERING
+	 * Should render all links with correct href and text.
+	 */
+	it("should render all links correctly", () => {
+		render(<ContactsFooter />);
 
-        // Check links are in the document
-        expect(screen.getByTestId(
-            "link-" + (PRIVACY_POLICY_TEXT + " |"))
-        ).toBeInTheDocument();
-        expect(screen.getByTestId(
-            "link-" + (COOKIE_POLICY_TEXT + " |"))
-        ).toBeInTheDocument();
-        expect(screen.getByTestId(
-            "link-" + LEGAL_NOTES_TEXT)
-        ).toBeInTheDocument();
+		// Check links are in the document
+		expect(
+			screen.getByTestId(
+				"link-" + (PRIVACY_POLICY_TEXT + " |")
+			)
+		).toBeInTheDocument();
+		expect(
+			screen.getByTestId(
+				"link-" + (COOKIE_POLICY_TEXT + " |")
+			)
+		).toBeInTheDocument();
+		expect(
+			screen.getByTestId("link-" + LEGAL_NOTES_TEXT)
+		).toBeInTheDocument();
 
-        // Check mock calls
-        const calls = Link.mock.calls.map(args => args[0]);
-        expect(calls).toEqual(
-            expect.arrayContaining([
-                expect.objectContaining(
-                    { href: PRIVACY_POLICY_LINK, text: PRIVACY_POLICY_TEXT + " | " }
-                ),
-                expect.objectContaining(
-                    { href: COOKIE_POLICY_LINK, text: COOKIE_POLICY_TEXT + " | " }
-                ),
-                expect.objectContaining(
-                    { href: LEGAL_NOTES_LINK, text: LEGAL_NOTES_TEXT }
-                ),
-            ])
-        );
-    });
+		// Check mock calls
+		const calls = Link.mock.calls.map((args) => args[0]);
+		expect(calls).toEqual(
+			expect.arrayContaining([
+				expect.objectContaining({
+					href: PRIVACY_POLICY_LINK,
+					text: PRIVACY_POLICY_TEXT + " | ",
+				}),
+				expect.objectContaining({
+					href: COOKIE_POLICY_LINK,
+					text: COOKIE_POLICY_TEXT + " | ",
+				}),
+				expect.objectContaining({
+					href: LEGAL_NOTES_LINK,
+					text: LEGAL_NOTES_TEXT,
+				}),
+			])
+		);
+	});
 });

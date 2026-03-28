@@ -14,8 +14,7 @@ export default async function middleware(request) {
 	// Check whether the URL matches a used car URL
 	const regex = /^\/auto-usate\/(\d+)$/;
 	const match = regex.exec(url.pathname);
-	if (!match)
-		return;
+	if (!match) return;
 
 	// Retrieve the used car id from URL
 	const usedCarId = match[1];
@@ -34,14 +33,15 @@ export default async function middleware(request) {
 		);
 
 		// No used car found with the given id
-		if (!usedCar)
-			return;
+		if (!usedCar) return;
 
 		// Check whether the request came from a bot
 		const ua = request.headers.get("user-agent") || "";
-		const isBot = /(facebook|twitter|linkedin|pinterest|whatsapp|telegram|slack|googlebot|bingbot|yandexbot|duckduckbot|baiduspider|applebot|semrushbot|ahrefsbot|slurp)/i.test(ua);
-		if (!isBot)
-			return;
+		const isBot =
+			/(facebook|twitter|linkedin|pinterest|whatsapp|telegram|slack|googlebot|bingbot|yandexbot|duckduckbot|baiduspider|applebot|semrushbot|ahrefsbot|slurp)/i.test(
+				ua
+			);
+		if (!isBot) return;
 
 		// Create custom HTML with Open Graph meta tags
 		const html = `
