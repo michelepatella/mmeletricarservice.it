@@ -1,5 +1,5 @@
 /**
- * Method to get the style of the car name displayed
+ * Method to get the style of the used car name displayed
  * into the info panel of the used car drawer.
  * @returns {{marginTop: number}} — CSS style.
  */
