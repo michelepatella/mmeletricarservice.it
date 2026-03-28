@@ -6,18 +6,17 @@ import { USED_CARS_OVERVIEW_ENDPOINT } from "../../../utils/const.js";
 import { fetchData } from "../../../utils/data-fetcher/data-fetcher.js";
 
 /**
- * Custom hook to fetch the overview list of used cars, by
- * leveraging useQuery to fetch data and extracting data
- * to pass to the component that has sent the request.
+ * Custom hook to retrieve the used car's overview data,
+ * leveraging useQuery for fetching it.
  * @returns {{
  *   usedCarsOverview: Array, // Used cars overview data retrieved
  *   isLoading: boolean, // True if data is loading, false otherwise
  * }}
  */
 export const useUsedCarsOverview = () => {
-	// useQuery to fetch all used
-	// car overview information
-	const { data, isLoading, isError, isFetching } = useQuery(
+	// useQuery to fetch all the used
+	// car's overview information
+	const { data, isLoading, isError } = useQuery(
 		{
 			queryKey: [USED_CARS_OVERVIEW_API_KEY],
 			queryFn: () =>
@@ -26,17 +25,7 @@ export const useUsedCarsOverview = () => {
 		}
 	);
 
-	// Keep track of fetching status
-	if (isFetching && !isLoading) {
-		SentryReact.logger.info(
-			USED_CARS_OVERVIEW_API_KEY + " called",
-			{
-				endpoint: USED_CARS_OVERVIEW_ENDPOINT,
-			}
-		);
-	}
-
-	// Check if any error
+	// Check for errors during data fetching
 	if (isError)
 		SentryReact.logger.error(
 			"Error while fetching " +
@@ -46,25 +35,6 @@ export const useUsedCarsOverview = () => {
 				endpoint: USED_CARS_OVERVIEW_ENDPOINT,
 			}
 		);
-
-	// Check whether the data retrieved is empty
-	if (data?.used_cars_overview) {
-		SentryReact.logger.info(
-			USED_CARS_OVERVIEW_API_KEY +
-				" data fetching completed",
-			{
-				endpoint: USED_CARS_OVERVIEW_ENDPOINT,
-			}
-		);
-	} else {
-		SentryReact.logger.warn(
-			USED_CARS_OVERVIEW_API_KEY +
-				" data fetching completed but empty",
-			{
-				endpoint: USED_CARS_OVERVIEW_ENDPOINT,
-			}
-		);
-	}
 
 	return {
 		usedCarsOverview: data?.used_cars_overview || [],
