@@ -1,5 +1,5 @@
 /**
- * Method to get the style of the used car overview text.
+ * Method to get the style of the 'UsedCarOverview' text.
  * @returns {{
  * marginTop: number
  * marginBottom: number,

@@ -11,30 +11,24 @@ import { getUsedCarOverviewTextStyle } from "./style-handler.js";
 import CustomText from "../../../components/CustomText/CustomText.js";
 
 /**
- * This component includes all used car overview information:
- * year, mileage, fuel, and status. Each information is presented
- * through an icon (for summarizing what does represent each information) and
- * the corresponding textual value. The title of what each information represents
- * can be also shown, is explicitly specified.
+ * This component is responsible for displaying the overview info of a used car:
+ * year, mileage, fuel, and status.
  * @param props — Object containing:
- *   - usedCarOverview: Record<string, string | number | null> — Overview
- *     info of the used car (year, mileage, fuel, status, etc.).
- *   - showTitle: boolean — Whether to show the title of each
- *     overview information above the text.
+ *   - usedCarOverview — Overview info of the used car.
+ *   - showTitle — Whether to show the title of each overview info above the text.
  * @returns {React.JSX.Element} — The used car overview component.
  */
 function UsedCarOverview(props) {
 	return (
 		<>
 			{ALL_USED_CAR_OVERVIEW_INFO?.map((info, index) => (
-				// Add each used car overview information
 				<div
 					key={info.name + "-" + index}
 					className={USED_CAR_OVERVIEW_CONTAINER_CLASS_NAME}
 				>
-					{/* Global Flex container (vertical) */}
+					{/* Vertical flex container */}
 					<Flex vertical>
-						{/* Flex container (horizontal) */}
+						{/* Horizontal flex container */}
 						<Flex gap={USED_CAR_OVERVIEW_CONTAINER_GAP}>
 							{/* Icon */}
 							<img
@@ -42,7 +36,7 @@ function UsedCarOverview(props) {
 								alt={USED_CAR_OVERVIEW_ICON_ALT}
 							/>
 
-							{/* Info title, if it needs to be shown, otherwise show the text only*/}
+							{/* Title (if it is to be shown) */}
 							<CustomText
 								type={CUSTOM_TEXT_TYPES.BODY}
 								text={
@@ -58,7 +52,7 @@ function UsedCarOverview(props) {
 							/>
 						</Flex>
 
-						{/* Text (in case the title is visible and the text is now below it) */}
+						{/* Text (if the title is visible) */}
 						{props.showTitle && (
 							<CustomText
 								type={CUSTOM_TEXT_TYPES.CAPTION}
