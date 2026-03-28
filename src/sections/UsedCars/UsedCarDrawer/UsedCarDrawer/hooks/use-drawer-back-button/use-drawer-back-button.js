@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { SentryReact } from "../../../../../index.js";
-import { onUsedCarDrawerClose } from "../../../handler/handler.js";
+import { SentryReact } from "../../../../../../index.js";
+import { onUsedCarDrawerClose } from "../../../../handler/handler.js";
 
 /**
- * Custom hook to manage clicking of back button
- * of the used car drawer.
+ * Custom hook to manage the back button clicking
+ * within the used car drawer.
  * @param setIsDrawerOpen — State setter to keep track
  * whether the used car drawer is open or not.
  */
@@ -12,29 +12,12 @@ export const useDrawerBackButtonHandler = (
 	setIsDrawerOpen
 ) => {
 	useEffect(() => {
-		/**
-		 * To close the used car drawer when the
-		 * back button is clicked
-		 */
-		const handleBackButton = () => {
-			try {
-				onUsedCarDrawerClose(setIsDrawerOpen);
-				SentryReact.logger.info(
-					"Used car drawer closed via back button"
-				);
-			} catch (error) {
-				SentryReact.logger.error(error, {
-					context: "Used car drawer back button",
-				});
-			}
-		};
-
 		try {
 			// Add a listener for popstate
 			/* eslint-disable-next-line no-undef */
 			globalThis.addEventListener(
 				"popstate",
-				handleBackButton
+				onUsedCarDrawerClose(setIsDrawerOpen)
 			);
 		} catch (error) {
 			SentryReact.logger.error(error, {
@@ -49,7 +32,7 @@ export const useDrawerBackButtonHandler = (
 				/* eslint-disable-next-line no-undef */
 				globalThis.removeEventListener(
 					"popstate",
-					handleBackButton
+					onUsedCarDrawerClose(setIsDrawerOpen)
 				);
 			} catch (error) {
 				SentryReact.logger.error(error, {

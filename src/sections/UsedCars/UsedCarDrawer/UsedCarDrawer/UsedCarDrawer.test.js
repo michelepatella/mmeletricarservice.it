@@ -65,7 +65,7 @@ jest.mock("../../../../components/LoadingOutlined/LoadingOutlined.js", () => {
 jest.mock("./hooks/use-used-car-info/use-used-car-info.js", () => ({
 	useUsedCarInfo: jest.fn(),
 }));
-jest.mock("./hooks/use-drawer-back-button.js", () => ({
+jest.mock("./hooks/use-drawer-back-button/use-drawer-back-button.js", () => ({
 	useDrawerBackButtonHandler: jest.fn(),
 }));
 jest.mock("../../handler/handler.js", () => ({
@@ -109,7 +109,7 @@ describe("UsedCarDrawer", () => {
 	 * Should render info panel and carousel when data loading is finished.
 	 */
 	it("should render info panel and carousel after data loading", () => {
-		require("./hooks/use-used-car-info/.js").useUsedCarInfo.mockReturnValue({
+		require("./hooks/use-used-car-info/use-used-car-info.js").useUsedCarInfo.mockReturnValue({
 			usedCarInfo: { images: [] },
 			isLoading: false,
 		});
