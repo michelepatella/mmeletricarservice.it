@@ -9,52 +9,15 @@ on:
     workflows: ["CI"]
     types: [completed]
 
-# The workflow is organized into three jobs:
-# - Setup:
-#     Checkout the repository, set up Node.js, and install dependencies.
-# - Build (needs 'Setup'):
-#     Build the project to generate production-ready artifacts.
-# - Deploy (needs 'Build'):
+# The workflow is organized into a single job:
+# - Deploy:
 #     Deploy the built project to Vercel.
 jobs:
   # ----------------------------------------------------------------------
-  # Setup
-  # ----------------------------------------------------------------------
-  setup:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    steps:
-      # Checkout the repository on the current branch
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      # Setup Node.js environment
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ vars.NODE_VERSION }}
-
-      # Install dependencies
-      - name: Install dependencies
-        run: npm install
-
-  # ----------------------------------------------------------------------
-  # Build (needs 'Setup')
-  # ----------------------------------------------------------------------
-  build:
-    runs-on: ubuntu-latest
-    needs: setup
-    steps:
-      # Build the project
-      - name: Build project
-        run: npm run build
-
-  # ----------------------------------------------------------------------
-  # Deploy (needs 'Build')
+  # Deploy
   # ----------------------------------------------------------------------
   deploy:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       # Deploy to Vercel using the Vercel CLI
       - name: Deploy to Vercel
