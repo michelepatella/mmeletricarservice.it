@@ -1,93 +1,98 @@
-import React from "react";
-import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import MenuBigScreen from "./MenuBigScreen.js";
-import { useMenu } from "../useMenu.js";
+/**
+ * @jest-environment jsdom
+ */
 
-// Definition of Menu items
-const menuItems = [
-	{
-		key: "section1",
-		href: "#section1",
-		title: "Section 1 Title",
-	},
-	{
-		key: "section2",
-		href: "#section2",
-		title: "Section 2 Title",
-	},
-];
+/* eslint-disable import/first */
 
-// Mock custom hook
-jest.mock("../useMenu", () => ({
+// Mocks
+jest.mock("antd", () => ({
+	Anchor: ({ items, getCurrentAnchor }) => (
+		<div>
+			<span data-testid="anchor-items">
+				{JSON.stringify(items)}
+			</span>
+			<span data-testid="current-anchor">
+				{getCurrentAnchor()}
+			</span>
+		</div>
+	),
+}));
+jest.mock("../use-menu/use-menu.js", () => ({
 	useMenu: jest.fn(),
 }));
 
-// Run tests
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import MenuBigScreen from "./MenuBigScreen.js";
+import { MENU_BIG_CONTAINER_CLASS_NAME } from "./const.js";
+import { useMenu } from "../use-menu/use-menu.js";
+
+/**
+ * Test suite for the MenuBigScreen component.
+ * This suite contains:
+ * 1. A test to verify that the container is rendered correctly.
+ * 2. A test to verify that menu items are passed to the Anchor component.
+ * 3. A test to verify that the current anchor is computed correctly.
+ */
 describe("MenuBigScreen", () => {
-	beforeEach(() => {
-		// Clear all mocks before
-		// running each test
-		jest.clearAllMocks();
-
-		// Mock useMenu (custom hook) before
-		// running each test
+	/**
+	 * CASE 1: RENDERS CONTAINER
+	 * This test checks that the main container is rendered
+	 * with the correct class name.
+	 */
+	it("renders container correctly", () => {
 		useMenu.mockReturnValue({
-			menuItems: menuItems,
-			menuItemControls: {},
-			section: menuItems[0].key, // The current section is assumed to be the first one by default
+			menuItems: [],
+			section: "home",
 		});
-	});
 
-	// Test if it renders motion.div correctly
-	test("renders motion.div correctly", () => {
 		render(<MenuBigScreen />);
 
-		expect(screen.getByRole("region")).toBeInTheDocument();
+		// eslint-disable-next-line testing-library/no-node-access
+		const container = document.querySelector(
+			"." + MENU_BIG_CONTAINER_CLASS_NAME
+		);
+
+		expect(container).toBeInTheDocument();
 	});
 
-	// Test if it renders the Menu with the items
-	// provided by the custom hook (useMenu)
-	test.each(menuItems)(
-		"renders the Menu with provided items",
-		(menuItem) => {
-			render(<MenuBigScreen />);
+	/**
+	 * CASE 2: PASSES MENU ITEMS TO ANCHOR
+	 * This test verifies that menu items are passed correctly
+	 * to the Anchor component.
+	 */
+	it("passes menu items correctly", () => {
+		const mockItems = [
+			{ key: "1", href: "#home", title: "Home" },
+		];
 
-			expect(
-				screen.getByText(menuItem.title)
-			).toBeInTheDocument();
-		}
-	);
+		useMenu.mockReturnValue({
+			menuItems: mockItems,
+			section: "home",
+		});
 
-	// Test if it sets the current section correctly
-	// by varying it across all the Menu sections
-	describe.each(menuItems)(
-		"Current section tests",
-		(menuItem) => {
-			test(
-				"sets the current section correctly when section=" +
-					menuItem.key,
-				() => {
-					// Override mock
-					useMenu.mockReturnValue({
-						menuItems,
-						menuItemControls: {},
-						section: menuItem.key,
-					});
+		render(<MenuBigScreen />);
 
-					render(<MenuBigScreen />);
+		expect(
+			screen.getByTestId("anchor-items")
+		).toHaveTextContent(JSON.stringify(mockItems));
+	});
 
-					// Get the anchor item
-					const anchor = screen.getByRole("link", {
-						name: menuItem.title,
-					});
+	/**
+	 * CASE 3: COMPUTES CURRENT ANCHOR
+	 * This test verifies that the current anchor is computed correctly.
+	 */
+	it("computes current anchor correctly", () => {
+		useMenu.mockReturnValue({
+			menuItems: [],
+			section: "about-us",
+		});
 
-					expect(anchor).toHaveAttribute(
-						"href",
-						menuItem.href
-					);
-				}
-			);
-		}
-	);
+		render(<MenuBigScreen />);
+
+		expect(
+			screen.getByTestId("current-anchor")
+		).toHaveTextContent("#about-us");
+	});
 });

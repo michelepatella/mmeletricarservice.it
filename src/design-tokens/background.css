@@ -1,13 +1,13 @@
 /* -------- Background -------- */
 :root {
-	/* — Repeat — */
+	/*  Repeat  */
 	--background-no-repeat: no-repeat;
 	--background-repeat: repeat;
 
-	/* — Position — */
+	/*  Position  */
 	--background-position-center: center;
 	--background-position-center-top: center top;
 
-	/* — Size — */
+	/*  Size  */
 	--background-size-auto: auto;
 }

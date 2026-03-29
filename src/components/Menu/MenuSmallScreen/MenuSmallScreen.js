@@ -12,27 +12,26 @@ import {
 	MENU_SMALL_CONTAINER_CLASS_NAME,
 	MENU_SMALL_DRAWER_PLACEMENT,
 } from "./const.js";
-import { useMenu } from "../useMenu.js";
+import { useMenu } from "../use-menu/use-menu.js";
 import {
 	getMenuParentItemStyle,
 	getMenuChildrenItemStyle,
 	getHamburgerButtonStyle,
-} from "./styleHandler.js";
+} from "./style-handler.js";
 
 /**
- * This component represents the Menu for small screens (e.g., smartphone).
- * It leverages a hamburger Menu shown whenever the hamburger button is clicked.
- * The Menu appears to the right
+ * This component represents the menu for small screens, implemented
+ * as a hamburger menu shown when the hamburger button is clicked.
  * @returns {React.JSX.Element} — The menu component for small screen.
  */
 function MenuSmallScreen() {
-	// Prepare hamburger Menu elements
+	// Prepare hamburger menu elements
 	const { menuItems, section, visible, toggleDrawer } =
 		useMenu();
 
 	return (
 		<div className={MENU_SMALL_CONTAINER_CLASS_NAME}>
-			{/* Hamburger button (to open the hamburger Menu) */}
+			{/* Hamburger button (to open the hamburger menu) */}
 			<Button
 				className={HAMBURGER_BUTTON_CLASS_NAME}
 				shape={HAMBURGER_BUTTON_SHAPE}
@@ -41,7 +40,7 @@ function MenuSmallScreen() {
 				style={getHamburgerButtonStyle(visible)}
 			/>
 
-			{/* Drawer for containing the Menu */}
+			{/* Drawer for containing the menu */}
 			<Drawer
 				placement={MENU_SMALL_DRAWER_PLACEMENT}
 				closable

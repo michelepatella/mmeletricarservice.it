@@ -1,6 +1,6 @@
 /**------------- Custom Button constants -------------**/
 
-/* — Types — */
+/*  Types  */
 export const CUSTOM_BUTTON_TYPES = {
 	GENERAL: "custom-button",
 	CTA: "cta-button",
@@ -8,5 +8,5 @@ export const CUSTOM_BUTTON_TYPES = {
 };
 export const CUSTOM_BUTTON_TYPE = "primary";
 
-/* — Icon — */
+/*  Icon  */
 export const CUSTOM_BUTTON_ICON_ALT = "button-icon";

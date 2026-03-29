@@ -7,13 +7,9 @@ import {
 
 /**
  * This component represents the carousel used for
- * showing all the used car images within its drawer.
- * If no used car image is available, the carousel is filled with
- * an image indicating the user that there is no image available
- * for that car.
+ * showing all the used car images.
  * @param props — Object containing:
- *   - usedCarInfo: { images: string[] } | null — The used
- *   car data including images to display in the carousel.
+ *   - usedCarInfo: — The used car data including images.
  * @returns {Element} — The used car drawer carousel component.
  */
 function UsedCarDrawerCarousel(props) {
@@ -23,7 +19,6 @@ function UsedCarDrawerCarousel(props) {
 				USED_CAR_DRAWER_CAROUSEL_CONTAINER_CLASS_NAME
 			}
 		>
-			{/* Carousel */}
 			<Carousel arrows swipeToSlide>
 				{/* Show all the images available */}
 				{props.usedCarInfo?.images?.length > 0 ? (
@@ -34,8 +29,7 @@ function UsedCarDrawerCarousel(props) {
 						</Image.PreviewGroup>
 					))
 				) : (
-					// In case of any image available, show an image
-					// indicating the user that no image is available for that car
+					// In case of no images available
 					<Image src={NO_USED_CAR_IMAGE_AVAILABLE_LINK} />
 				)}
 			</Carousel>

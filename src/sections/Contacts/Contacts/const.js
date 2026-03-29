@@ -1,6 +1,6 @@
 /**------------- Contacts constants -------------**/
 
-/* — General — */
+/*  General  */
 export const CONTACTS_LAYOUT_CLASS_NAME = "contacts-layout";
 export const CONTACTS_CONTENT_CLASS_NAME =
 	"contacts-content";

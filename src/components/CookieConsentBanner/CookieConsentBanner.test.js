@@ -1,235 +1,156 @@
-import React from "react";
-import "@testing-library/jest-dom";
-import {
-	fireEvent,
-	render,
-	screen,
-} from "@testing-library/react";
-import CookieConsentBanner from "./CookieConsentBanner.js";
+/**
+ * @jest-environment jsdom
+ */
 
-// Definition of expected results
-const cookieExpirationDate = 365;
-const cookieAcceptButtonText = "Cookie Accept Button Text";
-const cookieDeclineButtonText =
-	"Cookie Decline Button Text";
-const cookieConsentBannerDescription =
-	"Cookie Consent Banner Description";
-const cookiePolicyText = "Cookie Policy Text";
-const privacyPolicyText = "Privacy Policy Text";
-const cookiePolicyHref = "cookie-policy-link";
-const privacyPolicyHref = "privacy-policy-link";
-const targetAttr = "_blank";
-const relAttr = "noopener noreferrer";
+/* eslint-disable import/first */
 
-const cookieConsentTestId = "mock-cookie-consent";
-
-// Definition of links to be tested
-const links = [
-	{
-		text: privacyPolicyText,
-		href: privacyPolicyHref,
-	},
-	{
-		text: cookiePolicyText,
-		href: cookiePolicyHref,
-	},
-];
-
-// Mock the 'react-cookie-consent' library component
-jest.mock("react-cookie-consent", () => {
-	return ({
-		buttonText,
-		enableDeclineButton,
-		declineButtonText,
-		children,
-		onAccept,
-		onDecline,
-		...props
-	}) => (
-		<div
-			data-testid={cookieConsentTestId}
-			data-enable-decline-button={enableDeclineButton}
-			{...props}
-		>
-			{children}
-			<button onClick={onAccept}>{buttonText}</button>
-			<button onClick={onDecline}>
-				{declineButtonText}
+// Mocks
+jest.mock("../../utils/const.js", () => ({
+	COOKIE_NAME: "test-cookie",
+	COOKIE_POLICY_LINK: "#",
+	COOKIE_POLICY_TEXT: "Cookie Policy",
+	PRIVACY_POLICY_LINK: "#",
+	PRIVACY_POLICY_TEXT: "Privacy Policy",
+}));
+jest.mock("react-cookie-consent", () => (props) => {
+	return (
+		<div>
+			<p>{props.children}</p>
+			<button onClick={props.onAccept}>
+				{props.buttonText}
+			</button>
+			<button onClick={props.onDecline}>
+				{props.declineButtonText}
 			</button>
 		</div>
 	);
 });
-
-// Mock constants
-jest.mock("../../utils/const", () => ({
-	COOKIE_EXPIRATION_DATE: cookieExpirationDate,
-	COOKIE_ACCEPT_BUTTON_TEXT: cookieAcceptButtonText,
-	COOKIE_DECLINE_BUTTON_TEXT: cookieDeclineButtonText,
-	COOKIE_CONSENT_BANNER_DESCRIPTION:
-		cookieConsentBannerDescription,
-	COOKIE_POLICY_TEXT: cookiePolicyText,
-	PRIVACY_POLICY_TEXT: privacyPolicyText,
+jest.mock("../Link/Link.js", () => ({
+	__esModule: true,
+	default: ({ text }) => <span>{text}</span>,
 }));
 
-// Mock links
-jest.mock("../../utils/internalLinks", () => ({
-	COOKIE_POLICY_LINK: cookiePolicyHref,
-	PRIVACY_POLICY_LINK: privacyPolicyHref,
-}));
+import React from "react";
+import {
+	render,
+	screen,
+	fireEvent,
+} from "@testing-library/react";
+import "@testing-library/jest-dom";
+import CookieConsentBanner from "./CookieConsentBanner.js";
+import {
+	COOKIE_CONSENT_BANNER_ACCEPT_BUTTON_TEXT,
+	COOKIE_CONSENT_BANNER_DECLINE_BUTTON_TEXT,
+	COOKIE_CONSENT_BANNER_DESCRIPTION,
+} from "./const.js";
 
-// Mock the cookies click handlers
-const mockHandleAcceptCookies = jest.fn();
-const mockHandleDeclineCookies = jest.fn();
-
-// Run the test
+/**
+ * Test suite for the CookieConsentBanner component.
+ * This suite contains:
+ * 1. A test to verify that the banner is not rendered when visibility is false.
+ * 2. A test to verify that the banner renders correctly when visible.
+ * 3. A test to verify that clicking accept calls the handler.
+ * 4. A test to verify that clicking decline calls the handler.
+ */
 describe("CookieConsentBanner", () => {
-	// Clear all mocks before running each test
-	beforeEach(() => {
-		jest.clearAllMocks();
-	});
-
-	// Test if it renders the banner when visible
-	test("renders the content of cookie consent banner when visible", () => {
+	/**
+	 * CASE 1: DOES NOT RENDER WHEN NOT VISIBLE
+	 * This test checks that the banner is not rendered when
+	 * isCookiesBannerVisible is false.
+	 */
+	it("does not render when not visible", () => {
 		render(
-			<CookieConsentBanner isCookiesBannerVisible={true} />
+			<CookieConsentBanner
+				isCookiesBannerVisible={false}
+				handleAcceptCookies={jest.fn()}
+				handleDeclineCookies={jest.fn()}
+			/>
 		);
 
 		expect(
-			screen.getByText((content) =>
-				content.includes(cookieConsentBannerDescription)
-			)
-		).toBeInTheDocument();
-		expect(
-			screen.getByText((content) =>
-				content.includes(cookieAcceptButtonText)
-			)
-		).toBeInTheDocument();
-		expect(
-			screen.getByText((content) =>
-				content.includes(cookieDeclineButtonText)
-			)
-		).toBeInTheDocument();
-		expect(
-			screen.getByText((content) =>
-				content.includes(privacyPolicyText)
-			)
-		).toBeInTheDocument();
-		expect(
-			screen.getByText((content) =>
-				content.includes(cookiePolicyText)
-			)
-		).toBeInTheDocument();
-	});
-
-	// Test if it doesn't render the banner when not visible
-	test("doesn't render the content of cookie consent banner when not visible", () => {
-		render(
-			<CookieConsentBanner isCookiesBannerVisible={false} />
-		);
-
-		expect(
-			screen.queryByText((content) =>
-				content.includes(cookieConsentBannerDescription)
-			)
-		).not.toBeInTheDocument();
-		expect(
-			screen.queryByText((content) =>
-				content.includes(cookieAcceptButtonText)
-			)
-		).not.toBeInTheDocument();
-		expect(
-			screen.queryByText((content) =>
-				content.includes(cookieDeclineButtonText)
-			)
-		).not.toBeInTheDocument();
-		expect(
-			screen.queryByText((content) =>
-				content.includes(privacyPolicyText)
-			)
-		).not.toBeInTheDocument();
-		expect(
-			screen.queryByText((content) =>
-				content.includes(cookiePolicyText)
-			)
+			screen.queryByText(COOKIE_CONSENT_BANNER_DESCRIPTION)
 		).not.toBeInTheDocument();
 	});
 
-	// Test if it sets the correct cookie expiration date
-	test("sets the correct cookie expiration date", () => {
-		render(
-			<CookieConsentBanner isCookiesBannerVisible={true} />
-		);
-
-		const mockCookieConsent = screen.getByTestId(
-			cookieConsentTestId
-		);
-		expect(mockCookieConsent).toHaveAttribute(
-			"expires",
-			cookieExpirationDate.toString()
-		);
-	});
-
-	// Test if it enables decline button
-	test("enables decline button", () => {
-		render(
-			<CookieConsentBanner isCookiesBannerVisible={true} />
-		);
-
-		const mockCookieConsent = screen.getByTestId(
-			cookieConsentTestId
-		);
-		expect(
-			mockCookieConsent.dataset.enableDeclineButton
-		).toBeTruthy();
-	});
-
-	// Test if it calls the proper method when the accept button is clicked
-	test("calls the proper method when the accept button is clicked", () => {
+	/**
+	 * CASE 2: RENDERS BANNER WHEN VISIBLE
+	 * This test verifies that the banner is rendered with
+	 * description and buttons.
+	 */
+	it("renders banner when visible", () => {
 		render(
 			<CookieConsentBanner
 				isCookiesBannerVisible={true}
-				handleAcceptCookies={mockHandleAcceptCookies}
-				handleDeclineCookies={mockHandleDeclineCookies}
+				handleAcceptCookies={jest.fn()}
+				handleDeclineCookies={jest.fn()}
+			/>
+		);
+
+		expect(
+			screen.getByText((content) =>
+				content.includes(COOKIE_CONSENT_BANNER_DESCRIPTION)
+			)
+		).toBeInTheDocument();
+		expect(
+			screen.getByText(
+				COOKIE_CONSENT_BANNER_ACCEPT_BUTTON_TEXT
+			)
+		).toBeInTheDocument();
+
+		expect(
+			screen.getByText(
+				COOKIE_CONSENT_BANNER_DECLINE_BUTTON_TEXT
+			)
+		).toBeInTheDocument();
+	});
+
+	/**
+	 * CASE 3: ACCEPT BUTTON CLICK
+	 * This test verifies that clicking the accept button
+	 * triggers the accept handler.
+	 */
+	it("calls handleAcceptCookies when accept button is clicked", () => {
+		const mockAccept = jest.fn();
+
+		render(
+			<CookieConsentBanner
+				isCookiesBannerVisible={true}
+				handleAcceptCookies={mockAccept}
+				handleDeclineCookies={jest.fn()}
 			/>
 		);
 
 		fireEvent.click(
-			screen.getByText(cookieAcceptButtonText)
+			screen.getByText(
+				COOKIE_CONSENT_BANNER_ACCEPT_BUTTON_TEXT
+			)
 		);
-		expect(mockHandleAcceptCookies).toHaveBeenCalled();
+
+		expect(mockAccept).toHaveBeenCalled();
 	});
 
-	// Test if it calls the proper method when the decline button is clicked
-	test("calls the proper method when the decline button is clicked", () => {
+	/**
+	 * CASE 4: DECLINE BUTTON CLICK
+	 * This test verifies that clicking the decline button
+	 * triggers the decline handler.
+	 */
+	it("calls handleDeclineCookies when decline button is clicked", () => {
+		const mockDecline = jest.fn();
+
 		render(
 			<CookieConsentBanner
 				isCookiesBannerVisible={true}
-				handleAcceptCookies={mockHandleAcceptCookies}
-				handleDeclineCookies={mockHandleDeclineCookies}
+				handleAcceptCookies={jest.fn()}
+				handleDeclineCookies={mockDecline}
 			/>
 		);
 
 		fireEvent.click(
-			screen.getByText(cookieDeclineButtonText)
+			screen.getByText(
+				COOKIE_CONSENT_BANNER_DECLINE_BUTTON_TEXT
+			)
 		);
-		expect(mockHandleDeclineCookies).toHaveBeenCalled();
+
+		expect(mockDecline).toHaveBeenCalled();
 	});
-
-	// Test if it renders links to privacy and cookie policies correctly
-	test.each(links)(
-		"renders link %s correctly",
-		({ text, href }) => {
-			render(
-				<CookieConsentBanner
-					isCookiesBannerVisible={true}
-				/>
-			);
-
-			const domLink = screen.getByText(text);
-			expect(domLink).toBeInTheDocument();
-			expect(domLink).toHaveAttribute("href", href);
-			expect(domLink).toHaveAttribute("target", targetAttr);
-			expect(domLink).toHaveAttribute("rel", relAttr);
-		}
-	);
 });

@@ -8,15 +8,15 @@ import {
 	ABOUT_US_SECTION_ID,
 	CUSTOM_TEXT_TYPES,
 } from "../../utils/const.js";
-import { getAboutUsSectionContainerStyle } from "./styleHandler.js";
+import { getAboutUsSectionContainerStyle } from "./style-handler.js";
 import SectionContainer from "../../components/SectionContainer/SectionContainer.js";
 import SectionBackground from "../../components/SectionBackground/SectionBackground.js";
 import CustomText from "../../components/CustomText/CustomText.js";
 
 /**
- * This component represents the About us sections,
- * which aims at presenting the company.
- * @returns {Element} — About us section.
+ * This component represents the 'About us' section
+ * which introduces the company.
+ * @returns {Element} — 'About us' section.
  */
 function AboutUs() {
 	return (
@@ -27,14 +27,14 @@ function AboutUs() {
 				id={ABOUT_US_SECTION_ID}
 				custStyle={getAboutUsSectionContainerStyle()}
 			>
-				{/* About us section title */}
+				{/* Section title */}
 				<CustomText
 					type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
 					text={ABOUT_US_TITLE}
 					disableAnimation
 				/>
 
-				{/* About us section description */}
+				{/* Section description */}
 				<CustomText
 					type={CUSTOM_TEXT_TYPES.BODY}
 					text={ABOUT_US_DESCRIPTION}

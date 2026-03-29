@@ -1,16 +1,16 @@
 /* Poppins */
 @font-face {
 	font-family: "Poppins";
-	src: url("../public/fonts/Poppins-Regular.ttf")
-		format("truetype");
+	src: url("../public/fonts/Poppins-Regular.woff2")
+		format("woff2");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: "Poppins";
-	src: url("../public/fonts/Poppins-Bold.ttf")
-		format("truetype");
+	src: url("../public/fonts/Poppins-Bold.woff2")
+		format("woff2");
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -19,7 +19,8 @@
 /* Dancing Script */
 @font-face {
 	font-family: "Dancing Script";
-	src: url("../public/fonts/DancingScript-Regular.ttf");
+	src: url("../public/fonts/DancingScript-Regular.woff2")
+		format("woff2");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;

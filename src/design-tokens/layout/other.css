@@ -1,23 +1,23 @@
 /* -------- Other -------- */
 :root {
-	/* — Box Sizing  — */
+	/*  Box Sizing   */
 	--box-sizing-default: border-box;
 
-	/* — Section — */
+	/*  Section  */
 	--section-container-max-width: 120%;
 	--section-container-margin-left-big: 250px;
 	--section-container-margin-left-medium: 190px;
 	--section-container-margin-left-small-portrait: 20px;
 	--section-container-margin-left-small-landscape: 15px;
 
-	/* — Container — */
+	/*  Container  */
 	--container-width-medium: 60%;
 	--container-width-large: 75%;
 
-	/* — Float Button — */
+	/*  Float Button  */
 	--float-button-size: 40px;
 	--float-button-margin: 10px;
 
-	/* — Cursor — */
+	/*  Cursor  */
 	--cursor-pointer: pointer;
 }

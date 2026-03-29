@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="it">
+	<!-- Head  -->
 	<head>
-		<!-- Title and Meta tags  -->
+		<!-- Title  -->
 		<title>
 			MM Eletricar Service - Officina Elettrauto a Gravina
 			in Puglia
 		</title>
 
+		<!-- Metadata  -->
 		<meta charset="utf-8" />
 		<meta
 			name="viewport"
@@ -20,12 +22,28 @@
 			name="apple-mobile-web-app-title"
 			content="MM Eletricar Service"
 		/>
+		<meta
+			property="og:title"
+			content="MM Eletricar Service - Officina Elettrauto a Gravina in Puglia"
+		/>
+		<meta
+			property="og:description"
+			content="Riparazioni, manutenzioni, diagnosi elettroniche e vendita di auto usate a Gravina in Puglia (BA)."
+		/>
+		<meta
+			property="og:image"
+			content="%PUBLIC_URL%/images/logo.avif"
+		/>
+		<meta
+			name="twitter:card"
+			content="summary_large_image"
+		/>
 
 		<!-- Home content preload -->
 		<link
 			rel="preload"
 			as="image"
-			href="%PUBLIC_URL%/images/logo-image.avif"
+			href="%PUBLIC_URL%/images/logo.avif"
 		/>
 		<link
 			rel="preload"
@@ -68,8 +86,32 @@
 			rel="manifest"
 			href="%PUBLIC_URL%/favicon/site.webmanifest"
 		/>
+
+		<!-- Fonts -->
+		<link
+			rel="preload"
+			href="/fonts/Poppins-Regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/Poppins-Bold.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/DancingScript-Regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
 	</head>
 
+	<!-- Body  -->
 	<body>
 		<div id="root"></div>
 	</body>

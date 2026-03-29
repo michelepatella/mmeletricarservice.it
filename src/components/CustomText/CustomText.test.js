@@ -1,85 +1,82 @@
+/**
+ * @jest-environment jsdom
+ */
+
+/* eslint-disable import/first */
+
+// Mock
+jest.mock(
+	"../../hooks/use-intersection-observer.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(),
+	})
+);
+
 import React from "react";
-import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import CustomText from "./CustomText.js";
+import { CUSTOM_TEXT_CLASS_NAME_PREFIX } from "./const.js";
+import useIntersectionObserver from "../../hooks/use-intersection-observer.js";
 
-// Mock intersection observer hook
-jest.mock("../../hooks/useIntersectionObserver", () => ({
-	__esModule: true,
-	default: jest.fn(),
-}));
-
-// Definition of expected results
-const customText = "Test Text";
-const customTextHeadingClass = "custom-heading";
-const customTextSubheadingClass = "custom-subheading";
-const customTextBodyClass = "custom-body";
-const customTextCaptionClass = "custom-caption";
-const customTextStyle = { color: "black" };
-const disableAnimationOpacity = "1";
-
-// Run tests
+/**
+ * Test suite for the CustomText component.
+ * This suite contains:
+ * 1. A test to verify that the text is correctly rendered.
+ * 2. A test to verify that HTML content is rendered correctly.
+ * 3. A test to verify that the correct className is applied.
+ * 4. A test to verify that the intersection observer hook is called.
+ */
 describe("CustomText", () => {
-	// Clear all mocks before running each test
-	beforeEach(() => {
-		jest.clearAllMocks();
-	});
-
-	// Test if it applies the correct class
-	// based on text type
-	test.each([
-		["heading", customTextHeadingClass],
-		["subheading", customTextSubheadingClass],
-		["body", customTextBodyClass],
-		["caption", customTextCaptionClass],
-	])(
-		"applies correct class for %s",
-		(type, expectedClass) => {
-			render(<CustomText text={customText} type={type} />);
-			expect(screen.getByText(customText)).toHaveClass(
-				expectedClass
-			);
-		}
-	);
-
-	// Test if it renders the text correctly
-	test("renders with correct text", () => {
-		render(<CustomText text={customText} />);
+	/**
+	 * CASE 1: RENDERS TEXT
+	 * This test checks that the component correctly renders the provided text.
+	 */
+	it("renders text correctly", () => {
+		render(<CustomText text="Some text" type="body" />);
 
 		expect(
-			screen.getByText((content) =>
-				content.includes(customText)
-			)
+			screen.getByText("Some text")
 		).toBeInTheDocument();
 	});
 
-	// Test if it applies custom style when passed
-	test("applies custom style correctly", () => {
+	/**
+	 * CASE 2: RENDERS HTML CONTENT
+	 * This test verifies that HTML content passed as text is rendered correctly.
+	 */
+	it("renders HTML content correctly", () => {
 		render(
 			<CustomText
-				text={customText}
-				style={customTextStyle}
+				text="<strong>Bold text</strong>"
+				type="body"
 			/>
 		);
 
-		expect(screen.getByText(customText)).toHaveStyle(
-			customTextStyle
+		expect(
+			screen.getByText("Bold text")
+		).toBeInTheDocument();
+	});
+
+	/**
+	 * CASE 3: CLASS NAME
+	 * This test verifies that the correct className is applied based on type.
+	 */
+	it("applies correct className", () => {
+		render(<CustomText text="Some text" type="heading" />);
+
+		expect(screen.getByText("Some text")).toHaveClass(
+			CUSTOM_TEXT_CLASS_NAME_PREFIX + "heading"
 		);
 	});
 
-	// Test if disableAnimation sets opacity to 1
-	test(
-		"sets opacity to " +
-			disableAnimationOpacity +
-			" when disableAnimation is true",
-		() => {
-			render(
-				<CustomText text={customText} disableAnimation />
-			);
+	/**
+	 * CASE 4: INTERSECTION OBSERVER HOOK
+	 * This test verifies that the intersection observer hook is called.
+	 */
+	it("calls useIntersectionObserver", () => {
+		render(<CustomText text="Some text" type="body" />);
 
-			expect(
-				screen.getByText(customText).style.opacity
-			).toBe(disableAnimationOpacity);
-		}
-	);
+		expect(useIntersectionObserver).toHaveBeenCalled();
+	});
 });

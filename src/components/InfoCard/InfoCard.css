@@ -5,13 +5,13 @@
 	background-color: var(--color-transparent);
 }
 
-/* Info Card — Icon */
+/* Info Card  Icon */
 .info-card-icon {
 	height: var(--image-size-small);
 	width: var(--image-size-small);
 }
 
-/* Info Card — Flex Container */
+/* Info Card  Flex Container */
 .info-card-flex {
 	display: var(--display-grid);
 	align-items: var(--align-items-center);

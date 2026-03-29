@@ -1,38 +1,72 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import HomeContent from "./HomeContent.js";
+import {
+	COMPANY_LOGO_LINK,
+	HOME_LOGO_ALT,
+	HOME_LOGO_CLASS_NAME,
+	HOME_SUBTITLE,
+	HOME_SUBTITLE_CLASS_NAME,
+	HOME_TITLE,
+	HOME_TITLE_CLASS_NAME,
+} from "./const.js";
 
-// Definition of expected results
-const homeTitle = "Home Title";
-const homeSubtitle = "Home Subtitle";
-
-// Mock constants
-jest.mock("../../../utils/const", () => ({
-	HOME_TITLE: homeTitle,
-	HOME_SUBTITLE: homeSubtitle,
-}));
-
-// Run the test
+/**
+ * Test suite for the HomeContent component.
+ * The test suite contains:
+ * 1. A test to verify that the logo is rendered with correct src, alt, and class.
+ * 2. A test to verify that the title is rendered with correct HTML and class.
+ * 3. A test to verify that the subtitle is rendered with correct HTML and class.
+ */
 describe("HomeContent", () => {
-	// Clear all mocks before running each test
-	beforeEach(() => {
-		jest.clearAllMocks();
-	});
-
-	// Test if it correctly renders the title
-	test("renders with correct title", () => {
+	/**
+	 * CASE 1: LOGO RENDERING
+	 * Should render the logo with correct src, alt, and class.
+	 */
+	it("should render the logo correctly", () => {
 		render(<HomeContent />);
 
-		expect(screen.getByText(homeTitle)).toBeInTheDocument();
+		const logo = screen.getByAltText(HOME_LOGO_ALT);
+
+		expect(logo).toBeInTheDocument();
+		expect(logo.src).toContain(COMPANY_LOGO_LINK);
+		expect(logo.className).toBe(HOME_LOGO_CLASS_NAME);
 	});
 
-	// Test if it correctly renders the subtitle
-	test("renders with correct subtitle", () => {
+	/**
+	 * CASE 2: TITLE RENDERING
+	 * Should render the title with correct HTML and class.
+	 */
+	it("should render the title correctly", () => {
 		render(<HomeContent />);
 
-		expect(
-			screen.getByText(homeSubtitle)
-		).toBeInTheDocument();
+		const title = screen.getByRole("heading", { level: 1 });
+
+		expect(title).toBeInTheDocument();
+		expect(title.className).toBe(HOME_TITLE_CLASS_NAME);
+		expect(title.innerHTML).toBe(HOME_TITLE);
+	});
+
+	/**
+	 * CASE 3: SUBTITLE RENDERING
+	 * Should render the subtitle with correct HTML and class.
+	 */
+	it("should render the subtitle correctly", () => {
+		render(<HomeContent />);
+
+		const subtitle = screen.getByRole("heading", {
+			level: 2,
+		});
+
+		expect(subtitle).toBeInTheDocument();
+		expect(subtitle.className).toBe(
+			HOME_SUBTITLE_CLASS_NAME
+		);
+		expect(subtitle.innerHTML).toBe(HOME_SUBTITLE);
 	});
 });

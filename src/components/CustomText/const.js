@@ -1,8 +1,8 @@
 /**------------- Custom Text constants -------------**/
 
-/* — General — */
+/*  General  */
 export const CUSTOM_TEXT_CLASS_NAME_PREFIX = "custom-";
 
-/* — Style — */
+/*  Style  */
 export const CUSTOM_TEXT_DEFAULT_OPACITY =
 	"var(--opacity-high)";

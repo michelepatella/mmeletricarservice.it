@@ -11,28 +11,24 @@ import {
 	PRICE_STYLE,
 } from "../../const.js";
 import { USED_CAR_DRAWER_CTA_BUTTON_TEXT } from "./const.js";
-import { getUsedCarDrawerInfoPanelCarNameStyle } from "./styleHandler.js";
+import { getUsedCarDrawerInfoPanelCarNameStyle } from "./style-handler.js";
 import CustomText from "../../../../components/CustomText/CustomText.js";
 import CustomButton from "../../../../components/CustomButton/CustomButton.js";
 import UsedCarDrawerCollapse from "../UsedCarDrawerCollapse/UsedCarDrawerCollapse.js";
 import UsedCarOverview from "../../UsedCarOverview/UsedCarOverview.js";
 
 /**
- * This component represents the info panel shown in the
- * used car drawer, It contains all the information of a used
- * car, including overview information and details.
+ * This component represents the info panel which contains all
+ * the information of a used car.
  * @param props — Object containing:
- *   - usedCarOverview: Object — Overview information of
- *   	 the used car (name, price, etc.).
- *   - usedCarInfo: Record<string, string | number | null> — Detailed
- *     information of the used car to populate the collapse.
- * @returns {React.JSX.Element} — The used car drawer
- * info panel component.
+ *   - usedCarOverview — Overview information of the used car.
+ *   - usedCarInfo — Detailed information of the used car.
+ * @returns {React.JSX.Element} — The used car drawer info panel component.
  */
 function UsedCarDrawerInfoPanel(props) {
 	return (
 		<>
-			{/* Name of the car */}
+			{/* Car's name */}
 			<CustomText
 				type={CUSTOM_TEXT_TYPES.HEADING}
 				text={props.usedCarOverview?.name || "-"}
@@ -40,7 +36,7 @@ function UsedCarDrawerInfoPanel(props) {
 				style={getUsedCarDrawerInfoPanelCarNameStyle()}
 			/>
 
-			{/* Price of the car */}
+			{/* Car's price */}
 			<CustomText
 				type={CUSTOM_TEXT_TYPES.SUBHEADING}
 				text={
@@ -54,13 +50,13 @@ function UsedCarDrawerInfoPanel(props) {
 				disableAnimation
 			/>
 
-			{/* Car's overview information */}
+			{/* Car's overview info */}
 			<UsedCarOverview
 				showTitle
 				usedCarOverview={props.usedCarOverview}
 			/>
 
-			{/* Call-To-Action Button */}
+			{/* Call-to-Action button */}
 			<CustomButton
 				isContact
 				isCta

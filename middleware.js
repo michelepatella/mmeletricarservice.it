@@ -3,7 +3,7 @@
  * pages and return a custom HTML containing overview information
  * about that car, instead of index.html.
  * @param request — The request caught.
- * @returns {Response|void} — Returns a Response containing
+ * @returns {Response|void} — Returns a response containing
  * HTML if the request comes from a bot; otherwise, returns
  * nothing to allow the normal request flow.
  */
@@ -12,13 +12,9 @@ export default async function middleware(request) {
 	const url = new URL(request.url);
 
 	// Check whether the URL matches a used car URL
-	const regex = /^\/used-cars(\d+)$/;
+	const regex = /^\/auto-usate\/(\d+)$/;
 	const match = regex.exec(url.pathname);
-
-	// Fallback
-	if (!match) {
-		return;
-	}
+	if (!match) return;
 
 	// Retrieve the used car id from URL
 	const usedCarId = match[1];
@@ -26,7 +22,7 @@ export default async function middleware(request) {
 	try {
 		// Fetch used cars overview and extract json response
 		const jsonResponse = await fetch(
-			"https://mmeletricarservice.it/api/used-cars-overview/usedCarsOverview"
+			"https://mmeletricarservice.it/api/used-cars-overview/used-cars-overview"
 		);
 		const usedCars = await jsonResponse.json();
 
@@ -36,22 +32,16 @@ export default async function middleware(request) {
 			(c) => String(c.id) === usedCarId
 		);
 
-		// Fallback
-		if (!usedCar) {
-			return;
-		}
+		// No used car found with the given id
+		if (!usedCar) return;
 
 		// Check whether the request came from a bot
 		const ua = request.headers.get("user-agent") || "";
 		const isBot =
-			/(facebook|twitter|linkedin|pinterest|whatsapp|telegram|slack|googlebot)/i.test(
+			/(facebook|twitter|linkedin|pinterest|whatsapp|telegram|slack|googlebot|bingbot|yandexbot|duckduckbot|baiduspider|applebot|semrushbot|ahrefsbot|slurp)/i.test(
 				ua
 			);
-
-		// Fallback
-		if (!isBot) {
-			return;
-		}
+		if (!isBot) return;
 
 		// Create custom HTML with Open Graph meta tags
 		const html = `
@@ -84,11 +74,10 @@ export default async function middleware(request) {
 	} catch (err) {
 		// Capture middleware errors
 		console.error("Middleware error:", err);
-		// Fallback
 		return;
 	}
 }
 
 export const config = {
-	matcher: ["/used-cars:id(\\d+)"], // NOSONAR
+	matcher: ["/auto-usate:id(\\d+)"], // NOSONAR
 };

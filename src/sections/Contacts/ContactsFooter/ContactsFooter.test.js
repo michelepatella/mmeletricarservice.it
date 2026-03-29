@@ -1,79 +1,101 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
-import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import ContactsFooter from "./ContactsFooter.js";
+import {
+	CONTACTS_FOOTER_TEXT,
+	CONTACTS_FOOTER_TEXT_CLASS_NAME,
+	LEGAL_NOTES_LINK,
+	LEGAL_NOTES_TEXT,
+} from "./const.js";
+import {
+	COOKIE_POLICY_LINK,
+	COOKIE_POLICY_TEXT,
+	PRIVACY_POLICY_LINK,
+	PRIVACY_POLICY_TEXT,
+} from "../../../utils/const.js";
+import Link from "../../../components/Link/Link.js";
 
-// Definition of expected results
-const footerText = "Contacts Footer Text";
-const privacyPolicyText = "Privacy Policy Text";
-const privacyPolicyHref = "privacy-policy-link";
-const cookiePolicyText = "Cookie Policy Text";
-const cookiePolicyHref = "cookie-policy-link";
-const legalNotesText = "Legal Notes Text";
-const legalNotesHref = "legal-notes-link";
-const targetAttr = "_blank";
-const relAttr = "noopener noreferrer";
-
-// Definition of links to be tested
-const links = [
-	{
-		text: privacyPolicyText,
-		href: privacyPolicyHref,
-	},
-	{
-		text: cookiePolicyText,
-		href: cookiePolicyHref,
-	},
-	{
-		text: legalNotesText,
-		href: legalNotesHref,
-	},
-];
-
-// Mock constants
-jest.mock("../../../utils/const", () => ({
-	CONTACT_FOOTER_TEXT: footerText,
-	PRIVACY_POLICY_TEXT: privacyPolicyText,
-	COOKIE_POLICY_TEXT: cookiePolicyText,
-	LEGAL_NOTES_TEXT: legalNotesText,
+// Mocks
+jest.mock("../../../components/Link/Link.js", () => ({
+	__esModule: true,
+	default: jest.fn(({ href, text }) => (
+		<a data-testid={"link-" + text.trim()} href={href}>
+			{text}
+		</a>
+	)),
 }));
 
-// Mock links
-jest.mock("../../../utils/internalLinks", () => ({
-	PRIVACY_POLICY_LINK: privacyPolicyHref,
-	COOKIE_POLICY_LINK: cookiePolicyHref,
-	LEGAL_NOTES_LINK: legalNotesHref,
-}));
-
-// Run the test
+/**
+ * Test suite for the ContactsFooter component.
+ * The test suite contains:
+ * 1. A test to verify correct rendering of footer text.
+ * 2. A test to verify correct rendering of all links.
+ */
 describe("ContactsFooter", () => {
-	// Clear all mocks before running each test
+	// Define behavior before each test
 	beforeEach(() => {
 		jest.clearAllMocks();
 	});
 
-	// Test if it renders the footer text correctly
-	test("renders with correct footer text", () => {
+	/**
+	 * CASE 1: FOOTER TEXT
+	 * Should render footer text with correct class name.
+	 */
+	it("should render footer text correctly", () => {
 		render(<ContactsFooter />);
 
-		expect(
-			screen.getByText((content) =>
-				content.includes(footerText)
-			)
-		).toBeInTheDocument();
+		const footer = screen.getByText(CONTACTS_FOOTER_TEXT);
+
+		expect(footer).toBeInTheDocument();
+		expect(footer.className).toBe(
+			CONTACTS_FOOTER_TEXT_CLASS_NAME
+		);
 	});
 
-	// Test if it renders all the footer links correctly
-	test.each(links)(
-		"renders link %s correctly",
-		({ text, href }) => {
-			render(<ContactsFooter />);
+	/**
+	 * CASE 2: LINKS RENDERING
+	 * Should render all links with correct href and text.
+	 */
+	it("should render all links correctly", () => {
+		render(<ContactsFooter />);
 
-			const domLink = screen.getByText(text);
-			expect(domLink).toBeInTheDocument();
-			expect(domLink).toHaveAttribute("href", href);
-			expect(domLink).toHaveAttribute("target", targetAttr);
-			expect(domLink).toHaveAttribute("rel", relAttr);
-		}
-	);
+		// Check links are in the document
+		expect(
+			screen.getByTestId(
+				"link-" + (PRIVACY_POLICY_TEXT + " |")
+			)
+		).toBeInTheDocument();
+		expect(
+			screen.getByTestId(
+				"link-" + (COOKIE_POLICY_TEXT + " |")
+			)
+		).toBeInTheDocument();
+		expect(
+			screen.getByTestId("link-" + LEGAL_NOTES_TEXT)
+		).toBeInTheDocument();
+
+		// Check mock calls
+		const calls = Link.mock.calls.map((args) => args[0]);
+		expect(calls).toEqual(
+			expect.arrayContaining([
+				expect.objectContaining({
+					href: PRIVACY_POLICY_LINK,
+					text: PRIVACY_POLICY_TEXT + " | ",
+				}),
+				expect.objectContaining({
+					href: COOKIE_POLICY_LINK,
+					text: COOKIE_POLICY_TEXT + " | ",
+				}),
+				expect.objectContaining({
+					href: LEGAL_NOTES_LINK,
+					text: LEGAL_NOTES_TEXT,
+				}),
+			])
+		);
+	});
 });

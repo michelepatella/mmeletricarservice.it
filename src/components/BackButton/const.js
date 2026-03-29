@@ -1,7 +1,7 @@
 /**------------- Back Button constants -------------**/
 
-/* — General — */
+/*  General  */
 export const BACK_BUTTON_CLASS_NAME = "back-button";
 
-/* — Label — */
+/*  Label  */
 export const BACK_BUTTON_LABEL = "Indietro";

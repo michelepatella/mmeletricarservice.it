@@ -14,17 +14,14 @@ import {
 import {
 	getUsedCarDrawerCollapseInformationNameStyle,
 	getUsedCarDrawerCollapseInformationTextStyle,
-} from "./styleHandler.js";
+} from "./style-handler.js";
 import CustomText from "../../../../components/CustomText/CustomText.js";
 
 /**
- * This component represents a collapse used into the
- * used car drawer to contain all the information of a specific
- * category. The user can expand the collapse corresponding to a
- * category (e.g., 'Engine and Performance') to show all the information contained.
+ * This component represents a collapse which collects information
+ * belonging to the same group.
  * @param props — Object containing:
- *   - usedCarInfo: Record<string, string | number | null> — The used car data
- *   with keys matching information items to display inside the collapse.
+ *   - usedCarInfo— The used car data.
  * @returns {React.JSX.Element} — The used car drawer collapse component.
  */
 function UsedCarDrawerCollapse(props) {
@@ -42,7 +39,7 @@ function UsedCarDrawerCollapse(props) {
 					label,
 					children: (
 						// Show all the information belonging
-						// to a specific category via list
+						// to a specific category
 						<li
 							className={
 								USED_CAR_DRAWER_COLLAPSE_OUTER_LIST_CLASS_NAME

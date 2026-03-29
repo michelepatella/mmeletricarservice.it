@@ -12,39 +12,40 @@ import {
 	CUSTOM_TEXT_TYPES,
 	SERVICES_SECTION_ID,
 } from "../../utils/const.js";
-import { useServiceTitleAnimation } from "./useServiceTitleAnimation.js";
+import { useServiceTitleAnimation } from "./use-service-title-animation/use-service-title-animation.js";
 import {
 	getServicesTitleSpanStyle,
 	getServicesTitleStyle,
-} from "./styleHandler.js";
+} from "./style-handler.js";
 import SectionBackground from "../../components/SectionBackground/SectionBackground.js";
 import SectionContainer from "../../components/SectionContainer/SectionContainer.js";
 import InfoCard from "../../components/InfoCard/InfoCard.js";
 import CustomText from "../../components/CustomText/CustomText.js";
 
 /**
- * This section represents Services section. The
- * section shows all the specialized services that the company
- * offers via informative cards (characterized by icon, title, and description).
- * @returns {Element} — The services section.
+ * This component represents the 'Services' section which
+ * shows all the specialized services offered by the company.
+ * @returns {Element} — The 'Services' section.
  */
 function Services() {
-	// To keep track when the service section
-	// is in view to start title's animation
+	// To keep track when the 'Services' section
+	// is in view to trigger the title's animation
 	const { ref, inView } = useInView({
 		triggerOnce: SERVICES_TITLE_ANIMATION_TRIGGER_ONCE,
 		threshold: SERVICES_TITLE_ANIMATION_THRESHOLD,
 	});
 
-	// To keep track of the current index (word)
+	// To keep track of the title's word just displayed
+	// by the animation
 	const [activeIndex, setActiveIndex] = useState(0);
 
-	// To keep track of the words already displayed
+	// To keep track of the title words already displayed
+	// by the animation
 	const [displayedWords, setDisplayedWords] = useState(
 		SERVICES_TITLE.map(() => "")
 	);
 
-	// To animate title
+	// To animate the title
 	useServiceTitleAnimation(
 		inView,
 		setDisplayedWords,
@@ -56,12 +57,12 @@ function Services() {
 			image={SERVICES_BACKGROUND_IMAGE_LINK}
 		>
 			<SectionContainer id={SERVICES_SECTION_ID}>
-				{/* Services section title(s) */}
+				{/* Section titles */}
 				<div ref={ref}>
 					<CustomText
 						type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
 						text={
-							// Show each word composing the section title
+							// Show each word composing the title
 							// by using an individual span
 							SERVICES_TITLE.map((title, index) => {
 								const isActive = index === activeIndex;
@@ -84,16 +85,13 @@ function Services() {
 					/>
 				</div>
 
-				{/* Global container for all the informative
-				cards displayed for the services */}
+				{/* Container for all the informative cards */}
 				<div className={SERVICES_CONTAINER_CLASS_NAME}>
-					{/* Show all the services via informative cards
-					 which can be explored by scrolling the container
-					 horizontally */}
+					{/* Show an informative card for each service */}
 					{ALL_SERVICES?.map((service) => (
 						<div>
-							{/* Each service shown through informative
-							card having icon, title, and description */}
+							{/* Informative card with icon, title, and 
+							 description */}
 							<InfoCard
 								title={service?.title}
 								description={service?.description}

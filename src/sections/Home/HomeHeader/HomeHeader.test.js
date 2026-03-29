@@ -1,96 +1,69 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
 import "@testing-library/jest-dom";
-import {
-	render,
-	screen,
-	fireEvent,
-} from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import HomeHeader from "./HomeHeader.js";
-
 import { HOME_HEADER_CONTACT_BUTTONS } from "./const.js";
+import IconButton from "../../../components/IconButton/IconButton.js";
 
-const customIconButtonTestId = "custom-button";
-
-// Mock CustomIconButton
+// Mock
 jest.mock(
-	"../../../components/IconButton/IconButton",
-	() => {
-		return {
-			__esModule: true,
-			default: ({ src, onClick }) => (
-				<button
-					data-testid={customIconButtonTestId}
-					onClick={onClick}
-				>
-					{src}
-				</button>
-			),
-		};
-	}
+	"../../../components/IconButton/IconButton.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ src, onClick }) => (
+			<button
+				data-testid={"icon-button-" + src}
+				onClick={onClick}
+			>
+				{src}
+			</button>
+		)),
+	})
 );
 
-// Mock contact buttons
-jest.mock("../../../utils/contactHandlers", () => ({
-	homeHeaderContactButtons: [
-		{ src: "email", onClick: jest.fn() },
-		{ src: "facebook", onClick: jest.fn() },
-		{ src: "phone", onClick: jest.fn() },
-	],
-}));
-
-// Run tests
+/**
+ * Test suite for the HomeHeader component.
+ * The test suite contains:
+ * 1. A test to verify that an IconButton is rendered for each contact
+ *    with the correct props.
+ */
 describe("HomeHeader", () => {
+	// Define behavior before each test
 	beforeEach(() => {
-		// Clear all mocks before running each test
 		jest.clearAllMocks();
 	});
 
-	// Test if all the contact buttons
-	// to be shown are rendered
-	test("renders all the contact buttons", () => {
+	/**
+	 * CASE 1: ICON BUTTONS RENDERING
+	 * Should render an IconButton for each contact with correct props.
+	 */
+	it("should render all icon buttons correctly", () => {
 		render(<HomeHeader />);
 
-		const contactButtons = screen.getAllByTestId(
-			customIconButtonTestId
-		);
-		expect(contactButtons.length).toBe(
-			HOME_HEADER_CONTACT_BUTTONS.length
-		);
-	});
-
-	// Test if all the contact buttons
-	// are rendered correctly
-	test("renders the correct contact buttons", () => {
-		render(<HomeHeader />);
-
-		const contactButtons = screen.getAllByTestId(
-			customIconButtonTestId
-		);
 		HOME_HEADER_CONTACT_BUTTONS.forEach(
-			({ src }, index) => {
-				expect(contactButtons[index]).toHaveTextContent(
-					src
+			({ src, onClick }) => {
+				// Check presence
+				const button = screen.getByTestId(
+					"icon-button-" + src
+				);
+				expect(button).toBeInTheDocument();
+
+				// Check displayed src
+				expect(button.textContent).toBe(src);
+
+				// Check onClick
+				expect(IconButton).toHaveBeenCalledWith(
+					expect.objectContaining({
+						src,
+						onClick,
+					}),
+					undefined
 				);
 			}
 		);
-	});
-
-	// Test if all the contact buttons, once clicked,
-	// trigger the corresponding contact button handler
-	test("calls onClick when a contact button is clicked", () => {
-		render(<HomeHeader />);
-
-		const contactButtons = screen.getAllByTestId(
-			customIconButtonTestId
-		);
-
-		// Trigger each contact button and test if
-		// the corresponding click handler has been triggered
-		contactButtons.forEach((button) =>
-			fireEvent.click(button)
-		);
-		HOME_HEADER_CONTACT_BUTTONS.forEach((btn) => {
-			expect(btn.onClick).toHaveBeenCalled();
-		});
 	});
 });

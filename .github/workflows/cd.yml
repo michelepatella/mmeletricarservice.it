@@ -1,33 +1,33 @@
-name: CD
+# Continuous Delivery (CD): Manage reliable deployment of
+# the project to Vercel, ensuring that changes are automatically
+# built and safely deployed after successful CI runs
+name: Continuous Delivery (CD)
 
+# Run the workflow only after successful CI run
 on:
   workflow_run:
     workflows: ["CI"]
-    types:
-      - completed
+    types: [completed]
 
+# The workflow is organized into a single job:
+# - Deploy:
+#     Deploy the built project to Vercel.
 jobs:
-  cd:
+  # ----------------------------------------------------------------------
+  # Deploy
+  # ----------------------------------------------------------------------
+  deploy:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ vars.NODE_VERSION }}
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
-
+      # Deploy to Vercel using the Vercel CLI
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_PROJECT_NAME: ${{ secrets.VERCEL_PROJECT_NAME }}
           VERCEL_TEAM: ${{ secrets.VERCEL_TEAM }}
-        run: npx vercel --prod --yes --token $VERCEL_TOKEN --confirm --name $VERCEL_PROJECT_NAME --scope $VERCEL_TEAM
+        run: |
+          npx vercel --prod --yes \
+            --token $VERCEL_TOKEN \
+            --confirm \
+            --name $VERCEL_PROJECT_NAME \
+            --scope $VERCEL_TEAM

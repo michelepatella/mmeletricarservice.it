@@ -1,3 +1,4 @@
+import React from "react";
 import {
 	CONTACTS_FOOTER_TEXT,
 	CONTACTS_FOOTER_TEXT_CLASS_NAME,
@@ -13,15 +14,13 @@ import {
 import Link from "../../../components/Link/Link.js";
 
 /**
- * This component represents the footer
- * of the Contact section. It contains a footer text including
- * all company information, along with link to privacy, cookie, and legal
- * notes documents.
- * @returns {Element} — The contacts footer component.
+ * This component represents the footer of the 'Contacts' section
+ * which contains all the company information, as well as links to privacy,
+ * cookie, and legal notes documents.
+ * @returns {Element} — The footer of the 'Contacts' section.
  */
 function ContactsFooter() {
 	return (
-		// Footer text
 		<p className={CONTACTS_FOOTER_TEXT_CLASS_NAME}>
 			{CONTACTS_FOOTER_TEXT}
 			<br></br>

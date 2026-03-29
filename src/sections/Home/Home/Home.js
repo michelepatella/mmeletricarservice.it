@@ -1,3 +1,4 @@
+import React from "react";
 import { Layout } from "antd";
 import {
 	HOME_CONTENT_CLASS_NAME,
@@ -12,35 +13,32 @@ import HomeHeader from "../HomeHeader/HomeHeader.js";
 import HomeContent from "../HomeContent/HomeContent.js";
 import SectionBackground from "../../../components/SectionBackground/SectionBackground.js";
 
-// Home Layout definition:
-// it's composed by a header and a content
+// Layout definition
 const { Header, Content } = Layout;
 
 /**
- * This component represents the Home section. It is divided into two parts:
- * - Header: contains contact buttons to rapidly contact the company
- * - Content: contains title and description
- * @returns {JSX.Element} — Home section.
+ * This component represents the 'Home section' which is composed of:
+ * - Header: Contains contact buttons.
+ * - Content: Contains title and description.
+ * @returns {JSX.Element} — 'Home' section.
  */
 function Home() {
 	return (
 		<>
-			{/* Background container to contain the whole section and
-       use a customized background */}
 			<SectionBackground
 				image={DOTTED_BACKGROUND_IMAGE_LINK}
 			>
-				{/* Home Layout */}
+				{/* Layout */}
 				<Layout
 					className={HOME_LAYOUT_CLASS_NAME}
 					id={HOME_SECTION_ID}
 				>
-					{/* Home header */}
+					{/* Header */}
 					<Header className={HOME_HEADER_CLASS_NAME}>
 						<HomeHeader />
 					</Header>
 
-					{/* Home content */}
+					{/* Content */}
 					<Content className={HOME_CONTENT_CLASS_NAME}>
 						<HomeContent />
 					</Content>

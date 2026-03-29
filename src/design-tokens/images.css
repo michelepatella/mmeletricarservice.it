@@ -1,11 +1,11 @@
 /* -------- Images -------- */
 :root {
-	/* — Size — */
+	/*  Size  */
 	--image-size-small: 30px;
 	--image-size-medium: 50px;
 	--image-size-large: 120px;
 	--image-size-xlarge: 250px;
 
-	/* — Object Fit — */
+	/*  Object Fit  */
 	--image-object-fit-cover: cover;
 }

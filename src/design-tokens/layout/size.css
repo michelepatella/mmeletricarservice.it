@@ -1,13 +1,13 @@
 /* -------- Size -------- */
 :root {
-	/* — Size — */
+	/*  Size  */
 	--zero-size: 0%;
 	--size-small: 5%;
 	--size-medium: 15%;
 	--size-large: 92%;
 	--full-size: 100%;
 
-	/* — Height — */
+	/*  Height  */
 	--vh-xxsmall: 10vh;
 	--vh-xsmall: 20vh;
 	--vh-small: 30vh;
@@ -16,11 +16,11 @@
 	--vh-xlarge: 80vh;
 	--vh-full: 100vh;
 
-	/* — Width — */
+	/*  Width  */
 	--vw-small: 8vw;
 	--vw-full: 100vw;
 	--card-width: 250px;
 
-	/* — Shrink — */
+	/*  Shrink  */
 	--zero-shrink: 0;
 }

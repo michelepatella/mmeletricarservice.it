@@ -1,42 +1,70 @@
+/**
+ * @jest-environment jsdom
+ */
+
+/* eslint-disable import/first */
+
+// Mocks
+jest.mock("../MenuSmallScreen/MenuSmallScreen.js", () => ({
+	__esModule: true,
+	default: () => (
+		<div data-testid="menu-small-screen">
+			Mocked MenuSmallScreen
+		</div>
+	),
+}));
+jest.mock("../MenuBigScreen/MenuBigScreen.js", () => ({
+	__esModule: true,
+	default: () => (
+		<div data-testid="menu-big-screen">
+			Mocked MenuBigScreen
+		</div>
+	),
+}));
+
 import React from "react";
-import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import MenuWrapper from "./MenuWrapper.js";
 
-const menuBigTestId = "Menu-big";
-const menuSmallTestId = "Menu-small";
-
-// Mock both big and small Menu
-jest.mock("../MenuBigScreen/MenuBigScreen", () => () => (
-	<div data-testid={menuBigTestId} />
-));
-jest.mock(
-	"../MenuSmallScreen/MenuSmallScreen",
-	() => () => <div data-testid={menuSmallTestId} />
-);
-
-// Run tests
-describe("Menu", () => {
-	// Clear all mocks before running each test
-	beforeEach(() => {
-		jest.clearAllMocks();
-	});
-
-	// Test if it renders big Menu
-	test("renders big Menu", () => {
+/**
+ * Test suite for the MenuWrapper component.
+ * This suite contains:
+ * 1. A test to verify that the big screen menu is rendered.
+ * 2. A test to verify that the small screen menu is rendered.
+ */
+describe("MenuWrapper", () => {
+	/**
+	 * CASE 1: RENDERS BIG SCREEN MENU
+	 * This test verifies that the MenuBigScreen component
+	 * is rendered inside the wrapper.
+	 */
+	it("renders the big screen menu", () => {
 		render(<MenuWrapper />);
 
-		expect(
-			screen.getByTestId(menuBigTestId)
-		).toBeInTheDocument();
+		const bigMenu = screen.getByTestId("menu-big-screen");
+
+		expect(bigMenu).toBeInTheDocument();
+		expect(bigMenu).toHaveTextContent(
+			"Mocked MenuBigScreen"
+		);
 	});
 
-	// Test if it renders small Menu
-	test("renders small Menu", () => {
+	/**
+	 * CASE 2: RENDERS SMALL SCREEN MENU
+	 * This test verifies that the MenuSmallScreen component
+	 * is rendered inside the wrapper.
+	 */
+	it("renders the small screen menu", () => {
 		render(<MenuWrapper />);
 
-		expect(
-			screen.getByTestId(menuSmallTestId)
-		).toBeInTheDocument();
+		const smallMenu = screen.getByTestId(
+			"menu-small-screen"
+		);
+
+		expect(smallMenu).toBeInTheDocument();
+		expect(smallMenu).toHaveTextContent(
+			"Mocked MenuSmallScreen"
+		);
 	});
 });

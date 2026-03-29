@@ -1,4 +1,4 @@
 /**------------- Link constants -------------**/
 
-/* — General — */
+/*  General  */
 export const LINK_CLASS_NAME = "link";

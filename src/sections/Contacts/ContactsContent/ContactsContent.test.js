@@ -1,197 +1,189 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
-import "@testing-library/jest-dom";
 import {
 	render,
 	screen,
 	fireEvent,
 } from "@testing-library/react";
-import ContactsContent from "./ContactsContent";
+import "@testing-library/jest-dom";
+import ContactsContent from "./ContactsContent.js";
+import CustomButton from "../../../components/CustomButton/CustomButton.js";
+import {
+	ALL_CONTACTS,
+	CONTACTS_CLICK_HANDLERS,
+	CONTACTS_SECTION_ID,
+	CUSTOM_TEXT_TYPES,
+	DOTTED_BACKGROUND_IMAGE_LINK,
+} from "../../../utils/const.js";
+import {
+	CONTACTS_BUTTONS_CONTAINER_CLASS_NAME,
+	CONTACTS_TITLE,
+} from "./const.js";
 
-// Definition of expected results
-const contactsTitle = "Contacts Title";
-const contactsSubtitle = "Contacts Subtitle";
-const phone = "Phone";
-const email = "Email";
-const emailPec = "Email PEC";
-const facebook = "Facebook";
-const phoneIcon = "phone-icon";
-const emailIcon = "email-icon";
-const emailPecIcon = "email-pec-icon";
-const facebookIcon = "facebook-icon";
-
-// Mock IntersectionObserver hook
-jest.mock("../../../hooks/useIntersectionObserver", () => ({
-	__esModule: true,
-	default: jest.fn(),
-}));
-
-// Mock the company contacts and section's texts
-jest.mock("../../../utils/const", () => ({
-	CONTACTS_TITLE: contactsTitle,
-	CONTACTS_SUBTITLE: contactsSubtitle,
-	CONTACTS: [
-		{
-			value: phone,
-			icon: phoneIcon,
-		},
-		{
-			value: email,
-			icon: emailIcon,
-		},
-		{
-			value: emailPec,
-			icon: emailPecIcon,
-		},
-		{
-			value: facebook,
-			icon: facebookIcon,
-		},
-	],
-}));
-
-// Mock the contact click handlers
-const mockPhoneHandler = jest.fn();
-const mockEmailHandler = jest.fn();
-const mockEmailPecHandler = jest.fn();
-const mockFacebookHandler = jest.fn();
-jest.mock("../../../utils/contactHandlers", () => ({
-	contactClickHandler: {
-		Phone: (...args) => mockPhoneHandler(...args),
-		Email: (...args) => mockEmailHandler(...args),
-		"Email PEC": (...args) => mockEmailPecHandler(...args),
-		Facebook: (...args) => mockFacebookHandler(...args),
-	},
-}));
-
-// Mock CustomButton
+// Mocks
 jest.mock(
-	"../../../components/CustomButton/CustomButton",
+	"../../../components/SectionBackground/SectionBackground.js",
 	() => ({
 		__esModule: true,
-		default: ({
-			text,
-			isContact,
-			isCta,
-			icon,
-			onClick,
-		}) => (
+		default: jest.fn(({ children, image }) => (
+			<div
+				data-testid="section-background"
+				data-image={image}
+			>
+				{children}
+			</div>
+		)),
+	})
+);
+jest.mock(
+	"../../../components/SectionContainer/SectionContainer.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ children, id }) => (
+			<div data-testid="section-container" id={id}>
+				{children}
+			</div>
+		)),
+	})
+);
+jest.mock(
+	"../../../components/CustomText/CustomText.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ type, text }) => (
+			<div data-testid={"custom-text-" + type}>{text}</div>
+		)),
+	})
+);
+jest.mock(
+	"../../../components/BlockQuote/BlockQuote.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ children }) => (
+			<div data-testid="blockquote">{children}</div>
+		)),
+	})
+);
+jest.mock(
+	"../../../components/CustomButton/CustomButton.js",
+	() => ({
+		__esModule: true,
+		default: jest.fn(({ text, onClick }) => (
 			<button
-				data-text={text}
-				data-contact={isContact}
-				data-cta={isCta}
-				data-icon={icon}
+				data-testid={"contact-button-" + text}
 				onClick={onClick}
 			>
 				{text}
 			</button>
-		),
+		)),
 	})
 );
 
-// Run the test
+/**
+ * Test suite for the ContactsContent component.
+ * The test suite contains:
+ * 1. A test to verify correct rendering of main components.
+ * 2. A test to verify that all contact buttons are rendered.
+ * 3. A test to verify that clicking a button triggers the correct handler.
+ */
 describe("ContactsContent", () => {
-	// Clear all mocks before running each test
+	// Define behavior before each test
 	beforeEach(() => {
 		jest.clearAllMocks();
-	});
 
-	// Test SectionBlock used in ContactContent
-	describe("SectionHeader", () => {
-		// Test if it renders the section title correctly
-		test("renders with correct title", () => {
-			render(<ContactsContent />);
-
-			expect(
-				screen.getByText(contactsTitle)
-			).toBeInTheDocument();
-		});
-
-		// Test if it renders the section subtitle correctly
-		test("renders with correct subtitle", () => {
-			render(<ContactsContent />);
-
-			expect(
-				screen.getByText(contactsSubtitle)
-			).toBeInTheDocument();
+		// Replace all handlers with mock functions
+		Object.keys(CONTACTS_CLICK_HANDLERS).forEach((key) => {
+			CONTACTS_CLICK_HANDLERS[key] = jest.fn();
 		});
 	});
 
-	// Test contact buttons visualized into ContactContent
-	describe("Contact buttons", () => {
-		// Test if all the buttons are rendered
-		// with the expected texts
-		test.each([[phone], [email], [emailPec], [facebook]])(
-			"renders button with text: %s",
-			(contactText) => {
-				render(<ContactsContent />);
+	/**
+	 * CASE 1: RENDERING MAIN COMPONENTS
+	 * Should render background, container, title and blockquote.
+	 */
+	it("should render main components correctly", () => {
+		render(<ContactsContent />);
 
-				expect(
-					screen.getByText(contactText)
-				).toBeInTheDocument();
-			}
+		// Check background image
+		const background = screen.getByTestId(
+			"section-background"
+		);
+		expect(background.dataset.image).toBe(
+			DOTTED_BACKGROUND_IMAGE_LINK
 		);
 
-		// Test if all buttons are set as contact buttons
-		test.each([[phone], [email], [emailPec], [facebook]])(
-			"sets %s button as contact button",
-			(contactText) => {
-				render(<ContactsContent />);
-
-				expect(
-					screen
-						.getByText(contactText)
-						.getAttribute("data-contact")
-				).toBeTruthy();
-			}
+		// Check container id
+		const container = screen.getByTestId(
+			"section-container"
 		);
+		expect(container.id).toBe(CONTACTS_SECTION_ID);
 
-		// Test if all buttons are not set as
-		// CTA buttons
-		test.each([[phone], [email], [emailPec], [facebook]])(
-			"sets %s buttons not as CTA button",
-			(contactText) => {
-				render(<ContactsContent />);
-
-				expect(
-					screen
-						.queryByText(contactText)
-						.getAttribute("data-cta") === "true"
-				).toBeFalsy();
-			}
+		// Check title
+		const title = screen.getByTestId(
+			"custom-text-" + CUSTOM_TEXT_TYPES.SUPER_HEADING
 		);
+		expect(title.textContent).toBe(CONTACTS_TITLE);
 
-		// Test if all buttons have the correct icon
-		test.each([
-			[phone, phoneIcon],
-			[email, emailIcon],
-			[emailPec, emailPecIcon],
-			[facebook, facebookIcon],
-		])(
-			"sets the correct icon to %s button",
-			(contactText, expectedIcon) => {
-				render(<ContactsContent />);
+		// Check blockquote
+		expect(
+			screen.getByTestId("blockquote")
+		).toBeInTheDocument();
 
-				expect(
-					screen.getByText(contactText)
-				).toHaveAttribute("data-icon", expectedIcon);
-			}
+		// Check buttons container class
+		const buttonsContainer = screen
+			.getByTestId("blockquote")
+			// eslint-disable-next-line testing-library/no-node-access
+			.querySelector("div");
+		expect(buttonsContainer.className).toBe(
+			CONTACTS_BUTTONS_CONTAINER_CLASS_NAME
 		);
+	});
 
-		// Test if all the buttons, once clicked,
-		// trigger the corresponding contact button handler
-		test.each([
-			[phone, mockPhoneHandler],
-			[email, mockEmailHandler],
-			[emailPec, mockEmailPecHandler],
-			[facebook, mockFacebookHandler],
-		])(
-			"clicking %s button triggers the handler",
-			(contactText, mockHandler) => {
-				render(<ContactsContent />);
+	/**
+	 * CASE 2: CONTACT BUTTONS RENDERING
+	 * Should render a button for each contact.
+	 */
+	it("should render all contact buttons", () => {
+		render(<ContactsContent />);
 
-				fireEvent.click(screen.getByText(contactText));
-				expect(mockHandler).toHaveBeenCalled();
-			}
-		);
+		ALL_CONTACTS.forEach((contact, index) => {
+			expect(
+				screen.getByTestId(
+					"contact-button-" + contact.value
+				)
+			).toBeInTheDocument();
+
+			const call = CustomButton.mock.calls[index][0];
+
+			expect(call.text).toBe(contact.value);
+			expect(call.icon).toBe(contact.icon);
+			expect(call.isContact).toBe(true);
+			expect(call.onClick).toBe(
+				CONTACTS_CLICK_HANDLERS[contact.value]
+			);
+		});
+	});
+
+	/**
+	 * CASE 3: BUTTON CLICK HANDLERS
+	 * Clicking a contact button should call the corresponding handler.
+	 */
+	it("should call correct handler on contact button click", () => {
+		render(<ContactsContent />);
+
+		ALL_CONTACTS.forEach((contact) => {
+			const button = screen.getByTestId(
+				"contact-button-" + contact.value
+			);
+
+			fireEvent.click(button);
+
+			expect(
+				CONTACTS_CLICK_HANDLERS[contact.value]
+			).toHaveBeenCalled();
+		});
 	});
 });

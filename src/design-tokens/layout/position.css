@@ -1,6 +1,6 @@
 /* -------- Position -------- */
 :root {
-	/* — Position — */
+	/*  Position  */
 	--position-fixed: fixed;
 	--position-absolute: absolute;
 	--position-relative: relative;
@@ -8,7 +8,7 @@
 	--position-center: 50%;
 	--position-center-translate: -50%;
 
-	/* — Display — */
+	/*  Display  */
 	--display-block: block;
 	--display-inline: inline;
 	--display-inline-block: inline-block;
@@ -16,12 +16,12 @@
 	--display-grid: grid;
 	--display-none: none;
 
-	/* — Flex Direction — */
+	/*  Flex Direction  */
 	--flex-direction-row: row;
 	--flex-direction-column: column;
 	--flex-direction-column-reverse: column-reverse;
 
-	/* — Justify — */
+	/*  Justify  */
 	--justify-content-center: center;
 	--justify-content-right: right;
 	--justify-content-left: left;

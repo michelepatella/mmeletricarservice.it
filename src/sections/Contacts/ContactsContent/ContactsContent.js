@@ -1,3 +1,4 @@
+import React from "react";
 import {
 	ALL_CONTACTS,
 	CONTACTS_CLICK_HANDLERS,
@@ -16,16 +17,15 @@ import SectionContainer from "../../../components/SectionContainer/SectionContai
 import SectionBackground from "../../../components/SectionBackground/SectionBackground.js";
 
 /**
- * This component represent the content
- * of the Contact section. It contains all the contact
- * buttons for each company contact available.
- * @returns {Element} — The contacts content component.
+ * This component represent the content of the 'Contact' section
+ * which contains a contact button for each company contact.
+ * @returns {Element} — The content of the 'Contacts' section.
  */
 function ContactsContent() {
 	return (
 		<SectionBackground image={DOTTED_BACKGROUND_IMAGE_LINK}>
 			<SectionContainer id={CONTACTS_SECTION_ID}>
-				{/* Contacts section title */}
+				{/* Section title */}
 				<CustomText
 					type={CUSTOM_TEXT_TYPES.SUPER_HEADING}
 					text={CONTACTS_TITLE}
@@ -34,13 +34,13 @@ function ContactsContent() {
 
 				{/* Block quote to highlight all contact buttons */}
 				<BlockQuote>
-					{/* Contact buttons container (contains all the contact buttons) */}
+					{/* Contact buttons container */}
 					<div
 						className={
 							CONTACTS_BUTTONS_CONTAINER_CLASS_NAME
 						}
 					>
-						{/* Add a button for each contact available */}
+						{/* A button for each contact */}
 						{ALL_CONTACTS?.map((contact) => (
 							<CustomButton
 								key={contact.value}

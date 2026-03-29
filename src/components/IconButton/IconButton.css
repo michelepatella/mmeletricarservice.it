@@ -7,7 +7,7 @@
 		var(--animation-timing-ease-out);
 }
 
-/* Icon Button — Hover */
+/* Icon Button  Hover */
 .icon-button:hover {
 	transform: scale(var(--scale-large));
 }
