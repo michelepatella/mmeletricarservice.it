@@ -1,8 +1,8 @@
 import {
 	onEmailButtonClick,
 	onFacebookButtonClick,
-	onPecButtonClick,
 	onPhoneButtonClick,
+	onPecButtonClick,
 } from "./contact-handlers.js";
 
 /**------------- Shared across the app -------------**/

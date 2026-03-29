@@ -15,10 +15,11 @@ export const useDrawerBackButtonHandler = (
 		try {
 			// Add a listener for popstate
 			/* eslint-disable-next-line no-undef */
-			globalThis.addEventListener(
-				"popstate",
-				onUsedCarDrawerClose(setIsDrawerOpen)
-			);
+			const handler = () => {
+				onUsedCarDrawerClose(setIsDrawerOpen);
+			};
+
+			globalThis.addEventListener("popstate", handler);
 		} catch (error) {
 			SentryReact.logger.error(error, {
 				context:
@@ -30,10 +31,11 @@ export const useDrawerBackButtonHandler = (
 		return () => {
 			try {
 				/* eslint-disable-next-line no-undef */
-				globalThis.removeEventListener(
-					"popstate",
-					onUsedCarDrawerClose(setIsDrawerOpen)
-				);
+				const handler = () => {
+					onUsedCarDrawerClose(setIsDrawerOpen);
+				};
+
+				globalThis.removeEventListener("popstate", handler);
 			} catch (error) {
 				SentryReact.logger.error(error, {
 					context:

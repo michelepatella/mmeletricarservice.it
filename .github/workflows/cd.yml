@@ -6,7 +6,7 @@ name: Continuous Delivery (CD)
 # Run the workflow only after successful CI run
 on:
   workflow_run:
-    workflows: ["CI"]
+    workflows: ["Continuous Integration (CI)"]
     types: [completed]
 
 # The workflow is organized into a single job:
