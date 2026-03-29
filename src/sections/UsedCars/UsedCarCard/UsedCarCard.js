@@ -17,7 +17,7 @@ import {
 } from "../const.js";
 import { onUsedCarDrawerOpen } from "../handler/handler.js";
 import { useOpenUsedCarDrawerFromUrl } from "./use-open-used-car-drawer-from-url/use-open-used-car-drawer-from-url.js";
-import UsedCarDrawer from "../UsedCarDrawer/UsedCarDrawer/UsedCarDrawer.js";
+import UsedCarDrawer from "../UsedCarDrawer/UsedCarDrawer.js";
 import CustomText from "../../../components/CustomText/CustomText.js";
 import UsedCarOverview from "../UsedCarOverview/UsedCarOverview.js";
 

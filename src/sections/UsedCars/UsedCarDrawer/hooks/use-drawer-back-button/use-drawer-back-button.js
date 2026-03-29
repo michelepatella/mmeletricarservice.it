@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { SentryReact } from "../../../../../../index.js";
-import { onUsedCarDrawerClose } from "../../../../handler/handler.js";
+import { SentryReact } from "../../../../../index.js";
+import { onUsedCarDrawerClose } from "../../../handler/handler.js";
 
 /**
  * Custom hook to manage the back button clicking

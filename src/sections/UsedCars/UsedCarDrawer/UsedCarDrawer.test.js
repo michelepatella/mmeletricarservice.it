@@ -27,7 +27,7 @@ jest.mock("antd", () => {
 	};
 });
 jest.mock(
-	"../UsedCarDrawerInfoPanel/UsedCarDrawerInfoPanel.js",
+	"./UsedCarDrawerInfoPanel/UsedCarDrawerInfoPanel.js",
 	() => {
 		const React = require("react");
 
@@ -41,7 +41,7 @@ jest.mock(
 	}
 );
 jest.mock(
-	"../UsedCarDrawerCarousel/UsedCarDrawerCarousel.js",
+	"./UsedCarDrawerCarousel/UsedCarDrawerCarousel.js",
 	() => {
 		const React = require("react");
 
@@ -55,7 +55,7 @@ jest.mock(
 	}
 );
 jest.mock(
-	"../../../../components/BackButton/BackButton.js",
+	"../../../components/BackButton/BackButton.js",
 	() => {
 		const React = require("react");
 
@@ -69,7 +69,7 @@ jest.mock(
 	}
 );
 jest.mock(
-	"../../../../components/LoadingOutlined/LoadingOutlined.js",
+	"../../../components/LoadingOutlined/LoadingOutlined.js",
 	() => {
 		const React = require("react");
 
@@ -94,7 +94,7 @@ jest.mock(
 		useDrawerBackButtonHandler: jest.fn(),
 	})
 );
-jest.mock("../../handler/handler.js", () => ({
+jest.mock("../handler/handler.js", () => ({
 	onUsedCarDrawerClose: jest.fn(),
 }));
 

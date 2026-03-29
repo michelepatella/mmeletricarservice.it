@@ -9,7 +9,7 @@ import {
 	screen,
 	fireEvent,
 } from "@testing-library/react";
-import UsedCarCard from "./UsedCarCard";
+import UsedCarCard from "./UsedCarCard.js";
 import * as handler from "../handler/handler.js";
 import { USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION } from "./const.js";
 import { onUsedCarDrawerOpen } from "../handler/handler.js";
@@ -28,13 +28,10 @@ jest.mock(
 		useOpenUsedCarDrawerFromUrl: jest.fn(),
 	})
 );
-jest.mock(
-	"../UsedCarDrawer/UsedCarDrawer/UsedCarDrawer.js",
-	() => ({
-		__esModule: true,
-		default: () => <div data-testid="used-car-drawer" />,
-	})
-);
+jest.mock("../UsedCarDrawer/UsedCarDrawer.js", () => ({
+	__esModule: true,
+	default: () => <div data-testid="used-car-drawer" />,
+}));
 jest.mock("./const.js", () => ({
 	USED_CARS_UNAVAILABLE_IMAGE_DESCRIPTION:
 		"unavaiable-image-description",

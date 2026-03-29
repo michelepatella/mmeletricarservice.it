@@ -24,27 +24,23 @@ const { Header, Content } = Layout;
  */
 function Home() {
 	return (
-		<>
-			<SectionBackground
-				image={DOTTED_BACKGROUND_IMAGE_LINK}
+		<SectionBackground image={DOTTED_BACKGROUND_IMAGE_LINK}>
+			{/* Layout */}
+			<Layout
+				className={HOME_LAYOUT_CLASS_NAME}
+				id={HOME_SECTION_ID}
 			>
-				{/* Layout */}
-				<Layout
-					className={HOME_LAYOUT_CLASS_NAME}
-					id={HOME_SECTION_ID}
-				>
-					{/* Header */}
-					<Header className={HOME_HEADER_CLASS_NAME}>
-						<HomeHeader />
-					</Header>
+				{/* Header */}
+				<Header className={HOME_HEADER_CLASS_NAME}>
+					<HomeHeader />
+				</Header>
 
-					{/* Content */}
-					<Content className={HOME_CONTENT_CLASS_NAME}>
-						<HomeContent />
-					</Content>
-				</Layout>
-			</SectionBackground>
-		</>
+				{/* Content */}
+				<Content className={HOME_CONTENT_CLASS_NAME}>
+					<HomeContent />
+				</Content>
+			</Layout>
+		</SectionBackground>
 	);
 }
 
