@@ -4,13 +4,13 @@
 
 import { renderHook } from "@testing-library/react";
 import { useDrawerBackButtonHandler } from "./use-drawer-back-button";
-import { SentryReact } from "../../../../../../index.js";
+import { SentryReact } from "../../../../../index.js";
 
 // Mocks
-jest.mock("../../../../handler/handler.js", () => ({
+jest.mock("../../../handler/handler.js", () => ({
 	onUsedCarDrawerClose: jest.fn(),
 }));
-jest.mock("../../../../../../index.js", () => ({
+jest.mock("../../../../../index.js", () => ({
 	SentryReact: {
 		logger: {
 			error: jest.fn(),

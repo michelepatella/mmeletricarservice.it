@@ -5,21 +5,21 @@
 import { renderHook } from "@testing-library/react";
 import { useUsedCarInfo } from "./use-used-car-info";
 import { useQuery } from "@tanstack/react-query";
-import { USED_CAR_INFO_ENDPOINT } from "../../../../../../utils/const.js";
+import { USED_CAR_INFO_ENDPOINT } from "../../../../../utils/const.js";
 import { USED_CAR_INFO_API_KEY } from "../../const.js";
-import { SentryReact } from "../../../../../../index.js";
+import { SentryReact } from "../../../../../index.js";
 
 // Mocks
 jest.mock("@tanstack/react-query", () => ({
 	useQuery: jest.fn(),
 }));
 jest.mock(
-	"../../../../../../utils/data-fetcher/data-fetcher.js",
+	"../../../../../utils/data-fetcher/data-fetcher.js",
 	() => ({
 		fetchData: jest.fn(),
 	})
 );
-jest.mock("../../../../../../index.js", () => ({
+jest.mock("../../../../../index.js", () => ({
 	SentryReact: {
 		logger: {
 			error: jest.fn(),

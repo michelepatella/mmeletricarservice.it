@@ -28,7 +28,7 @@ import "../sections/Services/Services.css";
 import "../sections/UsedCars/UsedCars.css";
 import "../sections/UsedCars/UsedCarOverview/UsedCarOverview.css";
 import "../sections/UsedCars/UsedCarCard/UsedCarCard.css";
-import "../sections/UsedCars/UsedCarDrawer/UsedCarDrawer/UsedCarDrawer.css";
+import "../sections/UsedCars/UsedCarDrawer/UsedCarDrawer.css";
 import "../sections/UsedCars/UsedCarDrawer/UsedCarDrawerCarousel/UsedCarDrawerCarousel.css";
 import "../sections/UsedCars/UsedCarDrawer/UsedCarDrawerCollapse/UsedCarDrawerCollapse.css";
 import "../sections/WhereWeAre/WhereWeAre.css";
