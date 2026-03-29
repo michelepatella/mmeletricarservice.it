@@ -109,13 +109,10 @@ describe("MenuSmallScreen", () => {
 	 * This test verifies that the drawer is rendered with correct
 	 * placement and closeIcon.
 	 */
-	it("renders drawer with correct props", () => {
+	it("renders drawer with correct props", async () => {
 		render(<MenuSmallScreen />);
 
-		// eslint-disable-next-line testing-library/no-node-access
-		const drawer = document.querySelector(
-			"[role='dialog']"
-		);
+		const drawer = await screen.findByRole("dialog");
 		expect(drawer).toBeInTheDocument();
 
 		// eslint-disable-next-line testing-library/no-node-access
@@ -130,20 +127,24 @@ describe("MenuSmallScreen", () => {
 	 * This test verifies that parent and children menu items are
 	 * rendered correctly.
 	 */
-	it("renders parent and children menu items", () => {
+	it("renders parent and children menu items", async () => {
 		render(<MenuSmallScreen />);
 
 		// Parent items
 		expect(
-			screen.getByText("Parent 1")
+			await screen.findByText("Parent 1")
 		).toBeInTheDocument();
 		expect(
-			screen.getByText("Parent 2")
+			await screen.findByText("Parent 2")
 		).toBeInTheDocument();
 
 		// Children items
-		expect(screen.getByText("Child 1")).toBeInTheDocument();
-		expect(screen.getByText("Child 2")).toBeInTheDocument();
+		expect(
+			await screen.findByText("Child 1")
+		).toBeInTheDocument();
+		expect(
+			await screen.findByText("Child 2")
+		).toBeInTheDocument();
 
 		// eslint-disable-next-line testing-library/no-node-access
 		const childElements = document.querySelectorAll(

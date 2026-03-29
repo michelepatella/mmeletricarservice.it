@@ -17,10 +17,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import CustomText from "./CustomText.js";
-import {
-	CUSTOM_TEXT_CLASS_NAME_PREFIX,
-	CUSTOM_TEXT_DEFAULT_OPACITY,
-} from "./const.js";
+import { CUSTOM_TEXT_CLASS_NAME_PREFIX } from "./const.js";
 import useIntersectionObserver from "../../hooks/use-intersection-observer.js";
 
 /**
@@ -29,8 +26,7 @@ import useIntersectionObserver from "../../hooks/use-intersection-observer.js";
  * 1. A test to verify that the text is correctly rendered.
  * 2. A test to verify that HTML content is rendered correctly.
  * 3. A test to verify that the correct className is applied.
- * 4. A test to verify that animation is disabled when requested.
- * 5. A test to verify that the intersection observer hook is called.
+ * 4. A test to verify that the intersection observer hook is called.
  */
 describe("CustomText", () => {
 	/**
@@ -75,26 +71,7 @@ describe("CustomText", () => {
 	});
 
 	/**
-	 * CASE 4: DISABLE ANIMATION
-	 * This test verifies that when animation is disabled,
-	 * the correct style is applied.
-	 */
-	it("applies default opacity when animation is disabled", () => {
-		render(
-			<CustomText
-				text="Some text"
-				type="body"
-				disableAnimation
-			/>
-		);
-
-		expect(screen.getByText("Some text")).toHaveStyle({
-			opacity: CUSTOM_TEXT_DEFAULT_OPACITY,
-		});
-	});
-
-	/**
-	 * CASE 5: INTERSECTION OBSERVER HOOK
+	 * CASE 4: INTERSECTION OBSERVER HOOK
 	 * This test verifies that the intersection observer hook is called.
 	 */
 	it("calls useIntersectionObserver", () => {

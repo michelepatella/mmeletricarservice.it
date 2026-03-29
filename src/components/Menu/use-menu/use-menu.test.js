@@ -5,7 +5,11 @@
 /* eslint-disable import/first */
 
 import React, { useEffect } from "react";
-import { render, act } from "@testing-library/react";
+import {
+	render,
+	act,
+	waitFor,
+} from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { useMenu } from "./use-menu.js";
 
@@ -51,6 +55,7 @@ function TestHookComponent({ callback }) {
  * 2. toggleDrawer functionality.
  * 3. Menu item onClick behavior.
  * 4. Children menu item onClick behavior.
+ * 5. Child section priority in section detection.
  */
 describe("useMenu", () => {
 	/**
@@ -200,5 +205,54 @@ describe("useMenu", () => {
 		expect(document.documentElement.style.overflowY).toBe(
 			"var(--overflow-auto)"
 		);
+	});
+
+	/**
+	 * CASE 5: CHILD SECTION PRIORITY
+	 * Should return child section if it is the closest valid match.
+	 */
+	it("should prioritize child section when it is closest valid match", async () => {
+		let hookValues = null;
+
+		Object.defineProperty(window, "innerHeight", {
+			writable: true,
+			value: 800,
+		});
+
+		// Clean DOM
+		document.body.innerHTML = "";
+
+		// Parent (not visible enough)
+		const parent = document.createElement("div");
+		parent.id = "section-1";
+		parent.getBoundingClientRect = jest.fn(() => ({
+			top: 500,
+			bottom: 600,
+		}));
+
+		// Child (closer)
+		const child = document.createElement("div");
+		child.id = "child-1";
+		child.getBoundingClientRect = jest.fn(() => ({
+			top: 10,
+			bottom: 100,
+		}));
+
+		document.body.appendChild(parent);
+		document.body.appendChild(child);
+
+		render(
+			<TestHookComponent
+				callback={(hook) => (hookValues = hook)}
+			/>
+		);
+
+		act(() => {
+			window.dispatchEvent(new Event("scroll"));
+		});
+
+		await waitFor(() => {
+			expect(hookValues.section).toBe("child-1");
+		});
 	});
 });

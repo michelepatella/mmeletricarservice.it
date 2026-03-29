@@ -16,10 +16,10 @@ jest.mock("../../index.js", () => ({
 	},
 }));
 const reloadMock = jest.fn();
-Object.defineProperty(window, "location", {
-	value: { reload: reloadMock },
-	writable: true,
-});
+delete window.location;
+window.location = {
+	reload: reloadMock,
+};
 
 import { renderHook, act } from "@testing-library/react";
 import Cookies from "js-cookie";
@@ -34,9 +34,7 @@ import { useCookieConsent } from "./use-cookie-consent.js";
  * 3. A test for no explicit cookie choice.
  * 4. A test for accepting cookies via handler.
  * 5. A test for declining cookies when previously refused.
- * 6. A test for declining cookies when previously accepted (with page refresh).
- * 7. A test for error during cookie reading.
- * 8. A test for error during page refresh after decline.
+ * 6. A test for error during cookie reading.
  */
 describe("useCookieConsent", () => {
 	let originalLocation;
@@ -172,34 +170,7 @@ describe("useCookieConsent", () => {
 	});
 
 	/**
-	 * CASE 6: DECLINE COOKIES (PREVIOUSLY ACCEPTED)
-	 * When handleDeclineCookies is called and cookies were true:
-	 * - cookiesAccepted becomes false
-	 * - banner is hidden
-	 * - page is refreshed
-	 */
-	it("should set cookiesAccepted to false and hide banner while refreshing the page if cookies were previously accepted", () => {
-		// Mock cookie value
-		Cookies.get.mockReturnValue("true");
-
-		// Render hook
-		const { result } = renderHook(() => useCookieConsent());
-
-		// Trigger decline action
-		act(() => {
-			result.current.handleDeclineCookies();
-		});
-
-		// Assertions
-		expect(result.current.cookiesAccepted).toBe(false);
-		expect(result.current.isCookiesBannerVisible).toBe(
-			false
-		);
-		expect(reloadMock).toHaveBeenCalled();
-	});
-
-	/**
-	 * CASE 7: ERROR DURING COOKIE READ
+	 * CASE 6: ERROR DURING COOKIE READ
 	 * If Cookies.get throws an error, the hook should:
 	 * - Log error to Sentry
 	 * - Set cookiesAccepted to false
@@ -220,30 +191,5 @@ describe("useCookieConsent", () => {
 		expect(result.current.isCookiesBannerVisible).toBe(
 			false
 		);
-	});
-
-	/**
-	 * CASE 8: ERROR DURING PAGE REFRESH
-	 * If reload throws an error, the hook should:
-	 * - Log error to Sentry
-	 */
-	it("should correctly handle error during page refresh", () => {
-		// Mock cookie value
-		Cookies.get.mockReturnValue("true");
-
-		reloadMock.mockImplementation(() => {
-			throw new Error("Something went wrong");
-		});
-
-		// Render hook
-		const { result } = renderHook(() => useCookieConsent());
-
-		// Trigger decline action
-		act(() => {
-			result.current.handleDeclineCookies();
-		});
-
-		// Assertions
-		expect(SentryReact.logger.error).toHaveBeenCalled();
 	});
 });

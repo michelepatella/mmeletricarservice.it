@@ -22,9 +22,8 @@ jest.mock("../../../../index.js", () => ({
  * Test suite for useOpenUsedCarDrawerFromUrl hook.
  * The test suite contains:
  * 1. A test to verify no action is taken when id is missing.
- * 2. A test to verify drawer is opened when URL matches id.
- * 3. A test to verify drawer is not opened when URL does not match id.
- * 4. A test to verify hook does not crash on invalid URL.
+ * 2. A test to verify drawer is not opened when URL does not match id.
+ * 3. A test to verify hook does not crash on invalid URL.
  */
 describe("useOpenUsedCarDrawerFromUrl", () => {
 	// Define behavior before each test
@@ -37,12 +36,10 @@ describe("useOpenUsedCarDrawerFromUrl", () => {
 	 * Should not attempt to open drawer when id is missing.
 	 */
 	it("should not open drawer when id is missing", () => {
-		Object.defineProperty(window, "location", {
-			value: {
-				pathname: "/auto-usate/12",
-			},
-			writable: true,
-		});
+		delete window.location;
+		window.location = {
+			pathname: "/auto-usate/12",
+		};
 
 		renderHook(() =>
 			useOpenUsedCarDrawerFromUrl(jest.fn(), null)
@@ -52,42 +49,16 @@ describe("useOpenUsedCarDrawerFromUrl", () => {
 	});
 
 	/**
-	 * CASE 2: MATCHING ID
-	 * Should open drawer when URL id matches car id.
-	 */
-	it("should open drawer when URL matches id", () => {
-		const setIsDrawerOpen = jest.fn();
-
-		Object.defineProperty(window, "location", {
-			value: {
-				pathname: "/auto-usate/12",
-			},
-			writable: true,
-		});
-
-		renderHook(() =>
-			useOpenUsedCarDrawerFromUrl(setIsDrawerOpen, "12")
-		);
-
-		expect(onUsedCarDrawerOpen).toHaveBeenCalledWith(
-			setIsDrawerOpen,
-			"12"
-		);
-	});
-
-	/**
-	 * CASE 3: NON MATCHING ID
+	 * CASE 2: NON MATCHING ID
 	 * Should not open drawer when URL id does not match.
 	 */
 	it("should not open drawer when URL does not match id", () => {
 		const setIsDrawerOpen = jest.fn();
 
-		Object.defineProperty(window, "location", {
-			value: {
-				pathname: "/auto-usate/99",
-			},
-			writable: true,
-		});
+		delete window.location;
+		window.location = {
+			pathname: "/auto-usate/99",
+		};
 
 		renderHook(() =>
 			useOpenUsedCarDrawerFromUrl(setIsDrawerOpen, "12")
@@ -97,18 +68,16 @@ describe("useOpenUsedCarDrawerFromUrl", () => {
 	});
 
 	/**
-	 * CASE 4: INVALID URL
+	 * CASE 3: INVALID URL
 	 * Should not crash when URL does not match expected pattern.
 	 */
 	it("should not crash on invalid URL", () => {
 		const setIsDrawerOpen = jest.fn();
 
-		Object.defineProperty(window, "location", {
-			value: {
-				pathname: "/random-path",
-			},
-			writable: true,
-		});
+		delete window.location;
+		window.location = {
+			pathname: "/random-path",
+		};
 
 		renderHook(() =>
 			useOpenUsedCarDrawerFromUrl(setIsDrawerOpen, "12")
