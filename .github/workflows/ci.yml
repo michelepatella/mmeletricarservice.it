@@ -80,7 +80,7 @@ jobs:
       # Run project tests
       - name: Run tests
         run: npx jest --ci --runInBand --coverage
-      
+
       # Upload code coverage report
       - name: Upload code coverage report
         uses: actions/upload-artifact@v4
@@ -165,14 +165,14 @@ jobs:
       # Install dependencies
       - name: Install dependencies
         run: npm ci --ignore-scripts
-      
+
       # Download code coverage report
       - name: Download code coverage report
         uses: actions/download-artifact@v4
         with:
           name: coverage
           path: coverage
-      
+
       # Run SonarQube analysis for code quality
       - name: Run static analysis
         uses: SonarSource/sonarqube-scan-action@fd88b7d7ccbaefd23d8f36f73b59db7a3d246602
