@@ -75,7 +75,10 @@
 			"!api/**/const.js"
 		],
 		"collectCoverage": true,
-    	"coverageReporters": ["lcov", "text"],
+		"coverageReporters": [
+			"lcov",
+			"text"
+		],
 		"moduleNameMapper": {
 			"\\.(css|less|sass|scss)$": "identity-obj-proxy"
 		}
