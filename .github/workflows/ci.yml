@@ -79,7 +79,7 @@ jobs:
 
       # Run project tests
       - name: Run tests
-        run: npm run test -- --watchAll=${{ vars.TEST_WATCH_ALL }}
+        run: npx jest --ci --runInBand --coverage
 
   # ----------------------------------------------------------------------
   # Security Scan
