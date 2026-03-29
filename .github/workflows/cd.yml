@@ -8,6 +8,7 @@ on:
   workflow_run:
     workflows: ["Continuous Integration (CI)"]
     types: [completed]
+    branches: [main]
 
 # The workflow is organized into a single job:
 # - Deploy:
