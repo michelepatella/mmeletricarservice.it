@@ -12,7 +12,7 @@ on:
 
 # The workflow is organized into a single job:
 # - Deploy:
-#     Deploy the built project to Vercel.
+#     Build the project and deploy the built output to Vercel.
 jobs:
   # ----------------------------------------------------------------------
   # Deploy
@@ -20,8 +20,38 @@ jobs:
   deploy:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+
     steps:
-      # Deploy to Vercel using the Vercel CLI
+      # ------------------------------------------------------------------
+      # Checkout repository
+      # ------------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ------------------------------------------------------------------
+      # Setup Node.js environment
+      # ------------------------------------------------------------------
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ vars.NODE_VERSION }}
+          cache: npm
+
+      # ------------------------------------------------------------------
+      # Install dependencies
+      # ------------------------------------------------------------------
+      - name: Install dependencies
+        run: npm ci
+
+      # ------------------------------------------------------------------
+      # Build project
+      # ------------------------------------------------------------------
+      - name: Build project
+        run: npm run build
+
+      # ------------------------------------------------------------------
+      # Deploy to Vercel (prebuilt)
+      # ------------------------------------------------------------------
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
@@ -29,7 +59,6 @@ jobs:
           VERCEL_TEAM: ${{ secrets.VERCEL_TEAM }}
         run: |
           npx vercel --prod --yes \
-            --token $VERCEL_TOKEN \
-            --confirm \
+            --token $VERCEL_TOKEN --confirm \
             --name $VERCEL_PROJECT_NAME \
             --scope $VERCEL_TEAM
