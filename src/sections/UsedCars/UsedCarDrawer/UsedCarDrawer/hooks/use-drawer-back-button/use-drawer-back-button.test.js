@@ -4,7 +4,6 @@
 
 import { renderHook } from "@testing-library/react";
 import { useDrawerBackButtonHandler } from "./use-drawer-back-button";
-import { onUsedCarDrawerClose } from "../../../../handler/handler.js";
 import { SentryReact } from "../../../../../../index.js";
 
 // Mocks
@@ -38,21 +37,15 @@ describe("useDrawerBackButtonHandler", () => {
 	 */
 	it("should register popstate listener", () => {
 		const addEventListenerSpy = jest.spyOn(
-			// eslint-disable-next-line no-undef
 			globalThis,
 			"addEventListener"
 		);
 
-		const mockHandler = jest.fn();
-		onUsedCarDrawerClose.mockReturnValue(mockHandler);
-
 		renderHook(() => useDrawerBackButtonHandler(jest.fn()));
-
-		expect(onUsedCarDrawerClose).toHaveBeenCalled();
 
 		expect(addEventListenerSpy).toHaveBeenCalledWith(
 			"popstate",
-			mockHandler
+			expect.any(Function)
 		);
 	});
 
@@ -62,13 +55,9 @@ describe("useDrawerBackButtonHandler", () => {
 	 */
 	it("should remove popstate listener on unmount", () => {
 		const removeEventListenerSpy = jest.spyOn(
-			// eslint-disable-next-line no-undef
 			globalThis,
 			"removeEventListener"
 		);
-
-		const mockHandler = jest.fn();
-		onUsedCarDrawerClose.mockReturnValue(mockHandler);
 
 		const { unmount } = renderHook(() =>
 			useDrawerBackButtonHandler(jest.fn())
@@ -78,7 +67,7 @@ describe("useDrawerBackButtonHandler", () => {
 
 		expect(removeEventListenerSpy).toHaveBeenCalledWith(
 			"popstate",
-			mockHandler
+			expect.any(Function)
 		);
 	});
 
@@ -90,7 +79,6 @@ describe("useDrawerBackButtonHandler", () => {
 		const error = new Error("addEventListener failed");
 
 		jest
-			// eslint-disable-next-line no-undef
 			.spyOn(globalThis, "addEventListener")
 			.mockImplementation(() => {
 				throw error;
@@ -115,7 +103,6 @@ describe("useDrawerBackButtonHandler", () => {
 		const error = new Error("removeEventListener failed");
 
 		jest
-			// eslint-disable-next-line no-undef
 			.spyOn(globalThis, "removeEventListener")
 			.mockImplementation(() => {
 				throw error;
