@@ -39,6 +39,7 @@ describe("BlockQuote", () => {
 		expect(
 			screen
 				.getByText("Some text within block quote")
+				// eslint-disable-next-line testing-library/no-node-access
 				.closest("blockquote")
 		).toBeInTheDocument();
 	});

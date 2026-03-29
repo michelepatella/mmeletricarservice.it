@@ -153,6 +153,7 @@ describe("WhereWeAre", () => {
 		// eslint-disable-next-line testing-library/no-node-access
 		const container = screen
 			.getByTestId("section-container")
+			// eslint-disable-next-line testing-library/no-node-access
 			.querySelector(
 				"." + WHERE_WE_ARE_GOOGLE_MAPS_CONTAINER_CLASS_NAME
 			);
@@ -188,6 +189,7 @@ describe("WhereWeAre", () => {
 		// eslint-disable-next-line testing-library/no-node-access
 		const container = screen
 			.getByTestId("section-container")
+			// eslint-disable-next-line testing-library/no-node-access
 			.querySelector(
 				"." + WHERE_WE_ARE_GOOGLE_MAPS_CONTAINER_CLASS_NAME
 			);

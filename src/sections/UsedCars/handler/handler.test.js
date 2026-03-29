@@ -6,7 +6,6 @@ import {
 	onUsedCarDrawerOpen,
 	onUsedCarDrawerClose,
 } from "./handler.js";
-import { USED_CAR_DRAWER_OPEN_CLASS_NAME } from "../const.js";
 
 // Mock
 jest.mock("../../../index.js", () => ({

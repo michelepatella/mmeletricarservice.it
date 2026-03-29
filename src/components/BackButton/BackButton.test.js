@@ -54,8 +54,8 @@ describe("BackButton", () => {
 	 */
 	it("renders the icon", () => {
 		const { container } = render(<BackButton />);
-		// eslint-disable-next-line testing-library/no-node-access, testing-library/no-container
 		expect(
+			// eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
 			container.querySelector("svg")
 		).toBeInTheDocument();
 	});

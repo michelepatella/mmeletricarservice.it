@@ -6,7 +6,6 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import SectionContainer from "./SectionContainer.js";
-import { SECTION_CONTAINER_CLASS_NAME } from "./const.js";
 
 /**
  * Test suite for the SectionContainer component.
