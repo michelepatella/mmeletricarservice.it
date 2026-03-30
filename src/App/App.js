@@ -80,8 +80,7 @@ function App() {
 
 	return (
 		<>
-			{/* Vercel Analytics (cookie-free and
-			privacy-friendly) */}
+			{/* Vercel Analytics (cookie-free and privacy-friendly) */}
 			<Analytics />
 			{/* React Router (HashRouter for the navigation
 			across the web application) */}
