@@ -19,15 +19,6 @@ jest.mock("src/index.js", () => ({}), { virtual: true });
 jest.mock("@vercel/analytics/react", () => ({}), {
 	virtual: true,
 });
-jest.mock(
-	"@vercel/speed-insights/react",
-	() => ({
-		SpeedInsights: () => (
-			<div data-testid="speed-insights" />
-		),
-	}),
-	{ virtual: true }
-);
 jest.mock("react-router-dom", () => ({}), {
 	virtual: true,
 });

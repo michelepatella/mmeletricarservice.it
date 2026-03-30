@@ -25,15 +25,6 @@ jest.mock(
 	{ virtual: true }
 );
 jest.mock(
-	"@vercel/speed-insights/react",
-	() => ({
-		SpeedInsights: () => (
-			<div data-testid="speed-insights" />
-		),
-	}),
-	{ virtual: true }
-);
-jest.mock(
 	"react-router-dom",
 	() => ({
 		HashRouter: ({ children }) => (
