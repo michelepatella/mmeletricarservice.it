@@ -5,6 +5,7 @@ import {
 } from "@tanstack/react-query";
 import { HashRouter } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useCookieConsent } from "./use-cookie-consent/use-cookie-consent.js";
 import Home from "../sections/Home/Home/Home.js";
 import AboutUs from "../sections/AboutUs/AboutUs.js";
@@ -80,9 +81,10 @@ function App() {
 
 	return (
 		<>
-			{/* Vercel Analytics (cookie-free and
+			{/* Vercel Analytics and Speed Insights (cookie-free and
 			privacy-friendly) */}
 			<Analytics />
+			<SpeedInsights />
 			{/* React Router (HashRouter for the navigation
 			across the web application) */}
 			<HashRouter>
