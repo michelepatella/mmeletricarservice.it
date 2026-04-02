@@ -31,11 +31,14 @@
 ![Uptime Status](https://img.shields.io/website?url=https%3A%2F%2Fmmeletricarservice.betteruptime.com&style=for-the-badge&logo=betterstack&label=Uptime%20Status)
 </div>
 
+<br>
+
 <div align="center">
-  
+  <img width="700" src="https://github.com/user-attachments/assets/f77f49c1-6bbe-487d-9a09-4797aa9d7881" />
 </div>
 
-<br/>
+<br>
+<br>
 
 <!-- TABLE OF CONTENT -->
 <details>
@@ -53,6 +56,12 @@
 
 <!-- 'OVERVIEW & IMPACT' SECTION -->
 ## Overview & Impact
+
+Full-stack web application, deployed and live, supporting an Italian car workshop and used car dealership by enhancing its digital presence and providing customers with clear, accessible information for confident decision-making.
+
+In the last 3 months:
+- **1.8K+** search appearances, increasing the website’s **online local visibility**.
+- **~1.7** average ranking across key queries, positioning the website among **top search results**.
 
 <p align="right"><a href="#readme-top">Top ↑</a></p>
 
