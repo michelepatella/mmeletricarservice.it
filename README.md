@@ -14,7 +14,7 @@
 
   <!-- DESCRIPTION AND LINKS -->
   <p align="center">
-    Full-stack web application with DevOps practices, deployed in production for an Italian car workshop and used car dealership, improving digital presence and customer decision-making.
+    Full-stack web application with DevOps practices, deployed in production for an Italian car workshop and used car dealership, enhancing digital presence and improving customer decision-making.
     <br/>
     <br/>
     <a href="https://github.com/michelepatella/mmeletricarservice.it">GitHub</a>
@@ -74,7 +74,7 @@
 - Built a CD pipeline with GitHub Actions enabling automated preview and production deployments on Vercel, achieving an average deployment time of **∼3m 30s** with zero-downtime releases
 - Implemented a multi-layer testing strategy spanning API routes, React components, and business logic (custom hooks and utility functions), achieving **84%** test coverage and improving application reliability by reducing regressions
 - Integrated system-wide observability across frontend and backend, using error tracking (Sentry), logs (Vercel and Supabase), and uptime monitoring (Better Uptime), improving visibility into system health and reliability
-- Established a data-driven feedback loop leveraging user analytics (Vercel Analytics), performance auditing (GTmetrix), API load testing (Oha), and search performance monitoring (Google Search Console) to guide engineering decisions and continuously improve application performance and discoverability
+- Established a data-driven feedback loop leveraging user analytics (Vercel Analytics), performance auditing (GTmetrix), API load testing (oha), and search performance monitoring (Google Search Console) to guide engineering decisions and continuously improve application performance and discoverability
 
 <p align="right"><a href="#readme-top">Top ↑</a></p>
 
@@ -93,13 +93,13 @@
   - **Security**: npm audit
   - **Static Analysis**: SonarQube
   - **Testing**: Jest, React Testing Library
-- **Deployment**:
-  - **Infrastructure**: Vercel 
-  - **CI/CD**: GitHub Actions
+- **Deployment**: Vercel  
+- **CI/CD**: GitHub Actions
 - **Monitoring**:
-  - **Availabilty**: Better Uptime
-  - **Load Testing**: Oha
+  - **Availability**: Better Uptime
   - **Error Tracking**: Sentry
+  - **Platform Logs & Observability**: Supabase (Backend) / Vercel (Serverless) Logs
+  - **Analytics**: Vercel Analytics
 
 <p align="right"><a href="#readme-top">Top ↑</a></p>
 
