@@ -64,17 +64,17 @@
 - Engineered a modular, mobile-first React SPA achieving an average across mobile and desktop of **1s LCP**, **0** CLS, and **0.9s** Speed Index, with low-latency data delivery (**0.1s** TTFB)
 - Implemented server-state management with React Query (stale-while-revalidate, query deduplication, caching-first), reducing redundant API calls and improving client-side performance
 - Developed stateless, scalable Vercel serverless functions, maintaining a **100%** success rate over 5k requests (50 concurrent) with average latency **466-670ms**, p95 latency **<1s**, and throughput **74-107 req/s**
-- Architected a scalable Supabase infrastructure (PostgreSQL, B-tree indexing, RLS, Storage), achieving **193–334ms** average latency over ∼15k–25k data and asset requests with no observed errors
+- Built a scalable Supabase infrastructure (PostgreSQL, B-tree indexing, RLS, Storage), achieving **193–334ms** average latency over ∼15k–25k data and asset requests with no observed errors
 
 <!-- 'DEVOPS' SUBSECTION -->
 ### DevOps
 
-- Standardized development workflow using GitFlow, Conventional Commits, Semantic Versioning, and Husky pre-commit hooks, improving codebase consistency and ensuring reliable release traceability
-- Implemented a CI pipeline via GitHub Actions with linting and formatting (ESLint, Prettier), automated testing (Jest, React Testing Library with coverage reporting), security scanning (npm audit), building, and static analysis (SonarQube Quality Gate), maintaining code quality
+- Standardized development workflow using Git, Conventional Commits, Semantic Versioning, and Husky pre-commit hooks, improving codebase consistency and ensuring reliable release traceability
+- Implemented a CI pipeline via GitHub Actions covering linting and formatting (ESLint, Prettier), automated testing (Jest, React Testing Library with coverage), security scanning (npm audit), builds, and static analysis (SonarQube Quality Gate), ensuring consistent code quality
 - Built a CD pipeline with GitHub Actions enabling automated preview and production deployments on Vercel, achieving an average deployment time of **∼3m 30s** with zero-downtime releases
-- Implemented a multi-layer testing strategy spanning API routes, React components, and business logic (custom hooks and utility functions), achieving **84%** test coverage and improving application reliability by reducing regressions
-- Integrated system-wide observability across frontend and backend, using error tracking (Sentry), logs (Vercel and Supabase), and uptime monitoring (Better Uptime), improving visibility into system health and reliability
-- Established a data-driven feedback loop leveraging user analytics (Vercel Analytics), performance auditing (GTmetrix), API load testing (oha), and search performance monitoring (Google Search Console) to guide engineering decisions and continuously improve application performance and discoverability
+- Implemented a multi-layer testing strategy spanning API routes, React components, and business logic (custom hooks and utility functions), achieving **84%** test coverage and improving application reliability
+- Leveraged observability tooling including error tracking (Sentry), platform logs (Vercel and Supabase), and uptime monitoring (Better Uptime), improving system visibility
+- Established a data-driven feedback loop using user analytics (Vercel Analytics), performance auditing (GTmetrix), API load testing (oha), and search performance monitoring (Google Search Console), improving performance and discoverability
 
 <p align="right"><a href="#readme-top">Top ↑</a></p>
 
