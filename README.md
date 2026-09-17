@@ -83,7 +83,7 @@
 
 - **Language**: JavaScript
 - **Version Control**: Git
-- **Development**: Node.js (v20.20+), npm
+- **Development**: Node.js, npm
 - **Frontend**: React, Ant Design
 - **API**: Vercel Serverless Functions
 - **Backend**: Supabase (PostgreSQL, Storage)
